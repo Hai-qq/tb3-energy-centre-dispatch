@@ -65,8 +65,7 @@ MUTANTS = {
         "b_eq.append(day.heat[t] + plant.lthw_loss_kw - sum(piece[4] for piece in pieces))",
         "b_eq.append(day.heat[t] - sum(piece[4] for piece in pieces))")],
     "outages_ignored": [("planner/optimize.py",
-        "            if any(o and not (_available(day, e.id, day.starts[t])\n"
-        "                              and _available(day, f\"{e.id} LT radiator\", day.starts[t]))\n"
+        "            if any(o and not _engine_can_run(day, plant, e, day.starts[t])\n"
         "                   for e, o in zip(plant.engines, on)):",
         "            if False:")],
     "outage_by_period_start": [("planner/optimize.py",
@@ -75,8 +74,7 @@ MUTANTS = {
     "phe1_outage_ignored": [("planner/optimize.py",
         "    if _available(day, \"PHE1\", day.starts[t]):", "    if True:")],
     "lt_radiator_outage_ignored": [("planner/optimize.py",
-        "                              and _available(day, f\"{e.id} LT radiator\", day.starts[t]))",
-        "                              and True)")],
+        " and _available(day, f\"{engine.id} LT radiator\", hhmm)", "")],
     "outages_engines_only": [("planner/optimize.py",
         "        return kw if _available(day, unit.id, day.starts[t]) else 0.0",
         "        return kw")],
@@ -106,6 +104,9 @@ MUTANTS = {
         "initial = tuple(False for e in plant.engines)")],
     "saturday_is_weekday": [("planner/tariff.py",
         "self.weekend = day.weekday() >= 5", "self.weekend = day.weekday() > 5")],
+    "weekend_from_utc_start": [("planner/tariff.py", "from datetime import date\n",
+        "from datetime import date, timedelta\n"),
+        ("planner/tariff.py", "self.weekend = day.weekday() >= 5", "self.weekend = (day - timedelta(days=1)).weekday() >= 5")],
 }
 
 

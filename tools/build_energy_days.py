@@ -70,6 +70,7 @@ SUPPLY = {
         "import_capacity_kva": 1220,
         "export_limit_kw": 250,
         "import_rates_p_per_kwh": {
+            "time_basis": "local time",
             "weekday": [
                 {"from": "00:00", "to": "07:00", "rate": 13.8},
                 {"from": "07:00", "to": "16:00", "rate": 22.6},
@@ -130,7 +131,8 @@ DAYS = {
         wet=[(0, 1.6), (6, 0.8), (10, 2.7), (14, 4.1), (18, 3.3), (23, 2.1)],
         sun=(8.2, 16.2), pv_peak=120, cloud=0.25,
         status={"running_at_midnight": ["GE1", "GE2"], "outages": [{"unit": "GE2", "from": "12:45", "to": "17:00"},
-                                                                 {"unit": "B1", "from": "06:10", "to": "08:40"}]},
+                                                                 {"unit": "B1", "from": "06:10", "to": "08:40"},
+                                                                 {"unit": "GE1 LT radiator", "from": "21:10", "to": "23:50"}]},
     ),
     "h3": dict(
         date="2026-04-20", offset=1, seed=14,
@@ -151,7 +153,8 @@ DAYS = {
         dry=[(0, 21.0), (5, 19.0), (9, 25.5), (13, 31.0), (15, 33.0), (17, 32.0), (20, 27.5), (23, 23.0)],
         wet=[(0, 16.8), (5, 16.0), (9, 18.6), (13, 20.6), (15, 21.3), (17, 21.0), (20, 19.5), (23, 17.6)],
         sun=(5.2, 20.8), pv_peak=255, cloud=0.05,
-        status={"running_at_midnight": ["GE1"], "outages": [{"unit": "PHE1", "from": "06:20", "to": "09:40"},
+        status={"running_at_midnight": ["GE1"], "outages": [{"unit": "GE1 LT radiator", "from": "00:00", "to": "03:40"},
+                                                          {"unit": "PHE1", "from": "06:20", "to": "09:40"},
                                                           {"unit": "EC2", "from": "10:10", "to": "11:50"},
                                                           {"unit": "PV1", "from": "16:20", "to": "18:40"}]},
     ),

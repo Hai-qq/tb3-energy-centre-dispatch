@@ -3,6 +3,7 @@
     "import_capacity_kva": 1220,
     "export_limit_kw": 250,
     "import_rates_p_per_kwh": {
+      "time_basis": "local time",
       "weekday": [
         {
           "from": "00:00",

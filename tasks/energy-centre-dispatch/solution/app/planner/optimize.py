@@ -40,6 +40,11 @@ def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
     return True
 
 
+def _engine_can_run(day: DayData, plant: Plant, engine, hhmm: str) -> bool:
+    """An engine runs only with its LT radiator, the only way out for its intercooler heat."""
+    return _available(day, engine.id, hhmm) and _available(day, f"{engine.id} LT radiator", hhmm)
+
+
 def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, seg: tuple, absorbing: bool):
     """Cheapest loading of the plant in period t, each engine off (None) or on segment seg[i].
 
@@ -164,9 +169,7 @@ def plan_day(day: DayData, plant: Plant, tariff: Tariff) -> dict:
     loading = [[None] * len(combos) for _ in range(n)]
     for t in range(n):
         for k, on in enumerate(combos):
-            # an engine needs its LT radiator too: it is the only way out for the intercooler's heat
-            if any(o and not (_available(day, e.id, day.starts[t])
-                              and _available(day, f"{e.id} LT radiator", day.starts[t]))
+            if any(o and not _engine_can_run(day, plant, e, day.starts[t])
                    for e, o in zip(plant.engines, on)):
                 continue
             choices = [range(len(e.segments())) if o else [None] for e, o in zip(plant.engines, on)]
