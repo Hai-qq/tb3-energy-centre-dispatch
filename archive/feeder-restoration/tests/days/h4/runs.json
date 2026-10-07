@@ -1,0 +1,358 @@
+[
+ {
+  "time": "15:30",
+  "state": {
+   "time": "15:30",
+   "closed": [
+    "CB1",
+    "CB2",
+    "CB3",
+    "S1-2",
+    "S1-3",
+    "S1-4",
+    "S2-2",
+    "S2-3",
+    "S2-4",
+    "S3-2",
+    "S3-3",
+    "S3-4",
+    "S4-2",
+    "S4-3",
+    "S4-4"
+   ],
+   "repaired": {},
+   "crews": {
+    "C1": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C2": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C3": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C4": {
+     "site": "DEPOT",
+     "activity": null
+    }
+   }
+  },
+  "least_cmi": 70620,
+  "plan": {
+   "remote": [
+    {
+     "time": "15:30",
+     "switch": "S3-4",
+     "op": "open"
+    },
+    {
+     "time": "15:30",
+     "switch": "S4-2",
+     "op": "open"
+    },
+    {
+     "time": "15:30",
+     "switch": "S4-3",
+     "op": "open"
+    },
+    {
+     "time": "15:30",
+     "switch": "CB4",
+     "op": "close"
+    },
+    {
+     "time": "15:30",
+     "switch": "T34",
+     "op": "close"
+    },
+    {
+     "time": "18:00",
+     "switch": "S4-4",
+     "op": "open"
+    },
+    {
+     "time": "19:12",
+     "switch": "T34",
+     "op": "open"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-2",
+     "op": "close"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-3",
+     "op": "close"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-4",
+     "op": "close"
+    }
+   ],
+   "crews": {
+    "C1": [
+     {
+      "task": "travel",
+      "to": "RMU7",
+      "start": "15:30"
+     },
+     {
+      "task": "switch",
+      "switch": "T23",
+      "op": "close",
+      "start": "16:00"
+     }
+    ],
+    "C4": [
+     {
+      "task": "travel",
+      "to": "F4.2",
+      "start": "15:30"
+     },
+     {
+      "task": "repair",
+      "section": "F4.2",
+      "start": "15:52"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "time": "16:20",
+  "state": {
+   "time": "16:20",
+   "closed": [
+    "CB1",
+    "CB2",
+    "CB3",
+    "CB4",
+    "S1-2",
+    "S1-3",
+    "S1-4",
+    "S2-2",
+    "S2-3",
+    "S2-4",
+    "S3-2",
+    "S3-3",
+    "S4-4",
+    "T23",
+    "T34"
+   ],
+   "repaired": {},
+   "crews": {
+    "C1": {
+     "site": "RMU7",
+     "activity": null
+    },
+    "C2": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C3": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C4": {
+     "site": "F4.2",
+     "activity": {
+      "task": "repair",
+      "section": "F4.2",
+      "start": "15:52",
+      "worked_min": 28
+     }
+    }
+   }
+  },
+  "least_cmi": 54720,
+  "plan": {
+   "remote": [
+    {
+     "time": "18:00",
+     "switch": "S4-4",
+     "op": "open"
+    },
+    {
+     "time": "19:12",
+     "switch": "T34",
+     "op": "open"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-2",
+     "op": "close"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-3",
+     "op": "close"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-4",
+     "op": "close"
+    }
+   ],
+   "crews": {}
+  }
+ },
+ {
+  "time": "16:50",
+  "state": {
+   "time": "16:50",
+   "closed": [
+    "CB1",
+    "CB2",
+    "CB3",
+    "CB4",
+    "S1-2",
+    "S1-3",
+    "S1-4",
+    "S2-2",
+    "S2-3",
+    "S2-4",
+    "S3-2",
+    "S3-3",
+    "S4-4",
+    "T23",
+    "T34"
+   ],
+   "repaired": {},
+   "crews": {
+    "C1": {
+     "site": "RMU7",
+     "activity": null
+    },
+    "C2": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C3": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C4": {
+     "site": "F4.2",
+     "activity": {
+      "task": "repair",
+      "section": "F4.2",
+      "start": "15:52",
+      "worked_min": 58
+     }
+    }
+   }
+  },
+  "least_cmi": 57240,
+  "plan": {
+   "remote": [
+    {
+     "time": "19:12",
+     "switch": "S4-2",
+     "op": "close"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-3",
+     "op": "close"
+    }
+   ],
+   "crews": {
+    "C1": [
+     {
+      "task": "travel",
+      "to": "RMU8",
+      "start": "16:50"
+     },
+     {
+      "task": "switch",
+      "switch": "S4-4",
+      "op": "open",
+      "start": "17:36"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "time": "17:05",
+  "state": {
+   "time": "17:05",
+   "closed": [
+    "CB1",
+    "CB2",
+    "CB3",
+    "CB4",
+    "S1-2",
+    "S1-3",
+    "S1-4",
+    "S2-2",
+    "S2-3",
+    "S2-4",
+    "S3-2",
+    "S3-3",
+    "S4-4",
+    "T23",
+    "T34"
+   ],
+   "repaired": {},
+   "crews": {
+    "C1": {
+     "site": "RMU8",
+     "activity": {
+      "task": "travel",
+      "to": "RMU8",
+      "start": "16:50",
+      "end": "17:36"
+     }
+    },
+    "C2": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C3": {
+     "site": "DEPOT",
+     "activity": null
+    },
+    "C4": {
+     "site": "F4.2",
+     "activity": {
+      "task": "repair",
+      "section": "F4.2",
+      "start": "15:52",
+      "worked_min": 73
+     }
+    }
+   }
+  },
+  "least_cmi": 54540,
+  "plan": {
+   "remote": [
+    {
+     "time": "19:12",
+     "switch": "S4-2",
+     "op": "close"
+    },
+    {
+     "time": "19:12",
+     "switch": "S4-3",
+     "op": "close"
+    }
+   ],
+   "crews": {
+    "C1": [
+     {
+      "task": "switch",
+      "switch": "S4-4",
+      "op": "open",
+      "start": "17:36"
+     }
+    ]
+   }
+  }
+ }
+]

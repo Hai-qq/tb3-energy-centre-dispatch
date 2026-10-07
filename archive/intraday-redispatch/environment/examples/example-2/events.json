@@ -1,0 +1,34 @@
+[
+ {
+  "id": "E1",
+  "revealed_at": 13,
+  "type": "export_limit",
+  "site": "SITE1",
+  "first": 29,
+  "last": 44,
+  "limit_mw": 250.0
+ },
+ {
+  "id": "E2",
+  "revealed_at": 25,
+  "type": "derate",
+  "unit": "OCGT1",
+  "first": 41,
+  "last": 60,
+  "pmax_mw": 70.0
+ },
+ {
+  "id": "E3",
+  "revealed_at": 37,
+  "type": "export_limit_cancel",
+  "event_id": "E1"
+ },
+ {
+  "id": "E4",
+  "revealed_at": 73,
+  "type": "trip",
+  "unit": "OCGT1",
+  "at": 70,
+  "available_from": 81
+ }
+]

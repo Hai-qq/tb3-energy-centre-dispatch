@@ -1,0 +1,44 @@
+{
+ "time": "09:40",
+ "closed": [
+  "CB1",
+  "CB2",
+  "CB3",
+  "CB4",
+  "S1-2",
+  "S2-2",
+  "S2-3",
+  "S2-4",
+  "S3-2",
+  "S3-3",
+  "S3-4",
+  "S4-2",
+  "S4-3",
+  "S4-4",
+  "T12"
+ ],
+ "repaired": {},
+ "crews": {
+  "C1": {
+   "site": "F1.3",
+   "activity": {
+    "task": "repair",
+    "section": "F1.3",
+    "start": "08:41",
+    "worked_min": 59
+   }
+  },
+  "C2": {
+   "site": "DEPOT",
+   "activity": null
+  },
+  "C3": {
+   "site": "DEPOT",
+   "activity": null
+  },
+  "C4": {
+   "site": "DEPOT",
+   "activity": null
+  }
+ }
+}

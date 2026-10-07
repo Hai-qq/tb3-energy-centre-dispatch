@@ -1,0 +1,23 @@
+[
+ {
+  "message_id": "FLT-1",
+  "version": 1,
+  "received_at": "08:12",
+  "type": "fault",
+  "payload": {
+   "section": "F1.3",
+   "at": "08:12",
+   "repair_min": 150
+  }
+ },
+ {
+  "message_id": "RU-1",
+  "version": 1,
+  "received_at": "09:40",
+  "type": "repair_update",
+  "payload": {
+   "section": "F1.3",
+   "repair_min": 180
+  }
+ }
+]

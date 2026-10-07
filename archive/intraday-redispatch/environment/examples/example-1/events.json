@@ -1,0 +1,30 @@
+[
+ {
+  "id": "E1",
+  "revealed_at": 37,
+  "type": "trip",
+  "unit": "CCGT1",
+  "at": 30,
+  "available_from": 57
+ },
+ {
+  "id": "E2",
+  "revealed_at": 49,
+  "type": "return_update",
+  "trip_id": "E1",
+  "available_from": 53
+ },
+ {
+  "id": "E3",
+  "revealed_at": 49,
+  "type": "soc_measurement",
+  "soc_mwh": 40.0
+ },
+ {
+  "id": "E4",
+  "revealed_at": 61,
+  "type": "gas_price",
+  "from": 73,
+  "eur_per_mwh_th": 44.0
+ }
+]

@@ -1,0 +1,64 @@
+[
+ {
+  "message_id": "FLT-1",
+  "version": 1,
+  "received_at": "06:40",
+  "type": "fault",
+  "payload": {
+   "section": "F2.2",
+   "at": "06:40",
+   "repair_min": 160
+  }
+ },
+ {
+  "message_id": "FLT-2",
+  "version": 1,
+  "received_at": "07:25",
+  "type": "fault",
+  "payload": {
+   "section": "F2.4",
+   "at": "07:25",
+   "repair_min": 90
+  }
+ },
+ {
+  "message_id": "HOLD-1",
+  "version": 1,
+  "received_at": "08:30",
+  "type": "storm_hold",
+  "payload": {
+   "from": "09:15",
+   "to": "09:45"
+  }
+ },
+ {
+  "message_id": "RU-1",
+  "version": 1,
+  "received_at": "08:50",
+  "type": "repair_update",
+  "payload": {
+   "section": "F2.2",
+   "repair_min": 190
+  }
+ },
+ {
+  "message_id": "RU-1",
+  "version": 2,
+  "received_at": "09:05",
+  "type": "repair_update",
+  "payload": {
+   "section": "F2.2",
+   "repair_min": 175
+  }
+ },
+ {
+  "message_id": "RU-1",
+  "version": 1,
+  "received_at": "09:20",
+  "type": "repair_update",
+  "payload": {
+   "section": "F2.2",
+   "repair_min": 190
+  }
+ }
+]

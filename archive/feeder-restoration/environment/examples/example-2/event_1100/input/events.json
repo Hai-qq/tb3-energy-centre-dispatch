@@ -1,0 +1,23 @@
+[
+ {
+  "message_id": "FLT-1",
+  "version": 1,
+  "received_at": "10:20",
+  "type": "fault",
+  "payload": {
+   "section": "F4.2",
+   "at": "10:20",
+   "repair_min": 120
+  }
+ },
+ {
+  "message_id": "HOLD-1",
+  "version": 1,
+  "received_at": "11:00",
+  "type": "storm_hold",
+  "payload": {
+   "from": "11:30",
+   "to": "12:15"
+  }
+ }
+]

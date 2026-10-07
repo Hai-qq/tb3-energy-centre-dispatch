@@ -1,0 +1,23 @@
+[
+ {
+  "id": "E1",
+  "revealed_at": 61,
+  "type": "trip",
+  "unit": "CCGT1",
+  "at": 50,
+  "available_from": 77
+ },
+ {
+  "id": "E2",
+  "revealed_at": 73,
+  "type": "return_update",
+  "trip_id": "E1",
+  "available_from": 83
+ },
+ {
+  "id": "E3",
+  "revealed_at": 73,
+  "type": "soc_measurement",
+  "soc_mwh": 52.0
+ }
+]

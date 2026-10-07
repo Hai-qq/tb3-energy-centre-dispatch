@@ -1,0 +1,73 @@
+[
+ {
+  "message_id": "RTU-1",
+  "version": 1,
+  "received_at": "06:30",
+  "type": "rtu",
+  "payload": {
+   "switch": "S1-3",
+   "status": "down"
+  }
+ },
+ {
+  "message_id": "FLT-1",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "fault",
+  "payload": {
+   "section": "F1.3",
+   "at": "09:00",
+   "repair_min": 120
+  }
+ },
+ {
+  "message_id": "HOLD-0",
+  "version": 1,
+  "received_at": "09:04",
+  "type": "storm_hold",
+  "payload": {
+   "from": "09:15",
+   "to": "09:35"
+  }
+ },
+ {
+  "message_id": "RTU-1",
+  "version": 2,
+  "received_at": "09:40",
+  "type": "rtu",
+  "payload": {
+   "switch": "S1-3",
+   "status": "up"
+  }
+ },
+ {
+  "message_id": "FLT-2",
+  "version": 1,
+  "received_at": "11:20",
+  "type": "fault",
+  "payload": {
+   "section": "F4.4",
+   "at": "11:20",
+   "repair_min": 100
+  }
+ },
+ {
+  "message_id": "HOLD-1",
+  "version": 1,
+  "received_at": "11:35",
+  "type": "storm_hold",
+  "payload": {
+   "from": "12:10",
+   "to": "12:40"
+  }
+ },
+ {
+  "message_id": "HOLD-1",
+  "version": 2,
+  "received_at": "12:05",
+  "type": "storm_hold",
+  "payload": {
+   "cancelled": true
+  }
+ }
+]

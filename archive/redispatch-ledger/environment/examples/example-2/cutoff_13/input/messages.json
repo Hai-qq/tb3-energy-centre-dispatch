@@ -1,0 +1,189 @@
+[
+ {
+  "message_id": "EXP-1",
+  "version": 1,
+  "received_at": "01:50",
+  "type": "export_limit",
+  "payload": {
+   "first": 29,
+   "last": 44,
+   "limit_mw": 250.0
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-01",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 1,
+   "meter": "SITE1",
+   "mwh": 45.079
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-01",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 1,
+   "meter": "OCGT1",
+   "mwh": 17.474
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-02",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 2,
+   "meter": "SITE1",
+   "mwh": 51.06
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-02",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 2,
+   "meter": "OCGT1",
+   "mwh": 23.704
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-03",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 3,
+   "meter": "SITE1",
+   "mwh": 57.43
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-03",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 3,
+   "meter": "OCGT1",
+   "mwh": 24.983
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-04",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 4,
+   "meter": "SITE1",
+   "mwh": 63.573
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-04",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 4,
+   "meter": "OCGT1",
+   "mwh": 25.019
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-05",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 5,
+   "meter": "SITE1",
+   "mwh": 70.197
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-05",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 5,
+   "meter": "OCGT1",
+   "mwh": 24.997
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-06",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 6,
+   "meter": "SITE1",
+   "mwh": 76.29
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-06",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 6,
+   "meter": "OCGT1",
+   "mwh": 25.004
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-07",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 7,
+   "meter": "SITE1",
+   "mwh": 82.613
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-07",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 7,
+   "meter": "OCGT1",
+   "mwh": 25.002
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-08",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 8,
+   "meter": "SITE1",
+   "mwh": 88.744
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-08",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 8,
+   "meter": "OCGT1",
+   "mwh": 25.027
+  }
+ }
+]

@@ -1,0 +1,1882 @@
+[
+ {
+  "message_id": "DER-1",
+  "version": 1,
+  "received_at": "01:10",
+  "type": "derate",
+  "payload": {
+   "unit": "OCGT1",
+   "first": 17,
+   "last": 48,
+   "pmax_mw": 60.0
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-01",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 1,
+   "meter": "SITE1",
+   "delta_mwh": -0.129
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-01",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 1,
+   "meter": "OCGT1",
+   "delta_mwh": -0.027
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-02",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 2,
+   "meter": "SITE1",
+   "delta_mwh": -0.188
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-02",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 2,
+   "meter": "OCGT1",
+   "delta_mwh": -0.038
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-03",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 3,
+   "meter": "SITE1",
+   "delta_mwh": -0.196
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-03",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 3,
+   "meter": "OCGT1",
+   "delta_mwh": -0.034
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-04",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 4,
+   "meter": "SITE1",
+   "delta_mwh": 0.005
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-04",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 4,
+   "meter": "OCGT1",
+   "delta_mwh": 0.049
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-05",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 5,
+   "meter": "SITE1",
+   "delta_mwh": 0.077
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-05",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 5,
+   "meter": "OCGT1",
+   "delta_mwh": -0.012
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-06",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 6,
+   "meter": "SITE1",
+   "delta_mwh": -0.038
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-06",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 6,
+   "meter": "OCGT1",
+   "delta_mwh": 0.019
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-07",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 7,
+   "meter": "SITE1",
+   "delta_mwh": -0.07
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-07",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 7,
+   "meter": "OCGT1",
+   "delta_mwh": -0.043
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-08",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 8,
+   "meter": "SITE1",
+   "delta_mwh": 0.137
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-08",
+  "version": 1,
+  "received_at": "02:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 8,
+   "meter": "OCGT1",
+   "delta_mwh": 0.012
+  }
+ },
+ {
+  "message_id": "TRIP-1",
+  "version": 1,
+  "received_at": "05:05",
+  "type": "trip",
+  "payload": {
+   "unit": "CCGT1",
+   "at": 20,
+   "available_from": 45
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-09",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 9,
+   "meter": "SITE1",
+   "delta_mwh": -0.155
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-09",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 9,
+   "meter": "OCGT1",
+   "delta_mwh": -0.043
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-10",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 10,
+   "meter": "SITE1",
+   "delta_mwh": -0.162
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-10",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 10,
+   "meter": "OCGT1",
+   "delta_mwh": 0.046
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-11",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 11,
+   "meter": "SITE1",
+   "delta_mwh": -0.157
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-11",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 11,
+   "meter": "OCGT1",
+   "delta_mwh": 0.013
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-12",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 12,
+   "meter": "SITE1",
+   "delta_mwh": 0.188
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-12",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 12,
+   "meter": "OCGT1",
+   "delta_mwh": -0.046
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-13",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 13,
+   "meter": "SITE1",
+   "delta_mwh": -0.046
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-13",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 13,
+   "meter": "OCGT1",
+   "delta_mwh": -0.002
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-14",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 14,
+   "meter": "SITE1",
+   "delta_mwh": 0.167
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-14",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 14,
+   "meter": "OCGT1",
+   "delta_mwh": -0.031
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-15",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 15,
+   "meter": "SITE1",
+   "delta_mwh": -0.097
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-16",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 16,
+   "meter": "SITE1",
+   "delta_mwh": -0.101
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-16",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 16,
+   "meter": "OCGT1",
+   "delta_mwh": -0.045
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-17",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 17,
+   "meter": "SITE1",
+   "delta_mwh": 0.069
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-17",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 17,
+   "meter": "OCGT1",
+   "delta_mwh": 0.032
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-18",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 18,
+   "meter": "SITE1",
+   "delta_mwh": -0.025
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-18",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 18,
+   "meter": "OCGT1",
+   "delta_mwh": -0.046
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-19",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 19,
+   "meter": "SITE1",
+   "delta_mwh": 0.085
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-19",
+  "version": 1,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 19,
+   "meter": "OCGT1",
+   "delta_mwh": 0.024
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-07",
+  "version": 2,
+  "received_at": "05:25",
+  "type": "meter",
+  "payload": {
+   "quarter": 7,
+   "meter": "OCGT1",
+   "delta_mwh": -0.433
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-07",
+  "version": 1,
+  "received_at": "05:30",
+  "type": "meter",
+  "payload": {
+   "quarter": 7,
+   "meter": "OCGT1",
+   "delta_mwh": -0.043
+  }
+ },
+ {
+  "message_id": "EXP-1",
+  "version": 1,
+  "received_at": "07:10",
+  "type": "export_limit",
+  "payload": {
+   "first": 53,
+   "last": 72,
+   "limit_mw": 230.0
+  }
+ },
+ {
+  "message_id": "TRIP-1",
+  "version": 2,
+  "received_at": "09:00",
+  "type": "trip",
+  "payload": {
+   "unit": "CCGT1",
+   "at": 20,
+   "available_from": 41
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-20",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 20,
+   "meter": "SITE1",
+   "delta_mwh": 0.061
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-20",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 20,
+   "meter": "OCGT1",
+   "delta_mwh": -0.017
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-21",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 21,
+   "meter": "SITE1",
+   "delta_mwh": 0.132
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-21",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 21,
+   "meter": "OCGT1",
+   "delta_mwh": 0.013
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-22",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 22,
+   "meter": "SITE1",
+   "delta_mwh": 0.036
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-22",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 22,
+   "meter": "OCGT1",
+   "delta_mwh": 0.004
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-23",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 23,
+   "meter": "SITE1",
+   "delta_mwh": -0.107
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-23",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 23,
+   "meter": "OCGT1",
+   "delta_mwh": -0.004
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-24",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 24,
+   "meter": "SITE1",
+   "delta_mwh": 0.118
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-24",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 24,
+   "meter": "OCGT1",
+   "delta_mwh": 0.018
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-25",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 25,
+   "meter": "SITE1",
+   "delta_mwh": -0.062
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-25",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 25,
+   "meter": "OCGT1",
+   "delta_mwh": 0.032
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-26",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 26,
+   "meter": "SITE1",
+   "delta_mwh": 0.136
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-26",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 26,
+   "meter": "OCGT1",
+   "delta_mwh": -0.046
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-27",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 27,
+   "meter": "SITE1",
+   "delta_mwh": -0.137
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-27",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 27,
+   "meter": "OCGT1",
+   "delta_mwh": -0.028
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-28",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 28,
+   "meter": "SITE1",
+   "delta_mwh": -0.194
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-28",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 28,
+   "meter": "OCGT1",
+   "delta_mwh": 0.025
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-29",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 29,
+   "meter": "SITE1",
+   "delta_mwh": 0.059
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-29",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 29,
+   "meter": "OCGT1",
+   "delta_mwh": 0.004
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-30",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 30,
+   "meter": "SITE1",
+   "delta_mwh": 0.198
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-30",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 30,
+   "meter": "OCGT1",
+   "delta_mwh": -0.014
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-31",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 31,
+   "meter": "SITE1",
+   "delta_mwh": -0.12
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-31",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 31,
+   "meter": "OCGT1",
+   "delta_mwh": -0.039
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-32",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 32,
+   "meter": "SITE1",
+   "delta_mwh": -0.064
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-32",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 32,
+   "meter": "OCGT1",
+   "delta_mwh": 0.034
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-33",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 33,
+   "meter": "SITE1",
+   "delta_mwh": 0.043
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-33",
+  "version": 1,
+  "received_at": "09:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 33,
+   "meter": "OCGT1",
+   "delta_mwh": -0.044
+  }
+ },
+ {
+  "message_id": "XC-1",
+  "version": 1,
+  "received_at": "09:20",
+  "type": "trade_cancellation",
+  "payload": {
+   "cutoff": 37,
+   "pick": [
+    39,
+    48
+   ]
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-34",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 34,
+   "meter": "SITE1",
+   "delta_mwh": -0.027
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-34",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 34,
+   "meter": "OCGT1",
+   "delta_mwh": -0.045
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-35",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 35,
+   "meter": "SITE1",
+   "delta_mwh": 0.049
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-35",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 35,
+   "meter": "OCGT1",
+   "delta_mwh": -0.038
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-36",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 36,
+   "meter": "SITE1",
+   "delta_mwh": -0.128
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-36",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 36,
+   "meter": "OCGT1",
+   "delta_mwh": 0.014
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-37",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 37,
+   "meter": "SITE1",
+   "delta_mwh": 0.134
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-37",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 37,
+   "meter": "OCGT1",
+   "delta_mwh": 0.012
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-38",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 38,
+   "meter": "SITE1",
+   "delta_mwh": -0.083
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-38",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 38,
+   "meter": "OCGT1",
+   "delta_mwh": 0.015
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-39",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 39,
+   "meter": "SITE1",
+   "delta_mwh": -0.091
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-39",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 39,
+   "meter": "OCGT1",
+   "delta_mwh": -0.049
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-40",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 40,
+   "meter": "SITE1",
+   "delta_mwh": -0.09
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-40",
+  "version": 1,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 40,
+   "meter": "OCGT1",
+   "delta_mwh": 0.019
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-17",
+  "version": 2,
+  "received_at": "10:50",
+  "type": "meter",
+  "payload": {
+   "quarter": 17,
+   "meter": "OCGT1",
+   "delta_mwh": -0.844
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-17",
+  "version": 1,
+  "received_at": "11:15",
+  "type": "meter",
+  "payload": {
+   "quarter": 17,
+   "meter": "OCGT1",
+   "delta_mwh": 0.032
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-13",
+  "version": 2,
+  "received_at": "12:20",
+  "type": "meter",
+  "payload": {
+   "cancelled": true
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-41",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 41,
+   "meter": "SITE1",
+   "delta_mwh": 0.051
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-41",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 41,
+   "meter": "OCGT1",
+   "delta_mwh": -0.031
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-42",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 42,
+   "meter": "SITE1",
+   "delta_mwh": 0.136
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-42",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 42,
+   "meter": "OCGT1",
+   "delta_mwh": 0.033
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-43",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 43,
+   "meter": "SITE1",
+   "delta_mwh": -0.088
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-43",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 43,
+   "meter": "OCGT1",
+   "delta_mwh": 0.046
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-44",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 44,
+   "meter": "SITE1",
+   "delta_mwh": -0.095
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-44",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 44,
+   "meter": "OCGT1",
+   "delta_mwh": -0.044
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-45",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 45,
+   "meter": "SITE1",
+   "delta_mwh": 0.005
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-45",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 45,
+   "meter": "OCGT1",
+   "delta_mwh": 0.036
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-46",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 46,
+   "meter": "SITE1",
+   "delta_mwh": 0.04
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-46",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 46,
+   "meter": "OCGT1",
+   "delta_mwh": 0.005
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-47",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 47,
+   "meter": "SITE1",
+   "delta_mwh": -0.005
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-47",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 47,
+   "meter": "OCGT1",
+   "delta_mwh": -0.022
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-48",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 48,
+   "meter": "SITE1",
+   "delta_mwh": -0.08
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-48",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 48,
+   "meter": "OCGT1",
+   "delta_mwh": -0.01
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-49",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 49,
+   "meter": "SITE1",
+   "delta_mwh": 0.019
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-49",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 49,
+   "meter": "OCGT1",
+   "delta_mwh": 0.044
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-50",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 50,
+   "meter": "SITE1",
+   "delta_mwh": -0.171
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-50",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 50,
+   "meter": "OCGT1",
+   "delta_mwh": -0.025
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-51",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 51,
+   "meter": "SITE1",
+   "delta_mwh": 0.177
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-51",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 51,
+   "meter": "OCGT1",
+   "delta_mwh": 0.016
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-52",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 52,
+   "meter": "SITE1",
+   "delta_mwh": -0.17
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-52",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 52,
+   "meter": "OCGT1",
+   "delta_mwh": -0.006
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-09",
+  "version": 2,
+  "received_at": "14:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 9,
+   "meter": "OCGT1",
+   "delta_mwh": -0.645
+  }
+ },
+ {
+  "message_id": "EXP-1",
+  "version": 2,
+  "received_at": "14:40",
+  "type": "export_limit",
+  "payload": {
+   "cancelled": true
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-09",
+  "version": 1,
+  "received_at": "15:00",
+  "type": "meter",
+  "payload": {
+   "quarter": 9,
+   "meter": "OCGT1",
+   "delta_mwh": -0.043
+  }
+ },
+ {
+  "message_id": "EXP-1",
+  "version": 1,
+  "received_at": "15:20",
+  "type": "export_limit",
+  "payload": {
+   "first": 53,
+   "last": 72,
+   "limit_mw": 230.0
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-53",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 53,
+   "meter": "OCGT1",
+   "delta_mwh": 0.015
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-54",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 54,
+   "meter": "SITE1",
+   "delta_mwh": 0.165
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-54",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 54,
+   "meter": "OCGT1",
+   "delta_mwh": -0.042
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-55",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 55,
+   "meter": "SITE1",
+   "delta_mwh": 0.161
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-55",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 55,
+   "meter": "OCGT1",
+   "delta_mwh": 0.027
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-56",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 56,
+   "meter": "SITE1",
+   "delta_mwh": -0.089
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-56",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 56,
+   "meter": "OCGT1",
+   "delta_mwh": 0.003
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-57",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 57,
+   "meter": "SITE1",
+   "delta_mwh": 0.13
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-57",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 57,
+   "meter": "OCGT1",
+   "delta_mwh": -0.026
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-58",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 58,
+   "meter": "SITE1",
+   "delta_mwh": 0.081
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-58",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 58,
+   "meter": "OCGT1",
+   "delta_mwh": 0.006
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-59",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 59,
+   "meter": "SITE1",
+   "delta_mwh": -0.171
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-59",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 59,
+   "meter": "OCGT1",
+   "delta_mwh": -0.023
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-60",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 60,
+   "meter": "SITE1",
+   "delta_mwh": -0.035
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-60",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 60,
+   "meter": "OCGT1",
+   "delta_mwh": -0.036
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-61",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 61,
+   "meter": "SITE1",
+   "delta_mwh": 0.178
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-61",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 61,
+   "meter": "OCGT1",
+   "delta_mwh": -0.025
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-62",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 62,
+   "meter": "SITE1",
+   "delta_mwh": -0.107
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-62",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 62,
+   "meter": "OCGT1",
+   "delta_mwh": 0.01
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-63",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 63,
+   "meter": "SITE1",
+   "delta_mwh": 0.011
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-63",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 63,
+   "meter": "OCGT1",
+   "delta_mwh": -0.018
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-64",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 64,
+   "meter": "SITE1",
+   "delta_mwh": -0.07
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-64",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 64,
+   "meter": "OCGT1",
+   "delta_mwh": -0.0
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-65",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 65,
+   "meter": "SITE1",
+   "delta_mwh": 0.164
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-65",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 65,
+   "meter": "OCGT1",
+   "delta_mwh": -0.042
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-66",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 66,
+   "meter": "SITE1",
+   "delta_mwh": 0.165
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-66",
+  "version": 1,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 66,
+   "meter": "OCGT1",
+   "delta_mwh": 0.044
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-40",
+  "version": 2,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 40,
+   "meter": "OCGT1",
+   "delta_mwh": 1.384
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-37",
+  "version": 2,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 37,
+   "meter": "SITE1",
+   "delta_mwh": 1.381
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-22",
+  "version": 2,
+  "received_at": "17:35",
+  "type": "meter",
+  "payload": {
+   "quarter": 22,
+   "meter": "SITE1",
+   "delta_mwh": 1.529
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-22",
+  "version": 1,
+  "received_at": "17:40",
+  "type": "meter",
+  "payload": {
+   "quarter": 22,
+   "meter": "SITE1",
+   "delta_mwh": 0.036
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-67",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 67,
+   "meter": "SITE1",
+   "delta_mwh": 0.073
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-68",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 68,
+   "meter": "SITE1",
+   "delta_mwh": 0.121
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-68",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 68,
+   "meter": "OCGT1",
+   "delta_mwh": -0.012
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-69",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 69,
+   "meter": "SITE1",
+   "delta_mwh": 0.185
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-69",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 69,
+   "meter": "OCGT1",
+   "delta_mwh": 0.024
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-70",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 70,
+   "meter": "OCGT1",
+   "delta_mwh": 0.019
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-71",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 71,
+   "meter": "SITE1",
+   "delta_mwh": -0.02
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-71",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 71,
+   "meter": "OCGT1",
+   "delta_mwh": -0.028
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-72",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 72,
+   "meter": "SITE1",
+   "delta_mwh": 0.077
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-72",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 72,
+   "meter": "OCGT1",
+   "delta_mwh": 0.024
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-73",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 73,
+   "meter": "SITE1",
+   "delta_mwh": -0.198
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-73",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 73,
+   "meter": "OCGT1",
+   "delta_mwh": -0.019
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-74",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 74,
+   "meter": "SITE1",
+   "delta_mwh": 0.014
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-74",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 74,
+   "meter": "OCGT1",
+   "delta_mwh": -0.029
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-75",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 75,
+   "meter": "SITE1",
+   "delta_mwh": -0.148
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-75",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 75,
+   "meter": "OCGT1",
+   "delta_mwh": -0.031
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-76",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 76,
+   "meter": "SITE1",
+   "delta_mwh": -0.194
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-76",
+  "version": 1,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 76,
+   "meter": "OCGT1",
+   "delta_mwh": -0.038
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-51",
+  "version": 2,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 51,
+   "meter": "OCGT1",
+   "delta_mwh": 1.489
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-66",
+  "version": 2,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 66,
+   "meter": "SITE1",
+   "delta_mwh": -0.176
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-53",
+  "version": 2,
+  "received_at": "20:05",
+  "type": "meter",
+  "payload": {
+   "quarter": 53,
+   "meter": "OCGT1",
+   "delta_mwh": 1.471
+  }
+ },
+ {
+  "message_id": "MTR-SITE1-66",
+  "version": 1,
+  "received_at": "20:10",
+  "type": "meter",
+  "payload": {
+   "quarter": 66,
+   "meter": "SITE1",
+   "delta_mwh": 0.165
+  }
+ },
+ {
+  "message_id": "MTR-OCGT1-53",
+  "version": 1,
+  "received_at": "20:30",
+  "type": "meter",
+  "payload": {
+   "quarter": 53,
+   "meter": "OCGT1",
+   "delta_mwh": 0.015
+  }
+ }
+]

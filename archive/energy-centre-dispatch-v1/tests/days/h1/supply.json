@@ -1,0 +1,49 @@
+{
+  "electricity": {
+    "import_capacity_kva": 1220,
+    "power_factor": 0.95,
+    "export_limit_kw": 250,
+    "import_rates_p_per_kwh": {
+      "weekday": [
+        {
+          "from": "00:00",
+          "to": "07:00",
+          "rate": 13.8
+        },
+        {
+          "from": "07:00",
+          "to": "16:00",
+          "rate": 22.6
+        },
+        {
+          "from": "16:00",
+          "to": "19:00",
+          "rate": 41.5
+        },
+        {
+          "from": "19:00",
+          "to": "24:00",
+          "rate": 22.6
+        }
+      ],
+      "weekend": [
+        {
+          "from": "00:00",
+          "to": "07:00",
+          "rate": 13.8
+        },
+        {
+          "from": "07:00",
+          "to": "24:00",
+          "rate": 22.6
+        }
+      ]
+    },
+    "export_rate_p_per_kwh": 5.9
+  },
+  "gas": {
+    "rate_p_per_kwh": 4.35,
+    "billing_basis": "gross CV",
+    "gross_to_net_cv_ratio": 1.108
+  }
+}

@@ -1,0 +1,33 @@
+[
+ {
+  "id": "E1",
+  "revealed_at": 25,
+  "type": "export_limit",
+  "site": "SITE1",
+  "first": 41,
+  "last": 56,
+  "limit_mw": 300.0
+ },
+ {
+  "id": "E2",
+  "revealed_at": 25,
+  "type": "gas_price",
+  "from": 49,
+  "eur_per_mwh_th": 31.0
+ },
+ {
+  "id": "E3",
+  "revealed_at": 37,
+  "type": "export_limit_cancel",
+  "event_id": "E1"
+ },
+ {
+  "id": "E4",
+  "revealed_at": 49,
+  "type": "export_limit",
+  "site": "SITE1",
+  "first": 69,
+  "last": 88,
+  "limit_mw": 320.0
+ }
+]

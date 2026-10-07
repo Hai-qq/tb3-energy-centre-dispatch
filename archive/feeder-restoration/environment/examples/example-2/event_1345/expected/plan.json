@@ -1,0 +1,53 @@
+{
+ "remote": [
+  {
+   "time": "13:45",
+   "switch": "S2-3",
+   "op": "open"
+  },
+  {
+   "time": "13:45",
+   "switch": "S2-4",
+   "op": "open"
+  },
+  {
+   "time": "13:45",
+   "switch": "CB2",
+   "op": "close"
+  },
+  {
+   "time": "13:45",
+   "switch": "T12",
+   "op": "close"
+  },
+  {
+   "time": "15:52",
+   "switch": "T12",
+   "op": "open"
+  },
+  {
+   "time": "15:52",
+   "switch": "S2-3",
+   "op": "close"
+  },
+  {
+   "time": "15:52",
+   "switch": "S2-4",
+   "op": "close"
+  }
+ ],
+ "crews": {
+  "C2": [
+   {
+    "task": "travel",
+    "to": "F2.3",
+    "start": "13:45"
+   },
+   {
+    "task": "repair",
+    "section": "F2.3",
+    "start": "14:12"
+   }
+  ]
+ }
+}

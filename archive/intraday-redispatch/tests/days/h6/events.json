@@ -1,0 +1,41 @@
+[
+ {
+  "id": "E1",
+  "revealed_at": 25,
+  "type": "gas_price",
+  "from": 37,
+  "eur_per_mwh_th": 45.0
+ },
+ {
+  "id": "E2",
+  "revealed_at": 37,
+  "type": "export_limit",
+  "site": "SITE1",
+  "first": 49,
+  "last": 64,
+  "limit_mw": 200.0
+ },
+ {
+  "id": "E3",
+  "revealed_at": 49,
+  "type": "derate",
+  "unit": "CCGT1",
+  "first": 57,
+  "last": 80,
+  "pmax_mw": 300.0
+ },
+ {
+  "id": "E4",
+  "revealed_at": 61,
+  "type": "trip",
+  "unit": "CCGT1",
+  "at": 60,
+  "available_from": 85
+ },
+ {
+  "id": "E5",
+  "revealed_at": 73,
+  "type": "soc_measurement",
+  "soc_mwh": 70.0
+ }
+]

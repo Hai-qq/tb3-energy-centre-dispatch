@@ -1,0 +1,38 @@
+[
+ {
+  "id": "E1",
+  "revealed_at": 13,
+  "type": "trip",
+  "unit": "OCGT1",
+  "at": 6,
+  "available_from": 29
+ },
+ {
+  "id": "E2",
+  "revealed_at": 25,
+  "type": "return_update",
+  "trip_id": "E1",
+  "available_from": 41
+ },
+ {
+  "id": "E3",
+  "revealed_at": 49,
+  "type": "trip",
+  "unit": "CCGT1",
+  "at": 40,
+  "available_from": 65
+ },
+ {
+  "id": "E4",
+  "revealed_at": 61,
+  "type": "return_update",
+  "trip_id": "E3",
+  "available_from": 61
+ },
+ {
+  "id": "E5",
+  "revealed_at": 61,
+  "type": "soc_measurement",
+  "soc_mwh": 30.0
+ }
+]

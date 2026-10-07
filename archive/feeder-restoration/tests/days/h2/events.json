@@ -1,0 +1,85 @@
+[
+ {
+  "message_id": "FLT-1",
+  "version": 1,
+  "received_at": "07:30",
+  "type": "fault",
+  "payload": {
+   "section": "F3.2",
+   "at": "07:30",
+   "repair_min": 110
+  }
+ },
+ {
+  "message_id": "FLT-1",
+  "version": 2,
+  "received_at": "07:45",
+  "type": "fault",
+  "payload": {
+   "cancelled": true
+  }
+ },
+ {
+  "message_id": "RTU-1",
+  "version": 1,
+  "received_at": "07:50",
+  "type": "rtu",
+  "payload": {
+   "switch": "S3-3",
+   "status": "down"
+  }
+ },
+ {
+  "message_id": "FLT-2",
+  "version": 1,
+  "received_at": "10:15",
+  "type": "fault",
+  "payload": {
+   "section": "F3.3",
+   "at": "10:15",
+   "repair_min": 130
+  }
+ },
+ {
+  "message_id": "HOLD-1",
+  "version": 1,
+  "received_at": "10:22",
+  "type": "storm_hold",
+  "payload": {
+   "from": "10:35",
+   "to": "11:05"
+  }
+ },
+ {
+  "message_id": "RTU-1",
+  "version": 2,
+  "received_at": "12:30",
+  "type": "rtu",
+  "payload": {
+   "switch": "S3-3",
+   "status": "up"
+  }
+ },
+ {
+  "message_id": "LF-1",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "load_forecast",
+  "payload": {
+   "section": "F2.3",
+   "hour": 18,
+   "mw": 1.45
+  }
+ },
+ {
+  "message_id": "LF-1",
+  "version": 1,
+  "received_at": "14:10",
+  "type": "load_forecast",
+  "payload": {
+   "section": "F2.3",
+   "hour": 18,
+   "mw": 1.45
+  }
+ }
+]
