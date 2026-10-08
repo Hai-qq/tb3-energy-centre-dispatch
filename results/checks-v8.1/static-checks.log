@@ -1,0 +1,127 @@
+Terminal-Bench checkout: bf4c1255fe70237aecd03a14b0fab9f01afca6b4
+Task: tasks/energy-centre-dispatch
+Checks: 27 in the CI step
+
+/work/tool/dockerfile-pin.tar.gz: OK
+::group::Running Canary strings
+All files contain the required canary string
+::endgroup::
+✅ Canary strings
+::group::Running No cheat directory
+
+::endgroup::
+✅ No cheat directory
+::group::Running Dockerfile refs
+
+::endgroup::
+✅ Dockerfile refs
+::group::Running Image digest pins
+OK    tasks/energy-centre-dispatch/environment/Dockerfile:2    FROM python:3.13-slim-bookworm@sha256:a1165e272e578941b84abc79e4ab38a0305cd12803a5c4247979ac7655f4d641 
+OK    tasks/energy-centre-dispatch/tests/Dockerfile:2    FROM python:3.13-slim-bookworm@sha256:a1165e272e578941b84abc79e4ab38a0305cd12803a5c4247979ac7655f4d641 
+::endgroup::
+✅ Image digest pins
+::group::Running Dockerfile sanity
+
+::endgroup::
+✅ Dockerfile sanity
+::group::Running Dockerfile platform
+
+::endgroup::
+✅ Dockerfile platform
+::group::Running Absolute paths
+
+::endgroup::
+✅ Absolute paths
+::group::Running Test refs
+
+::endgroup::
+✅ Test refs
+::group::Running test.sh sanity
+
+::endgroup::
+✅ test.sh sanity
+::group::Running Task fields
+Checking tasks/energy-centre-dispatch/task.toml...
+All task.toml files contain required fields and README sections with valid values
+::endgroup::
+✅ Task fields
+::group::Running Task fix changelog
+
+::endgroup::
+✅ Task fix changelog
+::group::Running Task timeout cap
+Checking tasks/energy-centre-dispatch/task.toml...
+All task.toml timeouts are within the 28800-second (8h) cap
+::endgroup::
+✅ Task timeout cap
+::group::Running Instruction suffix
+Checking tasks/energy-centre-dispatch...
+All instruction.md files end with the canonical timeout/anti-cheat line
+::endgroup::
+✅ Instruction suffix
+::group::Running Instruction headings
+
+::endgroup::
+✅ Instruction headings
+::group::Running GPU types
+All task.toml gpu_types values are canonical
+::endgroup::
+✅ GPU types
+::group::Running Resource sizes
+
+::endgroup::
+✅ Resource sizes
+::group::Running Allow internet
+Checking tasks/energy-centre-dispatch/task.toml...
+All task.toml files allow internet access
+::endgroup::
+✅ Allow internet
+::group::Running No internet opt-in
+Checking tasks/energy-centre-dispatch/task.toml...
+All task.toml files omit an explicit allow_internet = true
+::endgroup::
+✅ No internet opt-in
+::group::Running Task slug length
+PASS tasks/energy-centre-dispatch (3 tokens)
+::endgroup::
+✅ Task slug length
+::group::Running Task package name
+Checking tasks/energy-centre-dispatch/task.toml...
+PASS tasks/energy-centre-dispatch
+All task.toml files have the expected [task] name
+::endgroup::
+✅ Task package name
+::group::Running Separate verifier
+Checking tasks/energy-centre-dispatch...
+All tasks are configured for separate verifier mode
+::endgroup::
+✅ Separate verifier
+::group::Running Verifier tooling baked
+Checking tasks/energy-centre-dispatch/tests/test.sh...
+All separate-verifier tasks bake their verifier tooling into the image
+::endgroup::
+✅ Verifier tooling baked
+::group::Running Trial network fetch
+Checking tasks/energy-centre-dispatch...
+No external trial-time fetches in tests/test.sh
+::endgroup::
+✅ Trial network fetch
+::group::Running Pip pinning
+Checking tasks/energy-centre-dispatch...
+All pip / uv pip / uvx --with installs are pinned
+::endgroup::
+✅ Pip pinning
+::group::Running Pytest version pin
+Checking tasks/energy-centre-dispatch...
+PASS
+::endgroup::
+✅ Pytest version pin
+::group::Running Nproc usage
+Checking tasks/energy-centre-dispatch...
+All scripts avoid bare nproc
+::endgroup::
+✅ Nproc usage
+::group::Running Compose host binds
+PASS tasks/energy-centre-dispatch
+::endgroup::
+✅ Compose host binds

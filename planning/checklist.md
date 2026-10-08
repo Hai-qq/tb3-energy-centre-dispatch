@@ -3,7 +3,7 @@
 用于 Klavis 作业：原创一道 Terminal-Bench 3（TB3）任务。
 
 依据：
-- TB3 仓库（harbor-framework/terminal-bench，main 分支 2026-09-28 版本）的 CONTRIBUTING、静态检查脚本、实现评审标准（`docs/prompts/task-implementation.toml`，35 条）、试验分析标准（`docs/prompts/trial-analysis.toml`，6 条）；
+- TB3 仓库（harbor-framework/terminal-bench，main 分支 2026-09-28 版本，交付前按 2026-10-07 的 `bf4c125` 复核）的 CONTRIBUTING、静态检查脚本、实现评审标准（`docs/prompts/task-implementation.toml`，35 条）、试验分析标准（`docs/prompts/trial-analysis.toml`，6 条）；
 - TB 4.0 排行榜里 11 道"四个最强模型 5 次全错"的题，以及它们被报告的缺陷。
 
 用法：
@@ -96,7 +96,8 @@
 - [ ] `test.sh`：不联网下载，不在运行时装 pytest，不用 `curl | sh`
 - [ ] 资源：cpus 取 1/2/4/8/16，内存取 1024–32768 MB 中的档位；两个超时都不超过 28800 秒
 - [ ] 如用 docker-compose 旁路服务：用命名卷，不挂载宿主机目录
-- [ ] 本地按 CI 原样逐个跑 26 个 `scripts/checks/check-*.sh`，全部通过
+- [ ] 所有镜像按 `@sha256:` 摘要固定（2026-10-07 起的 `check-image-digests`）
+- [ ] 本地按 CI 原样跑静态检查步骤（`bf4c125` 时为 27 个，`scripts/run_static_checks.sh`），全部通过
 
 ## 5 标准答案与说明文档
 

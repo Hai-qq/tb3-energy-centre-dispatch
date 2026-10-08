@@ -1,0 +1,76 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 0 
+h1.rerun: tool exited 0 
+h2: tool exited 0 
+h2.rerun: tool exited 0 
+h3: tool exited 0 
+h3.rerun: tool exited 0 
+h4: tool exited 0 
+h4.rerun: tool exited 0 
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 55 items
+
+test_plans.py .......................................................    [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_units_within_ratings_and_availability[visible]
+PASSED test_plans.py::test_electricity_balance[visible]
+PASSED test_plans.py::test_heat_balance[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_gas_and_cost[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h1]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h1]
+PASSED test_plans.py::test_electricity_balance[h1]
+PASSED test_plans.py::test_heat_balance[h1]
+PASSED test_plans.py::test_cooling_balance[h1]
+PASSED test_plans.py::test_cooling_towers[h1]
+PASSED test_plans.py::test_connection_limits[h1]
+PASSED test_plans.py::test_reported_gas_and_cost[h1]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h1]
+PASSED test_plans.py::test_least_cost[h1]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_heat_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_connection_limits[h2]
+PASSED test_plans.py::test_reported_gas_and_cost[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_least_cost[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h3]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h3]
+PASSED test_plans.py::test_electricity_balance[h3]
+PASSED test_plans.py::test_heat_balance[h3]
+PASSED test_plans.py::test_cooling_balance[h3]
+PASSED test_plans.py::test_cooling_towers[h3]
+PASSED test_plans.py::test_connection_limits[h3]
+PASSED test_plans.py::test_reported_gas_and_cost[h3]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h3]
+PASSED test_plans.py::test_least_cost[h3]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h4]
+PASSED test_plans.py::test_electricity_balance[h4]
+PASSED test_plans.py::test_heat_balance[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_connection_limits[h4]
+PASSED test_plans.py::test_reported_gas_and_cost[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_least_cost[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h1]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h3]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+============================== 55 passed in 1.11s ==============================

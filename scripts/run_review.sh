@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Run the TB3 implementation-rubric review locally (reviewer: claude-code + Sonnet 5, as in
-# ci/tb3/harbor-run-defaults.yml) and print the verdict summary.
+# ci/tb3/harbor-run-defaults.yml) and print the verdict summary. Exits non-zero unless every
+# criterion of the rubric has a verdict and none is "fail".
 #   [TASK_NAME=<task>] scripts/run_review.sh <job-name>
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -19,15 +20,20 @@ export CLAUDE_CODE_OAUTH_TOKEN
 harbor run --path "$STAGE" --agent claude-code --model anthropic/claude-sonnet-5 \
   --env docker --yes -o "$ROOT/jobs" --job-name "$NAME" --agent-setup-timeout-multiplier 5
 
-python3 - "$ROOT/jobs/$NAME" <<'PY'
-import glob, json, sys
-for path in glob.glob(f"{sys.argv[1]}/*/artifacts/app/verdicts.json"):
-    checks = json.load(open(path))["checks"]
-    counts = {}
-    for name, v in checks.items():
-        counts[v["outcome"]] = counts.get(v["outcome"], 0) + 1
-    print("verdicts:", counts, "of", len(checks))
-    for name, v in checks.items():
-        if v["outcome"] == "fail":
-            print(f"FAIL {name}: {v['explanation']}")
+python3 - "$ROOT/jobs/$NAME" "$ROOT/ci/tb3/task-implementation.toml" <<'PY'
+import glob, json, sys, tomllib
+paths = glob.glob(f"{sys.argv[1]}/*/artifacts/app/verdicts.json")
+if not paths:
+    sys.exit("no verdicts.json: the review did not finish")
+criteria = [c["name"] for c in tomllib.load(open(sys.argv[2], "rb"))["criteria"]]
+checks = json.load(open(paths[0]))["checks"]
+counts = {}
+for name, v in checks.items():
+    counts[v["outcome"]] = counts.get(v["outcome"], 0) + 1
+print("verdicts:", counts, "of", len(checks), "for", len(criteria), "criteria")
+bad = [n for n in criteria if checks.get(n, {}).get("outcome") not in ("pass", "not_applicable")]
+for name in bad:
+    v = checks.get(name)
+    print(f"FAIL {name}: {v['explanation']}" if v else f"MISSING {name}")
+sys.exit(1 if bad else 0)
 PY

@@ -15,6 +15,14 @@ least cost from a whole-day mixed-integer program. It is a physical-modelling di
 repair task: the difficulty is in what the plant model has to be, and once that is right the
 optimization is small.
 
+To read it in ten minutes: the [instruction](tasks/energy-centre-dispatch/instruction.md) the
+agents get (one page); the table below and [`ACCEPTANCE.md`](ACCEPTANCE.md), which ties each
+requirement of the assignment to its evidence; "Failure analysis" for why each trial failed;
+and "Limitations" for what the evidence does not show. The evidence itself is in
+[`results/checks-v8.1/`](results/checks-v8.1/) (the checks on the delivered task),
+[`results/v8-trials/`](results/v8-trials/) (each trial's deliverable and verifier output) and
+[`results/analysis-v8/`](results/analysis-v8/) (CI's trajectory review of each trial).
+
 The plant's hardest limits are in where its heat can go. The engines' HT circuit has no dump
 radiator, so every kW of its heat must go to the absorption chiller or the hospital. Each
 engine's intercooler has only its own LT radiator, so an engine whose radiator is out cannot run.
@@ -28,21 +36,26 @@ all of the plant, GPT got the heat and the radiators right in all three runs and
 absorption chiller off in all three, and Opus missed the header in two runs and the radiators
 in two.
 
-| check | v8.1 (current task) | v5 (an earlier full round) |
+| check | v8.1 (current task, `acdfe59ea74ff707`) | v5 (an earlier full round) |
 |---|---|---|
-| Static checks (26 TB3 scripts) | 26 / 26 pass | 26 / 26 pass |
-| Implementation rubric review (claude-code + Sonnet 5) | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
-| Oracle | reward 1.0 (55 / 55 tests) | reward 1.0 (45 / 45 tests) |
-| Nop | reward 0.0 | reward 0.0 |
-| Planted bugs, likely half-fixes, reporting and execution faults, each applied alone to the solution | 33 of 33 fail at least one test | 27 of 27 |
+| Static checks: CI's step at TB3 `bf4c125` (27 scripts) | 27 / 27 pass ([log](results/checks-v8.1/static-checks.log)) | 26 / 26 pass (the 26 checks of 2026-09-28) |
+| Docker build, both images, no cache | both build ([log](results/checks-v8.1/docker-build.log)) | builds |
+| Implementation rubric review (claude-code + Sonnet 5) | 35 / 35 criteria pass ([verdicts](results/checks-v8.1/review-verdicts.json)) | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
+| Oracle | reward 1.0, 55 / 55 tests ([output](results/checks-v8.1/oracle/test-stdout.txt)) | reward 1.0 (45 / 45 tests) |
+| Nop | reward 0.0 ([output](results/checks-v8.1/nop/test-stdout.txt)) | reward 0.0 |
+| Planted bugs, likely half-fixes, reporting and execution faults, each applied alone to the solution | 33 of 33 fail at least one test ([output](results/checks-v8.1/mutants.txt)) | 27 of 27 |
 | Codex + GPT-6.1 Sol (xhigh), on v8 | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
 | Claude Code + Opus 5.5 (max), on v8 | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
-| `/cheat`, each model once, on v8 | reward 0 for both; neither model attempted an exploit (see below) | reward 0 for both; neither model attempted an exploit (see below) |
+| `/cheat`, each model once, on v8 | reward 0 for both; neither model attempted an exploit (see below) | reward 0 for both; neither model attempted an exploit |
+| CI's trajectory review of the nine v8 trials (claude-code + Sonnet 5) | all nine reviewed: no reward hacking, no specification failure, the difficulty crux confirmed for all six standard trials; near miss flagged for three of them ([verdicts and notes](results/analysis-v8/)) | not run |
 
-v8.1 is v8 with a stricter verifier: a run that exits with an error or does not finish in time
-now gives no plan. Everything the agent sees (the instruction and the environment) and the
-solution are v8's, byte for byte. The trials ran on v8; their deliverables, replayed in Harbor
-with v8.1's verifier, fail exactly the tests they failed in the trials
+The models are the ones the assignment names, GPT-6.1 Sol and Opus 5.5, not CI's defaults
+(see "Configuration"). v8.1 is v8 with a stricter verifier, under which a run that exits with an
+error or does not finish in time gives no plan, and with both images' base pinned by digest
+(`python:3.13-slim-bookworm@sha256:a1165e27…`, the image the tag named when the v8 trials ran;
+TB3 added a check for such pins on 2026-10-07). The instruction, the environment's files and the
+solution are otherwise v8's, byte for byte. The trials ran on v8; their deliverables, replayed
+in Harbor with the delivered task's verifier, fail exactly the tests they failed in the trials
 ([`results/v8-trials/`](results/v8-trials/)).
 
 ## Where the difficulty is, and where the data says so
@@ -97,10 +110,10 @@ plant couples electricity, heat and cooling, which no single formula or field sh
 | path | contents |
 |---|---|
 | `tasks/energy-centre-dispatch/` | the task in TB3 format (instruction, task.toml, environment, solution, tests, README) |
-| `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `export_trials.py` (a trial's deliverable, verifier output and settings, for `results/`), `trial_log.py`, `stage_review.py` |
-| `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review), `replay_deliverable.sh` (score a trial's deliverable in Harbor with a task's verifier) |
+| `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `export_trials.py` (a trial's deliverable, verifier output and settings, for `results/`), `trial_log.py`, `stage_review.py` and `stage_analysis.py` (CI's rubric review and trajectory review as local Harbor tasks) |
+| `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review), `run_analysis.sh` (CI's trajectory review of trials), `run_static_checks.sh` (CI's static checks), `replay_deliverable.sh` (score a trial's deliverable in Harbor with a task's verifier) |
 | `ci/tb3/` | prompts and CI defaults copied unchanged from the TB3 repo (see `ci/tb3/SOURCE.md`) |
-| `results/` | per-trial summaries: `official-v8.md` and `cheat-v8.md` for the v8 trials, `v8-trials/` with their deliverables, verifier output and hashes, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
+| `results/` | `checks-v8.1/`, the checks on the delivered task; per-trial summaries: `official-v8.md` and `cheat-v8.md` for the v8 trials, `v8-trials/` with their deliverables, verifier output and hashes, `analysis-v8/` with CI's trajectory review of each, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
 | `archive/` | earlier tasks and versions, each version with the build script that made its data (see "How the task came about") |
 | `planning/` | task checklist and the original proposals (in Chinese) |
 
@@ -128,6 +141,9 @@ scripts/run_detached.sh energy-centre-dispatch codex cheat cheat-codex
 scripts/run_detached.sh energy-centre-dispatch claude cheat cheat-claude
 TASK_NAME=energy-centre-dispatch scripts/run_review.sh review    # implementation rubric
 python tools/analyze_ecd_trials.py <job-name> ...                  # what a trial's tool got wrong
+scripts/replay_deliverable.sh tasks/energy-centre-dispatch results/v8-trials/<job>/app <job-name>
+scripts/run_analysis.sh analysis-v8 archive/energy-centre-dispatch-v8 results/analysis-v8 <job-name> ...
+scripts/run_static_checks.sh <terminal-bench-checkout>             # CI's static checks
 ```
 
 The standard trials are run one at a time, in the order GPT, Opus, GPT, Opus, GPT, Opus, each
@@ -136,8 +152,13 @@ for revision. One at a time also keeps two separate-mode verifier images from be
 once, which has hung on this Docker Desktop host. `run_detached.sh` runs the trial in a session
 of its own, so that it outlives the shell that started it.
 
-Static checks: the 26 `scripts/checks/check-*.sh` scripts from the TB3 repository, run
-against a copy of the task inside a TB3 checkout.
+Static checks: `scripts/run_static_checks.sh` takes the "Run all static checks" step from a
+Terminal-Bench checkout's `.github/workflows/static-checks.yml` and runs it unchanged in a
+throwaway linux/amd64 container without network, with `dockerfile-pin` v1.5.0 installed as CI
+installs it (checked against CI's SHA-256). At `bf4c125` the step has 27 checks. The replays
+(`replay_deliverable.sh`) score a deliverable with the task's own verifier through Harbor's
+oracle agent; `run_analysis.sh` stages CI's trajectory review of each trial (one Harbor task per
+trial, as `scripts/ci/stage_hosted_analysis.py` does) and runs it.
 
 Each trial ran on fixed task files, identified by the SHA-256 of all files but the README:
 
@@ -146,9 +167,9 @@ Each trial ran on fixed task files, identified by the SHA-256 of all files but t
   | xargs shasum -a 256 | shasum -a 256 | cut -c1-16)
 ```
 
-This gives `b489397ec7f5b556` for the current task: v8.1 with the author's name in `task.toml`
-written out instead of "TBD". The rubric review and the replays ran on the files before that
-change, `dec6ede95f903991`. The archived versions give the same with
+This gives `acdfe59ea74ff707` for the current task, the files on which the checks in
+`results/checks-v8.1/`, the rubric review and the replays ran. The archived versions give the
+same with
 `! -name build_energy_days.py` added: `0dcfa73dde270061` for v5, `6e720233fd4ea76d` for
 v6, `034e1f56e26a1c1a` for v7 and `6826dc661e623be8` for v8, the files their trials ran on.
 `tools/export_trials.py` exports a trial's deliverable, verifier output and settings from the
@@ -156,14 +177,14 @@ local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.
 
 ## Configuration
 
-- **Agents and models.** The assignment names Claude Opus 5.5 (max effort) and GPT-6.1 Sol
-  (xhigh). `ci/tb3/harbor-run-defaults.yml` (the CI source of truth) pins
-  `claude-fable-5-1` and `gpt-6-astra`; the trials use the assignment's models with every
-  other CI setting unchanged: `claude-code` with `reasoning_effort=max` and
-  `CLAUDE_CODE_MAX_OUTPUT_TOKENS=128000`, `codex` with `reasoning_effort=xhigh`, 3 attempts
-  for `/run`, 1 for `/cheat` with `ci/tb3/hack-trial-prompt.md` appended. CI runs the 3 `/run`
-  attempts as one job; here each attempt was its own single-attempt job, started after the
-  previous one had finished.
+- **Agents and models, a deviation from CI's defaults.** The assignment names Claude Opus 5.5
+  (max effort) and GPT-6.1 Sol (xhigh); CI's defaults in `ci/tb3/harbor-run-defaults.yml` are
+  `claude-fable-5-1` and `gpt-6-astra`, which were not run. The trials use the assignment's
+  models and keep every other CI setting: `claude-code` with `reasoning_effort=max` and
+  `CLAUDE_CODE_MAX_OUTPUT_TOKENS=128000` (the `env` of CI's claude-code entry), `codex` with
+  `reasoning_effort=xhigh`, 3 attempts for `/run`, 1 for `/cheat` with
+  `ci/tb3/hack-trial-prompt.md` appended. CI runs the 3 `/run` attempts as one job; here each
+  attempt was its own single-attempt job, started after the previous one had finished.
 - **Model ids.** `anthropic/claude-opus-5.5` (dotted, as in the assignment) returns
   `model_not_found`; `anthropic/claude-opus-5-5` is the working id. `openai/gpt-6.1-sol` works
   as written.
@@ -171,8 +192,14 @@ local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.
   `CODEX_FORCE_AUTH_JSON=1`). `run_trials.sh` unsets inherited API base URLs and keys so
   they do not reach the trial container.
 - **Environment.** Local Docker on macOS (arm64). Both task images use
-  `python:3.13-slim-bookworm`, with the agent CLIs' apt dependencies preinstalled, because
-  the Ubuntu ARM package mirror was not reachable from containers on this machine.
+  `python:3.13-slim-bookworm`, pinned by digest, with the agent CLIs' apt dependencies
+  preinstalled, because the Ubuntu ARM package mirror was not reachable from containers on this
+  machine.
+- **Reviews.** The rubric review and the trajectory review use CI's agent and model for them
+  (claude-code, `anthropic/claude-sonnet-5`) and CI's prompts, staged by
+  `tools/stage_review.py` and `tools/stage_analysis.py`. CI gives the rubric review no network
+  but the model's API; Harbor's docker environment here cannot enforce that and refuses such a
+  task, so the review ran with the default network.
 
 ## Trial results
 
@@ -277,7 +304,10 @@ shipped rule changes nothing there, and the hidden days run only after the agent
   stopped.
 - Run 2 kept the header rule too, and ran GE1 through its radiator's evening outage on the
   winter weekday, although its plant model checks that each engine's LT circuit goes only to the
-  engine's own radiator.
+  engine's own radiator. Its closing message names the right control and turns it down: "The
+  alternative is to hold the tower water at 22 °C so AC1 can run. That would sometimes be
+  cheaper, but the plan has no field to say which temperature was used." The plan needs no
+  such field: the header is held only while the absorption chiller runs, which the plan shows.
 - Run 3 held the header at 22 °C and matched the least cost on the visible day and to the penny
   on the Saturday, but ignored all three radiator outages, as the v7 run had: its plans for the
   other three days cost £324, £237 and £112 less than the least cost and cannot be run.
@@ -288,6 +318,12 @@ The radiators were right in one Opus run and the header in another, never both i
 and Opus ended its run after reading the code and data. What keeps the verifier hard to game is
 described under v5 below; v8 adds that the tool must give the same plan on a second run of each
 day.
+
+**CI's trajectory review** of all nine trials ([`results/analysis-v8/`](results/analysis-v8/))
+finds no reward hacking and no specification failure, and confirms that each standard trial
+failed on the plant couplings the task is about. It flags three standard trials as near misses;
+the numbers behind those three, and where its account of the causes differs from the one above,
+are set out there.
 
 ### v7
 
@@ -381,6 +417,32 @@ that traced every outage through the plant passes all of them: the failures do n
 the five days' exact numbers. That does not show that the task was not shaped around the
 models' blind spots: "How the task came about" records how each version followed the trials of
 the one before.
+
+## Limitations
+
+- **The task was revised against the models' failures.** CONTRIBUTING asks authors not to build
+  tasks adversarially, and from v4 to v8 each version followed the trials of the one before
+  ("How the task came about"). The couplings are engineering facts stated in the data and the
+  failures carry over to fresh days, but which couplings the task leans on was chosen with
+  these two models' misses in view; another model may find it easier or harder for that reason.
+- **One control is left to the reader.** Holding the condenser water header at 22 °C uses a
+  control the data describes but the instruction does not state, and a review asked for it to
+  be stated ("Where the difficulty is"). All three GPT runs on v8 failed on that point alone,
+  so GPT's result depends on it, and Opus's second run saw the control but turned it down
+  because the plan has no field for the header's temperature.
+- **The `/cheat` evidence is weak.** OpenAI's API refused both GPT attempts at the first turn,
+  and Opus looked for tests and logs, found none, and ended its attempt without changing
+  anything. The zero rewards show that nothing was gained, not that an attack was resisted;
+  the verifier's resistance rests on its design ("Failure analysis", v5), which no independent
+  red team has tested.
+- **Not CI's models, and few runs.** CI's default models were not run (see "Configuration").
+  Three runs per model bound little: a model that passes one run in five fails three in a row
+  about half the time.
+- **The trials ran on v8.** The delivered task differs in its verifier's handling of runs that
+  crash or hang and in its pinned base image (the one the trials used); the six deliverables
+  replayed with the delivered verifier fail the same tests, but no round was run on v8.1.
+- **Local and synthetic.** Every run was on local Docker on an arm64 Mac, not on CI's hosted
+  Harbor, and the plant, its tariffs and its days are synthetic.
 
 ## How the task came about
 
@@ -612,6 +674,20 @@ the one before.
     sentences of this README claimed more than the evidence shows and were narrowed. It also
     asked for the towers' control to be stated in the instruction; that was left as it is, for
     the reasons under "Where the difficulty is", so the agents see exactly what v8's trials saw.
+24. **v8.1 with pinned images.** On 2026-10-07 TB3's CI added a static check that every image a
+    task's Dockerfiles use is pinned by digest (`check-image-digests`, with `dockerfile-pin`).
+    Both Dockerfiles now name `python:3.13-slim-bookworm` by the digest the tag pointed to when
+    the v8 trials ran, so the base image is the one the trials used. The static checks (27 at
+    TB3 `bf4c125`), a clean build of both images, oracle, nop, the mutants, the rubric review and
+    the six replays were run again on these files (`results/checks-v8.1/`,
+    `results/v8-trials/`), and CI's trajectory review was run on the nine v8 trials
+    (`results/analysis-v8/`).
+
+## Authorship and AI use
+
+The task's design and the decisions in it were, for the most part, made by the author, Qing
+Gao. Claude Code and Codex were used as assistants throughout, apart from their role as the
+agents under test in the trials.
 
 ## Data
 

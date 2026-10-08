@@ -19,41 +19,41 @@ test_plans.py .....................F.........F.........F.............    [100%]
 =================================== FAILURES ===================================
 ________________ test_units_within_ratings_and_availability[h2] ________________
 
-case = (<reference.Day object at 0xffff24b0f9d0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 56., 56.,
+case = (<reference.Day object at 0xffff5473f9d0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 56., 56.,
        56., 56., 56., 56., 56., 56., 56., 56., 56.]), ...})
 
     def test_units_within_ratings_and_availability(case):
         _, _, flows = case
 >       assert flows["running_ok"].all()
 E       assert np.False_
-E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff245ab750>()
-E        +    where <built-in method all of numpy.ndarray object at 0xffff245ab750> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True, False, False, False,\n       False, False, False]).all
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff541db750>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff541db750> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True, False, False, False,\n       False, False, False]).all
 
 test_plans.py:53: AssertionError
 ________________ test_units_within_ratings_and_availability[h3] ________________
 
-case = (<reference.Day object at 0xffff24b0f890>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...8144, 67.332244, 66.78935 , 67.204072,
+case = (<reference.Day object at 0xffff5473f890>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...8144, 67.332244, 66.78935 , 67.204072,
        66.0056  , 35.317688, 35.331746, 35.714436, 36.567288, 36.42046 ]), ...})
 
     def test_units_within_ratings_and_availability(case):
         _, _, flows = case
 >       assert flows["running_ok"].all()
 E       assert np.False_
-E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff245ff6f0>()
-E        +    where <built-in method all of numpy.ndarray object at 0xffff245ff6f0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff542536f0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff542536f0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
 
 test_plans.py:53: AssertionError
 ________________ test_units_within_ratings_and_availability[h4] ________________
 
-case = (<reference.Day object at 0xffff24668690>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...6742, 45.048948, 44.920864, 44.59753 ,
+case = (<reference.Day object at 0xffff542b0690>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...6742, 45.048948, 44.920864, 44.59753 ,
        44.881814, 45.4332  , 45.884618, 46.626568, 46.90929 , 47.118598]), ...})
 
     def test_units_within_ratings_and_availability(case):
         _, _, flows = case
 >       assert flows["running_ok"].all()
 E       assert np.False_
-E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff2461c750>()
-E        +    where <built-in method all of numpy.ndarray object at 0xffff2461c750> = array([False, False, False, False, False, False, False, False,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff542c0750>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff542c0750> = array([False, False, False, False, False, False, False, False,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
 
 test_plans.py:53: AssertionError
 ==================================== PASSES ====================================

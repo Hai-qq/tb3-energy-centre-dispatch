@@ -1,0 +1,35 @@
+weather_by_utc_date          CAUGHT  connection_limits:h1; cooling_balance:h1; cooling_towers:h1,h4; electricity_balance:visible,h1,h3,h4; heat_balance:h1; least_cost:visible,h1,h3; plan_covers_the_day:h1; reported_gas_and_cost:h1; reported_import_export_and_grid_flags:h1; same_plan_every_time:h1; units_within_ratings_and_availability:h1  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li
+two_point_curve              CAUGHT  heat_balance:visible,h1,h2,h3,h4; least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  
+gas_net_to_gross_divided     CAUGHT  least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  
+starts_not_in_decision       CAUGHT  least_cost:visible,h1  
+heat_can_be_dumped           CAUGHT  heat_balance:visible,h1,h3,h4  
+lt_heat_counted              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h3,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li
+towers_take_cooling_only     CAUGHT  cooling_towers:h1,h4  
+kva_ignores_engines          CAUGHT  connection_limits:h1; cooling_balance:h1; cooling_towers:h1; electricity_balance:h1; heat_balance:h1; least_cost:h1; plan_covers_the_day:h1; reported_gas_and_cost:h1; reported_import_export_and_grid_flags:h1; same_plan_every_time:h1; units_within_ratings_and_availability:h1  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li
+absorber_needs_cold_weather  CAUGHT  connection_limits:h1,h3,h4; cooling_balance:h1,h3,h4; cooling_towers:h1,h3,h4; electricity_balance:h1,h3,h4; heat_balance:h1,h3,h4; least_cost:h1,h3,h4; plan_covers_the_day:h1,h3,h4; reported_gas_and_cost:h1,h3,h4; reported_import_export_and_grid_flags:h1,h3,h4; same_plan_every_time:h1,h3,h4; units_within_ratings_and_availability:h1,h3,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li
+weekend_from_utc_start       CAUGHT  least_cost:h1; reported_gas_and_cost:h1  
+kva_as_kw                    CAUGHT  connection_limits:h1  
+kva_engines_absorb_kvar      CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:h1,h4; least_cost:h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li
+towers_absorber_only         CAUGHT  cooling_towers:h1,h4  
+cop_at_dry_bulb              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:h1,h4; least_cost:visible,h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li
+cewt_without_minimum         CAUGHT  electricity_balance:h2,h3  
+no_engine_aux                CAUGHT  electricity_balance:visible,h1,h2,h3,h4  
+no_lthw_loss                 CAUGHT  heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h4  
+outages_ignored              CAUGHT  units_within_ratings_and_availability:visible,h1,h2,h3,h4  
+outage_by_period_start       CAUGHT  electricity_balance:h4; heat_balance:h4; units_within_ratings_and_availability:h1,h2,h3  
+phe1_outage_ignored          CAUGHT  heat_balance:h4  
+lt_radiator_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h3,h4  
+outages_engines_only         CAUGHT  units_within_ratings_and_availability:h2,h3  
+tower_cell_outage_ignored    CAUGHT  cooling_towers:h1  
+pv_outage_ignored            CAUGHT  electricity_balance:h4  
+absorber_cooling_water_ignored CAUGHT  electricity_balance:h1,h3,h4  
+header_not_shared            CAUGHT  electricity_balance:h1,h3,h4  
+midnight_state_ignored       CAUGHT  reported_gas_and_cost:h1,h2  
+saturday_is_weekday          CAUGHT  least_cost:h1; reported_gas_and_cost:h1  
+import_total_in_kw           CAUGHT  reported_import_export_and_grid_flags:visible,h1,h2,h3,h4  
+grid_flag_without_generators CAUGHT  reported_import_export_and_grid_flags:h1  
+plan_varies_between_runs     CAUGHT  same_plan_every_time:visible,h1,h2,h3,h4  
+exits_with_error_after_writing CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77
+hangs_after_writing          CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out
+python3 tools/energy_mutants.py  262.48s user 34.08s system 63% cpu 7:50.55 total
+exit 0

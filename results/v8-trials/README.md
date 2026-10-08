@@ -18,12 +18,14 @@ were stopped before the agent could work and are not counted.
 
 Every trial ran on the files in `archive/energy-centre-dispatch-v8/` (task hash
 `6826dc661e623be8`, as `trial.json` records; Harbor's own checksum of the task folder is there
-too). The current task differs from them only in `tests/` and the README: its verifier also
-fails a run that exits with an error or does not finish in 150 seconds.
+too). The delivered task (`acdfe59ea74ff707`) differs from them in its verifier, which also
+fails a run that exits with an error or does not finish in 150 seconds, in both Dockerfiles,
+which pin the base image by digest (the image the trials used), and in the README and the
+author's name in `task.toml`.
 
 ## Re-scoring with the current verifier
 
-Each counted deliverable was scored again in Harbor with v8.1's verifier, the way a trial is
+Each counted deliverable was scored again in Harbor on the delivered task, the way a trial is
 scored (separate verifier image, the tool run as `nobody`, twice on each day):
 
 ```bash
@@ -32,7 +34,8 @@ scripts/replay_deliverable.sh tasks/energy-centre-dispatch results/v8-trials/<jo
 
 copies the task, puts the deliverable in place of the solution and runs Harbor's oracle agent,
 which installs it as the agent left it. The verifier's output of these replays is in
-`<job>/replay-v8.1/`. Every replay scored 0 and failed exactly the tests its trial failed:
+`<job>/replay-v8.1/`. Every replay scored 0 and failed exactly the tests its trial failed (the
+same as in an earlier replay on v8.1 before its images were pinned):
 
 | Trial | Replay (v8.1) | Days failed | Why |
 |---|---|---|---|
