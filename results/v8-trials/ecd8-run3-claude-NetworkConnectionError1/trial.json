@@ -1,0 +1,30 @@
+{
+ "job": "ecd8-run3-claude-NetworkConnectionError1",
+ "trial": "energy-centre-dispatch__LhckRZn",
+ "task": "terminal-bench/energy-centre-dispatch",
+ "task_files": "archive/energy-centre-dispatch-v8",
+ "task_hash": "6826dc661e623be8",
+ "harbor_task_checksum": "16429b913619e767f69de0a35e30912cd19c788ed0bdd6d2a4eb44c2786d5b9d",
+ "agent": {
+  "name": "claude-code",
+  "version": "unknown",
+  "model": "anthropic/claude-opus-5-5",
+  "kwargs": {
+   "reasoning_effort": "max"
+  },
+  "env_from_config": []
+ },
+ "extra_instruction": false,
+ "agent_setup_timeout_multiplier": 5.0,
+ "started_at": "2026-10-08T02:30:50.949028Z",
+ "agent_started_at": null,
+ "agent_finished_at": null,
+ "agent_minutes": null,
+ "tokens": {
+  "n_input_tokens": null,
+  "n_cache_tokens": null,
+  "n_output_tokens": null
+ },
+ "exception": "NetworkConnectionError",
+ "reward": null
+}

@@ -4,7 +4,8 @@
 Everything is recomputed from each plan's unit outputs with the reference model in
 reference.py: the energy balances, the unit, cooling-tower and connection limits, the
 gas, costs, imports, exports and grid flags the plan reports, and that no cheaper plan
-meets the day. The second run must give the same plan.
+meets the day. The second run must give the same plan, and a run that failed or timed out
+counts as no plan.
 """
 
 import json
@@ -22,12 +23,18 @@ PLANS = Path(os.environ.get("PLANS_DIR", "/tmp/plans"))
 KW = 1.0  # balance tolerance, kW
 
 
+def load_plan(name):
+    error = PLANS / f"{name}.error"
+    assert not error.exists(), f"{name}: {error.read_text().strip()}"
+    path = PLANS / f"{name}.json"
+    assert path.exists(), f"no plan was written for {name}"
+    return json.loads(path.read_text())
+
+
 @pytest.fixture(scope="module", params=DAYS)
 def case(request):
     day = Day(HERE / "days" / request.param)
-    path = PLANS / f"{request.param}.json"
-    assert path.exists(), f"no plan was written for day {request.param}"
-    plan = json.loads(path.read_text())
+    plan = load_plan(request.param)
     return day, plan, day.true_flows(plan)
 
 
@@ -113,9 +120,7 @@ def test_reported_import_export_and_grid_flags(case):
 
 @pytest.mark.parametrize("name", DAYS)
 def test_same_plan_every_time(name):
-    runs = [PLANS / f"{name}.json", PLANS / f"{name}.rerun.json"]
-    assert all(p.exists() for p in runs), f"no plan was written for day {name} in one of its runs"
-    first, again = (json.loads(p.read_text()) for p in runs)
+    first, again = load_plan(name), load_plan(f"{name}.rerun")
     assert all(first.get(k) == again.get(k) for k in ("date", "periods", "summary"))
 
 

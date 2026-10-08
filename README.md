@@ -28,16 +28,22 @@ all of the plant, GPT got the heat and the radiators right in all three runs and
 absorption chiller off in all three, and Opus missed the header in two runs and the radiators
 in two.
 
-| check | v8 (current task) | v5 (an earlier full round) |
+| check | v8.1 (current task) | v5 (an earlier full round) |
 |---|---|---|
 | Static checks (26 TB3 scripts) | 26 / 26 pass | 26 / 26 pass |
-| Implementation rubric review (claude-code + Sonnet 5) | 35 pass, 0 fail | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
+| Implementation rubric review (claude-code + Sonnet 5) | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
 | Oracle | reward 1.0 (55 / 55 tests) | reward 1.0 (45 / 45 tests) |
 | Nop | reward 0.0 | reward 0.0 |
-| Planted bugs, likely half-fixes and reporting faults, each applied alone to the solution | 31 of 31 fail at least one test | 27 of 27 |
-| Codex + GPT-6.1 Sol (xhigh) | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
-| Claude Code + Opus 5.5 (max) | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
-| `/cheat`, each model once | reward 0 for both; neither model attempted an exploit (see below) | reward 0 for both; neither model attempted an exploit (see below) |
+| Planted bugs, likely half-fixes, reporting and execution faults, each applied alone to the solution | 33 of 33 fail at least one test | 27 of 27 |
+| Codex + GPT-6.1 Sol (xhigh), on v8 | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
+| Claude Code + Opus 5.5 (max), on v8 | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
+| `/cheat`, each model once, on v8 | reward 0 for both; neither model attempted an exploit (see below) | reward 0 for both; neither model attempted an exploit (see below) |
+
+v8.1 is v8 with a stricter verifier: a run that exits with an error or does not finish in time
+now gives no plan. Everything the agent sees (the instruction and the environment) and the
+solution are v8's, byte for byte. The trials ran on v8; their deliverables, scored again with
+v8.1's verifier, fail on the same days for the same reasons
+([`results/v8-trials/`](results/v8-trials/)).
 
 ## Where the difficulty is, and where the data says so
 
@@ -57,6 +63,18 @@ out, that no plan date has a clock change, and the two minutes the tool has for 
 | The generators supply reactive power, so the kVA connection allows more import while they run | generator `control: "fixed power factor, overexcited"`; `import_capacity_kva` | leaves the generators out of the kVA |
 | Engine fuel is net CV, gas is billed gross CV | `fuel_basis: "net CV"`; gas `billing_basis: "gross CV"`, `gross_to_net_cv_ratio` | converts the wrong way (the engineers' "gas below the meters") |
 | The tariff's weekday and weekend are those of the local date | import rates' `time_basis: "local time"` | counts whole UTC days since the epoch, so a summer-time Saturday is priced as a Friday |
+
+Holding the header at 22 °C uses a control the data already describes. The towers' fans are
+variable speed and their leaving water never goes below `min_leaving_water_c`, 21 °C: on every
+winter and spring day, when the wet bulb plus the approach is far below 21 °C, the towers
+already keep the water warmer than the weather would make it, and the shipped tool computes
+the condenser water as the larger of the two. Keeping it at 22 °C while the absorption chiller
+runs is the same control with a set point 1 K higher. The towers' capacity is the wet-bulb
+table's whatever the set point; on the five days the towers have at least 97 kW to spare in
+every half-hour in which the least-cost plan holds the header, so the table never limits the
+plan there. A review asked for this control to be stated in the instruction; it is left to the
+reader like the other couplings, since the data states the control and the engineer draws the
+consequence.
 
 The other planted bugs are plain code errors that the engineers' second symptom and the data
 point to: the middle part-load point ignored, weather rows matched by UTC date, each half-hour
@@ -79,10 +97,10 @@ plant couples electricity, heat and cooling, which no single formula or field sh
 | path | contents |
 |---|---|
 | `tasks/energy-centre-dispatch/` | the task in TB3 format (instruction, task.toml, environment, solution, tests, README) |
-| `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `trial_log.py`, `stage_review.py` |
+| `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `export_trials.py` (a trial's deliverable, verifier output and settings, for `results/`), `trial_log.py`, `stage_review.py` |
 | `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review) |
 | `ci/tb3/` | prompts and CI defaults copied unchanged from the TB3 repo (see `ci/tb3/SOURCE.md`) |
-| `results/` | per-trial summaries: `official-v8.md` and `cheat-v8.md` for the current task, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
+| `results/` | per-trial summaries: `official-v8.md` and `cheat-v8.md` for the v8 trials, `v8-trials/` with their deliverables, verifier output and hashes, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
 | `archive/` | earlier tasks and versions, each version with the build script that made its data (see "How the task came about") |
 | `planning/` | task checklist and the original proposals (in Chinese) |
 
@@ -128,9 +146,11 @@ Each trial ran on fixed task files, identified by the SHA-256 of all files but t
   | xargs shasum -a 256 | shasum -a 256 | cut -c1-16)
 ```
 
-This gives `6826dc661e623be8` for the current task, the v8 its trials ran on. The archived versions
-give the same with `! -name build_energy_days.py` added: `0dcfa73dde270061` for v5,
-`6e720233fd4ea76d` for v6 and `034e1f56e26a1c1a` for v7, the files their trials ran on.
+This gives `dec6ede95f903991` for the current task (v8.1). The archived versions give the same
+with `! -name build_energy_days.py` added: `0dcfa73dde270061` for v5, `6e720233fd4ea76d` for
+v6, `034e1f56e26a1c1a` for v7 and `6826dc661e623be8` for v8, the files their trials ran on.
+`tools/export_trials.py` exports a trial's deliverable, verifier output and settings from the
+local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.
 
 ## Configuration
 
@@ -154,12 +174,14 @@ give the same with `! -name build_energy_days.py` added: `0dcfa73dde270061` for 
 
 ## Trial results
 
-### v8 (current task)
+### v8 (the trials of the current task)
 
 Six standard trials, run one at a time in the order below, each started after the previous one
-had finished, on the task files exactly as they are in `tasks/energy-centre-dispatch/`. Every
-counted trial ran to the end without an exception. A day whose tool stopped without a plan shows
-as errors on its tests.
+had finished, on the task files in `archive/energy-centre-dispatch-v8/`. Harbor recorded no
+exception for any counted trial; that is about the trial, not the agent's tool, and a tool that
+stops with an error on a hidden day is a failure of the delivered program. Such a day shows as
+failures and errors on all its tests: for GPT, the 3 failures and 30 errors are three days
+without a plan.
 
 | Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
 |---|---|---|---|---|
@@ -241,15 +263,16 @@ minimum, instead of holding the shared header at 22 °C with the towers' variabl
 the Saturday's cool night, on the hot weekday's night and at 13:30 on the spring Monday, with
 EC1 out, the engines then have nowhere for their heat and the connection cannot carry the
 site's load; the three tools raised `no feasible loading` and wrote no plan for those days.
-None took a day without a feasible plan, under data said to be correct, as a sign that its own
-model was wrong.
+The visible day could not show the error: its condenser water never falls below 22 °C, so the
+shipped rule changes nothing there, and the hidden days run only after the agent has finished.
 
 **Opus 5.5, 3 of 3, on the header or the radiators.**
 
-- Run 1 kept an engine off while its radiator was out, and kept the shipped header rule. Its
-  tool printed `warning: the demand at 00:00 cannot be met within the limits of the
-  connection` and wrote plans for the two cool nights that import up to 379 and 535 kVA beyond
-  the connection's capacity, at £740 and £486 more than the least cost; on the Monday it stopped.
+- Run 1 kept an engine off while its radiator was out, and kept the shipped header rule. On the
+  hidden days its tool printed `warning: the demand at 00:00 cannot be met within the limits of
+  the connection` and wrote plans for the two cool nights that import up to 379 and 535 kVA
+  beyond the connection's capacity, at £740 and £486 more than the least cost; on the Monday it
+  stopped.
 - Run 2 kept the header rule too, and ran GE1 through its radiator's evening outage on the
   winter weekday, although its plant model checks that each engine's LT circuit goes only to the
   engine's own radiator.
@@ -333,9 +356,10 @@ any `reward.json`.
 2026 without a clock change (in winter, in spring or autumn, and twice in summer, in turn), the
 demand and weather of the task's day of that season scaled and shifted, random engines running
 at midnight, and one to four outages of any item `plant.json` names, at random times off the
-half-hour. A day is kept only if a plan meets it. With its default seed it drew eight days,
-four of them with an LT radiator outage. Each tool below was run twice on every day and judged
-by the task's own tests:
+half-hour. A day is kept only if its inputs pass checks against the plant's data (ratings,
+names, times, a full day of half-hours; the task's five days pass the same checks) and a plan
+meets it. With its default seed it drew eight days, four of them with an LT radiator outage.
+Each tool below was run twice on every day and judged by the task's own tests:
 
 | Tool | Days failed (of 8) | On what |
 |---|---|---|
@@ -351,8 +375,10 @@ by the task's own tests:
 | Opus 5.5: v8 run 3 | 4 | availability, on exactly the four radiator days |
 
 The models' tools fail the new days for the same reasons as the hidden ones, and the one tool
-that traced every outage through the plant passes all of them: the hidden days are not fitted
-to the tools' blind spots.
+that traced every outage through the plant passes all of them: the failures do not depend on
+the five days' exact numbers. That does not show that the task was not shaped around the
+models' blind spots: "How the task came about" records how each version followed the trials of
+the one before.
 
 ## How the task came about
 
@@ -570,6 +596,19 @@ to the tools' blind spots.
     (reward 0): GPT's three on the condenser water header, after getting the heat and the
     radiators right for the first time, and Opus's on the header, the radiators or both (see
     "Failure analysis").
+23. **v8.1: what a review of v8 asked for.** A second review (GPT Pro, on v8 at commit
+    3a9ddc3, with its own runs of the tests) found that the verifier still took the plan of a
+    run that had exited with an error or run out of time, so a tool could write the right plan
+    and then crash or hang; the verifier now fails such a run, the development evaluator does
+    too, and two execution faults joined the mutants (33, all caught). It found that the
+    fresh-day generator could forecast 280.6 kW of PV against the inverter's 280 kW; the
+    generator now caps it, and each drawn day must pass input checks before the plan check. It
+    asked for evidence a third party can check: `results/v8-trials/` holds each v8 trial's
+    deliverable, verifier output and settings with their hashes, and the six deliverables,
+    scored again with the new verifier, fail on the same days for the same reasons. Two
+    sentences of this README claimed more than the evidence shows and were narrowed. It also
+    asked for the towers' control to be stated in the instruction; that was left as it is, for
+    the reasons under "Where the difficulty is", so the agents see exactly what v8's trials saw.
 
 ## Data
 

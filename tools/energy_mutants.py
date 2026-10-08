@@ -119,7 +119,17 @@ MUTANTS = {
         ("dispatch.py",
         '"export_kwh": sum(p["export_kw"] for p in periods) * 0.5,',
         '"export_kwh": sum(p["export_kw"] for p in periods) * 0.5 + 0.01 * random.random(),')],
+    # execution faults: the plan is right, the run is not
+    "exits_with_error_after_writing": [("dispatch.py",
+        'if __name__ == "__main__":\n    main()\n',
+        'if __name__ == "__main__":\n    main()\n    raise SystemExit(77)\n')],
+    "hangs_after_writing": [("dispatch.py",
+        'if __name__ == "__main__":\n    main()\n',
+        'if __name__ == "__main__":\n    main()\n    import time\n    time.sleep(3600)\n')],
 }
+
+# The solution plans a day in about a second; a short limit lets the hanging mutant fail fast.
+RUN_TIMEOUT_S = 20
 
 
 def main() -> None:
@@ -134,7 +144,7 @@ def main() -> None:
                 s = p.read_text()
                 assert s.count(old) == 1, (name, f, old)
                 p.write_text(s.replace(old, new))
-            r = evaluate(app, quiet=True)
+            r = evaluate(app, quiet=True, timeout=RUN_TIMEOUT_S)
         fails = "; ".join(f"{k.replace('test_', '')}:{','.join(v)}" for k, v in sorted(r["failed"].items()))
         errs = "; ".join(f"{d}:{e[:60]}" for d, e in r["errors"].items())
         print(f"{name:28s} {'CAUGHT' if r['failed'] else 'MISSED'}  {fails}  {errs}", flush=True)

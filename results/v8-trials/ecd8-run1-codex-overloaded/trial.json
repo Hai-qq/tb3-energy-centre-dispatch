@@ -1,0 +1,30 @@
+{
+ "job": "ecd8-run1-codex-overloaded",
+ "trial": "energy-centre-dispatch__DiwTmHi",
+ "task": "terminal-bench/energy-centre-dispatch",
+ "task_files": "archive/energy-centre-dispatch-v8",
+ "task_hash": "6826dc661e623be8",
+ "harbor_task_checksum": "16429b913619e767f69de0a35e30912cd19c788ed0bdd6d2a4eb44c2786d5b9d",
+ "agent": {
+  "name": "codex",
+  "version": "0.160.1",
+  "model": "openai/gpt-6.1-sol",
+  "kwargs": {
+   "reasoning_effort": "xhigh"
+  },
+  "env_from_config": []
+ },
+ "extra_instruction": false,
+ "agent_setup_timeout_multiplier": 5.0,
+ "started_at": "2026-10-07T15:42:11.086396Z",
+ "agent_started_at": "2026-10-07T15:43:42.790794Z",
+ "agent_finished_at": "2026-10-07T15:44:11.453858Z",
+ "agent_minutes": 0.5,
+ "tokens": {
+  "n_input_tokens": 29587,
+  "n_cache_tokens": 24576,
+  "n_output_tokens": 357
+ },
+ "exception": "ApiOverloadedError",
+ "reward": 0.0
+}
