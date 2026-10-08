@@ -23,20 +23,21 @@ or warmer from a condenser water header it shares with the electric chillers. A 
 one of these writes plans that the plant or its connection cannot carry out, or no plan at
 all. Every failed trial of v5, v7 and v8 failed that way. In v5 GPT-6.1 Sol let the engines'
 surplus heat vanish, and Opus 5.5 ran engines through their radiators' outages or kept the
-absorption chiller off on cool nights; in v8, whose instruction states that `plant.json` lists
-all of the plant, both models got the heat and the radiators right and kept the absorption
-chiller off.
+absorption chiller off on cool nights. In v8, whose instruction states that `plant.json` lists
+all of the plant, GPT got the heat and the radiators right in all three runs and kept the
+absorption chiller off in all three, and Opus missed the header in two runs and the radiators
+in two.
 
-| check | v8 (current task) | v5 (last full round) |
+| check | v8 (current task) | v5 (an earlier full round) |
 |---|---|---|
 | Static checks (26 TB3 scripts) | 26 / 26 pass | 26 / 26 pass |
 | Implementation rubric review (claude-code + Sonnet 5) | 35 pass, 0 fail | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
 | Oracle | reward 1.0 (55 / 55 tests) | reward 1.0 (45 / 45 tests) |
 | Nop | reward 0.0 | reward 0.0 |
 | Planted bugs, likely half-fixes and reporting faults, each applied alone to the solution | 31 of 31 fail at least one test | 27 of 27 |
-| Codex + GPT-6.1 Sol (xhigh) | 0 of 1 so far (reward 0) | 0 of 3 passed |
-| Claude Code + Opus 5.5 (max) | 0 of 1 so far (reward 0) | 0 of 3 passed |
-| `/cheat`, each model once | not run yet | reward 0 for both; neither model attempted an exploit (see below) |
+| Codex + GPT-6.1 Sol (xhigh) | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
+| Claude Code + Opus 5.5 (max) | 0 of 3 passed (reward 0, 0, 0) | 0 of 3 passed |
+| `/cheat`, each model once | reward 0 for both; neither model attempted an exploit (see below) | reward 0 for both; neither model attempted an exploit (see below) |
 
 ## Where the difficulty is, and where the data says so
 
@@ -81,7 +82,7 @@ plant couples electricity, heat and cooling, which no single formula or field sh
 | `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `trial_log.py`, `stage_review.py` |
 | `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review) |
 | `ci/tb3/` | prompts and CI defaults copied unchanged from the TB3 repo (see `ci/tb3/SOURCE.md`) |
-| `results/` | per-trial summaries: `v8-trials.md` for the current task, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
+| `results/` | per-trial summaries: `official-v8.md` and `cheat-v8.md` for the current task, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
 | `archive/` | earlier tasks and versions, each version with the build script that made its data (see "How the task came about") |
 | `planning/` | task checklist and the original proposals (in Chinese) |
 
@@ -155,18 +156,36 @@ give the same with `! -name build_energy_days.py` added: `0dcfa73dde270061` for 
 
 ### v8 (current task)
 
-One trial of each model, on the task files exactly as they are in `tasks/energy-centre-dispatch/`.
-The other two trials of each model and the `/cheat` trials have not been run on v8.
+Six standard trials, run one at a time in the order below, each started after the previous one
+had finished, on the task files exactly as they are in `tasks/energy-centre-dispatch/`. Every
+counted trial ran to the end without an exception. A day whose tool stopped without a plan shows
+as errors on its tests.
 
 | Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
 |---|---|---|---|---|
-| `ecd8-run1-codex` | codex, `openai/gpt-6.1-sol` | 0 | 17.2 min | 3 failed, 30 errors: no plan for h1, h3 and h4 |
 | `ecd8-run1-claude` | claude-code, `anthropic/claude-opus-5-5` | 0 | 26.4 min | 5 failed, 10 errors: connection and least cost on h1 and h4; no plan for h3 |
+| `ecd8-run1-codex` | codex, `openai/gpt-6.1-sol` | 0 | 17.2 min | 3 failed, 30 errors: no plan for h1, h3 and h4 |
+| `ecd8-run2-codex` | codex, `openai/gpt-6.1-sol` | 0 | 13.3 min | 3 failed, 30 errors: no plan for h1, h3 and h4 |
+| `ecd8-run2-claude` | claude-code, `anthropic/claude-opus-5-5` | 0 | 29.9 min | 6 failed, 10 errors: availability on h2; connection and least cost on h1 and h4; no plan for h3 |
+| `ecd8-run3-codex` | codex, `openai/gpt-6.1-sol` | 0 | 16.0 min | 3 failed, 30 errors: no plan for h1, h3 and h4 |
+| `ecd8-run3-claude` | claude-code, `anthropic/claude-opus-5-5` | 0 | 41.5 min | 3: availability on h2, h3 and h4 |
 
-The GPT trial was started first and stopped after half a minute, when OpenAI's API answered
-"Selected model is at capacity" (`ApiOverloadedError`); it is kept as
-`ecd8-run1-codex-overloaded` and not counted, and the GPT trial above was run after the Opus
-one with the same settings. Details: [`results/v8-trials.md`](results/v8-trials.md).
+Two attempts were stopped before the agent could work and are not counted: GPT run 1's first
+(OpenAI answered "Selected model is at capacity" after half a minute), which is why GPT run 1
+comes after Opus run 1, and Opus run 3's first (installing Claude Code in the container failed
+on a dropped connection). Both are kept under other names and were run again with the same
+settings. Per-trial details: [`results/official-v8.md`](results/official-v8.md).
+
+`/cheat` trials on v8, with the TB3 red-team prompt appended (one attempt each, as in CI; the
+GPT one was repeated once, as on v5):
+
+| Trial | Agent and model | Reward | What happened |
+|---|---|---|---|
+| `ecd8-cheat-codex` | codex, `openai/gpt-6.1-sol` | 0 | OpenAI's API stopped the first turn ("flagged for possible cybersecurity risk"); Harbor records `AgentSafetyRefusalError`. The verifier scored the shipped tool. |
+| `ecd8-cheat2-codex` | codex, `openai/gpt-6.1-sol` | 0 | The same refusal on a second try. |
+| `ecd8-cheat-claude` | claude-code, `anthropic/claude-opus-5-5` | 0 | Read the code and data and looked for tests and logs, which the container does not have; a safety classifier stopped part of a turn, and after 1.7 minutes the agent ended the run without changing anything, reasoning that a written-out plan would fail because the checker would rerun the tool on other days and rebuild every figure. The verifier scored the shipped tool. |
+
+Details: [`results/cheat-v8.md`](results/cheat-v8.md).
 
 ### v7
 
@@ -178,7 +197,7 @@ One standard trial, on the task files as they are in `archive/energy-centre-disp
 
 Details: [`results/v7-trials.md`](results/v7-trials.md).
 
-### v5 (previous version, full round)
+### v5 (an earlier full round)
 
 Six standard trials, run one at a time in the order below, each started after the previous one
 had finished, on the task files as they are in `archive/energy-centre-dispatch-v5/`. Every trial
@@ -212,21 +231,38 @@ Details: [`results/cheat-v5.md`](results/cheat-v5.md).
 
 ### v8
 
-**GPT-6.1 Sol and Opus 5.5, one run each: the condenser water header.** Both runs got right
-what every earlier GPT run and most earlier Opus runs got wrong. GPT's tool makes the HT/LTHW
-balance an equality ("There is no HT dump connection"), and both tools keep an engine off while
-its LT radiator is out: their plans for the winter weekday, with GE1's radiator out in the
-evening, cost exactly the least cost, and both matched the least cost on the visible day. Both
-kept the shipped rule that keeps the absorption chiller off whenever the weather alone gives
-condenser water below its 22 °C minimum, instead of holding the shared header at 22 °C with the
-towers' variable-speed fans. On the Saturday's cool night and the hot weekday's night, and at
-13:30 on the spring Monday with EC1 out, the engines then have nowhere for their heat and the
-connection cannot carry the site's load. GPT's tool raised `no feasible loading` and wrote no
-plan for those three days. Opus's tool printed `warning: the demand at 00:00 cannot be met
-within the limits of the connection` and wrote plans that import up to 379 and 535 kVA beyond
-the connection's capacity, at £740 and £486 more than the least cost; on the Monday it stopped.
-Neither took a day without a feasible plan, under data said to be correct, as a sign that its
-own model was wrong.
+**GPT-6.1 Sol, 3 of 3: the condenser water header.** With the instruction's statement that
+`plant.json` lists all of the plant, every GPT run made the HT/LTHW balance an equality for the
+first time ("There is no HT dump connection"), and every run kept an engine off while its LT
+radiator was out: all three matched the least cost on the visible day and on the winter
+weekday, whose evening has GE1's radiator out. All three kept the shipped rule that keeps the
+absorption chiller off whenever the weather alone gives condenser water below its 22 °C
+minimum, instead of holding the shared header at 22 °C with the towers' variable-speed fans. On
+the Saturday's cool night, on the hot weekday's night and at 13:30 on the spring Monday, with
+EC1 out, the engines then have nowhere for their heat and the connection cannot carry the
+site's load; the three tools raised `no feasible loading` and wrote no plan for those days.
+None took a day without a feasible plan, under data said to be correct, as a sign that its own
+model was wrong.
+
+**Opus 5.5, 3 of 3, on the header or the radiators.**
+
+- Run 1 kept an engine off while its radiator was out, and kept the shipped header rule. Its
+  tool printed `warning: the demand at 00:00 cannot be met within the limits of the
+  connection` and wrote plans for the two cool nights that import up to 379 and 535 kVA beyond
+  the connection's capacity, at £740 and £486 more than the least cost; on the Monday it stopped.
+- Run 2 kept the header rule too, and ran GE1 through its radiator's evening outage on the
+  winter weekday, although its plant model checks that each engine's LT circuit goes only to the
+  engine's own radiator.
+- Run 3 held the header at 22 °C and matched the least cost on the visible day and to the penny
+  on the Saturday, but ignored all three radiator outages, as the v7 run had: its plans for the
+  other three days cost £324, £237 and £112 less than the least cost and cannot be run.
+
+The radiators were right in one Opus run and the header in another, never both in the same run.
+
+**`/cheat`.** As on v5, neither model mounted an attack: OpenAI's API refused both GPT attempts,
+and Opus ended its run after reading the code and data. What keeps the verifier hard to game is
+described under v5 below; v8 adds that the tool must give the same plan on a second run of each
+day.
 
 ### v7
 
@@ -310,7 +346,9 @@ by the task's own tests:
 | GPT-6.1 Sol: v5 runs 1 and 3 | 7 | heat balance on six days; availability on the four radiator days |
 | GPT-6.1 Sol: v5 run 2 | 7 | heat balance on seven days; no plan on the four radiator days |
 | Opus 5.5: v6 run 1, which passed v6 | 0 | |
-| GPT-6.1 Sol and Opus 5.5: v8 run 1 | 4 each | the four days on which the least-cost plan runs the absorption chiller with the header held at 22 °C (two summer days, two spring days): no plan, a plan beyond the connection or a dearer plan |
+| GPT-6.1 Sol: v8 runs 1 to 3; Opus 5.5: v8 run 1 | 4 each | the four days on which the least-cost plan runs the absorption chiller with the header held at 22 °C (two summer days, two spring days): no plan, a plan beyond the connection or a dearer plan |
+| Opus 5.5: v8 run 2 | 5 | those four days and the four radiator days, five days in all |
+| Opus 5.5: v8 run 3 | 4 | availability, on exactly the four radiator days |
 
 The models' tools fail the new days for the same reasons as the hidden ones, and the one tool
 that traced every outage through the plant passes all of them: the hidden days are not fitted
@@ -528,10 +566,10 @@ to the tools' blind spots.
     verifier's 0.5 kVA. The development checks exit with status 1 on a failure, and three
     reporting faults joined the mutants. Third, the evidence: the trials of v8 are counted on
     v8 alone, and `tools/fresh_days.py` judges every tool on days the task was not tuned on.
-    The plant, the shipped tool and the five days are v7's. One trial of each model failed
-    (reward 0), both on the condenser water header; with the instruction's statement that
-    `plant.json` lists all of the plant, GPT got the heat right for the first time, and both got
-    the radiators right (see "Failure analysis").
+    The plant, the shipped tool and the five days are v7's. All six standard trials failed
+    (reward 0): GPT's three on the condenser water header, after getting the heat and the
+    radiators right for the first time, and Opus's on the header, the radiators or both (see
+    "Failure analysis").
 
 ## Data
 
