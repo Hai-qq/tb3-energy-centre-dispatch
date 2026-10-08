@@ -41,8 +41,8 @@ in two.
 
 v8.1 is v8 with a stricter verifier: a run that exits with an error or does not finish in time
 now gives no plan. Everything the agent sees (the instruction and the environment) and the
-solution are v8's, byte for byte. The trials ran on v8; their deliverables, scored again with
-v8.1's verifier, fail on the same days for the same reasons
+solution are v8's, byte for byte. The trials ran on v8; their deliverables, replayed in Harbor
+with v8.1's verifier, fail exactly the tests they failed in the trials
 ([`results/v8-trials/`](results/v8-trials/)).
 
 ## Where the difficulty is, and where the data says so
@@ -98,7 +98,7 @@ plant couples electricity, heat and cooling, which no single formula or field sh
 |---|---|
 | `tasks/energy-centre-dispatch/` | the task in TB3 format (instruction, task.toml, environment, solution, tests, README) |
 | `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `export_trials.py` (a trial's deliverable, verifier output and settings, for `results/`), `trial_log.py`, `stage_review.py` |
-| `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review) |
+| `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review), `replay_deliverable.sh` (score a trial's deliverable in Harbor with a task's verifier) |
 | `ci/tb3/` | prompts and CI defaults copied unchanged from the TB3 repo (see `ci/tb3/SOURCE.md`) |
 | `results/` | per-trial summaries: `official-v8.md` and `cheat-v8.md` for the v8 trials, `v8-trials/` with their deliverables, verifier output and hashes, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
 | `archive/` | earlier tasks and versions, each version with the build script that made its data (see "How the task came about") |
@@ -605,7 +605,8 @@ the one before.
     generator now caps it, and each drawn day must pass input checks before the plan check. It
     asked for evidence a third party can check: `results/v8-trials/` holds each v8 trial's
     deliverable, verifier output and settings with their hashes, and the six deliverables,
-    scored again with the new verifier, fail on the same days for the same reasons. Two
+    replayed in Harbor with the new verifier (`scripts/replay_deliverable.sh`), fail exactly
+    the tests they failed in the trials. Two
     sentences of this README claimed more than the evidence shows and were narrowed. It also
     asked for the towers' control to be stated in the instruction; that was left as it is, for
     the reasons under "Where the difficulty is", so the agents see exactly what v8's trials saw.

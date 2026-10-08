@@ -23,21 +23,26 @@ fails a run that exits with an error or does not finish in 150 seconds.
 
 ## Re-scoring with the current verifier
 
+Each counted deliverable was scored again in Harbor with v8.1's verifier, the way a trial is
+scored (separate verifier image, the tool run as `nobody`, twice on each day):
+
 ```bash
-python tools/eval_energy.py results/v8-trials/<job>/app
+scripts/replay_deliverable.sh tasks/energy-centre-dispatch results/v8-trials/<job>/app <job-name>
 ```
 
-runs a deliverable twice on each of the five days, as the verifier does, and runs the current
-tests on its plans. The six counted deliverables, scored again this way:
+copies the task, puts the deliverable in place of the solution and runs Harbor's oracle agent,
+which installs it as the agent left it. The verifier's output of these replays is in
+`<job>/replay-v8.1/`. Every replay scored 0 and failed exactly the tests its trial failed:
 
-| Trial | Days failed | Why |
-|---|---|---|
-| `ecd8-run1-claude` | h1, h3, h4 | connection and least cost on h1 and h4; on h3 the tool exits with an error |
-| `ecd8-run1-codex` | h1, h3, h4 | the tool exits with an error on all three (`no feasible loading`) |
-| `ecd8-run2-codex` | h1, h3, h4 | the same |
-| `ecd8-run2-claude` | h1, h2, h3, h4 | as run 1, and availability on h2 |
-| `ecd8-run3-codex` | h1, h3, h4 | the same as runs 1 and 2 |
-| `ecd8-run3-claude` | h2, h3, h4 | availability |
+| Trial | Replay (v8.1) | Days failed | Why |
+|---|---|---|---|
+| `ecd8-run1-claude` | 5 failed, 40 passed, 10 errors | h1, h3, h4 | connection and least cost on h1 and h4; on h3 the tool exits with an error |
+| `ecd8-run1-codex` | 3 failed, 22 passed, 30 errors | h1, h3, h4 | the tool exits with an error on all three (`no feasible loading`) |
+| `ecd8-run2-codex` | 3 failed, 22 passed, 30 errors | h1, h3, h4 | the same |
+| `ecd8-run2-claude` | 6 failed, 39 passed, 10 errors | h1, h2, h3, h4 | as run 1, and availability on h2 |
+| `ecd8-run3-codex` | 3 failed, 22 passed, 30 errors | h1, h3, h4 | the same as runs 1 and 2 |
+| `ecd8-run3-claude` | 3 failed, 52 passed | h2, h3, h4 | availability |
 
-These are the days and the reasons of the trials themselves: the revised verifier changes no
-outcome. Each tool that exits with an error on a day already wrote no plan for it.
+The revised verifier changes no outcome: each tool that exits with an error on a day already
+wrote no plan for it. `python tools/eval_energy.py results/v8-trials/<job>/app` gives the same
+days without Harbor.

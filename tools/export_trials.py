@@ -48,8 +48,9 @@ def export(out: Path, task: Path, job: str) -> None:
         ar = r.get("agent_result") or {}
         info = r.get("agent_info") or {}
         dest = out / job
-        shutil.rmtree(dest, ignore_errors=True)
-        dest.mkdir(parents=True)
+        for part in ("app", "verifier"):
+            shutil.rmtree(dest / part, ignore_errors=True)
+        dest.mkdir(parents=True, exist_ok=True)
         summary = {
             "job": job,
             "trial": r.get("trial_name"),

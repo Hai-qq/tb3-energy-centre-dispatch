@@ -1,4 +1,4 @@
-915ce8f8272a0a6fd41e4feca2e703fb364ec8a2d71f53063575d6f796695113  README.md
+231fa32f7c13645ed37fa2157c54f56234f8c49d0ba146c79cbc3cd206579773  README.md
 9fb16a25019bea5455352acab6c7916f0f1fa4a33c01f83ec648cda0fdacbcf0  ecd8-cheat-claude/app/dispatch.py
 63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f  ecd8-cheat-claude/app/planner/__init__.py
 6c48950527f82f5e5e6b8dc4b662c383319e1227728492a58ab7cfe17952264e  ecd8-cheat-claude/app/planner/data.py
@@ -35,6 +35,9 @@ d3ca6b57eead691f8e0c6442baafe95c499f151e03275547e14daef905a3faeb  ecd8-run1-clau
 cd8c513ec67f6c7e2980914b1ffc312c95d4227a662366b1278828072f3d2634  ecd8-run1-claude/app/planner/optimize.py
 af71c7a8741b8d9c6f6eb2d50c0cdf19fe425b24d8ea10b9ea26bd4c193843fc  ecd8-run1-claude/app/planner/plant.py
 3c2744df62cc064580efaee472ff42a5f931cfa12b910a6ed3cb600373558381  ecd8-run1-claude/app/planner/tariff.py
+e93afc3d46943e0de5f36674b8589970ed54de740f3a939ce9dd9504ecdc22a5  ecd8-run1-claude/replay-v8.1/ctrf.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run1-claude/replay-v8.1/reward.txt
+80b916247ac8b5864351dca3bc52b4717c560ac70d0f5b8c391bb7713da77308  ecd8-run1-claude/replay-v8.1/test-stdout.txt
 628b281b0fa8ad7cbff2126bdfd715768db3bc228732537dded2fe7b4f3504ad  ecd8-run1-claude/trial.json
 adc7776ac7bb106e1840466e9668319f896d5fd5f49dcf158a98703fb98fe524  ecd8-run1-claude/verifier/ctrf.json
 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run1-claude/verifier/reward.txt
@@ -45,6 +48,9 @@ c21fbe7cf4eb360807033f0f62743b076939d90e7130df8e7c25c60a6846c937  ecd8-run1-clau
 559a417326e8b8246069f5e4ea442c2e5394cffcfd25a949c55a1f5e0273cac1  ecd8-run1-codex/app/planner/optimize.py
 c8ca2c93950ab6cb2c348f8d43e0d27e8edde48fd05f1f2b777e9df96e33eb14  ecd8-run1-codex/app/planner/plant.py
 f0fa46082aad4b4fadde38e88b3674a7d9c9591166afe93004c4f467bf8e1758  ecd8-run1-codex/app/planner/tariff.py
+818ea4a6e661c233da7ea29cfb82218f2e4903085d8e4a8040852c18cdc3f7c7  ecd8-run1-codex/replay-v8.1/ctrf.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run1-codex/replay-v8.1/reward.txt
+9f20fe2856574d5e1a5633b58c5f7e8d759bf1fb041e8fd714a7f300c1fc7841  ecd8-run1-codex/replay-v8.1/test-stdout.txt
 9f480a6fdc93b032b8d32c522db75ba9280c7de830ebe8b106ffb8eac6805b0e  ecd8-run1-codex/trial.json
 925976052c22e7959de1f8f006aed1295127f14d7b52c25030f7a5da7e31a620  ecd8-run1-codex/verifier/ctrf.json
 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run1-codex/verifier/reward.txt
@@ -65,6 +71,9 @@ d3cc2d8cd8bbb166beb0772ea05c03ef974c41bf67291540e9d9b2a4e32b0a03  ecd8-run2-clau
 f9cdd700ebf36a3810d17d11dd47495f338ff72b293886cd27bb7d953c016c2f  ecd8-run2-claude/app/planner/optimize.py
 1755f3a9f693762624597be59a55a4bfdbfbc6b3f44e3233f7733cf983a6f6d4  ecd8-run2-claude/app/planner/plant.py
 ce78709a19946ce3a7c72d2c2a35e462afe25da24519f488fa148f23e390596c  ecd8-run2-claude/app/planner/tariff.py
+f7f7cbbfebf91ea235e2440a96f75aebb44a1208bf7c2d9fe1f55a09b0cf8564  ecd8-run2-claude/replay-v8.1/ctrf.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run2-claude/replay-v8.1/reward.txt
+839f6b0b3ca0fbf5bbb6457a3be2deb3b3c5878681be5c3b91ec339a889e0504  ecd8-run2-claude/replay-v8.1/test-stdout.txt
 b4c13e599ebf4867417266af26d54c53c6814be451b9189fdc161f720a8375b7  ecd8-run2-claude/trial.json
 8ce0201692f66918381326e916ae509deb4533b0bf054c7023e4fd74878e691c  ecd8-run2-claude/verifier/ctrf.json
 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run2-claude/verifier/reward.txt
@@ -75,6 +84,9 @@ a625517a7f4d2c81f6d89bb03955f93bdedda18b996ef9bda3d17599924ef987  ecd8-run2-code
 c81e5a8e7a585134f3cd75af18d3adf06e1bb6e981b63b1a18b12520f2626cba  ecd8-run2-codex/app/planner/optimize.py
 9d06a73943b7e23ce98273c7ed5c30c828519e216602a54e52f8c347ad7ababe  ecd8-run2-codex/app/planner/plant.py
 cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59  ecd8-run2-codex/app/planner/tariff.py
+515b9f98bb71e9823c2071110ae66e8d606c05bb95d49f0e71bfa1e7156079e7  ecd8-run2-codex/replay-v8.1/ctrf.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run2-codex/replay-v8.1/reward.txt
+45b50790acfeee5a4e14714d7af5f2c01f74c3f91e86ada195a0190079949237  ecd8-run2-codex/replay-v8.1/test-stdout.txt
 722118b62b0b3e650298ec24d78913bb6f9daf6e9db6da48d96f128ae54dcd70  ecd8-run2-codex/trial.json
 f9536d84be25eb6e01bfeeb31353e20f95f36658648be001b9767f3d1d14c32f  ecd8-run2-codex/verifier/ctrf.json
 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run2-codex/verifier/reward.txt
@@ -85,6 +97,9 @@ d7d3dec3c936654e8e4c4120565f32f863923232c797f1e7a1550e39ec16a8d6  ecd8-run3-clau
 b3210e23fdcbc41c46f9a3b576c78de07b8af843c98317e75e521002d01dbb77  ecd8-run3-claude/app/planner/optimize.py
 bf81ed67f412677c37f8b335986f3d2463c461345fb6627c642ba9e1839d11e2  ecd8-run3-claude/app/planner/plant.py
 fa6e804ee0d1e0f50692bcf075d7db66cff8fd54dc9a5dd5e9af848fbff75a0f  ecd8-run3-claude/app/planner/tariff.py
+74aaa3bc05c03527ad11c4a9a9307c862920d2ade8bc1c93eeb51ecd37195372  ecd8-run3-claude/replay-v8.1/ctrf.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run3-claude/replay-v8.1/reward.txt
+7722ccf65c14786b4f83d07cdfca7de782e7790e89f848af7fce3f0b2cf5aef2  ecd8-run3-claude/replay-v8.1/test-stdout.txt
 a78516f96f583c8d5c4a14b2ae682c03273b64f1115770e781a5d292eb465513  ecd8-run3-claude/trial.json
 d411186d1a90f87142dfb3b4ef14fa2a8f12940190fddf795e2f6f5bbf5f81ba  ecd8-run3-claude/verifier/ctrf.json
 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run3-claude/verifier/reward.txt
@@ -102,6 +117,9 @@ fb6ce5e3a3dce71dbffd4e2fe585fbc1d90003046384108d3ca7c4829df8db2c  ecd8-run3-clau
 536028c90da5a318abafb0b517ad62a37f4b80d5374b31e2ff2926618cb6c03c  ecd8-run3-codex/app/planner/optimize.py
 ef6b55aab554db971f7dab514b0d2b56b78f45046da0107f75e49fc0bfee93dd  ecd8-run3-codex/app/planner/plant.py
 cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59  ecd8-run3-codex/app/planner/tariff.py
+12127a608b6bb9bec6b80f1ba5f68e455aece008ef77761938e4f43108e82c76  ecd8-run3-codex/replay-v8.1/ctrf.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run3-codex/replay-v8.1/reward.txt
+c66689a31eaa68fc0a5ba3445692db72cd90fb9d34ac6bf85d99615b72911231  ecd8-run3-codex/replay-v8.1/test-stdout.txt
 f954412946869b30fecc9e68c91619eeeedb140a906efa56745190ff170b0384  ecd8-run3-codex/trial.json
 29b0e64c83ec3a70081272251a8ad718ea38ddaccfc186d5bc20094c5ed369d7  ecd8-run3-codex/verifier/ctrf.json
 9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ecd8-run3-codex/verifier/reward.txt
