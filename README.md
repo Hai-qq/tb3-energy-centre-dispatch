@@ -146,8 +146,10 @@ Each trial ran on fixed task files, identified by the SHA-256 of all files but t
   | xargs shasum -a 256 | shasum -a 256 | cut -c1-16)
 ```
 
-This gives `dec6ede95f903991` for the current task (v8.1). The archived versions give the same
-with `! -name build_energy_days.py` added: `0dcfa73dde270061` for v5, `6e720233fd4ea76d` for
+This gives `b489397ec7f5b556` for the current task: v8.1 with the author's name in `task.toml`
+written out instead of "TBD". The rubric review and the replays ran on the files before that
+change, `dec6ede95f903991`. The archived versions give the same with
+`! -name build_energy_days.py` added: `0dcfa73dde270061` for v5, `6e720233fd4ea76d` for
 v6, `034e1f56e26a1c1a` for v7 and `6826dc661e623be8` for v8, the files their trials ran on.
 `tools/export_trials.py` exports a trial's deliverable, verifier output and settings from the
 local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.

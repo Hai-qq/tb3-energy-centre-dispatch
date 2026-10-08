@@ -4,7 +4,7 @@
 
 ## Task Metadata
 
-- **Author:** TBD (gqing2297@gmail.com)
+- **Author:** Qing Gao (gqing2297@gmail.com)
 - **Category:** `Operations`
 - **Tags:** <code>energy-systems</code> <code>chp</code> <code>trigeneration</code> <code>unit-commitment</code> <code>mixed-integer-programming</code> <code>debugging</code>
 - **Expert time:** 4 hours
