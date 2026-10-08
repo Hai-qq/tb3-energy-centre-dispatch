@@ -217,9 +217,7 @@ def plan_day(day: DayData, plant: Plant, tariff: Tariff) -> dict:
         p["gas_kwh"] = DT_H * gas
         p["cost_gbp"] = cost[t, k] + starts(prev, on)
         kvar = day.kvar[t] - sum(e.kvar_per_kwe * p["engines_kwe"][e.id] for e in plant.engines)
-        # to 0.5 kVA, the verifier's tolerance: the tangent lines let the import pass the
-        # circle by up to 0.05 kVA
-        p["grid_ok"] = math.hypot(p["import_kw"], kvar) <= tariff.import_capacity_kva + 0.5
+        p["grid_ok"] = math.hypot(p["import_kw"], kvar) <= tariff.import_capacity_kva + 0.01
         total_starts += sum(1 for a, b in zip(prev, on) if b and not a)
         prev = on
         periods.append({"start": day.starts[t], **p})

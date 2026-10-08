@@ -2,7 +2,8 @@
 
 Usage: python tools/eval_energy.py <app_root> [--quiet]
 <app_root> holds dispatch.py and planner/ (e.g. tasks/energy-centre-dispatch/solution/app).
-Prints one line per test with the days it failed on.
+Runs the tool twice on each day, as the verifier does, prints one line per test with the days
+it failed on, and exits with status 1 if any test failed.
 """
 
 from __future__ import annotations
@@ -25,10 +26,16 @@ def evaluate(app: Path, quiet: bool = False) -> dict:
         plans.mkdir()
         errors = {}
         for d in DAYS:
-            r = subprocess.run([sys.executable, str(app / "dispatch.py"), "--data", str(TASK / "tests" / "days" / d),
-                                "--output", str(plans / f"{d}.json")], capture_output=True, text=True, timeout=600)
-            if r.returncode != 0:
-                errors[d] = r.stderr.strip().splitlines()[-1] if r.stderr.strip() else f"exit {r.returncode}"
+            for name in [d, f"{d}.rerun"]:
+                try:
+                    r = subprocess.run([sys.executable, str(app / "dispatch.py"), "--data",
+                                        str(TASK / "tests" / "days" / d), "--output", str(plans / f"{name}.json")],
+                                       capture_output=True, text=True, timeout=150)
+                except subprocess.TimeoutExpired:
+                    errors[name] = "timed out"
+                    continue
+                if r.returncode != 0:
+                    errors[name] = r.stderr.strip().splitlines()[-1] if r.stderr.strip() else f"exit {r.returncode}"
         report = Path(tmp) / "report.xml"
         env = dict(os.environ, PLANS_DIR=str(plans))
         subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", f"--junitxml={report}",
@@ -55,4 +62,5 @@ def evaluate(app: Path, quiet: bool = False) -> dict:
 
 
 if __name__ == "__main__":
-    evaluate(Path(sys.argv[1]), quiet="--quiet" in sys.argv)
+    result = evaluate(Path(sys.argv[1]), quiet="--quiet" in sys.argv)
+    sys.exit(1 if result["failed"] else 0)

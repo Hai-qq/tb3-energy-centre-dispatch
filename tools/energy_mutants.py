@@ -1,5 +1,6 @@
 """Mutation check for energy-centre-dispatch: each planted bug (and some likely
-half-fixes) applied alone to the reference solution must fail the tests.
+half-fixes and reporting faults) applied alone to the reference solution must fail the
+tests. Exits with status 1 if any mutant passes them.
 
 Usage: python tools/energy_mutants.py [name ...]
 """
@@ -107,11 +108,23 @@ MUTANTS = {
     "weekend_from_utc_start": [("planner/tariff.py", "from datetime import date\n",
         "from datetime import date, timedelta\n"),
         ("planner/tariff.py", "self.weekend = day.weekday() >= 5", "self.weekend = (day - timedelta(days=1)).weekday() >= 5")],
+    # reporting faults: the plant runs right, the plan reports it wrong
+    "import_total_in_kw": [("dispatch.py",
+        '"import_kwh": sum(p["import_kw"] for p in periods) * 0.5,',
+        '"import_kwh": sum(p["import_kw"] for p in periods),')],
+    "grid_flag_without_generators": [("planner/optimize.py",
+        'p["grid_ok"] = math.hypot(p["import_kw"], kvar) <=',
+        'p["grid_ok"] = math.hypot(p["import_kw"], day.kvar[t]) <=')],
+    "plan_varies_between_runs": [("dispatch.py", "import json\n", "import json\nimport random\n"),
+        ("dispatch.py",
+        '"export_kwh": sum(p["export_kw"] for p in periods) * 0.5,',
+        '"export_kwh": sum(p["export_kw"] for p in periods) * 0.5 + 0.01 * random.random(),')],
 }
 
 
 def main() -> None:
     names = sys.argv[1:] or list(MUTANTS)
+    missed = 0
     for name in names:
         with tempfile.TemporaryDirectory() as tmp:
             app = Path(tmp) / "app"
@@ -125,6 +138,8 @@ def main() -> None:
         fails = "; ".join(f"{k.replace('test_', '')}:{','.join(v)}" for k, v in sorted(r["failed"].items()))
         errs = "; ".join(f"{d}:{e[:60]}" for d, e in r["errors"].items())
         print(f"{name:28s} {'CAUGHT' if r['failed'] else 'MISSED'}  {fails}  {errs}", flush=True)
+        missed += not r["failed"]
+    sys.exit(1 if missed else 0)
 
 
 if __name__ == "__main__":

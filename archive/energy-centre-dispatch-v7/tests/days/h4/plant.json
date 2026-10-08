@@ -1,0 +1,233 @@
+{
+  "engines": [
+    {
+      "id": "GE1",
+      "rated_kwe": 1200,
+      "part_load": [
+        {
+          "kwe": 600,
+          "fuel_kw": 1705,
+          "ht_heat_kw": 835,
+          "lt_heat_kw": 118
+        },
+        {
+          "kwe": 900,
+          "fuel_kw": 2275,
+          "ht_heat_kw": 1110,
+          "lt_heat_kw": 158
+        },
+        {
+          "kwe": 1200,
+          "fuel_kw": 2870,
+          "ht_heat_kw": 1290,
+          "lt_heat_kw": 201
+        }
+      ],
+      "fuel_basis": "net CV",
+      "generator": {
+        "rated_kva": 1500,
+        "power_factor": 0.95,
+        "control": "fixed power factor, overexcited"
+      },
+      "auxiliary_kwe": 32,
+      "maintenance_gbp_per_mwhe": 11.0,
+      "start_cost_gbp": 38.0
+    },
+    {
+      "id": "GE2",
+      "rated_kwe": 800,
+      "part_load": [
+        {
+          "kwe": 400,
+          "fuel_kw": 1180,
+          "ht_heat_kw": 590,
+          "lt_heat_kw": 83
+        },
+        {
+          "kwe": 600,
+          "fuel_kw": 1570,
+          "ht_heat_kw": 780,
+          "lt_heat_kw": 110
+        },
+        {
+          "kwe": 800,
+          "fuel_kw": 1990,
+          "ht_heat_kw": 900,
+          "lt_heat_kw": 139
+        }
+      ],
+      "fuel_basis": "net CV",
+      "generator": {
+        "rated_kva": 1000,
+        "power_factor": 0.95,
+        "control": "fixed power factor, overexcited"
+      },
+      "auxiliary_kwe": 24,
+      "maintenance_gbp_per_mwhe": 12.5,
+      "start_cost_gbp": 27.0
+    }
+  ],
+  "boilers": [
+    {
+      "id": "B1",
+      "max_kw": 2000,
+      "efficiency": 0.905,
+      "efficiency_basis": "gross CV"
+    },
+    {
+      "id": "B2",
+      "max_kw": 2000,
+      "efficiency": 0.83,
+      "efficiency_basis": "gross CV"
+    }
+  ],
+  "electric_chillers": [
+    {
+      "id": "EC1",
+      "max_kw": 1400,
+      "cop_by_condenser_entering_c": [
+        [
+          18,
+          7.4
+        ],
+        [
+          22,
+          6.5
+        ],
+        [
+          26,
+          5.6
+        ],
+        [
+          30,
+          4.7
+        ],
+        [
+          34,
+          3.9
+        ]
+      ]
+    },
+    {
+      "id": "EC2",
+      "max_kw": 1000,
+      "cop_by_condenser_entering_c": [
+        [
+          18,
+          5.8
+        ],
+        [
+          22,
+          5.2
+        ],
+        [
+          26,
+          4.6
+        ],
+        [
+          30,
+          4.0
+        ],
+        [
+          34,
+          3.4
+        ]
+      ]
+    }
+  ],
+  "absorption_chillers": [
+    {
+      "id": "AC1",
+      "max_kw": 800,
+      "cop": 0.71,
+      "auxiliary_kwe_per_kw": 0.022,
+      "hot_water_in_min_c": 85,
+      "cooling_water_in_min_c": 22
+    }
+  ],
+  "cooling_towers": {
+    "cells": [
+      "CT1",
+      "CT2"
+    ],
+    "fans": "variable speed",
+    "approach_k": 4.0,
+    "min_leaving_water_c": 21.0,
+    "heat_rejection_kw_per_cell_by_wet_bulb_c": [
+      [
+        14,
+        2000
+      ],
+      [
+        18,
+        1750
+      ],
+      [
+        22,
+        1425
+      ]
+    ]
+  },
+  "heat_circuits": {
+    "engine_ht": {
+      "flow_c": 90,
+      "return_c": 70,
+      "from": [
+        "GE1 jacket water and exhaust",
+        "GE2 jacket water and exhaust"
+      ],
+      "to": [
+        "AC1 generator",
+        "PHE1"
+      ]
+    },
+    "ge1_lt": {
+      "flow_c": 40,
+      "return_c": 35,
+      "from": [
+        "GE1 intercooler"
+      ],
+      "to": [
+        "GE1 LT radiator"
+      ]
+    },
+    "ge2_lt": {
+      "flow_c": 40,
+      "return_c": 35,
+      "from": [
+        "GE2 intercooler"
+      ],
+      "to": [
+        "GE2 LT radiator"
+      ]
+    },
+    "lthw": {
+      "flow_c": 80,
+      "return_c": 60,
+      "from": [
+        "PHE1",
+        "B1",
+        "B2"
+      ],
+      "to": [
+        "hospital buildings"
+      ],
+      "loss_kw": 75
+    },
+    "condenser_water": {
+      "from": [
+        "EC1 condenser",
+        "EC2 condenser",
+        "AC1 absorber and condenser"
+      ],
+      "to": [
+        "CT1",
+        "CT2"
+      ]
+    }
+  },
+  "pv": {
+    "id": "PV1",
+    "inverter_ac_kw": 280
+  }
+}
