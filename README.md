@@ -52,11 +52,15 @@ in two.
 The models are the ones the assignment names, GPT-6.1 Sol and Opus 5.5, not CI's defaults
 (see "Configuration"). v8.1 is v8 with a stricter verifier, under which a run that exits with an
 error or does not finish in time gives no plan, and with both images' base pinned by digest
-(`python:3.13-slim-bookworm@sha256:a1165e27…`, the image the tag named when the v8 trials ran;
-TB3 added a check for such pins on 2026-10-07). The instruction, the environment's files and the
-solution are otherwise v8's, byte for byte. The trials ran on v8; their deliverables, replayed
-in Harbor with the delivered task's verifier, fail exactly the tests they failed in the trials
-([`results/v8-trials/`](results/v8-trials/)).
+(`python:3.13-slim-bookworm@sha256:a1165e27…`; TB3 added a check for such pins on 2026-10-07).
+That digest is the image the tag named when the v8 trials ran: Docker Hub gave the tag's last
+push as 2026-10-06 11:08 UTC (checked on 2026-10-08), and the v8 trials started at 2026-10-07
+15:42 UTC (`trial.json`). The instruction, the environment's files and the solution are
+otherwise v8's, byte for byte. The trials ran on v8; their deliverables, replayed in Harbor
+with the delivered task's verifier, fail exactly the tests they failed in the trials
+([`results/v8-trials/`](results/v8-trials/)). The verifier allows a run 150 seconds, half a
+minute more than the instruction's two minutes, as a margin for a verifier machine slower than
+the agent's; the solution and the six v8 deliverables take at most a second a day.
 
 ## Where the difficulty is, and where the data says so
 
