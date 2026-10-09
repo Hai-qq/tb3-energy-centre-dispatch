@@ -93,8 +93,9 @@ The other planted bugs are plain code errors that the engineers' second symptom 
 point to: the middle part-load point ignored, weather rows matched by UTC date, each half-hour
 planned on its own without start costs or the state at midnight, and outages applied only to the
 half-hours that start inside them. Every failed trial of v5, v7 and v8 failed on at least one
-of the rows above. The task's [README](tasks/energy-centre-dispatch/README.md) explains each bug
-in full.
+of the rows above. `tools/energy_mutants.py` applies each bug alone to the solution, and the
+longer README of v8 ([`archive/energy-centre-dispatch-v8/README.md`](archive/energy-centre-dispatch-v8/README.md))
+explains each in full.
 
 The task uses the setting of `cargo-flight-dispatch` in the TB3 repository: a planning tool that
 broke when it was rewritten, its users' symptoms, and data files that are correct. It differs in

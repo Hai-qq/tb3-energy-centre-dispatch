@@ -43,6 +43,6 @@ against `harbor-framework/terminal-bench` at `bf4c125` (main, 2026-10-07).
 | Requirement | Evidence | Status |
 |---|---|---|
 | Task format, metadata, canary strings, separate verifier, pinned images and packages | the static checks above | met |
-| README sections (difficulty, solution, verification, relevant experience) written completely by a human, one to three sentences each | [task README](tasks/energy-centre-dispatch/README.md) | open: to be rewritten by the author |
+| README sections (difficulty, solution, verification, relevant experience) written completely by a human, one to three sentences each | [task README](tasks/energy-centre-dispatch/README.md) | partly: one to three sentences each; the author set their framing and content, working in Chinese on an AI draft, and AI translated them into English |
 | Failure analysis of failed trajectories | CI's trajectory review of all nine v8 trials, with CI's prompt and criteria ([`results/analysis-v8/`](results/analysis-v8/)); CONTRIBUTING's `harbor analyze --job-prompt` command needs an option this Harbor version does not have, so CI's own staging was mirrored (`tools/stage_analysis.py`) | met: no reward hacking or specification failure in any trial; near miss flagged for three of the six standard trials, discussed there |
 | Avoid creating tasks adversarially | one task, not filtered from many, but revised against the trials' failures from v4 to v8; disclosed (README, "How the task came about" and "Limitations") | partly; disclosed |
