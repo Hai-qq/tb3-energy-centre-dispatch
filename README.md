@@ -40,7 +40,7 @@ in two.
 |---|---|---|
 | Static checks: CI's step at TB3 `bf4c125` (27 scripts) | 27 / 27 pass ([log](results/checks-v8.1/static-checks.log)) | 26 / 26 pass (the 26 checks of 2026-09-28) |
 | Docker build, both images, no cache | both build ([log](results/checks-v8.1/docker-build.log)) | builds |
-| Implementation rubric review (claude-code + Sonnet 5) | 35 / 35 criteria pass ([verdicts](results/checks-v8.1/review-verdicts.json)) | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
+| Implementation rubric review (claude-code + Sonnet 5) | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail ([verdicts](results/checks-v8.1/review-verdicts.json)) | 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
 | Oracle | reward 1.0, 55 / 55 tests ([output](results/checks-v8.1/oracle/test-stdout.txt)) | reward 1.0 (45 / 45 tests) |
 | Nop | reward 0.0 ([output](results/checks-v8.1/nop/test-stdout.txt)) | reward 0.0 |
 | Planted bugs, likely half-fixes, reporting and execution faults, each applied alone to the solution | 33 of 33 fail at least one test ([output](results/checks-v8.1/mutants.txt)) | 27 of 27 |

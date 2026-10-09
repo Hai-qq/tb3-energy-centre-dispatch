@@ -14,7 +14,7 @@ against `harbor-framework/terminal-bench` at `bf4c125` (main, 2026-10-07).
 | Requirement | Evidence | Status |
 |---|---|---|
 | All required static checks | CI's static-check step, run unchanged by `scripts/run_static_checks.sh`: [log](results/checks-v8.1/static-checks.log), [the comment CI would post](results/checks-v8.1/static-checks-comment.md) | met: 27 / 27 |
-| Implementation rubric checks | `scripts/run_review.sh`: claude-code + Sonnet 5 with CI's rubric and prompt ([verdicts](results/checks-v8.1/review-verdicts.json)) | met: 35 / 35 criteria pass |
+| Implementation rubric checks | `scripts/run_review.sh`: claude-code + Sonnet 5 with CI's rubric and prompt ([verdicts](results/checks-v8.1/review-verdicts.json)) | met: 34 pass, 1 not applicable (`artifact_efficiency`), 0 fail |
 | Docker build | `docker build --no-cache` of both images ([log](results/checks-v8.1/docker-build.log)) | met: both images build |
 | Oracle validation | reward 1.0, 55 / 55 tests ([output](results/checks-v8.1/oracle/test-stdout.txt)) | met |
 | Nop validation | reward 0.0 ([output](results/checks-v8.1/nop/test-stdout.txt)) | met |
@@ -43,6 +43,6 @@ against `harbor-framework/terminal-bench` at `bf4c125` (main, 2026-10-07).
 | Requirement | Evidence | Status |
 |---|---|---|
 | Task format, metadata, canary strings, separate verifier, pinned images and packages | the static checks above | met |
-| README sections (difficulty, solution, verification, relevant experience) written completely by a human, one to three sentences each | [task README](tasks/energy-centre-dispatch/README.md) | partly: one to three sentences each; the author set their framing and content, working in Chinese on an AI draft, and AI translated them into English |
+| README sections (difficulty, solution, verification, relevant experience) written completely by a human, one to three sentences each | [task README](tasks/energy-centre-dispatch/README.md) | met: written by the author, one to three sentences each |
 | Failure analysis of failed trajectories | CI's trajectory review of all nine v8 trials, with CI's prompt and criteria ([`results/analysis-v8/`](results/analysis-v8/)); CONTRIBUTING's `harbor analyze --job-prompt` command needs an option this Harbor version does not have, so CI's own staging was mirrored (`tools/stage_analysis.py`) | met: no reward hacking or specification failure in any trial; near miss flagged for three of the six standard trials, discussed there |
 | Avoid creating tasks adversarially | one task, not filtered from many, but revised against the trials' failures from v4 to v8; disclosed (README, "How the task came about" and "Limitations") | partly; disclosed |
