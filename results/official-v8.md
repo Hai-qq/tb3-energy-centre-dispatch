@@ -56,7 +56,30 @@ Agent's closing message:
 >
 > *Gas forecast below the meters on engine days*
 > - Converting engine fuel from net to gross CV divided by 1.108 instead of multiplying, so engine gas came out about 23% low.
-> - The engines' intercooler heat was counted as usable
+> - The engines' intercooler heat was counted as usable. It goes to each engine's own radiator, so boiler gas was understated whenever an engine ran.
+> - Engine fuel and heat were a straight line from minimum to rated output, ignoring the middle part-load point.
+>
+> *Plans not workable*
+> - Surplus engine heat was assumed to be dumped. The engines' hot-water circuit only feeds the absorption chiller and the heat exchanger (PHE1) to the building heating circuit, and that circuit only serves the buildings. Every kW of engine heat must be used, which limits how hard the engines can run in summer.
+> - The cooling-tower capacity check counted only the chilled water. It left out the chillers' compressor power and the absorption chiller's driving heat (about 2.4 kW to reject per kW of cooling).
+> - Only engine outages were applied, so B2's all-day outage was ignored. An outage now takes a unit out of any half-hour it touches.
+> - Weather and PV were taken by UTC date, an hour out from the local half-hours in summer time.
+> - The weekend check used UTC, which gives the wrong day of the week in summer time.
+> - The connection limit ignored the reactive power the generators supply at their 0.95 power factor; `grid_ok` was worked out the same wrong way.
+>
+> *Too many starts*
+> - Each half-hour was planned on its own with no start costs. Start costs were also missing from `cost_gbp`, and a start at 00:00 wasn't counted against the engines running at midnight.
+>
+> The tool now plans the whole day at once, including start costs. On 21 July it stops GE1 at midnight and runs GE2 overnight and through GE1's 07:00–11:00 outage, then runs GE1 to the end of the day. The engines never run together because their combined heat would have nowhere to go.
+>
+> **Checks:** a separate checker recomputes every balance, limit, outage, gas figure, cost and start count from the data files, and the plan passes all of them. I also ran 34 made-up feasible days: winter, weekends, outages starting mid-half-hour, tower cells out, different engines running at midnight. Each matched the independent optimum to within half a penny.
+>
+> **Decisions for you:**
+> - **Absorption chiller in cooler weather:** it can't run when the tower water is below its 22 °C minimum, as in the original code. On cooler nights with low heat demand that leaves no workable plan: an engine's heat has nowhere to go, and the grid connection can't carry the site alone. 21 July is just clear (night wet bulb 18.4–18.8 °C). If the operators would raise the tower water temperature to keep the absorption chiller running, that option would need adding to the model.
+> - **Days that can't be met:** if the connection limit can't be met in a half-hour, the tool still writes a plan with the smallest overload, marks it `grid_ok: false` and prints a warning. If the plant can't meet the heat or cooling at all (for example both tower cells out), it stops with an error saying so.
+> - **PV:** output is capped at the 280 kW inverter rating and can be curtailed if needed to stay within the export limit. Neither happens on 21 July.
+>
+> The data files are unchanged, and my test scripts are in `/tmp/check`, outside `/app`.
 
 ## ecd8-run2-codex / energy-centre-dispatch__3Wxx3fH
 
@@ -111,7 +134,33 @@ Agent's closing message:
 
 > The tool now produces a workable least-cost plan, and `/output/plan.json` has been written. For the plan date (Tuesday 21 July) it costs **£6,303.56** and burns **64,944 kWh of gas** on the billed gross-CV basis, with **2 engine starts**. Every half-hour stays within the plant and connection limits. The data files are untouched, the output format is unchanged, it runs in about 0.6 s, and repeated runs give byte-identical output.
 >
-> **Why the gas was low.** The engines' fuel figures are on net CV, but gas is billed on gross CV. The tool divided by 1.108 when it should have multiplied, so engine g
+> **Why the gas was low.** The engines' fuel figures are on net CV, but gas is billed on gross CV. The tool divided by 1.108 when it should have multiplied, so engine gas came out about 23% low.
+>
+> **Why there were too many starts.** Each half-hour was optimised on its own, ignoring start costs and which engines were running at midnight. The day is now planned as a whole, including the £38 / £27 start costs.
+>
+> **Other faults fixed:**
+> - **Weather and PV were an hour out.** They were taken by UTC date instead of being matched to each local half-hour.
+> - **Weekend rates used the UTC date.** In summer time this put Saturdays on weekday rates and Mondays on weekend rates.
+> - **Engine curves ignored the middle part-load point.**
+> - **Intercooler heat was counted as recovered**, but it goes to the LT radiators.
+> - **Engine heat could be thrown away**, but nothing in the heat circuits can dump it. All HT heat must now go to the buildings or to the absorption chiller. This is the main reason engines often can't run at full output in summer.
+> - **The towers' load counted only the cooling.** It now includes chiller compressor power and the absorption chiller's firing heat.
+> - **The 1220 kVA limit ignored the reactive power the engines' generators supply.**
+> - **Only engine outages were honoured.** B2's all-day outage was being ignored.
+> - **Costs left out start costs, and `grid_ok` used the wrong reactive power.**
+>
+> The plan runs GE2 from midnight to 10:30, then GE1 from 11:00. It stops GE1 at midnight because GE2 has to start for GE1's 07:00–11:00 outage anyway. Starting GE2 earlier costs no extra start and saves £12, since GE1 can only run at about 700 kWe overnight before its heat has nowhere to go.
+>
+> **Checks:**
+> - **Independent validator.** I wrote a separate checker that recomputes every figure from the raw data files. The plan passes it; the old tool's plan fails 208 checks.
+> - **Independent optimiser.** A whole-day MILP written separately finds the same schedule and cost, to within rounding, on this day and on about 40 feasible synthetic days. These cover weekends, winter on GMT, outages of every kind of unit, and days where the kVA limit binds.
+>
+> **Decisions for you:**
+> - **AC1 on cool days:** I kept the rule that AC1 can't run when the towers' water would be below its 22 °C minimum. The alternative is to hold the tower water at 22 °C so AC1 can run. That would sometimes be cheaper, but the plan has no field to say which temperature was used. It never applies on 21 July; on cool summer nights it could leave no engine able to run.
+> - **PV is capped at the 280 kW inverter rating.** This changes nothing on this day.
+> - **Impossible half-hours:** if demand can't be met within 1220 kVA, the plan uses the smallest possible overload and marks those half-hours `grid_ok: false`. If the plant itself can't meet demand (for example both tower cells out), the tool stops with an error, as it did before.
+>
+> The changes are in `planner/optimize.py` (rewritten), `planner/plant.py`, `planner/tariff.py`, `planner/data.py`, and a small rounding fix in `dispatch.py` so that the day totals equal the sum of the half-hours as reported.
 
 ## ecd8-run3-codex / energy-centre-dispatch__aKvGUDN
 
@@ -163,7 +212,31 @@ Agent's closing message:
 
 > I've fixed the tool. `python3 /app/dispatch.py --data /app/data --output /output/plan.json` now produces a workable least-cost plan in about half a second, gives the same output every run, and keeps the original format. The data files are unchanged.
 >
-> **The plan for 21 July:** £6,303.56, 64,944 kWh of gas (gross CV, as billed), 13,775 kWh imported and 2 engine starts. GE1 stops at midnight, GE2 runs until 11:00, covering GE1's 07:00–11:00 outage, and GE1 then restarts and runs to the end of the day. The old tool showed £4,513 because it under-read gas and relied on things the plant can't do: it
+> **The plan for 21 July:** £6,303.56, 64,944 kWh of gas (gross CV, as billed), 13,775 kWh imported and 2 engine starts. GE1 stops at midnight, GE2 runs until 11:00, covering GE1's 07:00–11:00 outage, and GE1 then restarts and runs to the end of the day. The old tool showed £4,513 because it under-read gas and relied on things the plant can't do: it ran both engines all afternoon and threw away surplus heat.
+>
+> **What was wrong**
+> - **Gas well below the meters:** engine fuel is quoted on net CV and gas is billed on gross CV. The tool divided by 1.108 instead of multiplying, so engine gas was about 19% low. It also ignored the middle point of each engine's part-load table.
+> - **Plans not workable:**
+>   - **Heat:** the engines' hot-water circuit only feeds AC1 and the heat exchanger into the heating circuit, and has no dump radiator. So all engine heat must be used, and that limits how hard the engines can run. The tool also counted intercooler heat as useful, but it goes to the engines' own radiators.
+>   - **Cooling towers:** the tool loaded them with the cooling only, but they must also reject each chiller's input energy.
+>   - **Outages:** only engine outages were applied, so B2's all-day outage was ignored. An outage that started part-way through a half-hour was missed for that half-hour.
+>   - **Time zone:** the weather and PV forecast is in UTC but was read as local time, so it was an hour out in summer. The weekend tariff was also wrong on summer Mondays and Saturdays.
+>   - **PV and grid limit:** PV wasn't capped at the 280 kW inverter rating. The 1,220 kVA grid limit ignored the reactive power the engines supply.
+> - **Too many starts and stops:** each half-hour was chosen on its own, ignoring start costs and which engines were running at midnight. The day's engine running is now planned as a whole, with every start costed and charged in the half-hour it happens.
+>
+> **How I checked it**
+> - A separate checker, which doesn't use the tool's code, confirms every balance, limit, outage, gas and cost figure in the plan.
+> - A second optimizer, built independently over the whole day, gives the same least cost to within a penny on the real day and on about 120 made-up days. These covered winter days, weekends, outages of every unit and tight grid days.
+> - A separate review of the original tool, done without seeing my fix, reached the same conclusions on every point.
+>
+> **Decisions for you**
+> - **AC1 on cool days:** AC1 needs condenser water at 22°C or more, but the towers make 21°C when the wet-bulb is below 18°C. The old tool simply switched AC1 off then. Because the tower fans are variable speed, I let the plan raise the shared setpoint to 22°C when that's cheaper, which makes the electric chillers slightly less efficient. On a made-up winter day this saved about £700. It never comes up on 21 July; if your towers can't be run that way, it's a one-line change.
+> - **When the plant or grid can't cope:**
+>   - If no plan can stay within the 1,220 kVA limit (for example AC1 out on a summer night, so no engine can run), the tool still writes a plan with the smallest overload and marks those half-hours `grid_ok: false`.
+>   - If the heat or chilled water simply can't be met (for example a tower cell out at the afternoon peak), it stops with an error naming the half-hour and the plant out of service.
+> - **What counts as cost:** costs include engine maintenance and start costs, as the tool did before. The day totals are the sums of the rounded half-hour figures, so they match what's printed.
+>
+> My test scripts are in `/tmp/check` if you want to rerun the checks.
 
 
 ## Attempts not counted

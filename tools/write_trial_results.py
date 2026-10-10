@@ -21,7 +21,7 @@ import analyze_ecd_trials as A  # noqa: E402
 
 def closing_message(trial: Path) -> str:
     try:
-        out = subprocess.run([sys.executable, str(ROOT / "tools" / "trial_log.py"), str(trial)],
+        out = subprocess.run([sys.executable, str(ROOT / "tools" / "trial_log.py"), str(trial), "--width", "0"],
                              capture_output=True, text=True, timeout=120).stdout
     except Exception:  # noqa: BLE001
         return ""

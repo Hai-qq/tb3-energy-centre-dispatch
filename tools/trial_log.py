@@ -50,11 +50,12 @@ def main() -> None:
     ap.add_argument("trial")
     ap.add_argument("--last", type=int, default=30)
     ap.add_argument("--messages-only", action="store_true")
+    ap.add_argument("--width", type=int, default=600, help="characters shown per event; 0 for all")
     args = ap.parse_args()
     rows = [(k, v) for k, v in events(Path(args.trial)) if not args.messages_only or k == "msg"]
     print(f"{len(rows)} events")
     for k, v in rows[-args.last:]:
-        print(f"[{k}] {v[:600].replace(chr(10), ' | ')}")
+        print(f"[{k}] {(v[:args.width] if args.width else v).replace(chr(10), ' | ')}")
 
 
 if __name__ == "__main__":

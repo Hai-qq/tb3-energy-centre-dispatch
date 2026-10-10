@@ -1,4 +1,4 @@
-# Trials of v7 (the current task)
+# Trials of v7 (superseded by v8)
 
 ## ecd7-run1-claude / energy-centre-dispatch__HEkUhZp
 

@@ -402,7 +402,8 @@ at midnight, and one to four outages of any item `plant.json` names, at random t
 half-hour. A day is kept only if its inputs pass checks against the plant's data (ratings,
 names, times, a full day of half-hours; the task's five days pass the same checks) and a plan
 meets it. With its default seed it drew eight days, four of them with an LT radiator outage.
-Each tool below was run twice on every day and judged by the task's own tests:
+Each tool below was run twice on every day and judged by the task's own tests (the command and
+its output are in [`results/fresh-days.txt`](results/fresh-days.txt)):
 
 | Tool | Days failed (of 8) | On what |
 |---|---|---|
@@ -458,7 +459,8 @@ the one before.
    acceptance pattern of their own orders and check each one.
 2. **Verifier bug found by the pilot.** GPT's orders were first judged undeliverable. The
    cause was a start-up-cost row in the verifier that made schedules with two or more
-   starts infeasible. Fixed, and the cross-check in `tools/crosscheck.py` now covers it.
+   starts infeasible. Fixed, and the task's cross-check script, which is not kept in this
+   repository, was made to cover it.
 3. **Task A+: a bidding tool scored on hidden days.** The deliverable became a program run
    on 8 unseen delivery days: hourly and 15-minute market time units, clock-change days
    (23/25/92/100 periods), units at full output or inside minimum up/down times, cold
@@ -518,8 +520,9 @@ the one before.
     misreading of one sentence of the documents. The examples are recorded cutoffs with
     their right outputs; three faults show on them and six only on message patterns the
     examples do not contain. The service must write the optimal plan and the exact
-    settlement ledger at all 48 hidden cutoffs. `tools/mutants.py` applies each fault
-    alone to the reference service: every one fails at least one hidden cutoff.
+    settlement ledger at all 48 hidden cutoffs. A mutation script, not kept in this repository,
+    applied each fault alone to the reference service: every one failed at least one hidden
+    cutoff.
 12. **Repair tasks solved by GPT-6.1 Sol.** The fifth pilot fixed all nine faults in about
     8 minutes and passed all 48 hidden cutoffs in 17 minutes: every fault contradicted one
     sentence of the documents, and GPT compared the code with them line by line. A second

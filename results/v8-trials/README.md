@@ -11,8 +11,8 @@ by `tools/export_trials.py`:
   exception and reward, and the task files it ran on with their hash
 - `MANIFEST.sha256`: SHA-256 of every file here (`shasum -a 256 -c MANIFEST.sha256`)
 
-The agents' transcripts are not included. The six counted standard trials are `ecd8-run{1,2,3}-
-{codex,claude}`; the `/cheat` trials are `ecd8-cheat-codex`, `ecd8-cheat2-codex` and
+The agents' transcripts are not included. The six counted standard trials are
+`ecd8-run{1,2,3}-{codex,claude}`; the `/cheat` trials are `ecd8-cheat-codex`, `ecd8-cheat2-codex` and
 `ecd8-cheat-claude`. `ecd8-run1-codex-overloaded` and `ecd8-run3-claude-NetworkConnectionError1`
 were stopped before the agent could work and are not counted.
 

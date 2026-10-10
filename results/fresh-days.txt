@@ -1,0 +1,27 @@
+$ python tools/fresh_days.py tasks/energy-centre-dispatch/solution/app tasks/energy-centre-dispatch/environment jobs/ecd5-run1-claude/energy-centre-dispatch__GuXqsfY/artifacts/app jobs/ecd5-run1-codex/energy-centre-dispatch__h8XDnt6/artifacts/app jobs/ecd5-run2-claude/energy-centre-dispatch__7ksXAR8/artifacts/app jobs/ecd5-run2-codex/energy-centre-dispatch__uUGaNeP/artifacts/app jobs/ecd5-run3-claude/energy-centre-dispatch__VfZrbi2/artifacts/app jobs/ecd5-run3-codex/energy-centre-dispatch__PXg4b7R/artifacts/app jobs/ecd6-run1-claude/energy-centre-dispatch__TcY6uHZ/artifacts/app jobs/ecd7-run1-claude/energy-centre-dispatch__HEkUhZp/artifacts/app jobs/ecd8-run1-claude/energy-centre-dispatch__4Lq33pH/artifacts/app jobs/ecd8-run1-codex/energy-centre-dispatch__FV4r5PC/artifacts/app jobs/ecd8-run2-claude/energy-centre-dispatch__DRxEYtm/artifacts/app jobs/ecd8-run2-codex/energy-centre-dispatch__3Wxx3fH/artifacts/app jobs/ecd8-run3-claude/energy-centre-dispatch__EcvSum4/artifacts/app jobs/ecd8-run3-codex/energy-centre-dispatch__aKvGUDN/artifacts/app
+
+the task's five days pass the input checks
+f1: 2026-02-09 Mon (h2 profile), running at midnight ['GE2'], outages CT1 13:10-14:10, CT2 15:40-18:30
+f2: 2026-03-01 Sun (h3 profile), running at midnight [], outages GE1 LT radiator 20:20-24:00, EC1 22:00-24:00, AC1 01:00-05:00, GE2 LT radiator 09:30-14:30
+f3: 2026-08-06 Thu (h4 profile), running at midnight ['GE1'], outages B2 17:30-19:10
+f4: 2026-08-20 Thu (h4 profile), running at midnight ['GE1', 'GE2'], outages PV1 05:50-07:40, GE1 LT radiator 07:50-10:50
+f5: 2026-02-18 Wed (h2 profile), running at midnight ['GE1'], outages AC1 07:40-13:40, GE1 LT radiator 01:00-03:50, CT1 06:40-09:30
+f6: 2026-05-24 Sun (h3 profile), running at midnight ['GE2'], outages CT1 04:10-09:20, GE1 LT radiator 11:10-12:40, B1 18:30-20:20
+f7: 2026-08-12 Wed (visible profile), running at midnight ['GE1'], outages EC1 17:40-20:20
+f8: 2026-09-22 Tue (visible profile), running at midnight ['GE2'], outages EC2 02:40-05:30
+0/8 days failed  tasks/energy-centre-dispatch/solution/app  
+8/8 days failed  tasks/energy-centre-dispatch/environment  cooling_towers:f3,f4,f7; electricity_balance:f3,f4,f6,f7,f8; heat_balance:f1,f2,f3,f4,f5,f6,f7,f8; reported_gas_and_cost:f1,f2,f3,f4,f5,f6,f7,f8; units_within_ratings_and_availability:f2,f4,f5,f6,f7
+4/8 days failed  jobs/ecd5-run1-claude/energy-centre-dispatch__GuXqsfY/artifacts/app  units_within_ratings_and_availability:f2,f4,f5,f6
+7/8 days failed  jobs/ecd5-run1-codex/energy-centre-dispatch__h8XDnt6/artifacts/app  heat_balance:f2,f3,f4,f6,f7,f8; units_within_ratings_and_availability:f2,f4,f5,f6
+6/8 days failed  jobs/ecd5-run2-claude/energy-centre-dispatch__7ksXAR8/artifacts/app  connection_limits:f3,f4; electricity_balance:f4; least_cost:f2,f3,f4,f6; units_within_ratings_and_availability:f2,f4,f5,f6,f7
+7/8 days failed  jobs/ecd5-run2-codex/energy-centre-dispatch__uUGaNeP/artifacts/app  connection_limits:f2,f4,f5,f6; cooling_balance:f2,f4,f5,f6; cooling_towers:f2,f4,f5,f6; electricity_balance:f2,f4,f5,f6; heat_balance:f2,f3,f4,f5,f6,f7,f8; least_cost:f2,f4,f5,f6; plan_covers_the_day:f2,f4,f5,f6; reported_gas_and_cost:f2,f4,f5,f6; reported_import_export_and_grid_flags:f2,f4,f5,f6; same_plan_every_time:f2,f4,f5,f6; units_within_ratings_and_availability:f2,f4,f5,f6
+4/8 days failed  jobs/ecd5-run3-claude/energy-centre-dispatch__VfZrbi2/artifacts/app  units_within_ratings_and_availability:f2,f4,f5,f6
+7/8 days failed  jobs/ecd5-run3-codex/energy-centre-dispatch__PXg4b7R/artifacts/app  heat_balance:f2,f3,f4,f6,f7,f8; units_within_ratings_and_availability:f2,f4,f5,f6
+0/8 days failed  jobs/ecd6-run1-claude/energy-centre-dispatch__TcY6uHZ/artifacts/app  
+4/8 days failed  jobs/ecd7-run1-claude/energy-centre-dispatch__HEkUhZp/artifacts/app  units_within_ratings_and_availability:f2,f4,f5,f6
+4/8 days failed  jobs/ecd8-run1-claude/energy-centre-dispatch__4Lq33pH/artifacts/app  connection_limits:f3,f4; least_cost:f2,f3,f4,f6
+4/8 days failed  jobs/ecd8-run1-codex/energy-centre-dispatch__FV4r5PC/artifacts/app  connection_limits:f3,f4; cooling_balance:f3,f4; cooling_towers:f3,f4; electricity_balance:f3,f4; heat_balance:f3,f4; least_cost:f2,f3,f4,f6; plan_covers_the_day:f3,f4; reported_gas_and_cost:f3,f4; reported_import_export_and_grid_flags:f3,f4; same_plan_every_time:f3,f4; units_within_ratings_and_availability:f3,f4
+5/8 days failed  jobs/ecd8-run2-claude/energy-centre-dispatch__DRxEYtm/artifacts/app  connection_limits:f3,f4; least_cost:f2,f3,f4,f6; units_within_ratings_and_availability:f2,f4,f5,f6
+4/8 days failed  jobs/ecd8-run2-codex/energy-centre-dispatch__3Wxx3fH/artifacts/app  connection_limits:f3,f4; cooling_balance:f3,f4; cooling_towers:f3,f4; electricity_balance:f3,f4; heat_balance:f3,f4; least_cost:f2,f3,f4,f6; plan_covers_the_day:f3,f4; reported_gas_and_cost:f3,f4; reported_import_export_and_grid_flags:f3,f4; same_plan_every_time:f3,f4; units_within_ratings_and_availability:f3,f4
+4/8 days failed  jobs/ecd8-run3-claude/energy-centre-dispatch__EcvSum4/artifacts/app  units_within_ratings_and_availability:f2,f4,f5,f6
+4/8 days failed  jobs/ecd8-run3-codex/energy-centre-dispatch__aKvGUDN/artifacts/app  connection_limits:f3,f4; cooling_balance:f3,f4; cooling_towers:f3,f4; electricity_balance:f3,f4; heat_balance:f3,f4; least_cost:f2,f3,f4,f6; plan_covers_the_day:f3,f4; reported_gas_and_cost:f3,f4; reported_import_export_and_grid_flags:f3,f4; same_plan_every_time:f3,f4; units_within_ratings_and_availability:f3,f4
