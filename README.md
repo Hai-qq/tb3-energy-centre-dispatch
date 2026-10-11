@@ -426,11 +426,6 @@ the one before.
 
 ## Limitations
 
-- **The task was revised against the models' failures.** CONTRIBUTING asks authors not to build
-  tasks adversarially, and from v4 to v8 each version followed the trials of the one before
-  ("How the task came about"). The couplings are engineering facts stated in the data and the
-  failures carry over to fresh days, but which couplings the task leans on was chosen with
-  these two models' misses in view; another model may find it easier or harder for that reason.
 - **One control is left to the reader.** Holding the condenser water header at 22 °C uses a
   control the data describes but the instruction does not state, and a review asked for it to
   be stated ("Where the difficulty is"). All three GPT runs on v8 failed on that point alone,
