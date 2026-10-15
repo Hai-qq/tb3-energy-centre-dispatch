@@ -101,6 +101,33 @@ Two things have ever stopped Opus:
    the verifier stays exact and fair, how much it would cost to build, and how confident you are.
 3. Where is our reasoning above wrong or incomplete?
 
+## After the review: two falsification tests (2026-10-15)
+
+An outside review of this brief (it is in the conversation that led here, not in the repository)
+agreed to stop hardening this task the same way, argued that the difficulty should be something a
+model cannot easily build even once it knows what is wrong, and proposed three directions. We
+tested the two it ranked first, each against the rule set beforehand: drop the direction if a
+straightforward approach already meets the bar.
+
+- **Option B, a dispatch command gateway that must survive crashes, lost answers and a newer
+  plan taking over** ([`prototypes/dispatch-gateway/`](prototypes/dispatch-gateway/README.md)).
+  With a controller API that makes exactly-once possible (durable idempotency by command id,
+  fencing by plan epoch, a status query), a textbook gateway of about 50 lines (an SQLite outbox,
+  the plan's ids and epoch, "ask, then resend under the same id") passes all six fault scenarios;
+  a first-version gateway fails three. Dropped.
+- **Option A, the same plant model solved for a batch of forecast scenarios against the clock**
+  ([`prototypes/batch-dispatch/`](prototypes/batch-dispatch/README.md)). Reusing optimal bases
+  across scenarios is about 29 times faster than the solution run scenario by scenario and about
+  6 times faster than careful generic code (15.7 ms against about 104 ms per scenario, with the
+  same least cost on every checked scenario). But careful generic code would clearly miss a
+  two-minute budget only for batches of about 6,000 to 10,000 scenarios, which makes the clock,
+  not the reasoning, decide (TB3's rubric fails that), and basis reuse is textbook LP
+  sensitivity analysis. Dropped.
+
+A third test is under way: whether the optimisation itself can be made hard to solve exactly in
+two minutes (several days, a thermal store, minimum up and down times) in a way that a careful
+use of SciPy's MILP solver does not already handle.
+
 ## Where to look
 
 1. `README.md`: the delivered task, its evidence and the full history ("How the task came
@@ -114,3 +141,4 @@ Two things have ever stopped Opus:
 5. `archive/energy-centre-dispatch-v9/` to `-v12/`: every version's task files and build script;
    `archive/energy-centre-dispatch-v11-tools/` has the tower model behind v11's tables.
 6. `results/v9-trials/` to `v12-trials/`: the deliverables and verifier output.
+7. `prototypes/`: the falsification tests of options A and B, each with its README.
