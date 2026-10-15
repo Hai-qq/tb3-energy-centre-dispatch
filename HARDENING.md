@@ -101,7 +101,7 @@ Two things have ever stopped Opus:
    the verifier stays exact and fair, how much it would cost to build, and how confident you are.
 3. Where is our reasoning above wrong or incomplete?
 
-## After the review: two falsification tests (2026-10-15)
+## After the review: three falsification tests (2026-10-15)
 
 An outside review of this brief (it is in the conversation that led here, not in the repository)
 agreed to stop hardening this task the same way, argued that the difficulty should be something a
@@ -124,9 +124,14 @@ straightforward approach already meets the bar.
   not the reasoning, decide (TB3's rubric fails that), and basis reuse is textbook LP
   sensitivity analysis. Dropped.
 
-A third test is under way: whether the optimisation itself can be made hard to solve exactly in
-two minutes (several days, a thermal store, minimum up and down times) in a way that a careful
-use of SciPy's MILP solver does not already handle.
+- **The optimisation itself made hard: a week planned at once, with a thermal store and minimum
+  up and down times** ([`prototypes/combinatorial-dispatch/`](prototypes/combinatorial-dispatch/README.md)).
+  On the summer weeks HiGHS's two-minute plans are 0.16 to 0.40% above the optimum, which an exact
+  DP finds (the engines' states, with the store's level kept continuous through exact
+  piecewise-linear value functions; it agrees with every optimum HiGHS can prove). But a careful
+  approximate method, the same DP with the store's level on a 10 kWh grid and HiGHS polishing its
+  engine schedule, already reaches the tolerance in well under two minutes, and a 2 kWh grid comes
+  within GBP 0.5 of the optimum. Dropped.
 
 ## Where to look
 
@@ -141,4 +146,4 @@ use of SciPy's MILP solver does not already handle.
 5. `archive/energy-centre-dispatch-v9/` to `-v12/`: every version's task files and build script;
    `archive/energy-centre-dispatch-v11-tools/` has the tower model behind v11's tables.
 6. `results/v9-trials/` to `v12-trials/`: the deliverables and verifier output.
-7. `prototypes/`: the falsification tests of options A and B, each with its README.
+7. `prototypes/`: the three falsification tests, each with its README.

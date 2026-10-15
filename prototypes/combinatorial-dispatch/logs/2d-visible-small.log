@@ -1,0 +1,65 @@
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [2e-02, 1e+03]
+  Cost   [2e-02, 4e+01]
+  Bound  [1e+00, 3e+03]
+  RHS    [1e+00, 3e+03]
+Presolving model
+2373 rows, 2110 cols, 9340 nonzeros  0s
+2206 rows, 1917 cols, 8709 nonzeros  0s
+
+Solving MIP model with:
+   2206 rows
+   1917 cols (480 binary, 0 integer, 1 implied int., 1436 continuous)
+   8709 nonzeros
+MIP-Timing:      0.0089 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -4899.450697    inf                  inf        0      0      0         0     0.0s
+ R       0       0         0   0.00%   11727.968608    12914.116891       9.18%        0      0      0      1254     0.0s
+ C       0       0         0   0.00%   11959.90215     12609.998851       5.16%     1722    274      0      1924     0.2s
+ L       0       0         0   0.00%   12063.080431    12399.679316       2.71%     3077    269      0      2953     1.3s
+ L       0       0         0   0.00%   12063.080431    12209.804437       1.20%     3077    269      0      5545     1.8s
+        14       0         5  32.03%   12063.080431    12209.804437       1.20%     2902    196    260     69222     7.5s
+       215      36        76  82.00%   12126.51433     12209.804437       0.68%     2697    337   1516    118354    12.5s
+ B     392      61       129  82.04%   12136.610447    12208.927925       0.59%     3552    425   2301    127683    13.9s
+ T     392      59       129  82.04%   12136.610447    12206.315828       0.57%     3554    425   2304    127683    13.9s
+ T     563      61       142  82.17%   12136.68992     12199.621025       0.52%     3529    343   2556    130973    14.6s
+ T     593      56       143  82.37%   12136.68992     12196.780452       0.49%     3530    343   2564    131126    14.6s
+ T     916      58       180  82.76%   12151.652168    12191.937843       0.33%     3522    249   3153    141707    16.6s
+ T    1220     160       214  83.05%   12152.728791    12190.105352       0.31%     1598    190   3701    145738    17.5s
+ B    1568     253       267  83.13%   12160.499082    12189.133137       0.23%     3020    248   4210    152774    19.0s
+      2610     640       479  85.46%   12172.396779    12189.133137       0.14%     2298    347   2572    178541    24.0s
+      3797    1142       626  99.63%   12182.074837    12189.133137       0.06%      718    217   1110    201055    29.1s
+ L    3801      14       626  99.74%   12182.074837    12187.842645       0.05%      715    217   1106    201076    29.7s
+      3822       0       641 100.00%   12186.639818    12187.842645       0.01%     1088    312   1227    206173    30.0s
+
+Solving report
+  Status            Optimal
+  Primal bound      12187.8426454
+  Dual bound        12186.6398183
+  Gap               0.00987% (tolerance: 0.01%)
+  P-D integral      0.238849450943
+  Solution status   feasible
+                    12187.8426454 (objective)
+                    0 (bound viol.)
+                    1.2597167916e-14 (int. viol.)
+                    0 (row viol.)
+  Timing            29.96 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 7
+  Nodes             3822
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     206173 (total)
+                    99564 (strong br.)
+                    13527 (separation)
+                    12417 (heuristics)
+SUMMARY days=2 base=visible store=small vars=2112 binaries=480 rows=2392 nnz=9431 build=0.00s solve=30.0s status=0 cost=12187.84 bound=12186.64 gap=9.869072605780911e-05
