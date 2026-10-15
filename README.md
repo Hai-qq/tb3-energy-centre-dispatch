@@ -81,12 +81,9 @@ out, that no plan date has a clock change, and the two minutes the tool has for 
 | What the plant does | Where the data says so | What the shipped tool does |
 |---|---|---|
 | Every kW of the engines' HT heat must be used | `plant.json` `heat_circuits.engine_ht`: from the engines' jacket water and exhaust to `AC1 generator` and `PHE1`, nothing else | lets unused engine heat disappear |
-| The LT (intercooler) heat is not recoverable: GE2's leaves through its own LT radiator, GE1's through a heat exchanger, LTX1, into the condenser water header | `heat_circuits.ge2_lt`: GE2's intercooler to `GE2 LT radiator`; `ge1_lt`: GE1's intercooler to `LTX1`, which `condenser_water` lists with the chillers' condensers as going to `CT1` and `CT2` | counts the LT heat as useful |
-| The towers reject EC1's cooling plus its compressor work, the absorption chiller's cooling plus its driving heat, and GE1's intercooler heat | towers' `heat_rejection_kw_per_cell_by_wet_bulb_c`; chiller COPs; `heat_circuits.condenser_water`: `EC1 condenser`, `AC1 absorber and condenser` and `LTX1` to `CT1` and `CT2` | puts EC2's heat on them too, and leaves GE1's intercooler heat out |
-| EC2 is air-cooled: its condenser takes the outdoor air, so its COP is that of the dry bulb | `heat_circuits.ec2_condenser`: `EC2 condenser` to `outdoor air`; `cop_by_condenser_entering_c`; the weather's `dry_bulb_c` | rates EC2 at the cooling towers' water, as it does EC1 |
-| An engine cannot run while its intercooler heat has no way out: GE2 while its LT radiator is out, GE1 while LTX1 is out | the same circuits; the instruction describes `status.json` as holding "planned outages of plant" | applies outages to the units (engines, boilers, chillers) and to nothing else |
-| With the absorption chiller running, the shared condenser water header is kept at 22 °C or warmer, and EC1, the electric chiller on it, runs at the COP of that water | `heat_circuits.condenser_water`; `cooling_water_in_min_c: 22`; towers' `fans: "variable speed"`; EC1's `cop_by_condenser_entering_c` | keeps the absorption chiller off whenever the weather alone gives water below 22 °C |
-| The absorption chiller only pre-cools the chilled water: the return passes it first, it can bring the water down to 8 °C and no lower, and the electric chillers take it on to 6 °C, so it carries at most (12 − 8) / (12 − 6), two-thirds, of the cooling load | `heat_circuits.chilled_water`: flow 6 °C, return 12 °C and its `order`; AC1's `chilled_water_out_min_c: 8` | lets the chillers share the load in any proportion |
+| The LT (intercooler) heat is not recoverable, and an engine cannot run while its LT radiator is out | `heat_circuits.ge1_lt`, `ge2_lt`: each engine's intercooler to its own `LT radiator`; the instruction describes `status.json` as holding "planned outages of plant" | counts the LT heat as useful; applies outages to the engines only |
+| With the absorption chiller running, the shared condenser water header is kept at 22 °C or warmer, and the electric chillers run at the COP of that water | `heat_circuits.condenser_water`; `cooling_water_in_min_c: 22`; towers' `fans: "variable speed"`; chillers' `cop_by_condenser_entering_c` | keeps the absorption chiller off whenever the weather alone gives water below 22 °C |
+| The towers reject the chillers' cooling plus their compressor work, and the absorption chiller's cooling plus its driving heat | towers' `heat_rejection_kw_per_cell_by_wet_bulb_c`; chiller COPs | counts the cooling only |
 | The generators supply reactive power, so the kVA connection allows more import while they run | generator `control: "fixed power factor, overexcited"`; `import_capacity_kva` | leaves the generators out of the kVA |
 | Engine fuel is net CV, gas is billed gross CV | `fuel_basis: "net CV"`; gas `billing_basis: "gross CV"`, `gross_to_net_cv_ratio` | converts the wrong way (the engineers' "gas below the meters") |
 | The tariff's weekday and weekend are those of the local date | import rates' `time_basis: "local time"` | counts whole UTC days since the epoch, so a summer-time Saturday is priced as a Friday |
@@ -97,7 +94,7 @@ winter and spring day, when the wet bulb plus the approach is far below 21 °C, 
 already keep the water warmer than the weather would make it, and the shipped tool computes
 the condenser water as the larger of the two. Keeping it at 22 °C while the absorption chiller
 runs is the same control with a set point 1 K higher. The towers' capacity is the wet-bulb
-table's whatever the set point; on the five days the towers have at least 1,237 kW to spare in
+table's whatever the set point; on the five days the towers have at least 97 kW to spare in
 every half-hour in which the least-cost plan holds the header, so the table never limits the
 plan there. A review asked for this control to be stated in the instruction; it is left to the
 reader like the other couplings, since the data states the control and the engineer draws the
@@ -863,8 +860,9 @@ the one before.
     fraction of that heat (tables from a counterflow cell model, Braun's effectiveness method,
     `archive/energy-centre-dispatch-v11-tools/tower_tables.py`), and AC1's capacity falling as
     its cooling water warms. The plan reports the setpoint of each half-hour; the verifier's MILP
-    chooses it with one binary per setpoint and matched a separately written decomposition on
-    all five days. No fixed rule comes within the tolerance: v8.1's correct model costs GBP 25 to
+    chooses it with one binary per setpoint and matched a decomposition by half-hour on all five
+    days (written separately for the optimisation, but sharing the reference's plant functions, so
+    it checks the formulation, not the reading of the data). No fixed rule comes within the tolerance: v8.1's correct model costs GBP 25 to
     106 a day more on the three summer days, the best fixed approach GBP 3 to 11
     (`results/checks-v11/README.md`). Opus's first run passed in 43 minutes: once the data
     states a decision and its physics, the model writes them down and enumerates.
@@ -873,8 +871,9 @@ the one before.
     the whole site without the engines and a 1,400 kW EC2, so that a tool keeping the shipped
     header rule writes a workable plan for every day (it fails only the least cost, by GBP 486 to
     1,654 on the three days it matters; on 16 random days it fails 9, all on cost); and a shipped
-    tool that applies outages to every unit correctly, so the visible day no longer shows a boiler
-    run through its outage. The instruction is v8.1's. The connection no longer binds, so the
+    tool that applies outages to every unit (engines, boilers, chillers, AC1), so the visible day no
+    longer shows a boiler run through its outage; it still takes a half-hour as out only if the
+    outage covers its start, and still ignores outages of the LT radiators, PHE1, tower cells and PV. The instruction is v8.1's. The connection no longer binds, so the
     reactive-power coupling and its four mutants no longer matter. Opus's first run passed: an
     independent review subagent found the header, and the agent priced it on its own cooler days.
 

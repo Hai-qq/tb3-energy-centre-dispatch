@@ -9,7 +9,7 @@ Run on 2026-10-14 on the task files in `archive/energy-centre-dispatch-v11/` (ha
 | `oracle/`, `nop/` | the verifier's output: oracle reward 1 (55 passed), nop reward 0 | `harbor run -p <task> --agent oracle` (or `nop`) `--env docker` |
 | `mutants.txt` | 42 planted bugs, half-fixes, reporting and execution faults, each applied alone to the solution: all caught | `python archive/energy-centre-dispatch-v11-tools/energy_mutants.py` |
 | `fresh-days.txt` | eight days drawn at random: the solution passes all eight, the shipped tool fails all eight | `python tools/fresh_days.py <app> ...` |
-| `cross-check.txt` | the verifier's whole-day MILP against a separately written decomposition (every half-hour, engine combination and setpoint, the fans exactly on their curve, then a DP over the day): equal to 0.0001 GBP on all five days | `python archive/energy-centre-dispatch-v11-tools/crosscheck_decomposition.py archive/energy-centre-dispatch-v11` |
+| `cross-check.txt` | the verifier's whole-day MILP against a decomposition (every half-hour, engine combination and setpoint, the fans exactly on their curve, then a DP over the day): equal to 0.0001 GBP on all five days. The decomposition is written separately but imports the reference's `Day` and its plant functions, so it checks the optimisation's formulation, not the reading of the data | `python archive/energy-centre-dispatch-v11-tools/crosscheck_decomposition.py archive/energy-centre-dispatch-v11` |
 
 The Harbor runs used a frozen copy of the task (`staging/`).
 

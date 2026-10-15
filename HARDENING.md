@@ -20,7 +20,7 @@ This branch holds everything: `tasks/energy-centre-dispatch/` is the latest vers
 | v9 | v8.1 + GE1's intercooler heat goes into the condenser water through a heat exchanger (LTX1); the shipped tool applies outages to every unit and puts compressor work and driving heat on the towers | 1 of 1 passed | not run |
 | v10 | v9 + EC2 air-cooled (COP at the dry bulb, heat not on the towers); AC1 a series pre-cooler on the chilled water return (at most 2/3 of the load) | 1 of 2 passed | 0 of 1 |
 | v11 | v8.1 + the condenser water setpoint is an explicit decision (21 to 28 °C in 0.5 K steps) with real tower physics: capacity by wet bulb and approach, fan power curve, AC1's capacity falling with warmer cooling water | 1 of 1 passed | not run |
-| v12 | v8.1 + the header error made silent (a 2,600 kVA connection carries the whole site, EC2 1,400 kW) + no visible outage symptom (the shipped tool applies outages to every unit correctly) | 1 of 1 passed | not run |
+| v12 | v8.1 + the header error made silent (a 2,600 kVA connection carries the whole site, EC2 1,400 kW) + no visible outage symptom (the shipped tool applies outages to every unit; it still uses each half-hour's start and ignores the outages of the LT radiators, PHE1, tower cells and PV) | 1 of 1 passed: the trial's own verifier image build hung, and the deliverable passed all 55 tests when replayed in Harbor | not run |
 
 Since v9 Opus has solved the task in 4 of 5 runs; the passing tools we put through days drawn at
 random (v10's and v11's) passed every one. GPT has failed every run since v5, and since v8 (whose
