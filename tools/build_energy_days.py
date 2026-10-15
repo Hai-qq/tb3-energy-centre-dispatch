@@ -41,7 +41,7 @@ PLANT = {
     "electric_chillers": [
         {"id": "EC1", "max_kw": 1400,
          "cop_by_condenser_entering_c": [[18, 7.4], [22, 6.5], [26, 5.6], [30, 4.7], [34, 3.9]]},
-        {"id": "EC2", "max_kw": 1000,
+        {"id": "EC2", "max_kw": 1400,
          "cop_by_condenser_entering_c": [[18, 5.8], [22, 5.2], [26, 4.6], [30, 4.0], [34, 3.4]]},
     ],
     "absorption_chillers": [
@@ -67,7 +67,7 @@ PLANT = {
 
 SUPPLY = {
     "electricity": {
-        "import_capacity_kva": 1220,
+        "import_capacity_kva": 2600,
         "export_limit_kw": 250,
         "import_rates_p_per_kwh": {
             "time_basis": "local time",

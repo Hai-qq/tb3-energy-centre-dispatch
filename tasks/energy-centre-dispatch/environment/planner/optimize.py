@@ -25,10 +25,11 @@ def _minutes(hhmm: str) -> int:
     return int(h) * 60 + int(m)
 
 
-def _available(day: DayData, engine_id: str, hhmm: str) -> bool:
+def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
+    """Whether a unit is in service in the half-hour starting at hhmm."""
     m = _minutes(hhmm)
     for o in day.status.get("outages", []):
-        if o["unit"] == engine_id and _minutes(o["from"]) <= m < _minutes(o["to"]):
+        if o["unit"] == unit_id and _minutes(o["from"]) <= m < _minutes(o["to"]):
             return False
     return True
 
@@ -57,14 +58,17 @@ def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, on: tuple[bool, 
         c[j] = DT_H * (tariff.billed_gas(e.fuel_slope, e.fuel_basis) * gas + e.maintenance)
         const += DT_H * tariff.billed_gas(e.fuel_at_zero, e.fuel_basis) * gas
         bounds[j] = (e.min_kwe, e.rated_kwe)
+    def cap(unit, kw):
+        return kw if _available(day, unit.id, day.starts[t]) else 0.0
+
     for j, b in enumerate(boilers):
         c[iB + j] = DT_H * tariff.billed_gas(1.0 / b.efficiency, b.fuel_basis) * gas
-        bounds[iB + j] = (0.0, b.max_kw)
+        bounds[iB + j] = (0.0, cap(b, b.max_kw))
     for j, ch in enumerate(chillers):
-        bounds[iE + j] = (0.0, ch.max_kw)
+        bounds[iE + j] = (0.0, cap(ch, ch.max_kw))
     for j, a in enumerate(absorbers):
         # an absorption chiller needs its cooling water at least at its minimum inlet temperature
-        bounds[iA + j] = (0.0, a.max_kw if cewt >= a.cooling_water_in_min_c else 0.0)
+        bounds[iA + j] = (0.0, cap(a, a.max_kw) if cewt >= a.cooling_water_in_min_c else 0.0)
     c[iI] = DT_H * tariff.import_rate(day.starts[t])
     c[iX] = -DT_H * tariff.export_rate
     bounds[iI] = (0.0, _import_limit(day, tariff, t))
@@ -104,10 +108,12 @@ def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, on: tuple[bool, 
     row[iA:iA + nA] = 1.0
     A_eq.append(row)
     b_eq.append(day.cool[t])
-    # cooling towers: the heat they reject is the cooling load of the chillers and absorbers
+    # cooling towers: the chillers' cooling plus compressor work, the absorbers' cooling plus driving heat
     row = np.zeros(n)
-    row[iE:iE + nE] = 1.0
-    row[iA:iA + nA] = 1.0
+    for j, ch in enumerate(chillers):
+        row[iE + j] = 1.0 + 1.0 / ch.cop(cewt)
+    for j, a in enumerate(absorbers):
+        row[iA + j] = 1.0 + 1.0 / a.cop
     A_ub.append(row)
     b_ub.append(plant.tower_capacity(day.wet_bulb[t]))
 

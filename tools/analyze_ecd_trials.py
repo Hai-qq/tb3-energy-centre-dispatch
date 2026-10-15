@@ -55,7 +55,8 @@ def measure(app: Path) -> list[str]:
             boilers = sum(np.array([p["boilers_kw"][b["id"]] for p in plan["periods"]], dtype=float)
                           for b in day.plant["boilers"])
             heat_gap = f["engine_heat"] - f["ac_heat"] + boilers - day.heat - day.lthw_loss
-            tower = f["rejected"] - day.tower_max
+            # v11's reference gives the towers' limit at each half-hour's setpoint in the flows
+            tower = f["rejected"] - (f["tower_max"] if "tower_max" in f else day.tower_max)
             imp = np.array([p["import_kw"] for p in plan["periods"]], dtype=float)
             kva = np.hypot(imp, day.kvar - f["engine_kvar"]) - day.import_kva
             if name not in _best:

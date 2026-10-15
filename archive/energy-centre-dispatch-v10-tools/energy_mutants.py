@@ -1,0 +1,199 @@
+"""Mutation check for energy-centre-dispatch: each planted bug (and some likely
+half-fixes and reporting faults) applied alone to the reference solution must fail the
+tests. Exits with status 1 if any mutant passes them.
+
+Usage: python tools/energy_mutants.py [name ...]
+"""
+
+from __future__ import annotations
+
+import os
+import shutil
+import sys
+import tempfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from eval_energy import evaluate  # noqa: E402
+
+SOL = Path(os.environ.get("ECD_TASK", ROOT / "tasks" / "energy-centre-dispatch")).resolve() / "solution" / "app"
+
+# name: [(file, old, new), ...]
+MUTANTS = {
+    # planted in the shipped tool
+    "weather_by_utc_date": [("planner/data.py",
+        "wx = [weather[s.astimezone(timezone.utc)] for s in starts]",
+        "wx = [r for k, r in sorted(weather.items()) if k.date() == day]")],
+    "two_point_curve": [("planner/plant.py",
+        "        pts = d[\"part_load\"]\n", "        pts = [d[\"part_load\"][0], d[\"part_load\"][-1]]\n")],
+    "gas_net_to_gross_divided": [("planner/tariff.py",
+        "return kw * self.gross_per_net", "return kw / self.gross_per_net")],
+    "starts_not_in_decision": [("planner/optimize.py",
+        "            options = [best[j] + starts(prev, on) for j, prev in enumerate(combos)]",
+        "            options = [best[j] for j, prev in enumerate(combos)]"),
+        ("planner/optimize.py",
+        "    best = np.array([cost[0, k] + starts(initial, on) for k, on in enumerate(combos)])",
+        "    best = np.array([cost[0, k] for k, on in enumerate(combos)])")],
+    "heat_can_be_dumped": [("planner/optimize.py",
+        "    row[iB:iB + nB] = 1.0\n    A_eq.append(row)\n    b_eq.append(day.heat[t] + plant.lthw_loss_kw - sum(piece[4] for piece in pieces))",
+        "    row[iB:iB + nB] = 1.0\n    A_ub.append(-row)\n    b_ub.append(-(day.heat[t] + plant.lthw_loss_kw - sum(piece[4] for piece in pieces)))")],
+    "lt_heat_counted": [("planner/plant.py",
+        "self.heat_kw = np.array([p[\"ht_heat_kw\"] for p in pts], dtype=float)",
+        "self.heat_kw = np.array([p[\"ht_heat_kw\"] + p[\"lt_heat_kw\"] for p in pts], dtype=float)")],
+    "intercooler_heat_not_on_towers": [("planner/plant.py",
+        "self.lt_to_towers = {k: any(x in self.into_towers for x in v) for k, v in self.lt_outlets.items()}",
+        "self.lt_to_towers = {k: False for k in self.lt_outlets}")],
+    "ec2_on_header": [("planner/plant.py",
+        "ch.on_header = f\"{ch.id} condenser\" in self.into_towers", "ch.on_header = True")],
+    "absorber_share_ignored": [("planner/plant.py",
+        "a.share = (chw[\"return_c\"] - a.chilled_water_out_min_c) / (chw[\"return_c\"] - chw[\"flow_c\"])",
+        "a.share = 1.0")],
+    "kva_ignores_engines": [("planner/plant.py",
+        "self.kvar_per_kwe = math.sqrt(1.0 - pf * pf) / pf", "self.kvar_per_kwe = 0.0")],
+    "absorber_needs_cold_weather": [("planner/plant.py",
+        "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving, at_least_c)",
+        "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving)"),
+        ("planner/optimize.py",
+        "bounds[iA + j] = (0.0, min(cap(a, a.max_kw), a.share * day.cool[t]) if absorbing else 0.0)",
+        "bounds[iA + j] = (0.0, min(cap(a, a.max_kw), a.share * day.cool[t]) if cewt >= a.cooling_water_in_min_c else 0.0)")],
+    "weekend_from_utc_start": [("planner/tariff.py", "from datetime import date\n",
+        "from datetime import date, timedelta\n"),
+        ("planner/tariff.py", "self.weekend = day.weekday() >= 5", "self.weekend = (day - timedelta(days=1)).weekday() >= 5")],
+    "outages_units_only": [("planner/optimize.py",
+        "    return _available(day, engine.id, hhmm) and any(\n"
+        "        _available(day, x, hhmm) and (towers or x not in plant.into_towers)\n"
+        "        for x in plant.lt_outlets[engine.id])",
+        "    return _available(day, engine.id, hhmm)"),
+        ("planner/optimize.py", "    if _available(day, \"PHE1\", day.starts[t]):", "    if True:"),
+        ("planner/optimize.py",
+        "cells = sum(_available(day, cell, day.starts[t]) for cell in plant.tower_cells)",
+        "cells = len(plant.tower_cells)"),
+        ("planner/optimize.py",
+        "pv = day.pv[t] if _available(day, plant.pv_id, day.starts[t]) else 0.0",
+        "pv = day.pv[t]")],
+    # likely half-fixes
+    "towers_take_cooling_only": [("planner/plant.py",
+        "return kw * (1.0 + 1.0 / self.cop(condenser_entering_c))", "return kw"),
+        ("planner/plant.py", "return kw * (1.0 + 1.0 / self.cop)", "return kw")],
+    "lt_outlet_by_radiator_name": [("planner/optimize.py",
+        "    return _available(day, engine.id, hhmm) and any(\n"
+        "        _available(day, x, hhmm) and (towers or x not in plant.into_towers)\n"
+        "        for x in plant.lt_outlets[engine.id])",
+        "    return _available(day, engine.id, hhmm) and _available(day, f\"{engine.id} LT radiator\", hhmm)")],
+    "ec2_cop_at_header": [("planner/optimize.py",
+        "entering = [cewt if ch.on_header else day.dry_bulb[t] for ch in chillers]",
+        "entering = [cewt for ch in chillers]")],
+    "ec2_heat_on_towers": [("planner/optimize.py",
+        "        if ch.on_header:\n            row[iE + j] = ch.rejected(1.0, cewt)",
+        "        row[iE + j] = ch.rejected(1.0, entering[j])")],
+    "all_chillers_at_dry_bulb": [("planner/optimize.py",
+        "entering = [cewt if ch.on_header else day.dry_bulb[t] for ch in chillers]",
+        "entering = [day.dry_bulb[t] for ch in chillers]")],
+    "absorber_share_of_return": [("planner/plant.py",
+        "a.share = (chw[\"return_c\"] - a.chilled_water_out_min_c) / (chw[\"return_c\"] - chw[\"flow_c\"])",
+        "a.share = (chw[\"return_c\"] - a.chilled_water_out_min_c) / chw[\"return_c\"]")],
+    "header_always_held": [("planner/optimize.py",
+        "floor = max((a.cooling_water_in_min_c for a in absorbers), default=0.0) if absorbing else 0.0",
+        "floor = max((a.cooling_water_in_min_c for a in absorbers), default=0.0)")],
+    "kva_as_kw": [("planner/optimize.py",
+        "        b_ub.append(tariff.import_capacity_kva - math.sin(th) * day.kvar[t])",
+        "        b_ub.append(tariff.import_capacity_kva + 1e6 * abs(math.sin(th)))")],
+    "kva_engines_absorb_kvar": [("planner/plant.py",
+        "self.kvar_per_kwe = math.sqrt(1.0 - pf * pf) / pf", "self.kvar_per_kwe = -math.sqrt(1.0 - pf * pf) / pf")],
+    "towers_absorber_only": [("planner/plant.py",
+        "return kw * (1.0 + 1.0 / self.cop(condenser_entering_c))", "return kw")],
+    "cop_at_dry_bulb": [("planner/optimize.py",
+        "cewt = plant.condenser_entering(day.wet_bulb[t], floor)", "cewt = max(day.dry_bulb[t], floor)")],
+    "cewt_without_minimum": [("planner/plant.py",
+        "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving, at_least_c)",
+        "return max(wet_bulb_c + self.tower_approach, at_least_c)")],
+    "no_engine_aux": [("planner/optimize.py",
+        "b_eq.append(day.elec[t] - pv + sum(e.aux_kwe for e in engines))",
+        "b_eq.append(day.elec[t] - pv)")],
+    "no_lthw_loss": [("planner/optimize.py",
+        "b_eq.append(day.heat[t] + plant.lthw_loss_kw - sum(piece[4] for piece in pieces))",
+        "b_eq.append(day.heat[t] - sum(piece[4] for piece in pieces))")],
+    "outages_ignored": [("planner/optimize.py",
+        "            if any(o and not _engine_can_run(day, plant, e, day.starts[t])\n"
+        "                   for e, o in zip(plant.engines, on)):",
+        "            if False:")],
+    "outage_by_period_start": [("planner/optimize.py",
+        "if o[\"unit\"] == unit_id and m < _minutes(o[\"to\"]) and m + 30 > _minutes(o[\"from\"]):",
+        "if o[\"unit\"] == unit_id and _minutes(o[\"from\"]) <= m < _minutes(o[\"to\"]):")],
+    "phe1_outage_ignored": [("planner/optimize.py",
+        "    if _available(day, \"PHE1\", day.starts[t]):", "    if True:")],
+    "lt_outlet_outage_ignored": [("planner/optimize.py",
+        "    return _available(day, engine.id, hhmm) and any(\n"
+        "        _available(day, x, hhmm) and (towers or x not in plant.into_towers)\n"
+        "        for x in plant.lt_outlets[engine.id])",
+        "    return _available(day, engine.id, hhmm)")],
+    "outages_engines_only": [("planner/optimize.py",
+        "        return kw if _available(day, unit.id, day.starts[t]) else 0.0",
+        "        return kw")],
+    "tower_cell_outage_ignored": [("planner/optimize.py",
+        "cells = sum(_available(day, cell, day.starts[t]) for cell in plant.tower_cells)",
+        "cells = len(plant.tower_cells)")],
+    "pv_outage_ignored": [("planner/optimize.py",
+        "pv = day.pv[t] if _available(day, plant.pv_id, day.starts[t]) else 0.0",
+        "pv = day.pv[t]")],
+    "absorber_cooling_water_ignored": [("planner/plant.py",
+        "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving, at_least_c)",
+        "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving)")],
+    "header_not_shared": [("planner/optimize.py",
+        "entering = [cewt if ch.on_header else day.dry_bulb[t] for ch in chillers]",
+        "entering = [plant.condenser_entering(day.wet_bulb[t]) if ch.on_header else day.dry_bulb[t] for ch in chillers]"),
+        ("planner/optimize.py",
+        "            row[iE + j] = ch.rejected(1.0, cewt)",
+        "            row[iE + j] = ch.rejected(1.0, plant.condenser_entering(day.wet_bulb[t]))")],
+    "midnight_state_ignored": [("planner/optimize.py",
+        "initial = tuple(e.id in running for e in plant.engines)",
+        "initial = tuple(False for e in plant.engines)")],
+    "saturday_is_weekday": [("planner/tariff.py",
+        "self.weekend = day.weekday() >= 5", "self.weekend = day.weekday() > 5")],
+    # reporting faults: the plant runs right, the plan reports it wrong
+    "import_total_in_kw": [("dispatch.py",
+        '"import_kwh": sum(p["import_kw"] for p in periods) * 0.5,',
+        '"import_kwh": sum(p["import_kw"] for p in periods),')],
+    "grid_flag_without_generators": [("planner/optimize.py",
+        'p["grid_ok"] = math.hypot(p["import_kw"], kvar) <=',
+        'p["grid_ok"] = math.hypot(p["import_kw"], day.kvar[t]) <=')],
+    "plan_varies_between_runs": [("dispatch.py", "import json\n", "import json\nimport random\n"),
+        ("dispatch.py",
+        '"export_kwh": sum(p["export_kw"] for p in periods) * 0.5,',
+        '"export_kwh": sum(p["export_kw"] for p in periods) * 0.5 + 0.01 * random.random(),')],
+    # execution faults: the plan is right, the run is not
+    "exits_with_error_after_writing": [("dispatch.py",
+        'if __name__ == "__main__":\n    main()\n',
+        'if __name__ == "__main__":\n    main()\n    raise SystemExit(77)\n')],
+    "hangs_after_writing": [("dispatch.py",
+        'if __name__ == "__main__":\n    main()\n',
+        'if __name__ == "__main__":\n    main()\n    import time\n    time.sleep(3600)\n')],
+}
+
+# The solution plans a day in about a second; a short limit lets the hanging mutant fail fast.
+RUN_TIMEOUT_S = 20
+
+
+def main() -> None:
+    names = sys.argv[1:] or list(MUTANTS)
+    missed = 0
+    for name in names:
+        with tempfile.TemporaryDirectory() as tmp:
+            app = Path(tmp) / "app"
+            shutil.copytree(SOL, app)
+            for f, old, new in MUTANTS[name]:
+                p = app / f
+                s = p.read_text()
+                assert s.count(old) == 1, (name, f, old)
+                p.write_text(s.replace(old, new))
+            r = evaluate(app, quiet=True, timeout=RUN_TIMEOUT_S)
+        fails = "; ".join(f"{k.replace('test_', '')}:{','.join(v)}" for k, v in sorted(r["failed"].items()))
+        errs = "; ".join(f"{d}:{e[:60]}" for d, e in r["errors"].items())
+        print(f"{name:28s} {'CAUGHT' if r['failed'] else 'MISSED'}  {fails}  {errs}", flush=True)
+        missed += not r["failed"]
+    sys.exit(1 if missed else 0)
+
+
+if __name__ == "__main__":
+    main()

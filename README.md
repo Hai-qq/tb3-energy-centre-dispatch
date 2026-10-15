@@ -3,6 +3,13 @@
 One original Terminal-Bench 3 task, [`tasks/energy-centre-dispatch`](tasks/energy-centre-dispatch),
 with the scripts and tools used to build, check and run it.
 
+**Status, 2026-10-15.** The delivered task is v8.1 (`main`, `archive/energy-centre-dispatch-v8.1/`).
+After the assignment's reviewer's runs, four hardening versions were built (v9 to v12); Opus 5.5
+solved each of them, and `tasks/energy-centre-dispatch/` now holds v12.
+[`HARDENING.md`](HARDENING.md) sets out where things stand and the open question. The overview,
+table and configuration below describe v8.1; the v9 to v12 rounds are under "Trial results",
+"Failure analysis" and "How the task came about".
+
 The agent repairs the day-ahead dispatch tool of a hospital trigeneration energy centre: two
 gas-engine CHP sets, two boilers, two electric chillers, an absorption chiller fired from the
 engines' heat recovery, cooling towers, PV and a kVA-limited grid connection. The tool's
@@ -74,9 +81,12 @@ out, that no plan date has a clock change, and the two minutes the tool has for 
 | What the plant does | Where the data says so | What the shipped tool does |
 |---|---|---|
 | Every kW of the engines' HT heat must be used | `plant.json` `heat_circuits.engine_ht`: from the engines' jacket water and exhaust to `AC1 generator` and `PHE1`, nothing else | lets unused engine heat disappear |
-| The LT (intercooler) heat is not recoverable, and an engine cannot run while its LT radiator is out | `heat_circuits.ge1_lt`, `ge2_lt`: each engine's intercooler to its own `LT radiator`; the instruction describes `status.json` as holding "planned outages of plant" | counts the LT heat as useful; applies outages to the engines only |
-| With the absorption chiller running, the shared condenser water header is kept at 22 °C or warmer, and the electric chillers run at the COP of that water | `heat_circuits.condenser_water`; `cooling_water_in_min_c: 22`; towers' `fans: "variable speed"`; chillers' `cop_by_condenser_entering_c` | keeps the absorption chiller off whenever the weather alone gives water below 22 °C |
-| The towers reject the chillers' cooling plus their compressor work, and the absorption chiller's cooling plus its driving heat | towers' `heat_rejection_kw_per_cell_by_wet_bulb_c`; chiller COPs | counts the cooling only |
+| The LT (intercooler) heat is not recoverable: GE2's leaves through its own LT radiator, GE1's through a heat exchanger, LTX1, into the condenser water header | `heat_circuits.ge2_lt`: GE2's intercooler to `GE2 LT radiator`; `ge1_lt`: GE1's intercooler to `LTX1`, which `condenser_water` lists with the chillers' condensers as going to `CT1` and `CT2` | counts the LT heat as useful |
+| The towers reject EC1's cooling plus its compressor work, the absorption chiller's cooling plus its driving heat, and GE1's intercooler heat | towers' `heat_rejection_kw_per_cell_by_wet_bulb_c`; chiller COPs; `heat_circuits.condenser_water`: `EC1 condenser`, `AC1 absorber and condenser` and `LTX1` to `CT1` and `CT2` | puts EC2's heat on them too, and leaves GE1's intercooler heat out |
+| EC2 is air-cooled: its condenser takes the outdoor air, so its COP is that of the dry bulb | `heat_circuits.ec2_condenser`: `EC2 condenser` to `outdoor air`; `cop_by_condenser_entering_c`; the weather's `dry_bulb_c` | rates EC2 at the cooling towers' water, as it does EC1 |
+| An engine cannot run while its intercooler heat has no way out: GE2 while its LT radiator is out, GE1 while LTX1 is out | the same circuits; the instruction describes `status.json` as holding "planned outages of plant" | applies outages to the units (engines, boilers, chillers) and to nothing else |
+| With the absorption chiller running, the shared condenser water header is kept at 22 °C or warmer, and EC1, the electric chiller on it, runs at the COP of that water | `heat_circuits.condenser_water`; `cooling_water_in_min_c: 22`; towers' `fans: "variable speed"`; EC1's `cop_by_condenser_entering_c` | keeps the absorption chiller off whenever the weather alone gives water below 22 °C |
+| The absorption chiller only pre-cools the chilled water: the return passes it first, it can bring the water down to 8 °C and no lower, and the electric chillers take it on to 6 °C, so it carries at most (12 − 8) / (12 − 6), two-thirds, of the cooling load | `heat_circuits.chilled_water`: flow 6 °C, return 12 °C and its `order`; AC1's `chilled_water_out_min_c: 8` | lets the chillers share the load in any proportion |
 | The generators supply reactive power, so the kVA connection allows more import while they run | generator `control: "fixed power factor, overexcited"`; `import_capacity_kva` | leaves the generators out of the kVA |
 | Engine fuel is net CV, gas is billed gross CV | `fuel_basis: "net CV"`; gas `billing_basis: "gross CV"`, `gross_to_net_cv_ratio` | converts the wrong way (the engineers' "gas below the meters") |
 | The tariff's weekday and weekend are those of the local date | import rates' `time_basis: "local time"` | counts whole UTC days since the epoch, so a summer-time Saturday is priced as a Friday |
@@ -87,7 +97,7 @@ winter and spring day, when the wet bulb plus the approach is far below 21 °C, 
 already keep the water warmer than the weather would make it, and the shipped tool computes
 the condenser water as the larger of the two. Keeping it at 22 °C while the absorption chiller
 runs is the same control with a set point 1 K higher. The towers' capacity is the wet-bulb
-table's whatever the set point; on the five days the towers have at least 97 kW to spare in
+table's whatever the set point; on the five days the towers have at least 1,237 kW to spare in
 every half-hour in which the least-cost plan holds the header, so the table never limits the
 plan there. A review asked for this control to be stated in the instruction; it is left to the
 reader like the other couplings, since the data states the control and the engineer draws the
@@ -118,7 +128,7 @@ plant couples electricity, heat and cooling, which no single formula or field sh
 | `tools/` | `build_energy_days.py` (plant, tariff and day data), `eval_energy.py` (run a tool on all verifier days and run the tests), `energy_mutants.py` (each planted bug and likely half-fix applied alone to the solution), `analyze_ecd_trials.py` (what each trial's tool got wrong, day by day), `write_trial_results.py` (the summaries in `results/`), `fresh_days.py` (days the task was not tuned on), `export_trials.py` (a trial's deliverable, verifier output and settings, for `results/`), `trial_log.py`, `stage_review.py` and `stage_analysis.py` (CI's rubric review and trajectory review as local Harbor tasks) |
 | `scripts/` | `run_trials.sh` (standard and cheat trials), `run_detached.sh` (one trial, detached from the starting shell), `run_review.sh` (implementation rubric review), `run_analysis.sh` (CI's trajectory review of trials), `run_static_checks.sh` (CI's static checks), `replay_deliverable.sh` (score a trial's deliverable in Harbor with a task's verifier) |
 | `ci/tb3/` | prompts and CI defaults copied unchanged from the TB3 repo (see `ci/tb3/SOURCE.md`) |
-| `results/` | `checks-v8.1/`, the checks on the delivered task; per-trial summaries: `official-v8.md` and `cheat-v8.md` for the v8 trials, `v8-trials/` with their deliverables, verifier output and hashes, `analysis-v8/` with CI's trajectory review of each, `official-v5.md` and `cheat-v5.md` for v5's full round, the others for the other versions |
+| `results/` | for each hardening version `checks-v<N>/` (its checks), `official-v<N>.md` (what each trial's tool does and the agent's messages, v10 to v12) and `v<N>-trials/` (deliverables, verifier output and hashes), for v9 to v12; `checks-v8.1/`, `official-v8.md`, `cheat-v8.md`, `v8-trials/` and `analysis-v8/` (CI's trajectory review of each v8 trial) for the round before; `official-v5.md` and `cheat-v5.md` for v5's full round; the others for the other versions |
 | `archive/` | earlier tasks and versions, each version with the build script that made its data (see "How the task came about") |
 | `planning/` | task checklist and the original proposals (in Chinese) |
 
@@ -151,16 +161,19 @@ scripts/run_analysis.sh analysis-v8 archive/energy-centre-dispatch-v8 results/an
 scripts/run_static_checks.sh <terminal-bench-checkout>             # CI's static checks
 ```
 
-The standard trials are run one at a time, in the order GPT, Opus, GPT, Opus, GPT, Opus, each
-started after the previous one has finished; any pass stops the round and sends the task back
-for revision. One at a time also keeps two separate-mode verifier images from being built at
-once, which has hung on this Docker Desktop host. `run_detached.sh` runs the trial in a session
-of its own, so that it outlives the shell that started it.
+The standard trials are run one at a time, each started after the previous one has finished
+(once not, in v10; see there); any pass stops the round and sends the task back for revision.
+The models alternated up to v10's first two trials (GPT first up to v8, Opus first from v9);
+since then Opus's runs come first and GPT's follow only if all of Opus's have failed. One at a
+time also keeps two separate-mode verifier images from being built at once, which has hung on
+this Docker Desktop host. `run_detached.sh` runs the trial in a session of its own, so that it
+outlives the shell that started it.
 
 Static checks: `scripts/run_static_checks.sh` takes the "Run all static checks" step from a
 Terminal-Bench checkout's `.github/workflows/static-checks.yml` and runs it unchanged in a
 throwaway linux/amd64 container without network, with `dockerfile-pin` v1.5.0 installed as CI
-installs it (checked against CI's SHA-256). At `bf4c125` the step has 27 checks. The replays
+installs it (checked against CI's SHA-256). At `bf4c125` and at `1d49c52` (main, 2026-10-12)
+the step has the same 27 checks. The replays
 (`replay_deliverable.sh`) score a deliverable with the task's own verifier through Harbor's
 oracle agent; `run_analysis.sh` stages CI's trajectory review of each trial (one Harbor task per
 trial, as `scripts/ci/stage_hosted_analysis.py` does) and runs it.
@@ -172,13 +185,14 @@ Each trial ran on fixed task files, identified by the SHA-256 of all files but t
   | xargs shasum -a 256 | shasum -a 256 | cut -c1-16)
 ```
 
-This gives `acdfe59ea74ff707` for the current task, the files on which the checks in
-`results/checks-v8.1/`, the rubric review and the replays ran. The archived versions give the
-same with
+This gives `7c9fb0eb20e576e8` for the current task (v12), the files on which the checks in
+`results/checks-v12/` and the v12 trial ran. The archived versions give the same with
 `! -name build_energy_days.py` added: `0dcfa73dde270061` for v5, `6e720233fd4ea76d` for
-v6, `034e1f56e26a1c1a` for v7 and `6826dc661e623be8` for v8, the files their trials ran on.
+v6, `034e1f56e26a1c1a` for v7, `6826dc661e623be8` for v8, `acdfe59ea74ff707` for v8.1 (the
+files the assignment's reviewer ran), `a68b1baa343fb396` for v9, `aa00a9fa0c67426f` for v10,
+`ea19cd9096c6134e` for v11 and `7c9fb0eb20e576e8` for v12.
 `tools/export_trials.py` exports a trial's deliverable, verifier output and settings from the
-local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.
+local `jobs/` folder, with hashes; the trials are in `results/v8-trials/` to `results/v12-trials/`.
 
 ## Configuration
 
@@ -189,7 +203,8 @@ local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.
   `CLAUDE_CODE_MAX_OUTPUT_TOKENS=128000` (the `env` of CI's claude-code entry), `codex` with
   `reasoning_effort=xhigh`, 3 attempts for `/run`, 1 for `/cheat` with
   `ci/tb3/hack-trial-prompt.md` appended. CI runs the 3 `/run` attempts as one job; here each
-  attempt was its own single-attempt job, started after the previous one had finished.
+  attempt was its own single-attempt job, started after the previous one had finished (all but
+  one, in v10).
 - **Model ids.** `anthropic/claude-opus-5.5` (dotted, as in the assignment) returns
   `model_not_found`; `anthropic/claude-opus-5-5` is the working id. `openai/gpt-6.1-sol` works
   as written.
@@ -208,7 +223,68 @@ local `jobs/` folder, with hashes; the v8 trials are in `results/v8-trials/`.
 
 ## Trial results
 
-### v8 (the trials of the current task)
+### v12
+
+One standard trial, Opus only (from v11 on, any Opus pass stops the round), on the task files in
+`archive/energy-centre-dispatch-v12/`:
+
+| Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
+|---|---|---|---|---|
+| `ecd12-run1-claude` | claude-code 2.1.300, `anthropic/claude-opus-5-5` | none (verifier image build hung); replayed: 1 | 96.9 min | none in the replay |
+
+Harbor recorded `VerifierTimeoutError`: building the separate verifier image hung for 30
+minutes and the tests never ran. Replayed with the task's verifier
+(`scripts/replay_deliverable.sh`), the deliverable passed all 55 tests. Details:
+[`results/official-v12.md`](results/official-v12.md),
+[`results/v12-trials/`](results/v12-trials/).
+
+### v11
+
+One standard trial, on the task files in `archive/energy-centre-dispatch-v11/`:
+
+| Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
+|---|---|---|---|---|
+| `ecd11-run1-claude` | claude-code 2.1.299, `anthropic/claude-opus-5-5` | 1 | 43.1 min | none |
+
+Details: [`results/official-v11.md`](results/official-v11.md),
+[`results/v11-trials/`](results/v11-trials/).
+
+### v10
+
+Standard trials on the task files in `archive/energy-centre-dispatch-v10/` (hash `aa00a9fa0c67426f`),
+with claude-code 2.1.299 and codex 0.162.1, Opus first: its runs one after another, then GPT's.
+GPT's first run had already started when the order was changed and is counted; Opus's second
+run was started at the change, seven minutes before GPT's first run ended.
+
+| Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
+|---|---|---|---|---|
+| `ecd10-run1-claude` | claude-code, `anthropic/claude-opus-5-5` | 0 | 32.7 min | 5 failed, 10 errors: connection and least cost on h1 and h4; no plan for h3 |
+| `ecd10-run1-codex` | codex, `openai/gpt-6.1-sol` | 0 | 29.4 min | 3 failed, 30 errors: no plan for h1, h3 and h4 |
+| `ecd10-run2-claude` | claude-code, `anthropic/claude-opus-5-5` | 1 | 56.1 min | none |
+
+The pass stopped the round.
+
+Per-trial details: [`results/official-v10.md`](results/official-v10.md); deliverables and verifier
+output: [`results/v10-trials/`](results/v10-trials/).
+
+### v9
+
+One standard trial, on the task files in `archive/energy-centre-dispatch-v9/`, after which the
+round was stopped and the task revised (see "How the task came about", v9):
+
+| Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
+|---|---|---|---|---|
+| `ecd9-run1-claude` | claude-code 2.1.299, `anthropic/claude-opus-5-5` | 1 | 33.0 min | none |
+
+Deliverable and verifier output: [`results/v9-trials/`](results/v9-trials/).
+
+### v8.1, run by the assignment's reviewer
+
+The reviewer ran the delivered v8.1 three times with Opus 5.5 at max effort and three times with
+GPT-6.1 Sol: Opus solved it in two of its three runs, and no GPT pass was reported. Their
+configuration and trajectories are not available here.
+
+### v8
 
 Six standard trials, run one at a time in the order below, each started after the previous one
 had finished, on the task files in `archive/energy-centre-dispatch-v8/`. Harbor recorded no
@@ -284,6 +360,61 @@ one was repeated once):
 Details: [`results/cheat-v5.md`](results/cheat-v5.md).
 
 ## Failure analysis
+
+### v12
+
+**Opus 5.5, run 1: passed.** The main agent fixed everything else and kept the shipped header
+rule. Its "independent defect hunt" subagent, reading the original tool afresh, disagreed on
+that one point; the agent priced both readings on its own cooler days ("8-36% cheaper") and
+adopted the header, listing it as the one decision the user may want to reverse. It also traced
+the LT radiator, PHE1, tower-cell and PV outages without any symptom on the visible day.
+
+### v11
+
+**Opus 5.5, run 1: passed.** It took the setpoint as a decision at once ("the old code fixed it
+at 4 K above the wet bulb, a figure that isn't in the data"), chose it each half-hour among the
+0.5 K steps, read AC1's capacity at the condenser water temperature and put the fans on the
+heat the towers reject, with an exact fallback for fans pushed off their curve. Its own
+whole-day optimiser agreed on 17 test days of its own; the tool also passes the eight days
+`tools/fresh_days.py` draws.
+
+### v10
+
+**Opus 5.5, run 1: the header, seen and turned down.** The tool it wrote is right everywhere
+else: each heat circuit is a balance over what `plant.json` connects, so GE1's intercooler
+heat goes to the towers through LTX1 and every outage of anything the circuits name is
+traced; EC2 is rated at the dry bulb and kept off the towers; the absorption chiller is held
+to two-thirds of the cooling load ("AC1 can't cool the chilled water below 8 °C, so it can
+carry at most ⅔ of the cooling load"). It matched the least cost to the penny on the visible
+day and on the winter weekday. It kept the shipped header rule, and its closing message says
+why: "On a cool summer night the engines then have nowhere to put their heat, and the site
+can't stay within the 1220 kVA connection. If operators raise the tower setpoint to 22 °C when
+AC1 runs, the model needs changing; tell me if that's how they run it." On the Saturday and
+the hot weekday its plans import up to 379 and 535 kVA beyond the connection and cost £584
+and £390 more than the least cost; on the spring Monday it found no plan at 13:30.
+
+**GPT-6.1 Sol, run 1: the header.** The same: the visible day and the winter weekday at the
+least cost, EC2, the absorption chiller's share, LTX1 and the outages right, and the shipped
+header rule kept, so its tool raised `no feasible loading` at 00:00 on the Saturday and the hot
+weekday and at 13:30 on the spring Monday, and wrote no plan for them.
+
+**Opus 5.5, run 2: passed.** Its tool has the same model as run 1's, and it holds the header
+at 22 °C: "when the towers' water would be colder than AC1's 22 °C minimum, the tool slows the
+tower fans to hold 22 °C rather than locking AC1 out ... Under the old lock-out rule, my
+synthetic cool spring days had no workable plan." It then had a subagent review the tool for 22
+minutes ("I found no definite bugs"), which is most of its 56 minutes.
+
+All three runs got the two couplings v10 added right. What separates the pass from the
+failures is the control that v5 to v8 already turned on, and the runs that held the header did
+so after their own made-up cool days showed the shipped rule leaving no plan.
+
+### v9
+
+**Opus 5.5, run 1: passed.** It read the circuits as a network of balances, which put GE1's
+intercooler heat on the towers and traced every outage, and it tested its tool on eleven days
+of its own, on one of which, a cool summer day, the shipped header rule left no plan within
+the connection; it then held the header at 22 °C "because the tower fans are variable speed and
+21 °C is only a minimum".
 
 ### v8
 
@@ -685,6 +816,67 @@ the one before.
     the six replays were run again on these files (`results/checks-v8.1/`,
     `results/v8-trials/`), and CI's trajectory review was run on the nine v8 trials
     (`results/analysis-v8/`).
+25. **v9: the reviewer's runs, and a first hardening.** The assignment's reviewer ran v8.1
+    three times with each model, and Opus 5.5 solved it in two of its three runs. Our six v8
+    trials had all failed, but each Opus run had failed on one coupling only, the header or
+    the radiators, so two passes in six runs on the same files is no surprise (Fisher's exact
+    test between 0 of 3 and 2 of 3 gives p = 0.4). v9 added a coupling of the same kind and
+    took away two of the shipped tool's errors that the visible day showed. GE1's intercooler
+    is cooled from the condenser water header through a plate heat exchanger, LTX1, instead of
+    a radiator of its own, so its intercooler heat is heat the towers must reject, and GE1
+    cannot run while LTX1 is out (GE2 keeps its radiator). The shipped tool now applies outages
+    to every unit, so the visible day's boiler outage no longer shows that outages are
+    mishandled, and its towers take the chillers' compressor work and the absorption chiller's
+    driving heat. To keep the days feasible with GE1's intercooler heat on the towers, the hot
+    weekday's afternoon cooling was lowered by 6%, and the Saturday's tower-cell outage moved
+    to 08:10–09:50, so that the towers are never full while the header is held. Every Opus tool
+    from v4 to v8 that had the radiators and the header right, the one that passed v6 among
+    them, overloads the towers on two hidden days. The first v9 trial, Opus with Claude Code
+    2.1.299, passed all 55 tests in 33 minutes. It modelled each heat circuit as a balance
+    between whatever the circuit's lists connect, which took in LTX1 and every outage, and it
+    tried its tool on eleven days of its own: on a cool summer day the shipped header rule left
+    the engines nowhere for their heat and the site over its connection all day, which led it
+    to hold the header. The round was stopped there. The task as it was is in
+    `archive/energy-centre-dispatch-v9/`.
+26. **v10: two more places the heat goes.** v9's pass showed what a careful run now does:
+    every connection `plant.json` lists becomes a balance in its model, and it tries its tool
+    on days of its own. v10 adds two couplings of the task's kind. EC2 is air-cooled: its
+    condenser takes the outdoor air (`heat_circuits.ec2_condenser`), so its COP is that of the
+    dry bulb, which the weather file has always given and no earlier tool needed, and its heat
+    is not the towers'. And the absorption chiller is piped as a pre-cooler: the chilled water
+    return (12 °C) passes its evaporator first (`heat_circuits.chilled_water`), it cannot
+    bring the water below 8 °C (`chilled_water_out_min_c`), and the electric chillers take it
+    on to 6 °C, so it carries at most two-thirds of the cooling load. That limits it most on
+    summer nights, when it is the engines' heat sink: on the visible day's and the Saturday's
+    nights it runs at that limit, and only GE2 can run, since GE1's heat at minimum load is more
+    than the heating and the absorption chiller can then take. The
+    shipped tool rates EC2 at the towers' water, puts its heat on the towers, and lets the
+    chillers share the load in any proportion; its plan for the visible day is still v8's,
+    byte for byte, and the instruction is unchanged. The reference MILP now runs without
+    HiGHS's presolve, which had declared the Saturday infeasible although a plan meets it.
+    Opus's first run declined the header and failed; GPT's first run failed on the header; Opus's
+    second run passed. The task as it was is in `archive/energy-centre-dispatch-v10/`.
+27. **v11: the setpoint as physics, not a judgment.** Adding couplings the data states had not
+    helped, so v11 went back to v8.1's plant and made the condenser water setpoint an explicit
+    decision with real physics behind it: a setpoint range (21 to 28 °C in 0.5 K steps), each
+    tower cell's heat at full fan speed by wet bulb and approach and its fans' power by the
+    fraction of that heat (tables from a counterflow cell model, Braun's effectiveness method,
+    `archive/energy-centre-dispatch-v11-tools/tower_tables.py`), and AC1's capacity falling as
+    its cooling water warms. The plan reports the setpoint of each half-hour; the verifier's MILP
+    chooses it with one binary per setpoint and matched a separately written decomposition on
+    all five days. No fixed rule comes within the tolerance: v8.1's correct model costs GBP 25 to
+    106 a day more on the three summer days, the best fixed approach GBP 3 to 11
+    (`results/checks-v11/README.md`). Opus's first run passed in 43 minutes: once the data
+    states a decision and its physics, the model writes them down and enumerates.
+28. **v12: v8.1 with the header error silent.** Back to v8.1's plant, with two changes that take
+    away what had led Opus to the header and to the outages: a 2,600 kVA connection that carries
+    the whole site without the engines and a 1,400 kW EC2, so that a tool keeping the shipped
+    header rule writes a workable plan for every day (it fails only the least cost, by GBP 486 to
+    1,654 on the three days it matters; on 16 random days it fails 9, all on cost); and a shipped
+    tool that applies outages to every unit correctly, so the visible day no longer shows a boiler
+    run through its outage. The instruction is v8.1's. The connection no longer binds, so the
+    reactive-power coupling and its four mutants no longer matter. Opus's first run passed: an
+    independent review subagent found the header, and the agent priced it on its own cooler days.
 
 ## Authorship and AI use
 

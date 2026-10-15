@@ -1,0 +1,30 @@
+{
+ "job": "ecd11-run1-claude",
+ "trial": "energy-centre-dispatch__wkc79y5",
+ "task": "terminal-bench/energy-centre-dispatch",
+ "task_files": "archive/energy-centre-dispatch-v11",
+ "task_hash": "ea19cd9096c6134e",
+ "harbor_task_checksum": "70fc357cd3680259435139528941bd1c93b76bc9d30f62bede7d128f950a8828",
+ "agent": {
+  "name": "claude-code",
+  "version": "2.1.299",
+  "model": "anthropic/claude-opus-5-5",
+  "kwargs": {
+   "reasoning_effort": "max"
+  },
+  "env_from_config": []
+ },
+ "extra_instruction": false,
+ "agent_setup_timeout_multiplier": 5.0,
+ "started_at": "2026-10-14T13:42:13.096356Z",
+ "agent_started_at": "2026-10-14T13:43:19.697648Z",
+ "agent_finished_at": "2026-10-14T14:26:26.202535Z",
+ "agent_minutes": 43.1,
+ "tokens": {
+  "n_input_tokens": 9186591,
+  "n_cache_tokens": 8925111,
+  "n_output_tokens": 191229
+ },
+ "exception": null,
+ "reward": 1.0
+}
