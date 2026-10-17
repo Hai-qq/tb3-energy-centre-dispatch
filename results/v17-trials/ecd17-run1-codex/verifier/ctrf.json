@@ -1,0 +1,581 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-10-17T05:55:38.743059+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.1.1"
+        },
+        "summary": {
+            "tests": 55,
+            "passed": 21,
+            "failed": 34,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792216538085,
+            "stop": 1792216538742
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538488,
+                "stop": 1792216538489,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538489,
+                "stop": 1792216538490,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538490,
+                "stop": 1792216538490,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538490,
+                "stop": 1792216538491,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538491,
+                "stop": 1792216538491,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538491,
+                "stop": 1792216538492,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538492,
+                "stop": 1792216538492,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538492,
+                "stop": 1792216538493,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538493,
+                "stop": 1792216538493,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 90,
+                "start": 1792216538493,
+                "stop": 1792216538583,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "failed",
+                "duration": 9,
+                "start": 1792216538583,
+                "stop": 1792216538592,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538592,
+                "stop": 1792216538595,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538595,
+                "stop": 1792216538597,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538597,
+                "stop": 1792216538599,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538599,
+                "stop": 1792216538602,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538602,
+                "stop": 1792216538604,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538604,
+                "stop": 1792216538606,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538606,
+                "stop": 1792216538608,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538608,
+                "stop": 1792216538610,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538610,
+                "stop": 1792216538613,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538613,
+                "stop": 1792216538614,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792216538614,
+                "stop": 1792216538616,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff4bd3fed0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...32., 32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 32.,\n       56., 56., 56., 24., 24., 24., 24., 24., 24.]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff4b8a8090>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff4b8a8090> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:53: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538616,
+                "stop": 1792216538617,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538617,
+                "stop": 1792216538617,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538617,
+                "stop": 1792216538617,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538617,
+                "stop": 1792216538618,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538618,
+                "stop": 1792216538618,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538618,
+                "stop": 1792216538619,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792216538619,
+                "stop": 1792216538619,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 70,
+                "start": 1792216538619,
+                "stop": 1792216538689,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538689,
+                "stop": 1792216538692,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538692,
+                "stop": 1792216538694,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538694,
+                "stop": 1792216538696,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538696,
+                "stop": 1792216538699,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538699,
+                "stop": 1792216538701,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538701,
+                "stop": 1792216538703,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538703,
+                "stop": 1792216538705,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538705,
+                "stop": 1792216538707,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538707,
+                "stop": 1792216538710,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538710,
+                "stop": 1792216538712,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538712,
+                "stop": 1792216538715,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538715,
+                "stop": 1792216538717,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538717,
+                "stop": 1792216538719,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538719,
+                "stop": 1792216538721,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538721,
+                "stop": 1792216538723,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538723,
+                "stop": 1792216538725,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538725,
+                "stop": 1792216538727,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792216538727,
+                "stop": 1792216538730,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538730,
+                "stop": 1792216538732,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792216538732,
+                "stop": 1792216538734,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538734,
+                "stop": 1792216538735,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792216538735,
+                "stop": 1792216538737,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ],
+                "trace": "name = 'h1'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:123: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h1.error').exists\n\ntest_plans.py:28: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792216538737,
+                "stop": 1792216538738,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792216538738,
+                "stop": 1792216538740,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ],
+                "trace": "name = 'h3'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:123: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792216538740,
+                "stop": 1792216538742,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ],
+                "trace": "name = 'h4'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:123: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h4.error').exists\n\ntest_plans.py:28: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

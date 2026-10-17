@@ -150,7 +150,7 @@ each trial's deliverable and verifier output (`results/v13-trials/` to `v16-tria
 | v15 | v14 with outages of parts on the hidden days (EC1's condenser, GE1's exhaust heat exchanger, AC1's absorber and condenser, GE2's jacket water heat exchanger) | 0 of 3 (one rejected the unknown names and wrote no hidden-day plan, one kept the header lock-out, one missed the parts) | 1 of 2 passed (17 min, header and every part right) |
 | v16 | the files the agent sees byte for byte v8.1's; the hidden days add outages of parts that v8.1's `plant.json` names (EC1's condenser, GE1's intercooler twice, AC1's absorber and condenser) | 1 of 2 passed: run 1 handled the radiators by a generic rule (some part downstream of each engine circuit) and missed the intercooler and the chillers' parts; run 2 failed only on a verifier ambiguity and passes under v16.1 | not run |
 | v16.1 | v16 with the least-cost bar counting the absorption chiller's auxiliary power in the towers' load, so either reading of what its cooling water takes away is accepted | (run 2 above passes) | |
-| v17 | v16.1, either reading of a partial PV outage accepted (none, or the minutes in service), and hidden-day checks: negative net reactive power at the connection (h2 00:00), four outages of GE2, outages of 10 and 15 minutes (B1, EC1) | 0 of 3: run 1's tool rejected the parts' names as unknown plant and wrote no hidden-day plan (133 min, a review subagent, header right); run 2 applied outages to units only and ran units through their parts' outages (28 min, header right); run 3 kept the header lock-out and also ignored the parts (28 min) | in progress |
+| v17 | v16.1, either reading of a partial PV outage accepted (none, or the minutes in service), and hidden-day checks: negative net reactive power at the connection (h2 00:00), four outages of GE2, outages of 10 and 15 minutes (B1, EC1) | 0 of 3: run 1's tool rejected the parts' names as unknown plant and wrote no hidden-day plan (133 min, a review subagent, header right); run 2 applied outages to units only and ran units through their parts' outages (28 min, header right); run 3 kept the header lock-out and also ignored the parts (28 min) | 0 of 3: runs 1 and 3 kept the header lock-out and missed GE1's intercooler (9 and 10 min); run 2 adopted the header and ran units through all the parts' outages (11 min) |
 
 What this round shows:
 
@@ -162,6 +162,8 @@ What this round shows:
   Opus's runs since v15).
 - The strongest deliverable so far, `results/v16-trials/ecd16-run2-claude/app`, passes every test
   of v17: v17's new checks catch only weaker implementations.
+- v17 is the first version every trial failed: Opus 0 of 3 and GPT 0 of 3, all six on the parts' outages and three of them
+  on the header as well. Whether CI's trajectory review counts the parts' outages as specified has not been checked yet.
 - Two verifier ambiguities came to light and are fixed in v16.1 and v17 (the absorption chiller's
   auxiliary power in the towers' load; a PV outage over part of a half-hour). Both are in the
   delivered v8.1 too.

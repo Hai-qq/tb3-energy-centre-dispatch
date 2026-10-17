@@ -1,0 +1,551 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-10-17T06:08:36.723055+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.1.1"
+        },
+        "summary": {
+            "tests": 55,
+            "passed": 51,
+            "failed": 4,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792217315775,
+            "stop": 1792217316722
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 2,
+                "start": 1792217316162,
+                "stop": 1792217316164,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316164,
+                "stop": 1792217316165,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316165,
+                "stop": 1792217316165,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316165,
+                "stop": 1792217316166,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316166,
+                "stop": 1792217316167,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316167,
+                "stop": 1792217316167,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316167,
+                "stop": 1792217316168,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316168,
+                "stop": 1792217316169,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316169,
+                "stop": 1792217316169,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 119,
+                "start": 1792217316169,
+                "stop": 1792217316288,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316289,
+                "stop": 1792217316290,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 9,
+                "start": 1792217316290,
+                "stop": 1792217316299,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff54a9f9d0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'... 45.458192  , 45.817452  , 46.015826  , 46.303234  , 46.678114  ,\n       47.007696  , 45.9458    , 43.9372    ]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff5453b450>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff5453b450> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True, False,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:53: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316299,
+                "stop": 1792217316299,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316299,
+                "stop": 1792217316299,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316300,
+                "stop": 1792217316300,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316300,
+                "stop": 1792217316300,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316300,
+                "stop": 1792217316301,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316301,
+                "stop": 1792217316301,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316301,
+                "stop": 1792217316301,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 101,
+                "start": 1792217316301,
+                "stop": 1792217316402,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316402,
+                "stop": 1792217316403,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 3,
+                "start": 1792217316403,
+                "stop": 1792217316406,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff54a9fd90>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...32., 32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 32.,\n       56., 56., 56., 24., 24., 24., 24., 24., 24.]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff545a3e70>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff545a3e70> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:53: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316406,
+                "stop": 1792217316406,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316406,
+                "stop": 1792217316406,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316406,
+                "stop": 1792217316407,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316407,
+                "stop": 1792217316407,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316407,
+                "stop": 1792217316408,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316408,
+                "stop": 1792217316408,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316408,
+                "stop": 1792217316408,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 69,
+                "start": 1792217316408,
+                "stop": 1792217316477,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316477,
+                "stop": 1792217316478,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792217316478,
+                "stop": 1792217316480,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff54a9fc50>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'... 66.78934346, 67.20408193, 66.0056    , 35.317688  , 35.331746  ,\n       35.714436  , 36.567288  , 36.42046   ]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff54610f90>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff54610f90> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True, False,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:53: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316481,
+                "stop": 1792217316481,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316481,
+                "stop": 1792217316481,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316481,
+                "stop": 1792217316482,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316482,
+                "stop": 1792217316482,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316482,
+                "stop": 1792217316482,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316482,
+                "stop": 1792217316483,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316483,
+                "stop": 1792217316483,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 159,
+                "start": 1792217316483,
+                "stop": 1792217316642,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316642,
+                "stop": 1792217316643,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792217316643,
+                "stop": 1792217316645,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff545ece10>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'... 44.920864  , 44.59753   , 44.881814  , 45.4332    , 45.884618  ,\n       46.626568  , 46.90929   , 47.118598  ]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff546126d0>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff546126d0> = array([ True,  True,  True,  True,  True,  True,  True,  True, False,\\n       False, False, False,  True,  True,  True,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:53: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316645,
+                "stop": 1792217316646,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316646,
+                "stop": 1792217316646,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316646,
+                "stop": 1792217316646,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316647,
+                "stop": 1792217316647,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316647,
+                "stop": 1792217316647,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316647,
+                "stop": 1792217316648,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316648,
+                "stop": 1792217316648,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 71,
+                "start": 1792217316648,
+                "stop": 1792217316719,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316719,
+                "stop": 1792217316720,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316720,
+                "stop": 1792217316720,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316720,
+                "stop": 1792217316721,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792217316721,
+                "stop": 1792217316722,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792217316722,
+                "stop": 1792217316722,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            }
+        ]
+    }
+}
