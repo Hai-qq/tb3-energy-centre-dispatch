@@ -150,7 +150,7 @@ each trial's deliverable and verifier output (`results/v13-trials/` to `v16-tria
 | v15 | v14 with outages of parts on the hidden days (EC1's condenser, GE1's exhaust heat exchanger, AC1's absorber and condenser, GE2's jacket water heat exchanger) | 0 of 3 (one rejected the unknown names and wrote no hidden-day plan, one kept the header lock-out, one missed the parts) | 1 of 2 passed (17 min, header and every part right) |
 | v16 | the files the agent sees byte for byte v8.1's; the hidden days add outages of parts that v8.1's `plant.json` names (EC1's condenser, GE1's intercooler twice, AC1's absorber and condenser) | 1 of 2 passed: run 1 handled the radiators by a generic rule (some part downstream of each engine circuit) and missed the intercooler and the chillers' parts; run 2 failed only on a verifier ambiguity and passes under v16.1 | not run |
 | v16.1 | v16 with the least-cost bar counting the absorption chiller's auxiliary power in the towers' load, so either reading of what its cooling water takes away is accepted | (run 2 above passes) | |
-| v17 | v16.1, either reading of a partial PV outage accepted (none, or the minutes in service), and hidden-day checks: negative net reactive power at the connection (h2 00:00), four outages of GE2, outages of 10 and 15 minutes (B1, EC1) | run 1 in progress | |
+| v17 | v16.1, either reading of a partial PV outage accepted (none, or the minutes in service), and hidden-day checks: negative net reactive power at the connection (h2 00:00), four outages of GE2, outages of 10 and 15 minutes (B1, EC1) | run 1 failed: its tool rejected the parts' names as unknown plant and wrote no hidden-day plan (133 min, a review subagent, header right); run 2 in progress | |
 
 What this round shows:
 
@@ -179,6 +179,6 @@ What this round shows:
    setpoint rules (v11) and the silent header (v12) cost per day.
 5. `archive/energy-centre-dispatch-v9/` to `-v17/`: every version's task files and build script;
    `archive/energy-centre-dispatch-v11-tools/` has the tower model behind v11's tables.
-6. `results/v9-trials/` to `v16-trials/` and `v8-rerun-trials/`: the deliverables and verifier
+6. `results/v9-trials/` to `v17-trials/` and `v8-rerun-trials/`: the deliverables and verifier
    output; `results/checks-v13/README.md`: the conventions' sources and what each wrong reading costs.
 7. `prototypes/`: the three falsification tests, each with its README.
