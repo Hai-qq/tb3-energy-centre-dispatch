@@ -40,6 +40,10 @@ must not be treated as meeting the stable six-failure target.
 - Independent fairness regressions passed. Continuous-header and strict MILP
   costs agree on all five scored days. Conditional radiator failures were
   rejected because the fixed specification does not uniquely imply that rule.
+- One additional row-order probe reverses all demand/weather records without
+  changing their timestamped values: all three strong apps still pass. An
+  isolated start-count example exposes the reference's demand-order assumption;
+  it is not used as an opponent failure or added to the 480-draw corpus.
 
 No fresh subscription-model trials, Harbor/Docker execution or TB3 CI review
 were run here. The first fresh attempt exposed two stale input-directory
@@ -47,3 +51,8 @@ mismatches; raw failures, diagnosis, unique-draw-path repair and full successful
 reruns are retained, with the underlying filesystem cause explicitly unresolved.
 
 See results/checks-v18/README.md, ANALYSIS.md, LOG.md and RELEASE_STATUS.json.
+
+Publication recovery preserved the exact tested Git tree. The final additional
+row-order outputs were rerun after cleanup and are explicitly identified as new
+executions. The follow-up evidence commit changes no task behavior. See
+PUBLISHING.md and publication-verification.json for integrity checks.

@@ -94,7 +94,7 @@ by a new hidden date when the plant itself is immutable.
 | Requirement / information | Visible source and consequence | Verifier / audit result |
 |---|---|---|
 | CLI accepts `--data` and `--output`; writes the existing JSON shape | Instruction gives exact command; shipped `dispatch.py` defines date, periods, unit maps, grid, gas, cost and summary | `test_plan_covers_the_day`, reporting tests; inspected. No extra output field may be required. |
-| Date and 48 ordered local half-hours | `status.date`, `demand.period_start`, instruction says each half-hour and no clock change | `test_plan_covers_the_day`; reference checks 48 source rows and date. Do not add DST dates. |
+| Date and 48 timestamped local half-hours | `status.date`, `demand.period_start`, instruction says each half-hour and no clock change | `test_plan_covers_the_day`; reference checks 48 source rows and date. The supplied rows are ordered; an external CSV sorting guarantee is not explicitly stated. See the later `../order-probe/FAIRNESS.md` audit before using permutations as difficulty. Do not add DST dates. |
 | Weather is keyed by the same instant, UTC rather than local date | Instruction says weather averages by UTC start; demand includes local start/offset | Reference `astimezone(UTC)` join; inspected. Four seasons are valid probes; a changed schema or conflicting duplicate timestamp is not. |
 | Import tariff weekday/weekend uses local plan date | `time_basis: local time`, weekday/weekend bands | Reference `date.weekday`; inspected. BST Monday/Saturday probes are fair. |
 | Tariff band endpoints | Explicit `from`/`to`, e.g. 16:00–19:00; per-half-hour start | Reference uses half-open bands; inspected. No unstated holiday calendar or Capacity Market charge exists. |

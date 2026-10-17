@@ -1,0 +1,133 @@
+{
+  "kind": "single_equivalent_day_csv_order_probe",
+  "source": "tasks/energy-centre-dispatch/environment/data",
+  "reference": "archived v17, applied to time-normalized input",
+  "semantics_changed": false,
+  "csv_integrity": {
+    "demand.csv": {
+      "data_rows": 48,
+      "header_unchanged": true,
+      "row_bytes_multiset_unchanged": true,
+      "timestamps_and_values_unchanged": true,
+      "reversal_changes_file": true,
+      "normalized_matches_original_bytes": true
+    },
+    "weather.csv": {
+      "data_rows": 96,
+      "header_unchanged": true,
+      "row_bytes_multiset_unchanged": true,
+      "timestamps_and_values_unchanged": true,
+      "reversal_changes_file": true,
+      "normalized_matches_original_bytes": true
+    }
+  },
+  "json_inputs_byte_identical": true,
+  "source_sha256": {
+    "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407"
+  },
+  "apps": {
+    "v16_claude": {
+      "loader_fields_identical": {
+        "elec": true,
+        "kvar": true,
+        "heat": true,
+        "cool": true,
+        "dry_bulb": true,
+        "wet_bulb": true,
+        "pv": true,
+        "starts": true,
+        "first_start": true,
+        "date": true,
+        "status": true
+      },
+      "command": [
+        "/workspace/scratch/3a594630faca/ecd-venv/bin/python",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/reversed",
+        "--output",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/v16_claude.plan.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.562836474000505,
+      "stdout": "",
+      "stderr": "",
+      "failures": [],
+      "physical_report_checks_passed": 9,
+      "recomputed_cost_gbp": 6303.5604091900495,
+      "regret_gbp": 8.976349636213854e-05,
+      "cost_passes": true
+    },
+    "v17_codex_parts": {
+      "loader_fields_identical": {
+        "elec": true,
+        "kvar": true,
+        "heat": true,
+        "cool": true,
+        "dry_bulb": true,
+        "wet_bulb": true,
+        "pv": true,
+        "starts": true,
+        "first_start": true,
+        "date": true,
+        "status": true
+      },
+      "command": [
+        "/workspace/scratch/3a594630faca/ecd-venv/bin/python",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/opponents/ecd17-run2-codex-parts/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/reversed",
+        "--output",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/v17_codex_parts.plan.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.358665305000613,
+      "stdout": "",
+      "stderr": "",
+      "failures": [],
+      "physical_report_checks_passed": 9,
+      "recomputed_cost_gbp": 6303.5603194264295,
+      "regret_gbp": -1.2369127944111824e-10,
+      "cost_passes": true
+    },
+    "v17_claude_parts": {
+      "loader_fields_identical": {
+        "elec": true,
+        "kvar": true,
+        "heat": true,
+        "cool": true,
+        "dry_bulb": true,
+        "wet_bulb": true,
+        "pv": true,
+        "starts": true,
+        "first_start": true,
+        "date": true,
+        "status": true
+      },
+      "command": [
+        "/workspace/scratch/3a594630faca/ecd-venv/bin/python",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/opponents/ecd17-run2-claude-parts/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/reversed",
+        "--output",
+        "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/v17_claude_parts.plan.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.82604804100265,
+      "stdout": "",
+      "stderr": "",
+      "failures": [],
+      "physical_report_checks_passed": 9,
+      "recomputed_cost_gbp": 6303.5604091900495,
+      "regret_gbp": 8.976349636213854e-05,
+      "cost_passes": true
+    }
+  },
+  "reference_milp_cost_gbp": 6303.560319426553,
+  "all_passed": true,
+  "E_success": false
+}

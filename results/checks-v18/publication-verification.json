@@ -1,0 +1,22 @@
+{
+  "generated_utc": "2026-10-17T11:02:52.466244+00:00",
+  "purpose": "Post-cleanup publication integrity check; not a rerun of B/C/E/F",
+  "base_commit": "12a1116c5e545b4c30ff43cf8ac6503c9fd14473",
+  "pre_cleanup_local_commit": "bd62cb0f1c0b878f64ae097ecf39a1cb4ea7cb99",
+  "published_r1_commit": "682f76acceef1658e23cd6d234134cf4335eabaa",
+  "exact_tested_tree": "b3d57f4c3d5bc1338a2dae90aa9270abba83ccb3",
+  "published_r1_tree_matches_pre_cleanup_tree": true,
+  "runtime": {
+    "python": "3.13.16",
+    "numpy": "2.3.4",
+    "scipy": "1.17.0",
+    "pytest": "9.1.1"
+  },
+  "visible_files_byte_identical_to_v8_1": 13,
+  "fixed_plant_supply_files_unchanged": 10,
+  "task_code_oracle_and_five_day_input_hashes_match_test_evidence": true,
+  "fresh_persisted_input_hashes_verified": 48,
+  "blind_runtime_sha256": "89b4cbfad49a251e6a1d321cdae598264f6c6ff58beaf520015d0162a3e7d917",
+  "changed_paths_within_user_scope": true,
+  "new_functional_task_revisions_since_full_gate_run": 0
+}

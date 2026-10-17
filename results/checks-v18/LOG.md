@@ -278,3 +278,17 @@ PR 以未达 E 的草稿状态提出，不合并到 main。
 `plant.py` 的一个原有空白行。保持这些证据及冻结代码字节不变。限定 task、
 tools、编写的文档及其余 Python 源码的检查退出 0；具体路径和分类保存在
 `staged-whitespace-check.json`。这不是未执行的“全部空白检查通过”声明。
+
+## 发布恢复与附加证据
+
+继续执行时发现本地工作副本和 Python 安装受到环境清理影响。根据先前
+保存的原字节上传清单恢复 5,553 个文件变更，重建 tree 与原实测提交严格
+相等；远端发布 tree 经重新 fetch 后也相同。实际 r1 commit 为
+`682f76acceef1658e23cd6d234134cf4335eabaa`，没有强推。
+
+原始 B/C/E/F 日志与源码证据完整恢复；没有把恢复过程冒称整套重测。
+`publication_verify.py` 另行执行输入、源码、固定文件及盲替身哈希复核。
+未入主提交的 CSV 行序附加实验没有可恢复的旧输出，恢复脚本后重新运行，
+用实际的新时间与输出记录。详见 `PUBLISHING.md`、`order-probe/README.md`
+和 `fairness/order_contract.json`。这些附加文件没有改动任务或原 480 次
+fuzz 的计数，E1/E2 未达标的结论保持不变。
