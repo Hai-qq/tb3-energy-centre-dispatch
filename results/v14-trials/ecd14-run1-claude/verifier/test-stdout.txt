@@ -1,0 +1,122 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 0 
+h1.rerun: tool exited 0 
+h2: tool exited 0 warning: outage of unknown unit 'GE1 LT radiator' ignored
+
+h2.rerun: tool exited 0 warning: outage of unknown unit 'GE1 LT radiator' ignored
+
+h3: tool exited 0 warning: outage of unknown unit 'GE2 LT radiator' ignored
+
+h3.rerun: tool exited 0 warning: outage of unknown unit 'GE2 LT radiator' ignored
+
+h4: tool exited 0 warning: outage of unknown unit 'GE1 LT radiator' ignored
+
+h4.rerun: tool exited 0 warning: outage of unknown unit 'GE1 LT radiator' ignored
+
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 55 items
+
+test_plans.py .....................F.........F.........F.............    [100%]
+
+=================================== FAILURES ===================================
+________________ test_units_within_ratings_and_availability[h2] ________________
+
+case = (<reference.Day object at 0xffff307df9d0>, {'date': '2026-12-09', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...88017, 578.35452358, 553.24765952, 539.77456936,
+       515.3254022 , 498.95331824, 493.02615777, 493.02615777]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff30276b50>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff30276b50> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True, False, False, False,\n       False, False, False]).all
+
+test_plans.py:53: AssertionError
+________________ test_units_within_ratings_and_availability[h3] ________________
+
+case = (<reference.Day object at 0xffff307df890>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...06442, 506.16859171, 490.03710452, 473.31858751,
+       459.63185268, 445.60460113, 394.42092621, 394.42092621]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff302dcb10>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff302dcb10> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:53: AssertionError
+________________ test_units_within_ratings_and_availability[h4] ________________
+
+case = (<reference.Day object at 0xffff302ec690>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...10279, 567.41230103, 554.44965729, 529.46835056,
+       512.27225555, 497.57974736, 478.96866727, 457.41947997]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff30320cf0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff30320cf0> = array([False, False, False, False, False, False, False, False,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:53: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_units_within_ratings_and_availability[visible]
+PASSED test_plans.py::test_electricity_balance[visible]
+PASSED test_plans.py::test_heat_balance[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_gas_and_cost[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h1]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h1]
+PASSED test_plans.py::test_electricity_balance[h1]
+PASSED test_plans.py::test_heat_balance[h1]
+PASSED test_plans.py::test_cooling_balance[h1]
+PASSED test_plans.py::test_cooling_towers[h1]
+PASSED test_plans.py::test_connection_limits[h1]
+PASSED test_plans.py::test_reported_gas_and_cost[h1]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h1]
+PASSED test_plans.py::test_least_cost[h1]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_heat_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_connection_limits[h2]
+PASSED test_plans.py::test_reported_gas_and_cost[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_least_cost[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h3]
+PASSED test_plans.py::test_electricity_balance[h3]
+PASSED test_plans.py::test_heat_balance[h3]
+PASSED test_plans.py::test_cooling_balance[h3]
+PASSED test_plans.py::test_cooling_towers[h3]
+PASSED test_plans.py::test_connection_limits[h3]
+PASSED test_plans.py::test_reported_gas_and_cost[h3]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h3]
+PASSED test_plans.py::test_least_cost[h3]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_electricity_balance[h4]
+PASSED test_plans.py::test_heat_balance[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_connection_limits[h4]
+PASSED test_plans.py::test_reported_gas_and_cost[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_least_cost[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h1]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h3]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+FAILED test_plans.py::test_units_within_ratings_and_availability[h2] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h3] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h4] - assert...
+========================= 3 failed, 52 passed in 1.19s =========================

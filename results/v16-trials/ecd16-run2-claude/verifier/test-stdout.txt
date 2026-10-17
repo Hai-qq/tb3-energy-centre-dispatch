@@ -1,0 +1,107 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 0 
+h1.rerun: tool exited 0 
+h2: tool exited 0 
+h2.rerun: tool exited 0 
+h3: tool exited 0 
+h3.rerun: tool exited 0 
+h4: tool exited 0 
+h4.rerun: tool exited 0 
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 55 items
+
+test_plans.py ...................F.............................F.....    [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_least_cost[h1] ______________________________
+
+case = (<reference.Day object at 0xffff2153f9d0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...568 , 45.49568 , 45.458192, 45.817452,
+       46.015826, 46.303234, 46.678114, 47.007696, 45.9458  , 43.9372  ]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(6426.6573082883915) <= (6420.835003426709 + 1.2841670006853418)
+E        +  where np.float64(6426.6573082883915) = <built-in method sum of numpy.ndarray object at 0xffff20fdb450>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff20fdb450> = array([ 88.03019429,  87.12246201,  88.48614978,  87.33857963,\n        86.98321167,  87.1099313 ,  86.42945282,  88.97...127.904477  , 122.194813  , 113.303069  , 106.971679  ,\n       102.528067  ,  94.655696  ,  97.63117124, 107.72084597]).sum
+E        +  and   1.2841670006853418 = max(0.5, (0.0002 * 6420.835003426709))
+
+test_plans.py:130: AssertionError
+_____________________________ test_least_cost[h4] ______________________________
+
+case = (<reference.Day object at 0xffff2153fc50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...6742, 45.048948, 44.920864, 44.59753 ,
+       44.881814, 45.4332  , 45.884618, 46.626568, 46.90929 , 47.118598]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(7308.213193960899) <= (7293.3229639646315 + 1.4586645927929265)
+E        +  where np.float64(7308.213193960899) = <built-in method sum of numpy.ndarray object at 0xffff21042bb0>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff21042bb0> = array([120.93473   ,  93.773063  ,  92.959829  ,  92.22629   ,\n        92.624075  ,  92.25113   ,  90.728921  ,  90.95...143.578255  , 136.06997   , 131.384312  , 122.360471  ,\n       116.095186  , 110.531292  , 103.941358  ,  95.625349  ]).sum
+E        +  and   1.4586645927929265 = max(0.5, (0.0002 * 7293.3229639646315))
+
+test_plans.py:130: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_units_within_ratings_and_availability[visible]
+PASSED test_plans.py::test_electricity_balance[visible]
+PASSED test_plans.py::test_heat_balance[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_gas_and_cost[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h1]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h1]
+PASSED test_plans.py::test_electricity_balance[h1]
+PASSED test_plans.py::test_heat_balance[h1]
+PASSED test_plans.py::test_cooling_balance[h1]
+PASSED test_plans.py::test_cooling_towers[h1]
+PASSED test_plans.py::test_connection_limits[h1]
+PASSED test_plans.py::test_reported_gas_and_cost[h1]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h1]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_heat_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_connection_limits[h2]
+PASSED test_plans.py::test_reported_gas_and_cost[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_least_cost[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h3]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h3]
+PASSED test_plans.py::test_electricity_balance[h3]
+PASSED test_plans.py::test_heat_balance[h3]
+PASSED test_plans.py::test_cooling_balance[h3]
+PASSED test_plans.py::test_cooling_towers[h3]
+PASSED test_plans.py::test_connection_limits[h3]
+PASSED test_plans.py::test_reported_gas_and_cost[h3]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h3]
+PASSED test_plans.py::test_least_cost[h3]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h4]
+PASSED test_plans.py::test_electricity_balance[h4]
+PASSED test_plans.py::test_heat_balance[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_connection_limits[h4]
+PASSED test_plans.py::test_reported_gas_and_cost[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h1]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h3]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+FAILED test_plans.py::test_least_cost[h1] - assert np.float64(6426.6573082883...
+FAILED test_plans.py::test_least_cost[h4] - assert np.float64(7308.2131939608...
+========================= 2 failed, 53 passed in 0.89s =========================

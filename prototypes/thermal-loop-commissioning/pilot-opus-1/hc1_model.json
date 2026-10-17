@@ -1,0 +1,29 @@
+{
+  "_about": "HC1 as measured on the commissioning rig (identification of 10 days, fit residual 0.042 K rms, white). Units: s, K, valve 0..1.",
+  "plant": {
+    "rate": 0.011111111111111112,
+    "_rate": "actuator speed, 1/90 per s (90 s full stroke)",
+    "w": 0.0399,
+    "_w": "play in the V1 linkage, share of stroke; actuator self-adaptation spreads it over the stroke: valve within [a(1+w)-w, a(1+w)], centred at the start of a day",
+    "n": 0.85,
+    "_n": "installed characteristic: share of flow from TK1 (port A) = valve_position ** n",
+    "dead": 20.0,
+    "_dead": "transport time V1 -> building inlet (10.5 m DN50 at 1.2 kg/s)",
+    "tau_s": 74.52,
+    "_tau_s": "TT-S first-order lag",
+    "bias_s": 1.5498,
+    "_bias_s": "TT-S reads high: two-wire Pt1000, 2 x 85 m of 0.5 mm2 Cu (~5.9 ohm) with 0 ohm line compensation",
+    "tau_t": 28.07,
+    "tau_r": 18.10,
+    "sig_meas": 0.045
+  },
+  "tuning": {
+    "q_rate_t": 2e-7,
+    "q_rate_r": 2e-7,
+    "q_delta": 2e-7,
+    "delta_max": 1.5,
+    "epsT_rev": 0.18,
+    "min_move": 0.0005,
+    "lead": 2.5
+  }
+}

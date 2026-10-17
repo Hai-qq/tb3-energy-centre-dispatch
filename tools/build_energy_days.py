@@ -41,7 +41,7 @@ PLANT = {
     "electric_chillers": [
         {"id": "EC1", "max_kw": 1400,
          "cop_by_condenser_entering_c": [[18, 7.4], [22, 6.5], [26, 5.6], [30, 4.7], [34, 3.9]]},
-        {"id": "EC2", "max_kw": 1400,
+        {"id": "EC2", "max_kw": 1000,
          "cop_by_condenser_entering_c": [[18, 5.8], [22, 5.2], [26, 4.6], [30, 4.0], [34, 3.4]]},
     ],
     "absorption_chillers": [
@@ -67,7 +67,7 @@ PLANT = {
 
 SUPPLY = {
     "electricity": {
-        "import_capacity_kva": 2600,
+        "import_capacity_kva": 1220,
         "export_limit_kw": 250,
         "import_rates_p_per_kwh": {
             "time_basis": "local time",
@@ -120,6 +120,7 @@ DAYS = {
         wet=[(0, 14.6), (5, 13.8), (7.5, 17.6), (8.5, 18.6), (13, 19.8), (16, 20.8), (19, 19.8), (23, 15.8)],
         sun=(5.5, 20.5), pv_peak=262, cloud=0.08,
         status={"running_at_midnight": ["GE1", "GE2"], "outages": [{"unit": "CT2", "from": "06:40", "to": "09:50"},
+                                                                 {"unit": "EC1 condenser", "from": "07:10", "to": "09:20"},
                                                                  {"unit": "GE1", "from": "11:20", "to": "17:00"}]},
     ),
     "h2": dict(
@@ -130,8 +131,14 @@ DAYS = {
         dry=[(0, 2.5), (6, 1.4), (10, 4.0), (14, 6.2), (18, 4.6), (23, 3.0)],
         wet=[(0, 1.6), (6, 0.8), (10, 2.7), (14, 4.1), (18, 3.3), (23, 2.1)],
         sun=(8.2, 16.2), pv_peak=120, cloud=0.25,
-        status={"running_at_midnight": ["GE1", "GE2"], "outages": [{"unit": "GE2", "from": "12:45", "to": "17:00"},
-                                                                 {"unit": "B1", "from": "06:10", "to": "08:40"},
+        overrides={0: (2350.0, 50.0, 1800.0, 0.0)},
+        status={"running_at_midnight": ["GE1"], "outages": [{"unit": "GE2", "from": "00:30", "to": "03:00"},
+                                                          {"unit": "GE2", "from": "12:45", "to": "17:00"},
+                                                          {"unit": "GE2", "from": "16:40", "to": "17:30"},
+                                                          {"unit": "GE2", "from": "19:10", "to": "19:20"},
+                                                          {"unit": "B1", "from": "06:10", "to": "08:40"},
+                                                          {"unit": "B1", "from": "14:10", "to": "14:25"},
+                                                          {"unit": "GE1 intercooler", "from": "09:20", "to": "11:50"},
                                                                  {"unit": "GE1 LT radiator", "from": "21:10", "to": "23:50"}]},
     ),
     "h3": dict(
@@ -142,7 +149,9 @@ DAYS = {
         dry=[(0, 8.5), (5, 7.0), (9, 11.5), (13, 16.0), (16, 17.2), (19, 14.0), (23, 10.0)],
         wet=[(0, 7.0), (5, 6.0), (9, 9.0), (13, 11.6), (16, 12.2), (19, 10.8), (23, 8.0)],
         sun=(6.0, 20.0), pv_peak=245, cloud=0.2,
-        status={"running_at_midnight": [], "outages": [{"unit": "GE2 LT radiator", "from": "10:40", "to": "14:20"},
+        status={"running_at_midnight": [], "outages": [{"unit": "AC1 absorber and condenser", "from": "07:10",
+                                                      "to": "10:20"},
+                                                     {"unit": "GE2 LT radiator", "from": "10:40", "to": "14:20"},
                                                      {"unit": "EC1", "from": "13:40", "to": "16:20"}]},
     ),
     "h4": dict(
@@ -156,7 +165,9 @@ DAYS = {
         status={"running_at_midnight": ["GE1"], "outages": [{"unit": "GE1 LT radiator", "from": "00:00", "to": "03:40"},
                                                           {"unit": "PHE1", "from": "06:20", "to": "09:40"},
                                                           {"unit": "EC2", "from": "10:10", "to": "11:50"},
-                                                          {"unit": "PV1", "from": "16:20", "to": "18:40"}]},
+                                                          {"unit": "PV1", "from": "16:20", "to": "18:40"},
+                                                          {"unit": "GE1 intercooler", "from": "03:50", "to": "05:50"},
+                                                          {"unit": "EC1", "from": "21:10", "to": "21:20"}]},
     ),
 }
 
@@ -178,6 +189,8 @@ def write_day(folder: Path, spec: dict) -> None:
         q = interp_hourly(spec["heat"], h) * (1 + rng.uniform(-0.03, 0.03))
         c = interp_hourly(spec["cool"], h) * (1 + rng.uniform(-0.03, 0.03))
         r = e * spec.get("kvar_per_kw", 0.17) * (1 + rng.uniform(-0.04, 0.04))
+        if t in spec.get("overrides", {}):
+            e, r, q, c = spec["overrides"][t]
         lines.append(f"{start.isoformat(timespec='minutes')},{e:.1f},{r:.1f},{q:.1f},{c:.1f}")
     (folder / "demand.csv").write_text("\n".join(lines) + "\n")
 

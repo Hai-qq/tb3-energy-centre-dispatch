@@ -33,7 +33,8 @@ import eval_energy as E  # noqa: E402
 from reference import Day  # noqa: E402
 
 UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "GE1 LT radiator", "GE2 LT radiator",
-         "CT1", "CT2", "PV1"]
+         "CT1", "CT2", "PV1", "GE1 intercooler", "GE2 intercooler", "EC1 condenser", "EC2 condenser",
+         "AC1 generator", "AC1 absorber and condenser"]
 
 
 def last_sunday(year: int, month: int) -> date:

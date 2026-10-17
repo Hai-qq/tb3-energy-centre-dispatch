@@ -56,7 +56,7 @@ def test_units_within_ratings_and_availability(case):
 def test_electricity_balance(case):
     day, plan, flows = case
     pv = series(plan, "pv_kw")
-    assert (pv >= -0.5).all() and (pv <= day.pv + 0.5).all()
+    assert (pv >= -0.5).all() and (pv <= day.pv_max + 0.5).all()
     supply = sum(series(plan, "engines_kwe", e["id"]) for e in day.engines) + pv
     supply += series(plan, "import_kw") - series(plan, "export_kw")
     use = day.elec + flows["aux"] + flows["ec_elec"]

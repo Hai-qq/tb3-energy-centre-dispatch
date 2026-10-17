@@ -3,7 +3,10 @@
 For every trial directory under the given jobs, prints the reward, exception, agent time and
 failing tests, then reruns the agent's tool (artifacts/app) on every verifier day and reports,
 per day: the largest HT/LTHW heat imbalance, the largest cooling-tower and connection excess,
-and the gap between the plan's true cost and the least cost.
+and the gap between the plan's true cost and the least cost. From v13, where the exhaust heat may
+go up the stack, the radiators limit the engines in hot weather and the bill has levies, it
+reports instead the jacket water heat lost and the exhaust heat sent up the stack, the most an
+engine runs over its radiator's limit, and the error in the plan's reported cost.
 
 Usage: python tools/analyze_ecd_trials.py <job-name> [<job-name> ...]
 """
@@ -54,7 +57,18 @@ def measure(app: Path) -> list[str]:
             f = day.true_flows(plan)
             boilers = sum(np.array([p["boilers_kw"][b["id"]] for p in plan["periods"]], dtype=float)
                           for b in day.plant["boilers"])
-            heat_gap = f["engine_heat"] - f["ac_heat"] + boilers - day.heat - day.lthw_loss
+            if "engine_heat" in f:  # up to v12
+                heat_gap = f["engine_heat"] - f["ac_heat"] + boilers - day.heat - day.lthw_loss
+                heat = f"heat surplus max {heat_gap.max():7.1f} kW in {int((np.abs(heat_gap) > 1).sum()):2d} periods"
+            else:
+                recovered = day.heat + day.lthw_loss - boilers + f["ac_heat"]
+                lost = f["jacket"] - recovered  # jacket water heat with nowhere to go
+                stack = f["jacket"] + f["exhaust"] - recovered
+                limits = getattr(day, "max_kwe", {})  # v13 only: the radiators' hot-weather limits
+                over = max([float(p["engines_kwe"][e]) - limits[e][t] for t, p in enumerate(plan["periods"])
+                            for e in limits if float(p["engines_kwe"][e]) > 0.5] or [0.0])
+                heat = (f"jacket heat lost {max(lost.max(), 0):6.1f} kW | exhaust up the stack {0.5 * np.clip(stack, 0, None).sum():7.0f} kWh"
+                        f" | over radiator limit {max(over, 0):5.1f} kWe | reported cost {plan['summary']['cost_gbp'] - f['cost'].sum():+8.2f}")
             # v11's reference gives the towers' limit at each half-hour's setpoint in the flows
             tower = f["rejected"] - (f["tower_max"] if "tower_max" in f else day.tower_max)
             imp = np.array([p["import_kw"] for p in plan["periods"]], dtype=float)
@@ -62,7 +76,7 @@ def measure(app: Path) -> list[str]:
             if name not in _best:
                 _best[name] = day.least_cost()["cost"]
             best = _best[name]
-            lines.append(f"    {name}: heat surplus max {heat_gap.max():7.1f} kW in {int((np.abs(heat_gap) > 1).sum()):2d} periods"
+            lines.append(f"    {name}: {heat}"
                          f" | tower excess {max(tower.max(), 0):6.1f} | kVA excess {max(kva.max(), 0):6.1f}"
                          f" | cost {f['cost'].sum():8.2f} vs least {best:8.2f} ({f['cost'].sum() - best:+.2f})")
     return lines

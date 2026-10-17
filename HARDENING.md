@@ -1,7 +1,7 @@
 # Hardening `energy-centre-dispatch` after the reviewer's runs (v9 to v12)
 
 Written on 2026-10-15 for an outside review of where the task stands and what to do next.
-This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v12),
+This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v17; see the last rounds below),
 `archive/` keeps every version, `results/` the checks and trials. `main` is unchanged at
 `1f92378`, the delivered v8.1.
 
@@ -133,17 +133,52 @@ straightforward approach already meets the bar.
   engine schedule, already reaches the tolerance in well under two minutes, and a 2 kWh grid comes
   within GBP 0.5 of the optimum. Dropped.
 
+## Rounds v13 to v17: conventions of the trade, then parts of the plant (2026-10-16 and 17)
+
+A further dispatch-task round on top of v8.1 itself: first conventions of the trade found by a
+search of practitioners' forums and the guidance behind them (sources in
+[`results/checks-v13/README.md`](results/checks-v13/README.md)), then outages of parts of the plant.
+The archive holds each version (`archive/energy-centre-dispatch-v13/` to `-v17/`), the results
+each trial's deliverable and verifier output (`results/v13-trials/` to `v16-trials/`,
+`results/v8-rerun-trials/`).
+
+| version | change (from v8.1 unless stated) | Opus 5.5 | GPT-6.1 Sol |
+|---|---|---|---|
+| v13 | four conventions written into the data: an exhaust diverter (the exhaust heat may go up the stack), LT radiator duty points (the engines derate above 32 °C), the Capacity Market charge only on imports 16:00-19:00 on winter working days, no Climate Change Levy on the CHPQA engines' gas | 1 of 1 passed (116 min, a review subagent; every convention, the header and the radiator outages right) | not run |
+| v8 unchanged | a rerun of the version of our six v8 trials | 0 of 1 (kept the header lock-out, missed the LT radiator outages; 37 min) | not run |
+| v14 | v13 without the radiator duty points | 0 of 2 (one missed the radiator outages, one kept the header lock-out) | not run |
+| v15 | v14 with outages of parts on the hidden days (EC1's condenser, GE1's exhaust heat exchanger, AC1's absorber and condenser, GE2's jacket water heat exchanger) | 0 of 3 (one rejected the unknown names and wrote no hidden-day plan, one kept the header lock-out, one missed the parts) | 1 of 2 passed (17 min, header and every part right) |
+| v16 | the files the agent sees byte for byte v8.1's; the hidden days add outages of parts that v8.1's `plant.json` names (EC1's condenser, GE1's intercooler twice, AC1's absorber and condenser) | 1 of 2 passed: run 1 handled the radiators by a generic rule (some part downstream of each engine circuit) and missed the intercooler and the chillers' parts; run 2 failed only on a verifier ambiguity and passes under v16.1 | not run |
+| v16.1 | v16 with the least-cost bar counting the absorption chiller's auxiliary power in the towers' load, so either reading of what its cooling water takes away is accepted | (run 2 above passes) | |
+| v17 | v16.1, either reading of a partial PV outage accepted (none, or the minutes in service), and hidden-day checks: negative net reactive power at the connection (h2 00:00), four outages of GE2, outages of 10 and 15 minutes (B1, EC1) | run 1 in progress | |
+
+What this round shows:
+
+- Conventions written into the data are found every time: each is knowable once stated. They
+  also seem to put the models into a careful mode that finds the old traps as well (v13 passed;
+  GPT kept the header lock-out in every v8 run and adopted the header in both v15 runs).
+- What still stops the models is consequences the data leaves unstated: the header (kept in about
+  half the runs) and outages of parts that only the heat circuits name (missed in about half of
+  Opus's runs since v15).
+- The strongest deliverable so far, `results/v16-trials/ecd16-run2-claude/app`, passes every test
+  of v17: v17's new checks catch only weaker implementations.
+- Two verifier ambiguities came to light and are fixed in v16.1 and v17 (the absorption chiller's
+  auxiliary power in the towers' load; a PV outage over part of a half-hour). Both are in the
+  delivered v8.1 too.
+
 ## Where to look
 
 1. `README.md`: the delivered task, its evidence and the full history ("How the task came
    about"; items 25 and 26 for v9 and v10, 27 and 28 for v11 and v12).
-2. `tasks/energy-centre-dispatch/`: v12 as it stands (instruction, data, shipped tool,
-   solution, tests). `git diff 1f92378 -- tasks/` shows exactly what v12 changes from v8.1.
+2. `tasks/energy-centre-dispatch/`: v17 as it stands (instruction, data, shipped tool,
+   solution, tests); `git diff 1f92378 -- tasks/` shows what it changes from v8.1, all of it in
+   `tests/` and `solution/`.
 3. `results/official-v10.md`, `official-v11.md`, `official-v12.md`: what each trial's tool does
    on each day, and each agent's closing message (the clearest view of how Opus reasons).
 4. `results/checks-v11/README.md` and `results/checks-v12/README.md`: the checks, and what the
    setpoint rules (v11) and the silent header (v12) cost per day.
-5. `archive/energy-centre-dispatch-v9/` to `-v12/`: every version's task files and build script;
+5. `archive/energy-centre-dispatch-v9/` to `-v17/`: every version's task files and build script;
    `archive/energy-centre-dispatch-v11-tools/` has the tower model behind v11's tables.
-6. `results/v9-trials/` to `v12-trials/`: the deliverables and verifier output.
+6. `results/v9-trials/` to `v16-trials/` and `v8-rerun-trials/`: the deliverables and verifier
+   output; `results/checks-v13/README.md`: the conventions' sources and what each wrong reading costs.
 7. `prototypes/`: the three falsification tests, each with its README.

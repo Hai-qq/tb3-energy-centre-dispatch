@@ -1,0 +1,567 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-10-16T07:33:04.207612+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.1.1"
+        },
+        "summary": {
+            "tests": 55,
+            "passed": 39,
+            "failed": 16,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792135983238,
+            "stop": 1792135984207
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983603,
+                "stop": 1792135983604,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983604,
+                "stop": 1792135983605,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983605,
+                "stop": 1792135983605,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983605,
+                "stop": 1792135983606,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983606,
+                "stop": 1792135983606,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983606,
+                "stop": 1792135983606,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983606,
+                "stop": 1792135983607,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983607,
+                "stop": 1792135983607,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983607,
+                "stop": 1792135983608,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "passed",
+                "duration": 135,
+                "start": 1792135983608,
+                "stop": 1792135983743,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983743,
+                "stop": 1792135983744,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983745,
+                "stop": 1792135983745,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983745,
+                "stop": 1792135983745,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983745,
+                "stop": 1792135983746,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983746,
+                "stop": 1792135983746,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983746,
+                "stop": 1792135983747,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 10,
+                "start": 1792135983747,
+                "stop": 1792135983757,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff30b439d0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...02697, 529.88150648, 132.95272054,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.        ]), ...})\n\n    def test_connection_limits(case):\n        day, plan, flows = case\n        imp, exp = series(plan, \"import_kw\"), series(plan, \"export_kw\")\n        assert (imp >= -0.5).all() and (exp >= -0.5).all()\n>       assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\nE       AssertionError: assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff3063d6b0>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff3063d6b0> = array([1341.25788659, 1320.16640698, 1343.30674302, 1318.03883247,\\n       1310.29404167, 1318.97762148, 1303.82525688,...02697,  283.78150648, 1205.36166411, 1543.00868854,\\n       1506.64217977, 1438.43537692, 1387.43112103, 1354.67057156]) <= (1220.0 + 0.5).all\nE        +      where array([1341.25788659, 1320.16640698, 1343.30674302, 1318.03883247,\\n       1310.29404167, 1318.97762148, 1303.82525688,...02697,  283.78150648, 1205.36166411, 1543.00868854,\\n       1506.64217977, 1438.43537692, 1387.43112103, 1354.67057156]) = <ufunc 'hypot'>(array([1325.344, 1302.739, 1325.957, 1300.352, 1293.275, 1303.634,\\n       1288.441, 1317.296, 1284.736, 1299.882, 1308...,    0.   ,    0.   ,    0.   ,    0.   ,    0.   ,\\n       1201.31 , 1524.73 , 1488.626, 1421.419, 1371.66 , 1337.884]), (array([206. , 213.8, 215.2, 215.2, 210.5, 200.6, 199.7, 210.4, 200.3,\\n       214.2, 209.6, 224.5, 224.4, 226.6, 235.8,...315.8, 315.6, 302.3,\\n       303.8, 297.7, 264.4, 263.7, 253.2, 246.1, 231.7, 236.8, 232.3,\\n       220.6, 208.6, 212.6]) - array([  0.        ,   0.        ,   0.        ,   0.        ,\\n         0.        ,   0.        ,   0.        ,   0.  ...545.61002697, 529.88150648, 132.95272054,   0.        ,\\n         0.        ,   0.        ,   0.        ,   0.        ])))\nE        +        where <ufunc 'hypot'> = np.hypot\nE        +        and   array([206. , 213.8, 215.2, 215.2, 210.5, 200.6, 199.7, 210.4, 200.3,\\n       214.2, 209.6, 224.5, 224.4, 226.6, 235.8,...315.8, 315.6, 302.3,\\n       303.8, 297.7, 264.4, 263.7, 253.2, 246.1, 231.7, 236.8, 232.3,\\n       220.6, 208.6, 212.6]) = <reference.Day object at 0xffff30b439d0>.kvar\nE        +      and   1220.0 = <reference.Day object at 0xffff30b439d0>.import_kva\n\ntest_plans.py:95: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983757,
+                "stop": 1792135983757,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983757,
+                "stop": 1792135983758,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 131,
+                "start": 1792135983758,
+                "stop": 1792135983889,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff30b439d0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...02697, 529.88150648, 132.95272054,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.        ]), ...})\n\n    def test_least_cost(case):\n        day, _, flows = case\n        best = day.least_cost()[\"cost\"]\n>       assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\nE       assert np.float64(6949.083552779119) <= (6014.772073695863 + 1.2029544147391726)\nE        +  where np.float64(6949.083552779119) = <built-in method sum of numpy.ndarray object at 0xffff3063d410>()\nE        +    where <built-in method sum of numpy.ndarray object at 0xffff3063d410> = array([105.48498016, 103.69525517, 105.45004824, 103.48968782,\\n       103.08971154, 103.65814382, 102.71688438, 104.80...109.88716496, 107.33677473, 171.73569027, 189.05307398,\\n       184.14571994, 175.68168921, 169.52667222, 165.27305057]).sum\nE        +  and   1.2029544147391726 = max(0.5, (0.0002 * 6014.772073695863))\n\ntest_plans.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983889,
+                "stop": 1792135983890,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983890,
+                "stop": 1792135983891,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983891,
+                "stop": 1792135983891,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983891,
+                "stop": 1792135983891,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983892,
+                "stop": 1792135983892,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983892,
+                "stop": 1792135983892,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135983892,
+                "stop": 1792135983893,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983893,
+                "stop": 1792135983893,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135983893,
+                "stop": 1792135983893,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 83,
+                "start": 1792135983894,
+                "stop": 1792135983977,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff30b43c50>, {'date': '2026-12-09', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...88017, 578.35452358, 261.30386362, 261.30386362,\n       261.30386362, 261.30386362, 261.30386362, 261.30386362]), ...})\n\n    def test_least_cost(case):\n        day, _, flows = case\n        best = day.least_cost()[\"cost\"]\n>       assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\nE       assert np.float64(8179.343656159124) <= (8170.314434030251 + 1.6340628868060503)\nE        +  where np.float64(8179.343656159124) = <built-in method sum of numpy.ndarray object at 0xffff305dbbd0>()\nE        +    where <built-in method sum of numpy.ndarray object at 0xffff305dbbd0> = array([110.92444418, 109.36601535, 109.92338701, 110.91536087,\\n       110.25335894, 113.60017576, 113.99083446, 113.64...139.53583917, 138.36872264, 204.1292016 , 197.77636622,\\n       188.44116918, 181.29255578, 172.69653693, 161.09792662]).sum\nE        +  and   1.6340628868060503 = max(0.5, (0.0002 * 8170.314434030251))\n\ntest_plans.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792135983977,
+                "stop": 1792135983980,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792135983980,
+                "stop": 1792135983983,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792135983983,
+                "stop": 1792135983985,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792135983985,
+                "stop": 1792135983988,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792135983988,
+                "stop": 1792135983990,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792135983990,
+                "stop": 1792135983992,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792135983992,
+                "stop": 1792135983995,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792135983995,
+                "stop": 1792135983997,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "failed",
+                "duration": 3,
+                "start": 1792135983997,
+                "stop": 1792135984000,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "duration": 2,
+                "start": 1792135984000,
+                "stop": 1792135984002,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError"
+            },
+            {
+                "name": "test_plans.py::test_plan_covers_the_day",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135984002,
+                "stop": 1792135984003,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_units_within_ratings_and_availability",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135984003,
+                "stop": 1792135984004,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_electricity_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135984004,
+                "stop": 1792135984004,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_heat_balance",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135984004,
+                "stop": 1792135984004,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_balance",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135984004,
+                "stop": 1792135984005,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_cooling_towers",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135984005,
+                "stop": 1792135984005,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_connection_limits",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 3,
+                "start": 1792135984005,
+                "stop": 1792135984008,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff306a8f50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...10279, 567.41230103, 554.44965729, 529.46835056,\n       512.27225555,   0.        ,   0.        ,   0.        ]), ...})\n\n    def test_connection_limits(case):\n        day, plan, flows = case\n        imp, exp = series(plan, \"import_kw\"), series(plan, \"export_kw\")\n        assert (imp >= -0.5).all() and (exp >= -0.5).all()\n>       assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\nE       AssertionError: assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff3066dfb0>()\nE        +    where <built-in method all of numpy.ndarray object at 0xffff3066dfb0> = array([1438.2860742 , 1437.47465863, 1423.64444375, 1413.70683854,\\n       1418.72911484, 1414.73288471, 1392.72538568,...10279,  291.31230103,  288.44965729,  273.56835056,\\n        272.67225555, 1581.0739177 , 1521.24274281, 1448.25827333]) <= (1220.0 + 0.5).all\nE        +      where array([1438.2860742 , 1437.47465863, 1423.64444375, 1413.70683854,\\n       1418.72911484, 1414.73288471, 1392.72538568,...10279,  291.31230103,  288.44965729,  273.56835056,\\n        272.67225555, 1581.0739177 , 1521.24274281, 1448.25827333]) = <ufunc 'hypot'>(array([1421.715, 1419.486, 1406.668, 1397.139, 1402.159, 1397.491,\\n       1376.077, 1378.445, 1384.846, 1346.84 ,  935...,    0.   ,    0.   ,    0.   ,    0.   ,    0.   ,\\n          0.   ,    0.   ,    0.   , 1562.829, 1503.169, 1430.516]), (array([217.7, 226.7, 219.2, 215.8, 216.2, 220.2, 214.7, 216. , 226.8,\\n       220.5, 222.4, 226. , 240.3, 250.1, 260.1,...342.7, 330.4, 316.8,\\n       305.8, 288.8, 297.5, 298. , 269.8, 276.1, 266. , 255.9, 239.6,\\n       239.5, 233.8, 226. ]) - array([  0.        ,   0.        ,   0.        ,   0.        ,\\n         0.        ,   0.        ,   0.        ,   0.  ...589.83710279, 567.41230103, 554.44965729, 529.46835056,\\n       512.27225555,   0.        ,   0.        ,   0.        ])))\nE        +        where <ufunc 'hypot'> = np.hypot\nE        +        and   array([217.7, 226.7, 219.2, 215.8, 216.2, 220.2, 214.7, 216. , 226.8,\\n       220.5, 222.4, 226. , 240.3, 250.1, 260.1,...342.7, 330.4, 316.8,\\n       305.8, 288.8, 297.5, 298. , 269.8, 276.1, 266. , 255.9, 239.6,\\n       239.5, 233.8, 226. ]) = <reference.Day object at 0xffff306a8f50>.kvar\nE        +      and   1220.0 = <reference.Day object at 0xffff306a8f50>.import_kva\n\ntest_plans.py:95: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_reported_gas_and_cost",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135984008,
+                "stop": 1792135984008,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_reported_import_export_and_grid_flags",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135984008,
+                "stop": 1792135984009,
+                "retries": 0,
+                "file_path": "test_plans.py"
+            },
+            {
+                "name": "test_plans.py::test_least_cost",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 193,
+                "start": 1792135984009,
+                "stop": 1792135984202,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "trace": "case = (<reference.Day object at 0xffff306a8f50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...10279, 567.41230103, 554.44965729, 529.46835056,\n       512.27225555,   0.        ,   0.        ,   0.        ]), ...})\n\n    def test_least_cost(case):\n        day, _, flows = case\n        best = day.least_cost()[\"cost\"]\n>       assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\nE       assert np.float64(6859.3110559518755) <= (6208.978475018722 + 1.2417956950037445)\nE        +  where np.float64(6859.3110559518755) = <built-in method sum of numpy.ndarray object at 0xffff3066dc50>()\nE        +    where <built-in method sum of numpy.ndarray object at 0xffff3066dc50> = array([112.54046601, 112.34358758, 111.77207911, 110.74914098,\\n       111.31768188, 110.79760559, 109.02652901, 109.50...117.05861523, 113.42241845, 111.320517  , 107.26978121,\\n       104.48142277, 192.92175521, 185.42613691, 176.54402789]).sum\nE        +  and   1.2417956950037445 = max(0.5, (0.0002 * 6208.978475018722))\n\ntest_plans.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135984202,
+                "stop": 1792135984202,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135984202,
+                "stop": 1792135984203,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 1792135984203,
+                "stop": 1792135984203,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2,
+                "start": 1792135984204,
+                "stop": 1792135984206,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ],
+                "trace": "name = 'h3'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:126: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: the tool exited with status 1\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/tmp/plans/h3.error').exists\n\ntest_plans.py:28: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_plans.py::test_same_plan_every_time",
+                "status": "passed",
+                "duration": 1,
+                "start": 1792135984206,
+                "stop": 1792135984207,
+                "retries": 0,
+                "file_path": "test_plans.py",
+                "tags": [
+                    "parametrize::name::['visible', 'h1', 'h2', 'h3', 'h4']"
+                ]
+            }
+        ]
+    }
+}

@@ -30,7 +30,7 @@ def _minutes(hhmm: str) -> int:
 
 
 def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
-    """Whether a plant item (a unit, PHE1, an LT radiator, a tower cell, the PV array) can work in
+    """Whether a plant item (a unit, PHE1, a part of a unit, a tower cell, the PV array) can work in
     the half-hour starting at hhmm. The plan holds outputs steady for the whole half-hour, so an
     outage touching any part of it takes the item out for all of it."""
     m = _minutes(hhmm)
@@ -41,8 +41,15 @@ def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
 
 
 def _engine_can_run(day: DayData, plant: Plant, engine, hhmm: str) -> bool:
-    """An engine runs only with its LT radiator, the only way out for its intercooler heat."""
-    return _available(day, engine.id, hhmm) and _available(day, f"{engine.id} LT radiator", hhmm)
+    """An engine runs only with its intercooler and its LT radiator, the only way out for its
+    intercooler heat."""
+    return all(_available(day, item, hhmm)
+               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator"))
+
+
+# the parts of a chiller that it cannot run without: its condenser, and the absorption chiller's generator
+# and its absorber and condenser
+_CHILLER_PARTS = {"electric": ("condenser",), "absorption": ("generator", "absorber and condenser")}
 
 
 def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, seg: tuple, absorbing: bool):
@@ -69,16 +76,17 @@ def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, seg: tuple, abso
         c[j] = DT_H * (tariff.billed_gas(fs, e.fuel_basis) * gas + e.maintenance)
         const += DT_H * tariff.billed_gas(f0, e.fuel_basis) * gas
         bounds[j] = (lo, hi)
-    def cap(unit, kw):
-        return kw if _available(day, unit.id, day.starts[t]) else 0.0
+    def cap(unit, kw, parts=()):
+        items = [unit.id] + [f"{unit.id} {part}" for part in parts]
+        return kw if all(_available(day, item, day.starts[t]) for item in items) else 0.0
 
     for j, b in enumerate(boilers):
         c[iB + j] = DT_H * tariff.billed_gas(1.0 / b.efficiency, b.fuel_basis) * gas
         bounds[iB + j] = (0.0, cap(b, b.max_kw))
     for j, ch in enumerate(chillers):
-        bounds[iE + j] = (0.0, cap(ch, ch.max_kw))
+        bounds[iE + j] = (0.0, cap(ch, ch.max_kw, _CHILLER_PARTS["electric"]))
     for j, a in enumerate(absorbers):
-        bounds[iA + j] = (0.0, cap(a, a.max_kw) if absorbing else 0.0)
+        bounds[iA + j] = (0.0, cap(a, a.max_kw, _CHILLER_PARTS["absorption"]) if absorbing else 0.0)
     c[iI] = DT_H * tariff.import_rate(day.starts[t])
     c[iX] = -DT_H * tariff.export_rate
     bounds[iI] = (0.0, tariff.import_capacity_kva)

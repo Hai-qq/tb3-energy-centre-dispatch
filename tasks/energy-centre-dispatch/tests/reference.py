@@ -95,17 +95,39 @@ class Day:
         # the plan holds its output for the whole half-hour.
         units = [u["id"] for key in ("engines", "boilers", "electric_chillers", "absorption_chillers")
                  for u in self.plant[key]]
-        units += ["PHE1"] + [f"{e['id']} LT radiator" for e in self.engines]
-        units += list(towers["cells"]) + [self.plant["pv"]["id"]]
+        units += ["PHE1"] + list(towers["cells"]) + [self.plant["pv"]["id"]]
+        # the parts of the heat circuits named in plant.json that maintenance can take out
+        units += [f"{e['id']} {part}" for e in self.engines for part in ("intercooler", "LT radiator")]
+        units += [f"{c['id']} condenser" for c in self.plant["electric_chillers"]]
+        units += [f"{a['id']} {part}" for a in self.plant["absorption_chillers"]
+                  for part in ("generator", "absorber and condenser")]
         self.available = {u: np.ones(N, dtype=bool) for u in units}
         for o in self.status.get("outages", []):
             a, b = _hm(o["from"]), _hm(o["to"])
             self.available[o["unit"]] &= ~np.array([c < b and c + 30 > a for c in self.clock])
-        # an engine cannot run while its LT radiator, the only way out for its intercooler heat, is out
+        # A part out takes out what cannot work without it: an engine cannot run without its intercooler
+        # or its LT radiator, the only way out for its intercooler heat; a chiller cannot run without its
+        # condenser, nor the absorption chiller without its generator or its absorber and condenser.
         for e in self.engines:
+            self.available[e["id"]] &= self.available[f"{e['id']} intercooler"]
             self.available[e["id"]] &= self.available[f"{e['id']} LT radiator"]
+        for c in self.plant["electric_chillers"]:
+            self.available[c["id"]] &= self.available[f"{c['id']} condenser"]
+        for a in self.plant["absorption_chillers"]:
+            self.available[a["id"]] &= self.available[f"{a['id']} generator"]
+            self.available[a["id"]] &= self.available[f"{a['id']} absorber and condenser"]
         self.tower_max = per_cell * sum(self.available[c].astype(float) for c in towers["cells"])
-        self.pv = np.where(self.available[self.plant["pv"]["id"]], self.pv, 0.0)
+        # The PV array out for part of a half-hour: the plan holds every output for the whole half-hour,
+        # so the least cost counts on no PV in it, but a tool may also count the PV of the minutes the
+        # array is in service; self.pv_max is the most a plan may say the array gives.
+        pv_id = self.plant["pv"]["id"]
+        out_min = np.zeros(N)
+        for o in self.status.get("outages", []):
+            if o["unit"] == pv_id:
+                a, b = _hm(o["from"]), _hm(o["to"])
+                out_min += np.array([max(0, min(b, c + 30) - max(a, c)) for c in self.clock])
+        self.pv_max = self.pv * np.clip(1.0 - out_min / 30.0, 0.0, 1.0)
+        self.pv = np.where(self.available[pv_id], self.pv, 0.0)
         self.running0 = set(self.status["running_at_midnight"])
 
     def true_flows(self, plan: dict) -> dict:
@@ -166,7 +188,9 @@ class Day:
 
         Each engine runs on its part-load curve: segment k of the curve can only be
         used once the segments below it are fully loaded (binary w). The connection's
-        apparent power limit is the polygon of CUTS tangents to its circle."""
+        apparent power limit is the polygon of CUTS tangents to its circle. The towers'
+        load counts the absorption chiller's auxiliary power too, the stricter of the two
+        readings of what its cooling water takes away, so that either reading meets it."""
         eng, boil = self.engines, self.plant["boilers"]
         ecs, acs = self.plant["electric_chillers"], self.plant["absorption_chillers"]
         names = []
@@ -254,7 +278,11 @@ class Day:
                 cap = ac["max_kw"] if self.available[ac["id"]][t] else 0.0
                 hi[v(t, f"A{a}")] = cap
                 el[v(t, f"A{a}")] = -ac["auxiliary_kwe_per_kw"]
-                rejection[v(t, f"A{a}")] = 1.0 + 1.0 / ac["cop"]
+                # The towers take the cooling and the driving heat; the chiller's own auxiliary power
+                # also ends as heat in its cooling water on a strict reading, so the least cost is that of
+                # the plans that leave the towers room for it too, and a tool may count it either way
+                # (test_cooling_towers checks the limit without it).
+                rejection[v(t, f"A{a}")] = 1.0 + 1.0 / ac["cop"] + ac["auxiliary_kwe_per_kw"]
                 add({v(t, f"A{a}"): 1.0, z: -cap}, -np.inf, 0.0)
             hi[v(t, "I")], hi[v(t, "X")] = self.import_kva, self.export_max
             c[v(t, "I")] = DT_H * self.import_rate[t]
