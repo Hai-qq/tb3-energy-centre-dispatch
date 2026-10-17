@@ -1,0 +1,109 @@
+{
+  "app": "results/checks-v18/opponents/ecd17-run2-claude-parts/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6420.842045269092,
+      "delta_gbp": -5.805421833950277,
+      "failures": {},
+      "milp_gbp": 6426.647467103042,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.4198651899987453,
+          "sha256": "19ebe767a597941786e2c03f29fbf7f8725abd3b123bbcb1d9bc42ac780ccc64"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.993371536998893,
+          "sha256": "19ebe767a597941786e2c03f29fbf7f8725abd3b123bbcb1d9bc42ac780ccc64"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8879.735705373085,
+      "delta_gbp": 0.003714114376634825,
+      "failures": {},
+      "milp_gbp": 8879.731991258708,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.024742673000219,
+          "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.193526794999343,
+          "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {},
+      "milp_gbp": 5375.538040469284,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.128686588999699,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.786742337999385,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7296.098696319798,
+      "delta_gbp": -14.87314421323481,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.14266714400037,
+          "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.0470676900004037,
+          "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.012733216000925,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.357896759000141,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "6a8bca23659524bcf07e92ec02a5473139d3d70b3f6e571f1c289bbf6564c0cb",
+    "planner/optimize.py": "f12811a6396748f69699271823805c36dfc34f165cb3dd309294379e4c4a95f9",
+    "planner/plant.py": "fcc200aa9bf4f32563399da1d2f374da5ebc93cc08a7b549d5937dc1dce9f1a4",
+    "planner/tariff.py": "b73f7c5529486b068b42b956c46a9d95d742b7bab6f0f1816676c5a875d5f178"
+  }
+}

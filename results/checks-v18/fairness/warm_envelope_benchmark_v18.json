@@ -1,0 +1,60 @@
+{
+  "reference": "tasks/energy-centre-dispatch/tests/reference.py",
+  "reference_sha256": "9a76ed87d2ef7ab13f9734ddfffec29ba8715a61ada2745851e63efe480970b4",
+  "extension": "one exact continuous common-CW aggregate compressor-input envelope per period; strict AC auxiliary heat; v17 constant-output PV convention",
+  "days": [
+    {
+      "name": "visible",
+      "cold_cost_gbp": 6303.560319426553,
+      "continuous_cost_gbp": 6303.560319426553,
+      "cold_minus_continuous_gbp": 0.0,
+      "elapsed_s": 4.138129590999597,
+      "warmer_periods": []
+    },
+    {
+      "name": "h1",
+      "cold_cost_gbp": 6426.647467103042,
+      "continuous_cost_gbp": 6426.647467103042,
+      "cold_minus_continuous_gbp": 0.0,
+      "elapsed_s": 3.8830755180006236,
+      "warmer_periods": []
+    },
+    {
+      "name": "h2",
+      "cold_cost_gbp": 8879.731991258708,
+      "continuous_cost_gbp": 8879.731991258708,
+      "cold_minus_continuous_gbp": 0.0,
+      "elapsed_s": 1.598776581000493,
+      "warmer_periods": []
+    },
+    {
+      "name": "h3",
+      "cold_cost_gbp": 5375.538040469284,
+      "continuous_cost_gbp": 5375.538040469284,
+      "cold_minus_continuous_gbp": 0.0,
+      "elapsed_s": 2.4010580430003756,
+      "warmer_periods": []
+    },
+    {
+      "name": "h4",
+      "cold_cost_gbp": 7310.971840533033,
+      "continuous_cost_gbp": 7310.971840533033,
+      "cold_minus_continuous_gbp": 0.0,
+      "elapsed_s": 1.2425630899997486,
+      "warmer_periods": []
+    },
+    {
+      "name": "warm_witness_w1",
+      "cold_cost_gbp": 6034.446098971162,
+      "continuous_cost_gbp": 6014.361415011951,
+      "cold_minus_continuous_gbp": 20.08468395921136,
+      "elapsed_s": 1.1883147529988491,
+      "warmer_periods": [
+        {
+          "start": "16:00",
+          "extra_ec_kw": 13.158878504674277
+        }
+      ]
+    }
+  ]
+}

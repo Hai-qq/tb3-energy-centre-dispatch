@@ -1,0 +1,55 @@
+{
+  "id": "d0153",
+  "index": 152,
+  "season": "winter",
+  "scenario": 6,
+  "base": "h2",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.00047955390337151016,
+      "max_heat_balance_kw": 0.0006500000004052708,
+      "max_tower_excess_kw": -1798.6330855018587,
+      "max_grid_excess_kva": 45.6396322623516,
+      "recomputed_cost_gbp": 7177.0967565227975,
+      "elapsed_seconds": 4.612708,
+      "stderr": "warning: 16:00: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 16:00')",
+      "elapsed_seconds": 4.98839
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.00047955390337151016,
+      "max_heat_balance_kw": 0.0006500000004052708,
+      "max_tower_excess_kw": -1798.6330855018587,
+      "max_grid_excess_kva": 45.6396322623516,
+      "recomputed_cost_gbp": 7177.0967565227975,
+      "elapsed_seconds": 4.881145
+    }
+  },
+  "reference_extension": {
+    "kind": "missing_named_engine_component",
+    "raw_exception": "KeyError('GE1 jacket water and exhaust')"
+  },
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.4021178589991905
+  }
+}

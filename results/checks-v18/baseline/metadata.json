@@ -1,0 +1,82 @@
+{
+  "command": [
+    "tools/check_v18.py",
+    "--task",
+    "archive/energy-centre-dispatch-v17",
+    "--out",
+    "results/checks-v18/baseline",
+    "--apps",
+    "oracle",
+    "strong-v16-claude",
+    "v17-run1-claude",
+    "v17-run2-claude",
+    "v17-run3-claude",
+    "v17-run1-codex",
+    "v17-run2-codex",
+    "v17-run3-codex"
+  ],
+  "days": {
+    "h1": {
+      "milp_gbp": 6426.647467103042,
+      "milp_seconds": 0.8660590370000136,
+      "sha256": {
+        "demand.csv": "0d0e0fff0ae8423b4d8c124e0c291bd6a347b89c287bcd32055e10f962dc8134",
+        "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+        "status.json": "17d0a361075ce59a41da363d8075494a94a6bccde3e4b4fca4fcffc3ecb9bcdf",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "c5e19a4cfd334e55c9f9a929eab962c5179d7215d20e156333b1b0e471d10e43"
+      }
+    },
+    "h2": {
+      "milp_gbp": 8460.684837694222,
+      "milp_seconds": 1.1805686930001684,
+      "sha256": {
+        "demand.csv": "152a488965b3338a306035d7bca7df3f1745ee08a08278464efcfa5323fbb5a9",
+        "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+        "status.json": "bf72a9751d515dff747f5bfc7b50d78eae32e401a8a779a6cc7b60cd553394ea",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "05f3b81800fc31e950a743cf199d1aabe63bbdf96c4cc2c439396426e54a194a"
+      }
+    },
+    "h3": {
+      "milp_gbp": 5345.190996901587,
+      "milp_seconds": 1.7249155589997827,
+      "sha256": {
+        "demand.csv": "8c7b3cea2cdd3dbf18e7b82ac6157fef5e1f2a059a61cd143857adb870db115a",
+        "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+        "status.json": "35ee23b853ef0ed9510ffb55247c3d4ca4d8eae35739c8ddbd67b0c9d8e22b49",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "ed390ebf88b1b2ae8fe7309006c1423e73169de404d4fd9008749d9ad6aa80b4"
+      }
+    },
+    "h4": {
+      "milp_gbp": 7310.971840533033,
+      "milp_seconds": 0.7607672289996117,
+      "sha256": {
+        "demand.csv": "fcde2307daa4537b9ac5f66f2c801a90993958a02aecd68268b486c8bac482ba",
+        "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+        "status.json": "a29a08b2caee198b696c8b24ba579f33e65baf13b04b75641207a353d4ef14b2",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "094de079b7511a646bde7af8a49f9f721a4f52fcbe8a65ac55b9b61deea86ac5"
+      }
+    },
+    "visible": {
+      "milp_gbp": 6303.560319426553,
+      "milp_seconds": 1.4032470379997903,
+      "sha256": {
+        "demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+        "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+        "status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407"
+      }
+    }
+  },
+  "numpy": "2.3.4",
+  "python": "3.13.16",
+  "reference_sha256": "6f4a64c8d66334be60e50f7813f85aec2beb9f3d9a78049553809b1e6766c69d",
+  "scipy": "1.17.0",
+  "task": "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17",
+  "test_sha256": "e380ee5429166a8f4ac8da9a5ed2ead7a52277fb804cbdc22ee990145c2403eb",
+  "timestamp_utc": "2026-10-17T07:30:27.039208+00:00"
+}

@@ -41,10 +41,9 @@ def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
 
 
 def _engine_can_run(day: DayData, plant: Plant, engine, hhmm: str) -> bool:
-    """An engine runs only with its intercooler and its LT radiator, the only way out for its
-    intercooler heat."""
+    """An engine needs its jacket-water/exhaust assembly, intercooler and LT radiator."""
     return all(_available(day, item, hhmm)
-               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator"))
+               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))
 
 
 # the parts of a chiller that it cannot run without: its condenser, and the absorption chiller's generator
@@ -132,12 +131,12 @@ def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, seg: tuple, abso
     row[iA:iA + nA] = 1.0
     A_eq.append(row)
     b_eq.append(day.cool[t])
-    # cooling towers: the chillers' cooling plus compressor work, the absorbers' cooling plus driving heat
+    # Match the reference MILP's stricter accepted auxiliary-heat convention.
     row = np.zeros(n)
     for j, ch in enumerate(chillers):
         row[iE + j] = ch.rejected(1.0, cewt)
     for j, a in enumerate(absorbers):
-        row[iA + j] = a.rejected(1.0)
+        row[iA + j] = a.rejected(1.0) + a.aux_per_kw
     A_ub.append(row)
     cells = sum(_available(day, cell, day.starts[t]) for cell in plant.tower_cells)
     b_ub.append(plant.tower_capacity(day.wet_bulb[t], cells))

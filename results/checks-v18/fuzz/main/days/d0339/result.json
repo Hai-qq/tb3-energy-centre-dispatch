@@ -1,0 +1,52 @@
+{
+  "id": "d0339",
+  "index": 338,
+  "season": "summer",
+  "scenario": 4,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0008000000001260332,
+      "max_heat_balance_kw": 0.0004084507041852703,
+      "max_tower_excess_kw": -10.598614810300205,
+      "max_grid_excess_kva": 847.406351919235,
+      "recomputed_cost_gbp": 7241.016485443508,
+      "elapsed_seconds": 2.11675,
+      "stderr": "warning: 08:30: the demand cannot be met within the connection's capacity\nwarning: 09:00: the demand cannot be met within the connection's capacity\nwarning: 09:30: the demand cannot be met within the connection's capacity\nwarning: 10:00: the demand cannot be met within the connection's capacity\nwarning: 10:30: the demand cannot be met within the connection's capacity\nwarning: 15:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 08:30')",
+      "elapsed_seconds": 1.004113
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0008000000001260332,
+      "max_heat_balance_kw": 0.0008816901407726618,
+      "max_tower_excess_kw": -0.004477904036320979,
+      "max_grid_excess_kva": 847.406351919235,
+      "recomputed_cost_gbp": 7226.901484244758,
+      "elapsed_seconds": 2.668475
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.45273197300048196
+  }
+}

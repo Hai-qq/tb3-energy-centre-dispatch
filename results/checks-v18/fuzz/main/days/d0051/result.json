@@ -1,0 +1,31 @@
+{
+  "id": "d0051",
+  "index": 50,
+  "season": "summer",
+  "scenario": 4,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading of the plant at 12:00')",
+      "elapsed_seconds": 2.535254
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 12:00')",
+      "elapsed_seconds": 2.341619
+    },
+    "v17_claude_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading of the plant at 12:00')",
+      "elapsed_seconds": 2.355895
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.4029426560000502
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "seed": 2026,
+  "name": "f4",
+  "date": "2026-08-12",
+  "input_sha256": {
+    "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "status.json": "64036855a7577bef54d38d495af222bdcfd5a082b7c04f4c72543d71e0638004",
+    "demand.csv": "539b404f5fb124de0d72cdd939d7882ad71d59eb70c62b9a28e7954f1d0b7146",
+    "weather.csv": "6dffc5e3c724e31a63130896138d2d06238725ceed335951ab6f24f113dacfbe"
+  },
+  "cost_gbp": 5497.0612458374,
+  "reference_cost_gbp": 5497.0612868682165,
+  "cost_delta_gbp": -4.1030816646525636e-05,
+  "cli_runtimes_s": [
+    5.163268731001153,
+    3.5880045300000347
+  ],
+  "deterministic": true,
+  "passed_case_checks": [
+    "test_plan_covers_the_day",
+    "test_units_within_ratings_and_availability",
+    "test_electricity_balance",
+    "test_heat_balance",
+    "test_cooling_balance",
+    "test_cooling_towers",
+    "test_connection_limits",
+    "test_reported_gas_and_cost",
+    "test_reported_import_export_and_grid_flags",
+    "test_least_cost"
+  ],
+  "inputs_unchanged_after_both_runs": true
+}
+{
+  "seed": 2403,
+  "name": "f7",
+  "date": "2026-08-13",
+  "input_sha256": {
+    "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "status.json": "39aea8d9dffd7c908f12057091a6344673fb060416c92310b953a3e12a07abb9",
+    "demand.csv": "6f6904a7fa6a18e911b6f582c4019b8895bb74e0fdbcd45b9c3303eb3786a15a",
+    "weather.csv": "e7183a0452cb40fee13f0909c701bcab72927a728edea08907e5c10a607f7dbf"
+  },
+  "cost_gbp": 6183.0691350259,
+  "reference_cost_gbp": 6183.068906860972,
+  "cost_delta_gbp": 0.0002281649285578169,
+  "cli_runtimes_s": [
+    4.56440824099991,
+    4.462355229999957
+  ],
+  "deterministic": true,
+  "passed_case_checks": [
+    "test_plan_covers_the_day",
+    "test_units_within_ratings_and_availability",
+    "test_electricity_balance",
+    "test_heat_balance",
+    "test_cooling_balance",
+    "test_cooling_towers",
+    "test_connection_limits",
+    "test_reported_gas_and_cost",
+    "test_reported_import_export_and_grid_flags",
+    "test_least_cost"
+  ],
+  "inputs_unchanged_after_both_runs": true
+}

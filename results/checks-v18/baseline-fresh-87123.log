@@ -1,0 +1,18 @@
+the task's five days pass the input checks
+f1: 2026-02-26 Thu (h2 profile), running at midnight ['GE1'], outages GE2 LT radiator 11:00-16:50, EC1 22:00-23:10, B2 19:30-24:00
+f2: 2026-03-24 Tue (h3 profile), running at midnight [], outages AC1 12:10-17:00
+f3: 2026-09-04 Fri (visible profile), running at midnight ['GE1'], outages EC2 condenser 07:40-10:00
+f4: 2026-08-18 Tue (visible profile), running at midnight ['GE1', 'GE2'], outages EC1 condenser 06:50-11:20
+f5: 2026-02-08 Sun (h2 profile), running at midnight ['GE1'], outages EC2 17:40-19:10, GE2 intercooler 11:40-17:40, AC1 09:30-11:10, CT1 14:20-16:40
+f6: 2026-05-17 Sun (h3 profile), running at midnight ['GE1', 'GE2'], outages CT2 22:30-24:00
+f7: 2026-09-26 Sat (visible profile), running at midnight [], outages GE2 intercooler 15:20-19:50, GE2 09:40-15:10, PV1 16:10-21:20, EC1 07:10-11:40
+f8: 2026-09-25 Fri (h4 profile), running at midnight ['GE1', 'GE2'], outages GE1 06:10-10:30, GE2 LT radiator 01:10-04:00, EC2 condenser 01:40-05:20, PHE1 13:30-17:20
+f9: 2026-12-12 Sat (h2 profile), running at midnight ['GE1'], outages CT2 16:50-18:20
+f10: 2026-05-24 Sun (h3 profile), running at midnight ['GE1', 'GE2'], outages CT2 01:10-03:50, AC1 absorber and condenser 14:50-16:40, EC2 20:20-24:00, PV1 11:00-13:20
+f11: 2026-08-23 Sun (h4 profile), running at midnight [], outages PV1 08:10-13:30
+f12: 2026-08-10 Mon (h4 profile), running at midnight ['GE2'], outages EC2 condenser 21:10-24:00
+f13: 2026-12-22 Tue (h2 profile), running at midnight ['GE1'], outages AC1 21:10-24:00, EC2 18:00-22:40, EC2 condenser 12:20-17:20, GE2 20:00-24:00
+f14: 2026-11-06 Fri (h3 profile), running at midnight ['GE1', 'GE2'], outages AC1 generator 13:20-17:50, EC2 condenser 06:30-12:20
+f15: 2026-08-04 Tue (visible profile), running at midnight ['GE1'], outages CT2 01:30-02:40, GE1 intercooler 18:40-23:20
+f16: 2026-08-06 Thu (visible profile), running at midnight ['GE1', 'GE2'], outages CT1 21:00-24:00, B1 05:00-10:50
+0/16 days failed  tasks/energy-centre-dispatch/solution/app  

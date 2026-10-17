@@ -1,0 +1,123 @@
+{
+  "app": "results/checks-v18/blind/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6409.698941996611,
+      "delta_gbp": -16.94852510643068,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 53, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 7.981249482000749,
+          "sha256": "307990c223a7ee06052435b985fe62fce39341b8911486158f203e420ef7a934"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.1938236219993996,
+          "sha256": "307990c223a7ee06052435b985fe62fce39341b8911486158f203e420ef7a934"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 7904.015373306194,
+      "delta_gbp": -556.6694643880273,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 53, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 8460.684837694222,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.1248460609995163,
+          "sha256": "af554c73c9bc22ec1a101b95e785fb66543eddc7b0e661c34c14434c884b3a72"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.197804948999874,
+          "sha256": "af554c73c9bc22ec1a101b95e785fb66543eddc7b0e661c34c14434c884b3a72"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5182.628545783766,
+      "delta_gbp": -162.56245111782118,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 53, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 5345.190996901587,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.5832865989996208,
+          "sha256": "f78e9b4304c83f21cbf435eb90d81385c8064eee0aa180785fc40fece079b41e"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.9875095550005426,
+          "sha256": "f78e9b4304c83f21cbf435eb90d81385c8064eee0aa180785fc40fece079b41e"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7285.811402090048,
+      "delta_gbp": -25.16043844298474,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 53, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.7225626050003484,
+          "sha256": "e2aade4e4a969abd049f8721282dd9a0f8d77154b6e64693d5497588ebcb3f5c"
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.054799651000394,
+          "sha256": "e2aade4e4a969abd049f8721282dd9a0f8d77154b6e64693d5497588ebcb3f5c"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.2615413829998943,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.929300929999954,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+    "data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "data/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "data/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "dispatch.py": "9fb16a25019bea5455352acab6c7916f0f1fa4a33c01f83ec648cda0fdacbcf0",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "af36bb878f4cc070dd2156a8aea2a776a7b6646e13b2eff5c5026271b0b78193",
+    "planner/optimize.py": "443da258613e79c0cc70a24b1fda4dec585ddc7fc3b0d1f23b230cedda94587a",
+    "planner/plant.py": "0313209bc0cd2b2ad14d949aa0845ba17da7df0c309feee0d2d022f291449fb1",
+    "planner/tariff.py": "c3c9b972a303cf56adfc334af302494c843f127d0cc46f308e2b8f497780ee1e"
+  }
+}

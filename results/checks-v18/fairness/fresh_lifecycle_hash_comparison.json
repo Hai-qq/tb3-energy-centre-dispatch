@@ -1,0 +1,66 @@
+[
+  {
+    "seed": 2026,
+    "name": "f4",
+    "matches_preceding_rejected_attempt": 12,
+    "matching_files": [
+      "plant.json",
+      "supply.json",
+      "status.json",
+      "demand.csv",
+      "weather.csv"
+    ],
+    "logged_accepted_attempt": 13,
+    "different_from_logged_accepted_files": [
+      "status.json",
+      "demand.csv",
+      "weather.csv"
+    ],
+    "observed_original_hashes": {
+      "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+      "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+      "status.json": "d4f4e9983d95bbc6e1dd800479e7116c76fe171bde567aac49c343cb6ad7b1aa",
+      "demand.csv": "95b9adf38301ab19da6d6610b4bf02fab9ca385f02363cdd60b4285c7791503c",
+      "weather.csv": "d231ce03aa08eacc13ebc1336ea392930fa040edba8c9fd468e839468e5c1ee0"
+    },
+    "reconstructed_accepted_hashes": {
+      "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+      "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+      "status.json": "64036855a7577bef54d38d495af222bdcfd5a082b7c04f4c72543d71e0638004",
+      "demand.csv": "539b404f5fb124de0d72cdd939d7882ad71d59eb70c62b9a28e7954f1d0b7146",
+      "weather.csv": "6dffc5e3c724e31a63130896138d2d06238725ceed335951ab6f24f113dacfbe"
+    }
+  },
+  {
+    "seed": 2403,
+    "name": "f7",
+    "matches_preceding_rejected_attempt": 13,
+    "matching_files": [
+      "plant.json",
+      "supply.json",
+      "status.json",
+      "demand.csv",
+      "weather.csv"
+    ],
+    "logged_accepted_attempt": 14,
+    "different_from_logged_accepted_files": [
+      "status.json",
+      "demand.csv",
+      "weather.csv"
+    ],
+    "observed_original_hashes": {
+      "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+      "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+      "status.json": "885722ae6b97640e0a34330e2025bca96736b2db38e378df093937904a96038f",
+      "demand.csv": "dae9c22e0c31ae3d58535f8af0626192b15944fdd3c8e6c6b68ae29078cc6ae7",
+      "weather.csv": "5e7905c3ee0b335e359d40f726d6e13078d6f9c7bb6082796d98c52bdc682a69"
+    },
+    "reconstructed_accepted_hashes": {
+      "plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+      "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+      "status.json": "39aea8d9dffd7c908f12057091a6344673fb060416c92310b953a3e12a07abb9",
+      "demand.csv": "6f6904a7fa6a18e911b6f582c4019b8895bb74e0fdbcd45b9c3303eb3786a15a",
+      "weather.csv": "e7183a0452cb40fee13f0909c701bcab72927a728edea08907e5c10a607f7dbf"
+    }
+  }
+]

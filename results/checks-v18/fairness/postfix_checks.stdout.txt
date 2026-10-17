@@ -1,0 +1,118 @@
+{
+  "reference_sha256": "9a76ed87d2ef7ab13f9734ddfffec29ba8715a61ada2745851e63efe480970b4",
+  "components": [
+    {
+      "component": "GE1 jacket water and exhaust",
+      "owner": "GE1",
+      "off_minutes": [
+        600,
+        750,
+        840,
+        870
+      ],
+      "other_engine_unaffected": true
+    },
+    {
+      "component": "GE2 jacket water and exhaust",
+      "owner": "GE2",
+      "off_minutes": [
+        600,
+        750,
+        840,
+        870
+      ],
+      "other_engine_unaffected": true
+    }
+  ],
+  "pv_unions": [
+    {
+      "case": "overlap",
+      "unavailable_union_minutes": 15,
+      "expected_max_kw": 128.9,
+      "actual_max_kw": 128.9
+    },
+    {
+      "case": "reverse_order",
+      "unavailable_union_minutes": 15,
+      "expected_max_kw": 128.9,
+      "actual_max_kw": 128.9
+    },
+    {
+      "case": "duplicate",
+      "unavailable_union_minutes": 10,
+      "expected_max_kw": 171.86666666666667,
+      "actual_max_kw": 171.8666666666667
+    },
+    {
+      "case": "nested",
+      "unavailable_union_minutes": 20,
+      "expected_max_kw": 85.93333333333334,
+      "actual_max_kw": 85.93333333333335
+    },
+    {
+      "case": "adjacent",
+      "unavailable_union_minutes": 20,
+      "expected_max_kw": 85.93333333333334,
+      "actual_max_kw": 85.93333333333335
+    },
+    {
+      "case": "disjoint",
+      "unavailable_union_minutes": 10,
+      "expected_max_kw": 171.86666666666667,
+      "actual_max_kw": 171.8666666666667
+    },
+    {
+      "case": "boundary",
+      "unavailable_union_minutes": 0,
+      "expected_max_kw": 257.8,
+      "actual_max_kw": 257.8
+    },
+    {
+      "case": "full_cover",
+      "unavailable_union_minutes": 30,
+      "expected_max_kw": 0.0,
+      "actual_max_kw": 0.0
+    }
+  ],
+  "hidden_coverage": {
+    "h2_GE2_HT_group": [
+      1080,
+      1110
+    ],
+    "h3_AC1_generator": [
+      750
+    ],
+    "h4_PV16_00": {
+      "forecast_kw": 185.1,
+      "union_available_minutes": 20,
+      "pv_max_kw": 123.4
+    }
+  },
+  "heat_rejection": [
+    {
+      "temperature_c": 26.0,
+      "ec1_kw": 1000.0,
+      "ec2_kw": 0.0,
+      "ac1_kw": 0.0,
+      "expected_rejected_kw": 1178.5714285714287,
+      "actual_rejected_kw": 1178.5714285714287
+    },
+    {
+      "temperature_c": 27.3,
+      "ec1_kw": 1000.0,
+      "ec2_kw": 700.0,
+      "ac1_kw": 0.0,
+      "expected_rejected_kw": 2047.3229528171805,
+      "actual_rejected_kw": 2047.3229528171805
+    },
+    {
+      "temperature_c": 22.0,
+      "ec1_kw": 1000.0,
+      "ec2_kw": 0.0,
+      "ac1_kw": 0.4,
+      "expected_rejected_kw": 1154.809534127844,
+      "actual_rejected_kw": 1154.809534127844
+    }
+  ],
+  "all_assertions_passed": true
+}

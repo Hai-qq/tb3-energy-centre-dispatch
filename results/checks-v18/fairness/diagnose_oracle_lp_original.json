@@ -1,0 +1,59 @@
+[
+  {
+    "day": "seed2026_f4",
+    "oracle_baseline_outcome": "RuntimeError('no plan meets the demand within the limits')",
+    "oracle_seconds": 2.760930874999758,
+    "reference_cost_gbp": null,
+    "reference_state_LP_disagreements": [],
+    "reference_error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "status": {
+      "date": "2026-06-19",
+      "running_at_midnight": [
+        "GE1"
+      ],
+      "outages": [
+        {
+          "unit": "CT2",
+          "from": "06:40",
+          "to": "09:30"
+        }
+      ]
+    }
+  },
+  {
+    "day": "seed2403_f7",
+    "oracle_baseline_outcome": "RuntimeError('no plan meets the demand within the limits')",
+    "oracle_seconds": 2.697640198000954,
+    "reference_cost_gbp": null,
+    "reference_state_LP_disagreements": [],
+    "reference_error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "status": {
+      "date": "2026-09-09",
+      "running_at_midnight": [
+        "GE1"
+      ],
+      "outages": [
+        {
+          "unit": "B2",
+          "from": "09:50",
+          "to": "12:20"
+        },
+        {
+          "unit": "CT2",
+          "from": "22:50",
+          "to": "24:00"
+        },
+        {
+          "unit": "CT1",
+          "from": "14:30",
+          "to": "15:50"
+        },
+        {
+          "unit": "PV1",
+          "from": "09:30",
+          "to": "12:40"
+        }
+      ]
+    }
+  }
+]

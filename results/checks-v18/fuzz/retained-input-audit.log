@@ -1,0 +1,7 @@
+{
+  "audit_scope": "post-run, completed cases whose five generated inputs are still retained",
+  "checked_completed_folders": 344,
+  "byte_mismatch_note": "The sorted JSONL spec reorders dictionary keys in original main status.json; parsed JSON equality is the input-content check. CSV data is compared byte-for-byte.",
+  "byte_mismatch_file_count": 306,
+  "mismatches": []
+}

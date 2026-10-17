@@ -1,0 +1,34 @@
+[
+  {
+    "case": "w0",
+    "checks_passed": 9,
+    "failures": [],
+    "periods": [
+      {
+        "period": "16:00",
+        "required_compressor_kw": 194.0,
+        "inferred_water_c": 32.611683848797256,
+        "electric_chiller_cop": 3.6082474226804124,
+        "tower_rejection_kw": 894.0,
+        "tower_capacity_kw": 4000.0
+      }
+    ],
+    "cost_gbp": 6014.361415012318
+  },
+  {
+    "case": "w1",
+    "checks_passed": 9,
+    "failures": [],
+    "periods": [
+      {
+        "period": "16:00",
+        "required_compressor_kw": 144.0,
+        "inferred_water_c": 24.25925925925926,
+        "electric_chiller_cop": 4.861111111111111,
+        "tower_rejection_kw": 844.0,
+        "tower_capacity_kw": 4000.0
+      }
+    ],
+    "cost_gbp": 6014.361415012318
+  }
+]

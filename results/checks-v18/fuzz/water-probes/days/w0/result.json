@@ -1,0 +1,57 @@
+{
+  "id": "w0",
+  "index": 0,
+  "season": "spring",
+  "scenario": "warm-water-export-start-cost",
+  "base": "custom",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [],
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0004321538463187835,
+      "max_heat_balance_kw": 0.0002535211265239923,
+      "max_tower_excess_kw": -3113.690407367281,
+      "max_grid_excess_kva": -883.2812402100957,
+      "recomputed_cost_gbp": 6032.9734355684095,
+      "elapsed_seconds": 5.879995,
+      "regret_gbp": -0.0010338004567529424
+    },
+    "v17_codex_parts": {
+      "failed": [
+        "test_electricity_balance"
+      ],
+      "assertions": {
+        "test_electricity_balance": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 63.158878504672884,
+      "max_heat_balance_kw": 7.321432349272072e-11,
+      "max_tower_excess_kw": -3113.689974861181,
+      "max_grid_excess_kva": -883.2811131072948,
+      "recomputed_cost_gbp": 6014.361415012318,
+      "elapsed_seconds": 5.157794,
+      "regret_gbp": -18.613054356548673
+    },
+    "v17_claude_parts": {
+      "failed": [],
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0004321538463187835,
+      "max_heat_balance_kw": 0.0002535211265239923,
+      "max_tower_excess_kw": -3113.690407367281,
+      "max_grid_excess_kva": -883.2812402100957,
+      "recomputed_cost_gbp": 6032.9734355684095,
+      "elapsed_seconds": 4.010678,
+      "regret_gbp": -0.0010338004567529424
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [
+    "v16_claude",
+    "v17_claude_parts"
+  ],
+  "milp": {
+    "cost_gbp": 6032.974469368866,
+    "elapsed_seconds": 1.0701364099995772
+  }
+}

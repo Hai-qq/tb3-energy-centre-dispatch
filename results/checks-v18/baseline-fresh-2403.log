@@ -1,0 +1,18 @@
+the task's five days pass the input checks
+f1: 2026-02-12 Thu (h2 profile), running at midnight ['GE2'], outages EC2 11:10-13:10, B1 20:30-24:00
+f2: 2026-04-12 Sun (h3 profile), running at midnight ['GE1'], outages GE2 16:40-18:20
+f3: 2026-07-01 Wed (visible profile), running at midnight ['GE1', 'GE2'], outages EC2 09:10-14:20, GE2 LT radiator 03:00-07:50, GE2 17:50-20:20
+f4: 2026-08-30 Sun (h1 profile), running at midnight ['GE2'], outages GE1 LT radiator 13:50-15:20, GE2 intercooler 01:10-07:00, GE1 intercooler 19:50-22:40, EC2 01:30-06:40
+f5: 2026-02-07 Sat (h2 profile), running at midnight ['GE1'], outages CT2 00:00-04:10, GE2 intercooler 04:30-09:20
+f6: 2026-03-02 Mon (h3 profile), running at midnight ['GE2'], outages B2 17:20-18:50, B1 12:10-14:10, EC2 condenser 02:20-07:40, AC1 generator 09:50-10:50
+f7: 2026-07-25 Sat (visible profile), running at midnight ['GE1', 'GE2'], outages EC2 14:10-20:10, PV1 08:30-14:20, B2 05:00-08:20
+f8: 2026-06-23 Tue (visible profile), running at midnight [], outages EC2 condenser 12:20-16:30, EC2 09:30-13:20
+f9: 2026-01-15 Thu (h2 profile), running at midnight [], outages GE1 01:20-03:00, PV1 10:20-14:00, EC1 condenser 08:20-10:30
+f10: 2026-10-11 Sun (h3 profile), running at midnight ['GE1', 'GE2'], outages GE2 intercooler 15:50-19:40, GE2 00:20-03:10, PV1 16:10-17:20, EC2 condenser 00:30-02:20
+f11: 2026-09-20 Sun (h1 profile), running at midnight ['GE1'], outages GE2 LT radiator 17:20-23:00
+f12: 2026-09-27 Sun (visible profile), running at midnight ['GE1', 'GE2'], outages B2 02:10-06:10, GE1 LT radiator 11:00-14:00, EC2 05:40-10:50, B1 18:30-23:00
+f13: 2026-01-14 Wed (h2 profile), running at midnight ['GE1', 'GE2'], outages GE1 LT radiator 22:50-24:00, GE1 intercooler 15:00-16:00, AC1 absorber and condenser 11:10-14:50
+f14: 2026-04-27 Mon (h3 profile), running at midnight [], outages EC2 06:40-09:30, GE2 LT radiator 12:20-15:00
+f15: 2026-06-17 Wed (visible profile), running at midnight ['GE1', 'GE2'], outages PHE1 16:10-21:10, CT2 21:50-24:00
+f16: 2026-08-04 Tue (visible profile), running at midnight ['GE2'], outages B1 15:50-21:50, GE1 16:50-19:10
+0/16 days failed  tasks/energy-centre-dispatch/solution/app  

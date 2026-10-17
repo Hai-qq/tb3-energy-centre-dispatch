@@ -1,0 +1,55 @@
+{
+  "id": "d0238",
+  "index": 237,
+  "season": "spring",
+  "scenario": 3,
+  "base": "h3",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0004981538459247759,
+      "max_heat_balance_kw": 0.0005239436618467153,
+      "max_tower_excess_kw": -10.75407800650055,
+      "max_grid_excess_kva": 390.04057586857766,
+      "recomputed_cost_gbp": 7182.253101643584,
+      "elapsed_seconds": 3.180121,
+      "stderr": "warning: 08:00: the demand cannot be met within the connection's capacity\nwarning: 08:30: the demand cannot be met within the connection's capacity\nwarning: 09:00: the demand cannot be met within the connection's capacity\nwarning: 09:30: the demand cannot be met within the connection's capacity\nwarning: 10:00: the demand cannot be met within the connection's capacity\nwarning: 10:30: the demand cannot be met within the connection's capacity\nwarning: 11:00: the demand cannot be met within the connection's capacity\nwarning: 11:30: the demand cannot be met within the connection's capacity\nwarning: 12:00: the demand cannot be met within the connection's capacity\nwarning: 15:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 08:00')",
+      "elapsed_seconds": 1.151619
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.000506923076898147,
+      "max_heat_balance_kw": 0.0005239436618467153,
+      "max_tower_excess_kw": -0.004626218851626618,
+      "max_grid_excess_kva": 390.04057586857766,
+      "recomputed_cost_gbp": 7150.802930903512,
+      "elapsed_seconds": 3.35213
+    }
+  },
+  "reference_extension": {
+    "kind": "missing_named_engine_component",
+    "raw_exception": "KeyError('GE2 jacket water and exhaust')"
+  },
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.5023430340006598
+  }
+}

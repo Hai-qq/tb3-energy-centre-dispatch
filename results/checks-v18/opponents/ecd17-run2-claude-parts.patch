@@ -1,0 +1,15 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -62,7 +62,11 @@
+ 
+     def available(self, unit: str, start_min: int) -> bool:
+         end = start_min + PERIOD_MIN
+-        return not any(a < end and b > start_min for a, b in self._spans.get(unit, []))
++        # A named component outage also disables its parent unit.
++        return not any(a < end and b > start_min
++                       for name, spans in self._spans.items()
++                       if name == unit or name.startswith(unit + " ")
++                       for a, b in spans)
+ 
+ 
+ class Loading:

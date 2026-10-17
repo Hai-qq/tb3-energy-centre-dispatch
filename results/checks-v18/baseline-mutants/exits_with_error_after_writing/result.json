@@ -1,0 +1,104 @@
+{
+  "app": "results/checks-v18/baseline-mutants/mutant_apps/exits_with_error_after_writing",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 77: ",
+        "execution_1": "RuntimeError: exit 77: ",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 77,
+          "seconds": 5.666771191999942
+        },
+        {
+          "returncode": 77,
+          "seconds": 3.9427880849998473
+        }
+      ]
+    },
+    "h2": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 77: ",
+        "execution_1": "RuntimeError: exit 77: ",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 77,
+          "seconds": 7.176105444999848
+        },
+        {
+          "returncode": 77,
+          "seconds": 3.6612628330003645
+        }
+      ]
+    },
+    "h3": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 77: ",
+        "execution_1": "RuntimeError: exit 77: ",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 77,
+          "seconds": 4.749984416999723
+        },
+        {
+          "returncode": 77,
+          "seconds": 4.744955038000626
+        }
+      ]
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 77: ",
+        "execution_1": "RuntimeError: exit 77: ",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 77,
+          "seconds": 5.440383713999836
+        },
+        {
+          "returncode": 77,
+          "seconds": 6.781914236000375
+        }
+      ]
+    },
+    "visible": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 77: ",
+        "execution_1": "RuntimeError: exit 77: ",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 77,
+          "seconds": 5.123852235001323
+        },
+        {
+          "returncode": 77,
+          "seconds": 4.83077756899911
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "98848b1f2d64da579a8e780f37000fb7bf216edcb8edadc193ef17af914b9a00",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "5a23a9e6619c4c979a89c0df7897905a241a8297a90dbcf61950d8a00471ba43",
+    "planner/plant.py": "05ec4ec77a29a8b0ed3ce0cd26c3f749cf7b9880d99fcf4cdcb93f1fda887d11",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

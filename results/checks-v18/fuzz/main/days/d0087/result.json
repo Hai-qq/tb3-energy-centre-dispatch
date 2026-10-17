@@ -1,0 +1,52 @@
+{
+  "id": "d0087",
+  "index": 86,
+  "season": "summer",
+  "scenario": 5,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0006763491101651198,
+      "max_heat_balance_kw": 0.0010563380281496393,
+      "max_tower_excess_kw": -3.535332995299541,
+      "max_grid_excess_kva": 1357.6353743351679,
+      "recomputed_cost_gbp": 8060.130772200764,
+      "elapsed_seconds": 4.073824,
+      "stderr": "warning: 12:00: the demand cannot be met within the connection's capacity\nwarning: 12:30: the demand cannot be met within the connection's capacity\nwarning: 13:00: the demand cannot be met within the connection's capacity\nwarning: 13:30: the demand cannot be met within the connection's capacity\nwarning: 14:00: the demand cannot be met within the connection's capacity\nwarning: 14:30: the demand cannot be met within the connection's capacity\nwarning: 15:00: the demand cannot be met within the connection's capacity\nwarning: 15:30: the demand cannot be met within the connection's capacity\nwarning: 16:00: the demand cannot be met within the connection's capacity\nwarning: 16:30: the demand cannot be met within the connection's capacity\nwarning: 17:00: the demand cannot be met within the connection's capacity\nwarning: 17:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 12:00')",
+      "elapsed_seconds": 1.813022
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0007402723121003874,
+      "max_heat_balance_kw": 0.0007943661972831251,
+      "max_tower_excess_kw": -0.004473850643080368,
+      "max_grid_excess_kva": 1357.6353743351679,
+      "recomputed_cost_gbp": 8042.03409164476,
+      "elapsed_seconds": 3.05291
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.4330534319997241
+  }
+}

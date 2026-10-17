@@ -1,0 +1,33 @@
+{
+  "all_changes_within_allowed_paths": true,
+  "tracked_changes": [
+    "tasks/energy-centre-dispatch/solution/app/planner/optimize.py",
+    "tasks/energy-centre-dispatch/tests/days/h2/demand.csv",
+    "tasks/energy-centre-dispatch/tests/days/h2/status.json",
+    "tasks/energy-centre-dispatch/tests/days/h3/status.json",
+    "tasks/energy-centre-dispatch/tests/days/h4/status.json",
+    "tasks/energy-centre-dispatch/tests/reference.py",
+    "tasks/energy-centre-dispatch/tests/test_plans.py",
+    "tools/build_energy_days.py",
+    "tools/energy_mutants.py",
+    "tools/fresh_days.py"
+  ],
+  "new_file_count": 5538,
+  "fixed_plant_supply_bytes_unchanged": {
+    "visible/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "visible/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h1/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "h1/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h2/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "h2/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h3/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "h3/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h4/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "h4/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee"
+  },
+  "removed_own_untracked_archive_bytecode": [
+    "archive/energy-centre-dispatch-v17/tests/__pycache__/test_plans.cpython-313-pytest-9.1.1.pyc",
+    "archive/energy-centre-dispatch-v17/tests/__pycache__/reference.cpython-313.pyc"
+  ],
+  "credential_pattern_matches": 0
+}

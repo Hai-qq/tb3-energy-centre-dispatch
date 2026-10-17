@@ -1,0 +1,54 @@
+{
+  "seed": 180018,
+  "days": 96,
+  "python": "3.13.16 (main, Oct  3 2026, 01:06:22) [Clang 22.1.3 ]",
+  "workers": 2,
+  "milp_sample_every": 4,
+  "sample_rule": "((index // 4) + index % 4) % N == 0, plus every suspicious case",
+  "reference": "archive/energy-centre-dispatch-v17",
+  "apps": {
+    "v16_claude": "results/v16-trials/ecd16-run2-claude/app",
+    "v17_codex_parts": "results/checks-v18/opponents/ecd17-run2-codex-parts/app",
+    "v17_claude_parts": "results/checks-v18/opponents/ecd17-run2-claude-parts/app"
+  },
+  "units": [
+    "AC1",
+    "AC1 absorber and condenser",
+    "AC1 generator",
+    "B1",
+    "B2",
+    "CT1",
+    "CT2",
+    "EC1",
+    "EC1 condenser",
+    "EC2",
+    "EC2 condenser",
+    "GE1",
+    "GE1 LT radiator",
+    "GE1 intercooler",
+    "GE1 jacket water and exhaust",
+    "GE2",
+    "GE2 LT radiator",
+    "GE2 intercooler",
+    "GE2 jacket water and exhaust",
+    "PHE1",
+    "PV1"
+  ],
+  "semantics": "original archived v17 except explicitly marked jacket/exhaust extension",
+  "elapsed_seconds": 479.7708985730005,
+  "seasons": {
+    "winter": 24,
+    "spring": 24,
+    "summer": 24,
+    "autumn": 24
+  },
+  "feasible_days": 96,
+  "reference_extended_days": 10,
+  "milp_solved": 24,
+  "milp_infeasible_or_error": 0,
+  "app_failure_days": {
+    "v16_claude": 0,
+    "v17_codex_parts": 0,
+    "v17_claude_parts": 0
+  }
+}

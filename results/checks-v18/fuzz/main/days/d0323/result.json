@@ -1,0 +1,52 @@
+{
+  "id": "d0323",
+  "index": 322,
+  "season": "summer",
+  "scenario": 0,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0006452878659217731,
+      "max_heat_balance_kw": 0.0007464788733102523,
+      "max_tower_excess_kw": -10.187858954003332,
+      "max_grid_excess_kva": 476.8989899774124,
+      "recomputed_cost_gbp": 7373.362183107522,
+      "elapsed_seconds": 2.425885,
+      "stderr": "warning: 13:30: the demand cannot be met within the connection's capacity\nwarning: 14:00: the demand cannot be met within the connection's capacity\nwarning: 14:30: the demand cannot be met within the connection's capacity\nwarning: 15:00: the demand cannot be met within the connection's capacity\nwarning: 15:30: the demand cannot be met within the connection's capacity\nwarning: 16:00: the demand cannot be met within the connection's capacity\nwarning: 16:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 13:30')",
+      "elapsed_seconds": 1.339999
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.000657776097000351,
+      "max_heat_balance_kw": 0.0006244131454877788,
+      "max_tower_excess_kw": -0.0044331616568342724,
+      "max_grid_excess_kva": 460.7061139576124,
+      "recomputed_cost_gbp": 7362.530204323728,
+      "elapsed_seconds": 1.937968
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.3700448169984156
+  }
+}

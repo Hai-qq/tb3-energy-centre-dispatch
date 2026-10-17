@@ -1,0 +1,28 @@
+{
+  "command": [
+    "results/checks-v18/canonical_eval.py"
+  ],
+  "reference_sha256": "9a76ed87d2ef7ab13f9734ddfffec29ba8715a61ada2745851e63efe480970b4",
+  "apps": {
+    "oracle": {
+      "errors": {},
+      "failed": {},
+      "elapsed_seconds": 50.32958400899952
+    },
+    "strong-v16-claude": {
+      "errors": {},
+      "failed": {},
+      "elapsed_seconds": 38.91033628600053
+    },
+    "patched-v17-claude": {
+      "errors": {},
+      "failed": {},
+      "elapsed_seconds": 31.13034882699867
+    },
+    "patched-v17-codex": {
+      "errors": {},
+      "failed": {},
+      "elapsed_seconds": 41.0265580439991
+    }
+  }
+}

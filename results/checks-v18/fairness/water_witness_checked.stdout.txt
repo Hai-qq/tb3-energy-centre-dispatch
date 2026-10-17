@@ -1,0 +1,36 @@
+{
+  "status": "PASS: 48 periods physically consistent under continuous-header interpretation",
+  "plan_source": "results/checks-v18/fuzz/water-probes/days/w1/v17_codex_parts.plan.json",
+  "warmer_periods": [
+    {
+      "start": "16:00",
+      "engines_kwe": {
+        "GE1": 600.0,
+        "GE2": 400.0
+      },
+      "chillers_kw": {
+        "EC1": 0.0,
+        "EC2": 700.0,
+        "AC1": 0.0
+      },
+      "site_electricity_kw": 550.0,
+      "site_reactive_kvar": 93.5,
+      "import_kw": 0.0,
+      "export_kw": 250.0,
+      "coldest_header_c": 21,
+      "inferred_common_header_c": 24.259259259259277,
+      "ec_input_kw": 144.0,
+      "coldest_ec_input_kw": 130.84112149532712,
+      "coldest_recompute_error_kw": 13.158878504672884,
+      "tower_rejection_kw": 844.0,
+      "tower_capacity_kw": 4000.0,
+      "signed_connection_kva": 343.2368909787853
+    }
+  ],
+  "recomputed_cost_gbp": 6014.361415012319,
+  "reported_cost_gbp": 6014.361415012,
+  "engine_starts": 0,
+  "v16_discrete_header_plan_cost_gbp": 6034.446,
+  "cost_saving_vs_v16_plan_gbp": 20.084584987999733,
+  "qualification": "A feasibility and arithmetic witness, not proof of site control authorization or an independent optimality certificate."
+}

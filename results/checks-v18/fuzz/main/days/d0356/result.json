@@ -1,0 +1,52 @@
+{
+  "id": "d0356",
+  "index": 355,
+  "season": "autumn",
+  "scenario": 0,
+  "base": "h3",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0008461538462647411,
+      "max_heat_balance_kw": 0.0007267605635661312,
+      "max_tower_excess_kw": -1578.8163596966415,
+      "max_grid_excess_kva": 401.62455735259505,
+      "recomputed_cost_gbp": 5883.875308100314,
+      "elapsed_seconds": 3.958217,
+      "stderr": "warning: 02:30: the demand cannot be met within the connection's capacity\nwarning: 03:00: the demand cannot be met within the connection's capacity\nwarning: 03:30: the demand cannot be met within the connection's capacity\nwarning: 04:00: the demand cannot be met within the connection's capacity\nwarning: 04:30: the demand cannot be met within the connection's capacity\nwarning: 05:00: the demand cannot be met within the connection's capacity\nwarning: 05:30: the demand cannot be met within the connection's capacity\nwarning: 06:00: the demand cannot be met within the connection's capacity\nwarning: 06:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 02:30')",
+      "elapsed_seconds": 0.514854
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0008461538462647411,
+      "max_heat_balance_kw": 0.0007267605635661312,
+      "max_tower_excess_kw": -1578.8163596966415,
+      "max_grid_excess_kva": 401.62455735259505,
+      "recomputed_cost_gbp": 5883.875308100314,
+      "elapsed_seconds": 2.545949
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.2935343629997078
+  }
+}
