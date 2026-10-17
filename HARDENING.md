@@ -163,7 +163,9 @@ What this round shows:
 - The strongest deliverable so far, `results/v16-trials/ecd16-run2-claude/app`, passes every test
   of v17: v17's new checks catch only weaker implementations.
 - v17 is the first version every trial failed: Opus 0 of 3 and GPT 0 of 3, all six on the parts' outages and three of them
-  on the header as well. Whether CI's trajectory review counts the parts' outages as specified has not been checked yet.
+  on the header as well. CI's trajectory review found no specification failure in any of the six and the failures on the
+  stated crux; the rubric review passes (34 pass, 1 not applicable); Opus declined its /cheat trial and OpenAI's safety
+  filter stopped GPT's ([`results/checks-v17/README.md`](results/checks-v17/README.md)).
 - Two verifier ambiguities came to light and are fixed in v16.1 and v17 (the absorption chiller's
   auxiliary power in the towers' load; a PV outage over part of a half-hour). Both are in the
   delivered v8.1 too.
