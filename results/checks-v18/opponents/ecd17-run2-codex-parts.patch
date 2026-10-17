@@ -1,0 +1,12 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -32,7 +32,8 @@
+     """A constant half-hour output must be available throughout the half-hour."""
+     start = _minutes(hhmm)
+     for outage in day.status.get("outages", []):
+-        if outage["unit"] != unit_id:
++        # A named component outage also disables its parent unit.
++        if outage["unit"] != unit_id and not outage["unit"].startswith(unit_id + " "):
+             continue
+         lo, hi = _minutes(outage["from"]), _minutes(outage["to"])
+         intervals = [(lo, hi)] if hi >= lo else [(lo, 1440), (0, hi)]

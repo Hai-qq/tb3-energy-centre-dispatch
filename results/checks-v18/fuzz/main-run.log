@@ -1,0 +1,436 @@
+1/384 d0002 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+2/384 d0001 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+3/384 d0003 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 02:00')", 'v17_claude_parts': ['test_connection_limits']}
+4/384 d0004 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+5/384 d0005 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+6/384 d0007 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 10:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 10:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 10:00')"}
+7/384 d0006 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+8/384 d0008 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+9/384 d0009 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+10/384 d0011 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 16:30')", 'v17_codex_parts': "RuntimeError('no feasible loading at 16:30')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 16:30')"}
+11/384 d0010 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+12/384 d0012 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+13/384 d0013 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 08:30')", 'v17_claude_parts': ['test_connection_limits']}
+14/384 d0014 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+15/384 d0015 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 07:30')", 'v17_claude_parts': ['test_connection_limits']}
+16/384 d0016 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+17/384 d0018 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+18/384 d0017 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+19/384 d0019 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+20/384 d0021 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+21/384 d0020 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+22/384 d0022 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+23/384 d0023 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': ['test_connection_limits']}
+24/384 d0024 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+25/384 d0025 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+26/384 d0026 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+27/384 d0027 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 17:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 12:30')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 17:00')"}
+28/384 d0028 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+29/384 d0029 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:30')", 'v17_claude_parts': ['test_connection_limits']}
+30/384 d0031 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 11:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 09:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 11:00')"}
+31/384 d0030 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+32/384 d0032 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+33/384 d0034 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+34/384 d0033 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+35/384 d0035 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': ['test_connection_limits']}
+36/384 d0036 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+37/384 d0037 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+38/384 d0039 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+39/384 d0038 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+40/384 d0041 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+41/384 d0040 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+42/384 d0043 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+43/384 d0042 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+44/384 d0045 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 19:30')", 'v17_claude_parts': ['test_connection_limits']}
+45/384 d0044 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+46/384 d0047 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+47/384 d0046 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+48/384 d0048 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 06:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 06:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 06:00')"}
+49/384 d0049 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+50/384 d0051 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 12:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 12:00')"}
+51/384 d0050 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+52/384 d0052 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+53/384 d0054 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+54/384 d0053 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+55/384 d0055 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+56/384 d0056 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+57/384 d0057 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+58/384 d0059 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 15:00')", 'v17_claude_parts': ['test_connection_limits']}
+59/384 d0058 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 16:00')", 'v17_claude_parts': ['test_connection_limits']}
+60/384 d0060 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 07:00')", 'v17_claude_parts': ['test_connection_limits']}
+61/384 d0062 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 21:00')", 'v17_claude_parts': ['test_connection_limits']}
+62/384 d0061 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 20:00')", 'v17_claude_parts': ['test_connection_limits']}
+63/384 d0063 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+64/384 d0064 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+65/384 d0065 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+66/384 d0066 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+67/384 d0067 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+68/384 d0068 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+69/384 d0069 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+70/384 d0071 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+71/384 d0070 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+72/384 d0072 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+73/384 d0073 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+74/384 d0075 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+75/384 d0074 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+76/384 d0076 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+77/384 d0077 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 08:00')", 'v17_claude_parts': ['test_connection_limits']}
+78/384 d0079 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:30')", 'v17_claude_parts': ['test_connection_limits']}
+79/384 d0078 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+80/384 d0080 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+81/384 d0081 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+82/384 d0082 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+83/384 d0083 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': ['test_connection_limits']}
+84/384 d0085 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+85/384 d0084 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+86/384 d0086 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+87/384 d0087 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': ['test_connection_limits']}
+88/384 d0088 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+89/384 d0089 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+90/384 d0090 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 07:00')", 'v17_claude_parts': ['test_connection_limits']}
+91/384 d0091 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 16:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 16:00')"}
+92/384 d0093 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 01:30')", 'v17_claude_parts': ['test_connection_limits']}
+93/384 d0092 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+94/384 d0095 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+95/384 d0094 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+96/384 d0096 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+97/384 d0097 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+98/384 d0098 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+99/384 d0099 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+100/384 d0100 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+101/384 d0101 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+102/384 d0102 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+103/384 d0103 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+104/384 d0104 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+105/384 d0105 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+106/384 d0106 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+107/384 d0107 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+108/384 d0108 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+109/384 d0109 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 17:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 17:00')"}
+110/384 d0111 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 14:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 10:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 14:00')"}
+111/384 d0110 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+112/384 d0112 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+113/384 d0113 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+114/384 d0115 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+115/384 d0114 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+116/384 d0116 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+117/384 d0117 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+118/384 d0118 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+119/384 d0119 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 14:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 14:00')"}
+120/384 d0121 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 07:00')", 'v17_claude_parts': ['test_connection_limits']}
+121/384 d0120 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+122/384 d0123 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 00:00')", 'v17_claude_parts': ['test_connection_limits']}
+123/384 d0122 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+124/384 d0124 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+125/384 d0125 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 18:30')", 'v17_claude_parts': ['test_connection_limits']}
+126/384 d0126 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+127/384 d0127 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 20:00')", 'v17_claude_parts': ['test_connection_limits']}
+128/384 d0128 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+129/384 d0129 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+130/384 d0130 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+131/384 d0131 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+132/384 d0132 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+133/384 d0133 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+134/384 d0134 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+135/384 d0135 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 17:30')", 'v17_codex_parts': "RuntimeError('no feasible loading at 12:30')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 17:30')"}
+136/384 d0137 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+137/384 d0136 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+138/384 d0139 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+139/384 d0138 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+140/384 d0140 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+141/384 d0141 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+142/384 d0143 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 03:30')", 'v17_claude_parts': ['test_connection_limits']}
+143/384 d0142 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+144/384 d0144 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+145/384 d0145 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+146/384 d0146 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+147/384 d0147 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+148/384 d0148 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+149/384 d0149 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+150/384 d0151 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': ['test_connection_limits']}
+151/384 d0150 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+152/384 d0152 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+153/384 d0153 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 16:00')", 'v17_claude_parts': ['test_connection_limits']}
+154/384 d0154 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+155/384 d0155 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 23:30')", 'v17_claude_parts': ['test_connection_limits']}
+156/384 d0156 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+157/384 d0157 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+158/384 d0158 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+159/384 d0159 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 09:30')", 'v17_claude_parts': ['test_connection_limits']}
+160/384 d0160 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+161/384 d0161 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+162/384 d0162 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+163/384 d0163 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+164/384 d0164 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+165/384 d0165 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+166/384 d0166 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+167/384 d0167 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': ['test_connection_limits']}
+168/384 d0168 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+169/384 d0169 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+170/384 d0170 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+171/384 d0171 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+172/384 d0172 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+173/384 d0173 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+174/384 d0174 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+175/384 d0175 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+176/384 d0176 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+177/384 d0177 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+178/384 d0178 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+179/384 d0179 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+180/384 d0181 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 05:30')", 'v17_claude_parts': ['test_connection_limits']}
+181/384 d0180 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+182/384 d0183 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+183/384 d0182 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+184/384 d0184 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+185/384 d0185 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+186/384 d0186 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+187/384 d0187 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': ['test_connection_limits']}
+188/384 d0188 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+189/384 d0189 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+190/384 d0190 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+191/384 d0191 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+192/384 d0192 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+193/384 d0193 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+194/384 d0194 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+195/384 d0195 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+196/384 d0196 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+197/384 d0198 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+198/384 d0197 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+199/384 d0199 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 11:00')", 'v17_claude_parts': ['test_connection_limits']}
+200/384 d0200 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+201/384 d0201 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+202/384 d0202 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+203/384 d0203 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+204/384 d0204 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+205/384 d0205 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+206/384 d0206 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 10:30')", 'v17_claude_parts': ['test_connection_limits']}
+207/384 d0207 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 11:00')", 'v17_claude_parts': ['test_connection_limits']}
+208/384 d0208 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+209/384 d0209 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+210/384 d0211 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 05:00')", 'v17_claude_parts': ['test_connection_limits']}
+211/384 d0210 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+212/384 d0212 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': ['test_connection_limits']}
+213/384 d0213 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+214/384 d0215 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:30')", 'v17_claude_parts': ['test_connection_limits']}
+215/384 d0214 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+216/384 d0217 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+217/384 d0216 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+218/384 d0219 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+219/384 d0218 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+220/384 d0221 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+221/384 d0220 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+222/384 d0222 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+223/384 d0223 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+224/384 d0224 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+225/384 d0225 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+226/384 d0227 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+227/384 d0226 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+228/384 d0228 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+229/384 d0229 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+230/384 d0230 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+231/384 d0231 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+232/384 d0232 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+233/384 d0233 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+234/384 d0234 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+235/384 d0235 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+236/384 d0236 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+237/384 d0237 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 15:00')", 'v17_claude_parts': ['test_connection_limits']}
+238/384 d0238 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 08:00')", 'v17_claude_parts': ['test_connection_limits']}
+239/384 d0239 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+240/384 d0240 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+241/384 d0242 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+242/384 d0241 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+243/384 d0243 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 09:30')", 'v17_claude_parts': ['test_connection_limits']}
+244/384 d0244 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+245/384 d0245 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+246/384 d0247 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+247/384 d0246 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+248/384 d0248 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+249/384 d0249 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+250/384 d0250 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 23:30')", 'v17_claude_parts': ['test_connection_limits']}
+251/384 d0251 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 17:00')", 'v17_claude_parts': ['test_connection_limits']}
+252/384 d0252 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+253/384 d0253 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+254/384 d0254 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+255/384 d0255 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 16:30')", 'v17_claude_parts': ['test_connection_limits']}
+256/384 d0256 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 15:30')", 'v17_claude_parts': ['test_connection_limits']}
+257/384 d0257 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+258/384 d0258 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+259/384 d0259 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 19:30')", 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 19:30')"}
+260/384 d0260 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+261/384 d0262 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+262/384 d0261 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+263/384 d0263 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:30')", 'v17_claude_parts': ['test_connection_limits']}
+264/384 d0264 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+265/384 d0265 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+266/384 d0266 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+267/384 d0267 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+268/384 d0268 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+269/384 d0269 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+270/384 d0270 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+271/384 d0271 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+272/384 d0272 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+273/384 d0273 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+274/384 d0275 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 04:30')", 'v17_claude_parts': ['test_connection_limits']}
+275/384 d0274 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+276/384 d0276 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+277/384 d0277 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+278/384 d0279 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 13:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 13:00')"}
+279/384 d0278 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+280/384 d0280 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+281/384 d0281 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+282/384 d0282 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+283/384 d0283 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+284/384 d0284 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+285/384 d0285 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+286/384 d0286 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+287/384 d0287 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 14:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 11:30')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 14:00')"}
+288/384 d0288 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 10:30')", 'v17_claude_parts': ['test_connection_limits']}
+289/384 d0289 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+290/384 d0290 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+291/384 d0291 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+292/384 d0292 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+293/384 d0293 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+294/384 d0295 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 02:30')", 'v17_claude_parts': ['test_connection_limits']}
+295/384 d0294 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+296/384 d0297 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+297/384 d0296 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+298/384 d0299 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+299/384 d0298 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+300/384 d0300 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+301/384 d0301 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 05:00')", 'v17_claude_parts': ['test_connection_limits']}
+302/384 d0302 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+303/384 d0304 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 04:30')", 'v17_claude_parts': ['test_connection_limits']}
+304/384 d0303 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 14:30')", 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 14:30')"}
+305/384 d0306 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+306/384 d0305 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+307/384 d0307 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+308/384 d0308 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+309/384 d0309 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+310/384 d0311 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 03:30')", 'v17_claude_parts': ['test_connection_limits']}
+311/384 d0310 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+312/384 d0312 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+313/384 d0313 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 00:30')", 'v17_claude_parts': ['test_connection_limits']}
+314/384 d0315 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+315/384 d0314 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 06:00')", 'v17_claude_parts': ['test_connection_limits']}
+316/384 d0316 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+317/384 d0318 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+318/384 d0317 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+319/384 d0319 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+320/384 d0320 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+321/384 d0321 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+322/384 d0322 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+323/384 d0323 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': ['test_connection_limits']}
+324/384 d0324 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+325/384 d0325 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+326/384 d0326 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+327/384 d0327 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 11:30')", 'v17_claude_parts': ['test_connection_limits']}
+328/384 d0328 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+329/384 d0329 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+330/384 d0330 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+331/384 d0331 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+332/384 d0332 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+333/384 d0333 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': ['test_connection_limits']}
+334/384 d0335 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 12:30')", 'v17_claude_parts': ['test_connection_limits']}
+335/384 d0334 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+336/384 d0336 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+337/384 d0337 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+338/384 d0339 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 08:30')", 'v17_claude_parts': ['test_connection_limits']}
+339/384 d0338 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+340/384 d0340 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+341/384 d0341 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 18:00')", 'v17_claude_parts': ['test_connection_limits']}
+342/384 d0342 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+343/384 d0343 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 14:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 14:00')"}
+344/384 d0344 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+345/384 d0346 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+346/384 d0345 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+347/384 d0347 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 17:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 13:30')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 17:00')"}
+348/384 d0348 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+349/384 d0349 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 11:30')", 'v17_claude_parts': ['test_connection_limits']}
+350/384 d0351 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+351/384 d0350 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 05:30')", 'v17_claude_parts': ['test_connection_limits']}
+352/384 d0352 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+353/384 d0353 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+354/384 d0354 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+355/384 d0355 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+356/384 d0356 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 02:30')", 'v17_claude_parts': ['test_connection_limits']}
+357/384 d0358 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+358/384 d0357 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+359/384 d0359 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+360/384 d0360 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+361/384 d0361 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+362/384 d0363 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+363/384 d0362 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+364/384 d0365 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+365/384 d0364 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+366/384 d0367 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 13:00')", 'v17_codex_parts': "RuntimeError('no feasible loading at 09:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 13:00')"}
+367/384 d0366 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 09:00')", 'v17_claude_parts': ['test_connection_limits']}
+368/384 d0368 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 08:30')", 'v17_claude_parts': ['test_connection_limits']}
+369/384 d0369 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 14:00')", 'v17_claude_parts': ['test_connection_limits']}
+370/384 d0370 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+371/384 d0371 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 13:00')", 'v17_claude_parts': ['test_connection_limits']}
+372/384 d0372 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+373/384 d0373 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+374/384 d0374 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+375/384 d0375 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 18:00')", 'v17_claude_parts': ['test_connection_limits']}
+376/384 d0376 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+377/384 d0377 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 23:30')", 'v17_claude_parts': ['test_connection_limits']}
+378/384 d0378 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 17:00')", 'v17_claude_parts': ['test_connection_limits']}
+379/384 d0379 feasible=[] failures={'v16_claude': ['test_connection_limits'], 'v17_codex_parts': "RuntimeError('no feasible loading at 00:30')", 'v17_claude_parts': ['test_connection_limits']}
+380/384 d0380 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+381/384 d0381 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+382/384 d0382 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+383/384 d0383 feasible=[] failures={'v16_claude': "RuntimeError('no feasible loading of the plant at 13:30')", 'v17_codex_parts': "RuntimeError('no feasible loading at 12:00')", 'v17_claude_parts': "RuntimeError('no feasible loading of the plant at 13:30')"}
+384/384 d0384 feasible=['v16_claude', 'v17_codex_parts', 'v17_claude_parts'] failures={}
+{
+  "seed": 180017,
+  "days": 384,
+  "python": "3.13.16 (main, Oct  3 2026, 01:06:22) [Clang 22.1.3 ]",
+  "workers": 2,
+  "reference": "archive/energy-centre-dispatch-v17",
+  "apps": {
+    "v16_claude": "results/v16-trials/ecd16-run2-claude/app",
+    "v17_codex_parts": "results/checks-v18/opponents/ecd17-run2-codex-parts/app",
+    "v17_claude_parts": "results/checks-v18/opponents/ecd17-run2-claude-parts/app"
+  },
+  "units": [
+    "AC1",
+    "AC1 absorber and condenser",
+    "AC1 generator",
+    "B1",
+    "B2",
+    "CT1",
+    "CT2",
+    "EC1",
+    "EC1 condenser",
+    "EC2",
+    "EC2 condenser",
+    "GE1",
+    "GE1 LT radiator",
+    "GE1 intercooler",
+    "GE1 jacket water and exhaust",
+    "GE2",
+    "GE2 LT radiator",
+    "GE2 intercooler",
+    "GE2 jacket water and exhaust",
+    "PHE1",
+    "PV1"
+  ],
+  "semantics": "original archived v17 except explicitly marked jacket/exhaust extension",
+  "elapsed_seconds": 1945.8123844560005,
+  "seasons": {
+    "spring": 96,
+    "winter": 96,
+    "summer": 96,
+    "autumn": 96
+  },
+  "feasible_days": 280,
+  "reference_extended_days": 71,
+  "milp_solved": 43,
+  "milp_infeasible_or_error": 104,
+  "app_failure_days": {
+    "v16_claude": 104,
+    "v17_codex_parts": 104,
+    "v17_claude_parts": 104
+  }
+}

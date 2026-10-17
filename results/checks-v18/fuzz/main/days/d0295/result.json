@@ -1,0 +1,52 @@
+{
+  "id": "d0295",
+  "index": 294,
+  "season": "summer",
+  "scenario": 1,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0008000000000976115,
+      "max_heat_balance_kw": 0.0003438967137583404,
+      "max_tower_excess_kw": -329.6314736842105,
+      "max_grid_excess_kva": 7.134405118282075,
+      "recomputed_cost_gbp": 5610.170994384287,
+      "elapsed_seconds": 2.236335,
+      "stderr": "warning: 02:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 02:30')",
+      "elapsed_seconds": 0.23355
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0008000000000976115,
+      "max_heat_balance_kw": 0.0003438967137583404,
+      "max_tower_excess_kw": -329.6314736842105,
+      "max_grid_excess_kva": 7.134405118282075,
+      "recomputed_cost_gbp": 5610.170994384287,
+      "elapsed_seconds": 1.95232
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.36207018200002494
+  }
+}

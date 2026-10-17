@@ -1,0 +1,55 @@
+{
+  "id": "d0183",
+  "index": 182,
+  "season": "summer",
+  "scenario": 5,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0006000000000554451,
+      "max_heat_balance_kw": 0.0005943661971627989,
+      "max_tower_excess_kw": -12.59195520791718,
+      "max_grid_excess_kva": 1146.2608605749706,
+      "recomputed_cost_gbp": 8065.578241882044,
+      "elapsed_seconds": 2.272972,
+      "stderr": "warning: 13:00: the demand cannot be met within the connection's capacity\nwarning: 13:30: the demand cannot be met within the connection's capacity\nwarning: 14:30: the demand cannot be met within the connection's capacity\nwarning: 16:00: the demand cannot be met within the connection's capacity\nwarning: 16:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 13:00')",
+      "elapsed_seconds": 0.95989
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0006092973470117613,
+      "max_heat_balance_kw": 0.00039718309864156254,
+      "max_tower_excess_kw": -0.0051724804452533135,
+      "max_grid_excess_kva": 1146.2608605749706,
+      "recomputed_cost_gbp": 8063.918721981094,
+      "elapsed_seconds": 1.352188
+    }
+  },
+  "reference_extension": {
+    "kind": "missing_named_engine_component",
+    "raw_exception": "KeyError('GE1 jacket water and exhaust')"
+  },
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.2676881629995478
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-02-10",
+  "running_at_midnight": [
+    "GE2"
+  ],
+  "outages": [
+    {
+      "unit": "EC1",
+      "from": "06:00",
+      "to": "07:30"
+    },
+    {
+      "unit": "EC2 condenser",
+      "from": "00:30",
+      "to": "01:00"
+    },
+    {
+      "unit": "EC1 condenser",
+      "from": "17:00",
+      "to": "18:00"
+    }
+  ]
+}

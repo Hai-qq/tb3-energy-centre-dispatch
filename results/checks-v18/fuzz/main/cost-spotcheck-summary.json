@@ -1,0 +1,17 @@
+{
+  "batch": "main",
+  "selection": "every fourth feasible case separately in each season",
+  "checks": 72,
+  "seasons": {
+    "autumn": 22,
+    "spring": 22,
+    "summer": 9,
+    "winter": 19
+  },
+  "reference_errors": [],
+  "failures": {
+    "v16_claude": [],
+    "v17_codex_parts": [],
+    "v17_claude_parts": []
+  }
+}

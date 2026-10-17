@@ -1,0 +1,103 @@
+{
+  "app": "results/checks-v18/baseline-mutants/mutant_apps/towers_absorber_only",
+  "days": {
+    "h1": {
+      "cost_gbp": 6317.415181062446,
+      "delta_gbp": -109.23228604059568,
+      "failures": {
+        "test_cooling_towers": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 96, in check_app\n    try:\n    \n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 85, in test_cooling_towers\n    assert (flows[\"rejected\"] <= day.tower_max + KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.390218647000438
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.113217883000289
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8460.684741328023,
+      "delta_gbp": -9.636619870434515e-05,
+      "failures": {},
+      "milp_gbp": 8460.684837694222,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.352894842999376
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.524188728000809
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5345.191044264344,
+      "delta_gbp": 4.736275695904624e-05,
+      "failures": {},
+      "milp_gbp": 5345.190996901587,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 19.917260459999852
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.066942340000423
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7227.737117982449,
+      "delta_gbp": -83.23472255058459,
+      "failures": {
+        "test_cooling_towers": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 96, in check_app\n    try:\n    \n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 85, in test_cooling_towers\n    assert (flows[\"rejected\"] <= day.tower_max + KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.6221466689994486
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.838716897999802
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 5.200485557999855
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.355549812999925
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "5a23a9e6619c4c979a89c0df7897905a241a8297a90dbcf61950d8a00471ba43",
+    "planner/plant.py": "6baf7011443c136424f9e8f7b8b0d07540914e358a9bdd226dcb989d0196216c",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

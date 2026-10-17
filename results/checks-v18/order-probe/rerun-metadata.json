@@ -1,0 +1,46 @@
+{
+  "execution_kind": "new_rerun_after_environment_cleanup",
+  "original_uncommitted_outputs_lost": true,
+  "old_logs_reconstructed": false,
+  "probe_script_recovered_from": "complete source in the earlier conversation apply_patch",
+  "python_executable": "/workspace/scratch/3a594630faca/ecd-venv/bin/python",
+  "versions": {
+    "python": "3.13.16 (main, Oct  3 2026, 01:06:22) [Clang 22.1.3 ]",
+    "numpy": "2.3.4",
+    "scipy": "1.17.0",
+    "pytest": "9.1.1"
+  },
+  "source_sha256": {
+    "results/checks-v18/order-probe/run.py": "104edd1b74ea79d48631ea1e52ab9129b779ba9d4e32c924ae8124f5d216389d",
+    "results/checks-v18/order-probe/rerun.py": "58e5f15dcef6167820e8c27e2743278b8834ba0a0c5a7d0fe0055f2d09d2b30b",
+    "tools/fuzz_v18.py": "289af187d73e7f3686a0e547264c8f862d8a865828eed7178d4055c7eb8e258b",
+    "archive/energy-centre-dispatch-v17/tests/reference.py": "6f4a64c8d66334be60e50f7813f85aec2beb9f3d9a78049553809b1e6766c69d",
+    "archive/energy-centre-dispatch-v17/tests/test_plans.py": "e380ee5429166a8f4ac8da9a5ed2ead7a52277fb804cbdc22ee990145c2403eb",
+    "results/v16-trials/ecd16-run2-claude/app/dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "results/v16-trials/ecd16-run2-claude/app/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "results/v16-trials/ecd16-run2-claude/app/planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+    "results/v16-trials/ecd16-run2-claude/app/planner/optimize.py": "e1d50e78f3318398fe7ccf28468ee6ed4815576647d44995649f9fd0997db31a",
+    "results/v16-trials/ecd16-run2-claude/app/planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+    "results/v16-trials/ecd16-run2-claude/app/planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3",
+    "results/checks-v18/opponents/ecd17-run2-codex-parts/app/dispatch.py": "d1ff285124cfac6feb3a0c075aebbefb2cd3891c1c61a49d39523f0649477623",
+    "results/checks-v18/opponents/ecd17-run2-codex-parts/app/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "results/checks-v18/opponents/ecd17-run2-codex-parts/app/planner/data.py": "afcba995c05929a81ec18754ec0ca42395ce17db47db4d5fce1cd331b8a16cb3",
+    "results/checks-v18/opponents/ecd17-run2-codex-parts/app/planner/optimize.py": "99014fffeb7e90808ee13ef2b44efeeab0b7337dc70b3b825291ef2a92ed2028",
+    "results/checks-v18/opponents/ecd17-run2-codex-parts/app/planner/plant.py": "a953fb68270fb68902859b1781254a4fabe0bb415b524a4fc6e0a5995b2da4de",
+    "results/checks-v18/opponents/ecd17-run2-codex-parts/app/planner/tariff.py": "f0fa46082aad4b4fadde38e88b3674a7d9c9591166afe93004c4f467bf8e1758",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts/app/dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts/app/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts/app/planner/data.py": "6a8bca23659524bcf07e92ec02a5473139d3d70b3f6e571f1c289bbf6564c0cb",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts/app/planner/optimize.py": "f12811a6396748f69699271823805c36dfc34f165cb3dd309294379e4c4a95f9",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts/app/planner/plant.py": "fcc200aa9bf4f32563399da1d2f374da5ebc93cc08a7b549d5937dc1dce9f1a4",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts/app/planner/tariff.py": "b73f7c5529486b068b42b956c46a9d95d742b7bab6f0f1816676c5a875d5f178"
+  },
+  "started_utc": "2026-10-17T11:00:43.123763+00:00",
+  "command": [
+    "/workspace/scratch/3a594630faca/ecd-venv/bin/python",
+    "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/order-probe/run.py"
+  ],
+  "finished_utc": "2026-10-17T11:01:07.132584+00:00",
+  "elapsed_seconds": 24.008590204997745,
+  "exit_code": 0
+}

@@ -1,0 +1,104 @@
+{
+  "app": "results/v17-trials/ecd17-run3-codex/app",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.9371901170006822
+        },
+        {
+          "returncode": 1,
+          "seconds": 1.5334399769999436
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 7579.698848918091,
+      "delta_gbp": -880.9859887761304,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 96, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 53, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 8460.684837694222,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.201085329000307
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8227364530002887
+        }
+      ]
+    },
+    "h3": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 13:30\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 13:30\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 1.9480618870002218
+        },
+        {
+          "returncode": 1,
+          "seconds": 2.0060298349999357
+        }
+      ]
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run3-codex/app/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 1.1466468739999982
+        },
+        {
+          "returncode": 1,
+          "seconds": 1.0374191959999735
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.11825178899926
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.777060352999797
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "01d547ab3c9f7a75808ac9334d110383fdc64b0035862c9a83e2838ce60e2629",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "6f53106d5f7b0b7fd8fce9f625dd36d202e90aeb948380e958a1d88c6a4f6ae0",
+    "planner/optimize.py": "38c83d0836278cb4344ce7ac95a2c731fae937fba5db63bb4bfc399e9e20928a",
+    "planner/plant.py": "e1950b8fb784b56bb299b1987f58cf92add246b3d5508048cd8ce46b522042e3",
+    "planner/tariff.py": "f0fa46082aad4b4fadde38e88b3674a7d9c9591166afe93004c4f467bf8e1758"
+  }
+}

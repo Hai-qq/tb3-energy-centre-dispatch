@@ -1,0 +1,111 @@
+{
+  "app": "results/checks-v18/targeted-mutants/mutant_apps/kva_positive_reactive_only",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.647743955096,
+      "delta_gbp": 0.0002768520544123021,
+      "failures": {},
+      "milp_gbp": 6426.647467103042,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.6802151940009935,
+          "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.108916073999353,
+          "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8876.15674208579,
+      "delta_gbp": -3.57524917291812,
+      "failures": {
+        "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tasks/energy-centre-dispatch/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 8879.731991258708,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.6592913339991355,
+          "sha256": "cd63ef3eb95c985dd495ae5ef3bb6f176f2e81ee7fc397cfb4930b509f67f6f4"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.4060293900001852,
+          "sha256": "cd63ef3eb95c985dd495ae5ef3bb6f176f2e81ee7fc397cfb4930b509f67f6f4"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {},
+      "milp_gbp": 5375.538040469284,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.635874382998736,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.522425089000535,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 5.613954119000482,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.4383916730002966,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.247805427999992,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.090911764998964,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "764a23762d784ba0a48a6a7ac2f3d2857eb4446cfc89fdbecd8cde6326774387",
+    "planner/plant.py": "05ec4ec77a29a8b0ed3ce0cd26c3f749cf7b9880d99fcf4cdcb93f1fda887d11",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

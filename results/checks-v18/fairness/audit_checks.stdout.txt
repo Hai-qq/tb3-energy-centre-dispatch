@@ -1,0 +1,216 @@
+{
+  "runtime": {
+    "python": "3.13.16",
+    "numpy": "2.3.4"
+  },
+  "visibility": {
+    "files_compared": 13,
+    "mismatches": [],
+    "other_version_mismatches": {
+      "v8": [
+        "environment/Dockerfile"
+      ],
+      "v8.1": [],
+      "v16": [],
+      "v17": []
+    },
+    "v17_reference_sha256": "6f4a64c8d66334be60e50f7813f85aec2beb9f3d9a78049553809b1e6766c69d"
+  },
+  "names": {
+    "all_named_endpoints": [
+      "AC1 absorber and condenser",
+      "AC1 generator",
+      "B1",
+      "B2",
+      "CT1",
+      "CT2",
+      "EC1 condenser",
+      "EC2 condenser",
+      "GE1 LT radiator",
+      "GE1 intercooler",
+      "GE1 jacket water and exhaust",
+      "GE2 LT radiator",
+      "GE2 intercooler",
+      "GE2 jacket water and exhaust",
+      "PHE1",
+      "hospital buildings"
+    ],
+    "missing_from_v17_availability": [
+      "GE1 jacket water and exhaust",
+      "GE2 jacket water and exhaust",
+      "hospital buildings"
+    ],
+    "literal_component_outage_failures": {
+      "GE1 jacket water and exhaust": "KeyError: 'GE1 jacket water and exhaust'",
+      "GE2 jacket water and exhaust": "KeyError: 'GE2 jacket water and exhaust'"
+    },
+    "interpretation": "Do not treat hospital buildings as a component outage without specifying the changed demand."
+  },
+  "outages": {
+    "dependency_cases": [
+      {
+        "unit": "GE1",
+        "part": "GE1 intercooler",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "GE1",
+        "part": "GE1 LT radiator",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "GE2",
+        "part": "GE2 intercooler",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "GE2",
+        "part": "GE2 LT radiator",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "EC1",
+        "part": "EC1 condenser",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "EC2",
+        "part": "EC2 condenser",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "AC1",
+        "part": "AC1 generator",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "AC1",
+        "part": "AC1 absorber and condenser",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      }
+    ],
+    "multi_interval_union": "PASS",
+    "period_boundaries": "Outage end 13:00 leaves the 13:00 period available; a 10-minute outage disables the full containing period."
+  },
+  "pv_overlap": {
+    "forecast_kw": 257.8,
+    "unavailable_union_minutes": 15,
+    "v17_added_minutes": 20,
+    "v17_pv_max_kw": 85.93333333333335,
+    "union_based_pv_max_kw": 128.9,
+    "false_rejection_potential_kw": 42.966666666666654,
+    "finding": "Confirmed v17 verifier bug: overlapping PV outages are summed instead of unioned. All-off interpretation still passes."
+  },
+  "arithmetic": {
+    "manual_case": "GE1 750kWe (mid-segment, already running), GE2 400kWe (new start), B1 905kW, B2 830kW, EC1 650kW, EC2 520kW, AC1 355kW, grid import100kW at 22C",
+    "gas_kwh": 2756.1800000000003,
+    "cost_gbp": 160.41883,
+    "engine_ht_kw": 1562.5,
+    "aux_kw": 63.81,
+    "electric_chiller_power_kw": 200.0,
+    "absorption_drive_kw": 500.0,
+    "tower_rejection_kw_excluding_absorber_aux": 2225.0,
+    "starts": 1,
+    "status": "PASS"
+  },
+  "limits": {
+    "generator_rating_redundant_with_current_fixed_plant": {
+      "GE1": {
+        "at_rated_kva": 1263.157894736842,
+        "rated_kva": 1500
+      },
+      "GE2": {
+        "at_rated_kva": 842.1052631578948,
+        "rated_kva": 1000
+      }
+    },
+    "ac_hot_water_satisfied_c": {
+      "engine_ht_flow": 90,
+      "ac_required_minimum": 85
+    },
+    "lt_not_usable_for_ac_c": {
+      "lt_flow": 40,
+      "ac_required_minimum": 85
+    },
+    "negative_net_kvar_at_site50_and_engines2000kwe": -607.3682103577263,
+    "connection_pmax_kw_at_negative_q": 1058.066092948287,
+    "overestimate_if_negative_q_ignored_kw": 161.93390705171305,
+    "actual_v17_site_kvar_ranges": {
+      "visible": [
+        201.9,
+        327.3
+      ],
+      "h1": [
+        199.7,
+        345.9
+      ],
+      "h2": [
+        50.0,
+        352.1
+      ],
+      "h3": [
+        198.1,
+        323.0
+      ],
+      "h4": [
+        214.7,
+        350.5
+      ]
+    },
+    "actual_v17_absolute_net_kvar_bound": 607.3682103577263,
+    "actual_v17_apparent_export_bound_kva": 656.8075387456719,
+    "181_tangent_max_radial_excess_kva": 0.04645563059913371,
+    "connection_test_allowance_kva": 0.5
+  },
+  "absorber_mode_threshold": {
+    "local_time": "00:00",
+    "ac_output_kw": 0.4,
+    "ec1_output_kw": 1000.0,
+    "physical_header_floor_c": 22,
+    "v17_recomputed_ec_power_kw": 148.69888475836433,
+    "ec_power_with_positive_absorber_kw": 153.84615384615384,
+    "difference_kw": 5.14726908778951,
+    "finding": "A >0.5 kW mode threshold can reject a plan whose small positive AC output correctly needs the warm header. Numerical-boundary issue, inadmissible as a hardness trap."
+  }
+}
+Statistics saved with non-sensitive historical outcome fields in /workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/fairness/audit_checks.json

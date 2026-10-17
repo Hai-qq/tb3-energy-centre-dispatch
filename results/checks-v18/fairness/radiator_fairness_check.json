@@ -1,0 +1,66 @@
+{
+  "assumptions": {
+    "proposed_fixed_radiator_water_in_c": 40.0,
+    "proposed_fixed_radiator_water_out_c": 35.0,
+    "hypothetical_adiabatic_effectiveness": 0.8
+  },
+  "meaning": "Countermodel temperature-head check only; no unprovided radiator duty or engine temperature maximum is asserted.",
+  "hot_periods": [
+    {
+      "time_utc": "2026-07-27T12:00Z",
+      "dry_bulb_c": 40.8,
+      "wet_bulb_c": 22.7,
+      "dry_air_head_to_35c_water_k": -5.799999999999997,
+      "hypothetical_precooled_air_c": 26.32,
+      "precooled_air_head_to_35c_water_k": 8.68
+    },
+    {
+      "time_utc": "2026-07-27T12:30Z",
+      "dry_bulb_c": 41.9,
+      "wet_bulb_c": 22.9,
+      "dry_air_head_to_35c_water_k": -6.899999999999999,
+      "hypothetical_precooled_air_c": 26.699999999999996,
+      "precooled_air_head_to_35c_water_k": 8.300000000000004
+    },
+    {
+      "time_utc": "2026-07-27T13:00Z",
+      "dry_bulb_c": 41.8,
+      "wet_bulb_c": 23.0,
+      "dry_air_head_to_35c_water_k": -6.799999999999997,
+      "hypothetical_precooled_air_c": 26.759999999999998,
+      "precooled_air_head_to_35c_water_k": 8.240000000000002
+    },
+    {
+      "time_utc": "2026-07-27T13:30Z",
+      "dry_bulb_c": 41.7,
+      "wet_bulb_c": 23.2,
+      "dry_air_head_to_35c_water_k": -6.700000000000003,
+      "hypothetical_precooled_air_c": 26.9,
+      "precooled_air_head_to_35c_water_k": 8.100000000000001
+    },
+    {
+      "time_utc": "2026-07-27T14:00Z",
+      "dry_bulb_c": 41.1,
+      "wet_bulb_c": 22.9,
+      "dry_air_head_to_35c_water_k": -6.100000000000001,
+      "hypothetical_precooled_air_c": 26.54,
+      "precooled_air_head_to_35c_water_k": 8.46
+    },
+    {
+      "time_utc": "2026-07-27T14:30Z",
+      "dry_bulb_c": 41.4,
+      "wet_bulb_c": 22.8,
+      "dry_air_head_to_35c_water_k": -6.399999999999999,
+      "hypothetical_precooled_air_c": 26.52,
+      "precooled_air_head_to_35c_water_k": 8.48
+    },
+    {
+      "time_utc": "2026-07-27T15:00Z",
+      "dry_bulb_c": 40.1,
+      "wet_bulb_c": 22.6,
+      "dry_air_head_to_35c_water_k": -5.100000000000001,
+      "hypothetical_precooled_air_c": 26.1,
+      "precooled_air_head_to_35c_water_k": 8.899999999999999
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "app": "results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h1', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h1.json']' timed out after 2.0 seconds",
+        "execution_1": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h1', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h1.rerun.json']' timed out after 2.0 seconds",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": []
+    },
+    "h2": {
+      "failures": {
+        "execution_0": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h2', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h2.json']' timed out after 2.0 seconds",
+        "execution_1": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h2', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h2.rerun.json']' timed out after 2.0 seconds",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": []
+    },
+    "h3": {
+      "failures": {
+        "execution_0": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h3', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h3.json']' timed out after 2.0 seconds",
+        "execution_1": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h3', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h3.rerun.json']' timed out after 2.0 seconds",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": []
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h4', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h4.json']' timed out after 2.0 seconds",
+        "execution_1": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h4', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/h4.rerun.json']' timed out after 2.0 seconds",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": []
+    },
+    "visible": {
+      "failures": {
+        "execution_0": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/visible', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/visible.json']' timed out after 2.0 seconds",
+        "execution_1": "TimeoutExpired: Command '['/workspace/scratch/3a594630faca/ecd-venv/bin/python', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/hangs_after_writing/dispatch.py', '--data', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/visible', '--output', '/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/hangs_after_writing/visible.rerun.json']' timed out after 2.0 seconds",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": []
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "80e1cf9a3821ce0b5338a2c42b7e8d0dfedb33e7616443cc95f4e4867c36359f",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "5a23a9e6619c4c979a89c0df7897905a241a8297a90dbcf61950d8a00471ba43",
+    "planner/plant.py": "05ec4ec77a29a8b0ed3ce0cd26c3f749cf7b9880d99fcf4cdcb93f1fda887d11",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

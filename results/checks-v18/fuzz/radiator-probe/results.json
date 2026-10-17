@@ -1,0 +1,226 @@
+{
+  "input_problems": [],
+  "dry_bulb_c": [
+    27.0,
+    26.8,
+    26.6,
+    26.8,
+    26.6,
+    26.5,
+    26.4,
+    26.2,
+    26.2,
+    26.2,
+    26.1,
+    26.1,
+    26.5,
+    27.5,
+    29.0,
+    29.7,
+    30.9,
+    32.2,
+    33.5,
+    34.4,
+    35.6,
+    36.8,
+    37.4,
+    38.2,
+    39.5,
+    39.9,
+    40.8,
+    41.9,
+    41.8,
+    41.7,
+    41.1,
+    41.4,
+    40.1,
+    39.3,
+    37.8,
+    36.5,
+    35.5,
+    34.7,
+    34.0,
+    33.7,
+    32.7,
+    32.0,
+    31.5,
+    30.8,
+    30.2,
+    29.4,
+    28.3,
+    27.3
+  ],
+  "candidate_status": "conditional model extension pending fairness assessment",
+  "apps": {
+    "v16_claude": {
+      "elapsed_seconds": 2.4386813099999927,
+      "original_v17_cheap_failures": [],
+      "cost_gbp": 3524.4877546039916
+    },
+    "v17_codex_parts": {
+      "elapsed_seconds": 2.3328696870003114,
+      "original_v17_cheap_failures": [],
+      "cost_gbp": 3524.4878433897716
+    },
+    "v17_claude_parts": {
+      "elapsed_seconds": 2.0280169389998264,
+      "original_v17_cheap_failures": [],
+      "cost_gbp": 3524.4877546039916
+    }
+  },
+  "engines_off_witness": {
+    "physical_report_checks_passed": 9,
+    "bad_availability_periods": [],
+    "max_electric_balance_kw": 1.1368683772161603e-13,
+    "max_heat_balance_kw": 0.0,
+    "max_tower_excess_kw": -2001.2099437148217,
+    "max_grid_excess_kva": -61.66660023357258,
+    "recomputed_cost_gbp": 7483.665155742041
+  },
+  "conditional_extensions": {
+    "40.0": {
+      "meaning": "ambient at least fixed LT flow temperature",
+      "hot_periods": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "reference_milp_cost_gbp": 4261.517429657426,
+      "reference_milp_seconds": 1.2118689449998783,
+      "apps": {
+        "v16_claude": {
+          "failed_test": "test_units_within_ratings_and_availability",
+          "failed_periods": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        "v17_codex_parts": {
+          "failed_test": "test_units_within_ratings_and_availability",
+          "failed_periods": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        },
+        "v17_claude_parts": {
+          "failed_test": "test_units_within_ratings_and_availability",
+          "failed_periods": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        }
+      }
+    },
+    "35.0": {
+      "meaning": "ambient at least fixed LT return temperature",
+      "hot_periods": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "reference_milp_cost_gbp": 5528.3667104380675,
+      "reference_milp_seconds": 0.5166824970001471,
+      "apps": {
+        "v16_claude": {
+          "failed_test": "test_units_within_ratings_and_availability",
+          "failed_periods": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        },
+        "v17_codex_parts": {
+          "failed_test": "test_units_within_ratings_and_availability",
+          "failed_periods": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        },
+        "v17_claude_parts": {
+          "failed_test": "test_units_within_ratings_and_availability",
+          "failed_periods": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      }
+    }
+  }
+}

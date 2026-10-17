@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-12",
+  "running_at_midnight": [
+    "GE2"
+  ],
+  "outages": [
+    {
+      "unit": "PV1",
+      "from": "00:30",
+      "to": "02:00"
+    },
+    {
+      "unit": "GE1 LT radiator",
+      "from": "16:00",
+      "to": "18:00"
+    },
+    {
+      "unit": "GE2 jacket water and exhaust",
+      "from": "17:00",
+      "to": "18:00"
+    }
+  ]
+}

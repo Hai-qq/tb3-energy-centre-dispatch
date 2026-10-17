@@ -1,0 +1,52 @@
+{
+  "id": "d0251",
+  "index": 250,
+  "season": "summer",
+  "scenario": 6,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0007999999999839247,
+      "max_heat_balance_kw": 0.0002901408449531573,
+      "max_tower_excess_kw": -329.74625360230584,
+      "max_grid_excess_kva": 1052.805582721276,
+      "recomputed_cost_gbp": 8722.580290210972,
+      "elapsed_seconds": 2.818704,
+      "stderr": "warning: 17:00: the demand cannot be met within the connection's capacity\nwarning: 17:30: the demand cannot be met within the connection's capacity\nwarning: 18:00: the demand cannot be met within the connection's capacity\nwarning: 18:30: the demand cannot be met within the connection's capacity\nwarning: 19:00: the demand cannot be met within the connection's capacity\nwarning: 19:30: the demand cannot be met within the connection's capacity\nwarning: 20:00: the demand cannot be met within the connection's capacity\nwarning: 20:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 17:00')",
+      "elapsed_seconds": 1.677655
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0007999999999839247,
+      "max_heat_balance_kw": 0.0002901408449531573,
+      "max_tower_excess_kw": -329.74625360230584,
+      "max_grid_excess_kva": 1052.805582721276,
+      "recomputed_cost_gbp": 8722.580290210972,
+      "elapsed_seconds": 3.246584
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.7389161659993988
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "app": "results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/planner/optimize.py\", line 208, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/planner/optimize.py\", line 208, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 3.4223853590001454
+        },
+        {
+          "returncode": 1,
+          "seconds": 3.507617137000125
+        }
+      ]
+    },
+    "h2": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/planner/optimize.py\", line 208, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline-mutants/mutant_apps/kva_ignores_engines/planner/optimize.py\", line 208, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 2.950179649999882
+        },
+        {
+          "returncode": 1,
+          "seconds": 29.993772241999977
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5345.191044264344,
+      "delta_gbp": 4.736275695904624e-05,
+      "failures": {},
+      "milp_gbp": 5345.190996901587,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 22.410523249000107
+        },
+        {
+          "returncode": 0,
+          "seconds": 9.450482382999326
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7296.092844619048,
+      "delta_gbp": -14.878995913984909,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 6.690562806000344
+        },
+        {
+          "returncode": 0,
+          "seconds": 7.953325397000299
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.6999656339994544
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.6812308329999723
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "5a23a9e6619c4c979a89c0df7897905a241a8297a90dbcf61950d8a00471ba43",
+    "planner/plant.py": "a9a437da69092358ed786ea84dda7a303b2fd1949d2165b99ca8d5b8d56ceb8e",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

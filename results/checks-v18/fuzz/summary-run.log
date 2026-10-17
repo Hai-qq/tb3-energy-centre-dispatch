@@ -1,0 +1,139 @@
+{
+  "attempted_days": 480,
+  "valid_draws": 479,
+  "feasible_valid_days": 375,
+  "valid_app_day_runs": 1437,
+  "feasible_app_day_runs": 1125,
+  "categories": {
+    "all_opponents_passed": 375,
+    "reference_infeasible_excluded": 104,
+    "invalid_input_excluded": 1
+  },
+  "feasible_by_season": {
+    "spring": 109,
+    "winter": 98,
+    "autumn": 111,
+    "summer": 57
+  },
+  "feasible_midnight_states": {
+    "none": 101,
+    "GE1": 96,
+    "GE2": 99,
+    "GE1+GE2": 79
+  },
+  "outage_name_counts": {
+    "AC1 absorber and condenser": 46,
+    "AC1": 54,
+    "AC1 generator": 39,
+    "B1": 46,
+    "B2": 39,
+    "CT2": 40,
+    "CT1": 37,
+    "EC1": 43,
+    "EC1 condenser": 42,
+    "EC2 condenser": 48,
+    "EC2": 38,
+    "GE1": 43,
+    "GE1 LT radiator": 44,
+    "GE1 jacket water and exhaust": 47,
+    "GE2 jacket water and exhaust": 44,
+    "GE1 intercooler": 47,
+    "PV1": 46,
+    "GE2": 32,
+    "GE2 intercooler": 45,
+    "GE2 LT radiator": 44,
+    "PHE1": 42
+  },
+  "feasible_outage_name_counts": {
+    "AC1 absorber and condenser": 32,
+    "AC1": 40,
+    "B1": 40,
+    "B2": 29,
+    "CT1": 25,
+    "EC1": 32,
+    "EC1 condenser": 31,
+    "EC2": 28,
+    "GE1": 30,
+    "GE1 intercooler": 29,
+    "GE1 jacket water and exhaust": 34,
+    "GE2": 22,
+    "GE2 intercooler": 34,
+    "GE2 LT radiator": 31,
+    "GE2 jacket water and exhaust": 29,
+    "PV1": 37,
+    "AC1 generator": 30,
+    "PHE1": 16,
+    "EC2 condenser": 32,
+    "CT2": 27,
+    "GE1 LT radiator": 26
+  },
+  "outage_duration_minutes_counts": {
+    "1": 18,
+    "5": 23,
+    "10": 28,
+    "15": 25,
+    "24": 11,
+    "29": 21,
+    "30": 145,
+    "31": 19,
+    "45": 59,
+    "50": 12,
+    "55": 12,
+    "60": 135,
+    "65": 12,
+    "76": 1,
+    "82": 1,
+    "86": 1,
+    "90": 134,
+    "108": 1,
+    "109": 1,
+    "112": 1,
+    "114": 1,
+    "120": 118,
+    "143": 1,
+    "155": 1,
+    "159": 1,
+    "187": 1,
+    "211": 1,
+    "212": 1,
+    "225": 1,
+    "238": 1,
+    "240": 119
+  },
+  "reference_extension_days": 80,
+  "feasible_reference_extension_days": 58,
+  "unique_milp_optimality_cases": 130,
+  "unique_milp_original_reference_cases": 109,
+  "unique_milp_extended_reference_cases": 21,
+  "milp_optimality_cases_by_season": {
+    "winter": 42,
+    "spring": 33,
+    "summer": 23,
+    "autumn": 32
+  },
+  "opponent_failures_on_feasible_days": {
+    "v16_claude": [],
+    "v17_codex_parts": [],
+    "v17_claude_parts": []
+  },
+  "cost_failures": {
+    "v16_claude": [],
+    "v17_codex_parts": [],
+    "v17_claude_parts": []
+  },
+  "max_cost_regret_gbp": {
+    "v16_claude": 0.01955004925639514,
+    "v17_codex_parts": 0.011734455887562945,
+    "v17_claude_parts": 0.011881880687724333
+  },
+  "max_app_elapsed_seconds": {
+    "v16_claude": 21.902674,
+    "v17_codex_parts": 32.336147,
+    "v17_claude_parts": 10.350664
+  },
+  "excluded_invalid_cases": [
+    "main/d0372"
+  ],
+  "needs_review": [],
+  "interpretation": "random-case agreement is not a measured probability of a newly sampled model succeeding"
+}

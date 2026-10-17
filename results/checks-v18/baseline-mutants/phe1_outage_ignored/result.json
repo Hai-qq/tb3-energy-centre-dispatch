@@ -1,0 +1,101 @@
+{
+  "app": "results/checks-v18/baseline-mutants/mutant_apps/phe1_outage_ignored",
+  "days": {
+    "h1": {
+      "cost_gbp": 6420.8352424052955,
+      "delta_gbp": -5.812224697746387,
+      "failures": {},
+      "milp_gbp": 6426.647467103042,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.719457002999661
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.3584451670003546
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8460.684741328023,
+      "delta_gbp": -9.636619870434515e-05,
+      "failures": {},
+      "milp_gbp": 8460.684837694222,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.7730319330003113
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.147266287000093
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5345.191044264344,
+      "delta_gbp": 4.736275695904624e-05,
+      "failures": {},
+      "milp_gbp": 5345.190996901587,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.50026084000001
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.859021751
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7117.5013946366,
+      "delta_gbp": -193.47044589643338,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tools/check_v18.py\", line 96, in check_app\n    try:\n    \n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/test_plans.py\", line 73, in test_heat_balance\n    assert (phe1[~day.available[\"PHE1\"]] <= KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.9496024089994535
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.6636765170005674
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.4689394920005725
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.7431645569995453
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "8f6b8f842fed060c75f80fdda49877a55f0bab4fd0babc305a41e8125a24ec49",
+    "planner/plant.py": "05ec4ec77a29a8b0ed3ce0cd26c3f749cf7b9880d99fcf4cdcb93f1fda887d11",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}
