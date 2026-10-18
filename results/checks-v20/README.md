@@ -4,6 +4,8 @@
 
 基线为 `v19` / `9db580817b1dc46ac6c500f8c472faaafce0a997`，工作分支为 `v20-gptpro`。本目录提供完整候选任务、可见数据、独立参考、标准答案、固定日与差分原始回放、盲修及淘汰记录。正式 `tasks/energy-centre-dispatch/` 保持基线逐字节一致。本分支用于审阅实验及负结果，不是已经建议采用的新题版。
 
+已发布至[草稿PR #2](https://github.com/Hai-qq/tb3-energy-centre-dispatch/pull/2)，目标分支`v19`。完整实验文件树通过Git摘要验证，与本地审查后的提交完全一致；发布过程见[PUBLICATION.json](PUBLICATION.json)与LOG末尾。
+
 ## 阅读入口
 
 | 文件 / 目录 | 内容 |
