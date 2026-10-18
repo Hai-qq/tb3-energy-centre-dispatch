@@ -1,0 +1,72 @@
+{
+  "name": "pv_export_curtailment",
+  "description": "Available PV is curtailed just enough to respect the real-power export limit.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 0,
+    "recomputed_summary": {
+      "cost_gbp": 309.3149171270716,
+      "gas_kwh": 15248.618784530403,
+      "import_kwh": 0.0,
+      "export_kwh": 6000.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 0.0,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 2.6645352591003757e-15,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 0.0,
+      "phe_kw": 0.0,
+      "apparent_import_kva": 0.0,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 48,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    0.9434531930000958,
+    0.6324845599992841
+  ],
+  "plan_sha256": "dbe9223d686902fe14afe02d56dd351fdd6129a39a6b3f9202fa26e01fb6a4e6",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 309.3149171270717,
+    "lower_bound_gbp": 309.31491712707157,
+    "absolute_gap_gbp": 1.1368683772161603e-13,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.019611853000242263,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 309.31491712707157,
+        "incumbent_gbp": 309.3149171270717,
+        "candidate_gap_gbp": 1.1368683772161603e-13,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 0,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 309.3149171270718,
+  "improvement_over_witness_gbp": 1.1368683772161603e-13,
+  "total_seconds": 1.602064622999933
+}

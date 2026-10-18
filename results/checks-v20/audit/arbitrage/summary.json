@@ -1,0 +1,322 @@
+[
+  {
+    "name": "visible-export15",
+    "directional_milp_cost": 6303.560319426551,
+    "milp_seconds": 0.3809918160000052,
+    "apps": {
+      "16": {
+        "returncode": 0,
+        "seconds": 3.038758678999784,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/v16-plan.json"
+        ],
+        "reported_cost": 6303.56,
+        "true_cost_as_reported": 6303.5604091900495,
+        "physical_netted_cost": 6303.5604091900495,
+        "physical_regret_gbp": 8.976349818112794e-05,
+        "simultaneous_count": 0,
+        "simultaneous_examples": []
+      },
+      "19": {
+        "returncode": 0,
+        "seconds": 2.681871602000001,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/v19-plan.json"
+        ],
+        "reported_cost": 6282.56,
+        "true_cost_as_reported": 6282.5604091900495,
+        "physical_netted_cost": 6303.5604091900495,
+        "physical_regret_gbp": 8.976349818112794e-05,
+        "simultaneous_count": 14,
+        "simultaneous_examples": [
+          {
+            "t": "00:00",
+            "import_kw": 749.365,
+            "export_kw": 250.0
+          },
+          {
+            "t": "00:30",
+            "import_kw": 744.561,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:00",
+            "import_kw": 745.31,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:30",
+            "import_kw": 723.973,
+            "export_kw": 250.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "visible-night7-export12",
+    "directional_milp_cost": 5959.0032791246595,
+    "milp_seconds": 0.41229571000008036,
+    "apps": {
+      "16": {
+        "returncode": 0,
+        "seconds": 2.7010899440001594,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-night7-export12/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-night7-export12/v16-plan.json"
+        ],
+        "reported_cost": 5963.293,
+        "true_cost_as_reported": 5963.29325849165,
+        "physical_netted_cost": 5963.29325849165,
+        "physical_regret_gbp": 4.289979366990337,
+        "simultaneous_count": 0,
+        "simultaneous_examples": []
+      },
+      "19": {
+        "returncode": 0,
+        "seconds": 2.2205524040000455,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-night7-export12/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-night7-export12/v19-plan.json"
+        ],
+        "reported_cost": 5911.984,
+        "true_cost_as_reported": 5911.98366519005,
+        "physical_netted_cost": 5959.00321519005,
+        "physical_regret_gbp": -6.393460989784217e-05,
+        "simultaneous_count": 14,
+        "simultaneous_examples": [
+          {
+            "t": "00:00",
+            "import_kw": 1073.182,
+            "export_kw": 144.08
+          },
+          {
+            "t": "00:30",
+            "import_kw": 1070.759,
+            "export_kw": 146.461
+          },
+          {
+            "t": "01:00",
+            "import_kw": 1071.183,
+            "export_kw": 146.257
+          },
+          {
+            "t": "01:30",
+            "import_kw": 1060.891,
+            "export_kw": 157.058
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "flat-1250-heat1600",
+    "directional_milp_cost": 4446.0725462478,
+    "milp_seconds": 5.830394672000011,
+    "apps": {
+      "16": {
+        "returncode": 0,
+        "seconds": 2.7689538910001374,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat1600/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat1600/v16-plan.json"
+        ],
+        "reported_cost": 4446.073,
+        "true_cost_as_reported": 4446.072001084222,
+        "physical_netted_cost": 4446.072001084222,
+        "physical_regret_gbp": -0.0005451635779536446,
+        "simultaneous_count": 0,
+        "simultaneous_examples": []
+      },
+      "19": {
+        "returncode": 0,
+        "seconds": 2.354454887999964,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat1600/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat1600/v19-plan.json"
+        ],
+        "reported_cost": 4359.117,
+        "true_cost_as_reported": 4359.115981912952,
+        "physical_netted_cost": 4446.615981912952,
+        "physical_regret_gbp": 0.5434356651512644,
+        "simultaneous_count": 14,
+        "simultaneous_examples": [
+          {
+            "t": "00:00",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "00:30",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:00",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:30",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "flat-1500-heat1600",
+    "directional_milp_cost": 5002.768117270586,
+    "milp_seconds": 1.0620851179999136,
+    "apps": {
+      "16": {
+        "returncode": 0,
+        "seconds": 2.9290936570000667,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1500-heat1600/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1500-heat1600/v16-plan.json"
+        ],
+        "reported_cost": 5003.312,
+        "true_cost_as_reported": 5003.311303550552,
+        "physical_netted_cost": 5003.311303550552,
+        "physical_regret_gbp": 0.5431862799659939,
+        "simultaneous_count": 0,
+        "simultaneous_examples": []
+      },
+      "19": {
+        "returncode": 0,
+        "seconds": 2.498395481999978,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1500-heat1600/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1500-heat1600/v19-plan.json"
+        ],
+        "reported_cost": 4915.812,
+        "true_cost_as_reported": 4915.811303550552,
+        "physical_netted_cost": 5003.311303550552,
+        "physical_regret_gbp": 0.5431862799659939,
+        "simultaneous_count": 14,
+        "simultaneous_examples": [
+          {
+            "t": "00:00",
+            "import_kw": 958.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "00:30",
+            "import_kw": 958.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:00",
+            "import_kw": 958.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:30",
+            "import_kw": 958.923,
+            "export_kw": 250.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "flat-1250-heat2000",
+    "directional_milp_cost": 4671.769584601105,
+    "milp_seconds": 0.4206910319999224,
+    "apps": {
+      "16": {
+        "returncode": 0,
+        "seconds": 2.81741993300011,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/v16-plan.json"
+        ],
+        "reported_cost": 4713.998,
+        "true_cost_as_reported": 4713.997475131944,
+        "physical_netted_cost": 4713.997475131944,
+        "physical_regret_gbp": 42.22789053083943,
+        "simultaneous_count": 0,
+        "simultaneous_examples": []
+      },
+      "19": {
+        "returncode": 0,
+        "seconds": 2.4605992369999967,
+        "command": [
+          "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+          "--data",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/data",
+          "--output",
+          "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/v19-plan.json"
+        ],
+        "reported_cost": 4627.042,
+        "true_cost_as_reported": 4627.041455960673,
+        "physical_netted_cost": 4714.541455960673,
+        "physical_regret_gbp": 42.77187135956865,
+        "simultaneous_count": 14,
+        "simultaneous_examples": [
+          {
+            "t": "00:00",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "00:30",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:00",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          },
+          {
+            "t": "01:30",
+            "import_kw": 708.923,
+            "export_kw": 250.0
+          }
+        ]
+      }
+    }
+  }
+]

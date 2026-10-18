@@ -1,0 +1,72 @@
+{
+  "name": "heat_led_cooling_water_modulation",
+  "description": "Heat and outages force GE2 to rated output; warmer common condenser water makes the export limit feasible.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 2214.9364800000017,
+      "gas_kwh": 52918.079999999965,
+      "import_kwh": 0.0,
+      "export_kwh": 6000.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 0.0,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 848.936170212766,
+      "phe_kw": 900.0,
+      "apparent_import_kva": 0.0,
+      "condenser_entering_c": 25.33333333333333
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 48
+    }
+  },
+  "application_seconds": [
+    1.102818624000065,
+    1.0906917319998684
+  ],
+  "plan_sha256": "ce23409c5e02290fd8cfb6202615cc4e5473be9e8bfd5d46db1ac5cf1473aaa9",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 2214.93648,
+    "lower_bound_gbp": 2214.93648,
+    "absolute_gap_gbp": 0.0,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.03122720700048376,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 1200,
+    "binary_variables": 288,
+    "constraints": 2064,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 2214.93648,
+        "incumbent_gbp": 2214.93648,
+        "candidate_gap_gbp": 0.0,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 2214.93648,
+  "improvement_over_witness_gbp": 0.0,
+  "total_seconds": 2.2441369279995342
+}

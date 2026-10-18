@@ -1,0 +1,14 @@
+fixed-v16 d0217: PASS delta=-0.00011350605655024992 
+fixed-v16 d0229: PASS delta=0.002523572829886689 
+fixed-v19 d0217: PASS delta=-0.00011350605655024992 
+fixed-v19 d0229: PASS delta=0.003397343733922753 
+{
+  "strong-v16": {
+    "id": "d0229",
+    "regret_gbp": 57.58646381154631
+  },
+  "strong-v19": {
+    "id": "d0217",
+    "regret_gbp": 57.64249091799229
+  }
+}

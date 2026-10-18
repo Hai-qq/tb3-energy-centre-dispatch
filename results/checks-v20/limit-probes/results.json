@@ -1,0 +1,245 @@
+{
+  "c2-550": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.32816220900008375
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.32211366899991845
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8973.720100812454,
+      "seconds": 0.2760140870000214
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.47743975699995644
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.29131200899996657
+    }
+  },
+  "c2-575": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.25547655000013947
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.2749367330000041
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8904.360794686083,
+      "seconds": 0.29965176799987603
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.4833112359999632
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.22737402899997505
+    }
+  },
+  "c2-600": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.2901037180001822
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.2819951530000253
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8879.731991258706,
+      "seconds": 0.24031660700006796
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.4932807740001408
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.2983784640000522
+    }
+  },
+  "c3-315": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.3303196910001134
+    },
+    "h1": {
+      "feasible": false,
+      "error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 0.23562159300013263
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8879.731991258708,
+      "seconds": 0.31131888400000207
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.5345789450000211
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.3345042440000725
+    }
+  },
+  "c3-350": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.3276193859999239
+    },
+    "h1": {
+      "feasible": false,
+      "error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 0.24488676400005716
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8879.731991258708,
+      "seconds": 0.34889250000014727
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.7249968459998399
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.3416377660000762
+    }
+  },
+  "c3-375": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.3633361770000647
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.4181136450001759
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8879.731991258708,
+      "seconds": 0.43255120399999214
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.5833449450001353
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.37462566199997127
+    }
+  },
+  "c4-15": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.32378034800012756
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.3700514500001191
+    },
+    "h2": {
+      "feasible": false,
+      "error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 0.23009979299990846
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5404.024364460619,
+      "seconds": 0.5526241970001138
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.28088118499999837
+    }
+  },
+  "c4-20": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.3433115039999848
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.3999876160000895
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 9107.675896200466,
+      "seconds": 0.8711699630000567
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.8952925910000431
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.37215230900005736
+    }
+  },
+  "c4-24": {
+    "visible": {
+      "feasible": true,
+      "cost": 6303.560319426553,
+      "seconds": 0.30342007800004467
+    },
+    "h1": {
+      "feasible": true,
+      "cost": 6426.647467103042,
+      "seconds": 0.3369011950001095
+    },
+    "h2": {
+      "feasible": true,
+      "cost": 8897.226591857041,
+      "seconds": 0.40957401800005755
+    },
+    "h3": {
+      "feasible": true,
+      "cost": 5375.538040469284,
+      "seconds": 0.5845537919999515
+    },
+    "h4": {
+      "feasible": true,
+      "cost": 7310.971840533033,
+      "seconds": 0.2847175659999266
+    }
+  }
+}

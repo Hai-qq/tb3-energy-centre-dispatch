@@ -1,0 +1,85 @@
+{
+  "apps": {
+    "blind": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c1/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0062",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0062/blind/plan.json"
+      ],
+      "cost_gbp": 4677.029660858787,
+      "delta_gbp": 6.366462912410498e-12,
+      "failures": {},
+      "milp_gbp": 4677.0296608587805,
+      "passed": true,
+      "returncode": 0,
+      "seconds": 4.048418200000015,
+      "simultaneous_periods": 0
+    },
+    "oracle": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/solution/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0062",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0062/oracle/plan.json"
+      ],
+      "cost_gbp": 4677.029739505937,
+      "delta_gbp": 7.864715644245734e-05,
+      "failures": {},
+      "milp_gbp": 4677.0296608587805,
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.5805187160003697,
+      "simultaneous_periods": 0
+    },
+    "strong-v16": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0062",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0062/strong-v16/plan.json"
+      ],
+      "cost_gbp": 4677.029739505937,
+      "delta_gbp": 7.864715644245734e-05,
+      "failures": {},
+      "milp_gbp": 4677.0296608587805,
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.1950767389998873,
+      "simultaneous_periods": 0
+    },
+    "strong-v19": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0062",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0062/strong-v19/plan.json"
+      ],
+      "cost_gbp": 4677.029739505937,
+      "delta_gbp": 7.864715644245734e-05,
+      "failures": {
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n"
+      },
+      "milp_gbp": 4677.0296608587805,
+      "passed": false,
+      "returncode": 0,
+      "seconds": 1.7336230750006507,
+      "simultaneous_periods": 14
+    }
+  },
+  "id": "d0062",
+  "season": "spring"
+}

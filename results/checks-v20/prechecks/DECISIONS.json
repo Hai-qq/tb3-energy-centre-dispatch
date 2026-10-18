@@ -1,0 +1,81 @@
+{
+  "scope": "Five candidate investigations; three completed triple prechecks. These are isolated substitutes, not formal Opus/GPT trials.",
+  "promoted_candidate": null,
+  "canonical_task_changed": false,
+  "overall_decision": "No qualifying v20 from these candidates. Retain v19 canonical task and deliver reproducible rejected candidates and evidence.",
+  "candidates": {
+    "c1": {
+      "mechanism": "Single steady grid direction under buy-below-sell tariffs",
+      "fairness_readers": 2,
+      "fairness_result": "converged on steady half-hour interpretation",
+      "prompt_precheck_completed": true,
+      "blind_new_requirement_correct": true,
+      "blind_whole_task_passed": false,
+      "blind_old_failure": "Rejects eight pre-existing named heat-route ports; h1-h4 exit before plans",
+      "two_strong_semantic_failures": true,
+      "format_adaptation_lines": 0,
+      "three_prechecks_completed": true,
+      "eligible": false,
+      "decision": "reject: frozen best implementation solved the new requirement",
+      "evidence": ["BLIND_C1_REVIEW.md", "../candidates/c1/blind-eval/matrix.json", "../candidates/c1/fuzz-200/summary.json"]
+    },
+    "c2": {
+      "mechanism": "Shared 550 standard m3/h gas entry at 39.6 MJ/standard m3 gross CV",
+      "fairness_readers": 2,
+      "fairness_result": "converged on 6050 gross kW total including engines and boilers",
+      "prompt_precheck_completed": true,
+      "blind_new_requirement_correct": true,
+      "blind_whole_task_passed": false,
+      "blind_old_failure": "h1-h4 reject pre-existing named heat-route ports; hidden gas assertions did not run",
+      "new_rule_binding_evidence": "48 frozen selftest periods binding at 550; external replay of that frozen day passes all tests",
+      "two_strong_semantic_failures": true,
+      "format_adaptation_lines": 0,
+      "three_prechecks_completed": true,
+      "eligible": false,
+      "decision": "reject: frozen best implementation solved the new requirement",
+      "evidence": ["BLIND_C2_REVIEW.md", "../candidates/c2/blind-eval/matrix.json", "../candidates/c2/frozen-binding-audit-r1/result.json"]
+    },
+    "c3": {
+      "mechanism": "Local chiller feeder apparent-power rating",
+      "fairness_readers": 0,
+      "fairness_result": "not prechecked; rating needs unambiguous continuous-limit semantics",
+      "prompt_precheck_completed": false,
+      "blind_new_requirement_correct": null,
+      "blind_whole_task_passed": null,
+      "two_strong_semantic_failures": null,
+      "three_prechecks_completed": false,
+      "eligible": false,
+      "decision": "screened only: original 400 kVA three-chiller proposal nonbinding, smaller variants infeasible or nonbinding; single-EC1 variants need full prechecks",
+      "evidence": ["../limit-probes/results.json", "../remaining-screens/results.json"]
+    },
+    "c4": {
+      "mechanism": "PHE1 primary flow 20 kg/s at stated 90/70 C and cp=4.18",
+      "fairness_readers": 2,
+      "fairness_result": "conditional convergence: requires the stated temperatures to be fixed model operating conditions, not freely variable nominal design values",
+      "prompt_precheck_completed": true,
+      "blind_new_requirement_correct": true,
+      "blind_whole_task_passed": false,
+      "blind_old_failure": "h1-h4 run equipment whose pre-existing named ports are out; only availability assertion fails",
+      "new_rule_binding_evidence": "External h2 has 27 binding PHE periods; frozen selftests exercise HT above 1672 with correct AC heat subtraction",
+      "two_strong_semantic_failures": true,
+      "format_adaptation_lines": 0,
+      "three_prechecks_completed": true,
+      "eligible": false,
+      "decision": "reject: frozen best implementation solved the new requirement; fairness temperature caveat independently remains",
+      "evidence": ["BLIND_C4_REVIEW.md", "../candidates/c4/blind-eval/matrix.json", "../candidates/c4/blind-new-rule.json"]
+    },
+    "c5": {
+      "mechanism": "Parallel independently isolatable GE1 LT rejection branches",
+      "fairness_readers": 0,
+      "fairness_result": "not prechecked; exact NHS topology primary-source gap",
+      "prompt_precheck_completed": false,
+      "blind_new_requirement_correct": null,
+      "blind_whole_task_passed": null,
+      "two_strong_semantic_failures": false,
+      "three_prechecks_completed": false,
+      "eligible": false,
+      "decision": "reject at screen: A19 passes all five days and exact topology authenticity is unverified",
+      "evidence": ["../remaining-screens/results.json", "../research/mechanisms-sources.md"]
+    }
+  }
+}

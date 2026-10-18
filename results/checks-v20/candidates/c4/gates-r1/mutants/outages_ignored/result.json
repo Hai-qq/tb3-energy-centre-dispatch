@@ -1,0 +1,119 @@
+{
+  "app": "results/checks-v20/candidates/c4/gates-r1/mutant_apps/outages_ignored",
+  "days": {
+    "h1": {
+      "cost_gbp": 6240.1927877798,
+      "delta_gbp": -186.4546793232421,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.7277836109997224,
+          "sha256": "1442b540f73bbf8f0e95ad55d493ec192461d1d4e198e88b8ccacd527d873d71"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.420774996000091,
+          "sha256": "1442b540f73bbf8f0e95ad55d493ec192461d1d4e198e88b8ccacd527d873d71"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 7644.4749001969885,
+      "delta_gbp": -1463.2009960034775,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 9107.675896200466,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.900112025999988,
+          "sha256": "9ed5c176add7436044ed002eb1bdd524c1782e52a808830cd33f2351741a1fb6"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.6206239969997114,
+          "sha256": "9ed5c176add7436044ed002eb1bdd524c1782e52a808830cd33f2351741a1fb6"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5217.2447076512435,
+      "delta_gbp": -158.29333281804065,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.120408139999654,
+          "sha256": "0b2b72e0c30b276f475e7746e56d8ab944382e5b0dbc6835a0c60a06c39f7e86"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.320000370999878,
+          "sha256": "0b2b72e0c30b276f475e7746e56d8ab944382e5b0dbc6835a0c60a06c39f7e86"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7174.273019034999,
+      "delta_gbp": -136.6988214980338,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.2933064200001354,
+          "sha256": "3cd6c6623538b3f7a8441b9d70b7f2f767c3d50ee7fc8d3618c063c546c0043c"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.4871720340001957,
+          "sha256": "3cd6c6623538b3f7a8441b9d70b7f2f767c3d50ee7fc8d3618c063c546c0043c"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6044.069070055049,
+      "delta_gbp": -259.4912493715037,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.9091459379997104,
+          "sha256": "406e55a3a272e22311e48ddcf21ac5f2c16947f87fa6ea6ac4a0b1968e4b1070"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.6095752689998335,
+          "sha256": "406e55a3a272e22311e48ddcf21ac5f2c16947f87fa6ea6ac4a0b1968e4b1070"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "c681f5cf8e4c11e47bcd2f5662ebe7ad9cdfc0dfd23ea689f360a0ffb58ca8a8",
+    "planner/plant.py": "fe12a7f73a161eadcc9bd32dd5fcc65bacb71ad95b50ff08c1cf07ccf5a72206",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

@@ -1,0 +1,11 @@
+$ /workspace/scratch/e1216eed3f00/ecd-venv/bin/python /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/kva_ignores_engines/dispatch.py --data /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/days/h2 --output /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutants/kva_ignores_engines/h2.rerun.json
+Traceback (most recent call last):
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/kva_ignores_engines/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/kva_ignores_engines/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/kva_ignores_engines/planner/optimize.py", line 219, in plan_day
+    raise RuntimeError("no plan meets the demand within the limits")
+RuntimeError: no plan meets the demand within the limits

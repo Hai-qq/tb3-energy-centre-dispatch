@@ -1,0 +1,1133 @@
+{
+  "oracle": {
+    "app": "results/checks-v20/candidates/c2/task/solution/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.647743955096,
+        "delta_gbp": 0.0002768520544123021,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.9226947869997275,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.992028395000034,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8973.72005412872,
+        "delta_gbp": -4.668373367167078e-05,
+        "failures": {},
+        "milp_gbp": 8973.720100812454,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.240877587000341,
+            "sha256": "5c0424ac43bf672382d005814deb89c37cf257ec9774098915abcdc375ddb6df"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.233748303000084,
+            "sha256": "5c0424ac43bf672382d005814deb89c37cf257ec9774098915abcdc375ddb6df"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.112667115000022,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.9814583769998535,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.971820541148,
+        "delta_gbp": -1.9991884983028285e-05,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.1040164649998587,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.1888717950000682,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.3169828750001216,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.852160455000103,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+      "planner/optimize.py": "ea0f6a0e0e94fd4c39d42b12d038eb1bceebd3b6118378b04495c54af5040a5f",
+      "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+      "planner/tariff.py": "e034a8c359d5b0903ffcf3475626ad25597f3ca2cfa912a7dc2791b457046e27"
+    }
+  },
+  "strong-v16-claude": {
+    "app": "results/v16-trials/ecd16-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.6573082883915,
+        "delta_gbp": 0.009841185349614534,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.785230574000252,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.7574393019999661,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735705373085,
+        "delta_gbp": -93.98439543936911,
+        "failures": {
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.8459606510000413,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.697584524999911,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.011116115999812,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.3344973200000823,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.983049960898,
+        "delta_gbp": 0.011209427864741883,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.594109304000085,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5421946699998443,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.330605253000158,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.4660292279995701,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+      "planner/optimize.py": "e1d50e78f3318398fe7ccf28468ee6ed4815576647d44995649f9fd0997db31a",
+      "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+      "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+    }
+  },
+  "strong-v19-claude": {
+    "app": "results/v19-trials/ecd19-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6420.842876285666,
+        "delta_gbp": -5.8045908173762655,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.140812730000107,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.8309790200000862,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.737220223913,
+        "delta_gbp": -93.98288058854087,
+        "failures": {
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.2836088939998263,
+            "sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.7760803599999235,
+            "sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.106375122999907,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.4470518600001014,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7296.098696319798,
+        "delta_gbp": -14.87314421323481,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.266013065000152,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.723317108000174,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.0681604709998282,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.1477808609997737,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "e37c098f1c0604abec1d8d98dfab95c5e21fe88141e8eb0e222d1f1e9013f151",
+      "planner/optimize.py": "1fc08edbb14d249fb16dfe10cdc1082fb7c148b28d0529e62ffed95716ad6923",
+      "planner/plant.py": "1dfa72d3c71fd78202079559deea986e4265b226a2130956f65d3cfa63d8ecfc",
+      "planner/tariff.py": "f885a4a9982601918c8bd0be0814d9cac996e673f19c942d97c02322d1866a3b"
+    }
+  },
+  "v18-run1-claude": {
+    "app": "results/v18-trials/ecd18-run1-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.301619494443,
+        "delta_gbp": -23.345847608598888,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.0057157559999723,
+            "sha256": "931e41358bb4c9992dffee770d265eea33ffa0218c63edb860b434b8ca7624c1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.3868086530001165,
+            "sha256": "931e41358bb4c9992dffee770d265eea33ffa0218c63edb860b434b8ca7624c1"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8079.0771052910695,
+        "delta_gbp": -894.6429955213844,
+        "failures": {
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.4295044290001897,
+            "sha256": "51043397ceeb03e09a2ab6c9c2ae06623589c02a2da40a0afbf59418a1ef2803"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.2361290650001138,
+            "sha256": "51043397ceeb03e09a2ab6c9c2ae06623589c02a2da40a0afbf59418a1ef2803"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 6607.149809582194,
+        "delta_gbp": 1231.6117691129102,
+        "failures": {
+          "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.3350311390004208,
+            "sha256": "475f98a0b2c87f86f2372d09b96f1f1a0b942989ba44c7d8c3741ab9a337353c"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.18854226700023,
+            "sha256": "475f98a0b2c87f86f2372d09b96f1f1a0b942989ba44c7d8c3741ab9a337353c"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.9324261679485,
+        "delta_gbp": -40.03941436508467,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.4283525060000102,
+            "sha256": "4f5a8913eb7df1e268761f8baa205a4298d99fb568bac7cba287c38f95d57e98"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.3871555450000415,
+            "sha256": "4f5a8913eb7df1e268761f8baa205a4298d99fb568bac7cba287c38f95d57e98"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.6333122300002287,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.042527783999958,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "1eddd570d570333c32e91037d285234ae6b8ee2225d5ec316f5dbec6eb41554e",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "12a2b7efb283b57034a7572bf3e0a6494334a1ad49aabbb1620ae1bffa95e56c",
+      "planner/optimize.py": "3c827758576486df20a4bc1e4dcfa08446a753753c9cf8fcc940906339ee978e",
+      "planner/plant.py": "cb8edf118fc312e7c40dd298a835f73f6b5de69101733d6032d77bb6c9273978",
+      "planner/tariff.py": "c447bb3af6470705efb6e633b0654201ec9e54f1207e3efa82443b264a1cd0e3"
+    }
+  },
+  "v18-run1-codex": {
+    "app": "results/v18-trials/ecd18-run1-codex/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.3010884987325,
+        "delta_gbp": -23.346378604309393,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.4615058569997927,
+            "sha256": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5360440059998837,
+            "sha256": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8063.680409680776,
+        "delta_gbp": -910.0396911316775,
+        "failures": {
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.5567696349999096,
+            "sha256": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.915686107000056,
+            "sha256": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628511561112,
+        "delta_gbp": -192.90952890817243,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.95008722700004,
+            "sha256": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.8423739130003014,
+            "sha256": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.932347828511,
+        "delta_gbp": -40.03949270452176,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.3418379160002587,
+            "sha256": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.364871253000274,
+            "sha256": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5603194264295,
+        "delta_gbp": -1.2369127944111824e-10,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.338342883000223,
+            "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.245202466000137,
+            "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "34c32adf25230f80a85aa1202d83a72f9bf6c6cb60b33cd582ea68e63b6a01e5",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "5d0b1f8d0b3f481177ccd632a1a4ded83c367f8de2a159ac9fbf5ab174f61066",
+      "planner/optimize.py": "a62e94d51c6136b6a59b7c55b716e8a00bdd34d9a87ad9504cdeb40eff1dc446",
+      "planner/plant.py": "4778f9b018dab93cf8c5a6e8136137d7bb52114449310051cae438047993cd4a",
+      "planner/tariff.py": "cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59"
+    }
+  },
+  "v18-run2-claude": {
+    "app": "results/v18-trials/ecd18-run2-claude/app",
+    "days": {
+      "h1": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.43494997800007695
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.4825262969998221
+          }
+        ]
+      },
+      "h2": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.5365901969998959
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.4559014940000452
+          }
+        ]
+      },
+      "h3": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.49181634299975485
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.43613945300012347
+          }
+        ]
+      },
+      "h4": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.4763995540001815
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.8013863750002201
+          }
+        ]
+      },
+      "visible": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.49246373799996945
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.5335111790000155
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "8cba87d097f79f54e9cc299b2f7fc128737057b7330a439f36897f19b1f5e64f",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "59fdebe624f25699275d7a3baa1c6000d3f7788b3673a7bccf0c4c2004629b58",
+      "planner/optimize.py": "b62e3ccc5751ea07ddce47b69107557809bf0ea58b4bb47650754a48a9adba5a",
+      "planner/plant.py": "1df9cda4cc6570059b8aefb4b373bc0d669fc6621d80d402edccd5c550580b93",
+      "planner/tariff.py": "d35d73a5cf8f8a48f5f07a8dc9c48645c40a08ddd7ef931e6e0538db35dac9d0"
+    }
+  },
+  "v18-run2-codex": {
+    "app": "results/v18-trials/ecd18-run2-codex/app",
+    "days": {
+      "h1": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.4498648809999395
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.44734210800015717
+          }
+        ]
+      },
+      "h2": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.4205760609997924
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.783497344999887
+          }
+        ]
+      },
+      "h3": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 13:30\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 13:30\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.8891672660001859
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.8504283520001081
+          }
+        ]
+      },
+      "h4": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.46712734400034606
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.4422055410000212
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.560319426547,
+        "delta_gbp": -6.366462912410498e-12,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.1256051899999875,
+            "sha256": "a689972fe8ee912e4f76a14b2c24ae44e604b1b7bb4fd9a62ebefea2ed68ccd5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.0709782550002274,
+            "sha256": "a689972fe8ee912e4f76a14b2c24ae44e604b1b7bb4fd9a62ebefea2ed68ccd5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "19232f1d064f8fb4b2d3f8e72b8b5e2a710bff73e4f118940da3997e25290848",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "aa98230b7e54d02c39057654f33729cfb7f63dded3f521c1fcf74eefe469404a",
+      "planner/optimize.py": "23b4a55c53f42e2192381ede1976fcc8e2a7152b1d4df089431c9f82d329087a",
+      "planner/plant.py": "aaf58e9b5f2f266b42460c36c52cc8d758cc27fa21332a09f80ca31119e63dbc",
+      "planner/tariff.py": "f0fa46082aad4b4fadde38e88b3674a7d9c9591166afe93004c4f467bf8e1758"
+    }
+  },
+  "v18-run3-claude": {
+    "app": "results/v18-trials/ecd18-run3-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.305357347423,
+        "delta_gbp": -23.342109755619276,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.3212073159998,
+            "sha256": "0a327eb2f7719f94c678eee352c214eb962b6a24ea898339a0baab7f7efc9357"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.3354689420002614,
+            "sha256": "0a327eb2f7719f94c678eee352c214eb962b6a24ea898339a0baab7f7efc9357"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8063.68107957225,
+        "delta_gbp": -910.0390212402035,
+        "failures": {
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.5520660080001107,
+            "sha256": "e9a1ffc8b98ee4f6716104e1be7a333c104cd86cf85884cd948c23b6a3cd0ad9"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.5311846099998547,
+            "sha256": "e9a1ffc8b98ee4f6716104e1be7a333c104cd86cf85884cd948c23b6a3cd0ad9"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628545783766,
+        "delta_gbp": -192.90949468551844,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.4800616899997294,
+            "sha256": "86aeca251efb189bf150372d33bc18733c3c24b655e25c951f09967e71df1996"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.337662236000142,
+            "sha256": "86aeca251efb189bf150372d33bc18733c3c24b655e25c951f09967e71df1996"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.938277868699,
+        "delta_gbp": -40.03356266433457,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.077634698000111,
+            "sha256": "1726d7f3b5efeb2727072231d8d07cc8fa1fa4afa733477676509347d2398713"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.144004806999874,
+            "sha256": "1726d7f3b5efeb2727072231d8d07cc8fa1fa4afa733477676509347d2398713"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.6117970790000982,
+            "sha256": "b02203f0d025524b930037bb25bbcd3733832430f4aa1fa3191ffa41fac83316"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.8572213010002088,
+            "sha256": "b02203f0d025524b930037bb25bbcd3733832430f4aa1fa3191ffa41fac83316"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "4bca827f24d1c987983d93ad0af2aee324a5a71f593574be0786f306a9f09658",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "0846ac33bcdbcb64acb393e89185afeafab1ad038bb5cdbc14b9635d81750ab5",
+      "planner/optimize.py": "e2a343d78e4efcf2c1c41bfb2d5d596224f54efb8b6da4b0d4195eb914cf6783",
+      "planner/plant.py": "eb4a847c1bce313e84f995e0dc4a4199f2c71b0625471751365f00a04b1c79e1",
+      "planner/tariff.py": "66e9784c2e48adc3115de224028c938e6a13323cdd00029574163890c4aa807d"
+    }
+  },
+  "v18-run3-codex": {
+    "app": "results/v18-trials/ecd18-run3-codex/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6409.698465817483,
+        "delta_gbp": -16.949001285558552,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.4387786120000783,
+            "sha256": "0a50ad3f7f640935a59ecedb1f27bf43172e34a5900dc3596fc38984185f9543"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.356590591999975,
+            "sha256": "0a50ad3f7f640935a59ecedb1f27bf43172e34a5900dc3596fc38984185f9543"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8063.68040989444,
+        "delta_gbp": -910.0396909180135,
+        "failures": {
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.692387396000413,
+            "sha256": "62662b378b72db5b3cb56f33e6c136b42156cffa56662d96ad4c0ca567f91c2f"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.6852468860001864,
+            "sha256": "62662b378b72db5b3cb56f33e6c136b42156cffa56662d96ad4c0ca567f91c2f"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628511347972,
+        "delta_gbp": -192.90952912131252,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.101230785000098,
+            "sha256": "df7ad835a44ab5f55ef011a1fd73f44327e02e45fd6448f9e9b744213a640409"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.1265518930003964,
+            "sha256": "df7ad835a44ab5f55ef011a1fd73f44327e02e45fd6448f9e9b744213a640409"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7285.811377955624,
+        "delta_gbp": -25.160462577408907,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.8479964560001463,
+            "sha256": "85f6d1f0803000c86f80e542373ff7cebdf70142069bd7861924b658c6136971"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.6596235060001163,
+            "sha256": "85f6d1f0803000c86f80e542373ff7cebdf70142069bd7861924b658c6136971"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.560319561994,
+        "delta_gbp": 1.354410414933227e-07,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.237924434999968,
+            "sha256": "411a53c06a598cec17c4ecc4782f2cd2f4dcf98293baa8dab4a06028a4221999"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.1439136050003071,
+            "sha256": "411a53c06a598cec17c4ecc4782f2cd2f4dcf98293baa8dab4a06028a4221999"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "8ca31f370fbfdf248821cd3adbf42c4e92a154ef173822a742f315a0425bce00",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "45b806f60b991798059b07043e9c23024e9316d5dc58f28870fc57c1e7c0e52b",
+      "planner/optimize.py": "534d297609228b2b86d3837dc316780873237a1dbc247fb5195fa87eec56a02b",
+      "planner/plant.py": "05275a31213db55744f6cc0600412199828798db76ea8dc1905bbf14042f940e",
+      "planner/tariff.py": "cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59"
+    }
+  },
+  "v19-run1-claude": {
+    "app": "results/v19-trials/ecd19-run1-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 7143.745152147749,
+        "delta_gbp": 717.0976850447069,
+        "failures": {
+          "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.7737417849998565,
+            "sha256": "3549fb21078c1bc636fad054573fa762dfc34d655841c977c9578b6fd7551067"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5196619509997618,
+            "sha256": "3549fb21078c1bc636fad054573fa762dfc34d655841c977c9578b6fd7551067"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8074.612545235821,
+        "delta_gbp": -899.1075555766329,
+        "failures": {
+          "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8973.720100812454,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.3544124610002655,
+            "sha256": "70d27151de3eef971f9e351d6a3f86e604893ceb126c7beb14365a675e6d5c08"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.0600494730001628,
+            "sha256": "70d27151de3eef971f9e351d6a3f86e604893ceb126c7beb14365a675e6d5c08"
+          }
+        ]
+      },
+      "h3": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/planner/optimize.py\", line 282, in plan_day\n    raise RuntimeError(f\"no feasible loading at {day.starts[t]}\")\nRuntimeError: no feasible loading at 13:30\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/planner/optimize.py\", line 282, in plan_day\n    raise RuntimeError(f\"no feasible loading at {day.starts[t]}\")\nRuntimeError: no feasible loading at 13:30\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 1.5053900589996374
+          },
+          {
+            "returncode": 1,
+            "seconds": 1.4408013489996847
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7756.496682489158,
+        "delta_gbp": 445.5248419561249,
+        "failures": {
+          "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+          "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.479282473999774,
+            "sha256": "5202d80604b56c785ad14328a97d13a894ec307596ea5370db9ad41853e28b3e"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.3031736889997774,
+            "sha256": "5202d80604b56c785ad14328a97d13a894ec307596ea5370db9ad41853e28b3e"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.684085617999699,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.3066698560000987,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "9f4c05d547cf17ad98a4a06f0d20231c0500c5820f5bbca97d209dc83a1fd8f1",
+      "planner/optimize.py": "4303218bfd2feb7c7a79bf4b2b8b4b23bbd39dfbee89f49801485daa19a858aa",
+      "planner/plant.py": "e1d4aa019cae3224b75cf1ca984fa09bf87ab7426ae1188de97932c45bd20529",
+      "planner/tariff.py": "1ac6bff75f1da54250a47d0451f2401235ac808959b6e3646243a69e9f211a7c"
+    }
+  }
+}

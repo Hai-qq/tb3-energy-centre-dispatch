@@ -1,0 +1,73 @@
+{
+  "accepted": 200,
+  "apps": {
+    "blind": {
+      "failed_days": 109,
+      "failure_tests": {
+        "execution_or_flow": 109
+      },
+      "max_abs_delta_gbp": 20.577533182157822,
+      "max_seconds": 6.237893394000821,
+      "passed_days": 91
+    },
+    "oracle": {
+      "failed_days": 0,
+      "failure_tests": {},
+      "max_abs_delta_gbp": 0.0004891965163551504,
+      "max_seconds": 5.684199125000305,
+      "passed_days": 200
+    },
+    "strong-v16": {
+      "failed_days": 83,
+      "failure_tests": {
+        "test_least_cost": 83
+      },
+      "max_abs_delta_gbp": 57.58646381154631,
+      "max_seconds": 4.557266060999609,
+      "passed_days": 117
+    },
+    "strong-v19": {
+      "failed_days": 200,
+      "failure_tests": {
+        "test_least_cost": 113,
+        "test_reported_gas_and_cost": 200,
+        "test_single_connection_direction": 200
+      },
+      "max_abs_delta_gbp": 57.64249091799229,
+      "max_seconds": 3.4287425289994644,
+      "passed_days": 0
+    }
+  },
+  "draws": 277,
+  "inputs_and_apps_unchanged": true,
+  "maintenance_coverage": {
+    "AC1": 43,
+    "AC1 absorber and condenser": 17,
+    "AC1 generator": 16,
+    "B1": 26,
+    "B2": 20,
+    "CT1": 19,
+    "CT2": 25,
+    "EC1": 37,
+    "EC1 condenser": 16,
+    "EC2": 28,
+    "EC2 condenser": 21,
+    "GE1": 18,
+    "GE1 intercooler": 15,
+    "GE1 jacket water and exhaust": 19,
+    "GE2": 39,
+    "GE2 intercooler": 19,
+    "GE2 jacket water and exhaust": 20,
+    "LT radiator 1": 11,
+    "LT radiator 2": 20,
+    "PHE1": 12,
+    "PV1": 12
+  },
+  "previous_app_records_and_raw_runs_unchanged": true,
+  "seasons": {
+    "autumn": 64,
+    "spring": 66,
+    "summer": 17,
+    "winter": 53
+  }
+}

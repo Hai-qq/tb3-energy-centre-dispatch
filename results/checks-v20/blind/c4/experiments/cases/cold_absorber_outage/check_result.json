@@ -1,0 +1,72 @@
+{
+  "name": "cold_absorber_outage",
+  "description": "Cold tower leaving temperature remains 21 C with AC unavailable.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 6331.436480000004,
+      "gas_kwh": 52918.079999999965,
+      "import_kwh": 16800.0,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 0.0,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 1033.828996282528,
+      "phe_kw": 900.0,
+      "apparent_import_kva": 707.1067811865477,
+      "condenser_entering_c": 21.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.3473477709994768,
+    1.2975132470000972
+  ],
+  "plan_sha256": "3eda5bf456c3de4cdcb7e9b44f2dc5e37f0f8965acca9d4fcb4c16bf5951f9f9",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6331.43648,
+    "lower_bound_gbp": 6331.43648,
+    "absolute_gap_gbp": 0.0,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.02964685400002054,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6331.43648,
+        "incumbent_gbp": 6331.43648,
+        "candidate_gap_gbp": 0.0,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 6331.43648,
+  "improvement_over_witness_gbp": 0.0,
+  "total_seconds": 2.6834070080003585
+}

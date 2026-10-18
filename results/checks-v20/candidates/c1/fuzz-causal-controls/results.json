@@ -1,0 +1,596 @@
+{
+  "direction_only_semantic_fix": {
+    "fixed-v16": {
+      "app": "results/checks-v20/audit/arbitrage/diagnostic-direction-fixed/v16/app",
+      "days": {
+        "d0217": {
+          "cost_gbp": 6029.9401302253045,
+          "delta_gbp": -0.00011350605655024992,
+          "failures": {},
+          "milp_gbp": 6029.940243731361,
+          "passed": true,
+          "runs": [
+            {
+              "returncode": 0,
+              "seconds": 4.095118762999846,
+              "sha256": "f403c6a8a5fe9199337da187aff2d38d5187e2c68e4adf60bd6244e6d082d12b"
+            },
+            {
+              "returncode": 0,
+              "seconds": 4.326010026999938,
+              "sha256": "f403c6a8a5fe9199337da187aff2d38d5187e2c68e4adf60bd6244e6d082d12b"
+            }
+          ]
+        },
+        "d0229": {
+          "cost_gbp": 6462.758598738806,
+          "delta_gbp": 0.002523572829886689,
+          "failures": {},
+          "milp_gbp": 6462.756075165976,
+          "passed": true,
+          "runs": [
+            {
+              "returncode": 0,
+              "seconds": 4.434276412000145,
+              "sha256": "a70af1337645a02625a1bc7dd425ce703fca1af92d3ea313db832c18d04cd529"
+            },
+            {
+              "returncode": 0,
+              "seconds": 6.415100336999785,
+              "sha256": "a70af1337645a02625a1bc7dd425ce703fca1af92d3ea313db832c18d04cd529"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": {
+        "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+        "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+        "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+        "planner/optimize.py": "b357a2f091c3234695c79c2a027ae6b3776097b0221a2022c1221d2d65424a9a",
+        "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+        "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+      }
+    },
+    "fixed-v19": {
+      "app": "results/checks-v20/audit/arbitrage/diagnostic-direction-fixed/v19/app",
+      "days": {
+        "d0217": {
+          "cost_gbp": 6029.9401302253045,
+          "delta_gbp": -0.00011350605655024992,
+          "failures": {},
+          "milp_gbp": 6029.940243731361,
+          "passed": true,
+          "runs": [
+            {
+              "returncode": 0,
+              "seconds": 3.254846417999943,
+              "sha256": "f403c6a8a5fe9199337da187aff2d38d5187e2c68e4adf60bd6244e6d082d12b"
+            },
+            {
+              "returncode": 0,
+              "seconds": 3.358223735000138,
+              "sha256": "f403c6a8a5fe9199337da187aff2d38d5187e2c68e4adf60bd6244e6d082d12b"
+            }
+          ]
+        },
+        "d0229": {
+          "cost_gbp": 6462.75947250971,
+          "delta_gbp": 0.003397343733922753,
+          "failures": {},
+          "milp_gbp": 6462.756075165976,
+          "passed": true,
+          "runs": [
+            {
+              "returncode": 0,
+              "seconds": 3.1748637230002714,
+              "sha256": "279ac23872b75023c90bda41848d7d04c396cfda6e0547e7f1df507a191ff9ba"
+            },
+            {
+              "returncode": 0,
+              "seconds": 3.0464602929996545,
+              "sha256": "279ac23872b75023c90bda41848d7d04c396cfda6e0547e7f1df507a191ff9ba"
+            }
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": {
+        "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+        "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+        "planner/data.py": "e37c098f1c0604abec1d8d98dfab95c5e21fe88141e8eb0e222d1f1e9013f151",
+        "planner/optimize.py": "e2de419cf27005e71222ff4f8c7f702dae1c6bb182e83a59f4771b4f69df35a5",
+        "planner/plant.py": "1dfa72d3c71fd78202079559deea986e4265b226a2130956f65d3cfa63d8ecfc",
+        "planner/tariff.py": "f885a4a9982601918c8bd0be0814d9cac996e673f19c942d97c02322d1866a3b"
+      }
+    }
+  },
+  "input_specs": {
+    "d0217": {
+      "base": "h2",
+      "draw_index": 216,
+      "id": "d0217",
+      "input_hashes": {
+        "demand.csv": "a9201f49f2099ae8fbfacdb90efa6048aaed01cad6d7a97acf10c6ad376c5582",
+        "plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+        "status.json": "a22c5fdc861a1e27aab58cadf63a2bfa7d87efe38ed48d7672365db520d46d7f",
+        "supply.json": "ffc8b1330d69b6839128cfcc2d2dcb893e748eeeaa4a5f11bba373df76ae7b71",
+        "weather.csv": "75e525acfaa8a9ec36424995e5d2ea373d8082c2eb8a9b9f7a3b8e16c92724db"
+      },
+      "input_problems": [],
+      "milp_gbp": 6029.940243731361,
+      "milp_seconds": 0.5991339699999116,
+      "season": "winter",
+      "spec": {
+        "cloud": 0.05662316127710375,
+        "cool": [
+          [
+            0,
+            173.26959312542226
+          ],
+          [
+            2,
+            173.26959312542226
+          ],
+          [
+            8,
+            209.74740220445852
+          ],
+          [
+            13,
+            246.2252112834948
+          ],
+          [
+            18,
+            218.8668544742176
+          ],
+          [
+            23,
+            182.3890453951813
+          ]
+        ],
+        "date": "2026-01-23",
+        "dry": [
+          [
+            0,
+            3.7629382316867894
+          ],
+          [
+            6,
+            2.6629382316867893
+          ],
+          [
+            10,
+            5.262938231686789
+          ],
+          [
+            14,
+            7.46293823168679
+          ],
+          [
+            18,
+            5.862938231686789
+          ],
+          [
+            23,
+            4.262938231686789
+          ]
+        ],
+        "elec": [
+          [
+            0,
+            2153.7982314604856
+          ],
+          [
+            1,
+            2153.7982314604856
+          ],
+          [
+            2,
+            1583.6751701915337
+          ],
+          [
+            3,
+            1176.444412142282
+          ],
+          [
+            5,
+            1158.3452673400932
+          ],
+          [
+            7,
+            1411.7332945707385
+          ],
+          [
+            9,
+            1764.6666182134231
+          ],
+          [
+            12,
+            1800.8649078178012
+          ],
+          [
+            16,
+            1855.1623422243679
+          ],
+          [
+            18,
+            1818.96405261999
+          ],
+          [
+            21,
+            1493.179446180589
+          ],
+          [
+            23,
+            1266.9401361532268
+          ]
+        ],
+        "heat": [
+          [
+            0,
+            1769.9555564903635
+          ],
+          [
+            1,
+            1769.9555564903635
+          ],
+          [
+            2,
+            2015.782717114025
+          ],
+          [
+            3,
+            2212.444445612954
+          ],
+          [
+            4,
+            2310.775309862419
+          ],
+          [
+            6,
+            3097.422223858136
+          ],
+          [
+            8,
+            3244.918520232333
+          ],
+          [
+            11,
+            2753.26419898501
+          ],
+          [
+            15,
+            2605.7679026108126
+          ],
+          [
+            18,
+            2900.7604953592067
+          ],
+          [
+            21,
+            2654.933334735545
+          ],
+          [
+            23,
+            2359.9407419871513
+          ]
+        ],
+        "kvar_per_kw": 0.1,
+        "offset": 0,
+        "pv_peak": 129.62667625749302,
+        "seed": 92467960,
+        "status": {
+          "outages": [
+            {
+              "from": "20:52",
+              "to": "21:22",
+              "unit": "CT2"
+            }
+          ],
+          "running_at_midnight": [
+            "GE2"
+          ]
+        },
+        "sun": [
+          8.2,
+          16.2
+        ],
+        "wet": [
+          [
+            0,
+            2.8629382316867895
+          ],
+          [
+            6,
+            2.0629382316867897
+          ],
+          [
+            10,
+            3.9629382316867896
+          ],
+          [
+            14,
+            5.362938231686789
+          ],
+          [
+            18,
+            4.56293823168679
+          ],
+          [
+            23,
+            3.3629382316867895
+          ]
+        ]
+      }
+    },
+    "d0229": {
+      "base": "h2",
+      "draw_index": 228,
+      "id": "d0229",
+      "input_hashes": {
+        "demand.csv": "143bc6b0551a93c5ac9dbdd2a56b2c22e6ecd4a341891c5f9a96c72ed5aff45b",
+        "plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+        "status.json": "ba0e5f67df81a50c399e981607e38b4f274deb4c4a6d6ef25f84da42238bf4db",
+        "supply.json": "ffc8b1330d69b6839128cfcc2d2dcb893e748eeeaa4a5f11bba373df76ae7b71",
+        "weather.csv": "2b9f2b75a14faa0e992218c23074744d37c73b53f5391df7f6a961abc520fcf9"
+      },
+      "input_problems": [],
+      "milp_gbp": 6462.756075165976,
+      "milp_seconds": 0.3984295180002846,
+      "season": "winter",
+      "spec": {
+        "cloud": 0.17331752127031283,
+        "cool": [
+          [
+            0,
+            171.32648220658862
+          ],
+          [
+            2,
+            171.32648220658862
+          ],
+          [
+            8,
+            207.39521530271253
+          ],
+          [
+            13,
+            243.46394839883646
+          ],
+          [
+            18,
+            216.41239857674353
+          ],
+          [
+            23,
+            180.3436654806196
+          ]
+        ],
+        "date": "2026-12-08",
+        "dry": [
+          [
+            0,
+            0.5171781440963374
+          ],
+          [
+            6,
+            -0.5828218559036626
+          ],
+          [
+            10,
+            2.0171781440963374
+          ],
+          [
+            14,
+            4.217178144096337
+          ],
+          [
+            18,
+            2.617178144096337
+          ],
+          [
+            23,
+            1.0171781440963374
+          ]
+        ],
+        "elec": [
+          [
+            0,
+            2330.5241698198065
+          ],
+          [
+            1,
+            2330.5241698198065
+          ],
+          [
+            2,
+            1713.620713102799
+          ],
+          [
+            3,
+            1272.975386876365
+          ],
+          [
+            5,
+            1253.3911501551902
+          ],
+          [
+            7,
+            1527.570464251638
+          ],
+          [
+            9,
+            1909.4630803145474
+          ],
+          [
+            12,
+            1948.6315537568971
+          ],
+          [
+            16,
+            2007.3842639204217
+          ],
+          [
+            18,
+            1968.215790478072
+          ],
+          [
+            21,
+            1615.6995294969247
+          ],
+          [
+            23,
+            1370.8965704822392
+          ]
+        ],
+        "heat": [
+          [
+            0,
+            1690.580029891753
+          ],
+          [
+            1,
+            1690.580029891753
+          ],
+          [
+            2,
+            1925.382811821163
+          ],
+          [
+            3,
+            2113.225037364691
+          ],
+          [
+            4,
+            2207.146150136455
+          ],
+          [
+            6,
+            2958.5150523105676
+          ],
+          [
+            8,
+            3099.3967214682134
+          ],
+          [
+            11,
+            2629.7911576093934
+          ],
+          [
+            15,
+            2488.909488451747
+          ],
+          [
+            18,
+            2770.6728267670396
+          ],
+          [
+            21,
+            2535.8700448376294
+          ],
+          [
+            23,
+            2254.106706522337
+          ]
+        ],
+        "kvar_per_kw": 0.55,
+        "offset": 0,
+        "pv_peak": 129.4389032726812,
+        "seed": 51968003,
+        "status": {
+          "outages": [
+            {
+              "from": "21:40",
+              "to": "23:40",
+              "unit": "LT radiator 2"
+            }
+          ],
+          "running_at_midnight": [
+            "GE1"
+          ]
+        },
+        "sun": [
+          8.2,
+          16.2
+        ],
+        "wet": [
+          [
+            0,
+            -0.38282185590366247
+          ],
+          [
+            6,
+            -1.1828218559036625
+          ],
+          [
+            10,
+            0.7171781440963376
+          ],
+          [
+            14,
+            2.117178144096337
+          ],
+          [
+            18,
+            1.3171781440963373
+          ],
+          [
+            23,
+            0.11717814409633753
+          ]
+        ]
+      }
+    }
+  },
+  "not_a_format_adapter": true,
+  "original_worst": {
+    "strong-v16": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0229",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0229/strong-v16/plan.json"
+      ],
+      "cost_gbp": 6520.342538977522,
+      "delta_gbp": 57.58646381154631,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "id": "d0229",
+      "milp_gbp": 6462.756075165976,
+      "passed": false,
+      "returncode": 0,
+      "seconds": 2.715382372000022,
+      "simultaneous_periods": 0
+    },
+    "strong-v19": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0217",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0217/strong-v19/plan.json"
+      ],
+      "cost_gbp": 6087.582734649353,
+      "delta_gbp": 57.64249091799229,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n"
+      },
+      "id": "d0217",
+      "milp_gbp": 6029.940243731361,
+      "passed": false,
+      "returncode": 0,
+      "seconds": 3.0326993610005957,
+      "simultaneous_periods": 14
+    }
+  },
+  "selection": "largest actual net-cost regret, selected after all original 200 inputs and replays were frozen"
+}

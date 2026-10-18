@@ -1,0 +1,111 @@
+{
+  "app": "results/checks-v20/candidates/c4/gates-r1/mutant_apps/tower_cell_outage_ignored",
+  "days": {
+    "h1": {
+      "cost_gbp": 6257.430563679346,
+      "delta_gbp": -169.21690342369584,
+      "failures": {
+        "test_cooling_towers": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 86, in test_cooling_towers\n    assert (flows[\"rejected\"] <= day.tower_max + KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.7350947840000117,
+          "sha256": "c49c12beb3ac61efdfcd0e459583f94c12ce65b9aad32ae798c634efde6a3259"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9384020839997902,
+          "sha256": "c49c12beb3ac61efdfcd0e459583f94c12ce65b9aad32ae798c634efde6a3259"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 9107.675997180833,
+      "delta_gbp": 0.0001009803672786802,
+      "failures": {},
+      "milp_gbp": 9107.675896200466,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.5253163509996739,
+          "sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.7263628969999445,
+          "sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {},
+      "milp_gbp": 5375.538040469284,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.2303488610000386,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9551922300001934,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.7636430689999543,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.7165412720000859,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8173837379999895,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8442765280001368,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "c88469b009f379011faddad852917f533e4885c2bfa08177911aaeddf8d9bc1a",
+    "planner/plant.py": "fe12a7f73a161eadcc9bd32dd5fcc65bacb71ad95b50ff08c1cf07ccf5a72206",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

@@ -1,0 +1,11 @@
+$ /workspace/scratch/e1216eed3f00/ecd-venv/bin/python /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py --data /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/days/h3 --output /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/apps/v19-run1-claude/h3.rerun.json
+Traceback (most recent call last):
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run1-claude/app/planner/optimize.py", line 282, in plan_day
+    raise RuntimeError(f"no feasible loading at {day.starts[t]}")
+RuntimeError: no feasible loading at 13:30

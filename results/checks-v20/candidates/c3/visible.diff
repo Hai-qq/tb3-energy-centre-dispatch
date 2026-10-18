@@ -1,0 +1,56 @@
+--- v19/app/data/plant.json
++++ c3/app/data/plant.json
+@@ -106,7 +106,9 @@
+           34,
+           3.9
+         ]
+-      ]
++      ],
++      "electrical_power_factor": 0.9,
++      "electrical_power_factor_control": "fixed, lagging"
+     },
+     {
+       "id": "EC2",
+@@ -132,7 +134,9 @@
+           34,
+           3.4
+         ]
+-      ]
++      ],
++      "electrical_power_factor": 0.9,
++      "electrical_power_factor_control": "fixed, lagging"
+     }
+   ],
+   "absorption_chillers": [
+@@ -142,7 +146,9 @@
+       "cop": 0.71,
+       "auxiliary_kwe_per_kw": 0.022,
+       "hot_water_in_min_c": 85,
+-      "cooling_water_in_min_c": 22
++      "cooling_water_in_min_c": 22,
++      "electrical_power_factor": 0.9,
++      "electrical_power_factor_control": "fixed, lagging"
+     }
+   ],
+   "cooling_towers": {
+@@ -229,5 +235,20 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
++  },
++  "electrical_distribution": {
++    "feeders": [
++      {
++        "id": "CH-MCC",
++        "rated_kva": 400.0,
++        "loads": [
++          "EC1",
++          "EC2",
++          "AC1"
++        ],
++        "other_load_kw": 0.0,
++        "other_load_kvar": 0.0
++      }
++    ]
+   }
+ }

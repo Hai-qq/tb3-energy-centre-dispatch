@@ -1,0 +1,2149 @@
+{
+  "passed": true,
+  "scenarios": 33,
+  "results": [
+    {
+      "name": "visible",
+      "description": "Unmodified supplied day.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 6303.560319426554,
+          "gas_kwh": 64944.18583948503,
+          "import_kwh": 13775.407766201613,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 2.2737367544323206e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2849.070947368421,
+          "phe_kw": 583.6,
+          "apparent_import_kva": 985.4000415071423,
+          "condenser_entering_c": 24.6
+        },
+        "coverage": {
+          "interior_engine_loads": 3,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.324265917000048,
+        1.5075021470001957
+      ],
+      "plan_sha256": "18b4549413669908993d72ad5b166f828b1aa873fb5cc3e838718b09a3118eaa",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6303.560319426553,
+        "lower_bound_gbp": 6303.560319426553,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.10626864499954536,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6303.560319426553,
+            "incumbent_gbp": 6303.560319426553,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 2.9470473039991703
+    },
+    {
+      "name": "monday_local_previous_utc_sunday",
+      "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 6303.560319426554,
+          "gas_kwh": 64944.18583948503,
+          "import_kwh": 13775.407766201613,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 2.2737367544323206e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2849.070947368421,
+          "phe_kw": 583.6,
+          "apparent_import_kva": 985.4000415071423,
+          "condenser_entering_c": 24.6
+        },
+        "coverage": {
+          "interior_engine_loads": 3,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.3197085429992512,
+        1.237123820999841
+      ],
+      "plan_sha256": "6384045c2ed53c27a68378e8f7e1163513c3c176982028a0e8fd89e8a7d4a2ec",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6303.560319426553,
+        "lower_bound_gbp": 6303.560319426553,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.09624639400044543,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6303.560319426553,
+            "incumbent_gbp": 6303.560319426553,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 2.6626130140002715
+    },
+    {
+      "name": "saturday_local_previous_utc_friday",
+      "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 5962.180485987453,
+          "gas_kwh": 64944.18583948503,
+          "import_kwh": 13775.407766201613,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 2.2737367544323206e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2849.070947368421,
+          "phe_kw": 583.6,
+          "apparent_import_kva": 985.4000415071423,
+          "condenser_entering_c": 24.6
+        },
+        "coverage": {
+          "interior_engine_loads": 3,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.4673602940001729,
+        1.451774326999839
+      ],
+      "plan_sha256": "1ef92f405f62fdb13da471679e871c732339ce5404eff54e363fe0bafd599075",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5962.180485987452,
+        "lower_bound_gbp": 5962.180485987452,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.06347011100024247,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5962.180485987452,
+            "incumbent_gbp": 5962.180485987452,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 2.9910378920003495
+    },
+    {
+      "name": "offset_plus_14_shuffled",
+      "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 5962.180485987453,
+          "gas_kwh": 64944.18583948503,
+          "import_kwh": 13775.407766201613,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 2.2737367544323206e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2849.070947368421,
+          "phe_kw": 583.6,
+          "apparent_import_kva": 985.4000415071423,
+          "condenser_entering_c": 24.6
+        },
+        "coverage": {
+          "interior_engine_loads": 3,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.395662698999331,
+        1.3297096570004214
+      ],
+      "plan_sha256": "c48bcc38eb3b81c8764c6188d4f9014ae7d1e7bdcbf6195c1187a0e69da7979b",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5962.180485987452,
+        "lower_bound_gbp": 5962.180485987452,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.06861064300028374,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5962.180485987452,
+            "incumbent_gbp": 5962.180485987452,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 2.8032587480001894
+    },
+    {
+      "name": "offset_minus_7_shuffled",
+      "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 6303.560319426554,
+          "gas_kwh": 64944.18583948503,
+          "import_kwh": 13775.407766201613,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 2.2737367544323206e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2849.070947368421,
+          "phe_kw": 583.6,
+          "apparent_import_kva": 985.4000415071423,
+          "condenser_entering_c": 24.6
+        },
+        "coverage": {
+          "interior_engine_loads": 3,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.3848580399999264,
+        1.3727658569996493
+      ],
+      "plan_sha256": "1a83526f90d34109f8613785a5be641960629427115a38a970846832ba42cb8f",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6303.560319426553,
+        "lower_bound_gbp": 6303.560319426553,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.1021192059997702,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6303.560319426553,
+            "incumbent_gbp": 6303.560319426553,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 2.8722788280001623
+    },
+    {
+      "name": "offset_plus_5_30",
+      "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 5962.180485987453,
+          "gas_kwh": 64944.18583948503,
+          "import_kwh": 13775.407766201613,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 2.2737367544323206e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2849.070947368421,
+          "phe_kw": 583.6,
+          "apparent_import_kva": 985.4000415071423,
+          "condenser_entering_c": 24.6
+        },
+        "coverage": {
+          "interior_engine_loads": 3,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.4126990449994992,
+        1.2314498859996093
+      ],
+      "plan_sha256": "2b937b82e4cce8fa681cbf2b29ee1e21082e16122bbeedf705248f1b57271d4f",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5962.180485987452,
+        "lower_bound_gbp": 5962.180485987452,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.06678346900025645,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5962.180485987452,
+            "incumbent_gbp": 5962.180485987452,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 2.7193355629997313
+    },
+    {
+      "name": "cold_absorption",
+      "description": "The tower fans maintain 22 C for AC while EC COP uses the common inlet.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 5392.6335073076925,
+          "gas_kwh": 76319.04000000004,
+          "import_kwh": 7670.870030769229,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.1316282072803006e-14,
+          "heat_kw": 1.1368683772161603e-13,
+          "cooling_kw": 1.1368683772161603e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 1780.0582881906823,
+          "phe_kw": 457.4647887323945,
+          "apparent_import_kva": 334.0756695828812,
+          "condenser_entering_c": 22
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 48,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        2.170684211000662,
+        2.0098915049993593
+      ],
+      "plan_sha256": "1dc75b9b2017056d72a9a86ffdc51783448ce4810c3b4716e23a30c65dbbae7a",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5392.6335073076925,
+        "lower_bound_gbp": 5392.633507307692,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.0910064190002231,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1200,
+        "binary_variables": 288,
+        "constraints": 2064,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5392.633507307692,
+            "incumbent_gbp": 5392.633507307692,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 7244.7097560221,
+      "improvement_over_witness_gbp": 1852.0762487144075,
+      "total_seconds": 4.280872337000801
+    },
+    {
+      "name": "cold_absorber_outage",
+      "description": "Cold tower leaving temperature remains 21 C with AC unavailable.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 6331.436480000004,
+          "gas_kwh": 52918.079999999965,
+          "import_kwh": 16800.0,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 0.0,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 1033.828996282528,
+          "phe_kw": 900.0,
+          "apparent_import_kva": 707.1067811865477,
+          "condenser_entering_c": 21.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.3473477709994768,
+        1.2975132470000972
+      ],
+      "plan_sha256": "3eda5bf456c3de4cdcb7e9b44f2dc5e37f0f8965acca9d4fcb4c16bf5951f9f9",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6331.43648,
+        "lower_bound_gbp": 6331.43648,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.02964685400002054,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6331.43648,
+            "incumbent_gbp": 6331.43648,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 6331.43648,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 2.6834070080003585
+    },
+    {
+      "name": "every_plant_outage_category",
+      "description": "Boiler, electric/absorption chiller, tower, PHE, PV and LT radiator outages.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 5410.0368666211525,
+          "gas_kwh": 70270.1694181241,
+          "import_kwh": 8493.87958520272,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 3.410605131648481e-13,
+          "cooling_kw": 0.0,
+          "cost_gbp": 1.4210854715202004e-14,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2060.7933251684017,
+          "phe_kw": 1110.0,
+          "apparent_import_kva": 997.2624173203625,
+          "condenser_entering_c": 26.0
+        },
+        "coverage": {
+          "interior_engine_loads": 32,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 8,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.499646397000106,
+        1.4550140619994636
+      ],
+      "plan_sha256": "d6443c09512af7cb5f52666f684b05beaf5690fc8a3dcd75f81e2dad9b6dee8d",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5410.036866621156,
+        "lower_bound_gbp": 5410.036866621155,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.09632317300020077,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5410.036866621155,
+            "incumbent_gbp": 5410.036866621156,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 6814.749997735472,
+      "improvement_over_witness_gbp": 1404.7131311143157,
+      "total_seconds": 3.0624392869995063
+    },
+    {
+      "name": "partial_and_midnight_outages",
+      "description": "Whole-half-hour availability for partial and midnight-wrapping outages.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 3862.200495178296,
+          "gas_kwh": 72561.71805155613,
+          "import_kwh": 1897.1523709248504,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 1.5631940186722204e-13,
+          "heat_kw": 4.547473508864641e-13,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 1445.0704225352113,
+          "phe_kw": 875.0000000000005,
+          "apparent_import_kva": 1060.6601717798212,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 5,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.376739047999763,
+        1.3442860669993024
+      ],
+      "plan_sha256": "c1489c7f6846439f13af1a6a927bfeea3c14695ba3262e7022df5314f6954890",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 3862.200495178294,
+        "lower_bound_gbp": 3862.200495178294,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.05825796600038302,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 3862.200495178294,
+            "incumbent_gbp": 3862.200495178294,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 5906.809026901811,
+      "improvement_over_witness_gbp": 2044.608531723517,
+      "total_seconds": 2.7897698350006976
+    },
+    {
+      "name": "very_hot_flat_table_ends",
+      "description": "Wet bulb and condenser temperature above the last performance-table points.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 6671.1467865332925,
+          "gas_kwh": 92854.52455255894,
+          "import_kwh": 10525.416039916838,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 1.1368683772161603e-13,
+          "heat_kw": 2.2737367544323206e-13,
+          "cooling_kw": 0.0,
+          "cost_gbp": 2.842170943040401e-14,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2850.0,
+          "phe_kw": 887.4647887323946,
+          "apparent_import_kva": 669.7769515149873,
+          "condenser_entering_c": 39.0
+        },
+        "coverage": {
+          "interior_engine_loads": 34,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 34,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.4652509820007253,
+        1.6059473780005646
+      ],
+      "plan_sha256": "02e530c8ed0ed02f4ed470aaeaf1c3aa7242eff2d36407db7245bf172179f669",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6671.146786533293,
+        "lower_bound_gbp": 6671.1467865332925,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 5.177372567999555,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6671.1467865332925,
+            "incumbent_gbp": 6671.1467865332925,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 122,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8244.1790320442,
+      "improvement_over_witness_gbp": 1573.0322455109063,
+      "total_seconds": 8.25772543400035
+    },
+    {
+      "name": "tower_capacity_boundary",
+      "description": "Cooling load chosen to bind total condenser heat rejection exactly.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 8512.178240000001,
+          "gas_kwh": 76319.04000000004,
+          "import_kwh": 21600.000000000004,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 1.7053025658242404e-13,
+          "heat_kw": 0.0,
+          "cooling_kw": 4.547473508864641e-13,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2850.0000000000005,
+          "phe_kw": 1290.0,
+          "apparent_import_kva": 905.538513813742,
+          "condenser_entering_c": 26.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 48,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.427787872999943,
+        1.4907442070007164
+      ],
+      "plan_sha256": "d7ce8a23649cd73adc2eef8702b3d20e1ae33603aa6a518b1ef7ef11e057729d",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 8512.178240000001,
+        "lower_bound_gbp": 8512.17824,
+        "absolute_gap_gbp": 1.8189894035458565e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.03574212399962562,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 8512.17824,
+            "incumbent_gbp": 8512.17824,
+            "candidate_gap_gbp": 1.8189894035458565e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8512.178240000001,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 2.962955447999775
+    },
+    {
+      "name": "phe_flow_boundary",
+      "description": "With both boilers unavailable, PHE transfers exactly its 1672 kW hydraulic capacity.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 10006.114719999998,
+          "gas_kwh": 129237.1200000001,
+          "import_kwh": 16800.0,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 8.526512829121202e-14,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 1615.2646153846154,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 707.1067811865476,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 48,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.3608321220008293,
+        2.0998430119998375
+      ],
+      "plan_sha256": "ad393191ec162378717e689c3267002e327645725b25f0be4fbd368d8996f614",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 10006.114720000001,
+        "lower_bound_gbp": 10006.114719999998,
+        "absolute_gap_gbp": 3.637978807091713e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.06758841800001392,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 10006.114719999998,
+            "incumbent_gbp": 10006.114719999998,
+            "candidate_gap_gbp": 3.637978807091713e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 10006.114720000001,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 3.5429838930003825
+    },
+    {
+      "name": "high_heat_and_boiler_merit",
+      "description": "High heat uses both boiler efficiencies and the PHE capacity.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 12820.203064538382,
+          "gas_kwh": 193928.80608134207,
+          "import_kwh": 16800.0,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 8.526512829121202e-14,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 1615.2646153846154,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 707.1067811865476,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 48,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.839319668000826,
+        1.5497773990000496
+      ],
+      "plan_sha256": "0e5cef900992b3f245fe673a6fe7b9e188b71c0da6ca29f07f52892dbe52e241",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 12820.203064538375,
+        "lower_bound_gbp": 12820.203064538373,
+        "absolute_gap_gbp": 1.8189894035458565e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.03849044700018567,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 12820.203064538373,
+            "incumbent_gbp": 12820.203064538375,
+            "candidate_gap_gbp": 1.8189894035458565e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 12820.203064538375,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 3.436910712000099
+    },
+    {
+      "name": "reactive_demand_above_connection_rating",
+      "description": "Generator reactive support permits service when site kvar exceeds the import kVA rating.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 11618.614719999992,
+          "gas_kwh": 129237.1200000001,
+          "import_kwh": 24000.0,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.842170943040401e-14,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2358.07150595883,
+          "phe_kw": 1485.774647887324,
+          "apparent_import_kva": 1166.19037896906,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.4265642110003682,
+        1.3597475110000232
+      ],
+      "plan_sha256": "88e046b482e830dc5614fe67d2c50aa56a0062a2997ccca53364f3868ff3349b",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 11618.614720000001,
+        "lower_bound_gbp": 11618.61472,
+        "absolute_gap_gbp": 1.8189894035458565e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.04214940200017736,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 11618.61472,
+            "incumbent_gbp": 11618.61472,
+            "candidate_gap_gbp": 1.8189894035458565e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 11618.614720000001,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 2.8381457870000304
+    },
+    {
+      "name": "leading_reactive_circle_boundary",
+      "description": "Overexcited generators can increase an already leading grid reactive flow; true circle is binding.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 2,
+        "recomputed_summary": {
+          "cost_gbp": 5799.4244292850435,
+          "gas_kwh": 97715.47630297416,
+          "import_kwh": 5984.260559410573,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 7.958078640513122e-13,
+          "heat_kw": 2.9558577807620168e-12,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 5.68775249121245e-09
+        },
+        "maxima": {
+          "tower_rejection_kw": 2388.2990249187433,
+          "phe_kw": 1044.9295774647887,
+          "apparent_import_kva": 1220.0000000056878,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 34,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 34,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        2.375131087000227,
+        2.486359178999919
+      ],
+      "plan_sha256": "3d7d9d0f243f642e9867cbcf7f1faa32d723f654d5ddc1dbee7f2905a74ea764",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5799.424429285039,
+        "lower_bound_gbp": 5799.424429226116,
+        "absolute_gap_gbp": 5.892252374906093e-08,
+        "tolerance_gbp": 0.0002,
+        "seconds": 6.634453186999963,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1926,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5734.390610404779,
+            "incumbent_gbp": 5734.390610404779,
+            "candidate_gap_gbp": 65.03381888025979,
+            "maximum_circle_violation_kva": 5.251988998781144,
+            "mip_nodes": 1,
+            "solver_status": 0
+          },
+          {
+            "round": 2,
+            "lower_bound_gbp": 5797.084365124747,
+            "incumbent_gbp": 5797.084365124747,
+            "candidate_gap_gbp": 2.3400641602920587,
+            "maximum_circle_violation_kva": 0.2510700730381359,
+            "mip_nodes": 1,
+            "solver_status": 0
+          },
+          {
+            "round": 3,
+            "lower_bound_gbp": 5799.418072745403,
+            "incumbent_gbp": 5799.418072745403,
+            "candidate_gap_gbp": 0.006356539635817171,
+            "maximum_circle_violation_kva": 0.000707636908373388,
+            "mip_nodes": 6,
+            "solver_status": 0
+          },
+          {
+            "round": 4,
+            "lower_bound_gbp": 5799.424429226116,
+            "incumbent_gbp": 5799.424429285042,
+            "candidate_gap_gbp": 5.892252374906093e-08,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 55,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 6005.31144,
+      "improvement_over_witness_gbp": 205.88701071496143,
+      "total_seconds": 11.505153828999937
+    },
+    {
+      "name": "no_ht_dump_low_heat",
+      "description": "Very low buildings heat requires all unused HT to flow to the absorption generator.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 6130.09612782322,
+          "gas_kwh": 68562.67586854464,
+          "import_kwh": 12643.624541711812,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 3.0020430585864233e-13,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 2025.7028710725895,
+          "phe_kw": 75.0,
+          "apparent_import_kva": 527.0875543008744,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 48,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.590551580000465,
+        1.605999041999894
+      ],
+      "plan_sha256": "52dd3bad397396a5c48011a627abac049d720d5d99a8aa2d6e5abb612b6f4ec2",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6130.096127823221,
+        "lower_bound_gbp": 6130.096127823219,
+        "absolute_gap_gbp": 1.8189894035458565e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.0696641720005573,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6130.096127823219,
+            "incumbent_gbp": 6130.09612782322,
+            "candidate_gap_gbp": 1.8189894035458565e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 6868.93648,
+      "improvement_over_witness_gbp": 738.8403521767796,
+      "total_seconds": 3.277176112000234
+    },
+    {
+      "name": "no_towers_no_cooling",
+      "description": "LT radiators and building heat operate while both cooling-tower cells are unavailable.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 6669.710799999997,
+          "gas_kwh": 60496.79999999995,
+          "import_kwh": 16800.0,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 0.0,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 0.0,
+          "phe_kw": 1110.0,
+          "apparent_import_kva": 707.1067811865477,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.5467894990006243,
+        1.934722648999923
+      ],
+      "plan_sha256": "e25b1b14c2b358d286c7bb5baa9324cbe492b9a86f4938f175cbcf4dcf4abe7d",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6669.710800000001,
+        "lower_bound_gbp": 6669.7108,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.03998060799949599,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6669.7108,
+            "incumbent_gbp": 6669.7108,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 6669.710800000001,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 3.5325075459995787
+    },
+    {
+      "name": "pv_export_curtailment",
+      "description": "Available PV is curtailed just enough to respect the real-power export limit.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 0,
+        "recomputed_summary": {
+          "cost_gbp": 309.3149171270716,
+          "gas_kwh": 15248.618784530403,
+          "import_kwh": 0.0,
+          "export_kwh": 6000.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 0.0,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 2.6645352591003757e-15,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 0.0,
+          "phe_kw": 0.0,
+          "apparent_import_kva": 0.0,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 48,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        0.9434531930000958,
+        0.6324845599992841
+      ],
+      "plan_sha256": "dbe9223d686902fe14afe02d56dd351fdd6129a39a6b3f9202fa26e01fb6a4e6",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 309.3149171270717,
+        "lower_bound_gbp": 309.31491712707157,
+        "absolute_gap_gbp": 1.1368683772161603e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.019611853000242263,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 309.31491712707157,
+            "incumbent_gbp": 309.3149171270717,
+            "candidate_gap_gbp": 1.1368683772161603e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 0,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 309.3149171270718,
+      "improvement_over_witness_gbp": 1.1368683772161603e-13,
+      "total_seconds": 1.602064622999933
+    },
+    {
+      "name": "pv_ac_rating",
+      "description": "PV forecast above inverter rating is clipped to the AC nameplate.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 5133.946665,
+          "gas_kwh": 76319.04000000004,
+          "import_kwh": 6515.803199999996,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 1.4210854715202004e-14,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 1762.242903575298,
+          "phe_kw": 477.46478873239437,
+          "apparent_import_kva": 273.3100576497099,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.5487116930007687,
+        1.4297247029999198
+      ],
+      "plan_sha256": "14af3a411a520c443a2c7af734a37fa2a5962d8b1d2448058c7a8da265be0256",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5133.946665,
+        "lower_bound_gbp": 5133.9466649999995,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.05431536400010373,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5133.9466649999995,
+            "incumbent_gbp": 5133.9466649999995,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 6331.43648,
+      "improvement_over_witness_gbp": 1197.489815,
+      "total_seconds": 3.0415406469992377
+    },
+    {
+      "name": "heat_led_cooling_water_modulation",
+      "description": "Heat and outages force GE2 to rated output; warmer common condenser water makes the export limit feasible.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 2214.9364800000017,
+          "gas_kwh": 52918.079999999965,
+          "import_kwh": 0.0,
+          "export_kwh": 6000.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 0.0,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 848.936170212766,
+          "phe_kw": 900.0,
+          "apparent_import_kva": 0.0,
+          "condenser_entering_c": 25.33333333333333
+        },
+        "coverage": {
+          "interior_engine_loads": 0,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 48
+        }
+      },
+      "application_seconds": [
+        1.102818624000065,
+        1.0906917319998684
+      ],
+      "plan_sha256": "ce23409c5e02290fd8cfb6202615cc4e5473be9e8bfd5d46db1ac5cf1473aaa9",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 2214.93648,
+        "lower_bound_gbp": 2214.93648,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.03122720700048376,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1200,
+        "binary_variables": 288,
+        "constraints": 2064,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 2214.93648,
+            "incumbent_gbp": 2214.93648,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 2214.93648,
+      "improvement_over_witness_gbp": 0.0,
+      "total_seconds": 2.2441369279995342
+    },
+    {
+      "name": "short_dip_keep_running",
+      "description": "Economic shutdown decision across a low-demand interval with initial engine running.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 0,
+        "recomputed_summary": {
+          "cost_gbp": 4162.953701880794,
+          "gas_kwh": 33964.31290585619,
+          "import_kwh": 11324.02461082282,
+          "export_kwh": 106.33554230769231
+        },
+        "maximum_residuals": {
+          "electricity_kw": 4.263256414560601e-14,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 7.105427357601002e-15,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 963.3802816901409,
+          "phe_kw": 75.0,
+          "apparent_import_kva": 484.2792564757672,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 47,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.0037444239997058,
+        0.9145920470000419
+      ],
+      "plan_sha256": "2a0ae6fa283977cbd5c0933a749073c5fcddfa0400cc328395a94fcd72e19af9",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 4162.953701880791,
+        "lower_bound_gbp": 4162.95370188079,
+        "absolute_gap_gbp": 1.8189894035458565e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.029079449999699136,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 4162.95370188079,
+            "incumbent_gbp": 4162.953701880791,
+            "candidate_gap_gbp": 1.8189894035458565e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 1.9559089169997605
+    },
+    {
+      "name": "long_dip_restart",
+      "description": "Economic shutdown decision across a low-demand interval with initial engine running.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 1,
+        "recomputed_summary": {
+          "cost_gbp": 3727.1989319708305,
+          "gas_kwh": 27346.333373278347,
+          "import_kwh": 10213.28667388948,
+          "export_kwh": 0.0
+        },
+        "maximum_residuals": {
+          "electricity_kw": 4.263256414560601e-14,
+          "heat_kw": 0.0,
+          "cooling_kw": 0.0,
+          "cost_gbp": 0.0,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 963.3802816901409,
+          "phe_kw": 75.0,
+          "apparent_import_kva": 484.2792564757672,
+          "condenser_entering_c": 22.0
+        },
+        "coverage": {
+          "interior_engine_loads": 38,
+          "cold_absorber_periods": 0,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 0,
+          "tower_binding_periods": 0,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        0.9178887520001808,
+        0.9060125300002255
+      ],
+      "plan_sha256": "11f16c3317f502a6ee63463b2107e7dc9d792299105888a7ab48f704bbae2367",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 3727.1989319708287,
+        "lower_bound_gbp": 3727.1989319708287,
+        "absolute_gap_gbp": 0.0,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.03715168300004734,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 960,
+        "binary_variables": 192,
+        "constraints": 1824,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 3727.1989319708287,
+            "incumbent_gbp": 3727.1989319708287,
+            "candidate_gap_gbp": 0.0,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "total_seconds": 1.8721700719997898
+    },
+    {
+      "name": "random_feasible_0",
+      "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 8,
+        "recomputed_summary": {
+          "cost_gbp": 5652.484449285199,
+          "gas_kwh": 88964.10461945857,
+          "import_kwh": 5818.357030800153,
+          "export_kwh": 99.33991847412734
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.8421709430404007e-13,
+          "heat_kw": 2.2737367544323206e-12,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 2.842170943040401e-14,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 4000.0,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 1134.3984047095385,
+          "condenser_entering_c": 38.277787054238225
+        },
+        "coverage": {
+          "interior_engine_loads": 21,
+          "cold_absorber_periods": 28,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 6,
+          "tower_binding_periods": 3,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        3.0228965010001048,
+        3.1884107209998547
+      ],
+      "plan_sha256": "8f41e04d87671b9c52019dd4c0aac85ffe5dd7ac3cbc5dfc78e0b6a3b5043685",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 5652.484449285199,
+        "lower_bound_gbp": 5652.484449285198,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.41706823899949086,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1100,
+        "binary_variables": 248,
+        "constraints": 1964,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 5652.484449285198,
+            "incumbent_gbp": 5652.484449285198,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8226.735995831312,
+      "improvement_over_witness_gbp": 2574.251546546113,
+      "total_seconds": 6.641471144999741
+    },
+    {
+      "name": "random_feasible_1",
+      "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 6,
+        "recomputed_summary": {
+          "cost_gbp": 6221.604768722874,
+          "gas_kwh": 93938.59312394573,
+          "import_kwh": 7775.765096870293,
+          "export_kwh": 119.83432817610496
+        },
+        "maximum_residuals": {
+          "electricity_kw": 3.410605131648481e-13,
+          "heat_kw": 2.7284841053187847e-12,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 1.4210854715202004e-14,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 3811.1690802839544,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 1117.3891046773929,
+          "condenser_entering_c": 38.886606527412034
+        },
+        "coverage": {
+          "interior_engine_loads": 26,
+          "cold_absorber_periods": 25,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 7,
+          "tower_binding_periods": 4,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.8593899210000018,
+        1.7698338879999937
+      ],
+      "plan_sha256": "ee03d9a86805904a9b677f4fc3b9843be4f019590a2dac10cade37cbfc9a2c67",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6221.604768722875,
+        "lower_bound_gbp": 6221.604768722874,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.303810297000382,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1090,
+        "binary_variables": 244,
+        "constraints": 1954,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6221.604768722874,
+            "incumbent_gbp": 6221.604768722874,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8743.9392612965,
+      "improvement_over_witness_gbp": 2522.3344925736255,
+      "total_seconds": 3.9440567109995754
+    },
+    {
+      "name": "random_feasible_2",
+      "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 4,
+        "recomputed_summary": {
+          "cost_gbp": 6662.43079894448,
+          "gas_kwh": 106074.2123669427,
+          "import_kwh": 7118.98866682297,
+          "export_kwh": 88.55316968817577
+        },
+        "maximum_residuals": {
+          "electricity_kw": 2.5579538487363607e-13,
+          "heat_kw": 1.2221335055073723e-12,
+          "cooling_kw": 1.1368683772161603e-13,
+          "cost_gbp": 1.4210854715202004e-14,
+          "gas_kwh": 4.547473508864641e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 3638.4519759554123,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 1138.9684414818512,
+          "condenser_entering_c": 38.934385562155455
+        },
+        "coverage": {
+          "interior_engine_loads": 18,
+          "cold_absorber_periods": 21,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 10,
+          "tower_binding_periods": 3,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.8910929739995481,
+        2.0166078089996518
+      ],
+      "plan_sha256": "7a3e25bdc6a142d390bef66725fc1d651ef8e501ab883981fea47d89df00e4c1",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6662.430798944481,
+        "lower_bound_gbp": 6662.43079894448,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.4172368270001243,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1075,
+        "binary_variables": 238,
+        "constraints": 1939,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6662.43079894448,
+            "incumbent_gbp": 6662.43079894448,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 9411.196628312846,
+      "improvement_over_witness_gbp": 2748.7658293683653,
+      "total_seconds": 4.340708957999595
+    },
+    {
+      "name": "random_feasible_3",
+      "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 6,
+        "recomputed_summary": {
+          "cost_gbp": 6142.0236384263035,
+          "gas_kwh": 97304.3752868082,
+          "import_kwh": 6087.363772326934,
+          "export_kwh": 85.83970620841268
+        },
+        "maximum_residuals": {
+          "electricity_kw": 3.836930773104541e-13,
+          "heat_kw": 1.8189894035458565e-12,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 2.842170943040401e-14,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 3980.8962609769965,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 1132.2789330772985,
+          "condenser_entering_c": 38.980469026976316
+        },
+        "coverage": {
+          "interior_engine_loads": 27,
+          "cold_absorber_periods": 28,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 9,
+          "tower_binding_periods": 3,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        2.3586630449999575,
+        1.8876386780002576
+      ],
+      "plan_sha256": "527c46992aca72e121a8516b9dda9d611cd638c949df0a9d055e7e8112833919",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6142.023638426303,
+        "lower_bound_gbp": 6142.023638426298,
+        "absolute_gap_gbp": 4.547473508864641e-12,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.5396158620005735,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1100,
+        "binary_variables": 248,
+        "constraints": 1964,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6142.023638426298,
+            "incumbent_gbp": 6142.023638426302,
+            "candidate_gap_gbp": 4.547473508864641e-12,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8716.753504203043,
+      "improvement_over_witness_gbp": 2574.7298657767406,
+      "total_seconds": 4.795997331999388
+    },
+    {
+      "name": "random_feasible_4",
+      "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 6,
+        "recomputed_summary": {
+          "cost_gbp": 6268.125655235337,
+          "gas_kwh": 92418.32154244986,
+          "import_kwh": 7540.371393994487,
+          "export_kwh": 37.5772937755996
+        },
+        "maximum_residuals": {
+          "electricity_kw": 3.410605131648481e-13,
+          "heat_kw": 1.4779288903810084e-12,
+          "cooling_kw": 2.2737367544323206e-13,
+          "cost_gbp": 2.842170943040401e-14,
+          "gas_kwh": 0.0,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 3721.5291373531195,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 1134.897838517153,
+          "condenser_entering_c": 38.84713301996441
+        },
+        "coverage": {
+          "interior_engine_loads": 25,
+          "cold_absorber_periods": 28,
+          "curtailment_periods": 0,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 4,
+          "tower_binding_periods": 4,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        1.8185760599999412,
+        1.825369973999841
+      ],
+      "plan_sha256": "89fc1afd297d794cd5b0f4022765d37d29f8b37c091b893faeb679a35e0b5a52",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6268.125655235337,
+        "lower_bound_gbp": 6268.125655235336,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 0.2994163019993721,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1115,
+        "binary_variables": 254,
+        "constraints": 1979,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6268.125655235336,
+            "incumbent_gbp": 6268.125655235336,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8702.64884374405,
+      "improvement_over_witness_gbp": 2434.5231885087123,
+      "total_seconds": 3.957278062000114
+    },
+    {
+      "name": "random_feasible_5",
+      "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+      "expected_feasible": true,
+      "passed": true,
+      "verification": {
+        "passed": true,
+        "periods": 48,
+        "engine_starts": 7,
+        "recomputed_summary": {
+          "cost_gbp": 6221.036979345197,
+          "gas_kwh": 93434.77535906127,
+          "import_kwh": 8065.01050446958,
+          "export_kwh": 151.83735695694713
+        },
+        "maximum_residuals": {
+          "electricity_kw": 4.334310688136611e-13,
+          "heat_kw": 7.105427357601002e-13,
+          "cooling_kw": 4.547473508864641e-13,
+          "cost_gbp": 2.842170943040401e-14,
+          "gas_kwh": 4.547473508864641e-13,
+          "grid_kva_excess": 0.0
+        },
+        "maxima": {
+          "tower_rejection_kw": 3461.141755558025,
+          "phe_kw": 1672.0,
+          "apparent_import_kva": 1071.4423155185261,
+          "condenser_entering_c": 38.62761034429887
+        },
+        "coverage": {
+          "interior_engine_loads": 22,
+          "cold_absorber_periods": 30,
+          "curtailment_periods": 1,
+          "grid_binding_periods": 0,
+          "phe_binding_periods": 5,
+          "tower_binding_periods": 7,
+          "modulated_cooling_water_periods": 0
+        }
+      },
+      "application_seconds": [
+        2.045261168000252,
+        2.9658684490004816
+      ],
+      "plan_sha256": "7ff7d4e57e92350373fb3063cbf7e7721ef17419017c3f15792c7d3edd434d86",
+      "byte_identical_repetitions": 2,
+      "optimality": {
+        "certified": true,
+        "candidate_cost_gbp": 6221.036979345196,
+        "lower_bound_gbp": 6221.0369793451955,
+        "absolute_gap_gbp": 9.094947017729282e-13,
+        "tolerance_gbp": 0.0002,
+        "seconds": 1.0210450619997573,
+        "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+        "variables": 1120,
+        "binary_variables": 256,
+        "constraints": 1984,
+        "rounds": [
+          {
+            "round": 1,
+            "lower_bound_gbp": 6221.0369793451955,
+            "incumbent_gbp": 6221.0369793451955,
+            "candidate_gap_gbp": 9.094947017729282e-13,
+            "maximum_circle_violation_kva": 0.0,
+            "mip_nodes": 1,
+            "solver_status": 0
+          }
+        ]
+      },
+      "witness_cost_gbp": 8274.385201095045,
+      "improvement_over_witness_gbp": 2053.3482217498486,
+      "total_seconds": 6.08431613600078
+    },
+    {
+      "name": "infeasible_reactive",
+      "description": "Deliberately impossible day must fail without a fictitious plan.",
+      "expected_feasible": false,
+      "passed": true,
+      "application_seconds": [
+        0.5709909870001866,
+        0.5826944629998252
+      ],
+      "total_seconds": 1.154620287000398
+    },
+    {
+      "name": "infeasible_towers",
+      "description": "Deliberately impossible day must fail without a fictitious plan.",
+      "expected_feasible": false,
+      "passed": true,
+      "application_seconds": [
+        1.2361982420006825,
+        0.9643122999996194
+      ],
+      "total_seconds": 2.200731335000455
+    },
+    {
+      "name": "infeasible_missing_ht_sink",
+      "description": "Deliberately impossible day must fail without a fictitious plan.",
+      "expected_feasible": false,
+      "passed": true,
+      "application_seconds": [
+        0.5921381580001253,
+        0.5876038250007696
+      ],
+      "total_seconds": 1.179947347000052
+    },
+    {
+      "name": "infeasible_electricity",
+      "description": "Deliberately impossible day must fail without a fictitious plan.",
+      "expected_feasible": false,
+      "passed": true,
+      "application_seconds": [
+        0.5864759200003391,
+        0.9348900889999641
+      ],
+      "total_seconds": 1.5216256590001649
+    }
+  ]
+}

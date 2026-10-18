@@ -1,0 +1,266 @@
+{
+  "c1_report_only_controls": {
+    "strong-v16-claude": {
+      "cost_gbp": 8659.672111413445,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/explain_v20.py\", line 79, in main\n    func((day, plan, day.true_flows(plan)))\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 8630.929864417561,
+      "note": "11 per-day tests; determinism belongs to the original two CLI runs",
+      "regret_gbp": 28.74224699588376,
+      "source_sha256": "c4aaf71e3e7f07bff3c987bc0d72c8f541d9ff9d2a13284090b090344b962078",
+      "unit_outputs_unchanged": true
+    },
+    "strong-v19-claude": {
+      "cost_gbp": 8660.71559220269,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/explain_v20.py\", line 79, in main\n    func((day, plan, day.true_flows(plan)))\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 8630.929864417561,
+      "note": "11 per-day tests; determinism belongs to the original two CLI runs",
+      "regret_gbp": 29.785727785128984,
+      "source_sha256": "36e0ca4c5cb83123ea923ac4265753279e2dcd26f3cf0058d524545ea59f9d18",
+      "unit_outputs_unchanged": true
+    }
+  },
+  "c2": {
+    "oracle": {
+      "limit": 550.0,
+      "peak": 550.0000911375189,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 816.972,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 241.2,
+          "EC2": 0.0
+        },
+        "cost_gbp": 216.358,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 697.881
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3025.0,
+        "grid_ok": true,
+        "import_kw": 225.585,
+        "pv_kw": 0.0,
+        "start": "17:30"
+      },
+      "source_plan": "results/checks-v20/candidates/c2/gates-r1/apps/oracle/h2.json",
+      "source_sha256": "5c0424ac43bf672382d005814deb89c37cf257ec9774098915abcdc375ddb6df",
+      "unit": "standard m3/h",
+      "violating_starts": []
+    },
+    "strong-v16-claude": {
+      "limit": 550.0,
+      "peak": 596.3380780959475,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 0.0,
+          "B2": 1004.251
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 234.8,
+          "EC2": 0.0
+        },
+        "cost_gbp": 154.18,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 784.914
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3279.86,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 15.2,
+        "start": "08:30"
+      },
+      "source_plan": "results/checks-v20/candidates/c2/gates-r1/apps/strong-v16-claude/h2.json",
+      "source_sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21",
+      "unit": "standard m3/h",
+      "violating_starts": [
+        "06:30",
+        "07:00",
+        "07:30",
+        "08:00",
+        "08:30",
+        "12:00",
+        "17:30"
+      ]
+    },
+    "strong-v19-claude": {
+      "limit": 550.0,
+      "peak": 596.3380780959475,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 0.0,
+          "B2": 1004.251
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 234.8,
+          "EC2": 0.0
+        },
+        "cost_gbp": 154.18,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 784.914
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3279.86,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 15.2,
+        "start": "08:30"
+      },
+      "source_plan": "results/checks-v20/candidates/c2/gates-r1/apps/strong-v19-claude/h2.json",
+      "source_sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3",
+      "unit": "standard m3/h",
+      "violating_starts": [
+        "06:30",
+        "07:00",
+        "07:30",
+        "08:00",
+        "08:30",
+        "12:00",
+        "17:30"
+      ]
+    }
+  },
+  "c4": {
+    "oracle": {
+      "limit": 20.0,
+      "peak": 20.000006048251233,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 0.0,
+          "B2": 1620.8
+        },
+        "chillers_kw": {
+          "AC1": 219.2,
+          "EC1": 0.0,
+          "EC2": 0.0
+        },
+        "cost_gbp": 152.085,
+        "engines_kwe": {
+          "GE1": 1060.997,
+          "GE2": 593.826
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3276.743,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 0.0,
+        "start": "07:00"
+      },
+      "source_plan": "results/checks-v20/candidates/c4/gates-r1/apps/oracle/h2.json",
+      "source_sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1",
+      "unit": "kg/s",
+      "violating_starts": []
+    },
+    "strong-v16-claude": {
+      "limit": 20.0,
+      "peak": 26.19617224880383,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 755.7,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 241.2,
+          "EC2": 0.0
+        },
+        "cost_gbp": 199.502,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 800.0
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3109.954,
+        "grid_ok": true,
+        "import_kw": 123.466,
+        "pv_kw": 0.0,
+        "start": "17:30"
+      },
+      "source_plan": "results/checks-v20/candidates/c4/gates-r1/apps/strong-v16-claude/h2.json",
+      "source_sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21",
+      "unit": "kg/s",
+      "violating_starts": [
+        "03:00",
+        "03:30",
+        "04:00",
+        "04:30",
+        "05:00",
+        "05:30",
+        "06:00",
+        "06:30",
+        "07:00",
+        "07:30",
+        "08:00",
+        "08:30",
+        "12:00",
+        "17:30",
+        "19:30",
+        "20:00",
+        "20:30",
+        "23:00",
+        "23:30"
+      ]
+    },
+    "strong-v19-claude": {
+      "limit": 20.0,
+      "peak": 26.19617224880383,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 755.7,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 241.2,
+          "EC2": 0.0
+        },
+        "cost_gbp": 199.502,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 800.0
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3109.954,
+        "grid_ok": true,
+        "import_kw": 123.466,
+        "pv_kw": 0.0,
+        "start": "17:30"
+      },
+      "source_plan": "results/checks-v20/candidates/c4/gates-r1/apps/strong-v19-claude/h2.json",
+      "source_sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3",
+      "unit": "kg/s",
+      "violating_starts": [
+        "03:00",
+        "03:30",
+        "04:00",
+        "04:30",
+        "05:00",
+        "05:30",
+        "06:00",
+        "06:30",
+        "07:00",
+        "07:30",
+        "08:00",
+        "08:30",
+        "12:00",
+        "17:30",
+        "19:30",
+        "20:00",
+        "20:30",
+        "23:00",
+        "23:30"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1069 @@
+{
+ "date": "2026-03-01",
+ "periods": [
+  {
+   "start": "00:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 194.5,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 331.0,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 910.919,
+   "export_kw": 250.0,
+   "gas_kwh": 977.239,
+   "cost_gbp": 90.142,
+   "grid_ok": true
+  },
+  {
+   "start": "00:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 219.3,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 328.6,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 905.462,
+   "export_kw": 250.0,
+   "gas_kwh": 990.94,
+   "cost_gbp": 63.547,
+   "grid_ok": true
+  },
+  {
+   "start": "01:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 202.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 328.4,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 902.333,
+   "export_kw": 250.0,
+   "gas_kwh": 981.382,
+   "cost_gbp": 63.022,
+   "grid_ok": true
+  },
+  {
+   "start": "01:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 212.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 336.2,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 925.893,
+   "export_kw": 250.0,
+   "gas_kwh": 986.907,
+   "cost_gbp": 64.087,
+   "grid_ok": true
+  },
+  {
+   "start": "02:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 267.6,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 334.0,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 927.665,
+   "export_kw": 250.0,
+   "gas_kwh": 1017.625,
+   "cost_gbp": 65.485,
+   "grid_ok": true
+  },
+  {
+   "start": "02:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 249.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 345.5,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 901.275,
+   "export_kw": 250.0,
+   "gas_kwh": 1007.349,
+   "cost_gbp": 64.114,
+   "grid_ok": true
+  },
+  {
+   "start": "03:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 239.4,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 345.9,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 910.635,
+   "export_kw": 250.0,
+   "gas_kwh": 1002.045,
+   "cost_gbp": 64.211,
+   "grid_ok": true
+  },
+  {
+   "start": "03:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 262.3,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 346.3,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 906.394,
+   "export_kw": 250.0,
+   "gas_kwh": 1014.697,
+   "cost_gbp": 64.613,
+   "grid_ok": true
+  },
+  {
+   "start": "04:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 373.4,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 348.7,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 925.951,
+   "export_kw": 250.0,
+   "gas_kwh": 1076.078,
+   "cost_gbp": 67.968,
+   "grid_ok": true
+  },
+  {
+   "start": "04:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 480.4,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 362.1,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 924.944,
+   "export_kw": 250.0,
+   "gas_kwh": 1135.194,
+   "cost_gbp": 70.504,
+   "grid_ok": true
+  },
+  {
+   "start": "05:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 663.3,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 363.4,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 942.337,
+   "export_kw": 250.0,
+   "gas_kwh": 1236.244,
+   "cost_gbp": 75.508,
+   "grid_ok": true
+  },
+  {
+   "start": "05:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 618.296
+   },
+   "boilers_kw": {
+    "B1": 736.322,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 370.4,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 969.982,
+   "export_kw": 250.0,
+   "gas_kwh": 1297.874,
+   "cost_gbp": 79.271,
+   "grid_ok": true
+  },
+  {
+   "start": "06:00",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 700.366
+   },
+   "boilers_kw": {
+    "B1": 789.58,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 364.9,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 5.5,
+   "import_kw": 969.994,
+   "export_kw": 250.0,
+   "gas_kwh": 1422.778,
+   "cost_gbp": 85.218,
+   "grid_ok": true
+  },
+  {
+   "start": "06:30",
+   "engines_kwe": {
+    "GE1": 0.0,
+    "GE2": 744.827
+   },
+   "boilers_kw": {
+    "B1": 780.304,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 365.3,
+    "EC2": 0.0,
+    "AC1": 0.0
+   },
+   "pv_kw": 23.1,
+   "import_kw": 969.992,
+   "export_kw": 250.0,
+   "gas_kwh": 1469.379,
+   "cost_gbp": 87.523,
+   "grid_ok": true
+  },
+  {
+   "start": "07:00",
+   "engines_kwe": {
+    "GE1": 1162.616,
+    "GE2": 600.0
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 52.395,
+    "EC2": 0.0,
+    "AC1": 343.405
+   },
+   "pv_kw": 43.7,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2418.683,
+   "cost_gbp": 138.357,
+   "grid_ok": true
+  },
+  {
+   "start": "07:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 600.422
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 130.944,
+    "EC2": 0.0,
+    "AC1": 330.756
+   },
+   "pv_kw": 65.1,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2460.251,
+   "cost_gbp": 102.374,
+   "grid_ok": true
+  },
+  {
+   "start": "08:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 667.589
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 118.77,
+    "EC2": 0.0,
+    "AC1": 387.13
+   },
+   "pv_kw": 89.6,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2538.393,
+   "cost_gbp": 106.193,
+   "grid_ok": true
+  },
+  {
+   "start": "08:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 734.343
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 69.961,
+    "EC2": 0.0,
+    "AC1": 517.239
+   },
+   "pv_kw": 110.3,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2616.054,
+   "cost_gbp": 109.988,
+   "grid_ok": true
+  },
+  {
+   "start": "09:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 770.981
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 66.426,
+    "EC2": 0.0,
+    "AC1": 570.974
+   },
+   "pv_kw": 136.2,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2658.679,
+   "cost_gbp": 112.071,
+   "grid_ok": true
+  },
+  {
+   "start": "09:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 728.856
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 88.098,
+    "EC2": 0.0,
+    "AC1": 600.102
+   },
+   "pv_kw": 152.7,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2609.671,
+   "cost_gbp": 109.676,
+   "grid_ok": true
+  },
+  {
+   "start": "10:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 736.934
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 57.059,
+    "EC2": 0.0,
+    "AC1": 684.341
+   },
+   "pv_kw": 172.5,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2619.069,
+   "cost_gbp": 110.135,
+   "grid_ok": true
+  },
+  {
+   "start": "10:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 717.843
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 63.972,
+    "EC2": 0.0,
+    "AC1": 727.328
+   },
+   "pv_kw": 187.7,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2596.859,
+   "cost_gbp": 109.05,
+   "grid_ok": true
+  },
+  {
+   "start": "11:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 693.338
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 107.876,
+    "EC2": 0.0,
+    "AC1": 765.524
+   },
+   "pv_kw": 209.7,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2568.349,
+   "cost_gbp": 107.657,
+   "grid_ok": true
+  },
+  {
+   "start": "11:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 731.355
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 111.412,
+    "EC2": 0.0,
+    "AC1": 791.588
+   },
+   "pv_kw": 213.2,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2612.579,
+   "cost_gbp": 109.818,
+   "grid_ok": true
+  },
+  {
+   "start": "12:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 696.092
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 198.615,
+    "EC2": 0.0,
+    "AC1": 797.085
+   },
+   "pv_kw": 231.9,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2571.553,
+   "cost_gbp": 107.813,
+   "grid_ok": true
+  },
+  {
+   "start": "12:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 648.268
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 257.1,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 224.3,
+   "import_kw": 0.0,
+   "export_kw": 195.114,
+   "gas_kwh": 2515.915,
+   "cost_gbp": 108.387,
+   "grid_ok": true
+  },
+  {
+   "start": "13:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 592.274
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 280.3,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 226.8,
+   "import_kw": 0.0,
+   "export_kw": 137.551,
+   "gas_kwh": 2451.414,
+   "cost_gbp": 108.685,
+   "grid_ok": true
+  },
+  {
+   "start": "13:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 589.432
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 310.4,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 223.4,
+   "import_kw": 0.0,
+   "export_kw": 95.278,
+   "gas_kwh": 2448.344,
+   "cost_gbp": 111.07,
+   "grid_ok": true
+  },
+  {
+   "start": "14:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 593.222
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 285.5,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 222.2,
+   "import_kw": 0.0,
+   "export_kw": 136.099,
+   "gas_kwh": 2452.437,
+   "cost_gbp": 108.823,
+   "grid_ok": true
+  },
+  {
+   "start": "14:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 619.601
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 313.7,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 203.7,
+   "import_kw": 0.0,
+   "export_kw": 102.639,
+   "gas_kwh": 2482.564,
+   "cost_gbp": 112.306,
+   "grid_ok": true
+  },
+  {
+   "start": "15:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 658.434
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 333.8,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 189.8,
+   "import_kw": 0.0,
+   "export_kw": 135.08,
+   "gas_kwh": 2527.742,
+   "cost_gbp": 112.567,
+   "grid_ok": true
+  },
+  {
+   "start": "15:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 702.934
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 251.7,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 174.3,
+   "import_kw": 0.0,
+   "export_kw": 198.211,
+   "gas_kwh": 2579.514,
+   "cost_gbp": 111.31,
+   "grid_ok": true
+  },
+  {
+   "start": "16:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 719.101
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 207.0,
+    "EC2": 0.0,
+    "AC1": 800.0
+   },
+   "pv_kw": 157.2,
+   "import_kw": 0.0,
+   "export_kw": 198.455,
+   "gas_kwh": 2598.322,
+   "cost_gbp": 112.214,
+   "grid_ok": true
+  },
+  {
+   "start": "16:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 745.36
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 187.595,
+    "EC2": 0.0,
+    "AC1": 772.705
+   },
+   "pv_kw": 134.3,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2628.872,
+   "cost_gbp": 110.614,
+   "grid_ok": true
+  },
+  {
+   "start": "17:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 729.307
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 188.623,
+    "EC2": 0.0,
+    "AC1": 740.377
+   },
+   "pv_kw": 113.0,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2610.196,
+   "cost_gbp": 109.702,
+   "grid_ok": true
+  },
+  {
+   "start": "17:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 733.448
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 170.337,
+    "EC2": 0.0,
+    "AC1": 733.763
+   },
+   "pv_kw": 87.0,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2615.014,
+   "cost_gbp": 109.937,
+   "grid_ok": true
+  },
+  {
+   "start": "18:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 691.64
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 137.218,
+    "EC2": 0.0,
+    "AC1": 696.782
+   },
+   "pv_kw": 66.7,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2566.374,
+   "cost_gbp": 107.56,
+   "grid_ok": true
+  },
+  {
+   "start": "18:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 664.875
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 134.181,
+    "EC2": 0.0,
+    "AC1": 669.619
+   },
+   "pv_kw": 44.3,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2535.235,
+   "cost_gbp": 106.038,
+   "grid_ok": true
+  },
+  {
+   "start": "19:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 655.96
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 58.131,
+    "EC2": 0.0,
+    "AC1": 650.769
+   },
+   "pv_kw": 23.1,
+   "import_kw": 0.0,
+   "export_kw": 250.0,
+   "gas_kwh": 2524.864,
+   "cost_gbp": 105.531,
+   "grid_ok": true
+  },
+  {
+   "start": "19:30",
+   "engines_kwe": {
+    "GE1": 681.972,
+    "GE2": 0.0
+   },
+   "boilers_kw": {
+    "B1": 1246.2,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 0.0,
+    "EC2": 0.0,
+    "AC1": 646.2
+   },
+   "pv_kw": 5.5,
+   "import_kw": 859.145,
+   "export_kw": 0.0,
+   "gas_kwh": 1719.362,
+   "cost_gbp": 175.626,
+   "grid_ok": true
+  },
+  {
+   "start": "20:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 533.011
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 0.0,
+    "EC2": 0.0,
+    "AC1": 587.0
+   },
+   "pv_kw": 0.0,
+   "import_kw": 0.0,
+   "export_kw": 192.697,
+   "gas_kwh": 2387.392,
+   "cost_gbp": 129.221,
+   "grid_ok": true
+  },
+  {
+   "start": "20:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 426.402
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 0.0,
+    "EC2": 0.0,
+    "AC1": 518.5
+   },
+   "pv_kw": 0.0,
+   "import_kw": 0.0,
+   "export_kw": 143.595,
+   "gas_kwh": 2272.222,
+   "cost_gbp": 99.491,
+   "grid_ok": true
+  },
+  {
+   "start": "21:00",
+   "engines_kwe": {
+    "GE1": 1117.174,
+    "GE2": 400.0
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 0.0,
+    "EC2": 0.0,
+    "AC1": 469.1
+   },
+   "pv_kw": 0.0,
+   "import_kw": 0.0,
+   "export_kw": 77.254,
+   "gas_kwh": 2152.693,
+   "cost_gbp": 97.651,
+   "grid_ok": true
+  },
+  {
+   "start": "21:30",
+   "engines_kwe": {
+    "GE1": 600.0,
+    "GE2": 761.84
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 0.0,
+    "EC2": 0.0,
+    "AC1": 447.8
+   },
+   "pv_kw": 0.0,
+   "import_kw": 64.811,
+   "export_kw": 0.0,
+   "gas_kwh": 2002.635,
+   "cost_gbp": 102.5,
+   "grid_ok": true
+  },
+  {
+   "start": "22:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 0.0
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 273.774,
+    "EC2": 0.0,
+    "AC1": 135.326
+   },
+   "pv_kw": 0.0,
+   "import_kw": 188.596,
+   "export_kw": 0.0,
+   "gas_kwh": 1589.98,
+   "cost_gbp": 97.076,
+   "grid_ok": true
+  },
+  {
+   "start": "22:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 0.0
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 237.204,
+    "EC2": 0.0,
+    "AC1": 161.596
+   },
+   "pv_kw": 0.0,
+   "import_kw": 168.148,
+   "export_kw": 0.0,
+   "gas_kwh": 1589.98,
+   "cost_gbp": 94.765,
+   "grid_ok": true
+  },
+  {
+   "start": "23:00",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 0.0
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 154.355,
+    "EC2": 0.0,
+    "AC1": 212.645
+   },
+   "pv_kw": 0.0,
+   "import_kw": 96.925,
+   "export_kw": 0.0,
+   "gas_kwh": 1589.98,
+   "cost_gbp": 86.717,
+   "grid_ok": true
+  },
+  {
+   "start": "23:30",
+   "engines_kwe": {
+    "GE1": 1200.0,
+    "GE2": 0.0
+   },
+   "boilers_kw": {
+    "B1": 0.0,
+    "B2": 0.0
+   },
+   "chillers_kw": {
+    "EC1": 144.124,
+    "EC2": 0.0,
+    "AC1": 202.776
+   },
+   "pv_kw": 0.0,
+   "import_kw": 84.834,
+   "export_kw": 0.0,
+   "gas_kwh": 1589.98,
+   "cost_gbp": 85.35,
+   "grid_ok": true
+  }
+ ],
+ "summary": {
+  "cost_gbp": 4731.486,
+  "gas_kwh": 96316.903,
+  "import_kwh": 7228.119,
+  "export_kwh": 4680.987,
+  "engine_starts": 3,
+  "grid_ok": true
+ }
+}

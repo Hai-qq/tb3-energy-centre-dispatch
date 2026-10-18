@@ -20,6 +20,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import random
 import shutil
 import sys
@@ -28,12 +29,18 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TASK = ROOT / "tasks" / "energy-centre-dispatch"
+TASK = Path(os.environ.get("ECD_TASK", ROOT / "tasks" / "energy-centre-dispatch")).resolve()
 sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(TASK / "tests"))
 import build_energy_days as B  # noqa: E402
 import eval_energy as E  # noqa: E402
 from reference import Day  # noqa: E402
+
+# A candidate's fixed plant and tariff must be used when drawing its test days.
+# This is identical to the generator constants for the normal checked-in task,
+# and permits isolated experiments without rewriting the shared generator.
+B.PLANT = json.loads((TASK / "environment/data/plant.json").read_text())
+B.SUPPLY = json.loads((TASK / "environment/data/supply.json").read_text())
 
 UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "LT radiator 1", "LT radiator 2",
          "CT1", "CT2", "PV1", "GE1 intercooler", "GE2 intercooler", "EC1 condenser", "EC2 condenser",

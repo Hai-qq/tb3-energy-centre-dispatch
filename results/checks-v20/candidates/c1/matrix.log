@@ -1,0 +1,20 @@
+MILP visible: 5959.003279125
+MILP h1: 6120.657620078
+MILP h2: 8630.929864418
+MILP h3: 5242.028050077
+MILP h4: 6964.624246280
+oracle visible: PASS delta=-2.8934609872521833e-05 
+oracle h1: PASS delta=0.00018111916324414779 
+oracle h2: PASS delta=-2.055345248663798e-05 
+oracle h3: PASS delta=-0.0001540348785056267 
+oracle h4: PASS delta=-30.645793221065105 
+strong-v16-claude visible: FAIL delta=4.289979366990337 test_least_cost
+strong-v16-claude h1: FAIL delta=1.3307696618594491 test_least_cost
+strong-v16-claude h2: FAIL delta=28.74224699588376 test_least_cost
+strong-v16-claude h3: PASS delta=-0.0001540348785056267 
+strong-v16-claude h4: PASS delta=-20.07293639456475 
+strong-v19-claude visible: FAIL delta=-6.393460989784217e-05 test_reported_gas_and_cost, test_single_connection_direction
+strong-v19-claude h1: FAIL delta=-5.804686550267434 test_reported_gas_and_cost, test_single_connection_direction
+strong-v19-claude h2: FAIL delta=29.785727785128984 test_reported_gas_and_cost, test_least_cost, test_single_connection_direction
+strong-v19-claude h3: FAIL delta=-0.0001540348785056267 test_reported_gas_and_cost, test_single_connection_direction
+strong-v19-claude h4: FAIL delta=-45.51884744241488 test_reported_gas_and_cost, test_single_connection_direction

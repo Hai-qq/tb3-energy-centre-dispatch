@@ -1,0 +1,119 @@
+{
+  "app": "results/checks-v20/candidates/c2/gates-r1/mutant_apps/import_total_in_kw",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.647743955096,
+      "delta_gbp": 0.0002768520544123021,
+      "failures": {
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 112, in test_reported_import_export_and_grid_flags\n    assert s[\"import_kwh\"] == pytest.approx(0.5 * imp.sum(), rel=0.001, abs=0.5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8689443719999872,
+          "sha256": "4884ba5ca82cbd1688c16790b6d5760e261390183e76730c9782d792d2cd67c4"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.0892480630000136,
+          "sha256": "4884ba5ca82cbd1688c16790b6d5760e261390183e76730c9782d792d2cd67c4"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8973.72005412872,
+      "delta_gbp": -4.668373367167078e-05,
+      "failures": {
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 112, in test_reported_import_export_and_grid_flags\n    assert s[\"import_kwh\"] == pytest.approx(0.5 * imp.sum(), rel=0.001, abs=0.5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 8973.720100812454,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.5140644159996555,
+          "sha256": "8dfe727628c5fa9c90a92bf1c00f6f0187a089156c0c1eee085872023a7b25be"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.7923700970000027,
+          "sha256": "8dfe727628c5fa9c90a92bf1c00f6f0187a089156c0c1eee085872023a7b25be"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 112, in test_reported_import_export_and_grid_flags\n    assert s[\"import_kwh\"] == pytest.approx(0.5 * imp.sum(), rel=0.001, abs=0.5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.370801300000039,
+          "sha256": "cc2e7d9141d1202bb535b0a2c3337d99a9abbbd5b767d1937d4e9f3dc52f3bcd"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.007953549999911,
+          "sha256": "cc2e7d9141d1202bb535b0a2c3337d99a9abbbd5b767d1937d4e9f3dc52f3bcd"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 112, in test_reported_import_export_and_grid_flags\n    assert s[\"import_kwh\"] == pytest.approx(0.5 * imp.sum(), rel=0.001, abs=0.5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.7675438930000382,
+          "sha256": "95d0e4f1df98c55cc0b48cb92b7ed091a1156155814c5673d4d1b7ce9dce2347"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8963472909999837,
+          "sha256": "95d0e4f1df98c55cc0b48cb92b7ed091a1156155814c5673d4d1b7ce9dce2347"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 112, in test_reported_import_export_and_grid_flags\n    assert s[\"import_kwh\"] == pytest.approx(0.5 * imp.sum(), rel=0.001, abs=0.5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.3353743620000387,
+          "sha256": "e3c079e5b563c22ae71e3e768a8925634674f294b6175a59b12a73ffd9ebe28a"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8738432499999362,
+          "sha256": "e3c079e5b563c22ae71e3e768a8925634674f294b6175a59b12a73ffd9ebe28a"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "9817bd6e1b30814c98e7c5a8eb27b6eb738da9258238a20c159640bc34de1fd8",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "ea0f6a0e0e94fd4c39d42b12d038eb1bceebd3b6118378b04495c54af5040a5f",
+    "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "planner/tariff.py": "e034a8c359d5b0903ffcf3475626ad25597f3ca2cfa912a7dc2791b457046e27"
+  }
+}

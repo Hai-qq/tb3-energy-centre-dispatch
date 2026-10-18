@@ -1,0 +1,9 @@
+blind gas_binding: PASS delta=5.347828846424818e-10 
+Traceback (most recent call last):
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/audit_v20_blind_gas.py", line 67, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/audit_v20_blind_gas.py", line 42, in main
+    cap = entry["maximum_standard_volume_m3_per_hour"]
+          ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'maximum_standard_volume_m3_per_hour'

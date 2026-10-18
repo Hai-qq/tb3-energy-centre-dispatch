@@ -1,0 +1,23 @@
+{
+  "app_sha256": {
+    "Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+    "data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "data/plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+    "data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "data/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "dispatch.py": "bd226ce669b93b6ff52af3c5652f7e342db38b80156c99bdce5c10b707158c69",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "c7362242bf87647ab81eaf78dfb564ce6ed99d21635a6feb9e853acdffd8d909",
+    "planner/optimize.py": "42f9dc4baea5616c9234bc3330edf26182f00fd0b9addf9c52698796a1b92718",
+    "planner/plant.py": "957f201f7196c4430cc519264fee0f66df18c58358c6cb1ee7626211ec137cc5",
+    "planner/tariff.py": "9e656b84a30e8fb4fc8e3b7fd5b20a6202a9114cd64f9678acfe9570a87e9af9"
+  },
+  "candidate": "c4",
+  "clock_observation_utc": "2026-10-18 06:24:27 UTC",
+  "file_count_verified": 307,
+  "manifest_sha256": "00ce8df5b6bffdd5f5117075f23e93e1a2942acfb3df15d812e975d78c6241ef",
+  "phase": "after-eval",
+  "source_and_selftest_artifacts_unchanged": true,
+  "unexpected_files": []
+}

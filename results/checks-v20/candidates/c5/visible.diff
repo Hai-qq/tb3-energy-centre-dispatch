@@ -1,0 +1,36 @@
+--- v19/app/data/plant.json
++++ c5/app/data/plant.json
+@@ -188,8 +188,10 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
+-      ]
++        "LT radiator 1",
++        "LT radiator 3"
++      ],
++      "branches": "parallel, individually isolatable"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -229,5 +231,19 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "maximum_heat_rejection_kw": 250.0
++    },
++    {
++      "id": "LT radiator 2",
++      "maximum_heat_rejection_kw": 250.0
++    },
++    {
++      "id": "LT radiator 3",
++      "maximum_heat_rejection_kw": 250.0
++    }
++  ]
+ }

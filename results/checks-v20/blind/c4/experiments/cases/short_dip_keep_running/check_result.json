@@ -1,0 +1,70 @@
+{
+  "name": "short_dip_keep_running",
+  "description": "Economic shutdown decision across a low-demand interval with initial engine running.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 0,
+    "recomputed_summary": {
+      "cost_gbp": 4162.953701880794,
+      "gas_kwh": 33964.31290585619,
+      "import_kwh": 11324.02461082282,
+      "export_kwh": 106.33554230769231
+    },
+    "maximum_residuals": {
+      "electricity_kw": 4.263256414560601e-14,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 7.105427357601002e-15,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 963.3802816901409,
+      "phe_kw": 75.0,
+      "apparent_import_kva": 484.2792564757672,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 47,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.0037444239997058,
+    0.9145920470000419
+  ],
+  "plan_sha256": "2a0ae6fa283977cbd5c0933a749073c5fcddfa0400cc328395a94fcd72e19af9",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 4162.953701880791,
+    "lower_bound_gbp": 4162.95370188079,
+    "absolute_gap_gbp": 1.8189894035458565e-12,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.029079449999699136,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 4162.95370188079,
+        "incumbent_gbp": 4162.953701880791,
+        "candidate_gap_gbp": 1.8189894035458565e-12,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "total_seconds": 1.9559089169997605
+}

@@ -1,0 +1,234 @@
+{
+  "flat-1250-heat1600": {
+    "v16": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.000288923076915637,
+      "heat_balance_max_abs_kw": 7.323943668779975e-05,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2674.4820498374866,
+      "net_connection_kva_max": 792.3306771111521,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 4446.072001084222,
+      "reported_cost": 4446.073
+    },
+    "v19": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.000288923076915637,
+      "heat_balance_max_abs_kw": 7.323943668779975e-05,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2674.4820498374866,
+      "net_connection_kva_max": 484.1313044432028,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 14,
+      "physical_netted_cost": 4446.615981912952,
+      "reported_cost": 4359.117
+    },
+    "MILP": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 2.5153212845907547e-12,
+      "heat_balance_max_abs_kw": 1.318767317570746e-11,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2674.4819654011417,
+      "net_connection_kva_max": 792.3307500142237,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 4446.0725462478,
+      "reported_cost": null
+    }
+  },
+  "flat-1250-heat2000": {
+    "v16": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 7.69230769179785e-05,
+      "heat_balance_max_abs_kw": 0.0001999999999497959,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2923.076923076923,
+      "net_connection_kva_max": 792.3306771111521,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 4713.997475131944,
+      "reported_cost": 4713.998
+    },
+    "v19": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 7.69230769179785e-05,
+      "heat_balance_max_abs_kw": 0.0001999999999497959,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2923.076923076923,
+      "net_connection_kva_max": 484.1313044432028,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 14,
+      "physical_netted_cost": 4714.541455960673,
+      "reported_cost": 4627.042
+    },
+    "MILP": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 2.4158453015843406e-13,
+      "heat_balance_max_abs_kw": 0.0,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2923.076923076923,
+      "net_connection_kva_max": 264.61224544365706,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 4671.769584601104,
+      "reported_cost": null
+    },
+    "v16-direction-corrected": {
+      "returncode": 0,
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/diagnostic-direction-fixed/v16/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/data",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/v16-direction-corrected-plan.json"
+      ],
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 7.69230769179785e-05,
+      "heat_balance_max_abs_kw": 0.0001999999999497959,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2923.076923076923,
+      "net_connection_kva_max": 264.6122371580584,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 4671.76921033902,
+      "reported_cost": 4671.77
+    },
+    "v19-direction-corrected": {
+      "returncode": 0,
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/diagnostic-direction-fixed/v19/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/data",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/flat-1250-heat2000/v19-direction-corrected-plan.json"
+      ],
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 7.69230769179785e-05,
+      "heat_balance_max_abs_kw": 0.0001999999999497959,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2923.076923076923,
+      "net_connection_kva_max": 264.6122371580584,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 4671.76921033902,
+      "reported_cost": 4671.77
+    }
+  },
+  "flat-1500-heat1600": {
+    "v16": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.0004501538459997789,
+      "heat_balance_max_abs_kw": 0.0003915492957276001,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2547.9727453954497,
+      "net_connection_kva_max": 725.4961198668655,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 5003.311303550552,
+      "reported_cost": 5003.312
+    },
+    "v19": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.0004501538459997789,
+      "heat_balance_max_abs_kw": 0.0003915492957276001,
+      "cooling_balance_max_abs_kw": 0.0,
+      "tower_excess_max_kw": -2547.9727453954497,
+      "net_connection_kva_max": 725.4961198668655,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 14,
+      "physical_netted_cost": 5003.311303550552,
+      "reported_cost": 4915.812
+    },
+    "MILP": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 3.907985046680551e-14,
+      "heat_balance_max_abs_kw": 2.2737367544323206e-13,
+      "cooling_balance_max_abs_kw": 1.1368683772161603e-13,
+      "tower_excess_max_kw": -2547.9721873679005,
+      "net_connection_kva_max": 1032.3514691613398,
+      "net_export_max_kw": 250.0,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 5002.768117270587,
+      "reported_cost": null
+    }
+  },
+  "visible-export15": {
+    "v16": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.0004863797469738529,
+      "heat_balance_max_abs_kw": 0.00042018779339514367,
+      "cooling_balance_max_abs_kw": 2.2737367544323206e-13,
+      "tower_excess_max_kw": -244.679052631579,
+      "net_connection_kva_max": 985.4000062896534,
+      "net_export_max_kw": -203.754,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 6303.5604091900495,
+      "reported_cost": 6303.56
+    },
+    "v19": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.0004863797469738529,
+      "heat_balance_max_abs_kw": 0.00042018779339514367,
+      "cooling_balance_max_abs_kw": 2.2737367544323206e-13,
+      "tower_excess_max_kw": -244.679052631579,
+      "net_connection_kva_max": 985.4000062896534,
+      "net_export_max_kw": -203.754,
+      "directional_overlap_periods": 14,
+      "physical_netted_cost": 6303.5604091900495,
+      "reported_cost": 6282.56
+    },
+    "MILP": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 3.437605755607365e-11,
+      "heat_balance_max_abs_kw": 2.8478552849264815e-11,
+      "cooling_balance_max_abs_kw": 1.1368683772161603e-13,
+      "tower_excess_max_kw": -244.67905263157627,
+      "net_connection_kva_max": 985.4000415071422,
+      "net_export_max_kw": -203.75386572770012,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 6303.56031942654,
+      "reported_cost": null
+    }
+  },
+  "visible-night7-export12": {
+    "v16": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.0005009482070192917,
+      "heat_balance_max_abs_kw": 0.00042018779339514367,
+      "cooling_balance_max_abs_kw": 2.2737367544323206e-13,
+      "tower_excess_max_kw": -244.679052631579,
+      "net_connection_kva_max": 985.4000062896534,
+      "net_export_max_kw": -203.754,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 5963.29325849165,
+      "reported_cost": 5963.293
+    },
+    "v19": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 0.0007768299531747402,
+      "heat_balance_max_abs_kw": 0.00042018779339514367,
+      "cooling_balance_max_abs_kw": 2.2737367544323206e-13,
+      "tower_excess_max_kw": -244.679052631579,
+      "net_connection_kva_max": 1135.3914339182636,
+      "net_export_max_kw": -203.754,
+      "directional_overlap_periods": 14,
+      "physical_netted_cost": 5959.00321519005,
+      "reported_cost": 5911.984
+    },
+    "MILP": {
+      "unit_ratings_and_outages": true,
+      "electricity_balance_max_abs_kw": 2.219735506514553e-11,
+      "heat_balance_max_abs_kw": 1.8701484805205837e-11,
+      "cooling_balance_max_abs_kw": 1.1368683772161603e-13,
+      "tower_excess_max_kw": -244.6790526315781,
+      "net_connection_kva_max": 1135.3915956279545,
+      "net_export_max_kw": -203.7538657276995,
+      "directional_overlap_periods": 0,
+      "physical_netted_cost": 5959.003279124659,
+      "reported_cost": null
+    }
+  }
+}

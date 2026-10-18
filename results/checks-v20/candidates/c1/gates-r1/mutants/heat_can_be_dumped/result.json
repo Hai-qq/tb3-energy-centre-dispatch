@@ -1,0 +1,117 @@
+{
+  "app": "results/checks-v20/candidates/c1/gates-r1/mutant_apps/heat_can_be_dumped",
+  "days": {
+    "h1": {
+      "cost_gbp": 5540.580873858096,
+      "delta_gbp": -580.0767462196363,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6120.657620077733,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.7818302159998893,
+          "sha256": "e26ddfe2002f992ebdc9866bd9461183d88847b4ba928ee22ab9505d84503a55"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.7085460819998843,
+          "sha256": "e26ddfe2002f992ebdc9866bd9461183d88847b4ba928ee22ab9505d84503a55"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8630.929843864109,
+      "delta_gbp": -2.055345248663798e-05,
+      "failures": {},
+      "milp_gbp": 8630.929864417561,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.9026444870000887,
+          "sha256": "6a045a3e8627786b798dc388f10977184868067cfdaba0f51edde7e7ce002465"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.02180233900026,
+          "sha256": "6a045a3e8627786b798dc388f10977184868067cfdaba0f51edde7e7ce002465"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5037.439177288644,
+      "delta_gbp": -204.58887278848488,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5242.028050077129,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.9577487169999586,
+          "sha256": "f54ec03bdeaa9e1581fb8b2b56e90636d11635965aa76da54f5713753d9ffb97"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.6389873039997838,
+          "sha256": "f54ec03bdeaa9e1581fb8b2b56e90636d11635965aa76da54f5713753d9ffb97"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 5630.172496774048,
+      "delta_gbp": -1303.8059807872532,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6933.978477561302,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.411090119000164,
+          "sha256": "41b19edb859c8b4c7fd028c84642b44bc229826ddffb032d9a4503b7a6207c63"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.983389661000274,
+          "sha256": "41b19edb859c8b4c7fd028c84642b44bc229826ddffb032d9a4503b7a6207c63"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 5049.8708772725495,
+      "delta_gbp": -909.1324018521127,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5959.003279124662,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.983889789999921,
+          "sha256": "e0dc34071af31efbb051417dfc39ce44459dab2174bd00ff609138986c7a93d9"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.654512670999793,
+          "sha256": "e0dc34071af31efbb051417dfc39ce44459dab2174bd00ff609138986c7a93d9"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "6fd794e8b8be46968d4218b25ab5dda495934ecf43164cd68b7977f32b057410",
+    "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

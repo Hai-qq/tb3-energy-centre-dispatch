@@ -1,0 +1,79 @@
+{
+  "command": [
+    "tools/check_v18.py",
+    "--task",
+    "results/checks-v20/candidates/c4/task",
+    "--out",
+    "results/checks-v20/candidates/c4/matrix",
+    "--apps",
+    "oracle",
+    "strong-v16-claude",
+    "strong-v19-claude",
+    "--app",
+    "strong-v19-claude=results/v19-trials/ecd19-run2-claude/app"
+  ],
+  "days": {
+    "h1": {
+      "milp_gbp": 6426.647467103042,
+      "milp_seconds": 0.35868725699992865,
+      "sha256": {
+        "demand.csv": "0d0e0fff0ae8423b4d8c124e0c291bd6a347b89c287bcd32055e10f962dc8134",
+        "plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+        "status.json": "17d0a361075ce59a41da363d8075494a94a6bccde3e4b4fca4fcffc3ecb9bcdf",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "c5e19a4cfd334e55c9f9a929eab962c5179d7215d20e156333b1b0e471d10e43"
+      }
+    },
+    "h2": {
+      "milp_gbp": 9107.675896200466,
+      "milp_seconds": 0.7044710609998219,
+      "sha256": {
+        "demand.csv": "5eca730f8ed18c0cc5df88ebc63cb311d1c656a6124e6305bfdb433d195410da",
+        "plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+        "status.json": "62c69c06dd4e06bdf420ecc9e76a7ae2c789c8bd1f7eb5868c70651c94877204",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "05f3b81800fc31e950a743cf199d1aabe63bbdf96c4cc2c439396426e54a194a"
+      }
+    },
+    "h3": {
+      "milp_gbp": 5375.538040469284,
+      "milp_seconds": 0.44821888000024046,
+      "sha256": {
+        "demand.csv": "8c7b3cea2cdd3dbf18e7b82ac6157fef5e1f2a059a61cd143857adb870db115a",
+        "plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+        "status.json": "527480ab41930d7f6dc69aa2ace937487e6fa738564f7d7ad0bf723232e36f33",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "ed390ebf88b1b2ae8fe7309006c1423e73169de404d4fd9008749d9ad6aa80b4"
+      }
+    },
+    "h4": {
+      "milp_gbp": 7310.971840533033,
+      "milp_seconds": 0.23745845999974335,
+      "sha256": {
+        "demand.csv": "fcde2307daa4537b9ac5f66f2c801a90993958a02aecd68268b486c8bac482ba",
+        "plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+        "status.json": "0a8146dd1d76e00614842724353380069a978a071b2a4e3c62b33a559f9ac1e1",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "094de079b7511a646bde7af8a49f9f721a4f52fcbe8a65ac55b9b61deea86ac5"
+      }
+    },
+    "visible": {
+      "milp_gbp": 6303.560319426553,
+      "milp_seconds": 0.3363366689995928,
+      "sha256": {
+        "demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+        "plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+        "status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+        "supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+        "weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407"
+      }
+    }
+  },
+  "numpy": "2.3.4",
+  "python": "3.13.16",
+  "reference_sha256": "cab4b8e5b181426b0ad17cbd400f6c33e7cb415334b6cb87f9c963f6c02d0eb4",
+  "scipy": "1.17.0",
+  "task": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task",
+  "test_sha256": "31dcc983decfcff59c1d8aa28492190b9799d8686c60225dcd51e3cb6771714e",
+  "timestamp_utc": "2026-10-18T04:54:51.407191+00:00"
+}

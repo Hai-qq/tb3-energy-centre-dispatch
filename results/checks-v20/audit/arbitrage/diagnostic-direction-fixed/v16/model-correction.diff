@@ -1,0 +1,29 @@
+--- v16/original-optimize.py
++++ v16/direction-corrected-optimize.py
+@@ -175,6 +175,14 @@
+         return best
+ 
+     def _solve(self, segs: list[Segment | None], water: _Water) -> Loading | None:
++        best = None
++        for direction in ("import", "export"):
++            candidate = self._solve_direction(segs, water, direction)
++            if candidate is not None and (best is None or _better((candidate.excess_kva, candidate.cost), (best.excess_kva, best.cost))):
++                best = candidate
++        return best
++
++    def _solve_direction(self, segs: list[Segment | None], water: _Water, direction: str) -> Loading | None:
+         plant, tariff = self.plant, self.tariff
+         gas = tariff.gas_rate
+         n = self.n
+@@ -202,9 +210,9 @@
+         bounds[self.iH] = (0.0, None if self.hx_up else 0.0)
+         bounds[self.iV] = (self.pv_min, self.pv_max)
+         c[self.iI] = DT_H * self.import_rate
+-        bounds[self.iI] = (0.0, None)
++        bounds[self.iI] = (0.0, None if direction == "import" else 0.0)
+         c[self.iX] = -DT_H * tariff.export_rate
+-        bounds[self.iX] = (0.0, tariff.export_limit_kw)
++        bounds[self.iX] = (0.0, tariff.export_limit_kw if direction == "export" else 0.0)
+         c[self.iS] = EXCESS_GBP_PER_KVA
+         bounds[self.iS] = (0.0, None)
+ 

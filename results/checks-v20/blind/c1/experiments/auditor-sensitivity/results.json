@@ -1,0 +1,199 @@
+{
+  "passed": true,
+  "mutations_rejected": 11,
+  "results": [
+    {
+      "mutation": "understated_gas",
+      "correctly_rejected": true,
+      "required_diagnostic": "reconstructed billed gas",
+      "diagnostics": [
+        "00:00: independently reconstructed billed gas"
+      ]
+    },
+    {
+      "mutation": "missing_start_charge",
+      "correctly_rejected": true,
+      "required_diagnostic": "reconstructed bill",
+      "diagnostics": [
+        "00:00: independently reconstructed bill"
+      ]
+    },
+    {
+      "mutation": "unrouted_ht_surplus",
+      "correctly_rejected": true,
+      "required_diagnostic": "HT/LTHW equality",
+      "diagnostics": [
+        "00:00: HT/LTHW equality, residual 835.0",
+        "00:00: shared condenser COP/electric balance 612.2675569520818 outside [44.267556952081705,72.24692307692308]",
+        "00:00: independently reconstructed bill",
+        "00:00: independently reconstructed billed gas",
+        "summary cost",
+        "summary gas"
+      ]
+    },
+    {
+      "mutation": "simultaneous_meter_flows",
+      "correctly_rejected": true,
+      "required_diagnostic": "simultaneous import and export",
+      "diagnostics": [
+        "00:00: simultaneous import and export",
+        "00:00: independently reconstructed bill",
+        "summary cost",
+        "summary import",
+        "summary export"
+      ]
+    },
+    {
+      "mutation": "outage_running",
+      "correctly_rejected": true,
+      "required_diagnostic": "GE1 outage",
+      "diagnostics": [
+        "07:00: GE1 outage",
+        "07:00: HT/LTHW equality, residual 834.9999999999999",
+        "07:00: shared condenser COP/electric balance 645.7564112743153 outside [77.7564112743152,125.55666666666667]",
+        "07:00: independently reconstructed bill",
+        "07:00: independently reconstructed billed gas",
+        "summary cost",
+        "summary gas",
+        "summary starts including midnight"
+      ]
+    },
+    {
+      "mutation": "apparent_power_overload",
+      "correctly_rejected": true,
+      "required_diagnostic": "import kVA overload",
+      "diagnostics": [
+        "00:00: shared condenser COP/electric balance 1115.165386 outside [44.267556952081705,72.24692307692308]",
+        "00:00: import kVA overload 781.6650225021829",
+        "00:00: independently reconstructed bill",
+        "summary cost",
+        "summary import"
+      ]
+    },
+    {
+      "mutation": "pv_above_inverter",
+      "correctly_rejected": true,
+      "required_diagnostic": "PV forecast, inverter and outage",
+      "diagnostics": [
+        "06:00: PV forecast, inverter and outage",
+        "06:00: independently reconstructed bill",
+        "summary cost",
+        "summary import"
+      ]
+    },
+    {
+      "mutation": "tower_overload",
+      "correctly_rejected": true,
+      "required_diagnostic": "tower rejection overload",
+      "diagnostics": [
+        "07:00: HT/LTHW equality, residual -14.084507042253563",
+        "07:00: tower rejection overload 13.864507042253308"
+      ]
+    },
+    {
+      "mutation": "wrong_start_total",
+      "correctly_rejected": true,
+      "required_diagnostic": "summary starts including midnight",
+      "diagnostics": [
+        "summary starts including midnight"
+      ]
+    },
+    {
+      "mutation": "endpoint_chord_fuel",
+      "correctly_rejected": true,
+      "required_diagnostic": "reconstructed billed gas",
+      "diagnostics": [
+        "01:00: independently reconstructed billed gas"
+      ]
+    },
+    {
+      "mutation": "premature_three_decimal_rounding",
+      "correctly_rejected": true,
+      "required_diagnostic": "HT/LTHW equality",
+      "diagnostics": [
+        "00:00: shared condenser COP/electric balance 44.26738599999982 outside [44.2675569520817,72.24692307692307]",
+        "00:00: independently reconstructed bill",
+        "00:30: shared condenser COP/electric balance 40.34932800000005 outside [40.349410840534176,65.85230769230769]",
+        "00:30: independently reconstructed bill",
+        "01:00: independently reconstructed bill",
+        "01:30: independently reconstructed bill",
+        "02:00: independently reconstructed bill",
+        "02:30: independently reconstructed bill",
+        "03:00: independently reconstructed bill",
+        "03:30: independently reconstructed bill",
+        "04:00: shared condenser COP/electric balance 39.44296800000005 outside [39.44328767123287,64.60102564102564]",
+        "04:30: shared condenser COP/electric balance 47.34901999999998 outside [47.349453978159126,77.82307692307693]",
+        "04:30: independently reconstructed bill",
+        "05:00: shared condenser COP/electric balance 54.52425000000002 outside [54.524461839530325,89.30128205128204]",
+        "05:00: independently reconstructed bill",
+        "05:30: shared condenser COP/electric balance 74.33263200000006 outside [74.33283405597162,120.88615384615386]",
+        "05:30: independently reconstructed bill",
+        "06:00: shared condenser COP/electric balance 85.53014400000025 outside [85.53037974683545,138.60307692307694]",
+        "06:00: independently reconstructed bill",
+        "06:30: shared condenser COP/electric balance 102.1446980000002 outside [102.14486055776891,164.34846153846152]",
+        "06:30: independently reconstructed bill",
+        "07:00: shared condenser COP/electric balance 77.75616200000016 outside [77.7564112743152,125.55666666666667]",
+        "07:00: independently reconstructed bill",
+        "07:30: shared condenser COP/electric balance 89.7268320000001 outside [89.72703453751488,144.88615384615386]",
+        "07:30: independently reconstructed bill",
+        "08:00: independently reconstructed bill",
+        "08:30: shared condenser COP/electric balance 108.39968200000001 outside [108.39983948635634,173.16179487179488]",
+        "08:30: independently reconstructed bill",
+        "09:00: shared condenser COP/electric balance 116.8904960000002 outside [116.890541632983,185.37641025641025]",
+        "09:00: independently reconstructed bill",
+        "09:30: independently reconstructed bill",
+        "10:00: shared condenser COP/electric balance 142.2258739999999 outside [142.2259092766653,223.09410256410257]",
+        "10:00: independently reconstructed bill",
+        "10:30: independently reconstructed bill",
+        "11:00: shared condenser COP/electric balance 120.87500599999998 outside [120.87508143322476,190.30076923076925]",
+        "11:00: independently reconstructed bill",
+        "11:30: independently reconstructed bill",
+        "12:00: shared condenser COP/electric balance 137.79449800000006 outside [137.7946873722926,216.14333333333332]",
+        "12:00: independently reconstructed bill",
+        "12:30: shared condenser COP/electric balance 159.87629800000013 outside [159.87660283097418,246.16897435897437]",
+        "12:30: independently reconstructed bill",
+        "13:00: shared condenser COP/electric balance 157.9604219999998 outside [157.96088591725868,242.3079487179487]",
+        "13:00: independently reconstructed bill",
+        "13:30: shared condenser COP/electric balance 167.6210900000001 outside [167.6213957375679,257.12692307692305]",
+        "13:30: independently reconstructed bill",
+        "14:00: shared condenser COP/electric balance 174.2533220000001 outside [174.2535234899329,266.2951282051282]",
+        "14:00: independently reconstructed bill",
+        "14:30: independently reconstructed bill",
+        "15:00: shared condenser COP/electric balance 184.75578000000004 outside [184.75621052631578,281.2794871794872]",
+        "15:00: independently reconstructed bill",
+        "15:30: shared condenser COP/electric balance 195.37092999999987 outside [195.37094736842107,297.4397435897436]",
+        "15:30: independently reconstructed bill",
+        "16:00: shared condenser COP/electric balance 183.82545200000007 outside [183.82585263157893,279.8630769230769]",
+        "16:00: independently reconstructed bill",
+        "16:30: shared condenser COP/electric balance 185.98894999999985 outside [185.989010989011,282.0833333333333]",
+        "16:30: independently reconstructed bill",
+        "17:00: independently reconstructed bill",
+        "17:30: shared condenser COP/electric balance 157.9055619999998 outside [157.90572503134143,242.22333333333336]",
+        "17:30: independently reconstructed bill",
+        "18:00: shared condenser COP/electric balance 147.84363799999988 outside [147.8438822065533,228.4946153846154]",
+        "18:00: independently reconstructed bill",
+        "18:30: independently reconstructed bill",
+        "19:00: independently reconstructed bill",
+        "19:30: independently reconstructed bill",
+        "20:00: independently reconstructed bill",
+        "20:30: independently reconstructed bill",
+        "21:00: independently reconstructed bill",
+        "21:30: independently reconstructed bill",
+        "22:00: independently reconstructed bill",
+        "22:30: HT/LTHW equality, residual 3.9436619545085705e-05",
+        "22:30: shared condenser COP/electric balance 0.00019999999974551486 outside [0.0,0.0]",
+        "22:30: independently reconstructed bill",
+        "22:30: independently reconstructed billed gas",
+        "23:00: HT/LTHW equality, residual 2.535211257281844e-05",
+        "23:00: shared condenser COP/electric balance -0.00039999999997419877 outside [0.0,0.0]",
+        "23:00: independently reconstructed bill",
+        "23:00: independently reconstructed billed gas",
+        "23:30: HT/LTHW equality, residual -0.00042018779339514367",
+        "23:30: independently reconstructed bill",
+        "23:30: independently reconstructed billed gas",
+        "summary cost",
+        "summary gas"
+      ]
+    }
+  ]
+}

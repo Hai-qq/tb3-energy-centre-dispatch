@@ -1,0 +1,62 @@
+{
+  "external_feedback_used": false,
+  "unexpected_application_test_failures_observed": 0,
+  "events": [
+    {
+      "phase": 1,
+      "event": "Initial write attempt using delete and add for the same patch path was rejected by apply_patch validation.",
+      "effect": "No source mutation occurred; complete files were subsequently written using quoted here-documents."
+    },
+    {
+      "phase": 2,
+      "event": "Rebuilt time alignment, curves, gas bases, actual heat routes, hydraulic capacity, all outages, reactive connection limits and full-day start-cost commitment.",
+      "evidence": [
+        "initial_visible_plan.json",
+        "initial_visible_verification.json",
+        "initial_visible_optimality.json"
+      ]
+    },
+    {
+      "phase": 3,
+      "event": "First independent 32-scenario suite passed physical checks, duplicate CLI runs and full-day MILP lower bounds.",
+      "evidence": "initial_suite_summary.json"
+    },
+    {
+      "phase": 4,
+      "event": "Final engineering review found that fixing common condenser water to the minimum required inlet floor omits a legitimate variable-speed tower control.",
+      "discovery_method": "Independent physical counterexample calculation, without external evaluation feedback. The earlier executable was not run on this new case before modification.",
+      "counterexample": {
+        "outages": [
+          "GE1",
+          "B1",
+          "B2"
+        ],
+        "required_GE2_kwe": 800,
+        "buildings_heat_kw": 825,
+        "distribution_loss_kw": 75,
+        "cooling_kw": 700,
+        "wet_bulb_c": 8,
+        "site_electricity_kw": 377.063829787234,
+        "fixed_21c_maximum_compressor_kw": 130.84112149532712,
+        "fixed_21c_minimum_export_kw": 268.0950487174389,
+        "export_limit_kw": 250,
+        "feasible_common_temperature_c_for_EC1": 30,
+        "feasible_compressor_kw": 148.93617021276594
+      }
+    },
+    {
+      "phase": 5,
+      "event": "Added the exact continuous aggregate compressor-input interval for common-water control, independent temperature recovery, an independent MILP formulation of the same physical range, and a dedicated feasible-witness case.",
+      "evidence": "../cases/heat_led_cooling_water_modulation/feasible_witness.json"
+    },
+    {
+      "phase": 6,
+      "event": "Targeted five-case rerun passed; final complete suite passed all 33 scenarios.",
+      "evidence": [
+        "../experiment_results.json",
+        "../measurements.json",
+        "visible_to_repaired.patch"
+      ]
+    }
+  ]
+}

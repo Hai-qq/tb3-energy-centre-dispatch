@@ -1,0 +1,310 @@
+{
+  "parallel-lt": {
+    "16": {
+      "h1": {
+        "cost_gbp": 6426.6573082883915,
+        "delta_gbp": 0.009841185349614534,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.5445476750001035,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5310100569995484,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735705373085,
+        "delta_gbp": 271.9854281610933,
+        "failures": {
+          "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/baseline/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "milp_gbp": 8607.750277211991,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.531998499999645,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.7463587900001585,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.0398097940001207,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.3031170839999504,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.983049960898,
+        "delta_gbp": 41.35064495800998,
+        "failures": {
+          "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/baseline/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "milp_gbp": 7269.632405002888,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.561288586000046,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5081116139999722,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.1445410410001386,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.7049208889998226,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "19": {
+      "h1": {
+        "cost_gbp": 6420.842876285666,
+        "delta_gbp": -5.8045908173762655,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.2562179320002542,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.6457811950003816,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8607.75555684976,
+        "delta_gbp": 0.005279637767671375,
+        "failures": {},
+        "milp_gbp": 8607.750277211991,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.484073725000144,
+            "sha256": "992fe207b18a9c9ec369c145505c5b669b0956ab66381e9c790a4ac312817209"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.9475292669999362,
+            "sha256": "992fe207b18a9c9ec369c145505c5b669b0956ab66381e9c790a4ac312817209"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.591995938999844,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5991401960000076,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7254.759311657549,
+        "delta_gbp": -14.87309334533893,
+        "failures": {},
+        "milp_gbp": 7269.632405002888,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.3207913799997186,
+            "sha256": "6c96ac68d5cbe5dffa2e207609464f252d686a328aaff6d3ee4ff54be151c652"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.2687860089999958,
+            "sha256": "6c96ac68d5cbe5dffa2e207609464f252d686a328aaff6d3ee4ff54be151c652"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.8727610739997544,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.0338867149998805,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    }
+  },
+  "single-ec1-feeder-200": {
+    "h1": {
+      "cost": 6453.644087623013,
+      "feasible": true,
+      "seconds": 0.5876972579999347
+    },
+    "h2": {
+      "cost": 8879.731991258708,
+      "feasible": true,
+      "seconds": 0.48803096599976925
+    },
+    "h3": {
+      "cost": 5375.538040469284,
+      "feasible": true,
+      "seconds": 0.7360341899998275
+    },
+    "h4": {
+      "cost": 7339.120104278458,
+      "feasible": true,
+      "seconds": 0.44208488399999624
+    },
+    "visible": {
+      "cost": 6304.367181441873,
+      "feasible": true,
+      "seconds": 0.7163194570002815
+    }
+  },
+  "single-ec1-feeder-250": {
+    "h1": {
+      "cost": 6430.268156762419,
+      "feasible": true,
+      "seconds": 0.5547480530003668
+    },
+    "h2": {
+      "cost": 8879.731991258708,
+      "feasible": true,
+      "seconds": 0.3467135910000252
+    },
+    "h3": {
+      "cost": 5375.538040469284,
+      "feasible": true,
+      "seconds": 0.617646749999949
+    },
+    "h4": {
+      "cost": 7314.35772966297,
+      "feasible": true,
+      "seconds": 0.3147887779996381
+    },
+    "visible": {
+      "cost": 6303.560319426553,
+      "feasible": true,
+      "seconds": 0.40839327899993805
+    }
+  },
+  "single-ec1-feeder-315": {
+    "h1": {
+      "cost": 6426.647467103042,
+      "feasible": true,
+      "seconds": 0.37658595300035813
+    },
+    "h2": {
+      "cost": 8879.731991258708,
+      "feasible": true,
+      "seconds": 0.3251016200001686
+    },
+    "h3": {
+      "cost": 5375.538040469284,
+      "feasible": true,
+      "seconds": 0.4846168909998596
+    },
+    "h4": {
+      "cost": 7310.971840533033,
+      "feasible": true,
+      "seconds": 0.30060666300005323
+    },
+    "visible": {
+      "cost": 6303.560319426553,
+      "feasible": true,
+      "seconds": 0.33269046300029004
+    }
+  },
+  "single-ec1-feeder-400": {
+    "h1": {
+      "cost": 6426.647467103042,
+      "feasible": true,
+      "seconds": 0.41629605499974787
+    },
+    "h2": {
+      "cost": 8879.731991258708,
+      "feasible": true,
+      "seconds": 0.3879832450002141
+    },
+    "h3": {
+      "cost": 5375.538040469284,
+      "feasible": true,
+      "seconds": 0.5147592759999498
+    },
+    "h4": {
+      "cost": 7310.971840533033,
+      "feasible": true,
+      "seconds": 0.32808833799981585
+    },
+    "visible": {
+      "cost": 6303.560319426553,
+      "feasible": true,
+      "seconds": 0.3233728949999204
+    }
+  }
+}

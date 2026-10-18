@@ -1,0 +1,39 @@
+{
+  "app": "results/checks-v20/blind/c2/app",
+  "days": {
+    "gas_binding": {
+      "cost_gbp": 12997.227480830534,
+      "delta_gbp": 5.347828846424818e-10,
+      "failures": {},
+      "milp_gbp": 12997.227480829999,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 0.576381462999052,
+          "sha256": "d9977f12af1990ad44ee83a2bb229568f7a9e767bba31a3e71e627d676ee0e56"
+        },
+        {
+          "returncode": 0,
+          "seconds": 0.6831226269987383,
+          "sha256": "d9977f12af1990ad44ee83a2bb229568f7a9e767bba31a3e71e627d676ee0e56"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+    "data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "data/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "data/supply.json": "8e5c83851deb07fcbcefb381cff39c32311dc4f1f5bb98ae1b72465140adb8a1",
+    "data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "dispatch.py": "df7514d946f4863d4eb37b66fa64f8d4de26236ff5d48e98f017f857a793fc33",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "9ee9d0ad1c2cae8f3586e3ada3dd4f2f73ef5a0f85faa6b521fbca542a175cda",
+    "planner/optimize.py": "dd0b15d14fdbb7bfc6ad27577761394e3fb407a895eea02e412a6483a5e1406e",
+    "planner/plant.py": "3668ffd099091f27d847849a36a7728704823dee8884bf487348d92620717936",
+    "planner/tariff.py": "ee7a558c0fe2c77f7aca829a4fb2ba8acda1d3c710c8dc73b260818ff464a180"
+  }
+}

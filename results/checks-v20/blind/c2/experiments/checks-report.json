@@ -1,0 +1,780 @@
+{
+  "runtime": {
+    "python": "3.13.16",
+    "numpy": "2.3.4",
+    "scipy": "1.17.0"
+  },
+  "cases": [
+    {
+      "name": "visible",
+      "seconds": 1.7634040440007084,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6303.560319427,
+        "gas_kwh": 64944.185839485,
+        "import_kwh": 13775.407766202,
+        "export_kwh": 0.0,
+        "engine_starts": 2,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.865796654485166e-10,
+        "max_heat_residual_kw": 2.899014361901209e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 4.019966581836343e-10,
+        "max_cost_residual_gbp": 5.015010628994787e-10,
+        "max_grid_kva": 985.4000415074764,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 231.03498263157917,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.6
+      }
+    },
+    {
+      "name": "monday_plus_one",
+      "seconds": 2.2431803070003298,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6303.560319427,
+        "gas_kwh": 64944.185839485,
+        "import_kwh": 13775.407766202,
+        "export_kwh": 0.0,
+        "engine_starts": 2,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.865796654485166e-10,
+        "max_heat_residual_kw": 2.899014361901209e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 4.019966581836343e-10,
+        "max_cost_residual_gbp": 5.015010628994787e-10,
+        "max_grid_kva": 985.4000415074764,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 231.03498263157917,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.6
+      }
+    },
+    {
+      "name": "monday_plus_five_half",
+      "seconds": 1.6524034819994995,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6303.560319427,
+        "gas_kwh": 64944.185839485,
+        "import_kwh": 13775.407766202,
+        "export_kwh": 0.0,
+        "engine_starts": 2,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.865796654485166e-10,
+        "max_heat_residual_kw": 2.899014361901209e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 4.019966581836343e-10,
+        "max_cost_residual_gbp": 5.015010628994787e-10,
+        "max_grid_kva": 985.4000415074764,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 231.03498263157917,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.6
+      }
+    },
+    {
+      "name": "saturday_plus_one",
+      "seconds": 1.5411158039996735,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 5962.180485987,
+        "gas_kwh": 64944.185839485,
+        "import_kwh": 13775.407766202,
+        "export_kwh": 0.0,
+        "engine_starts": 2,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.865796654485166e-10,
+        "max_heat_residual_kw": 2.899014361901209e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 4.019966581836343e-10,
+        "max_cost_residual_gbp": 5.015010628994787e-10,
+        "max_grid_kva": 985.4000415074764,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 231.03498263157917,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.6
+      }
+    },
+    {
+      "name": "sunday_minus_five",
+      "seconds": 1.3914411779996954,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 5962.180485987,
+        "gas_kwh": 64944.185839485,
+        "import_kwh": 13775.407766202,
+        "export_kwh": 0.0,
+        "engine_starts": 2,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.865796654485166e-10,
+        "max_heat_residual_kw": 2.899014361901209e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 4.019966581836343e-10,
+        "max_cost_residual_gbp": 5.015010628994787e-10,
+        "max_grid_kva": 985.4000415074764,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 231.03498263157917,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.6
+      }
+    },
+    {
+      "name": "winter_zero_offset",
+      "seconds": 1.7790602469995065,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6303.560319427,
+        "gas_kwh": 64944.185839485,
+        "import_kwh": 13775.407766202,
+        "export_kwh": 0.0,
+        "engine_starts": 2,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.865796654485166e-10,
+        "max_heat_residual_kw": 2.899014361901209e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 4.019966581836343e-10,
+        "max_cost_residual_gbp": 5.015010628994787e-10,
+        "max_grid_kva": 985.4000415074764,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 231.03498263157917,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.6
+      }
+    },
+    {
+      "name": "all_engines_out",
+      "seconds": 0.8818046850001338,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 5863.675660503,
+        "gas_kwh": 34066.764294748,
+        "import_kwh": 19751.645068269,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 3.270770321250893e-10,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 3.7346126191550866e-10,
+        "max_cost_residual_gbp": 4.4732928472512867e-10,
+        "max_grid_kva": 988.6239510099566,
+        "max_gas_standard_m3_per_hour": 139.64950711938664,
+        "min_tower_headroom_kw": 1169.1588785046729,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 21.0
+      }
+    },
+    {
+      "name": "no_ht_dump",
+      "seconds": 1.2155103759996564,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 5039.378453039,
+        "gas_kwh": 4640.883977901,
+        "import_kwh": 21600.0,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 0.0,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 7.182165973063093e-11,
+        "max_cost_residual_gbp": 2.7625901566352695e-11,
+        "max_grid_kva": 948.6832980505138,
+        "max_gas_standard_m3_per_hour": 17.579105976896034,
+        "min_tower_headroom_kw": 3875.0,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 21.0
+      }
+    },
+    {
+      "name": "high_reactive",
+      "seconds": 0.6219537269998909,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 8031.189555714,
+        "gas_kwh": 129237.12,
+        "import_kwh": 8271.962057143,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 2.8603608370758593e-10,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 4.547473508864641e-13,
+        "max_cost_residual_gbp": 3.4498270906624384e-10,
+        "max_grid_kva": 1212.6445066865372,
+        "max_gas_standard_m3_per_hour": 489.53454545454554,
+        "min_tower_headroom_kw": 1906.3349142857141,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 26.0
+      }
+    },
+    {
+      "name": "grid_circle",
+      "seconds": 0.5970555059993785,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 9761.478555097,
+        "gas_kwh": 74004.624520391,
+        "import_kwh": 28140.401362427,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 5.327365215634927e-10,
+        "max_heat_residual_kw": 4.6497916628140956e-10,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 4.363300831755623e-10,
+        "max_cost_residual_gbp": 4.5150727601139806e-10,
+        "max_grid_kva": 1219.999999999558,
+        "max_gas_standard_m3_per_hour": 280.3205474257157,
+        "min_tower_headroom_kw": 1031.3448269429323,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 26.0
+      }
+    },
+    {
+      "name": "negative_reactive",
+      "seconds": 0.568974179000179,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 2123.687845304,
+        "gas_kwh": 36464.08839779,
+        "import_kwh": 2400.0,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 0.0,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 2.927436071331613e-10,
+        "max_cost_residual_gbp": 4.972378064849181e-10,
+        "max_grid_kva": 1214.125199474914,
+        "max_gas_standard_m3_per_hour": 138.12154696132598,
+        "min_tower_headroom_kw": 3175.0,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.0
+      }
+    },
+    {
+      "name": "gas_binding",
+      "seconds": 0.6205483229996389,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 12997.22748083,
+        "gas_kwh": 145200.0,
+        "import_kwh": 27937.466052527,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 3.3014657674357295e-10,
+        "max_heat_residual_kw": 2.000888343900442e-10,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 1.1095835361629725e-10,
+        "max_cost_residual_gbp": 4.718287982541369e-10,
+        "max_grid_kva": 1168.2428319543646,
+        "max_gas_standard_m3_per_hour": 550.0000000000202,
+        "min_tower_headroom_kw": 2941.9421487603304,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.0
+      }
+    },
+    {
+      "name": "tower_binding",
+      "seconds": 0.6905575119999412,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 7483.71538373,
+        "gas_kwh": 59232.080398119,
+        "import_kwh": 20879.456347903,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 3.4515323932282627e-10,
+        "max_heat_residual_kw": 7.075868779793382e-10,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 1.6621015674900264e-10,
+        "max_cost_residual_gbp": 4.4376236019161297e-10,
+        "max_grid_kva": 870.7889856106278,
+        "max_gas_standard_m3_per_hour": 224.36394090196976,
+        "min_tower_headroom_kw": 6.125446816440672e-10,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 26.0
+      }
+    },
+    {
+      "name": "electric_chiller_out",
+      "seconds": 0.6706248339996819,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 9415.023027638,
+        "gas_kwh": 77787.491499548,
+        "import_kwh": 25417.947657453,
+        "export_kwh": 0.0,
+        "engine_starts": 1,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 1.7416823538951576e-10,
+        "max_heat_residual_kw": 5.070432962384075e-10,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 2.5988811103161424e-10,
+        "max_cost_residual_gbp": 4.3880277189600747e-10,
+        "max_grid_kva": 1066.7781359698058,
+        "max_gas_standard_m3_per_hour": 312.44135723596185,
+        "min_tower_headroom_kw": -5.106812750454992e-10,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 26.0
+      }
+    },
+    {
+      "name": "cold_absorption",
+      "seconds": 0.6762080989992683,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 7566.735131346,
+        "gas_kwh": 76319.04,
+        "import_kwh": 17378.486584615,
+        "export_kwh": 0.0,
+        "engine_starts": 1,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 3.07636582874693e-10,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 2.2737367544323206e-13,
+        "max_cost_residual_gbp": 2.5200108666467713e-10,
+        "max_grid_kva": 738.3653828567961,
+        "max_gas_standard_m3_per_hour": 289.08727272727276,
+        "min_tower_headroom_kw": 2292.8963923076926,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 48,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 22
+      }
+    },
+    {
+      "name": "warmer_water_export",
+      "seconds": 0.5974767979996614,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 1108.097253493,
+        "gas_kwh": 26790.015911602,
+        "import_kwh": 590.446096654,
+        "export_kwh": 4250.0,
+        "engine_starts": 1,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 1.8216894659417449e-10,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 2.707452040340286e-10,
+        "max_cost_residual_gbp": 2.007212174248707e-10,
+        "max_grid_kva": 262.9409712319521,
+        "max_gas_standard_m3_per_hour": 118.85818181818183,
+        "min_tower_headroom_kw": 3384.0,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 34,
+        "maximum_condenser_entering_c": 27.93103448275862
+      }
+    },
+    {
+      "name": "phe_radiator_outages",
+      "seconds": 0.703452441999616,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 9384.512231528,
+        "gas_kwh": 72206.218891434,
+        "import_kwh": 26409.267372008,
+        "export_kwh": 0.0,
+        "engine_starts": 3,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 3.844888851745054e-10,
+        "max_heat_residual_kw": 3.367404133314267e-10,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 5.857145879417658e-10,
+        "max_cost_residual_gbp": 5.58713963982882e-10,
+        "max_grid_kva": 1133.9270028825515,
+        "max_gas_standard_m3_per_hour": 276.07588632592467,
+        "min_tower_headroom_kw": 2173.6845070422532,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 48,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 22
+      }
+    },
+    {
+      "name": "pv_curtailment",
+      "seconds": 0.7394950600000811,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 55.219337017,
+        "gas_kwh": 1988.950276243,
+        "import_kwh": 190.0,
+        "export_kwh": 1250.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 0.0,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 3.977902451879345e-10,
+        "max_cost_residual_gbp": 1.5469625580522006e-10,
+        "max_grid_kva": 250.79872407968904,
+        "max_gas_standard_m3_per_hour": 7.533902561526871,
+        "min_tower_headroom_kw": 4000.0,
+        "pv_curtailment_kwh": 100.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 21.0
+      }
+    },
+    {
+      "name": "table_clamping",
+      "seconds": 0.6902692659996319,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6577.193474438,
+        "gas_kwh": 25856.35359116,
+        "import_kwh": 24061.309694023,
+        "export_kwh": 0.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 3.643663148977794e-10,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 1.7121237760875374e-10,
+        "max_cost_residual_gbp": 3.5706193557416555e-10,
+        "max_grid_kva": 1061.132710761591,
+        "max_gas_standard_m3_per_hour": 97.94073329984931,
+        "min_tower_headroom_kw": 1593.5897435897436,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 44.0
+      }
+    },
+    {
+      "name": "startup_bridge",
+      "seconds": 0.9764231469998776,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 1623.243956685,
+        "gas_kwh": 41588.504751381,
+        "import_kwh": 0.0,
+        "export_kwh": 5184.0,
+        "engine_starts": 0,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 0.0,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 4.419007382239215e-10,
+        "max_cost_residual_gbp": 6.077982561691897e-11,
+        "max_grid_kva": 238.08945828248622,
+        "max_gas_standard_m3_per_hour": 157.53221496735307,
+        "min_tower_headroom_kw": 3175.0,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.0
+      }
+    },
+    {
+      "name": "startup_midnight_off",
+      "seconds": 0.5890043389999846,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 1650.108694696,
+        "gas_kwh": 41260.75160221,
+        "import_kwh": 70.0,
+        "export_kwh": 5066.0,
+        "engine_starts": 1,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 0.0,
+        "max_heat_residual_kw": 0.0,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 4.419007382239215e-10,
+        "max_cost_residual_gbp": 6.077982561691897e-11,
+        "max_grid_kva": 238.08945828248622,
+        "max_gas_standard_m3_per_hour": 157.53221496735307,
+        "min_tower_headroom_kw": 3175.0,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.0
+      }
+    },
+    {
+      "name": "partial_and_overnight_outages",
+      "seconds": 0.7109637230005319,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 3427.554207333,
+        "gas_kwh": 66865.810505843,
+        "import_kwh": 391.611570248,
+        "export_kwh": 0.0,
+        "engine_starts": 5,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 4.694129529525526e-10,
+        "max_heat_residual_kw": 5.998117558192462e-10,
+        "max_cooling_residual_kw": 0.0,
+        "max_gas_residual_kwh": 6.020854925736785e-10,
+        "max_cost_residual_gbp": 4.5081094413035316e-10,
+        "max_grid_kva": 160.96721176887823,
+        "max_gas_standard_m3_per_hour": 257.4532062677458,
+        "min_tower_headroom_kw": 2572.9591836734694,
+        "pv_curtailment_kwh": 0.0,
+        "warm_water_periods": 0,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 24.0
+      }
+    },
+    {
+      "name": "random_witness_307",
+      "seconds": 2.7034645730000193,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 5968.437520151,
+        "gas_kwh": 111055.819176024,
+        "import_kwh": 2964.126398492,
+        "export_kwh": 820.516122761,
+        "engine_starts": 6,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 9.422365110367537e-10,
+        "max_heat_residual_kw": 6.994014256633818e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 7.755716069368646e-10,
+        "max_cost_residual_gbp": 5.132960723130964e-10,
+        "max_grid_kva": 1176.6316685475838,
+        "max_gas_standard_m3_per_hour": 550.0000000001328,
+        "min_tower_headroom_kw": 126.83732730148131,
+        "pv_curtailment_kwh": -3.483755506294983e-10,
+        "warm_water_periods": 7,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 30.9738969295021
+      }
+    },
+    {
+      "name": "random_witness_891",
+      "seconds": 2.359060308000153,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6067.249791517,
+        "gas_kwh": 112618.889711086,
+        "import_kwh": 2815.336890122,
+        "export_kwh": 992.008698291,
+        "engine_starts": 4,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 1.0772964742500335e-09,
+        "max_heat_residual_kw": 9.64064383879304e-10,
+        "max_cooling_residual_kw": 2.2737367544323206e-13,
+        "max_gas_residual_kwh": 8.581082511227578e-10,
+        "max_cost_residual_gbp": 5.398987923399545e-10,
+        "max_grid_kva": 1071.4487910848063,
+        "max_gas_standard_m3_per_hour": 550.0000000001098,
+        "min_tower_headroom_kw": 363.7014581473222,
+        "pv_curtailment_kwh": 49.770585273175286,
+        "warm_water_periods": 15,
+        "water_above_absorber_minimum_periods": 2,
+        "maximum_condenser_entering_c": 32.041176149777385
+      }
+    },
+    {
+      "name": "random_witness_2026",
+      "seconds": 2.3694770839993,
+      "valid": true,
+      "periods": 48,
+      "summary": {
+        "cost_gbp": 6385.195024262,
+        "gas_kwh": 117170.020984508,
+        "import_kwh": 3223.322435386,
+        "export_kwh": 433.350560235,
+        "engine_starts": 4,
+        "grid_ok": true
+      },
+      "metrics": {
+        "max_electricity_residual_kw": 9.181349014397711e-10,
+        "max_heat_residual_kw": 9.822542779147625e-10,
+        "max_cooling_residual_kw": 4.547473508864641e-13,
+        "max_gas_residual_kwh": 9.972609404940158e-10,
+        "max_cost_residual_gbp": 4.928608632326359e-10,
+        "max_grid_kva": 800.9854933900228,
+        "max_gas_standard_m3_per_hour": 550.0000000001069,
+        "min_tower_headroom_kw": 251.6554440122777,
+        "pv_curtailment_kwh": 3.4983216323780653e-10,
+        "warm_water_periods": 9,
+        "water_above_absorber_minimum_periods": 0,
+        "maximum_condenser_entering_c": 31.92663464218065
+      }
+    },
+    {
+      "name": "gas_capacity_infeasible",
+      "seconds": 0.9276286260001143,
+      "expected_infeasibility": true,
+      "diagnostic": "RuntimeError: no feasible loading at 00:00: plant, heat, cooling, gas or grid limits"
+    },
+    {
+      "name": "gas_entry_out",
+      "seconds": 0.7085302540008342,
+      "expected_infeasibility": true,
+      "diagnostic": "RuntimeError: no feasible loading at 00:00: plant, heat, cooling, gas or grid limits"
+    },
+    {
+      "name": "all_towers_out",
+      "seconds": 1.0527942560001975,
+      "expected_infeasibility": true,
+      "diagnostic": "RuntimeError: no feasible loading at 00:00: plant, heat, cooling, gas or grid limits"
+    },
+    {
+      "name": "reactive_unrecoverable",
+      "seconds": 0.6002214070003902,
+      "expected_infeasibility": true,
+      "diagnostic": "RuntimeError: no feasible loading at 00:00: plant, heat, cooling, gas or grid limits"
+    }
+  ],
+  "determinism": [
+    {
+      "name": "visible",
+      "byte_identical": true,
+      "seconds": 1.4602087169996594,
+      "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+    },
+    {
+      "name": "grid_circle",
+      "byte_identical": true,
+      "seconds": 0.5758952810001574,
+      "sha256": "3dd2bf0e63164deda018e0746e72c9b095c0cc29aa3b5f50a8c9acc184bfe33f"
+    },
+    {
+      "name": "warmer_water_export",
+      "byte_identical": true,
+      "seconds": 0.6615937249998751,
+      "sha256": "cbca7f30eaad27875fdea15ad2e1378fce72870860fc2627aa7924a741431870"
+    },
+    {
+      "name": "random_witness_307",
+      "byte_identical": true,
+      "seconds": 2.1145393019996845,
+      "sha256": "bba2f71d85873c56b379923e0d5472739be2b81e33ec8804e48f36f45b96c0ff"
+    },
+    {
+      "name": "random_witness_891",
+      "byte_identical": true,
+      "seconds": 2.364431007999883,
+      "sha256": "69c6c7fa16f54667951da53f3c08914d66440688164c19130a767d151636b20a"
+    }
+  ],
+  "analytic_grid_case": {
+    "GE2_kwe": 800,
+    "import_kw": 1172.51672343446,
+    "AC1_kw": 511.2982992324633,
+    "B1_kw": 795.1384496231876
+  },
+  "unchanged_source_data_sha256": {
+    "weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "supply.json": "8e5c83851deb07fcbcefb381cff39c32311dc4f1f5bb98ae1b72465140adb8a1",
+    "status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd"
+  },
+  "passed": 29,
+  "maximum_case_seconds": 2.7034645730000193
+}

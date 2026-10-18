@@ -1,0 +1,113 @@
+{
+  "blind": {
+    "app": "results/checks-v20/blind/c1/app",
+    "days": {
+      "h1": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 2: dispatch: unknown outage unit: EC1 condenser\n",
+          "execution_1": "RuntimeError: exit 2: dispatch: unknown outage unit: EC1 condenser\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 2,
+            "seconds": 0.48811877600019216
+          },
+          {
+            "returncode": 2,
+            "seconds": 0.5901715379995949
+          }
+        ]
+      },
+      "h2": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust\n",
+          "execution_1": "RuntimeError: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 2,
+            "seconds": 0.4604322180002782
+          },
+          {
+            "returncode": 2,
+            "seconds": 0.41641660799996316
+          }
+        ]
+      },
+      "h3": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 2: dispatch: unknown outage unit: AC1 absorber and condenser\n",
+          "execution_1": "RuntimeError: exit 2: dispatch: unknown outage unit: AC1 absorber and condenser\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 2,
+            "seconds": 0.4443760719996135
+          },
+          {
+            "returncode": 2,
+            "seconds": 0.7472478589997991
+          }
+        ]
+      },
+      "h4": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 2: dispatch: unknown outage unit: GE1 intercooler\n",
+          "execution_1": "RuntimeError: exit 2: dispatch: unknown outage unit: GE1 intercooler\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 2,
+            "seconds": 0.47584683600052813
+          },
+          {
+            "returncode": 2,
+            "seconds": 0.46654430300077365
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 5959.003279124663,
+        "delta_gbp": 9.094947017729282e-13,
+        "failures": {},
+        "milp_gbp": 5959.003279124662,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.3964623519996167,
+            "sha256": "fa53de5184888ff9b21176131f17fb5661a4d0b9cb8aad0ffe33c346accf473d"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.056292448000022,
+            "sha256": "fa53de5184888ff9b21176131f17fb5661a4d0b9cb8aad0ffe33c346accf473d"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+      "data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+      "data/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+      "data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+      "data/supply.json": "ffc8b1330d69b6839128cfcc2d2dcb893e748eeeaa4a5f11bba373df76ae7b71",
+      "data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+      "dispatch.py": "5e04b9633d8f66a626098b53877a5251c39c066f631984f3c3aad2b6a2857f20",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "b4004b99136a2cbc3712c3b288661174a04556c27e7d581230474336ed65cc65",
+      "planner/optimize.py": "5a9111809652430296480dea897d021f9035ec818d1e601c7249d61dca1ea6a3",
+      "planner/plant.py": "ec6d75f7eaa6bfa79c8fa77e9154fb2a2671dc996f19a413ffd3fc2c406862c3",
+      "planner/tariff.py": "aac007c43b7df31f1eee616cc5d2c9d8171bc34c909e2a65f5c07034ad5fec0b"
+    }
+  }
+}

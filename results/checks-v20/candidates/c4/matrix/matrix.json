@@ -1,0 +1,333 @@
+{
+  "oracle": {
+    "app": "results/checks-v20/candidates/c4/task/solution/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.647743955096,
+        "delta_gbp": 0.0002768520544123021,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.20907197500037,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.9149327609998181,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 9107.675997180833,
+        "delta_gbp": 0.0001009803672786802,
+        "failures": {},
+        "milp_gbp": 9107.675896200466,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.5308382499997606,
+            "sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5365353440001854,
+            "sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.3616978980003296,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.001588641000126,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.971820541148,
+        "delta_gbp": -1.9991884983028285e-05,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.9113094439999259,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.7686932839997098,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.9948860099998456,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.04874762999998,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+      "planner/optimize.py": "89154c25507514687599259734b7198b4d56cde225e309addf93b6cbbcf544ec",
+      "planner/plant.py": "fe12a7f73a161eadcc9bd32dd5fcc65bacb71ad95b50ff08c1cf07ccf5a72206",
+      "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+    }
+  },
+  "strong-v16-claude": {
+    "app": "results/v16-trials/ecd16-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.6573082883915,
+        "delta_gbp": 0.009841185349614534,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.7165761119999843,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.6201530159996764,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735705373085,
+        "delta_gbp": -227.94019082738123,
+        "failures": {
+          "test_phe_primary_water_flow": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 139, in test_phe_primary_water_flow\n    assert (flows[\"engine_heat\"] - flows[\"ac_heat\"] <= capacity + KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 9107.675896200466,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.6278165869998702,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.6474426589998075,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.8920654449998437,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.9533945890002542,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.983049960898,
+        "delta_gbp": 0.011209427864741883,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.9123261959998672,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5357007009997687,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.2768119840002328,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.3007163269999182,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+      "planner/optimize.py": "e1d50e78f3318398fe7ccf28468ee6ed4815576647d44995649f9fd0997db31a",
+      "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+      "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+    }
+  },
+  "strong-v19-claude": {
+    "app": "results/v19-trials/ecd19-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6420.842876285666,
+        "delta_gbp": -5.8045908173762655,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.496201406000182,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.249018592000084,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.737220223913,
+        "delta_gbp": -227.938675976553,
+        "failures": {
+          "test_phe_primary_water_flow": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 139, in test_phe_primary_water_flow\n    assert (flows[\"engine_heat\"] - flows[\"ac_heat\"] <= capacity + KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 9107.675896200466,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.0343899989998135,
+            "sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.9779456999999638,
+            "sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.5134969679997994,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.5036760250000043,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7296.098696319798,
+        "delta_gbp": -14.87314421323481,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.133448891000171,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.1329960930002017,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.2235204639996482,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.1384635809999963,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "e37c098f1c0604abec1d8d98dfab95c5e21fe88141e8eb0e222d1f1e9013f151",
+      "planner/optimize.py": "1fc08edbb14d249fb16dfe10cdc1082fb7c148b28d0529e62ffed95716ad6923",
+      "planner/plant.py": "1dfa72d3c71fd78202079559deea986e4265b226a2130956f65d3cfa63d8ecfc",
+      "planner/tariff.py": "f885a4a9982601918c8bd0be0814d9cac996e673f19c942d97c02322d1866a3b"
+    }
+  }
+}

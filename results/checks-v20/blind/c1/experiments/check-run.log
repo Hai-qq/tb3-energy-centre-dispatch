@@ -1,0 +1,55 @@
+visible: PASS, 1.963 s, independent global optimum verified
+saturday_east_utc: PASS, 3.935 s
+monday_east_utc: PASS, 0.680 s
+sunday_west_utc: PASS, 0.589 s
+far_east_utc: PASS, 0.821 s
+boiler_priority: PASS, 0.737 s
+no_arbitrage: PASS, 0.644 s
+pv_surplus: PASS, 0.583 s
+pv_inverter_cap: PASS, 0.578 s
+boiler_outages: PASS, 0.698 s
+chiller_outages: PASS, 0.709 s
+absorber_outage: PASS, 0.648 s
+tower_binding: PASS, 0.601 s
+grid_positive_q: PASS, 0.635 s
+grid_positive_q_initial_on: PASS, 0.541 s
+grid_negative_q: PASS, 0.529 s
+reactive_export: PASS, 0.550 s
+outage_overlap: PASS, 1.003 s
+cold_absorption_only: PASS, 0.713 s
+warm_frontier: PASS, 0.525 s
+startup_continuity: PASS, 0.644 s
+ge1_segments: PASS, 0.979 s
+ge2_segments: PASS, 0.744 s
+phe_outage: PASS, 0.687 s
+both_engines_forced: PASS, 0.680 s
+grid_corner_import: PASS, 0.582 s
+grid_corner_reactive: PASS, 0.531 s
+infeasible_heat_sink: PASS, 0.625 s
+infeasible_cooling_capacity: PASS, 0.533 s
+infeasible_towers: PASS, 0.638 s
+infeasible_boiler_capacity: PASS, 0.566 s
+infeasible_reactive_capacity: PASS, 0.549 s
+infeasible_just_above_connection: PASS, 0.651 s
+witness_710: PASS, 3.424 s, witness beaten by GBP 2272.885
+witness_711: PASS, 2.490 s, witness beaten by GBP 1849.197
+witness_712: PASS, 2.858 s, witness beaten by GBP 2094.226
+witness_713: PASS, 3.136 s, witness beaten by GBP 1683.787
+witness_714: PASS, 3.006 s, witness beaten by GBP 2193.764
+witness_715: PASS, 2.846 s, witness beaten by GBP 2039.937
+witness_716: PASS, 3.047 s, witness beaten by GBP 2164.707
+witness_717: PASS, 3.994 s, witness beaten by GBP 1683.680
+witness_718: PASS, 2.461 s, witness beaten by GBP 1583.136
+witness_719: PASS, 2.120 s, witness beaten by GBP 1996.756
+witness_720: PASS, 2.626 s, witness beaten by GBP 2271.577
+witness_721: PASS, 2.640 s, witness beaten by GBP 2029.796
+{
+  "passed": true,
+  "cases": 45,
+  "feasible_cases": 39,
+  "infeasible_cases": 6,
+  "maximum_cli_seconds": 3.9938761619996512,
+  "minimum_cli_seconds": 0.5251463529993998,
+  "global_oracle_comparisons": 8,
+  "global_infeasibility_proofs": 2
+}
