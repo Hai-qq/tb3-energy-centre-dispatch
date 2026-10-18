@@ -1,0 +1,60 @@
+{
+  "visible": {
+    "instruction.md": "2b85dfbc1ab92733ba9dd786d22eb8fbc7d7d72d4cd621b4c31d0df4be2390a8",
+    "environment/Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+    "environment/data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "environment/data/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "environment/data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "environment/data/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "environment/data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "environment/dispatch.py": "9fb16a25019bea5455352acab6c7916f0f1fa4a33c01f83ec648cda0fdacbcf0",
+    "environment/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "environment/planner/data.py": "6c48950527f82f5e5e6b8dc4b662c383319e1227728492a58ab7cfe17952264e",
+    "environment/planner/optimize.py": "1686479f21ebdc9f2bc9e9a1664f560ce669930ab60a44c7870f64235d46c8f3",
+    "environment/planner/plant.py": "a49f216f55379b441e5961f8e661ce928220cf94466be1787dc59f987cba9233",
+    "environment/planner/tariff.py": "5d7a65b7246aec55dfd42be887db20e04c7751ca3b2b6dbfcdccd6234c7906ca"
+  },
+  "v8.1": {
+    "instruction.md": "2b85dfbc1ab92733ba9dd786d22eb8fbc7d7d72d4cd621b4c31d0df4be2390a8",
+    "environment/Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+    "environment/data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "environment/data/plant.json": "52f3520419a826dca401f67d4c932a2cfd598180cfa68b040d440dd26279591a",
+    "environment/data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "environment/data/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "environment/data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "environment/dispatch.py": "9fb16a25019bea5455352acab6c7916f0f1fa4a33c01f83ec648cda0fdacbcf0",
+    "environment/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "environment/planner/data.py": "6c48950527f82f5e5e6b8dc4b662c383319e1227728492a58ab7cfe17952264e",
+    "environment/planner/optimize.py": "1686479f21ebdc9f2bc9e9a1664f560ce669930ab60a44c7870f64235d46c8f3",
+    "environment/planner/plant.py": "a49f216f55379b441e5961f8e661ce928220cf94466be1787dc59f987cba9233",
+    "environment/planner/tariff.py": "5d7a65b7246aec55dfd42be887db20e04c7751ca3b2b6dbfcdccd6234c7906ca"
+  },
+  "same": true,
+  "fixed_plant_supply": {
+    "visible/plant.json": true,
+    "visible/supply.json": true,
+    "h1/plant.json": true,
+    "h1/supply.json": true,
+    "h2/plant.json": true,
+    "h2/supply.json": true,
+    "h3/plant.json": true,
+    "h3/supply.json": true,
+    "h4/plant.json": true,
+    "h4/supply.json": true
+  },
+  "literal_byte_comparison": {
+    "instruction.md": true,
+    "environment/Dockerfile": true,
+    "environment/data/demand.csv": true,
+    "environment/data/plant.json": true,
+    "environment/data/status.json": true,
+    "environment/data/supply.json": true,
+    "environment/data/weather.csv": true,
+    "environment/dispatch.py": true,
+    "environment/planner/__init__.py": true,
+    "environment/planner/data.py": true,
+    "environment/planner/optimize.py": true,
+    "environment/planner/plant.py": true,
+    "environment/planner/tariff.py": true
+  }
+}

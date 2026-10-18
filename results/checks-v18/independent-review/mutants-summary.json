@@ -1,0 +1,3034 @@
+{
+  "before": {
+    "weather_by_utc_date": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1"
+        ],
+        "cooling_balance": [
+          "h1"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1"
+        ],
+        "least_cost": [
+          "visible",
+          "h1"
+        ],
+        "plan_covers_the_day": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1"
+        ],
+        "same_plan_every_time": [
+          "h1"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "weather_by_utc_date          CAUGHT  connection_limits:h1; cooling_balance:h1; cooling_towers:h1,h4; electricity_balance:visible,h1,h3,h4; heat_balance:h1; least_cost:visible,h1; plan_covers_the_day:h1; reported_gas_and_cost:h1; reported_import_export_and_grid_flags:h1; same_plan_every_time:h1; units_within_ratings_and_availability:h1  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-0.log"
+    },
+    "heat_can_be_dumped": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "heat_can_be_dumped           CAUGHT  heat_balance:visible,h1,h3,h4  ",
+      "log": "original/mutants-0.log"
+    },
+    "absorber_needs_cold_weather": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "absorber_needs_cold_weather  CAUGHT  connection_limits:h1,h2,h3,h4; cooling_balance:h1,h2,h3,h4; cooling_towers:h1,h2,h3,h4; electricity_balance:h1,h2,h3,h4; heat_balance:h1,h2,h3,h4; least_cost:h1,h2,h3,h4; plan_covers_the_day:h1,h2,h3,h4; reported_gas_and_cost:h1,h2,h3,h4; reported_import_export_and_grid_flags:h1,h2,h3,h4; same_plan_every_time:h1,h2,h3,h4; units_within_ratings_and_availability:h1,h2,h3,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-0.log"
+    },
+    "towers_absorber_only": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "towers_absorber_only         CAUGHT  cooling_towers:h1,h4  ",
+      "log": "original/mutants-0.log"
+    },
+    "no_lthw_loss": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "no_lthw_loss                 CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-0.log"
+    },
+    "lt_radiator_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "lt_radiator_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h3,h4  ",
+      "log": "original/mutants-0.log"
+    },
+    "condenser_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "condenser_outage_ignored     CAUGHT  units_within_ratings_and_availability:h1  ",
+      "log": "original/mutants-0.log"
+    },
+    "pv_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "pv_outage_ignored            CAUGHT  electricity_balance:h4  ",
+      "log": "original/mutants-0.log"
+    },
+    "absorber_cooling_water_ignored": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "absorber_cooling_water_ignored CAUGHT  electricity_balance:h1,h3,h4  ",
+      "log": "original/mutants-0.log"
+    },
+    "import_total_in_kw": {
+      "caught": true,
+      "failed": {
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "import_total_in_kw           CAUGHT  reported_import_export_and_grid_flags:visible,h1,h2,h3,h4  ",
+      "log": "original/mutants-0.log"
+    },
+    "hangs_after_writing": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+      "raw": "hangs_after_writing          CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+      "log": "original/mutants-0.log"
+    },
+    "two_point_curve": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h2"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "two_point_curve              CAUGHT  heat_balance:visible,h1,h2,h3,h4; least_cost:h2; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+      "log": "original/mutants-1.log"
+    },
+    "lt_heat_counted": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "lt_heat_counted              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h3,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-1.log"
+    },
+    "weekend_from_utc_start": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "weekend_from_utc_start       CAUGHT  least_cost:h1; reported_gas_and_cost:h1  ",
+      "log": "original/mutants-1.log"
+    },
+    "cop_at_dry_bulb": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "cop_at_dry_bulb              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:h1,h4; least_cost:visible,h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-1.log"
+    },
+    "outages_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_ignored              CAUGHT  units_within_ratings_and_availability:visible,h1,h2,h3,h4  ",
+      "log": "original/mutants-1.log"
+    },
+    "intercooler_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "intercooler_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h4  ",
+      "log": "original/mutants-1.log"
+    },
+    "absorption_chiller_parts_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "absorption_chiller_parts_ignored CAUGHT  units_within_ratings_and_availability:h3  ",
+      "log": "original/mutants-1.log"
+    },
+    "kva_positive_reactive_only": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "kva_positive_reactive_only   CAUGHT  connection_limits:h2  ",
+      "log": "original/mutants-1.log"
+    },
+    "header_not_shared": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "header_not_shared            CAUGHT  electricity_balance:h1,h3,h4  ",
+      "log": "original/mutants-1.log"
+    },
+    "grid_flag_without_generators": {
+      "caught": true,
+      "failed": {
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "grid_flag_without_generators CAUGHT  reported_import_export_and_grid_flags:h1,h2  ",
+      "log": "original/mutants-1.log"
+    },
+    "gas_net_to_gross_divided": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h2",
+          "h3"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "gas_net_to_gross_divided     CAUGHT  least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+      "log": "original/mutants-2.log"
+    },
+    "towers_take_cooling_only": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "towers_take_cooling_only     CAUGHT  cooling_towers:h1,h4  ",
+      "log": "original/mutants-2.log"
+    },
+    "kva_as_kw": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "kva_as_kw                    CAUGHT  connection_limits:h1,h2  ",
+      "log": "original/mutants-2.log"
+    },
+    "cewt_without_minimum": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h2",
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "cewt_without_minimum         CAUGHT  electricity_balance:h2,h3  ",
+      "log": "original/mutants-2.log"
+    },
+    "outage_by_period_start": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ],
+        "heat_balance": [
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outage_by_period_start       CAUGHT  electricity_balance:h4; heat_balance:h4; units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "original/mutants-2.log"
+    },
+    "ht_source_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "ht_source_outage_ignored     CAUGHT  units_within_ratings_and_availability:h2  ",
+      "log": "original/mutants-2.log"
+    },
+    "outages_engines_only": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_engines_only         CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "original/mutants-2.log"
+    },
+    "outages_one_per_unit": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_one_per_unit         CAUGHT  electricity_balance:h4; units_within_ratings_and_availability:h2  ",
+      "log": "original/mutants-2.log"
+    },
+    "midnight_state_ignored": {
+      "caught": true,
+      "failed": {
+        "reported_gas_and_cost": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "midnight_state_ignored       CAUGHT  reported_gas_and_cost:h1,h2  ",
+      "log": "original/mutants-2.log"
+    },
+    "plan_varies_between_runs": {
+      "caught": true,
+      "failed": {
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "plan_varies_between_runs     CAUGHT  same_plan_every_time:visible,h1,h2,h3,h4  ",
+      "log": "original/mutants-2.log"
+    },
+    "starts_not_in_decision": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "visible",
+          "h1",
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "starts_not_in_decision       CAUGHT  least_cost:visible,h1,h3  ",
+      "log": "original/mutants-3.log"
+    },
+    "kva_ignores_engines": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2"
+        ],
+        "least_cost": [
+          "h1",
+          "h2"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "kva_ignores_engines          CAUGHT  connection_limits:h1,h2; cooling_balance:h1,h2; cooling_towers:h1,h2; electricity_balance:h1,h2; heat_balance:h1,h2; least_cost:h1,h2; plan_covers_the_day:h1,h2; reported_gas_and_cost:h1,h2; reported_import_export_and_grid_flags:h1,h2; same_plan_every_time:h1,h2; units_within_ratings_and_availability:h1,h2  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-3.log"
+    },
+    "kva_engines_absorb_kvar": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "kva_engines_absorb_kvar      CAUGHT  connection_limits:h1,h2,h4; cooling_balance:h1,h2,h4; cooling_towers:h1,h2,h4; electricity_balance:h1,h2,h4; heat_balance:h1,h2,h4; least_cost:h1,h2,h4; plan_covers_the_day:h1,h2,h4; reported_gas_and_cost:h1,h2,h4; reported_import_export_and_grid_flags:h1,h2,h4; same_plan_every_time:h1,h2,h4; units_within_ratings_and_availability:h1,h2,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "original/mutants-3.log"
+    },
+    "no_engine_aux": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "no_engine_aux                CAUGHT  electricity_balance:visible,h1,h2,h3,h4  ",
+      "log": "original/mutants-3.log"
+    },
+    "phe1_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "phe1_outage_ignored          CAUGHT  heat_balance:h4  ",
+      "log": "original/mutants-3.log"
+    },
+    "ac_generator_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "ac_generator_outage_ignored  CAUGHT  units_within_ratings_and_availability:h3  ",
+      "log": "original/mutants-3.log"
+    },
+    "tower_cell_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "tower_cell_outage_ignored    CAUGHT  cooling_towers:h1  ",
+      "log": "original/mutants-3.log"
+    },
+    "outage_capacity_prorated": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outage_capacity_prorated     CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "original/mutants-3.log"
+    },
+    "saturday_is_weekday": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "saturday_is_weekday          CAUGHT  least_cost:h1; reported_gas_and_cost:h1  ",
+      "log": "original/mutants-3.log"
+    },
+    "exits_with_error_after_writing": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+      "raw": "exits_with_error_after_writing CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+      "log": "original/mutants-3.log"
+    }
+  },
+  "inference_off": {
+    "weather_by_utc_date": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1"
+        ],
+        "cooling_balance": [
+          "h1"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1"
+        ],
+        "least_cost": [
+          "visible",
+          "h1"
+        ],
+        "plan_covers_the_day": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1"
+        ],
+        "same_plan_every_time": [
+          "h1"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "weather_by_utc_date          CAUGHT  connection_limits:h1; cooling_balance:h1; cooling_towers:h1,h4; electricity_balance:visible,h1,h3,h4; heat_balance:h1; least_cost:visible,h1; plan_covers_the_day:h1; reported_gas_and_cost:h1; reported_import_export_and_grid_flags:h1; same_plan_every_time:h1; units_within_ratings_and_availability:h1  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-0.log"
+    },
+    "heat_can_be_dumped": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "heat_can_be_dumped           CAUGHT  heat_balance:visible,h1,h3,h4  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "absorber_needs_cold_weather": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "absorber_needs_cold_weather  CAUGHT  connection_limits:h1,h2,h3,h4; cooling_balance:h1,h2,h3,h4; cooling_towers:h1,h2,h3,h4; electricity_balance:h1,h2,h3,h4; heat_balance:h1,h2,h3,h4; least_cost:h1,h2,h3,h4; plan_covers_the_day:h1,h2,h3,h4; reported_gas_and_cost:h1,h2,h3,h4; reported_import_export_and_grid_flags:h1,h2,h3,h4; same_plan_every_time:h1,h2,h3,h4; units_within_ratings_and_availability:h1,h2,h3,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-0.log"
+    },
+    "towers_absorber_only": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "towers_absorber_only         CAUGHT  cooling_towers:h1,h4  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "no_lthw_loss": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "no_lthw_loss                 CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-0.log"
+    },
+    "lt_radiator_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "lt_radiator_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h3,h4  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "condenser_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "condenser_outage_ignored     CAUGHT  units_within_ratings_and_availability:h1  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "pv_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "pv_outage_ignored            CAUGHT  electricity_balance:h4  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "absorber_cooling_water_ignored": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "absorber_cooling_water_ignored CAUGHT  electricity_balance:h1,h3,h4  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "import_total_in_kw": {
+      "caught": true,
+      "failed": {
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "import_total_in_kw           CAUGHT  reported_import_export_and_grid_flags:visible,h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-0.log"
+    },
+    "hangs_after_writing": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+      "raw": "hangs_after_writing          CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+      "log": "no-inference/mutants-0.log"
+    },
+    "two_point_curve": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h2"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "two_point_curve              CAUGHT  heat_balance:visible,h1,h2,h3,h4; least_cost:h2; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "lt_heat_counted": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "lt_heat_counted              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h3,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-1.log"
+    },
+    "weekend_from_utc_start": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "weekend_from_utc_start       CAUGHT  least_cost:h1; reported_gas_and_cost:h1  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "cop_at_dry_bulb": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "cop_at_dry_bulb              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:h1,h4; least_cost:visible,h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-1.log"
+    },
+    "outages_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_ignored              CAUGHT  units_within_ratings_and_availability:visible,h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "intercooler_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "intercooler_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h4  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "absorption_chiller_parts_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "absorption_chiller_parts_ignored CAUGHT  units_within_ratings_and_availability:h3  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "kva_positive_reactive_only": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "kva_positive_reactive_only   CAUGHT  connection_limits:h2  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "header_not_shared": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "header_not_shared            CAUGHT  electricity_balance:h1,h3,h4  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "grid_flag_without_generators": {
+      "caught": true,
+      "failed": {
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "grid_flag_without_generators CAUGHT  reported_import_export_and_grid_flags:h1,h2  ",
+      "log": "no-inference/mutants-1.log"
+    },
+    "gas_net_to_gross_divided": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h2",
+          "h3"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "gas_net_to_gross_divided     CAUGHT  least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "towers_take_cooling_only": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "towers_take_cooling_only     CAUGHT  cooling_towers:h1,h4  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "kva_as_kw": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "kva_as_kw                    CAUGHT  connection_limits:h1,h2  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "cewt_without_minimum": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h2",
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "cewt_without_minimum         CAUGHT  electricity_balance:h2,h3  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "outage_by_period_start": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ],
+        "heat_balance": [
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outage_by_period_start       CAUGHT  electricity_balance:h4; heat_balance:h4; units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "ht_source_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "ht_source_outage_ignored     CAUGHT  units_within_ratings_and_availability:h2  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "outages_engines_only": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_engines_only         CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "outages_one_per_unit": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_one_per_unit         CAUGHT  electricity_balance:h4; units_within_ratings_and_availability:h2  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "midnight_state_ignored": {
+      "caught": true,
+      "failed": {
+        "reported_gas_and_cost": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "midnight_state_ignored       CAUGHT  reported_gas_and_cost:h1,h2  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "plan_varies_between_runs": {
+      "caught": true,
+      "failed": {
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "plan_varies_between_runs     CAUGHT  same_plan_every_time:visible,h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-2.log"
+    },
+    "starts_not_in_decision": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "visible",
+          "h1",
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "starts_not_in_decision       CAUGHT  least_cost:visible,h1,h3  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "kva_ignores_engines": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2"
+        ],
+        "least_cost": [
+          "h1",
+          "h2"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "kva_ignores_engines          CAUGHT  connection_limits:h1,h2; cooling_balance:h1,h2; cooling_towers:h1,h2; electricity_balance:h1,h2; heat_balance:h1,h2; least_cost:h1,h2; plan_covers_the_day:h1,h2; reported_gas_and_cost:h1,h2; reported_import_export_and_grid_flags:h1,h2; same_plan_every_time:h1,h2; units_within_ratings_and_availability:h1,h2  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-3.log"
+    },
+    "kva_engines_absorb_kvar": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "kva_engines_absorb_kvar      CAUGHT  connection_limits:h1,h2,h4; cooling_balance:h1,h2,h4; cooling_towers:h1,h2,h4; electricity_balance:h1,h2,h4; heat_balance:h1,h2,h4; least_cost:h1,h2,h4; plan_covers_the_day:h1,h2,h4; reported_gas_and_cost:h1,h2,h4; reported_import_export_and_grid_flags:h1,h2,h4; same_plan_every_time:h1,h2,h4; units_within_ratings_and_availability:h1,h2,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "no-inference/mutants-3.log"
+    },
+    "no_engine_aux": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "no_engine_aux                CAUGHT  electricity_balance:visible,h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "phe1_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "phe1_outage_ignored          CAUGHT  heat_balance:h4  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "ac_generator_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "ac_generator_outage_ignored  CAUGHT  units_within_ratings_and_availability:h3  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "tower_cell_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "tower_cell_outage_ignored    CAUGHT  cooling_towers:h1  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "outage_capacity_prorated": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outage_capacity_prorated     CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "saturday_is_weekday": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "saturday_is_weekday          CAUGHT  least_cost:h1; reported_gas_and_cost:h1  ",
+      "log": "no-inference/mutants-3.log"
+    },
+    "exits_with_error_after_writing": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+      "raw": "exits_with_error_after_writing CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+      "log": "no-inference/mutants-3.log"
+    }
+  },
+  "after": {
+    "weather_by_utc_date": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1"
+        ],
+        "cooling_balance": [
+          "h1"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1"
+        ],
+        "least_cost": [
+          "visible",
+          "h1"
+        ],
+        "plan_covers_the_day": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1"
+        ],
+        "same_plan_every_time": [
+          "h1"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "weather_by_utc_date          CAUGHT  connection_limits:h1; cooling_balance:h1; cooling_towers:h1,h4; electricity_balance:visible,h1,h3,h4; heat_balance:h1; least_cost:visible,h1; plan_covers_the_day:h1; reported_gas_and_cost:h1; reported_import_export_and_grid_flags:h1; same_plan_every_time:h1; units_within_ratings_and_availability:h1  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "two_point_curve": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h2"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "two_point_curve              CAUGHT  heat_balance:visible,h1,h2,h3,h4; least_cost:h2; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "gas_net_to_gross_divided": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h2",
+          "h3"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "gas_net_to_gross_divided     CAUGHT  least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "starts_not_in_decision": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "visible",
+          "h1",
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "starts_not_in_decision       CAUGHT  least_cost:visible,h1,h3  ",
+      "log": "after/mutants-all.log"
+    },
+    "heat_can_be_dumped": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "heat_can_be_dumped           CAUGHT  heat_balance:visible,h1,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "lt_heat_counted": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "lt_heat_counted              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h3,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "towers_take_cooling_only": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "towers_take_cooling_only     CAUGHT  cooling_towers:h1,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "kva_ignores_engines": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2"
+        ],
+        "least_cost": [
+          "h1",
+          "h2"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "kva_ignores_engines          CAUGHT  connection_limits:h1,h2; cooling_balance:h1,h2; cooling_towers:h1,h2; electricity_balance:h1,h2; heat_balance:h1,h2; least_cost:h1,h2; plan_covers_the_day:h1,h2; reported_gas_and_cost:h1,h2; reported_import_export_and_grid_flags:h1,h2; same_plan_every_time:h1,h2; units_within_ratings_and_availability:h1,h2  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "absorber_needs_cold_weather": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "absorber_needs_cold_weather  CAUGHT  connection_limits:h1,h2,h3,h4; cooling_balance:h1,h2,h3,h4; cooling_towers:h1,h2,h3,h4; electricity_balance:h1,h2,h3,h4; heat_balance:h1,h2,h3,h4; least_cost:h1,h2,h3,h4; plan_covers_the_day:h1,h2,h3,h4; reported_gas_and_cost:h1,h2,h3,h4; reported_import_export_and_grid_flags:h1,h2,h3,h4; same_plan_every_time:h1,h2,h3,h4; units_within_ratings_and_availability:h1,h2,h3,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "weekend_from_utc_start": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "weekend_from_utc_start       CAUGHT  least_cost:h1; reported_gas_and_cost:h1  ",
+      "log": "after/mutants-all.log"
+    },
+    "kva_as_kw": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "kva_as_kw                    CAUGHT  connection_limits:h1,h2  ",
+      "log": "after/mutants-all.log"
+    },
+    "kva_engines_absorb_kvar": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "kva_engines_absorb_kvar      CAUGHT  connection_limits:h1,h2,h4; cooling_balance:h1,h2,h4; cooling_towers:h1,h2,h4; electricity_balance:h1,h2,h4; heat_balance:h1,h2,h4; least_cost:h1,h2,h4; plan_covers_the_day:h1,h2,h4; reported_gas_and_cost:h1,h2,h4; reported_import_export_and_grid_flags:h1,h2,h4; same_plan_every_time:h1,h2,h4; units_within_ratings_and_availability:h1,h2,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "towers_absorber_only": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "towers_absorber_only         CAUGHT  cooling_towers:h1,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "cop_at_dry_bulb": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "h1",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "cop_at_dry_bulb              CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:h1,h4; least_cost:visible,h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "cewt_without_minimum": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h2",
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "cewt_without_minimum         CAUGHT  electricity_balance:h2,h3  ",
+      "log": "after/mutants-all.log"
+    },
+    "no_engine_aux": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "no_engine_aux                CAUGHT  electricity_balance:visible,h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "no_lthw_loss": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h1",
+          "h4"
+        ],
+        "cooling_balance": [
+          "h1",
+          "h4"
+        ],
+        "cooling_towers": [
+          "h1",
+          "h4"
+        ],
+        "electricity_balance": [
+          "h1",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "h1",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "h1",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "h1",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "h1",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h4"
+        ]
+      },
+      "errors": "h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "raw": "no_lthw_loss                 CAUGHT  connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+      "log": "after/mutants-all.log"
+    },
+    "outages_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_ignored              CAUGHT  units_within_ratings_and_availability:visible,h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "outage_by_period_start": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ],
+        "heat_balance": [
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outage_by_period_start       CAUGHT  electricity_balance:h4; heat_balance:h4; units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "phe1_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "heat_balance": [
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "phe1_outage_ignored          CAUGHT  heat_balance:h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "lt_radiator_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "lt_radiator_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "intercooler_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "intercooler_outage_ignored   CAUGHT  units_within_ratings_and_availability:h2,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "ht_source_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "ht_source_outage_ignored     CAUGHT  units_within_ratings_and_availability:h2  ",
+      "log": "after/mutants-all.log"
+    },
+    "ac_generator_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "ac_generator_outage_ignored  CAUGHT  units_within_ratings_and_availability:h3  ",
+      "log": "after/mutants-all.log"
+    },
+    "condenser_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "condenser_outage_ignored     CAUGHT  units_within_ratings_and_availability:h1  ",
+      "log": "after/mutants-all.log"
+    },
+    "absorption_chiller_parts_ignored": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "errors": "",
+      "raw": "absorption_chiller_parts_ignored CAUGHT  units_within_ratings_and_availability:h3  ",
+      "log": "after/mutants-all.log"
+    },
+    "outages_engines_only": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_engines_only         CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "tower_cell_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "cooling_towers": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "tower_cell_outage_ignored    CAUGHT  cooling_towers:h1  ",
+      "log": "after/mutants-all.log"
+    },
+    "pv_outage_ignored": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "pv_outage_ignored            CAUGHT  electricity_balance:h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "kva_positive_reactive_only": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "kva_positive_reactive_only   CAUGHT  connection_limits:h2  ",
+      "log": "after/mutants-all.log"
+    },
+    "outages_one_per_unit": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "outages_one_per_unit         CAUGHT  electricity_balance:h4; units_within_ratings_and_availability:h2  ",
+      "log": "after/mutants-all.log"
+    },
+    "outage_capacity_prorated": {
+      "caught": true,
+      "failed": {
+        "units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "outage_capacity_prorated     CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "absorber_cooling_water_ignored": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "absorber_cooling_water_ignored CAUGHT  electricity_balance:h1,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "header_not_shared": {
+      "caught": true,
+      "failed": {
+        "electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "header_not_shared            CAUGHT  electricity_balance:h1,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "midnight_state_ignored": {
+      "caught": true,
+      "failed": {
+        "reported_gas_and_cost": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "midnight_state_ignored       CAUGHT  reported_gas_and_cost:h1,h2  ",
+      "log": "after/mutants-all.log"
+    },
+    "saturday_is_weekday": {
+      "caught": true,
+      "failed": {
+        "least_cost": [
+          "h1"
+        ],
+        "reported_gas_and_cost": [
+          "h1"
+        ]
+      },
+      "errors": "",
+      "raw": "saturday_is_weekday          CAUGHT  least_cost:h1; reported_gas_and_cost:h1  ",
+      "log": "after/mutants-all.log"
+    },
+    "import_total_in_kw": {
+      "caught": true,
+      "failed": {
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "import_total_in_kw           CAUGHT  reported_import_export_and_grid_flags:visible,h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "grid_flag_without_generators": {
+      "caught": true,
+      "failed": {
+        "reported_import_export_and_grid_flags": [
+          "h1",
+          "h2"
+        ]
+      },
+      "errors": "",
+      "raw": "grid_flag_without_generators CAUGHT  reported_import_export_and_grid_flags:h1,h2  ",
+      "log": "after/mutants-all.log"
+    },
+    "plan_varies_between_runs": {
+      "caught": true,
+      "failed": {
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "",
+      "raw": "plan_varies_between_runs     CAUGHT  same_plan_every_time:visible,h1,h2,h3,h4  ",
+      "log": "after/mutants-all.log"
+    },
+    "exits_with_error_after_writing": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+      "raw": "exits_with_error_after_writing CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+      "log": "after/mutants-all.log"
+    },
+    "hangs_after_writing": {
+      "caught": true,
+      "failed": {
+        "connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "errors": "visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+      "raw": "hangs_after_writing          CAUGHT  connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+      "log": "after/mutants-all.log"
+    }
+  },
+  "caught_counts": {
+    "before": 41,
+    "inference_off": 41,
+    "after": 41
+  },
+  "total_counts": {
+    "before": 41,
+    "inference_off": 41,
+    "after": 41
+  },
+  "reduced_with_inference": {},
+  "all_inference_differences": {},
+  "GPT_Pro_failure_matrix_differences": {},
+  "threshold_failure_matrix_differences": {}
+}

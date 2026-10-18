@@ -1,7 +1,7 @@
 # Hardening `energy-centre-dispatch` after the reviewer's runs (v9 to v12)
 
 Written on 2026-10-15 for an outside review of where the task stands and what to do next.
-This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v17; see the last rounds below),
+This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v18; see the last rounds below),
 `archive/` keeps every version, `results/` the checks and trials. `main` is unchanged at
 `1f92378`, the delivered v8.1.
 
@@ -170,19 +170,106 @@ What this round shows:
   auxiliary power in the towers' load; a PV outage over part of a half-hour). Both are in the
   delivered v8.1 too.
 
+## v18: an outside audit, no new trap, one more round of trials (2026-10-17)
+
+v17's 0 of 6 may be luck: the agent sees v17 exactly as it saw v8.1, on which the reviewer's
+Opus runs passed twice in three, and `results/v16-trials/ecd16-run2-claude/app` passes every test
+of v17. An outside agent (GPT Pro, working in the repository from a brief) was asked to audit
+v17's fairness, estimate the pass rates and make the failures stable by changing only the hidden
+days, the verifier and the solution. Its work is on the branch `v18-gptpro` (draft PR #1) under
+`results/checks-v18/`; we re-ran its checks independently (`results/checks-v18/independent-review/`)
+and found the same results.
+
+What v18 keeps from it:
+
+- Verifier defects, none of which a trial had hit: the reference raised `KeyError` on
+  `GE1 jacket water and exhaust` and `GE2 jacket water and exhaust`, which `plant.json` lists; it
+  counted overlapping PV outages twice; it rejected a plan that holds the condenser water warmer
+  than the coldest it can be (the plan's own electricity balance now gives what the electric
+  chillers draw, accepted anywhere between their power at the coldest water and at the warm end
+  of their COP tables); and v17's solution was GBP 5.81 and 14.88 below the MILP on h1 and h4,
+  not within GBP 0.001 as we had written (it left the absorption chiller's auxiliary heat out of
+  the towers' load; the cost test passes either reading). v18's solution takes the MILP's
+  reading and is within GBP 0.0003 of it on all five days.
+- Hidden days: outages of GE2's jacket water and exhaust heat recovery (h2) and of AC1's
+  generator (h3), a less contrived negative net reactive power at the connection (h2), and
+  overlapping PV outages (h4).
+- One change of ours: the reference took any absorption chiller output above 1e-9 kW as running,
+  so solver noise in a plan written at full precision (the patched v17 Codex tool writes nine
+  decimals) would have held the header at 22 °C and failed the electricity balance; the
+  threshold is now 0.01 kW.
+
+What it did not find is a fair change to the hidden days that the three strongest tools fail
+(v16 run 2's, and v17 run 2's two tools given only the outages of parts). Its differential test
+drew 480 days, 375 of them valid and feasible (every season, every unit and part name, the four
+midnight states, outages of 1 to 240 minutes, several and overlapping); the three tools passed
+every check on every feasible day, and the cost test on the 130 it solved the MILP for. The
+reason is structural: the tool an agent writes depends only on what it sees, and the hidden days
+already catch every known misreading of the header and of the parts, so changing them cannot
+lower the chance that a run gets both right. The two candidates that do beat the strongest tools
+are not fair:
+
+- Holding the condenser water warmer so that the electric chillers take up power the export
+  limit refuses, which saves an engine restart. It pays only when the site's own demand falls
+  below about 700 kW with both engines at minimum load and no PV, against a night load of about
+  1,250 kW on the visible day, and the patched v17 Codex tool already does it.
+- Engines stopped when their LT radiators face air at 40 °C or more, which the UK has reached
+  once (July 2022), and the data does not say whether an engine then trips or derates.
+
+GPT Pro put the single-run pass rates at about 20% for Opus and 10% for GPT (judgement, not a
+measurement), which makes 6 failures in 6 trials about 37% likely. From the replays alone
+(Opus 1 pass in 9 runs, GPT 0 in 6) up to counting the reviewer's two v8.1 passes in, we put it
+between 30% and 60%. We stopped hardening the task and ran one more round of
+standard trials on v18 before handing it to the reviewer, mainly to see whether CI's trajectory
+review finds the new outages specified.
+
+| check on v18 (task hash `8324adf5196e9d13`) | result |
+|---|---|
+| the agent's files (`instruction.md`, `environment/`) | v8.1's byte for byte |
+| solution | 55 of 55; within GBP 0.0003 of the MILP on all five days; 48 fresh days (seeds 2026, 2403, 87123) pass |
+| mutants | 41 of 41 caught (10 planted bugs, 26 half-fixes, 3 reporting and 2 execution faults) |
+| the three strongest tools | 55 of 55 each, on v17 and on v18 |
+| v17's six trial deliverables | all fail: Opus runs 1 to 3 pass 11, 51 and 37 of 55, GPT runs 11, 51 and 11 |
+| Harbor with Docker | oracle reward 1 (55 passed), nop reward 0 |
+| static checks (Terminal-Bench `2e29ca9`) | 28 of 28 pass |
+| implementation rubric review (claude-code + Sonnet 5, CI's prompt) | 35 of 35 pass |
+
+The round: Opus 0 of 3 and GPT 0 of 3 again, each trial on the header, the parts or both
+(deliverables and verifier output in `results/v18-trials/`):
+
+| trial | agent time | header | outages of parts | verifier |
+|---|---|---|---|---|
+| `ecd18-run1-claude` | 39 min | held at 22 °C only in a half-hour that is otherwise infeasible | applied to units only | 4 failed: availability on h1, h2 and h4, least cost on h3 (GBP 1,232 over) |
+| `ecd18-run2-claude` | 88 min | the same, left to the operators | right | 2 failed: least cost on h3 and on h2 (GBP 15 over: at 23:30 it keeps AC1 off) |
+| `ecd18-run3-claude` | 89 min | right | LT radiators only; the other parts' names ignored as unknown units | 4 failed: availability on h1 to h4 |
+| `ecd18-run1-codex` | 10 min | right | LT radiators only | 4 failed: availability on h1 to h4 |
+| `ecd18-run2-codex` | 12 min | kept the lock-out | LT radiators only | no plan for any hidden day ("no feasible loading at 00:00"): 4 failed, 40 errors |
+| `ecd18-run3-codex` | 9 min | right | LT radiators only | 4 failed: availability on h1 to h4 |
+
+CI's trajectory review (`results/analysis-v18/`): `task_specification`, `reward_hacking`,
+`difficulty_crux`, `refusals` and `low_timeout` pass in all six. `near_miss` is flagged for the
+three trials that passed 51 of 55 tests and missed only the outages of parts (`ecd18-run3-claude`,
+`ecd18-run1-codex`, `ecd18-run3-codex`); in v17 it was flagged for one. The flag is about the
+margin, not about a threshold: each of the three missed a whole class of outages. It does say
+what the table shows, that most trials are one judgement from passing: `ecd18-run2-claude` got
+every part right and failed only because it kept the header rule.
+
 ## Where to look
 
 1. `README.md`: the delivered task, its evidence and the full history ("How the task came
    about"; items 25 and 26 for v9 and v10, 27 and 28 for v11 and v12).
-2. `tasks/energy-centre-dispatch/`: v17 as it stands (instruction, data, shipped tool,
+2. `tasks/energy-centre-dispatch/`: v18 as it stands (instruction, data, shipped tool,
    solution, tests); `git diff 1f92378 -- tasks/` shows what it changes from v8.1, all of it in
-   `tests/` and `solution/`.
+   `tests/`, `solution/` and the task's `README.md`.
 3. `results/official-v10.md`, `official-v11.md`, `official-v12.md`: what each trial's tool does
    on each day, and each agent's closing message (the clearest view of how Opus reasons).
 4. `results/checks-v11/README.md` and `results/checks-v12/README.md`: the checks, and what the
    setpoint rules (v11) and the silent header (v12) cost per day.
-5. `archive/energy-centre-dispatch-v9/` to `-v17/`: every version's task files and build script;
+5. `archive/energy-centre-dispatch-v9/` to `-v18/`: every version's task files and build script;
    `archive/energy-centre-dispatch-v11-tools/` has the tower model behind v11's tables.
-6. `results/v9-trials/` to `v17-trials/` and `v8-rerun-trials/`: the deliverables and verifier
+6. `results/v9-trials/` to `v18-trials/` and `v8-rerun-trials/`: the deliverables and verifier
    output; `results/checks-v13/README.md`: the conventions' sources and what each wrong reading costs.
 7. `prototypes/`: the three falsification tests, each with its README.
+8. `results/checks-v18/`: GPT Pro's audit of v17 and its v18 evidence (`README.md`,
+   `ANALYSIS.md`, the differential test in `fuzz/`), and `independent-review/`, our re-run of its
+   checks.

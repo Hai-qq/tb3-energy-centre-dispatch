@@ -1,0 +1,1456 @@
+diff --git a/tasks/energy-centre-dispatch/solution/app/planner/optimize.py b/tasks/energy-centre-dispatch/solution/app/planner/optimize.py
+index 2458d2a..be699b1 100644
+--- a/tasks/energy-centre-dispatch/solution/app/planner/optimize.py
++++ b/tasks/energy-centre-dispatch/solution/app/planner/optimize.py
+@@ -41,10 +41,9 @@ def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
+ 
+ 
+ def _engine_can_run(day: DayData, plant: Plant, engine, hhmm: str) -> bool:
+-    """An engine runs only with its intercooler and its LT radiator, the only way out for its
+-    intercooler heat."""
++    """An engine needs its jacket-water/exhaust assembly, intercooler and LT radiator."""
+     return all(_available(day, item, hhmm)
+-               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator"))
++               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))
+ 
+ 
+ # the parts of a chiller that it cannot run without: its condenser, and the absorption chiller's generator
+@@ -132,12 +131,12 @@ def _period(day: DayData, plant: Plant, tariff: Tariff, t: int, seg: tuple, abso
+     row[iA:iA + nA] = 1.0
+     A_eq.append(row)
+     b_eq.append(day.cool[t])
+-    # cooling towers: the chillers' cooling plus compressor work, the absorbers' cooling plus driving heat
++    # Match the reference MILP's stricter accepted auxiliary-heat convention.
+     row = np.zeros(n)
+     for j, ch in enumerate(chillers):
+         row[iE + j] = ch.rejected(1.0, cewt)
+     for j, a in enumerate(absorbers):
+-        row[iA + j] = a.rejected(1.0)
++        row[iA + j] = a.rejected(1.0) + a.aux_per_kw
+     A_ub.append(row)
+     cells = sum(_available(day, cell, day.starts[t]) for cell in plant.tower_cells)
+     b_ub.append(plant.tower_capacity(day.wet_bulb[t], cells))
+diff --git a/tasks/energy-centre-dispatch/tests/days/h2/demand.csv b/tasks/energy-centre-dispatch/tests/days/h2/demand.csv
+index 456a87b..77b56d4 100644
+--- a/tasks/energy-centre-dispatch/tests/days/h2/demand.csv
++++ b/tasks/energy-centre-dispatch/tests/days/h2/demand.csv
+@@ -1,49 +1,49 @@
+ period_start,electricity_kw,reactive_kvar,heat_kw,cooling_kw
+-2026-01-14T00:00+00:00,2350.0,50.0,1800.0,0.0
+-2026-01-14T00:30+00:00,1284.8,213.6,2232.1,189.6
+-2026-01-14T01:00+00:00,1304.1,216.6,2230.6,196.6
+-2026-01-14T01:30+00:00,1285.0,220.4,2284.3,202.8
+-2026-01-14T02:00+00:00,1272.2,222.7,2275.2,197.0
+-2026-01-14T02:30+00:00,1301.0,225.5,2361.3,207.7
+-2026-01-14T03:00+00:00,1304.3,227.9,2372.3,203.2
+-2026-01-14T03:30+00:00,1284.5,217.1,2379.6,209.6
+-2026-01-14T04:00+00:00,1277.8,210.6,2439.7,208.9
+-2026-01-14T04:30+00:00,1293.3,223.2,2697.4,220.0
+-2026-01-14T05:00+00:00,1317.1,227.1,2892.5,211.5
+-2026-01-14T05:30+00:00,1382.6,235.5,2990.8,214.8
+-2026-01-14T06:00+00:00,1444.2,243.5,3161.0,222.7
+-2026-01-14T06:30+00:00,1508.1,251.0,3204.5,220.2
+-2026-01-14T07:00+00:00,1594.0,274.3,3217.8,220.5
+-2026-01-14T07:30+00:00,1729.5,304.2,3259.5,231.8
+-2026-01-14T08:00+00:00,1779.0,310.6,3188.3,236.3
+-2026-01-14T08:30+00:00,1909.2,334.1,3110.2,234.8
+-2026-01-14T09:00+00:00,1976.0,345.4,3147.9,235.7
+-2026-01-14T09:30+00:00,1952.6,344.5,3047.4,238.7
+-2026-01-14T10:00+00:00,1972.8,338.5,2964.1,243.7
+-2026-01-14T10:30+00:00,1978.1,342.4,2857.2,249.9
+-2026-01-14T11:00+00:00,1970.6,339.9,2756.4,250.8
+-2026-01-14T11:30+00:00,1963.6,337.6,2726.2,253.3
+-2026-01-14T12:00+00:00,1997.1,337.9,2760.3,256.7
+-2026-01-14T12:30+00:00,1991.8,352.1,2667.5,260.0
+-2026-01-14T13:00+00:00,1985.9,340.2,2683.3,264.8
+-2026-01-14T13:30+00:00,1990.7,347.5,2692.0,263.4
+-2026-01-14T14:00+00:00,1993.7,351.7,2651.6,262.4
+-2026-01-14T14:30+00:00,2032.3,339.9,2655.3,262.1
+-2026-01-14T15:00+00:00,2010.1,348.2,2675.2,262.8
+-2026-01-14T15:30+00:00,2031.4,338.7,2755.1,258.8
+-2026-01-14T16:00+00:00,2050.4,342.6,2751.0,246.7
+-2026-01-14T16:30+00:00,2016.9,340.1,2799.7,240.6
+-2026-01-14T17:00+00:00,1999.9,326.5,2919.5,246.0
+-2026-01-14T17:30+00:00,2031.6,346.9,2870.7,241.2
+-2026-01-14T18:00+00:00,1970.1,325.2,2892.2,237.1
+-2026-01-14T18:30+00:00,1940.9,322.5,2820.3,238.5
+-2026-01-14T19:00+00:00,1849.0,305.0,2826.8,223.6
+-2026-01-14T19:30+00:00,1792.5,316.7,2794.4,231.1
+-2026-01-14T20:00+00:00,1716.2,298.8,2768.3,217.1
+-2026-01-14T20:30+00:00,1671.1,275.6,2785.0,218.6
+-2026-01-14T21:00+00:00,1594.7,263.5,2622.3,218.7
+-2026-01-14T21:30+00:00,1555.3,270.8,2567.6,208.0
+-2026-01-14T22:00+00:00,1480.9,260.5,2545.4,208.1
+-2026-01-14T22:30+00:00,1432.1,244.9,2499.0,201.3
+-2026-01-14T23:00+00:00,1380.0,227.4,2410.6,202.2
+-2026-01-14T23:30+00:00,1310.6,223.4,2292.1,196.1
++2026-01-14T00:00+00:00,2362.8,242.9,1820.0,192.1
++2026-01-14T00:30+00:00,2357.6,230.6,1770.9,186.0
++2026-01-14T01:00+00:00,2238.1,218.7,1821.2,190.4
++2026-01-14T01:30+00:00,1895.7,191.2,1979.3,193.8
++2026-01-14T02:00+00:00,1613.6,166.2,2071.8,187.6
++2026-01-14T02:30+00:00,1425.6,145.4,2240.4,198.8
++2026-01-14T03:00+00:00,1315.0,135.2,2315.1,195.4
++2026-01-14T03:30+00:00,1292.0,128.5,2360.6,202.4
++2026-01-14T04:00+00:00,1282.3,124.3,2439.7,202.7
++2026-01-14T04:30+00:00,1294.8,131.5,2697.4,214.4
++2026-01-14T05:00+00:00,1317.1,133.6,2892.5,207.0
++2026-01-14T05:30+00:00,1382.6,138.5,2990.8,211.2
++2026-01-14T06:00+00:00,1444.2,143.2,3161.0,219.7
++2026-01-14T06:30+00:00,1508.1,147.6,3204.5,218.1
++2026-01-14T07:00+00:00,1594.0,161.3,3217.8,219.2
++2026-01-14T07:30+00:00,1729.5,178.9,3259.5,231.3
++2026-01-14T08:00+00:00,1779.0,182.7,3188.3,236.3
++2026-01-14T08:30+00:00,1909.2,196.5,3110.2,234.8
++2026-01-14T09:00+00:00,1976.0,203.2,3147.9,235.7
++2026-01-14T09:30+00:00,1952.6,202.6,3047.4,238.7
++2026-01-14T10:00+00:00,1972.8,199.1,2964.1,243.7
++2026-01-14T10:30+00:00,1978.1,201.4,2857.2,249.9
++2026-01-14T11:00+00:00,1970.6,200.0,2756.4,250.8
++2026-01-14T11:30+00:00,1963.6,198.6,2726.2,253.3
++2026-01-14T12:00+00:00,1997.1,198.7,2760.3,256.7
++2026-01-14T12:30+00:00,1991.8,207.1,2667.5,260.0
++2026-01-14T13:00+00:00,1985.9,200.1,2683.3,264.8
++2026-01-14T13:30+00:00,1990.7,204.4,2692.0,263.4
++2026-01-14T14:00+00:00,1993.7,206.9,2651.6,262.4
++2026-01-14T14:30+00:00,2032.3,199.9,2655.3,262.1
++2026-01-14T15:00+00:00,2010.1,204.8,2675.2,262.8
++2026-01-14T15:30+00:00,2031.4,199.2,2755.1,258.8
++2026-01-14T16:00+00:00,2050.4,201.6,2751.0,246.7
++2026-01-14T16:30+00:00,2016.9,200.0,2799.7,240.6
++2026-01-14T17:00+00:00,1999.9,192.1,2919.5,246.0
++2026-01-14T17:30+00:00,2031.6,204.0,2870.7,241.2
++2026-01-14T18:00+00:00,1970.1,191.3,2892.2,237.1
++2026-01-14T18:30+00:00,1940.9,189.7,2820.3,238.5
++2026-01-14T19:00+00:00,1849.0,179.4,2826.8,223.6
++2026-01-14T19:30+00:00,1792.5,186.3,2794.4,231.1
++2026-01-14T20:00+00:00,1716.2,175.8,2768.3,217.1
++2026-01-14T20:30+00:00,1671.1,162.1,2785.0,218.6
++2026-01-14T21:00+00:00,1594.7,155.0,2622.3,218.7
++2026-01-14T21:30+00:00,1555.3,159.3,2567.6,208.0
++2026-01-14T22:00+00:00,1480.9,153.2,2545.4,208.1
++2026-01-14T22:30+00:00,1432.1,144.0,2499.0,201.3
++2026-01-14T23:00+00:00,1651.0,160.0,2295.9,202.2
++2026-01-14T23:30+00:00,2111.8,211.7,1954.0,196.1
+diff --git a/tasks/energy-centre-dispatch/tests/days/h2/status.json b/tasks/energy-centre-dispatch/tests/days/h2/status.json
+index 0ad2d9c..4f066bf 100644
+--- a/tasks/energy-centre-dispatch/tests/days/h2/status.json
++++ b/tasks/energy-centre-dispatch/tests/days/h2/status.json
+@@ -6,7 +6,7 @@
+   "outages": [
+     {
+       "unit": "GE2",
+-      "from": "00:30",
++      "from": "00:00",
+       "to": "03:00"
+     },
+     {
+@@ -24,6 +24,11 @@
+       "from": "19:10",
+       "to": "19:20"
+     },
++    {
++      "unit": "GE2 jacket water and exhaust",
++      "from": "18:20",
++      "to": "18:40"
++    },
+     {
+       "unit": "B1",
+       "from": "06:10",
+@@ -42,7 +47,7 @@
+     {
+       "unit": "GE1 LT radiator",
+       "from": "21:10",
+-      "to": "23:50"
++      "to": "23:00"
+     }
+   ]
+ }
+diff --git a/tasks/energy-centre-dispatch/tests/days/h3/status.json b/tasks/energy-centre-dispatch/tests/days/h3/status.json
+index 88190db..f182136 100644
+--- a/tasks/energy-centre-dispatch/tests/days/h3/status.json
++++ b/tasks/energy-centre-dispatch/tests/days/h3/status.json
+@@ -12,6 +12,11 @@
+       "from": "10:40",
+       "to": "14:20"
+     },
++    {
++      "unit": "AC1 generator",
++      "from": "12:40",
++      "to": "12:50"
++    },
+     {
+       "unit": "EC1",
+       "from": "13:40",
+diff --git a/tasks/energy-centre-dispatch/tests/days/h4/status.json b/tasks/energy-centre-dispatch/tests/days/h4/status.json
+index 2d3f580..a003c33 100644
+--- a/tasks/energy-centre-dispatch/tests/days/h4/status.json
++++ b/tasks/energy-centre-dispatch/tests/days/h4/status.json
+@@ -24,6 +24,11 @@
+       "from": "16:20",
+       "to": "18:40"
+     },
++    {
++      "unit": "PV1",
++      "from": "16:25",
++      "to": "17:10"
++    },
+     {
+       "unit": "GE1 intercooler",
+       "from": "03:50",
+diff --git a/tasks/energy-centre-dispatch/tests/reference.py b/tasks/energy-centre-dispatch/tests/reference.py
+index fba81df..4898089 100644
+--- a/tasks/energy-centre-dispatch/tests/reference.py
++++ b/tasks/energy-centre-dispatch/tests/reference.py
+@@ -3,8 +3,9 @@
+ 
+ `Day` reads one day's data folder. `true_flows` recomputes what a plan really does
+ (fuel, heat, electricity, heat rejection, apparent power, cost) from its unit
+-outputs, and `least_cost` solves the whole day as one mixed-integer program to find
+-the cheapest possible plan.
++outputs. `least_cost` solves the whole day as one mixed-integer program under the
++coldest useful header / strict auxiliary-heat convention. Its optimum is the
++conservative cost bound shared by the accepted physical interpretations below.
+ """
+ 
+ from __future__ import annotations
+@@ -97,7 +98,8 @@ class Day:
+                  for u in self.plant[key]]
+         units += ["PHE1"] + list(towers["cells"]) + [self.plant["pv"]["id"]]
+         # the parts of the heat circuits named in plant.json that maintenance can take out
+-        units += [f"{e['id']} {part}" for e in self.engines for part in ("intercooler", "LT radiator")]
++        units += [f"{e['id']} {part}" for e in self.engines
++                  for part in ("intercooler", "LT radiator", "jacket water and exhaust")]
+         units += [f"{c['id']} condenser" for c in self.plant["electric_chillers"]]
+         units += [f"{a['id']} {part}" for a in self.plant["absorption_chillers"]
+                   for part in ("generator", "absorber and condenser")]
+@@ -111,6 +113,7 @@ class Day:
+         for e in self.engines:
+             self.available[e["id"]] &= self.available[f"{e['id']} intercooler"]
+             self.available[e["id"]] &= self.available[f"{e['id']} LT radiator"]
++            self.available[e["id"]] &= self.available[f"{e['id']} jacket water and exhaust"]
+         for c in self.plant["electric_chillers"]:
+             self.available[c["id"]] &= self.available[f"{c['id']} condenser"]
+         for a in self.plant["absorption_chillers"]:
+@@ -121,11 +124,16 @@ class Day:
+         # so the least cost counts on no PV in it, but a tool may also count the PV of the minutes the
+         # array is in service; self.pv_max is the most a plan may say the array gives.
+         pv_id = self.plant["pv"]["id"]
+-        out_min = np.zeros(N)
+-        for o in self.status.get("outages", []):
+-            if o["unit"] == pv_id:
+-                a, b = _hm(o["from"]), _hm(o["to"])
+-                out_min += np.array([max(0, min(b, c + 30) - max(a, c)) for c in self.clock])
++        spans = sorted((_hm(o["from"]), _hm(o["to"]))
++                       for o in self.status.get("outages", []) if o["unit"] == pv_id)
++        merged = []
++        for a, b in spans:
++            if merged and a <= merged[-1][1]:
++                merged[-1] = (merged[-1][0], max(merged[-1][1], b))
++            else:
++                merged.append((a, b))
++        out_min = np.array([sum(max(0, min(b, c + 30) - max(a, c)) for a, b in merged)
++                            for c in self.clock], dtype=float)
+         self.pv_max = self.pv * np.clip(1.0 - out_min / 30.0, 0.0, 1.0)
+         self.pv = np.where(self.available[pv_id], self.pv, 0.0)
+         self.running0 = set(self.status["running_at_midnight"])
+@@ -161,19 +169,38 @@ class Day:
+                 q = float(p["boilers_kw"][b["id"]])
+                 ok &= -0.5 <= q <= (b["max_kw"] if self.available[b["id"]][t] else 0.0) + 0.5
+                 boiler_gas += q / b["efficiency"]
+-            absorbing = any(float(p["chillers_kw"][a["id"]]) > 0.5 for a in self.plant["absorption_chillers"])
++            # The inlet-temperature requirement applies to any positive AC duty;
++            # the rating tolerance must not change the COP regime of other units.
++            absorbing = any(float(p["chillers_kw"][a["id"]]) > 1e-9 for a in self.plant["absorption_chillers"])
++            ec_max = 0.0
+             for c in self.plant["electric_chillers"]:
+                 q = float(p["chillers_kw"][c["id"]])
+                 ok &= -0.5 <= q <= (c["max_kw"] if self.available[c["id"]][t] else 0.0) + 0.5
+                 cop = self.cop[c["id"]][absorbing][t]
+                 out["ec_elec"][t] += q / cop
+                 out["rejected"][t] += q * (1 + 1 / cop)
++                ec_max += max(q, 0.0) / c["cop_by_condenser_entering_c"][-1][1]
+             for a in self.plant["absorption_chillers"]:
+                 q = float(p["chillers_kw"][a["id"]])
+                 ok &= -0.5 <= q <= (a["max_kw"] if self.available[a["id"]][t] else 0.0) + 0.5
+                 out["ac_heat"][t] += q / a["cop"]
+                 out["aux"][t] += q * a["auxiliary_kwe_per_kw"]
+                 out["rejected"][t] += q * (1 + 1 / a["cop"])
++            # The unchanged output format has no condenser-water setpoint. Do
++            # not reject a physically consistent warmer common header. For the
++            # fixed monotonically decreasing COP curves, total EC electricity
++            # continuously covers this interval as the common water warms to
++            # the final table endpoint (beyond it the tables are flat).
++            # Project the inferred duty to the interval: an impossible electrical
++            # residual remains visible to test_electricity_balance. In particular
++            # this cannot invent a dump load when every EC output is zero.
++            ec_min = out["ec_elec"][t]
++            inferred = (sum(float(p["engines_kwe"][e["id"]]) for e in self.engines)
++                        + float(p["pv_kw"]) + float(p["import_kw"]) - float(p["export_kw"])
++                        - self.elec[t] - out["aux"][t])
++            ec_used = float(np.clip(inferred, ec_min, max(ec_min, ec_max)))
++            out["ec_elec"][t] = ec_used
++            out["rejected"][t] += ec_used - ec_min
+             gas = DT_H * (fuel_net * self.gross_net + boiler_gas)
+             cost += gas * self.gas_rate
+             cost += DT_H * (float(p["import_kw"]) * self.import_rate[t] - float(p["export_kw"]) * self.export_rate)
+@@ -184,13 +211,16 @@ class Day:
+         return out
+ 
+     def least_cost(self) -> dict:
+-        """Cheapest plan for the day: one mixed-integer program over all periods.
++        """Conservative cost bound: one mixed-integer program over all periods.
+ 
+         Each engine runs on its part-load curve: segment k of the curve can only be
+         used once the segments below it are fully loaded (binary w). The connection's
+         apparent power limit is the polygon of CUTS tangents to its circle. The towers'
+         load counts the absorption chiller's auxiliary power too, the stricter of the two
+-        readings of what its cooling water takes away, so that either reading meets it."""
++        readings of what its cooling water takes away, so that either reading meets it.
++        The header uses its coldest useful setpoints and partial PV outages use
++        all-off periods. Warmer-header and prorated-PV plans may be cheaper and
++        are accepted; this is not a claim of global optimality over that union."""
+         eng, boil = self.engines, self.plant["boilers"]
+         ecs, acs = self.plant["electric_chillers"], self.plant["absorption_chillers"]
+         names = []
+diff --git a/tasks/energy-centre-dispatch/tests/test_plans.py b/tasks/energy-centre-dispatch/tests/test_plans.py
+index 8777669..787ac8c 100644
+--- a/tasks/energy-centre-dispatch/tests/test_plans.py
++++ b/tasks/energy-centre-dispatch/tests/test_plans.py
+@@ -3,9 +3,10 @@
+ 
+ Everything is recomputed from each plan's unit outputs with the reference model in
+ reference.py: the energy balances, the unit, cooling-tower and connection limits, the
+-gas, costs, imports, exports and grid flags the plan reports, and that no cheaper plan
+-meets the day. The second run must give the same plan, and a run that failed or timed out
+-counts as no plan.
++gas, costs, imports, exports and grid flags the plan reports. Cost must be no higher
++than the independent MILP's conservative bound across the accepted auxiliary-heat,
++PV-outage and common-header interpretations (see reference.py). The second run must
++give the same plan, and a run that failed or timed out counts as no plan.
+ """
+ 
+ import json
+diff --git a/tools/build_energy_days.py b/tools/build_energy_days.py
+index 45d19b4..c3bfa79 100644
+--- a/tools/build_energy_days.py
++++ b/tools/build_energy_days.py
+@@ -125,21 +125,24 @@ DAYS = {
+     ),
+     "h2": dict(
+         date="2026-01-14", offset=0, seed=13,
+-        elec=[(0, 1300), (5, 1280), (7, 1560), (9, 1950), (12, 1990), (16, 2050), (18, 2010), (21, 1650), (23, 1400)],
+-        heat=[(0, 2250), (4, 2350), (6, 3150), (8, 3300), (11, 2800), (15, 2650), (18, 2950), (21, 2700), (23, 2400)],
+-        cool=[(0, 190), (8, 230), (13, 270), (18, 240), (23, 200)],
++        elec=[(0, 2380), (1, 2380), (2, 1750), (3, 1300), (5, 1280), (7, 1560), (9, 1950), (12, 1990), (16, 2050), (18, 2010), (21, 1650), (23, 1400)],
++        heat=[(0, 1800), (1, 1800), (2, 2050), (3, 2250), (4, 2350), (6, 3150), (8, 3300), (11, 2800), (15, 2650), (18, 2950), (21, 2700), (23, 2400)],
++        cool=[(0, 190), (2, 190), (8, 230), (13, 270), (18, 240), (23, 200)],
+         dry=[(0, 2.5), (6, 1.4), (10, 4.0), (14, 6.2), (18, 4.6), (23, 3.0)],
+         wet=[(0, 1.6), (6, 0.8), (10, 2.7), (14, 4.1), (18, 3.3), (23, 2.1)],
+         sun=(8.2, 16.2), pv_peak=120, cloud=0.25,
+-        overrides={0: (2350.0, 50.0, 1800.0, 0.0)},
+-        status={"running_at_midnight": ["GE1"], "outages": [{"unit": "GE2", "from": "00:30", "to": "03:00"},
++        # A sustained overnight load with high site power factor exercises both
++        # signs of net generator-corrected Q without a one-row demand override.
++        kvar_per_kw=0.10,
++        status={"running_at_midnight": ["GE1"], "outages": [{"unit": "GE2", "from": "00:00", "to": "03:00"},
+                                                           {"unit": "GE2", "from": "12:45", "to": "17:00"},
+                                                           {"unit": "GE2", "from": "16:40", "to": "17:30"},
+                                                           {"unit": "GE2", "from": "19:10", "to": "19:20"},
++                                                          {"unit": "GE2 jacket water and exhaust", "from": "18:20", "to": "18:40"},
+                                                           {"unit": "B1", "from": "06:10", "to": "08:40"},
+                                                           {"unit": "B1", "from": "14:10", "to": "14:25"},
+                                                           {"unit": "GE1 intercooler", "from": "09:20", "to": "11:50"},
+-                                                                 {"unit": "GE1 LT radiator", "from": "21:10", "to": "23:50"}]},
++                                                          {"unit": "GE1 LT radiator", "from": "21:10", "to": "23:00"}]},
+     ),
+     "h3": dict(
+         date="2026-04-20", offset=1, seed=14,
+@@ -152,6 +155,7 @@ DAYS = {
+         status={"running_at_midnight": [], "outages": [{"unit": "AC1 absorber and condenser", "from": "07:10",
+                                                       "to": "10:20"},
+                                                      {"unit": "GE2 LT radiator", "from": "10:40", "to": "14:20"},
++                                                     {"unit": "AC1 generator", "from": "12:40", "to": "12:50"},
+                                                      {"unit": "EC1", "from": "13:40", "to": "16:20"}]},
+     ),
+     "h4": dict(
+@@ -166,6 +170,7 @@ DAYS = {
+                                                           {"unit": "PHE1", "from": "06:20", "to": "09:40"},
+                                                           {"unit": "EC2", "from": "10:10", "to": "11:50"},
+                                                           {"unit": "PV1", "from": "16:20", "to": "18:40"},
++                                                          {"unit": "PV1", "from": "16:25", "to": "17:10"},
+                                                           {"unit": "GE1 intercooler", "from": "03:50", "to": "05:50"},
+                                                           {"unit": "EC1", "from": "21:10", "to": "21:20"}]},
+     ),
+diff --git a/tools/check_v18.py b/tools/check_v18.py
+new file mode 100644
+index 0000000..c33a9cb
+--- /dev/null
++++ b/tools/check_v18.py
+@@ -0,0 +1,220 @@
++"""Reproducible development gates; no changes to the submitted verifier.
++
++Runs the actual test functions against independently generated plans. A day's MILP
++is solved once per invocation and reused for the development matrix, with its data
++hash recorded. The canonical pytest/eval_energy runs remain a separate cross-check.
++"""
++
++from __future__ import annotations
++
++import argparse
++import hashlib
++import importlib
++import json
++import os
++import platform
++import shutil
++import subprocess
++import sys
++import time
++import traceback
++from datetime import datetime, timezone
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[1]
++DAYS = ["visible", "h1", "h2", "h3", "h4"]
++ENV = dict(os.environ, PYTHONDONTWRITEBYTECODE="1", OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1")
++
++
++def file_hash(path: Path) -> str:
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++def tree_hash(path: Path) -> dict[str, str]:
++    return {str(f.relative_to(path)): file_hash(f) for f in sorted(path.rglob("*"))
++            if f.is_file() and "__pycache__" not in f.parts and f.suffix != ".pyc"}
++
++
++def write_json(path: Path, value) -> None:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
++
++
++def default_apps() -> dict[str, Path]:
++    out = {
++        "oracle": ROOT / "tasks/energy-centre-dispatch/solution/app",
++        "strong-v16-claude": ROOT / "results/v16-trials/ecd16-run2-claude/app",
++    }
++    for model in ("claude", "codex"):
++        out[f"patched-v17-{model}"] = ROOT / f"results/checks-v18/opponents/ecd17-run2-{model}-parts/app"
++    for model in ("claude", "codex"):
++        for n in range(1, 4):
++            out[f"v17-run{n}-{model}"] = ROOT / f"results/v17-trials/ecd17-run{n}-{model}/app"
++    blind = ROOT / "results/checks-v18/blind/app"
++    if blind.exists():
++        out["blind"] = blind
++    return out
++
++
++def check_app(name, app, days, tests, out: Path, timeout: float) -> dict:
++    folder = out / name
++    folder.mkdir(parents=True, exist_ok=True)
++    result = {"app": str(app.relative_to(ROOT)) if app.is_relative_to(ROOT) else str(app),
++              "source_sha256": tree_hash(app), "days": {}, "passed": True}
++    funcs = [(n, f) for n, f in vars(tests).items()
++             if n.startswith("test_") and n != "test_same_plan_every_time" and callable(f)]
++    for day_name, day in days.items():
++        dr = {"runs": [], "failures": {}}
++        plans = []
++        for repeat in range(2):
++            plan_path = folder / f"{day_name}{'.rerun' if repeat else ''}.json"
++            cmd = [sys.executable, str(app / "dispatch.py"), "--data", str(day.folder),
++                   "--output", str(plan_path)]
++            start = time.monotonic()
++            try:
++                run = subprocess.run(cmd, capture_output=True, text=True, env=ENV,
++                                     timeout=timeout, start_new_session=True)
++                elapsed = time.monotonic() - start
++                log = "$ " + " ".join(cmd) + "\n" + run.stdout + run.stderr
++                (folder / f"{day_name}.{repeat}.log").write_text(log)
++                dr["runs"].append({"returncode": run.returncode, "seconds": elapsed})
++                if run.returncode != 0:
++                    raise RuntimeError(f"exit {run.returncode}: " + run.stderr[-2000:])
++                plans.append(json.loads(plan_path.read_text()))
++                dr["runs"][-1]["sha256"] = file_hash(plan_path)
++            except Exception as exc:
++                dr["failures"][f"execution_{repeat}"] = f"{type(exc).__name__}: {exc}"
++                plans.append(None)
++        if plans[0] is not None:
++            try:
++                flows = day.true_flows(plans[0])
++                dr["cost_gbp"] = float(flows["cost"].sum())
++                dr["milp_gbp"] = day.optimum["cost"]
++                dr["delta_gbp"] = dr["cost_gbp"] - dr["milp_gbp"]
++                case = (day, plans[0], flows)
++                for test_name, func in funcs:
++                    try:
++                        func(case)
++                    except Exception:
++                        dr["failures"][test_name] = traceback.format_exc()
++            except Exception:
++                dr["failures"]["flows"] = traceback.format_exc()
++        if plans[0] is None or plans[1] is None or any(
++                plans[0].get(k) != plans[1].get(k) for k in ("date", "periods", "summary")):
++            dr["failures"]["test_same_plan_every_time"] = "missing plan or unequal JSON output"
++        dr["passed"] = not dr["failures"]
++        result["passed"] &= dr["passed"]
++        result["days"][day_name] = dr
++        print(f"{name} {day_name}: {'PASS' if dr['passed'] else 'FAIL'} "
++              f"delta={dr.get('delta_gbp', 'n/a')} " + ", ".join(dr["failures"]), flush=True)
++        write_json(folder / "result.json", result)
++    return result
++
++
++def main() -> None:
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--task", type=Path, default=ROOT / "tasks/energy-centre-dispatch")
++    ap.add_argument("--out", type=Path, required=True)
++    ap.add_argument("--apps", nargs="*", help="Names from default matrix; omit for all existing apps")
++    ap.add_argument("--app", action="append", default=[], help="Additional NAME=PATH entries")
++    ap.add_argument("--mutants", action="store_true")
++    ap.add_argument("--mutant-names", nargs="+", help="Selected mutants when --mutants is set")
++    ap.add_argument("--gate-v18", action="store_true", help="Exit 1 unless the measured B/E/F matrix gates pass")
++    ap.add_argument("--timeout", type=float, default=120.0)
++    args = ap.parse_args()
++    args.task, args.out = args.task.resolve(), args.out.resolve()
++    args.out.mkdir(parents=True, exist_ok=True)
++    sys.path.insert(0, str(args.task / "tests"))
++    reference = importlib.import_module("reference")
++    tests = importlib.import_module("test_plans")
++    import numpy as np
++    import scipy
++
++    metadata = {"timestamp_utc": datetime.now(timezone.utc).isoformat(),
++                "command": sys.argv, "python": platform.python_version(),
++                "numpy": np.__version__, "scipy": scipy.__version__,
++                "task": str(args.task), "test_sha256": file_hash(args.task / "tests/test_plans.py"),
++                "reference_sha256": file_hash(args.task / "tests/reference.py"), "days": {}}
++    days = {}
++    for name in DAYS:
++        folder = args.task / "tests/days" / name
++        day = reference.Day(folder)
++        t0 = time.monotonic()
++        optimum = day.least_cost()
++        metadata["days"][name] = {"sha256": tree_hash(folder), "milp_gbp": optimum["cost"],
++                                 "milp_seconds": time.monotonic() - t0}
++        day.folder, day.optimum = folder, optimum
++        day.least_cost = lambda optimum=optimum: optimum
++        days[name] = day
++        write_json(args.out / "milp" / f"{name}.json", optimum)
++        print(f"MILP {name}: {optimum['cost']:.9f}", flush=True)
++    write_json(args.out / "metadata.json", metadata)
++
++    all_apps = default_apps()
++    all_apps["oracle"] = args.task / "solution/app"
++    for entry in args.app:
++        name, path = entry.split("=", 1)
++        all_apps[name] = Path(path).resolve()
++    names = args.apps if args.apps is not None else list(all_apps)
++    if args.mutants and args.apps is None:
++        names = []
++    results = {}
++    for name in names:
++        app = all_apps[name]
++        if not (app / "dispatch.py").exists():
++            print(f"SKIP absent {name}: {app}", flush=True)
++            results[name] = {"skipped": "app absent"}
++            continue
++        results[name] = check_app(name, app, days, tests, args.out, args.timeout)
++        write_json(args.out / "matrix.json", results)
++
++    if args.mutants:
++        import energy_mutants as mutants
++        for name in args.mutant_names or list(mutants.MUTANTS):
++            changes = mutants.MUTANTS[name]
++            target = args.out / "mutant_apps" / name
++            shutil.copytree(args.task / "solution/app", target, dirs_exist_ok=True,
++                            ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
++            for filename, old, new in changes:
++                file = target / filename
++                src = file.read_text()
++                assert src.count(old) == 1, (name, filename, old)
++                file.write_text(src.replace(old, new))
++            # Execution-fault mutants are intentionally killed after a short development timeout.
++            limit = 2.0 if name == "hangs_after_writing" else args.timeout
++            results[name] = check_app(name, target, days, tests, args.out, limit)
++            write_json(args.out / "matrix.json", results)
++            shutil.rmtree(target)
++        caught = sum(not v.get("passed", False) for v in results.values())
++        print(f"MUTANTS {caught}/{len(results)} caught", flush=True)
++        if caught != len(results):
++            raise SystemExit(1)
++
++    if args.gate_v18:
++        def complete(name):
++            return name in results and len(results[name].get("days", {})) == len(DAYS)
++
++        oracle = results.get("oracle", {})
++        gates = {
++            "B_five_days": complete("oracle") and oracle.get("passed", False)
++                and all(abs(v.get("delta_gbp", float("inf"))) < .001
++                        for v in oracle.get("days", {}).values()),
++            "E1_strongest_defeated": complete("strong-v16-claude")
++                and any(not v["passed"] for k, v in results["strong-v16-claude"]["days"].items()
++                        if k != "visible"),
++            "E2_patched_defeated": all(complete(f"patched-v17-{m}")
++                and not results[f"patched-v17-{m}"].get("passed", True) for m in ("claude", "codex")),
++            "E3_blind_measured": complete("blind"),
++            "F_six_originals_fail": all(complete(f"v17-run{n}-{m}")
++                and not results[f"v17-run{n}-{m}"].get("passed", True)
++                for n in range(1, 4) for m in ("claude", "codex")),
++        }
++        write_json(args.out / "gates.json", gates)
++        print("MEASURED GATES " + json.dumps(gates), flush=True)
++        # Classification of *why* a strong adversary failed is a separate review;
++        # even True E1/E2 here is not a claim of fair reasoning difficulty.
++        raise SystemExit(0 if all(gates.values()) else 1)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/energy_mutants.py b/tools/energy_mutants.py
+index 6a477f9..db7301e 100644
+--- a/tools/energy_mutants.py
++++ b/tools/energy_mutants.py
+@@ -85,11 +85,17 @@ MUTANTS = {
+     "phe1_outage_ignored": [("planner/optimize.py",
+         "    if _available(day, \"PHE1\", day.starts[t]):", "    if True:")],
+     "lt_radiator_outage_ignored": [("planner/optimize.py",
+-        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator"))',
+-        'for item in (engine.id, f"{engine.id} intercooler"))')],
++        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))',
++        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} jacket water and exhaust"))')],
+     "intercooler_outage_ignored": [("planner/optimize.py",
+-        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator"))',
+-        'for item in (engine.id, f"{engine.id} LT radiator"))')],
++        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))',
++        'for item in (engine.id, f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))')],
++    "ht_source_outage_ignored": [("planner/optimize.py",
++        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))',
++        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator"))')],
++    "ac_generator_outage_ignored": [("planner/optimize.py",
++        '"absorption": ("generator", "absorber and condenser")}',
++        '"absorption": ("absorber and condenser",)}')],
+     "condenser_outage_ignored": [("planner/optimize.py",
+         '_CHILLER_PARTS = {"electric": ("condenser",),', '_CHILLER_PARTS = {"electric": (),')],
+     "absorption_chiller_parts_ignored": [("planner/optimize.py",
+diff --git a/tools/fresh_days.py b/tools/fresh_days.py
+index 5421381..1733fa4 100644
+--- a/tools/fresh_days.py
++++ b/tools/fresh_days.py
+@@ -10,17 +10,20 @@ task's own five days are put through the same checks first. Each tool given is t
+ on every kept day and judged by the task's own tests.
+ 
+ Usage: python tools/fresh_days.py [--days 8] [--seed 2026] <app_root> [<app_root> ...]
+-The days are written to tools/out/fresh/tests/days/.
++The days are written to tools/out/fresh/tests/days/. Use a new --output folder
++for each independent run. Accepted day names include the unique draw number.
+ """
+ 
+ from __future__ import annotations
+ 
+ import argparse
+ import csv
++import hashlib
+ import json
+ import random
+ import shutil
+ import sys
++import time
+ from datetime import date, timedelta
+ from pathlib import Path
+ 
+@@ -34,7 +37,8 @@ from reference import Day  # noqa: E402
+ 
+ UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "GE1 LT radiator", "GE2 LT radiator",
+          "CT1", "CT2", "PV1", "GE1 intercooler", "GE2 intercooler", "EC1 condenser", "EC2 condenser",
+-         "AC1 generator", "AC1 absorber and condenser"]
++         "AC1 generator", "AC1 absorber and condenser", "GE1 jacket water and exhaust",
++         "GE2 jacket water and exhaust"]
+ 
+ 
+ def last_sunday(year: int, month: int) -> date:
+@@ -113,32 +117,60 @@ def main() -> None:
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--days", type=int, default=8)
+     ap.add_argument("--seed", type=int, default=2026)
++    ap.add_argument("--output", type=Path, help="Isolated output folder for reproducible parallel checks")
+     ap.add_argument("apps", nargs="+")
+     args = ap.parse_args()
+     rng = random.Random(args.seed)
+-    out = ROOT / "tools" / "out" / "fresh"
+-    shutil.rmtree(out, ignore_errors=True)
++    out = args.output.resolve() if args.output else ROOT / "tools" / "out" / "fresh"
++    if args.output:
++        out.mkdir(parents=True, exist_ok=False)
++    else:
++        shutil.rmtree(out, ignore_errors=True)
++        out.mkdir(parents=True)
++
++    def hashes(folder):
++        return {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
++                for p in sorted(folder.iterdir()) if p.is_file()}
++
++    manifest = {"seed": args.seed, "command": sys.argv, "draws": [], "days": {}, "results": {}}
++    for name in ("reference.py", "test_plans.py"):
++        manifest[name + "_sha256"] = hashlib.sha256((TASK / "tests" / name).read_bytes()).hexdigest()
+     for d in ["visible", "h1", "h2", "h3", "h4"]:
+         problems = check_inputs(TASK / "tests" / "days" / d)
+         assert not problems, (d, problems)
+     print("the task's five days pass the input checks")
+     names: list[str] = []
++    attempt = 0
+     while len(names) < args.days:
++        attempt += 1
+         spec, base = draw(rng, SEASONS[len(names) % len(SEASONS)])
+-        name = f"f{len(names) + 1}"
++        # Never delete and reuse a rejected draw's pathname. Besides making
++        # provenance explicit, this avoids stale files on unusual filesystems.
++        name = f"f{len(names) + 1}-draw-{attempt:04d}"
+         folder = out / "tests" / "days" / name
+         B.write_day(folder, spec)
++        expected_status = {"date": spec["date"], **spec["status"]}
++        assert json.loads((folder / "status.json").read_text()) == expected_status, name
+         problems = check_inputs(folder)
++        event = {"name": name, "profile": base, "spec": spec, "accepted": False}
++        manifest["draws"].append(event)
+         if problems:
++            event["reason"] = problems
+             print(f"discarded a drawn day: {'; '.join(problems)}")
+             shutil.rmtree(folder)
+             continue
+         try:
+-            Day(folder).least_cost()
+-        except RuntimeError:
++            start = time.monotonic()
++            optimum = Day(folder).least_cost()
++        except RuntimeError as exc:
++            event["reason"] = str(exc)
+             shutil.rmtree(folder)
+             continue
++        event["accepted"] = True
++        manifest["days"][name] = {"sha256": hashes(folder), "milp_cost_gbp": optimum["cost"],
++                                  "milp_seconds": time.monotonic() - start, "spec": spec}
+         names.append(name)
++        (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+         st = spec["status"]
+         print(f"{name}: {spec['date']} {date.fromisoformat(spec['date']):%a} ({base} profile), running at midnight "
+               f"{st['running_at_midnight']}, outages " + ", ".join(f"{o['unit']} {o['from']}-{o['to']}" for o in st["outages"]))
+@@ -148,11 +180,21 @@ def main() -> None:
+     (out / "tests" / "test_plans.py").write_text(tests.replace(days_line, f"DAYS = {names!r}"))
+     shutil.copy(TASK / "tests" / "reference.py", out / "tests" / "reference.py")
+     E.TASK, E.DAYS = out, names
++    for name in names:
++        assert hashes(out / "tests/days" / name) == manifest["days"][name]["sha256"], name
++    failures = 0
+     for app in args.apps:
+         r = E.evaluate(Path(app).resolve(), quiet=True)
+-        bad = sorted({d for days in r["failed"].values() for d in days}, key=lambda n: int(n[1:]))
++        bad = sorted({d for days in r["failed"].values() for d in days}, key=names.index)
+         fails = "; ".join(f"{k.replace('test_', '')}:{','.join(v)}" for k, v in sorted(r["failed"].items()))
+         print(f"{len(bad)}/{len(names)} days failed  {app}  {fails}", flush=True)
++        manifest["results"][app] = r
++        failures += bool(r["failed"] or r["errors"])
++    for name in names:
++        assert hashes(out / "tests/days" / name) == manifest["days"][name]["sha256"], name
++    manifest["input_hashes_unchanged_after_evaluation"] = True
++    (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
++    raise SystemExit(1 if failures else 0)
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/tools/fuzz_v18.py b/tools/fuzz_v18.py
+new file mode 100644
+index 0000000..d04e71f
+--- /dev/null
++++ b/tools/fuzz_v18.py
+@@ -0,0 +1,373 @@
++"""Reproducible differential stress tests against the archived v17 reference.
++
++All app imports use isolated package names. Runs invoke each original loader, plant,
++tariff, optimizer, and the original serialization precision, then the independent
++archived tests. The two v17 apps differ only by their documented component patches.
++No task or historical result is modified. Specs, timings, witnesses, and the seed
++are retained beneath results/checks-v18/fuzz. A generated day has a feasibility
++witness when an app passes every physical check; suspicious cases additionally
++receive a whole-day reference MILP. Reference omissions are identified separately.
++
++Usage: PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
++  python tools/fuzz_v18.py --days 320 --seed 180017 --workers 2
++"""
++
++from __future__ import annotations
++
++import argparse
++import contextlib
++import csv
++import hashlib
++import importlib
++import importlib.util
++import io
++import json
++import math
++import os
++from pathlib import Path
++import random
++import shutil
++import signal
++import sys
++import time
++from concurrent.futures import ProcessPoolExecutor, as_completed
++from datetime import date, timedelta
++
++os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
++os.environ.setdefault("OMP_NUM_THREADS", "1")
++sys.dont_write_bytecode = True
++
++ROOT = Path(__file__).resolve().parents[1]
++BASE = ROOT / "archive/energy-centre-dispatch-v17"
++OUT = ROOT / "results/checks-v18/fuzz"
++APPS = {
++    "v16_claude": ROOT / "results/v16-trials/ecd16-run2-claude/app",
++    "v17_codex_parts": ROOT / "results/checks-v18/opponents/ecd17-run2-codex-parts/app",
++    "v17_claude_parts": ROOT / "results/checks-v18/opponents/ecd17-run2-claude-parts/app",
++}
++MODULES = {}
++
++
++def module_from_file(name, path, package=False):
++    spec = importlib.util.spec_from_file_location(
++        name, path, submodule_search_locations=[str(path.parent)] if package else None)
++    mod = importlib.util.module_from_spec(spec)
++    sys.modules[name] = mod
++    spec.loader.exec_module(mod)
++    return mod
++
++
++B = module_from_file("fuzz_v18_builder", BASE / "build_energy_days.py")
++R = module_from_file("fuzz_v18_reference", BASE / "tests/reference.py")
++# test_plans.py imports its independent reference under this ordinary name.
++sys.modules["reference"] = R
++T = module_from_file("fuzz_v18_tests", BASE / "tests/test_plans.py")
++UNITS = sorted({u["id"] for k in ("engines", "boilers", "electric_chillers", "absorption_chillers")
++                for u in B.PLANT[k]} | set(B.PLANT["cooling_towers"]["cells"])
++               | {B.PLANT["pv"]["id"]}
++               | {n for c in B.PLANT["heat_circuits"].values() for n in c["from"] + c["to"]}
++               - {"hospital buildings"})
++SEASONS = [("winter", [12, 1, 2], "h2"), ("spring", [3, 4, 5], "h3"),
++           ("summer", [6, 7, 8], "h4"), ("autumn", [9, 10, 11], "h3")]
++CHECKS = ["test_plan_covers_the_day", "test_units_within_ratings_and_availability",
++          "test_electricity_balance", "test_heat_balance", "test_cooling_balance",
++          "test_cooling_towers", "test_connection_limits", "test_reported_gas_and_cost",
++          "test_reported_import_export_and_grid_flags"]
++
++
++def hhmm(m):
++    return f"{m // 60:02d}:{m % 60:02d}"
++
++
++def draw(index, seed):
++    rng = random.Random(seed + index * 1000003)
++    season, months, base = SEASONS[index % 4]
++    d = date(2026, rng.choice(months), rng.randint(1, 25))
++    if d == date(2026, 10, 25):
++        d = date(2026, 10, 24)  # the instruction excludes UK clock-change days
++    offset = int(date(2026, 3, 29) < d < date(2026, 10, 25))
++    b = B.DAYS[base]
++    scenario = (index // 4) % 8
++    fe, fh, fc = rng.uniform(.88, 1.08), rng.uniform(.8, 1.15), rng.uniform(.8, 1.15)
++    if scenario == 2:  # Low electricity relative to heat: holiday/maintenance load.
++        fe, fh, fc = rng.uniform(.48, .72), rng.uniform(1.0, 1.4), rng.uniform(.8, 1.1)
++    if scenario == 3:
++        fe, fc = rng.uniform(1.02, 1.18), rng.uniform(1.02, 1.2)
++    dt = rng.uniform(-4, 4) if scenario == 1 else rng.uniform(-2, 2)
++    solar = {"winter": (8.1, 16.1), "spring": (6.2, 19.8),
++             "summer": (5.2, 20.8), "autumn": (6.5, 18.5)}[season]
++    pv_peak = rng.uniform(35, 280)
++    if scenario == 7:
++        pv_peak = [0, 280][(index // 32) % 2]
++    outages = []
++    # Deliberate cyclic coverage includes every component, not only visible-day IDs.
++    first = UNITS[index % len(UNITS)]
++    count = 1 if scenario in (0, 1, 2) else rng.randint(2, 4)
++    names = [first] + rng.choices(UNITS, k=count - 1)
++    for k, unit in enumerate(names):
++        a = rng.choice([0, 30, 360, 420, 960, 1020, 1410]) if scenario == 6 else rng.randrange(0, 1380)
++        dur = rng.choice([1, 5, 10, 15, 29, 30, 31]) if scenario == 5 else rng.choice([30, 60, 90, 120, 240])
++        z = min(1440, a + dur)
++        outages.append({"unit": unit, "from": hhmm(a), "to": hhmm(z)})
++    if scenario == 4:
++        a = rng.randrange(240, 1020)
++        # Separate, touching, and overlapping intervals of the same component.
++        gap = [-10, 0, 5, 31][(index // 32) % 4]
++        outages = [{"unit": first, "from": hhmm(a), "to": hhmm(a + 45)},
++                   {"unit": first, "from": hhmm(a + 45 + gap), "to": hhmm(a + 100)}]
++    spec = dict(date=d.isoformat(), offset=offset, seed=rng.randrange(10**9),
++                elec=[(h, v * fe) for h, v in b["elec"]],
++                heat=[(h, v * fh) for h, v in b["heat"]],
++                cool=[(h, v * fc) for h, v in b["cool"]],
++                dry=[(h, v + dt) for h, v in b["dry"]],
++                wet=[(h, v + dt) for h, v in b["wet"]],
++                sun=solar, pv_peak=pv_peak, cloud=rng.uniform(0, .7),
++                kvar_per_kw=rng.choice([.03, .10, .17, .25, .4, .55]),
++                status={"running_at_midnight": [e for j, e in enumerate(["GE1", "GE2"])
++                                                 if (index // 4) % 4 & (1 << j)],
++                        "outages": outages})
++    return {"id": f"d{index + 1:04d}", "index": index, "season": season,
++            "scenario": scenario, "base": base, "spec": spec}
++
++
++def check_inputs(folder, expected_spec=None):
++    status = json.loads((folder / "status.json").read_text())
++    demand = list(csv.DictReader((folder / "demand.csv").open()))
++    wx = list(csv.DictReader((folder / "weather.csv").open()))
++    problems = []
++    if expected_spec is not None:
++        expected_status = {"date": expected_spec["date"], **expected_spec["status"]}
++        if status != expected_status:
++            problems.append("materialized_status_differs_from_spec")
++        if any(r["period_start"][:10] != expected_spec["date"] for r in demand):
++            problems.append("materialized_demand_date_differs_from_spec")
++    if status["date"] in ("2026-03-29", "2026-10-25"):
++        problems.append("clock_change_date")
++    if len(demand) != 48:
++        problems.append("not_48_half_hours")
++    if any(float(v) < 0 for r in demand for k, v in r.items() if k != "period_start"):
++        problems.append("negative_demand")
++    if any(float(r["wet_bulb_c"]) > float(r["dry_bulb_c"]) for r in wx):
++        problems.append("wet_above_dry")
++    if any(not 0 <= float(r["pv_kw"]) <= 280 for r in wx):
++        problems.append("pv_outside_rating")
++    for o in status["outages"]:
++        if o["unit"] not in UNITS:
++            problems.append("unlisted_outage")
++        a, b = R._hm(o["from"]), R._hm(o["to"])
++        if not 0 <= a < b <= 1440:
++            problems.append("invalid_outage_interval")
++    return problems
++
++
++def reference_day(folder):
++    """Expose v17's missing jacket/exhaust key; extend only that explicit component.
++
++    The ordinary archived verifier is tried first. If it KeyErrors on either of
++    the named engine heat sources, initialize it with those two outages removed,
++    then enforce their parent engine availability. Such results are marked
++    reference_extension rather than claimed as the unmodified v17 verifier.
++    """
++    try:
++        return R.Day(folder), None
++    except KeyError as exc:
++        missing = str(exc.args[0])
++        allowed = {f"GE{i} jacket water and exhaust" for i in (1, 2)}
++        if missing not in allowed:
++            raise
++        child = folder / "reference_view"
++        child.mkdir(exist_ok=True)
++        for n in ("plant.json", "supply.json", "weather.csv", "demand.csv"):
++            shutil.copy2(folder / n, child / n)
++        full = json.loads((folder / "status.json").read_text())
++        filtered = {**full, "outages": [o for o in full["outages"] if o["unit"] not in allowed]}
++        (child / "status.json").write_text(json.dumps(filtered))
++        day = R.Day(child)
++        day.status = full
++        import numpy as np
++        for o in full["outages"]:
++            if o["unit"] not in allowed:
++                continue
++            a, b = R._hm(o["from"]), R._hm(o["to"])
++            av = ~np.array([c < b and c + 30 > a for c in day.clock])
++            day.available[o["unit"]] = day.available.get(o["unit"], np.ones(48, dtype=bool)) & av
++            day.available[o["unit"].partition(" ")[0]] &= av
++        shutil.rmtree(child)
++        return day, {"kind": "missing_named_engine_component", "raw_exception": repr(exc)}
++
++
++def load_app(name):
++    if name in MODULES:
++        return MODULES[name]
++    package = "fuzz_app_" + name
++    module_from_file(package, APPS[name] / "planner/__init__.py", package=True)
++    data, plant, tariff, opt = [importlib.import_module(package + "." + n)
++                               for n in ("data", "plant", "tariff", "optimize")]
++    MODULES[name] = data, plant, tariff, opt
++    return MODULES[name]
++
++
++def rounded(x, digits):
++    if isinstance(x, float):
++        return round(x, digits)
++    if isinstance(x, dict):
++        return {k: rounded(v, digits) for k, v in x.items()}
++    if isinstance(x, list):
++        return [rounded(v, digits) for v in x]
++    return x
++
++
++def run_app(name, folder):
++    data, plant, tariff, opt = load_app(name)
++    day = data.load_day(folder)
++    pp = plant.Plant(day.plant)
++    tt = tariff.Tariff(day.supply, day.first_start if name == "v17_codex_parts" else day.date)
++    periods, starts = opt.plan_day(day, pp, tt)
++    summary = {"cost_gbp": sum(p["cost_gbp"] for p in periods),
++               "gas_kwh": sum(p["gas_kwh"] for p in periods),
++               "import_kwh": .5 * sum(p["import_kw"] for p in periods),
++               "export_kwh": .5 * sum(p["export_kw"] for p in periods),
++               "engine_starts": starts, "grid_ok": all(p["grid_ok"] for p in periods)}
++    return rounded({"date": day.date.isoformat(), "periods": periods, "summary": summary},
++                   9 if name == "v17_codex_parts" else 3)
++
++
++def details(day, plan, flows):
++    import numpy as np
++    s = T.series
++    elec = (sum(s(plan, "engines_kwe", e["id"]) for e in day.engines) + s(plan, "pv_kw")
++            + s(plan, "import_kw") - s(plan, "export_kw") - day.elec - flows["aux"] - flows["ec_elec"])
++    heat = (flows["engine_heat"] - flows["ac_heat"]
++            + sum(s(plan, "boilers_kw", b["id"]) for b in day.plant["boilers"])
++            - day.heat - day.lthw_loss)
++    apparent = np.hypot(s(plan, "import_kw"), day.kvar - flows["engine_kvar"])
++    return {"bad_availability_periods": np.where(~flows["running_ok"])[0].tolist(),
++            "max_electric_balance_kw": float(abs(elec).max()),
++            "max_heat_balance_kw": float(abs(heat).max()),
++            "max_tower_excess_kw": float((flows["rejected"] - day.tower_max).max()),
++            "max_grid_excess_kva": float((apparent - day.import_kva).max()),
++            "recomputed_cost_gbp": float(flows["cost"].sum())}
++
++
++def alarm_handler(*_):
++    raise TimeoutError("app exceeded 120 seconds; excluded as a semantic trap")
++
++
++def one(job):
++    item, out, sample_every = job
++    out = Path(out)
++    folder = out / "days" / item["id"]
++    B.write_day(folder, item["spec"])
++    result = {k: item[k] for k in ("id", "index", "season", "scenario", "base")}
++    result["input_problems"] = check_inputs(folder, item["spec"])
++    result["expected_date"] = item["spec"]["date"]
++    result["input_sha256"] = {n: hashlib.sha256((folder / n).read_bytes()).hexdigest()
++                              for n in ("plant.json", "supply.json", "status.json", "demand.csv", "weather.csv")}
++    result["apps"] = {}
++    try:
++        day, extension = reference_day(folder)
++    except Exception as exc:
++        return {**result, "reference_error": repr(exc)}
++    result["reference_extension"] = extension
++    plans, costs = {}, []
++    signal.signal(signal.SIGALRM, alarm_handler)
++    for name in APPS:
++        start, stderr = time.monotonic(), io.StringIO()
++        record = {"failed": []}
++        try:
++            signal.alarm(120)
++            with contextlib.redirect_stderr(stderr):
++                plan = run_app(name, folder)
++            signal.alarm(0)
++            flows = day.true_flows(plan)
++            for check in CHECKS:
++                try:
++                    getattr(T, check)((day, plan, flows))
++                except Exception as exc:
++                    record["failed"].append(check)
++                    record.setdefault("assertions", {})[check] = repr(exc)
++            record.update(details(day, plan, flows))
++            plans[name] = plan
++            costs.append(record["recomputed_cost_gbp"])
++        except Exception as exc:
++            signal.alarm(0)
++            record["exception"] = repr(exc)
++        record["elapsed_seconds"] = round(time.monotonic() - start, 6)
++        if stderr.getvalue():
++            record["stderr"] = stderr.getvalue()[-2500:]
++        result["apps"][name] = record
++    physically_good = [n for n, r in result["apps"].items() if not r["failed"] and "exception" not in r]
++    result["feasible_witnesses"] = physically_good
++    suspicious = (len(physically_good) != len(APPS) or
++                  bool(costs and max(costs) - min(costs) > max(.5, 2e-4 * min(costs))))
++    scheduled_sample = ((item["index"] // 4) + item["index"] % 4) % sample_every == 0
++    if suspicious or scheduled_sample:
++        start = time.monotonic()
++        try:
++            best = day.least_cost()
++            result["milp"] = {"cost_gbp": float(best["cost"]), "elapsed_seconds": time.monotonic() - start}
++            for r in result["apps"].values():
++                if "recomputed_cost_gbp" in r:
++                    r["regret_gbp"] = r["recomputed_cost_gbp"] - best["cost"]
++                    if r["regret_gbp"] > max(.5, 2e-4 * best["cost"]):
++                        r["failed"].append("test_least_cost")
++        except RuntimeError as exc:
++            result["milp"] = {"exception": repr(exc), "elapsed_seconds": time.monotonic() - start}
++    has_failure = any(r["failed"] or "exception" in r for r in result["apps"].values())
++    if has_failure:
++        for name, plan in plans.items():
++            (folder / (name + ".plan.json")).write_text(json.dumps(plan, indent=1) + "\n")
++        (folder / "result.json").write_text(json.dumps(result, indent=2) + "\n")
++    else:
++        shutil.rmtree(folder)
++    return result
++
++
++def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--days", type=int, default=320)
++    ap.add_argument("--seed", type=int, default=180017)
++    ap.add_argument("--workers", type=int, default=2)
++    ap.add_argument("--sample-every", type=int, default=16)
++    ap.add_argument("--out", type=Path, default=OUT)
++    ap.add_argument("--specs", type=Path)
++    args = ap.parse_args()
++    args.out.mkdir(parents=True, exist_ok=True)
++    items = [json.loads(s) for s in args.specs.read_text().splitlines()] if args.specs else [
++        draw(i, args.seed) for i in range(args.days)]
++    for item in items:
++        if "overrides" in item["spec"]:
++            item["spec"]["overrides"] = {int(k): v for k, v in item["spec"]["overrides"].items()}
++    (args.out / "specs.jsonl").write_text("".join(json.dumps(i, sort_keys=True) + "\n" for i in items))
++    meta = {"seed": args.seed, "days": len(items), "python": sys.version, "workers": args.workers,
++            "milp_sample_every": args.sample_every,
++            "sample_rule": "((index // 4) + index % 4) % N == 0, plus every suspicious case",
++            "reference": str(BASE.relative_to(ROOT)), "apps": {k: str(v.relative_to(ROOT)) for k, v in APPS.items()},
++            "units": UNITS, "semantics": "original archived v17 except explicitly marked jacket/exhaust extension"}
++    (args.out / "meta.json").write_text(json.dumps(meta, indent=2) + "\n")
++    start, rows = time.monotonic(), []
++    with (args.out / "results.jsonl").open("w") as stream, ProcessPoolExecutor(max_workers=args.workers) as pool:
++        futures = [pool.submit(one, (i, str(args.out), args.sample_every)) for i in items]
++        for f in as_completed(futures):
++            r = f.result()
++            stream.write(json.dumps(r, sort_keys=True) + "\n")
++            stream.flush()
++            rows.append(r)
++            fs = {n: a.get("exception", a["failed"]) for n, a in r.get("apps", {}).items()
++                  if a["failed"] or "exception" in a}
++            print(f"{len(rows)}/{len(items)} {r['id']} feasible={r.get('feasible_witnesses', [])} failures={fs}", flush=True)
++    from collections import Counter
++    summary = {**meta, "elapsed_seconds": time.monotonic() - start,
++               "seasons": dict(Counter(r["season"] for r in rows)),
++               "feasible_days": sum(bool(r.get("feasible_witnesses")) or "cost_gbp" in r.get("milp", {}) for r in rows),
++               "reference_extended_days": sum(bool(r.get("reference_extension")) for r in rows),
++               "milp_solved": sum("cost_gbp" in r.get("milp", {}) for r in rows),
++               "milp_infeasible_or_error": sum("exception" in r.get("milp", {}) for r in rows),
++               "app_failure_days": {n: sum(bool(r.get("apps", {}).get(n, {}).get("failed"))
++                                           or "exception" in r.get("apps", {}).get(n, {}) for r in rows) for n in APPS}}
++    (args.out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
++    print(json.dumps(summary, indent=2), flush=True)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/probe_v18_negative_q.py b/tools/probe_v18_negative_q.py
+new file mode 100644
+index 0000000..095ac18
+--- /dev/null
++++ b/tools/probe_v18_negative_q.py
+@@ -0,0 +1,110 @@
++"""Replace the isolated v17 midnight reactive-power spike with a smooth profile.
++
++This is a coverage/realism experiment, not a claim of a new reasoning trap.
++All candidate inputs and the exact failed connection margins are retained.
++"""
++from __future__ import annotations
++
++import copy
++import argparse
++import importlib.util
++import json
++import os
++import shutil
++import subprocess
++import sys
++from pathlib import Path
++
++import numpy as np
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT / "archive/energy-centre-dispatch-v17/tests"))
++from reference import Day
++
++_builder_spec = importlib.util.spec_from_file_location(
++    "frozen_v17_negative_q_builder", ROOT / "archive/energy-centre-dispatch-v17/build_energy_days.py")
++B = importlib.util.module_from_spec(_builder_spec)
++_builder_spec.loader.exec_module(B)
++
++
++def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--spec-dir", type=Path, help="Replay saved q*/spec.json from any of the four rounds")
++    ap.add_argument("--case", help="One saved case, for example q02")
++    ap.add_argument("--out", type=Path, default=ROOT / "results/checks-v18/candidates/negative-q-replay")
++    args = ap.parse_args()
++    out = args.out.resolve()
++    out.mkdir(parents=True, exist_ok=False)
++    mutant = out / "positive-only-app"
++    shutil.copytree(ROOT / "archive/energy-centre-dispatch-v17/solution/app", mutant,
++                    dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
++    file = mutant / "planner/optimize.py"
++    src = file.read_text()
++    old = "_ANGLES = np.radians(np.arange(-90.0, 90.5, 1.0))"
++    assert src.count(old) == 1
++    file.write_text(src.replace(old, "_ANGLES = np.radians(np.arange(0.0, 90.5, 1.0))"))
++    results = []
++    specifications = []
++    if args.spec_dir:
++        for file in sorted(args.spec_dir.glob("q*/spec.json")):
++            if args.case is None or file.parent.name == args.case:
++                specifications.append((file.parent.name, json.loads(file.read_text())))
++        assert specifications, "No saved specifications matched"
++    else:
++        parameters = [
++            (2360, 190, 1800, .10), (2370, 190, 1800, .10),
++            (2380, 190, 1800, .10), (2390, 190, 1800, .10),
++            (2400, 190, 1800, .10), (2410, 190, 1800, .10),
++            (2360, 190, 1800, .12), (2370, 190, 1800, .12),
++            (2380, 190, 1800, .12), (2390, 190, 1800, .12),
++            (2400, 190, 1800, .12), (2410, 190, 1800, .12)]
++        for index, (peak, cooling, heat, pf_ratio) in enumerate(parameters):
++            spec = copy.deepcopy(B.DAYS["h2"])
++            spec.pop("overrides", None)
++            spec["elec"] = [(0, peak), (1, peak), (2, 1750), (3, 1300)] + spec["elec"][1:]
++            spec["heat"] = [(0, heat), (1, heat), (2, 2050), (3, 2250)] + spec["heat"][1:]
++            spec["cool"] = [(0, cooling), (2, cooling)] + spec["cool"][1:]
++            spec["kvar_per_kw"] = pf_ratio
++            spec["status"]["outages"][0]["from"] = "00:00"
++            # Return the radiator before the smooth late-evening load rise.
++            spec["status"]["outages"][-1]["to"] = "23:00"
++            if args.case is None or f"q{index:02d}" == args.case:
++                specifications.append((f"q{index:02d}", spec))
++    for case_id, spec in specifications:
++        folder = out / case_id
++        B.write_day(folder, spec)
++        (folder / "spec.json").write_text(json.dumps(spec, indent=2) + "\n")
++        dr = {"id": folder.name, "peak_kw": spec["elec"][0][1],
++              "night_cooling_kw": spec["cool"][0][1], "night_heat_kw": spec["heat"][0][1],
++              "site_q_per_p": spec["kvar_per_kw"]}
++        try:
++            day = Day(folder)
++            best = day.least_cost()
++            dr["reference_cost"] = best["cost"]
++            ppath = folder / "positive-only-plan.json"
++            env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1", OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1")
++            run = subprocess.run([sys.executable, str(mutant / "dispatch.py"), "--data", str(folder),
++                                  "--output", str(ppath)], capture_output=True, text=True,
++                                 timeout=120, env=env)
++            dr["returncode"] = run.returncode
++            (folder / "mutant.log").write_text(run.stdout + run.stderr)
++            if run.returncode == 0:
++                plan = json.loads(ppath.read_text())
++                f = day.true_flows(plan)
++                imp = np.array([p["import_kw"] for p in plan["periods"]])
++                reactive = day.kvar - f["engine_kvar"]
++                excess = np.hypot(imp, reactive) - day.import_kva
++                dr["violations"] = [{"period": p["start"], "excess_kva": float(excess[t]),
++                                     "net_kvar": float(reactive[t]), "import_kw": float(imp[t])}
++                                    for t, p in enumerate(plan["periods"]) if excess[t] > .5]
++                dr["mutant_cost"] = float(f["cost"].sum())
++                dr["max_excess_kva"] = float(excess.max())
++        except Exception as exc:
++            dr["exception"] = repr(exc)
++        results.append(dr)
++        (out / "results.json").write_text(json.dumps(results, indent=2) + "\n")
++        print(json.dumps(dr), flush=True)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/probe_v18_topology.py b/tools/probe_v18_topology.py
+new file mode 100644
+index 0000000..7f98a49
+--- /dev/null
++++ b/tools/probe_v18_topology.py
+@@ -0,0 +1,41 @@
++"""Candidate probes for explicitly named, previously untested upstream parts.
++
++The frozen v17 reference omits the two HT-source names. fuzz_v18.reference_day
++reports this omission explicitly and extends only their owning-engine outage.
++No archived code/data is edited; this is not a claim that v17 itself passed.
++"""
++from __future__ import annotations
++
++import copy
++import json
++from pathlib import Path
++
++import fuzz_v18 as F
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++def main():
++    out = ROOT / "results/checks-v18/candidates/topology"
++    out.mkdir(parents=True, exist_ok=True)
++    probes = [
++        ("upstream_ht", "h2", "GE2 jacket water and exhaust", "18:20", "18:40"),
++        ("absorber_generator", "h3", "AC1 generator", "12:40", "12:50"),
++        ("upstream_ge1", "h2", "GE1 jacket water and exhaust", "18:20", "18:40"),
++    ]
++    results = []
++    for index, (name, base, unit, start, end) in enumerate(probes):
++        spec = copy.deepcopy(F.B.DAYS[base])
++        spec["status"]["outages"].append({"unit": unit, "from": start, "to": end})
++        item = {"id": name, "index": index, "base": base,
++                "season": "winter" if base == "h2" else "spring", "scenario": "upstream_part",
++                "spec": spec}
++        (out / f"{name}.spec.json").write_text(json.dumps(item, indent=2) + "\n")
++        result = F.one((item, out, 1))
++        results.append(result)
++        (out / "results.json").write_text(json.dumps(results, indent=2) + "\n")
++        print(json.dumps(result), flush=True)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/verify_v18_evidence.py b/tools/verify_v18_evidence.py
+new file mode 100644
+index 0000000..7de0d69
+--- /dev/null
++++ b/tools/verify_v18_evidence.py
+@@ -0,0 +1,147 @@
++"""Check immutable evidence and replay all 48 accepted fresh inputs at 120 s/day.
++
++The existing fresh run already invokes the canonical pytest suite and repeats
++each CLI. This independent pass validates persisted input identity, retains a
++plan and per-run timing for every day, and rechecks the actual case functions.
++MILP costs are reused only after validating the input/reference hashes to which
++the original fresh-run certificates belong.
++"""
++from __future__ import annotations
++
++import argparse
++from concurrent.futures import ThreadPoolExecutor
++import hashlib
++import importlib
++import json
++import os
++from pathlib import Path
++import subprocess
++import sys
++import time
++import traceback
++
++ROOT = Path(__file__).resolve().parents[1]
++TASK = ROOT / "tasks/energy-centre-dispatch"
++CHECKS = ROOT / "results/checks-v18"
++SEEDS = [2026, 2403, 87123]
++
++
++def digest(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++def hashes(path):
++    return {str(p.relative_to(path)): digest(p) for p in sorted(path.rglob("*"))
++            if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"}
++
++
++def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--out", type=Path, default=CHECKS / "evidence-verification")
++    ap.add_argument("--workers", type=int, default=3)
++    args = ap.parse_args()
++    args.out = args.out.resolve()
++    args.out.mkdir(parents=True, exist_ok=False)
++    sys.path.insert(0, str(ROOT / "tools"))
++    sys.path.insert(0, str(TASK / "tests"))
++    import build_energy_days as B
++    R = importlib.import_module("reference")
++    T = importlib.import_module("test_plans")
++    report = {"command": sys.argv, "reference_sha256": digest(TASK / "tests/reference.py"),
++              "oracle_sha256": hashes(TASK / "solution/app"), "fresh": {}}
++
++    # This also checks the absence of newly added visible paths.
++    visible = {"instruction.md": digest(TASK / "instruction.md"),
++               **{"environment/" + k: v for k, v in hashes(TASK / "environment").items()}}
++    archive = ROOT / "archive/energy-centre-dispatch-v8.1"
++    original = {"instruction.md": digest(archive / "instruction.md"),
++                **{"environment/" + k: v for k, v in hashes(archive / "environment").items()}}
++    assert visible == original
++    assert not list((TASK / "environment").rglob("*.pyc"))
++    report["A_visible_unchanged"] = {"files": len(visible), "sha256": visible}
++
++    metadata = json.loads((CHECKS / "final-matrix/metadata.json").read_text())
++    assert metadata["reference_sha256"] == report["reference_sha256"]
++    assert metadata["test_sha256"] == digest(TASK / "tests/test_plans.py")
++    for name, row in metadata["days"].items():
++        assert hashes(TASK / "tests/days" / name) == row["sha256"], name
++    report["matrix_inputs_and_verifier_unchanged"] = True
++
++    blind = CHECKS / "blind"
++    frozen = json.loads((blind / "FROZEN_SHA256.json").read_text())
++    for group in ("runtime_code_files", "input_data_files"):
++        for name, value in frozen[group].items():
++            assert digest(blind / name) == value, name
++    assert digest(blind / "instruction.md") == frozen["instruction_sha256"]
++    report["blind_runtime_frozen"] = frozen["runtime_code_sha256"]
++
++    cases = []
++    for seed in SEEDS:
++        base = CHECKS / "final-fresh-verified" / f"seed-{seed}"
++        manifest = json.loads((base / "manifest.json").read_text())
++        assert manifest["reference.py_sha256"] == report["reference_sha256"]
++        assert manifest["input_hashes_unchanged_after_evaluation"]
++        assert len(manifest["days"]) == 16
++        assert manifest["results"] and all(not r["failed"] and not r["errors"]
++                                           for r in manifest["results"].values())
++        for name, row in manifest["days"].items():
++            source = base / "tests/days" / name
++            expected = row["sha256"]
++            assert hashes(source) == expected, (seed, name, "persisted bytes changed")
++            replay = args.out / "regenerated" / f"seed-{seed}" / name
++            B.write_day(replay, row["spec"])
++            assert hashes(replay) == expected, (seed, name, "spec does not regenerate exact bytes")
++            cases.append((seed, name, source, row))
++    report["fresh_specs_regenerate_exact_bytes"] = len(cases)
++
++    funcs = [(name, f) for name, f in vars(T).items() if name.startswith("test_")
++             and name != "test_same_plan_every_time" and callable(f)]
++    env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1", OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1")
++
++    def run(case):
++        seed, name, source, certificate = case
++        folder = args.out / "runs" / f"seed-{seed}" / name
++        folder.mkdir(parents=True)
++        cmd = [sys.executable, str(TASK / "solution/app/dispatch.py"), "--data", str(source),
++               "--output", str(folder / "plan.json")]
++        row = {"input_sha256": certificate["sha256"], "failures": {}}
++        start = time.monotonic()
++        try:
++            process = subprocess.run(cmd, capture_output=True, text=True, env=env, timeout=120)
++            row["seconds"] = time.monotonic() - start
++            (folder / "process.log").write_text("$ " + " ".join(cmd) + "\n" + process.stdout + process.stderr)
++            assert process.returncode == 0, process.stderr
++            plan = json.loads((folder / "plan.json").read_text())
++            day = R.Day(source)
++            day.least_cost = lambda: {"cost": certificate["milp_cost_gbp"]}
++            flows = day.true_flows(plan)
++            row["cost_gbp"] = float(flows["cost"].sum())
++            row["delta_gbp"] = row["cost_gbp"] - certificate["milp_cost_gbp"]
++            for test_name, function in funcs:
++                try:
++                    function((day, plan, flows))
++                except Exception:
++                    row["failures"][test_name] = traceback.format_exc()
++            assert hashes(source) == certificate["sha256"]
++        except Exception:
++            row["seconds"] = time.monotonic() - start
++            row["failures"]["execution_or_input_identity"] = traceback.format_exc()
++        row["passed"] = not row["failures"]
++        return f"{seed}/{name}", row
++
++    with ThreadPoolExecutor(max_workers=args.workers) as pool:
++        for name, row in pool.map(run, cases):
++            report["fresh"][name] = row
++            print(name, "PASS" if row["passed"] else "FAIL", row["seconds"], flush=True)
++            (args.out / "report.json").write_text(json.dumps(report, indent=2) + "\n")
++    report["fresh_all_passed"] = all(row["passed"] for row in report["fresh"].values())
++    report["max_fresh_cli_seconds"] = max(row["seconds"] for row in report["fresh"].values())
++    report["max_fresh_absolute_cost_delta_gbp"] = max(abs(row.get("delta_gbp", float("inf")))
++                                                       for row in report["fresh"].values())
++    (args.out / "report.json").write_text(json.dumps(report, indent=2) + "\n")
++    assert report["fresh_all_passed"]
++    print("EVIDENCE VERIFIED", len(cases), "fresh days; max CLI seconds", report["max_fresh_cli_seconds"])
++
++
++if __name__ == "__main__":
++    main()

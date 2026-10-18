@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+    "tools/energy_mutants.py",
+    "gas_net_to_gross_divided",
+    "towers_take_cooling_only",
+    "kva_as_kw",
+    "cewt_without_minimum",
+    "outage_by_period_start",
+    "ht_source_outage_ignored",
+    "outages_engines_only",
+    "outages_one_per_unit",
+    "midnight_state_ignored",
+    "plan_varies_between_runs"
+  ],
+  "ECD_TASK": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/no-inference",
+  "exit_code": 0,
+  "seconds": 80.8190367501229
+}

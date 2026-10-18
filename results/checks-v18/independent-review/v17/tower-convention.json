@@ -1,0 +1,75 @@
+{
+  "change": "row[iA + j] = a.rejected(1.0) -> row[iA + j] = a.rejected(1.0) + a.aux_per_kw",
+  "days": {
+    "visible": {
+      "oracle": {
+        "cost_gbp": 6303.5604091900495,
+        "minus_milp_gbp": 8.976349636213854e-05,
+        "max_tower_excess_excluding_aux_kw": -244.679052631579,
+        "max_tower_excess_including_aux_kw": -231.03498263157917
+      },
+      "strict-aux": {
+        "cost_gbp": 6303.5604091900495,
+        "minus_milp_gbp": 8.976349636213854e-05,
+        "max_tower_excess_excluding_aux_kw": -244.679052631579,
+        "max_tower_excess_including_aux_kw": -231.03498263157917
+      }
+    },
+    "h1": {
+      "oracle": {
+        "cost_gbp": 6420.8352424052955,
+        "minus_milp_gbp": -5.812224697746387,
+        "max_tower_excess_excluding_aux_kw": 0.0002485296772647416,
+        "max_tower_excess_including_aux_kw": 13.4144370496183
+      },
+      "strict-aux": {
+        "cost_gbp": 6426.647743955096,
+        "minus_milp_gbp": 0.0002768520544123021,
+        "max_tower_excess_excluding_aux_kw": -4.2635469390043,
+        "max_tower_excess_including_aux_kw": 0.0005985092666378478
+      }
+    },
+    "h2": {
+      "oracle": {
+        "cost_gbp": 8460.684741328023,
+        "minus_milp_gbp": -9.636619870434515e-05,
+        "max_tower_excess_excluding_aux_kw": -3695.824535315985,
+        "max_tower_excess_including_aux_kw": -3695.824535315985
+      },
+      "strict-aux": {
+        "cost_gbp": 8460.684741328023,
+        "minus_milp_gbp": -9.636619870434515e-05,
+        "max_tower_excess_excluding_aux_kw": -3695.824535315985,
+        "max_tower_excess_including_aux_kw": -3695.824535315985
+      }
+    },
+    "h3": {
+      "oracle": {
+        "cost_gbp": 5345.191044264344,
+        "minus_milp_gbp": 4.736275695904624e-05,
+        "max_tower_excess_excluding_aux_kw": -1709.0481879739978,
+        "max_tower_excess_including_aux_kw": -1691.7016059739976
+      },
+      "strict-aux": {
+        "cost_gbp": 5345.191044264344,
+        "minus_milp_gbp": 4.736275695904624e-05,
+        "max_tower_excess_excluding_aux_kw": -1709.0481879739978,
+        "max_tower_excess_including_aux_kw": -1691.7016059739976
+      }
+    },
+    "h4": {
+      "oracle": {
+        "cost_gbp": 7296.092844619048,
+        "minus_milp_gbp": -14.878995913984909,
+        "max_tower_excess_excluding_aux_kw": 0.0004065888497279957,
+        "max_tower_excess_including_aux_kw": 13.697105378546894
+      },
+      "strict-aux": {
+        "cost_gbp": 7310.971820541148,
+        "minus_milp_gbp": -1.9991884983028285e-05,
+        "max_tower_excess_excluding_aux_kw": -11.589403796460374,
+        "max_tower_excess_including_aux_kw": 0.0005466145980790316
+      }
+    }
+  }
+}

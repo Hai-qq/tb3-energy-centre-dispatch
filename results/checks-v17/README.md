@@ -17,6 +17,12 @@ hidden days, the solution and the verifier (see `HARDENING.md`, "Rounds v13 to v
 The solution is within GBP 0.001 of the whole-day optimum on all five days, and a tool that
 counts a part-time PV outage by its minutes in service passes too (either reading is accepted).
 
+Correction (2026-10-17, found in the v18 review and confirmed in
+`../checks-v18/independent-review/`): on h1 and h4 the solution was GBP 5.81 and GBP 14.88
+*below* the whole-day MILP, not within GBP 0.001. The MILP counts the absorption chiller's
+auxiliary power in the towers' load and the solution did not; the cost test passes either
+reading, so no test was affected. v18's solution takes the MILP's reading.
+
 ## Standard trials: Opus 0 of 3, GPT 0 of 3
 
 | trial | agent time | header | outages of parts | verifier |

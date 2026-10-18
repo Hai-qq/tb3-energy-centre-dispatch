@@ -1,0 +1,144 @@
+{
+  "checks": {
+    "verifiable": {
+      "outcome": "pass",
+      "explanation": "Verification is fully programmatic: it reruns the tool twice per day on five days, recomputes all physics/costs from an independently-written reference model with justified numeric tolerances, and requires no LLM judgment or runtime network installs. I confirmed the reference's own MILP and the plan checks execute deterministically and fast (<1s for 55 assertions)."
+    },
+    "solvable": {
+      "outcome": "pass",
+      "explanation": "I built a clean venv, ran the provided solution's dispatch.py against all five day folders, and it passed all 55 test_plans.py assertions (balances, limits, gas/cost tolerances, determinism, least-cost bound) in well under the time budget, confirming a working solution exists."
+    },
+    "difficult": {
+      "outcome": "pass",
+      "explanation": "Fixing the tool requires correct modeling of CHP heat recovery circuits, part-load non-convexity, absorption-chiller cooling-water interactions, reactive power/kVA limits, outage propagation through shared sub-components, and gas CV conversion — genuine multi-energy systems engineering expertise well beyond an undergraduate exercise."
+    },
+    "interesting": {
+      "outcome": "pass",
+      "explanation": "This is a realistic professional scenario (a hospital trigeneration energy centre's day-ahead dispatch tool), the kind of debugging/engineering work an energy centre operations engineer or CHP consultant would actually be paid to do."
+    },
+    "outcome_verified": {
+      "outcome": "pass",
+      "explanation": "The instruction states only the end goal (produce a correct, least-cost plan in the existing format) and imposes no required tool/approach; tests check only the resulting plan.json's physical and economic consistency, not how it was produced."
+    },
+    "anti_cheat_robustness": {
+      "outcome": "pass",
+      "explanation": "Separate-verifier mode means the agent never sees the hidden h1-h4 day data or reference.py; I confirmed the buggy baseline fails 14 tests and errors on 20 more across hidden days, showing hardcoding the visible day cannot pass, and the verifier image is chmod go-rwx with only declared artifacts uploaded."
+    },
+    "task_security": {
+      "outcome": "pass",
+      "explanation": "Reviewed both Dockerfiles, test.sh, and all planner/reference code; found only legitimate package installs, no exfiltration, no obfuscation, no prompt injection, and the only process-killing logic (kill_nobody) is scoped to the sandboxed unprivileged test runs."
+    },
+    "functional_verification": {
+      "outcome": "pass",
+      "explanation": "Tests execute the agent's dispatch.py as a subprocess and recompute physical/economic quantities from its JSON output via an independent model; nothing greps source code or checks for keywords."
+    },
+    "deterministic_reproducible": {
+      "outcome": "pass",
+      "explanation": "numpy/scipy versions are pinned identically in both Dockerfiles with a pinned base image digest, no live services are used, and the suite explicitly reruns each day's plan a second time to check for nondeterminism (test_same_plan_every_time), which passed in my local run."
+    },
+    "essential_difficulty": {
+      "outcome": "pass",
+      "explanation": "Tolerances (1 kW balances, 0.5 kVA grid margin, 0.2%/0.1% gas and cost, £0.50-or-0.02% cost-optimality) are generous engineering allowances, not precision traps; failures stem from physical modeling errors, not formatting."
+    },
+    "test_instruction_alignment": {
+      "outcome": "pass",
+      "explanation": "Every test (balances, unit limits, tower limits, grid limits, reported gas/cost, determinism, least-cost) traces directly to a requirement stated in instruction.md, and the stated requirements (correctness, least-cost, metered gas/cost, format preservation, runtime limits, Python/NumPy/SciPy-only) are all covered directly or via the separate-verifier architecture (e.g., extra dependencies would fail to import in the clean verifier image)."
+    },
+    "novel": {
+      "outcome": "pass",
+      "explanation": "This is a bespoke multi-energy CHP dispatch codebase with specific synthetic data and a custom set of ~8-10 interacting bugs; it cannot be solved by recalling a textbook algorithm or memorized solution."
+    },
+    "agentic": {
+      "outcome": "pass",
+      "explanation": "Solving this requires exploring a multi-file Python package, understanding the physical plant model, iteratively running the tool, and debugging numerical/modeling errors across several files — not a one-shot generation task."
+    },
+    "reviewable": {
+      "outcome": "pass",
+      "explanation": "The README gives a thorough domain explanation for non-specialist reviewers, and expected values in tests are derived from an independent reference model/MILP (day.least_cost(), day.true_flows()) rather than hardcoded numbers, letting a reviewer verify the process."
+    },
+    "instruction_concision": {
+      "outcome": "pass",
+      "explanation": "instruction.md is concise, human-written, uses absolute paths throughout (/app/data/plant.json, /app/dispatch.py, /output/plan.json), states the goal upfront without step-by-step procedure, and includes no unnecessary headings or fluff."
+    },
+    "solution_quality": {
+      "outcome": "pass",
+      "explanation": "solve.sh copies the fixed source files into place (acceptable per guidance) and then runs the actual dispatch.py, which performs genuine LP/MILP-based computation; the larger fixed files are kept in solution/app/ as separate files rather than heredocs in solve.sh."
+    },
+    "separate_verifier_configured": {
+      "outcome": "pass",
+      "explanation": "All verifier inputs are either declared artifacts (/app/dispatch.py, /app/planner) or baked into tests/Dockerfile (reference.py, hidden day data); verifier tooling (numpy, scipy, pytest, pytest-json-ctrf) is pre-installed in tests/Dockerfile with no runtime installs in test.sh; and the duplicated environment/data vs tests/days/visible assets are byte-identical, with matching pinned base image digest and numpy/scipy versions across both Dockerfiles."
+    },
+    "environment_hygiene": {
+      "outcome": "pass",
+      "explanation": "environment/Dockerfile copies only data, planner, and dispatch.py (no tests/ or solution/); test-only deps (pytest, pytest-json-ctrf) live solely in tests/Dockerfile; apt installs in environment/Dockerfile are unpinned with proper update/cleanup, and tests/Dockerfile has no apt usage at all."
+    },
+    "structured_data_schema": {
+      "outcome": "pass",
+      "explanation": "The output schema is not a fresh specification the agent must guess — the instruction explicitly directs the agent to keep the existing tool's plan.json format, and that format is already concretely defined in the (buggy) code the agent is given, which unambiguously documents every field."
+    },
+    "typos": {
+      "outcome": "pass",
+      "explanation": "Reviewed all key file paths, JSON keys, and identifiers across instruction.md, task.toml, Dockerfiles, and all Python files; found no typos, and a targeted grep for common misspellings found nothing."
+    },
+    "difficulty_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The README's Difficulty explanation concretely names the specific physical modeling pitfalls (no dump radiator forcing all HT heat use, outage propagation through shared sub-parts, absorption-chiller cooling-water setpoint requirements), states the data is synthetic but realistic, and identifies who would do this work (an energy centre operations engineer)."
+    },
+    "solution_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The README's Solution explanation accurately summarizes the actual fix strategy (piecewise part-load segments, per-half-hour absorbing on/off LP comparison, day-wide DP for starts, kvar in the grid limit, corrected heat/gas/calendar handling), fully consistent with what I verified in the solution/app files."
+    },
+    "verification_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The README explains what is checked and why, and explicitly justifies its tolerance calibration (cross-validated against an alternative-algorithm reference within £0.0003, and states each of 26 incomplete fixes individually fails a test), consistent with the tolerance values actually found in test_plans.py."
+    },
+    "category_and_tags": {
+      "outcome": "pass",
+      "explanation": "category \"Operations\" / subcategory \"Energy\" fit a CHP/trigeneration dispatch task well, and tags (energy-systems, chp, trigeneration, unit-commitment, mixed-integer-programming, debugging) are specific and descriptive rather than generic."
+    },
+    "task_name": {
+      "outcome": "pass",
+      "explanation": "The folder name \"energy-centre-dispatch\" is a concise, descriptive, kebab-case, 3-word slug that clearly conveys the task's subject."
+    },
+    "resource_configuration": {
+      "outcome": "pass",
+      "explanation": "Timeouts and resources appear deliberately tuned rather than left at defaults: verifier timeout (1800s) comfortably covers the worst-case 10 subprocess runs at up to 150s each, agent timeout (8h) matches TB3's hard-task norm, and cpus/memory were raised from defaults to accommodate the MILP/LP solves without being excessive; my local runs took well under a second per day."
+    },
+    "task_readme": {
+      "outcome": "pass",
+      "explanation": "README.md includes all required sections (Difficulty, Solution, Verification explanations, Relevant experience) plus a metadata summary, with no missing/empty sections or unnecessary duplication of instruction/solution content."
+    },
+    "expert_time_estimate": {
+      "outcome": "pass",
+      "explanation": "expert_time_estimate_hours = 4.0 is non-default, non-zero, and plausible given the described difficulty (debugging several interacting physical-modeling bugs across a few hundred lines of code)."
+    },
+    "task_toml_schema": {
+      "outcome": "pass",
+      "explanation": "task.toml contains only recognized fields in [task], [metadata], [verifier], [agent], and [environment], with no invented fields."
+    },
+    "no_extraneous_files": {
+      "outcome": "pass",
+      "explanation": "Every file in the task directory is required by a Dockerfile, the instruction, the tests, or solve.sh; I found and removed a stray __pycache__ directory that my own test run had created, after which the tree was clean."
+    },
+    "artifact_efficiency": {
+      "outcome": "pass",
+      "explanation": "The only artifacts are the agent's actual deliverable code (/app/dispatch.py and /app/planner, a few hundred lines total) — there is no large build-time-fixed tree or dependency directory being shipped unnecessarily, and no [[verifier.collect]] hooks are used."
+    },
+    "verifier_execution_isolation": {
+      "outcome": "pass",
+      "explanation": "test.sh locks /logs/verifier to 700 and pre-writes reward.txt=0 before running any agent code, executes the agent's dispatch.py as unprivileged user 'nobody' with a bounded 150s timeout, kills all nobody-owned processes after each run, and only the root-run pytest (which never imports or executes agent code, only reads its JSON output) determines the final reward."
+    },
+    "ctrf_reporting": {
+      "outcome": "pass",
+      "explanation": "test.sh runs pytest with --ctrf /logs/verifier/ctrf.json against test_plans.py, matching the standard CTRF reporting pattern for a pytest-based verifier."
+    },
+    "do_not_modify_enforced": {
+      "outcome": "pass",
+      "explanation": "The instruction's 'data files are correct and should not be modified' constraint is enforced via verifier isolation: the separate-verifier container uses its own pristine baked copies of all five days' data, so any agent-side modification to /app/data never reaches or influences grading."
+    },
+    "binary_reward": {
+      "outcome": "pass",
+      "explanation": "test.sh only ever writes exactly 0 or 1 to reward.txt: 0 is pre-written, then overwritten with 1 or 0 based solely on the pytest exit status, with no fractional or weighted scoring path."
+    }
+  }
+}

@@ -169,9 +169,9 @@ class Day:
                 q = float(p["boilers_kw"][b["id"]])
                 ok &= -0.5 <= q <= (b["max_kw"] if self.available[b["id"]][t] else 0.0) + 0.5
                 boiler_gas += q / b["efficiency"]
-            # The inlet-temperature requirement applies to any positive AC duty;
-            # the rating tolerance must not change the COP regime of other units.
-            absorbing = any(float(p["chillers_kw"][a["id"]]) > 1e-9 for a in self.plant["absorption_chillers"])
+            # 0.01 kW is above solver numerical noise but far below any
+            # meaningful AC duty; the rating tolerance must not change the COP regime.
+            absorbing = any(float(p["chillers_kw"][a["id"]]) > 0.01 for a in self.plant["absorption_chillers"])
             ec_max = 0.0
             for c in self.plant["electric_chillers"]:
                 q = float(p["chillers_kw"][c["id"]])

@@ -1,0 +1,60 @@
+...........F.........F.........F.........F.............                  [100%]
+=================================== FAILURES ===================================
+________________ test_units_within_ratings_and_availability[h1] ________________
+
+case = (<reference.Day object at 0x109f2d590>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 8... 45.458192  , 45.817452  , 46.015826  , 46.303234  , 46.678114  ,
+       47.007696  , 45.9458    , 43.9372    ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x109f49710>()
+E        +    where <built-in method all of numpy.ndarray object at 0x109f49710> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True, False,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+________________ test_units_within_ratings_and_availability[h2] ________________
+
+case = (<reference.Day object at 0x109f2d950>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 1... 56.        , 56.        , 24.        , 24.        , 24.        ,
+       24.        , 56.        , 58.51482   ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x10a97ec70>()
+E        +    where <built-in method all of numpy.ndarray object at 0x10a97ec70> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n       False, False,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+________________ test_units_within_ratings_and_availability[h3] ________________
+
+case = (<reference.Day object at 0x109f2e0d0>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 1... 66.78934346, 67.20408193, 66.0056    , 35.317688  , 35.331746  ,
+       35.714436  , 36.567288  , 36.42046   ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x10a8794d0>()
+E        +    where <built-in method all of numpy.ndarray object at 0x10a8794d0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True, False,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+________________ test_units_within_ratings_and_availability[h4] ________________
+
+case = (<reference.Day object at 0x109f2ead0>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 0... 44.920864  , 44.59753   , 44.881814  , 45.4332    , 45.884618  ,
+       46.626568  , 46.90929   , 47.118598  ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x10a8ac0f0>()
+E        +    where <built-in method all of numpy.ndarray object at 0x10a8ac0f0> = array([ True,  True,  True,  True,  True,  True,  True,  True, False,\n       False, False, False,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+=========================== short test summary info ============================
+FAILED test_plans.py::test_units_within_ratings_and_availability[h1] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h2] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h3] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h4] - assert...
+4 failed, 51 passed in 0.91s

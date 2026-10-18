@@ -34,6 +34,13 @@ curl --fail --silent --show-error --location "$PIN_URL" --output "$WORK/tool/doc
 echo "$PIN_SHA256  $WORK/tool/dockerfile-pin.tar.gz" | shasum -a 256 -c -
 
 COMMIT=$(git -C "$TB3" rev-parse HEAD)
+# Newer CI steps read the checks' commit with git, which the container lacks: give them the checkout's.
+python3 - "$WORK/run.sh" "$COMMIT" <<'EOF'
+import re, sys
+path, commit = sys.argv[1], sys.argv[2]
+text = open(path).read()
+open(path, "w").write(re.sub(r"^CHECKS_REF=\$\(git .*\)$", f"CHECKS_REF={commit}", text, flags=re.M))
+EOF
 {
   echo "Terminal-Bench checkout: $COMMIT"
   echo "Task: tasks/$TASK"

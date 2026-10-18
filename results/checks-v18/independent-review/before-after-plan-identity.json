@@ -1,0 +1,136 @@
+{
+  "oracle": {
+    "identical": true,
+    "written_plan_count": 10,
+    "sha256": {
+      "h1.json": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a",
+      "h1.rerun.json": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a",
+      "h2.json": "64a453bd96c7485d8f5ad842eb82c8a0dfc38c828128a532eee85a4acf84ff74",
+      "h2.rerun.json": "64a453bd96c7485d8f5ad842eb82c8a0dfc38c828128a532eee85a4acf84ff74",
+      "h3.json": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3",
+      "h3.rerun.json": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3",
+      "h4.json": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44",
+      "h4.rerun.json": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44",
+      "visible.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "visible.rerun.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+    }
+  },
+  "strong-v16-claude": {
+    "identical": true,
+    "written_plan_count": 10,
+    "sha256": {
+      "h1.json": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986",
+      "h1.rerun.json": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986",
+      "h2.json": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21",
+      "h2.rerun.json": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21",
+      "h3.json": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3",
+      "h3.rerun.json": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3",
+      "h4.json": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0",
+      "h4.rerun.json": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0",
+      "visible.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "visible.rerun.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+    }
+  },
+  "patched-v17-claude": {
+    "identical": true,
+    "written_plan_count": 10,
+    "sha256": {
+      "h1.json": "19ebe767a597941786e2c03f29fbf7f8725abd3b123bbcb1d9bc42ac780ccc64",
+      "h1.rerun.json": "19ebe767a597941786e2c03f29fbf7f8725abd3b123bbcb1d9bc42ac780ccc64",
+      "h2.json": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21",
+      "h2.rerun.json": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21",
+      "h3.json": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3",
+      "h3.rerun.json": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3",
+      "h4.json": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54",
+      "h4.rerun.json": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54",
+      "visible.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "visible.rerun.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+    }
+  },
+  "patched-v17-codex": {
+    "identical": true,
+    "written_plan_count": 10,
+    "sha256": {
+      "h1.json": "ec35385b22f11d668bf7802d2f504945254bdd78c44b92f3fb153dd69b28c155",
+      "h1.rerun.json": "ec35385b22f11d668bf7802d2f504945254bdd78c44b92f3fb153dd69b28c155",
+      "h2.json": "ea4d1b071cb44fd829e305c6dc69cd054e677ac1eb78659da38b4f00a97fb815",
+      "h2.rerun.json": "ea4d1b071cb44fd829e305c6dc69cd054e677ac1eb78659da38b4f00a97fb815",
+      "h3.json": "b35662ed1c6afce1f868bb3552f6714f28acb02f634e3bdedfa9d89f33d938f7",
+      "h3.rerun.json": "b35662ed1c6afce1f868bb3552f6714f28acb02f634e3bdedfa9d89f33d938f7",
+      "h4.json": "678f8278a400b0d6af8b5c48ddaa63e848df7a4a68a4204c381dc0e656617d47",
+      "h4.rerun.json": "678f8278a400b0d6af8b5c48ddaa63e848df7a4a68a4204c381dc0e656617d47",
+      "visible.json": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c",
+      "visible.rerun.json": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+    }
+  },
+  "v17-run1-claude": {
+    "identical": true,
+    "written_plan_count": 2,
+    "sha256": {
+      "visible.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "visible.rerun.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+    }
+  },
+  "v17-run1-codex": {
+    "identical": true,
+    "written_plan_count": 2,
+    "sha256": {
+      "visible.json": "411a53c06a598cec17c4ecc4782f2cd2f4dcf98293baa8dab4a06028a4221999",
+      "visible.rerun.json": "411a53c06a598cec17c4ecc4782f2cd2f4dcf98293baa8dab4a06028a4221999"
+    }
+  },
+  "v17-run2-claude": {
+    "identical": true,
+    "written_plan_count": 10,
+    "sha256": {
+      "h1.json": "bb423d1c67e4a8987b69459a92111e6eddd5ca396270a0c9872dc50119abbdc0",
+      "h1.rerun.json": "bb423d1c67e4a8987b69459a92111e6eddd5ca396270a0c9872dc50119abbdc0",
+      "h2.json": "5b6d7138fcbadb49aeabc764776fb9cc5d824d7106289d4dc454715b58e3468d",
+      "h2.rerun.json": "5b6d7138fcbadb49aeabc764776fb9cc5d824d7106289d4dc454715b58e3468d",
+      "h3.json": "f78e9b4304c83f21cbf435eb90d81385c8064eee0aa180785fc40fece079b41e",
+      "h3.rerun.json": "f78e9b4304c83f21cbf435eb90d81385c8064eee0aa180785fc40fece079b41e",
+      "h4.json": "011ac74a50be21e97599fd621e65a26147ccc292a050dca67f1bf1c22a4cd82d",
+      "h4.rerun.json": "011ac74a50be21e97599fd621e65a26147ccc292a050dca67f1bf1c22a4cd82d",
+      "visible.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "visible.rerun.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+    }
+  },
+  "v17-run2-codex": {
+    "identical": true,
+    "written_plan_count": 10,
+    "sha256": {
+      "h1.json": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2",
+      "h1.rerun.json": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2",
+      "h2.json": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58",
+      "h2.rerun.json": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58",
+      "h3.json": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22",
+      "h3.rerun.json": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22",
+      "h4.json": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc",
+      "h4.rerun.json": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc",
+      "visible.json": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c",
+      "visible.rerun.json": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+    }
+  },
+  "v17-run3-claude": {
+    "identical": true,
+    "written_plan_count": 8,
+    "sha256": {
+      "h1.json": "040edd386ee049973d62f8d5586d1a3c585e559cca3286a6282b6a9dc873af7d",
+      "h1.rerun.json": "040edd386ee049973d62f8d5586d1a3c585e559cca3286a6282b6a9dc873af7d",
+      "h2.json": "76c67ec94e2399b60afd636c9db9ac3702117a3d183623d917cc286831e14e6d",
+      "h2.rerun.json": "76c67ec94e2399b60afd636c9db9ac3702117a3d183623d917cc286831e14e6d",
+      "h4.json": "53fc466dae1f82d27099a5f963debdc5828739725a830ce27325dc4857c2bf8e",
+      "h4.rerun.json": "53fc466dae1f82d27099a5f963debdc5828739725a830ce27325dc4857c2bf8e",
+      "visible.json": "b02203f0d025524b930037bb25bbcd3733832430f4aa1fa3191ffa41fac83316",
+      "visible.rerun.json": "b02203f0d025524b930037bb25bbcd3733832430f4aa1fa3191ffa41fac83316"
+    }
+  },
+  "v17-run3-codex": {
+    "identical": true,
+    "written_plan_count": 2,
+    "sha256": {
+      "visible.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "visible.rerun.json": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+    }
+  }
+}
