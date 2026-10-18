@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "changed_files": [
+    "environment/data/supply.json",
+    "solution/app/planner/optimize.py",
+    "tests/days/h1/supply.json",
+    "tests/days/h2/supply.json",
+    "tests/days/h3/supply.json",
+    "tests/days/h4/supply.json",
+    "tests/days/visible/supply.json",
+    "tests/reference.py",
+    "tests/test_plans.py"
+  ],
+  "environment_changes": [
+    "environment/data/supply.json"
+  ],
+  "protected_files_unchanged": true
+}

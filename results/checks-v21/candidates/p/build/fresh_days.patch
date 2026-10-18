@@ -1,0 +1,29 @@
+--- tools/fresh_days.py	2026-10-18 18:11:29
++++ results/checks-v21/candidates/p/build/fresh_days.py	2026-10-18 18:48:22
+@@ -28,7 +28,7 @@
+ from datetime import date, timedelta
+ from pathlib import Path
+ 
+-ROOT = Path(__file__).resolve().parents[1]
++ROOT = Path(__file__).resolve().parents[5]
+ TASK = Path(os.environ.get("ECD_TASK", ROOT / "tasks" / "energy-centre-dispatch")).resolve()
+ sys.path.insert(0, str(ROOT / "tools"))
+ sys.path.insert(0, str(TASK / "tests"))
+@@ -48,6 +48,9 @@
+          "GE2 jacket water and exhaust"]
+ 
+ 
++UNITS += [c["pump"] for c in B.PLANT["heat_circuits"].values() if "pump" in c]
++
++
+ def last_sunday(year: int, month: int) -> date:
+     d = date(year, month + 1, 1) - timedelta(days=1)
+     while d.weekday() != 6:
+@@ -92,6 +95,7 @@
+     names = {u["id"] for k in ("engines", "boilers", "electric_chillers", "absorption_chillers") for u in plant[k]}
+     names |= set(plant["cooling_towers"]["cells"]) | {plant["pv"]["id"]}
+     names |= {x for c in plant["heat_circuits"].values() for x in c["from"] + c["to"]}
++    names |= {c["pump"] for c in plant["heat_circuits"].values() if "pump" in c}
+     status = json.loads((folder / "status.json").read_text())
+     if not set(status["running_at_midnight"]) <= {e["id"] for e in plant["engines"]}:
+         problems.append("running_at_midnight names a unit that is not an engine")

@@ -1,0 +1,7 @@
+gate A passed p
+{'day': 'visible', 'date': '2026-07-21', 'least_cost_gbp': 6303.560319426553, 'true_flows_cost_gbp': 6303.5604091900495, 'gap_gbp': 8.976349636213854e-05, 'passed': True}
+{'day': 'h1', 'date': '2026-08-08', 'least_cost_gbp': 6535.572763781994, 'true_flows_cost_gbp': 6535.573030393996, 'gap_gbp': 0.0002666120026333374, 'passed': True}
+{'day': 'h2', 'date': '2026-01-14', 'least_cost_gbp': 8879.731991258708, 'true_flows_cost_gbp': 8879.731915146565, 'gap_gbp': -7.61121427785838e-05, 'passed': True}
+{'day': 'h3', 'date': '2026-04-20', 'least_cost_gbp': 5482.238751854666, 'true_flows_cost_gbp': 5482.238795915144, 'gap_gbp': 4.406047810334712e-05, 'passed': True}
+{'day': 'h4', 'date': '2026-07-29', 'least_cost_gbp': 7310.971840533033, 'true_flows_cost_gbp': 7310.971820541148, 'gap_gbp': -1.9991884983028285e-05, 'passed': True}
+pressure [{'day': 'h1', 'date': '2026-08-08', 'outage': {'unit': 'LT pump 1', 'from': '18:10', 'to': '19:20'}, 'engine': 'GE1', 'periods': [{'start': '18:00', 'ignored_kwe': 1200.0, 'fixed_kwe': 0.0}, {'start': '18:30', 'ignored_kwe': 1200.0, 'fixed_kwe': 0.0}, {'start': '19:00', 'ignored_kwe': 1200.0, 'fixed_kwe': 0.0}]}, {'day': 'h3', 'date': '2026-04-20', 'outage': {'unit': 'LT pump 2', 'from': '17:10', 'to': '17:20'}, 'engine': 'GE2', 'periods': [{'start': '17:00', 'ignored_kwe': 600.0, 'fixed_kwe': 0.0}]}]

@@ -1,0 +1,297 @@
+{
+  "mutants": [
+    "weather_by_utc_date",
+    "two_point_curve",
+    "gas_net_to_gross_divided",
+    "starts_not_in_decision",
+    "heat_can_be_dumped",
+    "lt_heat_counted",
+    "towers_take_cooling_only",
+    "kva_ignores_engines",
+    "absorber_needs_cold_weather",
+    "weekend_from_utc_start",
+    "kva_as_kw",
+    "kva_engines_absorb_kvar",
+    "towers_absorber_only",
+    "cop_at_dry_bulb",
+    "cewt_without_minimum",
+    "no_engine_aux",
+    "no_lthw_loss",
+    "outages_ignored",
+    "outage_by_period_start",
+    "phe1_outage_ignored",
+    "lt_radiator_outage_ignored",
+    "intercooler_outage_ignored",
+    "ht_source_outage_ignored",
+    "parts_by_name_prefix",
+    "ac_generator_outage_ignored",
+    "condenser_outage_ignored",
+    "absorption_chiller_parts_ignored",
+    "outages_engines_only",
+    "tower_cell_outage_ignored",
+    "pv_outage_ignored",
+    "kva_positive_reactive_only",
+    "outages_one_per_unit",
+    "outage_capacity_prorated",
+    "absorber_cooling_water_ignored",
+    "header_not_shared",
+    "midnight_state_ignored",
+    "saturday_is_weekday",
+    "import_total_in_kw",
+    "grid_flag_without_generators",
+    "plan_varies_between_runs",
+    "exits_with_error_after_writing",
+    "hangs_after_writing",
+    "lt_pump_outage_ignored"
+  ],
+  "mutant_count": 43,
+  "all_patch_anchors_match_once": true,
+  "patches": [
+    {
+      "mutant": "weather_by_utc_date",
+      "file": "planner/data.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "two_point_curve",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "gas_net_to_gross_divided",
+      "file": "planner/tariff.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "starts_not_in_decision",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "starts_not_in_decision",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "heat_can_be_dumped",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "lt_heat_counted",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "towers_take_cooling_only",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "towers_take_cooling_only",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "kva_ignores_engines",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "absorber_needs_cold_weather",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "absorber_needs_cold_weather",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "weekend_from_utc_start",
+      "file": "planner/tariff.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "weekend_from_utc_start",
+      "file": "planner/tariff.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "kva_as_kw",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "kva_engines_absorb_kvar",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "towers_absorber_only",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "cop_at_dry_bulb",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "cewt_without_minimum",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "no_engine_aux",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "no_lthw_loss",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "outages_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "outage_by_period_start",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "phe1_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "lt_radiator_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "intercooler_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "ht_source_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "parts_by_name_prefix",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "ac_generator_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "condenser_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "absorption_chiller_parts_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "outages_engines_only",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "tower_cell_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "pv_outage_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "kva_positive_reactive_only",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "outages_one_per_unit",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "outage_capacity_prorated",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "absorber_cooling_water_ignored",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "header_not_shared",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "header_not_shared",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "midnight_state_ignored",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "saturday_is_weekday",
+      "file": "planner/tariff.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "import_total_in_kw",
+      "file": "dispatch.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "grid_flag_without_generators",
+      "file": "planner/optimize.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "plan_varies_between_runs",
+      "file": "dispatch.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "plan_varies_between_runs",
+      "file": "dispatch.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "exits_with_error_after_writing",
+      "file": "dispatch.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "hangs_after_writing",
+      "file": "dispatch.py",
+      "anchor_count": 1
+    },
+    {
+      "mutant": "lt_pump_outage_ignored",
+      "file": "planner/plant.py",
+      "anchor_count": 1
+    }
+  ],
+  "shared_tool_sha256": "a5cd11e8b6cf91ca600e72b04eb5bb1705da7a5e6665f64a7a23b1e0c1824029"
+}

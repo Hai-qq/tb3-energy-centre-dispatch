@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "changed_files": [
+    "environment/data/plant.json",
+    "solution/app/planner/plant.py",
+    "tests/days/h1/plant.json",
+    "tests/days/h1/status.json",
+    "tests/days/h2/plant.json",
+    "tests/days/h3/plant.json",
+    "tests/days/h3/status.json",
+    "tests/days/h4/plant.json",
+    "tests/days/visible/plant.json",
+    "tests/reference.py",
+    "tests/test_plans.py"
+  ],
+  "environment_changes": [
+    "environment/data/plant.json"
+  ],
+  "protected_files_unchanged": true
+}

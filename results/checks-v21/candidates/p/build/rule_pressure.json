@@ -1,0 +1,46 @@
+[
+  {
+    "day": "h1",
+    "date": "2026-08-08",
+    "outage": {
+      "unit": "LT pump 1",
+      "from": "18:10",
+      "to": "19:20"
+    },
+    "engine": "GE1",
+    "periods": [
+      {
+        "start": "18:00",
+        "ignored_kwe": 1200.0,
+        "fixed_kwe": 0.0
+      },
+      {
+        "start": "18:30",
+        "ignored_kwe": 1200.0,
+        "fixed_kwe": 0.0
+      },
+      {
+        "start": "19:00",
+        "ignored_kwe": 1200.0,
+        "fixed_kwe": 0.0
+      }
+    ]
+  },
+  {
+    "day": "h3",
+    "date": "2026-04-20",
+    "outage": {
+      "unit": "LT pump 2",
+      "from": "17:10",
+      "to": "17:20"
+    },
+    "engine": "GE2",
+    "periods": [
+      {
+        "start": "17:00",
+        "ignored_kwe": 600.0,
+        "fixed_kwe": 0.0
+      }
+    ]
+  }
+]
