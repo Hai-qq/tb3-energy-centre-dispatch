@@ -1,0 +1,269 @@
+{
+  "ecd16-run2-claude": {
+    "app": "results/v16-trials/ecd16-run2-claude/app",
+    "errors": {},
+    "failed": {},
+    "passed_tests": 55,
+    "seconds": 7.1898313330020756,
+    "total_tests": 55
+  },
+  "ecd17-run2-claude-parts": {
+    "app": "results/checks-v18/opponents/ecd17-run2-claude-parts/app",
+    "errors": {},
+    "failed": {},
+    "passed_tests": 55,
+    "seconds": 6.2573033748194575,
+    "total_tests": 55
+  },
+  "ecd17-run2-codex-parts": {
+    "app": "results/checks-v18/opponents/ecd17-run2-codex-parts/app",
+    "errors": {},
+    "failed": {},
+    "passed_tests": 55,
+    "seconds": 6.649559624958783,
+    "total_tests": 55
+  },
+  "ecd18-run1-claude": {
+    "app": "results/v18-trials/ecd18-run1-claude/app",
+    "errors": {},
+    "failed": {
+      "test_least_cost": [
+        "h3"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2",
+        "h4"
+      ]
+    },
+    "passed_tests": 51,
+    "seconds": 6.667031042044982,
+    "total_tests": 55
+  },
+  "ecd18-run1-codex": {
+    "app": "results/v18-trials/ecd18-run1-codex/app",
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "passed_tests": 51,
+    "seconds": 8.445132666034624,
+    "total_tests": 55
+  },
+  "ecd18-run2-claude": {
+    "app": "results/v18-trials/ecd18-run2-claude/app",
+    "errors": {
+      "h1": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h1.rerun": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h2": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h2.rerun": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h3": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h3.rerun": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h4": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "h4.rerun": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "visible": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']",
+      "visible.rerun": "exit 1: ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']"
+    },
+    "failed": {
+      "test_connection_limits": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_towers": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_electricity_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_heat_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_least_cost": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_plan_covers_the_day": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_gas_and_cost": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_same_plan_every_time": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "passed_tests": 0,
+    "seconds": 3.9921956658363342,
+    "total_tests": 55
+  },
+  "ecd18-run2-codex": {
+    "app": "results/v18-trials/ecd18-run2-codex/app",
+    "errors": {
+      "h1": "exit 1: RuntimeError: no feasible loading at 00:00",
+      "h1.rerun": "exit 1: RuntimeError: no feasible loading at 00:00",
+      "h2": "exit 1: RuntimeError: no feasible loading at 00:00",
+      "h2.rerun": "exit 1: RuntimeError: no feasible loading at 00:00",
+      "h3": "exit 1: RuntimeError: no feasible loading at 13:30",
+      "h3.rerun": "exit 1: RuntimeError: no feasible loading at 13:30",
+      "h4": "exit 1: RuntimeError: no feasible loading at 00:00",
+      "h4.rerun": "exit 1: RuntimeError: no feasible loading at 00:00"
+    },
+    "failed": {
+      "test_connection_limits": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_balance": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_towers": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_electricity_balance": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_heat_balance": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_least_cost": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_plan_covers_the_day": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_gas_and_cost": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_same_plan_every_time": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "passed_tests": 11,
+    "seconds": 4.461170542053878,
+    "total_tests": 55
+  },
+  "ecd18-run3-claude": {
+    "app": "results/v18-trials/ecd18-run3-claude/app",
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "passed_tests": 51,
+    "seconds": 8.759762041969225,
+    "total_tests": 55
+  },
+  "ecd18-run3-codex": {
+    "app": "results/v18-trials/ecd18-run3-codex/app",
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "passed_tests": 51,
+    "seconds": 6.8253300418145955,
+    "total_tests": 55
+  }
+}

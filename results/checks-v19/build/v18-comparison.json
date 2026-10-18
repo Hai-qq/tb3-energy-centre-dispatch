@@ -1,0 +1,37 @@
+{
+  "added_mutants": [
+    "parts_by_name_prefix"
+  ],
+  "fresh": {
+    "2026": {
+      "max_abs_milp_difference_gbp": 9.094947017729282e-13,
+      "same_accepted_draws": true,
+      "specs_identical_after_rename": true
+    },
+    "2403": {
+      "max_abs_milp_difference_gbp": 9.094947017729282e-13,
+      "same_accepted_draws": true,
+      "specs_identical_after_rename": true
+    },
+    "87123": {
+      "max_abs_milp_difference_gbp": 9.094947017729282e-13,
+      "same_accepted_draws": true,
+      "specs_identical_after_rename": true
+    }
+  },
+  "mutant_failed_test_sets_changed": {},
+  "v18_trial_scores": {
+    "ecd18-run1-claude": 51,
+    "ecd18-run1-codex": 51,
+    "ecd18-run2-claude": 53,
+    "ecd18-run2-codex": 11,
+    "ecd18-run3-claude": 51,
+    "ecd18-run3-codex": 51
+  },
+  "v18_trial_scores_changed": {
+    "ecd18-run2-claude": {
+      "v18": 53,
+      "v19": 0
+    }
+  }
+}

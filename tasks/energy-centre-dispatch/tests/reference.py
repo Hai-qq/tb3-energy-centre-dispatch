@@ -99,10 +99,12 @@ class Day:
         units += ["PHE1"] + list(towers["cells"]) + [self.plant["pv"]["id"]]
         # the parts of the heat circuits named in plant.json that maintenance can take out
         units += [f"{e['id']} {part}" for e in self.engines
-                  for part in ("intercooler", "LT radiator", "jacket water and exhaust")]
+                  for part in ("intercooler", "jacket water and exhaust")]
         units += [f"{c['id']} condenser" for c in self.plant["electric_chillers"]]
         units += [f"{a['id']} {part}" for a in self.plant["absorption_chillers"]
                   for part in ("generator", "absorber and condenser")]
+        circuits = self.plant["heat_circuits"].values()
+        units += [item for c in circuits for item in c["from"] + c["to"]]
         self.available = {u: np.ones(N, dtype=bool) for u in units}
         for o in self.status.get("outages", []):
             a, b = _hm(o["from"]), _hm(o["to"])
@@ -112,7 +114,10 @@ class Day:
         # condenser, nor the absorption chiller without its generator or its absorber and condenser.
         for e in self.engines:
             self.available[e["id"]] &= self.available[f"{e['id']} intercooler"]
-            self.available[e["id"]] &= self.available[f"{e['id']} LT radiator"]
+            for circuit in circuits:
+                if f"{e['id']} intercooler" in circuit["from"]:
+                    for item in circuit["to"]:
+                        self.available[e["id"]] &= self.available[item]
             self.available[e["id"]] &= self.available[f"{e['id']} jacket water and exhaust"]
         for c in self.plant["electric_chillers"]:
             self.available[c["id"]] &= self.available[f"{c['id']} condenser"]

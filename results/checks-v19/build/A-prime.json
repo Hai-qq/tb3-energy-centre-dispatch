@@ -1,0 +1,86 @@
+{
+  "five_plants_identical": true,
+  "passed": true,
+  "public_files": {
+    "environment/Dockerfile": {
+      "identical_to_v8.1": true,
+      "sha256": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339"
+    },
+    "environment/data/demand.csv": {
+      "identical_to_v8.1": true,
+      "sha256": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377"
+    },
+    "environment/data/plant.json": {
+      "identical_to_v8.1": false,
+      "sha256": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b"
+    },
+    "environment/data/status.json": {
+      "identical_to_v8.1": true,
+      "sha256": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd"
+    },
+    "environment/data/supply.json": {
+      "identical_to_v8.1": true,
+      "sha256": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee"
+    },
+    "environment/data/weather.csv": {
+      "identical_to_v8.1": true,
+      "sha256": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407"
+    },
+    "environment/dispatch.py": {
+      "identical_to_v8.1": true,
+      "sha256": "9fb16a25019bea5455352acab6c7916f0f1fa4a33c01f83ec648cda0fdacbcf0"
+    },
+    "environment/planner/__init__.py": {
+      "identical_to_v8.1": true,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    "environment/planner/data.py": {
+      "identical_to_v8.1": true,
+      "sha256": "6c48950527f82f5e5e6b8dc4b662c383319e1227728492a58ab7cfe17952264e"
+    },
+    "environment/planner/optimize.py": {
+      "identical_to_v8.1": true,
+      "sha256": "1686479f21ebdc9f2bc9e9a1664f560ce669930ab60a44c7870f64235d46c8f3"
+    },
+    "environment/planner/plant.py": {
+      "identical_to_v8.1": true,
+      "sha256": "a49f216f55379b441e5961f8e661ce928220cf94466be1787dc59f987cba9233"
+    },
+    "environment/planner/tariff.py": {
+      "identical_to_v8.1": true,
+      "sha256": "5d7a65b7246aec55dfd42be887db20e04c7751ca3b2b6dbfcdccd6234c7906ca"
+    },
+    "instruction.md": {
+      "identical_to_v8.1": true,
+      "sha256": "2b85dfbc1ab92733ba9dd786d22eb8fbc7d7d72d4cd621b4c31d0df4be2390a8"
+    }
+  },
+  "v18_only_names_changed": {
+    "h1/demand.csv": "0d0e0fff0ae8423b4d8c124e0c291bd6a347b89c287bcd32055e10f962dc8134",
+    "h1/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "h1/status.json": "17d0a361075ce59a41da363d8075494a94a6bccde3e4b4fca4fcffc3ecb9bcdf",
+    "h1/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h1/weather.csv": "c5e19a4cfd334e55c9f9a929eab962c5179d7215d20e156333b1b0e471d10e43",
+    "h2/demand.csv": "5eca730f8ed18c0cc5df88ebc63cb311d1c656a6124e6305bfdb433d195410da",
+    "h2/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "h2/status.json": "62c69c06dd4e06bdf420ecc9e76a7ae2c789c8bd1f7eb5868c70651c94877204",
+    "h2/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h2/weather.csv": "05f3b81800fc31e950a743cf199d1aabe63bbdf96c4cc2c439396426e54a194a",
+    "h3/demand.csv": "8c7b3cea2cdd3dbf18e7b82ac6157fef5e1f2a059a61cd143857adb870db115a",
+    "h3/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "h3/status.json": "527480ab41930d7f6dc69aa2ace937487e6fa738564f7d7ad0bf723232e36f33",
+    "h3/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h3/weather.csv": "ed390ebf88b1b2ae8fe7309006c1423e73169de404d4fd9008749d9ad6aa80b4",
+    "h4/demand.csv": "fcde2307daa4537b9ac5f66f2c801a90993958a02aecd68268b486c8bac482ba",
+    "h4/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "h4/status.json": "0a8146dd1d76e00614842724353380069a978a071b2a4e3c62b33a559f9ac1e1",
+    "h4/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "h4/weather.csv": "094de079b7511a646bde7af8a49f9f721a4f52fcbe8a65ac55b9b61deea86ac5",
+    "visible/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "visible/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "visible/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "visible/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+    "visible/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407"
+  },
+  "visible_matches_environment": true
+}

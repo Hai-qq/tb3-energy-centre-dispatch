@@ -41,9 +41,10 @@ def _available(day: DayData, unit_id: str, hhmm: str) -> bool:
 
 
 def _engine_can_run(day: DayData, plant: Plant, engine, hhmm: str) -> bool:
-    """An engine needs its jacket-water/exhaust assembly, intercooler and LT radiator."""
+    """An engine needs its HT source, intercooler and the outlets of its LT circuit."""
     return all(_available(day, item, hhmm)
-               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} LT radiator", f"{engine.id} jacket water and exhaust"))
+               for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} jacket water and exhaust")
+               + plant.engine_lt_sinks[engine.id])
 
 
 # the parts of a chiller that it cannot run without: its condenser, and the absorption chiller's generator

@@ -1,0 +1,29 @@
+{
+  "all_42_mutant_replacements_match_once_and_compile": true,
+  "all_changes_in_allowed_scope": true,
+  "branch": "v19",
+  "changed_python_sources_compile": true,
+  "changed_source_sha256": {
+    "tasks/energy-centre-dispatch/environment/data/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tasks/energy-centre-dispatch/solution/app/planner/optimize.py": "ca57ad92449e4ae4a1becb699451ce6be20d3232684eb6a9e9fdff64b0e8f617",
+    "tasks/energy-centre-dispatch/solution/app/planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "tasks/energy-centre-dispatch/tests/days/h1/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tasks/energy-centre-dispatch/tests/days/h2/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tasks/energy-centre-dispatch/tests/days/h2/status.json": "62c69c06dd4e06bdf420ecc9e76a7ae2c789c8bd1f7eb5868c70651c94877204",
+    "tasks/energy-centre-dispatch/tests/days/h3/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tasks/energy-centre-dispatch/tests/days/h3/status.json": "527480ab41930d7f6dc69aa2ace937487e6fa738564f7d7ad0bf723232e36f33",
+    "tasks/energy-centre-dispatch/tests/days/h4/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tasks/energy-centre-dispatch/tests/days/h4/status.json": "0a8146dd1d76e00614842724353380069a978a071b2a4e3c62b33a559f9ac1e1",
+    "tasks/energy-centre-dispatch/tests/days/visible/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tasks/energy-centre-dispatch/tests/reference.py": "eaf3111a758edc3491d8bdb6a9995c91d3a44a08407d56bb78ff6af689d66435",
+    "tools/build_energy_days.py": "d72b19bcb5f67b874cf3ac97c3caca297ac312207e20efc9aa0b3bb11f21aa7f",
+    "tools/energy_mutants.py": "a5cd11e8b6cf91ca600e72b04eb5bb1705da7a5e6665f64a7a23b1e0c1824029",
+    "tools/fresh_days.py": "6c894eabace0f8affa804df1f68c8b2842094ecbd0964b664158a64259553e00"
+  },
+  "diff_check_passed": true,
+  "forbidden_diff_empty": true,
+  "head": "f02497a",
+  "historical_jobs_caches": "See existing-caches.json; left untouched",
+  "no_caches_in_tools_task_or_build": true,
+  "passed": true
+}

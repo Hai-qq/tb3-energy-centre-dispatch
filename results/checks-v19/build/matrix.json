@@ -1,0 +1,1115 @@
+{
+  "ecd16-run2-claude": {
+    "app": "results/v16-trials/ecd16-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.6573082883915,
+        "delta_gbp": 0.009841185349614534,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6783245839178562,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6320961660239846,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735705373085,
+        "delta_gbp": 0.003714114376634825,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7272587500046939,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.714763707946986,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7971294999588281,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7914163749665022,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.983049960898,
+        "delta_gbp": 0.011209427864741883,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6505192080512643,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6510101249441504,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.5810323748737574,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.53698445786722,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+      "planner/optimize.py": "e1d50e78f3318398fe7ccf28468ee6ed4815576647d44995649f9fd0997db31a",
+      "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+      "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+    }
+  },
+  "ecd17-run2-claude-parts": {
+    "app": "results/checks-v18/opponents/ecd17-run2-claude-parts/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6420.842045269092,
+        "delta_gbp": -5.805421833950277,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.560690209036693,
+            "sha256": "19ebe767a597941786e2c03f29fbf7f8725abd3b123bbcb1d9bc42ac780ccc64"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5686475420370698,
+            "sha256": "19ebe767a597941786e2c03f29fbf7f8725abd3b123bbcb1d9bc42ac780ccc64"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735705373085,
+        "delta_gbp": 0.003714114376634825,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6603683328721672,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6505762080196291,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7863711249083281,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7334552921820432,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7296.098696319798,
+        "delta_gbp": -14.87314421323481,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6116963748354465,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5423317921813577,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.49739874992519617,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.4966102500911802,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "6a8bca23659524bcf07e92ec02a5473139d3d70b3f6e571f1c289bbf6564c0cb",
+      "planner/optimize.py": "f12811a6396748f69699271823805c36dfc34f165cb3dd309294379e4c4a95f9",
+      "planner/plant.py": "fcc200aa9bf4f32563399da1d2f374da5ebc93cc08a7b549d5937dc1dce9f1a4",
+      "planner/tariff.py": "b73f7c5529486b068b42b956c46a9d95d742b7bab6f0f1816676c5a875d5f178"
+    }
+  },
+  "ecd17-run2-codex-parts": {
+    "app": "results/checks-v18/opponents/ecd17-run2-codex-parts/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6420.838252670732,
+        "delta_gbp": -5.80921443231,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6741484159138054,
+            "sha256": "ec35385b22f11d668bf7802d2f504945254bdd78c44b92f3fb153dd69b28c155"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6589786671102047,
+            "sha256": "ec35385b22f11d668bf7802d2f504945254bdd78c44b92f3fb153dd69b28c155"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735448422394,
+        "delta_gbp": 0.0034571636861073785,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6879357500001788,
+            "sha256": "ea4d1b071cb44fd829e305c6dc69cd054e677ac1eb78659da38b4f00a97fb815"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7125913749914616,
+            "sha256": "ea4d1b071cb44fd829e305c6dc69cd054e677ac1eb78659da38b4f00a97fb815"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538040469401,
+        "delta_gbp": 1.1641532182693481e-10,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.130177624989301,
+            "sha256": "b35662ed1c6afce1f868bb3552f6714f28acb02f634e3bdedfa9d89f33d938f7"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.9511613340582699,
+            "sha256": "b35662ed1c6afce1f868bb3552f6714f28acb02f634e3bdedfa9d89f33d938f7"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7296.092809749742,
+        "delta_gbp": -14.879030783291455,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6426216249819845,
+            "sha256": "678f8278a400b0d6af8b5c48ddaa63e848df7a4a68a4204c381dc0e656617d47"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7567732089664787,
+            "sha256": "678f8278a400b0d6af8b5c48ddaa63e848df7a4a68a4204c381dc0e656617d47"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5603194264295,
+        "delta_gbp": -1.2369127944111824e-10,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.5505343750119209,
+            "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5618011658079922,
+            "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "d1ff285124cfac6feb3a0c075aebbefb2cd3891c1c61a49d39523f0649477623",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "afcba995c05929a81ec18754ec0ca42395ce17db47db4d5fce1cd331b8a16cb3",
+      "planner/optimize.py": "99014fffeb7e90808ee13ef2b44efeeab0b7337dc70b3b825291ef2a92ed2028",
+      "planner/plant.py": "a953fb68270fb68902859b1781254a4fabe0bb415b524a4fc6e0a5995b2da4de",
+      "planner/tariff.py": "f0fa46082aad4b4fadde38e88b3674a7d9c9591166afe93004c4f467bf8e1758"
+    }
+  },
+  "ecd18-run1-claude": {
+    "app": "results/v18-trials/ecd18-run1-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.301619494443,
+        "delta_gbp": -23.345847608598888,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6093643330968916,
+            "sha256": "931e41358bb4c9992dffee770d265eea33ffa0218c63edb860b434b8ca7624c1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6038073748350143,
+            "sha256": "931e41358bb4c9992dffee770d265eea33ffa0218c63edb860b434b8ca7624c1"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8079.0771052910695,
+        "delta_gbp": -800.6548859676386,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8879.731991258708,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.47752312500961125,
+            "sha256": "51043397ceeb03e09a2ab6c9c2ae06623589c02a2da40a0afbf59418a1ef2803"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5045312091242522,
+            "sha256": "51043397ceeb03e09a2ab6c9c2ae06623589c02a2da40a0afbf59418a1ef2803"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 6607.149809582194,
+        "delta_gbp": 1231.6117691129102,
+        "failures": {
+          "test_least_cost": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.5369011668954045,
+            "sha256": "475f98a0b2c87f86f2372d09b96f1f1a0b942989ba44c7d8c3741ab9a337353c"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5322492918930948,
+            "sha256": "475f98a0b2c87f86f2372d09b96f1f1a0b942989ba44c7d8c3741ab9a337353c"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.9324261679485,
+        "delta_gbp": -40.03941436508467,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6133912089280784,
+            "sha256": "4f5a8913eb7df1e268761f8baa205a4298d99fb568bac7cba287c38f95d57e98"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.635520625161007,
+            "sha256": "4f5a8913eb7df1e268761f8baa205a4298d99fb568bac7cba287c38f95d57e98"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.5378621250856668,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5680920828599483,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "1eddd570d570333c32e91037d285234ae6b8ee2225d5ec316f5dbec6eb41554e",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "12a2b7efb283b57034a7572bf3e0a6494334a1ad49aabbb1620ae1bffa95e56c",
+      "planner/optimize.py": "3c827758576486df20a4bc1e4dcfa08446a753753c9cf8fcc940906339ee978e",
+      "planner/plant.py": "cb8edf118fc312e7c40dd298a835f73f6b5de69101733d6032d77bb6c9273978",
+      "planner/tariff.py": "c447bb3af6470705efb6e633b0654201ec9e54f1207e3efa82443b264a1cd0e3"
+    }
+  },
+  "ecd18-run1-codex": {
+    "app": "results/v18-trials/ecd18-run1-codex/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.3010884987325,
+        "delta_gbp": -23.346378604309393,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6480344168376178,
+            "sha256": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6119034590665251,
+            "sha256": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8063.680409680776,
+        "delta_gbp": -816.0515815779318,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8879.731991258708,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7573844168800861,
+            "sha256": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7260817920323461,
+            "sha256": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628511561112,
+        "delta_gbp": -192.90952890817243,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7345612091012299,
+            "sha256": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7589039159938693,
+            "sha256": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.932347828511,
+        "delta_gbp": -40.03949270452176,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.5583408328238875,
+            "sha256": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5682560838758945,
+            "sha256": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5603194264295,
+        "delta_gbp": -1.2369127944111824e-10,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.556090832920745,
+            "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.568598958896473,
+            "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "34c32adf25230f80a85aa1202d83a72f9bf6c6cb60b33cd582ea68e63b6a01e5",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "5d0b1f8d0b3f481177ccd632a1a4ded83c367f8de2a159ac9fbf5ab174f61066",
+      "planner/optimize.py": "a62e94d51c6136b6a59b7c55b716e8a00bdd34d9a87ad9504cdeb40eff1dc446",
+      "planner/plant.py": "4778f9b018dab93cf8c5a6e8136137d7bb52114449310051cae438047993cd4a",
+      "planner/tariff.py": "cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59"
+    }
+  },
+  "ecd18-run2-claude": {
+    "app": "results/v18-trials/ecd18-run2-claude/app",
+    "days": {
+      "h1": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.2802951668854803
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.26994399982504547
+          }
+        ]
+      },
+      "h2": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.2740143749397248
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.2788468331564218
+          }
+        ]
+      },
+      "h3": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.3088070841040462
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.29114733287133276
+          }
+        ]
+      },
+      "h4": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.28851412516087294
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.2752710001077503
+          }
+        ]
+      },
+      "visible": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.25870191608555615
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.2778042920399457
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "8cba87d097f79f54e9cc299b2f7fc128737057b7330a439f36897f19b1f5e64f",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "59fdebe624f25699275d7a3baa1c6000d3f7788b3673a7bccf0c4c2004629b58",
+      "planner/optimize.py": "b62e3ccc5751ea07ddce47b69107557809bf0ea58b4bb47650754a48a9adba5a",
+      "planner/plant.py": "1df9cda4cc6570059b8aefb4b373bc0d669fc6621d80d402edccd5c550580b93",
+      "planner/tariff.py": "d35d73a5cf8f8a48f5f07a8dc9c48645c40a08ddd7ef931e6e0538db35dac9d0"
+    }
+  },
+  "ecd18-run2-codex": {
+    "app": "results/v18-trials/ecd18-run2-codex/app",
+    "days": {
+      "h1": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.3060048329643905
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.28059270908124745
+          }
+        ]
+      },
+      "h2": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.2861810000613332
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.27869899990037084
+          }
+        ]
+      },
+      "h3": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 13:30\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 13:30\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.42443487513810396
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.42214850010350347
+          }
+        ]
+      },
+      "h4": {
+        "failures": {
+          "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 62, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/dispatch.py\", line 45, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v18-trials/ecd18-run2-codex/app/planner/optimize.py\", line 240, in plan_day\n    raise RuntimeError(f\"no feasible loading at {hhmm}\")\nRuntimeError: no feasible loading at 00:00\n",
+          "test_same_plan_every_time": "missing plan or unequal JSON output"
+        },
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 1,
+            "seconds": 0.28498466592282057
+          },
+          {
+            "returncode": 1,
+            "seconds": 0.29343945905566216
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.560319426547,
+        "delta_gbp": -6.366462912410498e-12,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.5621952079236507,
+            "sha256": "a689972fe8ee912e4f76a14b2c24ae44e604b1b7bb4fd9a62ebefea2ed68ccd5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6262395000085235,
+            "sha256": "a689972fe8ee912e4f76a14b2c24ae44e604b1b7bb4fd9a62ebefea2ed68ccd5"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "19232f1d064f8fb4b2d3f8e72b8b5e2a710bff73e4f118940da3997e25290848",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "aa98230b7e54d02c39057654f33729cfb7f63dded3f521c1fcf74eefe469404a",
+      "planner/optimize.py": "23b4a55c53f42e2192381ede1976fcc8e2a7152b1d4df089431c9f82d329087a",
+      "planner/plant.py": "aaf58e9b5f2f266b42460c36c52cc8d758cc27fa21332a09f80ca31119e63dbc",
+      "planner/tariff.py": "f0fa46082aad4b4fadde38e88b3674a7d9c9591166afe93004c4f467bf8e1758"
+    }
+  },
+  "ecd18-run3-claude": {
+    "app": "results/v18-trials/ecd18-run3-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.305357347423,
+        "delta_gbp": -23.342109755619276,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7709112910088152,
+            "sha256": "0a327eb2f7719f94c678eee352c214eb962b6a24ea898339a0baab7f7efc9357"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7917132920119911,
+            "sha256": "0a327eb2f7719f94c678eee352c214eb962b6a24ea898339a0baab7f7efc9357"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8063.68107957225,
+        "delta_gbp": -816.0509116864578,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8879.731991258708,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7813027920201421,
+            "sha256": "e9a1ffc8b98ee4f6716104e1be7a333c104cd86cf85884cd948c23b6a3cd0ad9"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.754912749864161,
+            "sha256": "e9a1ffc8b98ee4f6716104e1be7a333c104cd86cf85884cd948c23b6a3cd0ad9"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628545783766,
+        "delta_gbp": -192.90949468551844,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.9806867078877985,
+            "sha256": "86aeca251efb189bf150372d33bc18733c3c24b655e25c951f09967e71df1996"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.0536149588879198,
+            "sha256": "86aeca251efb189bf150372d33bc18733c3c24b655e25c951f09967e71df1996"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.938277868699,
+        "delta_gbp": -40.03356266433457,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.8442199169658124,
+            "sha256": "1726d7f3b5efeb2727072231d8d07cc8fa1fa4afa733477676509347d2398713"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7267872919328511,
+            "sha256": "1726d7f3b5efeb2727072231d8d07cc8fa1fa4afa733477676509347d2398713"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7263306251261383,
+            "sha256": "b02203f0d025524b930037bb25bbcd3733832430f4aa1fa3191ffa41fac83316"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5897721669171005,
+            "sha256": "b02203f0d025524b930037bb25bbcd3733832430f4aa1fa3191ffa41fac83316"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "4bca827f24d1c987983d93ad0af2aee324a5a71f593574be0786f306a9f09658",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "0846ac33bcdbcb64acb393e89185afeafab1ad038bb5cdbc14b9635d81750ab5",
+      "planner/optimize.py": "e2a343d78e4efcf2c1c41bfb2d5d596224f54efb8b6da4b0d4195eb914cf6783",
+      "planner/plant.py": "eb4a847c1bce313e84f995e0dc4a4199f2c71b0625471751365f00a04b1c79e1",
+      "planner/tariff.py": "66e9784c2e48adc3115de224028c938e6a13323cdd00029574163890c4aa807d"
+    }
+  },
+  "ecd18-run3-codex": {
+    "app": "results/v18-trials/ecd18-run3-codex/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6409.698465817483,
+        "delta_gbp": -16.949001285558552,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.628119417000562,
+            "sha256": "0a50ad3f7f640935a59ecedb1f27bf43172e34a5900dc3596fc38984185f9543"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5983374998904765,
+            "sha256": "0a50ad3f7f640935a59ecedb1f27bf43172e34a5900dc3596fc38984185f9543"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8063.68040989444,
+        "delta_gbp": -816.0515813642678,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 8879.731991258708,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7694126670248806,
+            "sha256": "62662b378b72db5b3cb56f33e6c136b42156cffa56662d96ad4c0ca567f91c2f"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7274024160578847,
+            "sha256": "62662b378b72db5b3cb56f33e6c136b42156cffa56662d96ad4c0ca567f91c2f"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628511347972,
+        "delta_gbp": -192.90952912131252,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7517357079777867,
+            "sha256": "df7ad835a44ab5f55ef011a1fd73f44327e02e45fd6448f9e9b744213a640409"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.9731458330061287,
+            "sha256": "df7ad835a44ab5f55ef011a1fd73f44327e02e45fd6448f9e9b744213a640409"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7285.811377955624,
+        "delta_gbp": -25.160462577408907,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6218995838426054,
+            "sha256": "85f6d1f0803000c86f80e542373ff7cebdf70142069bd7861924b658c6136971"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.5545833329670131,
+            "sha256": "85f6d1f0803000c86f80e542373ff7cebdf70142069bd7861924b658c6136971"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.560319561994,
+        "delta_gbp": 1.354410414933227e-07,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6132177920080721,
+            "sha256": "411a53c06a598cec17c4ecc4782f2cd2f4dcf98293baa8dab4a06028a4221999"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.6784802498295903,
+            "sha256": "411a53c06a598cec17c4ecc4782f2cd2f4dcf98293baa8dab4a06028a4221999"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "dispatch.py": "8ca31f370fbfdf248821cd3adbf42c4e92a154ef173822a742f315a0425bce00",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "45b806f60b991798059b07043e9c23024e9316d5dc58f28870fc57c1e7c0e52b",
+      "planner/optimize.py": "534d297609228b2b86d3837dc316780873237a1dbc247fb5195fa87eec56a02b",
+      "planner/plant.py": "05275a31213db55744f6cc0600412199828798db76ea8dc1905bbf14042f940e",
+      "planner/tariff.py": "cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59"
+    }
+  },
+  "oracle": {
+    "app": "tasks/energy-centre-dispatch/solution/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.647743955096,
+        "delta_gbp": 0.0002768520544123021,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.7348682500887662,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.7405859171412885,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.731915146565,
+        "delta_gbp": -7.61121427785838e-05,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.6502036249730736,
+            "sha256": "64a453bd96c7485d8f5ad842eb82c8a0dfc38c828128a532eee85a4acf84ff74"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.650573416845873,
+            "sha256": "64a453bd96c7485d8f5ad842eb82c8a0dfc38c828128a532eee85a4acf84ff74"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.8189056250266731,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.8525670829694718,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.971820541148,
+        "delta_gbp": -1.9991884983028285e-05,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.9288142919540405,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.0315455831587315,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 0.8500909579452127,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 0.781116709113121,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+      "planner/optimize.py": "ca57ad92449e4ae4a1becb699451ce6be20d3232684eb6a9e9fdff64b0e8f617",
+      "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+      "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+    }
+  }
+}

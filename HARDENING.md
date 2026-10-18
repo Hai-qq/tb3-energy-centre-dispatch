@@ -1,7 +1,7 @@
 # Hardening `energy-centre-dispatch` after the reviewer's runs (v9 to v12)
 
 Written on 2026-10-15 for an outside review of where the task stands and what to do next.
-This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v18; see the last rounds below),
+This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v19; see the last rounds below),
 `archive/` keeps every version, `results/` the checks and trials. `main` is unchanged at
 `1f92378`, the delivered v8.1.
 
@@ -254,6 +254,64 @@ margin, not about a threshold: each of the three missed a whole class of outages
 what the table shows, that most trials are one judgement from passing: `ecd18-run2-claude` got
 every part right and failed only because it kept the header rule.
 
+## v19: the LT radiators named without their engine, and a pass (2026-10-18)
+
+With four of v18's six trials one judgement from passing, the task was to be made harder. The
+changes allowed were the shipped tool's code, the visible day's data and the values of fields
+`plant.json` and `supply.json` already have, but no new fields or plant.
+
+Measured first, over the 14 trials on these visible files (v16 to v18): Opus got the header
+right in 5 of 8 and the parts in 2 of 8, both in 1; GPT the header in 3 of 6 and the parts in
+none. The two trials that got the parts right both gave an outage to the unit whose id begins
+its name (`GE1 intercooler` to GE1); v16 run 2 also took each engine's radiators from its LT
+circuit, v18's Opus run 2 used the prefix alone.
+
+Candidates, each held against the visible text, a second reading, realism and the strongest
+tools:
+
+- The LT radiators named without their engine (`LT radiator 1`, `LT radiator 2`), so that only
+  the LT circuits say which engine needs which. Kept.
+- Engines stopped when their LT radiators face air at or above the LT water's temperature (the
+  circuits at 35/30 °C and a 36 °C day). Rejected: a real engine derates as its LT water warms,
+  and the data gives no limit, so "the engine runs" is a second reading.
+- Holding the condenser water warmer so that the electric chillers take up power the export
+  limit refuses (the limit set to 0). Rejected: it pays only with a site demand far below this
+  hospital's, and the data gives no top to the towers' water temperature.
+- AC1's generator also on the LTHW circuit, whose 80 °C is below its 85 °C. Rejected: a
+  connection that can never be used, with "the boilers could run hotter" as a second reading.
+- Engines' reactive power clipped at zero in the shipped tool's import limit. Rejected: strong
+  runs write their own checkers from the raw data and test days on which the limit binds.
+- A comment in the shipped tool backing the header lock-out. Rejected as deceptive.
+- A visible day without the non-engine outage. No effect on runs that read the instruction.
+
+Two models given only the instruction, the renamed `plant.json` and a status file read an
+outage of `LT radiator 1` the way the verifier does (GE1 cannot run, GE2 can;
+`results/checks-v19/fairness-precheck/`). Against the earlier deliverables, v16 run 2 and both
+patched v17 tools still pass v19 (they take the radiators from the circuits); only a tool that
+gives every part to a unit by prefix fails (`results/checks-v19/build/`).
+
+| check on v19 (task hash `05f58dca0b55b63f`) | result |
+|---|---|
+| the agent's files | v8.1's byte for byte but for the two radiators' names in `plant.json` |
+| solution | 55 of 55; within GBP 0.0003 of the MILP on all five days; 48 fresh days pass |
+| mutants | 42 of 42 caught; the new one, parts given to units by prefix, on h2 to h4 |
+| Harbor with Docker | oracle reward 1 (55 passed), nop reward 0 |
+| static checks (Terminal-Bench `2e29ca9`) | 28 of 28 pass |
+
+| trial | agent time | header | outages of parts | verifier |
+|---|---|---|---|---|
+| `ecd19-run1-claude` | 27 min | kept the lock-out, "a plant-operation decision" | applied to units only | 37 of 55: no plan for h3 ("no feasible loading at 13:30"), the connection exceeded on h1, h2 and h4 |
+| `ecd19-run2-claude` | 105 min | held at 22 °C while AC1 runs | radiators from the LT circuits, the other parts by prefix | **passed, 55 of 55** |
+
+CI's trajectory review (`results/analysis-v19/`) passes every check for both trials; the passing
+run read no test or solution file.
+
+The round stopped at the pass. `ecd19-run2-claude`'s tool passes v17 and v18 as well: it is v16
+run 2's again (every part by prefix, the radiators from the circuits, the header), and renaming
+the radiators blocks only the variant that uses the prefix for them too. Within the changes
+allowed, nothing fair blocks that tool: the other parts can be tied to their units only by
+their names. Over v16 to v19 Opus has passed 2 of 10 trials and GPT none of 6.
+
 ## Where to look
 
 1. `README.md`: the delivered task, its evidence and the full history ("How the task came
@@ -265,11 +323,13 @@ every part right and failed only because it kept the header rule.
    on each day, and each agent's closing message (the clearest view of how Opus reasons).
 4. `results/checks-v11/README.md` and `results/checks-v12/README.md`: the checks, and what the
    setpoint rules (v11) and the silent header (v12) cost per day.
-5. `archive/energy-centre-dispatch-v9/` to `-v18/`: every version's task files and build script;
+5. `archive/energy-centre-dispatch-v9/` to `-v19/`: every version's task files and build script;
    `archive/energy-centre-dispatch-v11-tools/` has the tower model behind v11's tables.
-6. `results/v9-trials/` to `v18-trials/` and `v8-rerun-trials/`: the deliverables and verifier
+6. `results/v9-trials/` to `v19-trials/` and `v8-rerun-trials/`: the deliverables and verifier
    output; `results/checks-v13/README.md`: the conventions' sources and what each wrong reading costs.
 7. `prototypes/`: the three falsification tests, each with its README.
 8. `results/checks-v18/`: GPT Pro's audit of v17 and its v18 evidence (`README.md`,
    `ANALYSIS.md`, the differential test in `fuzz/`), and `independent-review/`, our re-run of its
    checks.
+9. `results/checks-v19/`: v19's fairness pre-check (`fairness-precheck/`), build and checks
+   (`build/`), and the release checks.

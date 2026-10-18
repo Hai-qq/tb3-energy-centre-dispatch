@@ -1,0 +1,11 @@
+fresh-2026 exit 0
+fresh-2403 exit 0
+fresh-87123 exit 0
+Traceback (most recent call last):
+  File "/Users/haiy_qq/Desktop/工作/klavis/results/checks-v19/build/verify.py", line 210, in <module>
+    "radiator_outages": counts, "results": manifest["results"],
+    
+  File "/Users/haiy_qq/Desktop/工作/klavis/results/checks-v19/build/verify.py", line 194, in fresh
+    evidence.append({"outage": sink, "reference_and_solution_disable_GE1_only": True})
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'LT radiator 1': 0, 'LT radiator 2': 4}

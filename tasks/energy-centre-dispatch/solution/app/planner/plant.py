@@ -12,8 +12,9 @@ class Engine:
     """Gas engine CHP set. Fuel and HT heat are linear between the part-load points.
 
     Only the HT circuit's heat (jacket water and exhaust) is recovered; the intercooler's
-    LT heat leaves through the engine's LT radiator. The generator runs at a fixed,
-    overexcited power factor, so it supplies reactive power in proportion to its output."""
+    LT heat leaves through the radiator connected to its intercooler in heat_circuits.
+    The generator runs at a fixed, overexcited power factor, so it supplies reactive
+    power in proportion to its output."""
 
     def __init__(self, d: dict):
         self.id = d["id"]
@@ -92,6 +93,10 @@ class AbsorptionChiller:
 class Plant:
     def __init__(self, d: dict):
         self.engines = [Engine(x) for x in d["engines"]]
+        # Every outlet of an intercooler circuit is needed to reject its LT heat.
+        self.engine_lt_sinks = {e.id: tuple(item for c in d["heat_circuits"].values()
+                                          if f"{e.id} intercooler" in c["from"] for item in c["to"])
+                                for e in self.engines}
         self.boilers = [Boiler(x) for x in d["boilers"]]
         self.electric_chillers = [ElectricChiller(x) for x in d["electric_chillers"]]
         self.absorption_chillers = [AbsorptionChiller(x) for x in d["absorption_chillers"]]

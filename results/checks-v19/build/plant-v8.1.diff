@@ -1,0 +1,20 @@
+--- v8.1/environment/data/plant.json
++++ v19/environment/data/plant.json
+@@ -188,7 +188,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "GE1 LT radiator"
++        "LT radiator 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,7 +198,7 @@
+         "GE2 intercooler"
+       ],
+       "to": [
+-        "GE2 LT radiator"
++        "LT radiator 2"
+       ]
+     },
+     "lthw": {
