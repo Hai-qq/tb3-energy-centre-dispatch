@@ -1,0 +1,26 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -199,7 +199,7 @@
+             bounds[self.iC + j] = (0.0, self.chiller_max[j])
+         for j in range(len(plant.absorption_chillers)):
+             bounds[self.iA + j] = (0.0, water.absorber_max[j])
+-        bounds[self.iH] = (0.0, None if self.hx_up else 0.0)
++        bounds[self.iH] = (0.0, plant.review_phe_limit if self.hx_up else 0.0)
+         bounds[self.iV] = (self.pv_min, self.pv_max)
+         c[self.iI] = DT_H * self.import_rate
+         bounds[self.iI] = (0.0, None)
+--- a/planner/plant.py
++++ b/planner/plant.py
+@@ -151,6 +151,12 @@
+         self.pv_inverter_kw = float(pv["inverter_ac_kw"]) if "inverter_ac_kw" in pv else math.inf
+ 
+         recovered = self._read_circuits(d)
++        self.review_phe_limit = math.inf
++        for hx in d.get("heat_exchangers", []):
++            circ = d["heat_circuits"][hx["primary_circuit"]]
++            self.review_phe_limit = min(self.review_phe_limit,
++                hx["primary_maximum_water_flow_kg_per_s"] * hx["water_specific_heat_kj_per_kg_k"] *
++                (circ["flow_c"] - circ["return_c"]))
+         self.engines = [Engine(x, recovered[x["id"]]) for x in d["engines"]]
+ 
+     def _read_circuits(self, d: dict) -> dict[str, list[str]]:

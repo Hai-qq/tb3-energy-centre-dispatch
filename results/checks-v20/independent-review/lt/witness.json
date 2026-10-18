@@ -1,0 +1,43 @@
+{
+  "lt_kw": 201.0,
+  "available_lt_capacity_kw": 220,
+  "ht_kw": 1290.0,
+  "lthw_delivered_kw": 2000.0,
+  "electric_cop": 6.5,
+  "grid_p_kw": 158.9230769230769,
+  "grid_q_kvar": 55.57907378536419,
+  "grid_s_kva": 168.36144992704587,
+  "tower_kw": 576.9230769230769,
+  "tower_capacity_kw": 3500.0,
+  "condenser_water_c": 22.0,
+  "checks": {
+    "engine_part_load": true,
+    "engine_rating": true,
+    "generator_rating": true,
+    "boiler_rating": true,
+    "chiller_rating": true,
+    "electric_balance": true,
+    "heat_balance": true,
+    "cooling_balance": true,
+    "tower_capacity": true,
+    "import_capacity": true,
+    "export_capacity": true,
+    "lt_remaining_capacity": true,
+    "initial_running_state": true,
+    "outage_avoided_by_parallel_branch": true
+  },
+  "periods_certified": 48,
+  "engines": {
+    "GE1": 1200.0,
+    "GE2": 0
+  },
+  "boilers": {
+    "B1": 785.0,
+    "B2": 0
+  },
+  "chillers": {
+    "EC1": 500.0,
+    "EC2": 0,
+    "AC1": 0
+  }
+}

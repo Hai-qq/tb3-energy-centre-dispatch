@@ -1,0 +1,40 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -145,8 +145,8 @@
+     )
+ 
+ 
+-def _solve(h: _Half, plant: Plant, tariff: Tariff, run: list[tuple[Engine, Stretch]],
+-           condenser_c: float, absorbers: list[AbsorptionChiller], excess: bool) -> _Loading | None:
++def _solve_direction(h: _Half, plant: Plant, tariff: Tariff, run: list[tuple[Engine, Stretch]],
++           condenser_c: float, absorbers: list[AbsorptionChiller], excess: bool, import_only=None) -> _Loading | None:
+     """Cheapest loading of the plant in half-hour h with each engine in `run` on its stretch.
+ 
+     With `excess`, the connection may be loaded beyond its capacity, at a price that puts
+@@ -183,6 +183,10 @@
+     bounds[iX] = (0.0, tariff.export_limit_kw)
+     bounds[iZ] = (0.0, math.inf if excess else 0.0)
+ 
++    if import_only is True:
++        bounds[iX] = (0.0, 0.0)
++    elif import_only is False:
++        bounds[iI] = (0.0, 0.0)
+     A_eq = np.zeros((4, n))
+     b_eq = np.zeros(4)
+     # electricity: generation + PV + import - export = site + engine auxiliaries + chillers + absorber auxiliaries
+@@ -264,6 +268,15 @@
+         exports=val(iX),
+         kvar_grid=q,
+     )
++
++
++def _solve(h, plant, tariff, run, condenser_c, absorbers, excess):
++    best = None
++    for direction in ((True, False) if h.rate < tariff.export_rate else (None,)):
++        candidate = _solve_direction(h, plant, tariff, run, condenser_c, absorbers, excess, direction)
++        if candidate is not None and (best is None or candidate.rank < best.rank - 1e-9):
++            best = candidate
++    return best
+ 
+ 
+ def _best(h: _Half, plant: Plant, tariff: Tariff, on: tuple[bool, ...], excess: bool) -> _Loading | None:

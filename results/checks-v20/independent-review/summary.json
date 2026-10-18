@@ -1,0 +1,91 @@
+{
+  "candidate_checks": {
+    "c1": {
+      "mutants_total": 43,
+      "oracle_max_abs_cost_gap": 0.00018111916324414779,
+      "freeze_files": 323,
+      "original_two_strong_failed": true,
+      "patched_two_strong_passed": true,
+      "clean_blind_passed": true,
+      "clean_oracle_passed": true
+    },
+    "c2": {
+      "mutants_total": 44,
+      "oracle_max_abs_cost_gap": 0.0002768520544123021,
+      "freeze_files": 198,
+      "original_two_strong_failed": true,
+      "patched_two_strong_passed": true,
+      "clean_blind_passed": true,
+      "clean_oracle_passed": true
+    },
+    "c4": {
+      "mutants_total": 44,
+      "oracle_max_abs_cost_gap": 0.0002768520544123021,
+      "freeze_files": 307,
+      "original_two_strong_failed": true,
+      "patched_two_strong_passed": true,
+      "clean_blind_passed": true,
+      "clean_oracle_passed": true
+    }
+  },
+  "sample": {
+    "oracle": {
+      "passed": 25,
+      "failed": 0,
+      "agreement": 25,
+      "original_summary": {
+        "failed_days": 0,
+        "failure_tests": {},
+        "max_abs_delta_gbp": 0.0004891965163551504,
+        "max_seconds": 5.684199125000305,
+        "passed_days": 200
+      }
+    },
+    "strong-v16": {
+      "passed": 10,
+      "failed": 15,
+      "agreement": 25,
+      "original_summary": {
+        "failed_days": 83,
+        "failure_tests": {
+          "test_least_cost": 83
+        },
+        "max_abs_delta_gbp": 57.58646381154631,
+        "max_seconds": 4.557266060999609,
+        "passed_days": 117
+      }
+    },
+    "strong-v19": {
+      "passed": 0,
+      "failed": 25,
+      "agreement": 25,
+      "original_summary": {
+        "failed_days": 200,
+        "failure_tests": {
+          "test_least_cost": 113,
+          "test_reported_gas_and_cost": 200,
+          "test_single_connection_direction": 200
+        },
+        "max_abs_delta_gbp": 57.64249091799229,
+        "max_seconds": 3.4287425289994644,
+        "passed_days": 0
+      }
+    },
+    "blind": {
+      "passed": 11,
+      "failed": 14,
+      "agreement": 25,
+      "original_summary": {
+        "failed_days": 109,
+        "failure_tests": {
+          "execution_or_flow": 109
+        },
+        "max_abs_delta_gbp": 20.577533182157822,
+        "max_seconds": 6.237893394000821,
+        "passed_days": 91
+      }
+    }
+  },
+  "lt_matches": true,
+  "witness_checks_pass": true
+}

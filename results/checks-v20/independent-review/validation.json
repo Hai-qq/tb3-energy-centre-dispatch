@@ -1,0 +1,499 @@
+{
+  "all_passed": true,
+  "checks": {
+    "branch": {
+      "pass": true,
+      "detail": null
+    },
+    "head": {
+      "pass": true,
+      "detail": null
+    },
+    "tracked_files_unchanged": {
+      "pass": true,
+      "detail": null
+    },
+    "git_status_only_delivery": {
+      "pass": true,
+      "detail": "?? results/checks-v20/independent-review/\n"
+    },
+    "formal_tasks_unchanged": {
+      "pass": true,
+      "detail": null
+    },
+    "formal_fresh_pass": {
+      "pass": true,
+      "detail": null
+    },
+    "fresh_default_constants": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_freeze_post_run": {
+      "pass": true,
+      "detail": {
+        "count": 323,
+        "mismatches": []
+      }
+    },
+    "c1_oracle-eval": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_fresh-16": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_A16-rule-only": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_A19-rule-only": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_blind-whole-unit": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_oracle-whole-unit": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_A16-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_A19-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_blind-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_oracle_0.001": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_base_42_mutants": {
+      "pass": true,
+      "detail": 42
+    },
+    "c1_base_mutant_exit": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_extra_mutants": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_isolated_changed_only_status": {
+      "pass": true,
+      "detail": [
+        "tests/days/h2/status.json",
+        "tests/days/h4/status.json",
+        "tests/days/h3/status.json",
+        "tests/days/h1/status.json"
+      ]
+    },
+    "c1_h1_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_h2_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_h3_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_h4_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_instruction": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_test_function_count": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_fresh16_manifest": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_all_hidden_direction_economic_pressure": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_A16_patch_exists": {
+      "pass": true,
+      "detail": null
+    },
+    "c1_A19_patch_exists": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_freeze_post_run": {
+      "pass": true,
+      "detail": {
+        "count": 198,
+        "mismatches": []
+      }
+    },
+    "c2_oracle-eval": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_fresh-16": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_A16-rule-only": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_A19-rule-only": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_blind-whole-unit": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_oracle-whole-unit": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_A16-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_A19-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_blind-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_oracle_0.001": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_base_42_mutants": {
+      "pass": true,
+      "detail": 42
+    },
+    "c2_base_mutant_exit": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_extra_mutants": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_isolated_changed_only_status": {
+      "pass": true,
+      "detail": [
+        "tests/days/h2/status.json",
+        "tests/days/h4/status.json",
+        "tests/days/h3/status.json",
+        "tests/days/h1/status.json"
+      ]
+    },
+    "c2_h1_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_h2_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_h3_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_h4_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_instruction": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_test_function_count": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_fresh16_manifest": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_h2_new_rule_binding": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_A16_patch_exists": {
+      "pass": true,
+      "detail": null
+    },
+    "c2_A19_patch_exists": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_freeze_post_run": {
+      "pass": true,
+      "detail": {
+        "count": 307,
+        "mismatches": []
+      }
+    },
+    "c4_oracle-eval": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_fresh-16": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_A16-rule-only": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_A19-rule-only": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_blind-whole-unit": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_oracle-whole-unit": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_A16-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_A19-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_blind-original": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_oracle_0.001": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_base_42_mutants": {
+      "pass": true,
+      "detail": 42
+    },
+    "c4_base_mutant_exit": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_extra_mutants": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_isolated_changed_only_status": {
+      "pass": true,
+      "detail": [
+        "tests/days/h2/status.json",
+        "tests/days/h4/status.json",
+        "tests/days/h3/status.json",
+        "tests/days/h1/status.json"
+      ]
+    },
+    "c4_h1_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_h2_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_h3_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_h4_only_removed_space_names": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_instruction": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_test_function_count": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_fresh16_manifest": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_h2_new_rule_binding": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_A16_patch_exists": {
+      "pass": true,
+      "detail": null
+    },
+    "c4_A19_patch_exists": {
+      "pass": true,
+      "detail": null
+    },
+    "25_days_selected": {
+      "pass": true,
+      "detail": null
+    },
+    "all_100_sample_agreements": {
+      "pass": true,
+      "detail": null
+    },
+    "sample_all_days_replayed": {
+      "pass": true,
+      "detail": null
+    },
+    "LT_replay_matches": {
+      "pass": true,
+      "detail": null
+    },
+    "LT_witness": {
+      "pass": true,
+      "detail": null
+    },
+    "LT_48_periods": {
+      "pass": true,
+      "detail": null
+    },
+    "only_preexisting_jobs_pycache": {
+      "pass": true,
+      "detail": {
+        "review_script_creation": 1792318399.6938417,
+        "review_script_creation_local": "2026-10-18T18:13:19.693842",
+        "directories": [
+          {
+            "path": "jobs/ecd19-oracle/energy-centre-dispatch-v19__EFNJ8z3/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792287663.0,
+            "latest_mtime_local": "2026-10-18T09:41:03",
+            "latest_birthtime": 1792287663.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd17-run2-codex/energy-centre-dispatch-v17__K6NXJSg/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792217069.0,
+            "latest_mtime_local": "2026-10-17T14:04:29",
+            "latest_birthtime": 1792217069.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd18-run3-codex/energy-centre-dispatch-v18__kQcd7rp/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792264961.0,
+            "latest_mtime_local": "2026-10-18T03:22:41",
+            "latest_birthtime": 1792264961.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd18-run1-codex/energy-centre-dispatch-v18__ns8Uob3/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792263559.0,
+            "latest_mtime_local": "2026-10-18T02:59:19",
+            "latest_birthtime": 1792263559.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd18-run1-claude/energy-centre-dispatch-v18__iKEwnVA/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792251977.0,
+            "latest_mtime_local": "2026-10-17T23:46:17",
+            "latest_birthtime": 1792251977.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd17-run1-codex/energy-centre-dispatch-v17__A4qVNiw/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792216204.0,
+            "latest_mtime_local": "2026-10-17T13:50:04",
+            "latest_birthtime": 1792216204.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd17-run3-codex/energy-centre-dispatch-v17__NrJUaae/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792217820.0,
+            "latest_mtime_local": "2026-10-17T14:17:00",
+            "latest_birthtime": 1792217820.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd18-run2-codex/energy-centre-dispatch-v18__ZU8gkYy/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792264314.0,
+            "latest_mtime_local": "2026-10-18T03:11:54",
+            "latest_birthtime": 1792264314.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd17-run1-claude/energy-centre-dispatch-v17__ZWTqkVF/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792205989.0,
+            "latest_mtime_local": "2026-10-17T10:59:49",
+            "latest_birthtime": 1792205989.0,
+            "predates_review_creation": true
+          },
+          {
+            "path": "jobs/ecd18-oracle/energy-centre-dispatch-v18__9YJCQU6/artifacts/app/planner/__pycache__",
+            "files": 5,
+            "latest_mtime": 1792249519.0,
+            "latest_mtime_local": "2026-10-17T23:05:19",
+            "latest_birthtime": 1792249519.0,
+            "predates_review_creation": true
+          }
+        ]
+      }
+    },
+    "no_new_bytecode_cache": {
+      "pass": true,
+      "detail": null
+    },
+    "README_sections": {
+      "pass": true,
+      "detail": null
+    },
+    "README_links": {
+      "pass": true,
+      "detail": []
+    },
+    "specified_versions": {
+      "pass": true,
+      "detail": {
+        "python": "3.13.5",
+        "numpy": "2.3.4",
+        "scipy": "1.17.0",
+        "pytest": "9.1.1"
+      }
+    }
+  },
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.3.4",
+    "scipy": "1.17.0",
+    "pytest": "9.1.1"
+  },
+  "git_status": "?? results/checks-v20/independent-review/\n",
+  "scratch_directory": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v20-review"
+}

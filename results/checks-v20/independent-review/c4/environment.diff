@@ -1,0 +1,18 @@
+--- formal/data/plant.json
++++ c4/data/plant.json
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }

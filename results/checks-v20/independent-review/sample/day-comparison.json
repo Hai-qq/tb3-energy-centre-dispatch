@@ -1,0 +1,1292 @@
+{
+  "oracle": {
+    "d0001": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0014": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0026": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0035": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0045": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0057": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0070": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0083": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0093": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0105": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0115": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0128": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0138": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0150": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0159": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0168": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0180": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0192": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0203": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0216": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0227": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0238": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0252": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0265": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0277": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    }
+  },
+  "strong-v16": {
+    "d0001": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0014": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0026": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0035": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0045": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0057": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0070": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0083": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0093": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0105": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0115": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0128": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0138": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0150": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0159": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0168": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0180": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0192": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0203": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0216": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0227": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0238": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0252": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0265": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    },
+    "d0277": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost"
+      ],
+      "errors": {}
+    }
+  },
+  "strong-v19": {
+    "d0001": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0014": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0026": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0035": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0045": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0057": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0070": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0083": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0093": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0105": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0115": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0128": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0138": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0150": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0159": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0168": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0180": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0192": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0203": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0216": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0227": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0238": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0252": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0265": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    },
+    "d0277": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "gpt_pro_failed_tests": [
+        "test_least_cost",
+        "test_reported_gas_and_cost",
+        "test_single_connection_direction"
+      ],
+      "errors": {}
+    }
+  },
+  "blind": {
+    "d0001": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0014": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0014": "exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust",
+        "d0014.rerun": "exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust"
+      }
+    },
+    "d0026": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0026": "exit 2: dispatch: unknown outage unit: EC1 condenser",
+        "d0026.rerun": "exit 2: dispatch: unknown outage unit: EC1 condenser"
+      }
+    },
+    "d0035": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0035": "exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust",
+        "d0035.rerun": "exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust"
+      }
+    },
+    "d0045": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0045": "exit 2: dispatch: unknown outage unit: AC1 generator",
+        "d0045.rerun": "exit 2: dispatch: unknown outage unit: AC1 generator"
+      }
+    },
+    "d0057": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0057": "exit 2: dispatch: unknown outage unit: EC2 condenser",
+        "d0057.rerun": "exit 2: dispatch: unknown outage unit: EC2 condenser"
+      }
+    },
+    "d0070": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0083": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0093": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0093": "exit 2: dispatch: unknown outage unit: EC1 condenser",
+        "d0093.rerun": "exit 2: dispatch: unknown outage unit: EC1 condenser"
+      }
+    },
+    "d0105": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0105": "exit 2: dispatch: unknown outage unit: GE2 intercooler",
+        "d0105.rerun": "exit 2: dispatch: unknown outage unit: GE2 intercooler"
+      }
+    },
+    "d0115": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0128": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0128": "exit 2: dispatch: unknown outage unit: AC1 absorber and condenser",
+        "d0128.rerun": "exit 2: dispatch: unknown outage unit: AC1 absorber and condenser"
+      }
+    },
+    "d0138": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0150": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0150": "exit 2: dispatch: unknown outage unit: AC1 generator",
+        "d0150.rerun": "exit 2: dispatch: unknown outage unit: AC1 generator"
+      }
+    },
+    "d0159": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0168": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0180": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0192": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0192": "exit 2: dispatch: unknown outage unit: AC1 generator",
+        "d0192.rerun": "exit 2: dispatch: unknown outage unit: AC1 generator"
+      }
+    },
+    "d0203": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0203": "exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust",
+        "d0203.rerun": "exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust"
+      }
+    },
+    "d0216": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0216": "exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust",
+        "d0216.rerun": "exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust"
+      }
+    },
+    "d0227": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0227": "exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust",
+        "d0227.rerun": "exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust"
+      }
+    },
+    "d0238": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0252": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    },
+    "d0265": {
+      "passed": false,
+      "gpt_pro_passed": false,
+      "agrees": true,
+      "failed_tests": [
+        "test_connection_limits",
+        "test_cooling_balance",
+        "test_cooling_towers",
+        "test_electricity_balance",
+        "test_heat_balance",
+        "test_least_cost",
+        "test_plan_covers_the_day",
+        "test_reported_gas_and_cost",
+        "test_reported_import_export_and_grid_flags",
+        "test_same_plan_every_time",
+        "test_single_connection_direction",
+        "test_units_within_ratings_and_availability"
+      ],
+      "gpt_pro_failed_tests": [
+        "execution_or_flow"
+      ],
+      "errors": {
+        "d0265": "exit 2: dispatch: unknown outage unit: GE1 intercooler",
+        "d0265.rerun": "exit 2: dispatch: unknown outage unit: GE1 intercooler"
+      }
+    },
+    "d0277": {
+      "passed": true,
+      "gpt_pro_passed": true,
+      "agrees": true,
+      "failed_tests": [],
+      "gpt_pro_failed_tests": [],
+      "errors": {}
+    }
+  }
+}

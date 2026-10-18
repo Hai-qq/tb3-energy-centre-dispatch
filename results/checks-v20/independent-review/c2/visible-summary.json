@@ -1,0 +1,23 @@
+{
+  "instruction_identical": true,
+  "fields": [
+    {
+      "path": "data/supply.json/gas/entry",
+      "before": null,
+      "after": {
+        "id": "GAS-IN",
+        "maximum_standard_m3_per_hour": 550.0,
+        "standard_temperature_c": 15.0,
+        "standard_pressure_bar_absolute": 1.01325,
+        "gross_calorific_value_mj_per_standard_m3": 39.6,
+        "supplies": [
+          "GE1",
+          "GE2",
+          "B1",
+          "B2"
+        ]
+      }
+    }
+  ],
+  "environment_file_count": 12
+}

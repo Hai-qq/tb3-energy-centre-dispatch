@@ -1,0 +1,21 @@
+{
+  "instruction_identical": true,
+  "fields": [
+    {
+      "path": "data/supply.json/electricity/export_rate_p_per_kwh",
+      "before": 5.9,
+      "after": 12.0
+    },
+    {
+      "path": "data/supply.json/electricity/import_rates_p_per_kwh/weekday/0/rate",
+      "before": 13.8,
+      "after": 7.0
+    },
+    {
+      "path": "data/supply.json/electricity/import_rates_p_per_kwh/weekend/0/rate",
+      "before": 13.8,
+      "after": 7.0
+    }
+  ],
+  "environment_file_count": 12
+}
