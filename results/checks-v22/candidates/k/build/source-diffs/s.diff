@@ -1,0 +1,448 @@
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/environment/data/plant.json results/checks-v22/candidates/s/task/environment/data/plant.json
+--- tasks/energy-centre-dispatch/environment/data/plant.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/environment/data/plant.json	2026-10-18 22:39:25
+@@ -168,6 +168,16 @@
+       ]
+     ]
+   },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "max_kw": 220
++    },
++    {
++      "id": "LT radiator 2",
++      "max_kw": 220
++    }
++  ],
+   "heat_circuits": {
+     "engine_ht": {
+       "flow_c": 90,
+@@ -188,7 +198,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
++        "LT PHE 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,6 +208,18 @@
+         "GE2 intercooler"
+       ],
+       "to": [
++        "LT PHE 2"
++      ]
++    },
++    "lt_heat_rejection": {
++      "flow_c": 37,
++      "return_c": 32,
++      "from": [
++        "LT PHE 1",
++        "LT PHE 2"
++      ],
++      "to": [
++        "LT radiator 1",
+         "LT radiator 2"
+       ]
+     },
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/solution/app/planner/optimize.py results/checks-v22/candidates/s/task/solution/app/planner/optimize.py
+--- tasks/energy-centre-dispatch/solution/app/planner/optimize.py	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/solution/app/planner/optimize.py	2026-10-18 22:39:25
+@@ -93,6 +93,21 @@
+     bounds[iX] = (0.0, tariff.export_limit_kw)
+ 
+     A_eq, b_eq, A_ub, b_ub = [], [], [], []
++    # LT heat from each engine's current segment shares the in-service radiator capacity.
++    for sources, sinks in plant.lt_rejection.values():
++        row = np.zeros(n)
++        offset = 0.0
++        for j, (e, piece) in enumerate(zip(engines, pieces)):
++            if e.id in sources:
++                low, high = piece[:2]
++                qlow, qhigh = np.interp([low, high], e.kwe, e.lt_heat_kw)
++                slope = (qhigh - qlow) / (high - low)
++                row[j] = slope
++                offset += qlow - slope * low
++        capacity = sum(kw for item, kw in sinks.items()
++                       if _available(day, item, day.starts[t]))
++        A_ub.append(row)
++        b_ub.append(capacity - offset)
+     # electricity: generation + import - export = building + plant auxiliaries + chillers
+     row = np.zeros(n)
+     row[:nP] = 1.0
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/solution/app/planner/plant.py results/checks-v22/candidates/s/task/solution/app/planner/plant.py
+--- tasks/energy-centre-dispatch/solution/app/planner/plant.py	2026-10-18 09:20:13
++++ results/checks-v22/candidates/s/task/solution/app/planner/plant.py	2026-10-18 22:39:25
+@@ -22,6 +22,7 @@
+         self.kwe = np.array([p["kwe"] for p in pts], dtype=float)
+         self.fuel_kw = np.array([p["fuel_kw"] for p in pts], dtype=float)
+         self.heat_kw = np.array([p["ht_heat_kw"] for p in pts], dtype=float)
++        self.lt_heat_kw = np.array([p["lt_heat_kw"] for p in pts], dtype=float)
+         self.min_kwe = float(self.kwe[0])
+         self.rated_kwe = float(d["rated_kwe"])
+         self.fuel_basis = d["fuel_basis"]
+@@ -97,6 +98,15 @@
+         self.engine_lt_sinks = {e.id: tuple(item for c in d["heat_circuits"].values()
+                                           if f"{e.id} intercooler" in c["from"] for item in c["to"])
+                                 for e in self.engines}
++        # Secondary rejection circuits receive the outlets of the engine LT circuits.
++        radiators = {r["id"]: float(r["max_kw"]) for r in d.get("lt_radiators", [])}
++        self.lt_rejection = {}
++        for name, circuit in d["heat_circuits"].items():
++            sources = tuple(e.id for e in self.engines
++                            if set(self.engine_lt_sinks[e.id]) & set(circuit["from"]))
++            sinks = {item: radiators[item] for item in circuit["to"] if item in radiators}
++            if sources and sinks:
++                self.lt_rejection[name] = (sources, sinks)
+         self.boilers = [Boiler(x) for x in d["boilers"]]
+         self.electric_chillers = [ElectricChiller(x) for x in d["electric_chillers"]]
+         self.absorption_chillers = [AbsorptionChiller(x) for x in d["absorption_chillers"]]
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h1/plant.json results/checks-v22/candidates/s/task/tests/days/h1/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h1/plant.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/days/h1/plant.json	2026-10-18 22:39:25
+@@ -168,6 +168,16 @@
+       ]
+     ]
+   },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "max_kw": 220
++    },
++    {
++      "id": "LT radiator 2",
++      "max_kw": 220
++    }
++  ],
+   "heat_circuits": {
+     "engine_ht": {
+       "flow_c": 90,
+@@ -188,7 +198,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
++        "LT PHE 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,6 +208,18 @@
+         "GE2 intercooler"
+       ],
+       "to": [
++        "LT PHE 2"
++      ]
++    },
++    "lt_heat_rejection": {
++      "flow_c": 37,
++      "return_c": 32,
++      "from": [
++        "LT PHE 1",
++        "LT PHE 2"
++      ],
++      "to": [
++        "LT radiator 1",
+         "LT radiator 2"
+       ]
+     },
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h1/status.json results/checks-v22/candidates/s/task/tests/days/h1/status.json
+--- tasks/energy-centre-dispatch/tests/days/h1/status.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/days/h1/status.json	2026-10-18 22:41:41
+@@ -19,6 +19,11 @@
+       "unit": "GE1",
+       "from": "11:20",
+       "to": "17:00"
++    },
++    {
++      "unit": "LT PHE 1",
++      "from": "18:10",
++      "to": "19:20"
+     }
+   ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h2/plant.json results/checks-v22/candidates/s/task/tests/days/h2/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h2/plant.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/days/h2/plant.json	2026-10-18 22:39:25
+@@ -168,6 +168,16 @@
+       ]
+     ]
+   },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "max_kw": 220
++    },
++    {
++      "id": "LT radiator 2",
++      "max_kw": 220
++    }
++  ],
+   "heat_circuits": {
+     "engine_ht": {
+       "flow_c": 90,
+@@ -188,7 +198,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
++        "LT PHE 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,6 +208,18 @@
+         "GE2 intercooler"
+       ],
+       "to": [
++        "LT PHE 2"
++      ]
++    },
++    "lt_heat_rejection": {
++      "flow_c": 37,
++      "return_c": 32,
++      "from": [
++        "LT PHE 1",
++        "LT PHE 2"
++      ],
++      "to": [
++        "LT radiator 1",
+         "LT radiator 2"
+       ]
+     },
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h3/plant.json results/checks-v22/candidates/s/task/tests/days/h3/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h3/plant.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/days/h3/plant.json	2026-10-18 22:39:25
+@@ -168,6 +168,16 @@
+       ]
+     ]
+   },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "max_kw": 220
++    },
++    {
++      "id": "LT radiator 2",
++      "max_kw": 220
++    }
++  ],
+   "heat_circuits": {
+     "engine_ht": {
+       "flow_c": 90,
+@@ -188,7 +198,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
++        "LT PHE 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,6 +208,18 @@
+         "GE2 intercooler"
+       ],
+       "to": [
++        "LT PHE 2"
++      ]
++    },
++    "lt_heat_rejection": {
++      "flow_c": 37,
++      "return_c": 32,
++      "from": [
++        "LT PHE 1",
++        "LT PHE 2"
++      ],
++      "to": [
++        "LT radiator 1",
+         "LT radiator 2"
+       ]
+     },
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h4/plant.json results/checks-v22/candidates/s/task/tests/days/h4/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h4/plant.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/days/h4/plant.json	2026-10-18 22:39:25
+@@ -168,6 +168,16 @@
+       ]
+     ]
+   },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "max_kw": 220
++    },
++    {
++      "id": "LT radiator 2",
++      "max_kw": 220
++    }
++  ],
+   "heat_circuits": {
+     "engine_ht": {
+       "flow_c": 90,
+@@ -188,7 +198,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
++        "LT PHE 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,6 +208,18 @@
+         "GE2 intercooler"
+       ],
+       "to": [
++        "LT PHE 2"
++      ]
++    },
++    "lt_heat_rejection": {
++      "flow_c": 37,
++      "return_c": 32,
++      "from": [
++        "LT PHE 1",
++        "LT PHE 2"
++      ],
++      "to": [
++        "LT radiator 1",
+         "LT radiator 2"
+       ]
+     },
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/visible/plant.json results/checks-v22/candidates/s/task/tests/days/visible/plant.json
+--- tasks/energy-centre-dispatch/tests/days/visible/plant.json	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/days/visible/plant.json	2026-10-18 22:39:25
+@@ -168,6 +168,16 @@
+       ]
+     ]
+   },
++  "lt_radiators": [
++    {
++      "id": "LT radiator 1",
++      "max_kw": 220
++    },
++    {
++      "id": "LT radiator 2",
++      "max_kw": 220
++    }
++  ],
+   "heat_circuits": {
+     "engine_ht": {
+       "flow_c": 90,
+@@ -188,7 +198,7 @@
+         "GE1 intercooler"
+       ],
+       "to": [
+-        "LT radiator 1"
++        "LT PHE 1"
+       ]
+     },
+     "ge2_lt": {
+@@ -198,6 +208,18 @@
+         "GE2 intercooler"
+       ],
+       "to": [
++        "LT PHE 2"
++      ]
++    },
++    "lt_heat_rejection": {
++      "flow_c": 37,
++      "return_c": 32,
++      "from": [
++        "LT PHE 1",
++        "LT PHE 2"
++      ],
++      "to": [
++        "LT radiator 1",
+         "LT radiator 2"
+       ]
+     },
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/reference.py results/checks-v22/candidates/s/task/tests/reference.py
+--- tasks/energy-centre-dispatch/tests/reference.py	2026-10-18 09:19:46
++++ results/checks-v22/candidates/s/task/tests/reference.py	2026-10-18 22:50:39
+@@ -85,6 +85,8 @@
+         self.lthw_loss = self.plant["heat_circuits"]["lthw"]["loss_kw"]
+ 
+         self.engines = self.plant["engines"]
++        self.lt_curve = {e["id"]: np.array([p["lt_heat_kw"] for p in e["part_load"]], dtype=float)
++                         for e in self.engines}
+         self.curve, self.q_per_kw = {}, {}
+         for e in self.engines:
+             pl = e["part_load"]
+@@ -110,7 +112,7 @@
+             a, b = _hm(o["from"]), _hm(o["to"])
+             self.available[o["unit"]] &= ~np.array([c < b and c + 30 > a for c in self.clock])
+         # A part out takes out what cannot work without it: an engine cannot run without its intercooler
+-        # or its LT radiator, the only way out for its intercooler heat; a chiller cannot run without its
++        # or its LT outlet PHE, the only way out for its intercooler heat; a chiller cannot run without its
+         # condenser, nor the absorption chiller without its generator or its absorber and condenser.
+         for e in self.engines:
+             self.available[e["id"]] &= self.available[f"{e['id']} intercooler"]
+@@ -141,12 +143,28 @@
+                             for c in self.clock], dtype=float)
+         self.pv_max = self.pv * np.clip(1.0 - out_min / 30.0, 0.0, 1.0)
+         self.pv = np.where(self.available[pv_id], self.pv, 0.0)
++        # Trace engine intercooler -> primary LT outlet -> secondary rejection circuit.
++        radiators = {r["id"]: float(r["max_kw"]) for r in self.plant.get("lt_radiators", [])}
++        self.lt_sources, self.lt_capacity = {}, {}
++        for name, circuit in self.plant["heat_circuits"].items():
++            sources = []
++            for e in self.engines:
++                outlets = {item for c in circuits if f"{e['id']} intercooler" in c["from"]
++                           for item in c["to"]}
++                if outlets.intersection(circuit["from"]):
++                    sources.append(e["id"])
++            sinks = [item for item in circuit["to"] if item in radiators]
++            if sources and sinks:
++                self.lt_sources[name] = sources
++                self.lt_capacity[name] = sum(radiators[item] * self.available[item] for item in sinks)
+         self.running0 = set(self.status["running_at_midnight"])
+ 
+     def true_flows(self, plan: dict) -> dict:
+         """What the plan's unit outputs really mean, period by period."""
+         keys = ("gas_kwh", "engine_heat", "engine_kvar", "aux", "ec_elec", "ac_heat", "rejected", "cost")
+         out = {k: np.zeros(N) for k in keys}
++        out["lt_heat"] = {name: np.zeros(N) for name in self.lt_sources}
++        out["lt_capacity"] = {name: cap.copy() for name, cap in self.lt_capacity.items()}
+         out["running_ok"] = np.ones(N, dtype=bool)
+         running = {e["id"]: e["id"] in self.running0 for e in self.engines}
+         starts = 0
+@@ -155,6 +173,11 @@
+             ok = True
+             for e in self.engines:
+                 kwe = float(p["engines_kwe"][e["id"]])
++                if kwe > 0.5:
++                    lt = np.interp(kwe, self.curve[e["id"]][0], self.lt_curve[e["id"]])
++                    for name, sources in self.lt_sources.items():
++                        if e["id"] in sources:
++                            out["lt_heat"][name][t] += lt
+                 on = kwe > 0.5
+                 if on:
+                     kw, fuel, heat = self.curve[e["id"]]
+@@ -292,6 +315,17 @@
+                         -1.0 if e["id"] in self.running0 else 0.0, np.inf)
+                 else:
+                     add({v(t, f"S{g}"): 1.0, v(t, f"U{g}"): -1.0, v(t - 1, f"U{g}"): 1.0}, 0.0, np.inf)
++            for name, sources in self.lt_sources.items():
++                terms = {}
++                for g, e in enumerate(eng):
++                    if e["id"] not in sources:
++                        continue
++                    kw = self.curve[e["id"]][0]
++                    lt = self.lt_curve[e["id"]]
++                    terms[v(t, f"U{g}")] = lt[0]
++                    for s in range(len(kw) - 1):
++                        terms[v(t, f"D{g}_{s}")] = (lt[s + 1] - lt[s]) / (kw[s + 1] - kw[s])
++                add(terms, -np.inf, self.lt_capacity[name][t])
+             rejection = {}
+             for b, bl in enumerate(boil):
+                 hi[v(t, f"B{b}")] = bl["max_kw"] if self.available[bl["id"]][t] else 0.0
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/test_plans.py results/checks-v22/candidates/s/task/tests/test_plans.py
+--- tasks/energy-centre-dispatch/tests/test_plans.py	2026-10-17 22:42:45
++++ results/checks-v22/candidates/s/task/tests/test_plans.py	2026-10-18 22:39:25
+@@ -129,3 +129,9 @@
+     day, _, flows = case
+     best = day.least_cost()["cost"]
+     assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
++
++
++def test_lt_heat_rejection(case):
++    _, _, flows = case
++    for name, heat in flows["lt_heat"].items():
++        assert (heat <= flows["lt_capacity"][name] + 0.5).all(), name

@@ -1,0 +1,413 @@
+{
+  "app": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/blind/d1/app",
+  "versions": {
+    "D": {
+      "errors": {
+        "h3": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)",
+        "h3.rerun": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)"
+      },
+      "failed": {
+        "test_connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "test_plan_covers_the_day": [
+          "h3"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h3"
+        ],
+        "test_electricity_balance": [
+          "h3"
+        ],
+        "test_heat_balance": [
+          "h3"
+        ],
+        "test_cooling_balance": [
+          "h3"
+        ],
+        "test_cooling_towers": [
+          "h3"
+        ],
+        "test_reported_gas_and_cost": [
+          "h3"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h3"
+        ],
+        "test_lt_heat_rejection": [
+          "h3"
+        ],
+        "test_same_plan_every_time": [
+          "h3"
+        ]
+      },
+      "removed_outages": {
+        "h1": [],
+        "h2": [],
+        "h3": [],
+        "h4": []
+      },
+      "elapsed_seconds": 5.347199999960139
+    },
+    "no_stop_parts": {
+      "errors": {
+        "h3": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)",
+        "h3.rerun": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)"
+      },
+      "failed": {
+        "test_connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "test_plan_covers_the_day": [
+          "h3"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h3"
+        ],
+        "test_electricity_balance": [
+          "h3"
+        ],
+        "test_heat_balance": [
+          "h3"
+        ],
+        "test_cooling_balance": [
+          "h3"
+        ],
+        "test_cooling_towers": [
+          "h3"
+        ],
+        "test_reported_gas_and_cost": [
+          "h3"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h3"
+        ],
+        "test_lt_heat_rejection": [
+          "h3"
+        ],
+        "test_same_plan_every_time": [
+          "h3"
+        ]
+      },
+      "removed_outages": {
+        "h1": [
+          {
+            "unit": "EC1 condenser",
+            "from": "07:10",
+            "to": "09:20"
+          },
+          {
+            "unit": "LT PHE 1",
+            "from": "18:10",
+            "to": "19:20"
+          }
+        ],
+        "h2": [
+          {
+            "unit": "GE2 jacket water heat exchanger",
+            "from": "18:20",
+            "to": "18:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "09:20",
+            "to": "11:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "AC1 absorber and condenser",
+            "from": "07:10",
+            "to": "10:20"
+          },
+          {
+            "unit": "AC1 generator",
+            "from": "12:40",
+            "to": "12:50"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "GE1 intercooler",
+            "from": "03:50",
+            "to": "05:50"
+          }
+        ]
+      },
+      "elapsed_seconds": 5.4992629589978606
+    },
+    "no_new_parts": {
+      "errors": {
+        "h3": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)",
+        "h3.rerun": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)"
+      },
+      "failed": {
+        "test_connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "test_plan_covers_the_day": [
+          "h3"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h3"
+        ],
+        "test_electricity_balance": [
+          "h3"
+        ],
+        "test_heat_balance": [
+          "h3"
+        ],
+        "test_cooling_balance": [
+          "h3"
+        ],
+        "test_cooling_towers": [
+          "h3"
+        ],
+        "test_reported_gas_and_cost": [
+          "h3"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h3"
+        ],
+        "test_lt_heat_rejection": [
+          "h3"
+        ],
+        "test_same_plan_every_time": [
+          "h3"
+        ]
+      },
+      "removed_outages": {
+        "h1": [],
+        "h2": [
+          {
+            "unit": "LT radiator 1",
+            "from": "21:10",
+            "to": "23:00"
+          },
+          {
+            "unit": "GE1 exhaust heat exchanger",
+            "from": "12:00",
+            "to": "14:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "LT radiator 2",
+            "from": "10:40",
+            "to": "14:20"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "LT radiator 1",
+            "from": "00:00",
+            "to": "03:40"
+          }
+        ]
+      },
+      "elapsed_seconds": 5.292834791820496
+    },
+    "units_only": {
+      "errors": {
+        "h3": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)",
+        "h3.rerun": "exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)"
+      },
+      "failed": {
+        "test_connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "h1",
+          "h3",
+          "h4"
+        ],
+        "test_plan_covers_the_day": [
+          "h3"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h3"
+        ],
+        "test_electricity_balance": [
+          "h3"
+        ],
+        "test_heat_balance": [
+          "h3"
+        ],
+        "test_cooling_balance": [
+          "h3"
+        ],
+        "test_cooling_towers": [
+          "h3"
+        ],
+        "test_reported_gas_and_cost": [
+          "h3"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h3"
+        ],
+        "test_lt_heat_rejection": [
+          "h3"
+        ],
+        "test_same_plan_every_time": [
+          "h3"
+        ]
+      },
+      "removed_outages": {
+        "h1": [
+          {
+            "unit": "EC1 condenser",
+            "from": "07:10",
+            "to": "09:20"
+          },
+          {
+            "unit": "LT PHE 1",
+            "from": "18:10",
+            "to": "19:20"
+          }
+        ],
+        "h2": [
+          {
+            "unit": "GE2 jacket water heat exchanger",
+            "from": "18:20",
+            "to": "18:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "09:20",
+            "to": "11:50"
+          },
+          {
+            "unit": "LT radiator 1",
+            "from": "21:10",
+            "to": "23:00"
+          },
+          {
+            "unit": "GE1 exhaust heat exchanger",
+            "from": "12:00",
+            "to": "14:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "AC1 absorber and condenser",
+            "from": "07:10",
+            "to": "10:20"
+          },
+          {
+            "unit": "LT radiator 2",
+            "from": "10:40",
+            "to": "14:20"
+          },
+          {
+            "unit": "AC1 generator",
+            "from": "12:40",
+            "to": "12:50"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "LT radiator 1",
+            "from": "00:00",
+            "to": "03:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "03:50",
+            "to": "05:50"
+          }
+        ]
+      },
+      "elapsed_seconds": 5.386534416815266
+    }
+  },
+  "all_passed": false
+}
+
+Readable summary:
+D: FAIL
+  test_connection_limits: h1, h2, h3, h4
+  test_cooling_balance: h3
+  test_cooling_towers: h3
+  test_electricity_balance: h3
+  test_heat_balance: h3
+  test_least_cost: h1, h3, h4
+  test_lt_heat_rejection: h3
+  test_plan_covers_the_day: h3
+  test_reported_gas_and_cost: h3
+  test_reported_import_export_and_grid_flags: h3
+  test_same_plan_every_time: h3
+  test_units_within_ratings_and_availability: h3
+  execution h3: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)
+  execution h3.rerun: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)
+no_stop_parts: FAIL
+  test_connection_limits: h1, h2, h3, h4
+  test_cooling_balance: h3
+  test_cooling_towers: h3
+  test_electricity_balance: h3
+  test_heat_balance: h3
+  test_least_cost: h1, h3, h4
+  test_lt_heat_rejection: h3
+  test_plan_covers_the_day: h3
+  test_reported_gas_and_cost: h3
+  test_reported_import_export_and_grid_flags: h3
+  test_same_plan_every_time: h3
+  test_units_within_ratings_and_availability: h3
+  execution h3: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)
+  execution h3.rerun: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1, LT radiator 2)
+no_new_parts: FAIL
+  test_connection_limits: h1, h2, h3, h4
+  test_cooling_balance: h3
+  test_cooling_towers: h3
+  test_electricity_balance: h3
+  test_heat_balance: h3
+  test_least_cost: h1, h3, h4
+  test_lt_heat_rejection: h3
+  test_plan_covers_the_day: h3
+  test_reported_gas_and_cost: h3
+  test_reported_import_export_and_grid_flags: h3
+  test_same_plan_every_time: h3
+  test_units_within_ratings_and_availability: h3
+  execution h3: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)
+  execution h3.rerun: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)
+units_only: FAIL
+  test_connection_limits: h1, h2, h3, h4
+  test_cooling_balance: h3
+  test_cooling_towers: h3
+  test_electricity_balance: h3
+  test_heat_balance: h3
+  test_least_cost: h1, h3, h4
+  test_lt_heat_rejection: h3
+  test_plan_covers_the_day: h3
+  test_reported_gas_and_cost: h3
+  test_reported_import_export_and_grid_flags: h3
+  test_same_plan_every_time: h3
+  test_units_within_ratings_and_availability: h3
+  execution h3: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)
+  execution h3.rerun: exit 1: RuntimeError: no loading of the plant meets the demand at 13:30 (heat 921.2 kW with the LTHW loss, cooling 1050.5 kW, tower capacity 4000.0 kW, out of service: EC1)

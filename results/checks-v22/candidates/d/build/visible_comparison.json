@@ -1,0 +1,403 @@
+{
+  "reported_cost_gbp": 5346.572,
+  "true_cost_gbp": 5346.571630438901,
+  "baselines": {
+    "v19": {
+      "reported_cost_gbp": 6303.56,
+      "D_minus_baseline_gbp": -956.9880000000003
+    },
+    "S": {
+      "reported_cost_gbp": 6303.56,
+      "D_minus_baseline_gbp": -956.9880000000003
+    }
+  },
+  "stack_exhaust_kwh": 7649.036972183097,
+  "stack_kw_max": 582.2840366197183,
+  "periods": [
+    {
+      "start": "00:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 303.150704225352
+    },
+    {
+      "start": "00:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 338.2760563380282
+    },
+    {
+      "start": "01:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 345.4901408450703
+    },
+    {
+      "start": "01:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 329.3070422535211
+    },
+    {
+      "start": "02:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 335.4901408450703
+    },
+    {
+      "start": "02:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 361.012676056338
+    },
+    {
+      "start": "03:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 382.8154929577464
+    },
+    {
+      "start": "03:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 363.06197183098584
+    },
+    {
+      "start": "04:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 345.14929577464795
+    },
+    {
+      "start": "04:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 272.52112676056333
+    },
+    {
+      "start": "05:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 209.4718309859154
+    },
+    {
+      "start": "05:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 35.97746478873228
+    },
+    {
+      "start": "06:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "06:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "07:00",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "07:30",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "08:00",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "08:30",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "09:00",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "09:30",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "10:00",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "10:30",
+      "exhaust_generated_kw": {
+        "GE1": 0.0,
+        "GE2": 330.0
+      },
+      "stack_exhaust_kw": 0.0
+    },
+    {
+      "start": "11:00",
+      "exhaust_generated_kw": {
+        "GE1": 423.7668,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 464.47303661971796
+    },
+    {
+      "start": "11:30",
+      "exhaust_generated_kw": {
+        "GE1": 439.3218,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 516.5830366197181
+    },
+    {
+      "start": "12:00",
+      "exhaust_generated_kw": {
+        "GE1": 430.46400000000006,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 501.26743661971796
+    },
+    {
+      "start": "12:30",
+      "exhaust_generated_kw": {
+        "GE1": 440.40689999999995,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 531.153236619718
+    },
+    {
+      "start": "13:00",
+      "exhaust_generated_kw": {
+        "GE1": 444.0543,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 538.2480366197183
+    },
+    {
+      "start": "13:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 276.1986
+      },
+      "stack_exhaust_kw": 571.1366366197185
+    },
+    {
+      "start": "14:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 278.7198
+      },
+      "stack_exhaust_kw": 572.579036619718
+    },
+    {
+      "start": "14:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 285.5223
+      },
+      "stack_exhaust_kw": 582.2840366197183
+    },
+    {
+      "start": "15:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 273.5304
+      },
+      "stack_exhaust_kw": 541.3002366197184
+    },
+    {
+      "start": "15:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 279.9258
+      },
+      "stack_exhaust_kw": 546.5910366197181
+    },
+    {
+      "start": "16:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 274.5519
+      },
+      "stack_exhaust_kw": 527.7432366197181
+    },
+    {
+      "start": "16:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 282.5904
+      },
+      "stack_exhaust_kw": 530.9202366197183
+    },
+    {
+      "start": "17:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 280.0053
+      },
+      "stack_exhaust_kw": 529.7500366197182
+    },
+    {
+      "start": "17:30",
+      "exhaust_generated_kw": {
+        "GE1": 444.0144,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 491.1682366197183
+    },
+    {
+      "start": "18:00",
+      "exhaust_generated_kw": {
+        "GE1": 438.1431,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 469.6256366197181
+    },
+    {
+      "start": "18:30",
+      "exhaust_generated_kw": {
+        "GE1": 435.71939999999995,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 445.978236619718
+    },
+    {
+      "start": "19:00",
+      "exhaust_generated_kw": {
+        "GE1": 410.619,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 403.87743661971854
+    },
+    {
+      "start": "19:30",
+      "exhaust_generated_kw": {
+        "GE1": 408.1401,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 370.0196366197183
+    },
+    {
+      "start": "20:00",
+      "exhaust_generated_kw": {
+        "GE1": 395.9718,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 344.4830366197182
+    },
+    {
+      "start": "20:30",
+      "exhaust_generated_kw": {
+        "GE1": 380.7396,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 311.918636619718
+    },
+    {
+      "start": "21:00",
+      "exhaust_generated_kw": {
+        "GE1": 375.5871,
+        "GE2": 270.0
+      },
+      "stack_exhaust_kw": 312.013636619718
+    },
+    {
+      "start": "21:30",
+      "exhaust_generated_kw": {
+        "GE1": 360.0,
+        "GE2": 264.83085
+      },
+      "stack_exhaust_kw": 302.6088866197183
+    },
+    {
+      "start": "22:00",
+      "exhaust_generated_kw": {
+        "GE1": 360.0,
+        "GE2": 250.4133
+      },
+      "stack_exhaust_kw": 371.1417338028168
+    },
+    {
+      "start": "22:30",
+      "exhaust_generated_kw": {
+        "GE1": 360.0,
+        "GE2": 239.7712
+      },
+      "stack_exhaust_kw": 526.4236394366199
+    },
+    {
+      "start": "23:00",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 120.90422535211246
+    },
+    {
+      "start": "23:30",
+      "exhaust_generated_kw": {
+        "GE1": 450.0,
+        "GE2": 0.0
+      },
+      "stack_exhaust_kw": 252.15774647887315
+    }
+  ],
+  "allocation_note": "Total stack duty is inferred uniquely from the unchanged plan schema; allocation between engines is not reported."
+}

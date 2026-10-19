@@ -1,0 +1,309 @@
+{
+  "app": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/v22-eval/a16-d",
+  "versions": {
+    "D": {
+      "errors": {
+        "h2": "exit 1: RuntimeError: no feasible loading of the plant at 14:00",
+        "h2.rerun": "exit 1: RuntimeError: no feasible loading of the plant at 14:00"
+      },
+      "failed": {
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "test_plan_covers_the_day": [
+          "h2"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h2"
+        ],
+        "test_electricity_balance": [
+          "h2"
+        ],
+        "test_heat_balance": [
+          "h2"
+        ],
+        "test_cooling_balance": [
+          "h2"
+        ],
+        "test_cooling_towers": [
+          "h2"
+        ],
+        "test_connection_limits": [
+          "h2"
+        ],
+        "test_reported_gas_and_cost": [
+          "h2"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h2"
+        ],
+        "test_lt_heat_rejection": [
+          "h2",
+          "h3"
+        ],
+        "test_same_plan_every_time": [
+          "h2"
+        ]
+      },
+      "removed_outages": {
+        "h1": [],
+        "h2": [],
+        "h3": [],
+        "h4": []
+      },
+      "elapsed_seconds": 7.161761041963473
+    },
+    "no_stop_parts": {
+      "errors": {
+        "h2": "exit 1: RuntimeError: no feasible loading of the plant at 14:00",
+        "h2.rerun": "exit 1: RuntimeError: no feasible loading of the plant at 14:00"
+      },
+      "failed": {
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "test_plan_covers_the_day": [
+          "h2"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h2"
+        ],
+        "test_electricity_balance": [
+          "h2"
+        ],
+        "test_heat_balance": [
+          "h2"
+        ],
+        "test_cooling_balance": [
+          "h2"
+        ],
+        "test_cooling_towers": [
+          "h2"
+        ],
+        "test_connection_limits": [
+          "h2"
+        ],
+        "test_reported_gas_and_cost": [
+          "h2"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h2"
+        ],
+        "test_lt_heat_rejection": [
+          "h2",
+          "h3"
+        ],
+        "test_same_plan_every_time": [
+          "h2"
+        ]
+      },
+      "removed_outages": {
+        "h1": [
+          {
+            "unit": "EC1 condenser",
+            "from": "07:10",
+            "to": "09:20"
+          },
+          {
+            "unit": "LT PHE 1",
+            "from": "18:10",
+            "to": "19:20"
+          }
+        ],
+        "h2": [
+          {
+            "unit": "GE2 jacket water heat exchanger",
+            "from": "18:20",
+            "to": "18:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "09:20",
+            "to": "11:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "AC1 absorber and condenser",
+            "from": "07:10",
+            "to": "10:20"
+          },
+          {
+            "unit": "AC1 generator",
+            "from": "12:40",
+            "to": "12:50"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "GE1 intercooler",
+            "from": "03:50",
+            "to": "05:50"
+          }
+        ]
+      },
+      "elapsed_seconds": 7.293340292060748
+    },
+    "no_new_parts": {
+      "errors": {},
+      "failed": {
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "removed_outages": {
+        "h1": [],
+        "h2": [
+          {
+            "unit": "LT radiator 1",
+            "from": "21:10",
+            "to": "23:00"
+          },
+          {
+            "unit": "GE1 exhaust heat exchanger",
+            "from": "12:00",
+            "to": "14:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "LT radiator 2",
+            "from": "10:40",
+            "to": "14:20"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "LT radiator 1",
+            "from": "00:00",
+            "to": "03:40"
+          }
+        ]
+      },
+      "elapsed_seconds": 7.282033624825999
+    },
+    "units_only": {
+      "errors": {},
+      "failed": {
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "removed_outages": {
+        "h1": [
+          {
+            "unit": "EC1 condenser",
+            "from": "07:10",
+            "to": "09:20"
+          },
+          {
+            "unit": "LT PHE 1",
+            "from": "18:10",
+            "to": "19:20"
+          }
+        ],
+        "h2": [
+          {
+            "unit": "GE2 jacket water heat exchanger",
+            "from": "18:20",
+            "to": "18:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "09:20",
+            "to": "11:50"
+          },
+          {
+            "unit": "LT radiator 1",
+            "from": "21:10",
+            "to": "23:00"
+          },
+          {
+            "unit": "GE1 exhaust heat exchanger",
+            "from": "12:00",
+            "to": "14:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "AC1 absorber and condenser",
+            "from": "07:10",
+            "to": "10:20"
+          },
+          {
+            "unit": "LT radiator 2",
+            "from": "10:40",
+            "to": "14:20"
+          },
+          {
+            "unit": "AC1 generator",
+            "from": "12:40",
+            "to": "12:50"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "LT radiator 1",
+            "from": "00:00",
+            "to": "03:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "03:50",
+            "to": "05:50"
+          }
+        ]
+      },
+      "elapsed_seconds": 7.40384391695261
+    }
+  },
+  "all_passed": false
+}
+
+Readable summary:
+D: FAIL
+  test_connection_limits: h2
+  test_cooling_balance: h2
+  test_cooling_towers: h2
+  test_electricity_balance: h2
+  test_heat_balance: h2
+  test_least_cost: visible, h1, h2, h4
+  test_lt_heat_rejection: h2, h3
+  test_plan_covers_the_day: h2
+  test_reported_gas_and_cost: h2
+  test_reported_import_export_and_grid_flags: h2
+  test_same_plan_every_time: h2
+  test_units_within_ratings_and_availability: h2
+  execution h2: exit 1: RuntimeError: no feasible loading of the plant at 14:00
+  execution h2.rerun: exit 1: RuntimeError: no feasible loading of the plant at 14:00
+no_stop_parts: FAIL
+  test_connection_limits: h2
+  test_cooling_balance: h2
+  test_cooling_towers: h2
+  test_electricity_balance: h2
+  test_heat_balance: h2
+  test_least_cost: visible, h1, h2, h4
+  test_lt_heat_rejection: h2, h3
+  test_plan_covers_the_day: h2
+  test_reported_gas_and_cost: h2
+  test_reported_import_export_and_grid_flags: h2
+  test_same_plan_every_time: h2
+  test_units_within_ratings_and_availability: h2
+  execution h2: exit 1: RuntimeError: no feasible loading of the plant at 14:00
+  execution h2.rerun: exit 1: RuntimeError: no feasible loading of the plant at 14:00
+no_new_parts: FAIL
+  test_least_cost: visible, h1, h3, h4
+units_only: FAIL
+  test_least_cost: visible, h1, h3, h4

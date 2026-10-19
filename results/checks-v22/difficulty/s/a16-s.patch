@@ -1,0 +1,16 @@
+diff -ru results/v16-trials/ecd16-run2-claude/app/planner/plant.py <scratchpad>/v22-eval/a16-s/planner/plant.py
+--- results/v16-trials/ecd16-run2-claude/app/planner/plant.py	2026-10-17 01:51:43
++++ <scratchpad>/v22-eval/a16-s/planner/plant.py	2026-10-18 22:53:05
+@@ -167,7 +167,11 @@
+ 
+         def is_dump(endpoint: str) -> bool:
+             s = endpoint.lower()
+-            return "radiator" in s or "dump" in s
++            if "radiator" in s or "dump" in s:
++                return True
++            # format adaptation: an exchanger whose own circuit only goes to radiators is a dump outlet
++            nxt = [c for c in circuits.values() if endpoint in c.get("from", [])]
++            return bool(nxt) and all(is_dump(y) for c in nxt for y in c.get("to", []))
+ 
+         # the circuit connections of each unit (an outage of one takes the unit out), and for an
+         # engine also the radiators that take the heat it does not recover

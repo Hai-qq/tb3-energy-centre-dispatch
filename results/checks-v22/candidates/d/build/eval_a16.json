@@ -1,0 +1,107 @@
+{
+  "errors": {
+    "visible": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "visible.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h1": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h1.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h2": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h2.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h3": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h3.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h4": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+    "h4.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit"
+  },
+  "failed": {
+    "test_plan_covers_the_day": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_units_within_ratings_and_availability": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_electricity_balance": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_heat_balance": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_cooling_balance": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_cooling_towers": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_connection_limits": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_reported_gas_and_cost": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_reported_import_export_and_grid_flags": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_least_cost": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_lt_heat_rejection": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_same_plan_every_time": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ]
+  },
+  "removed_outages": {
+    "h1": [],
+    "h2": [],
+    "h3": [],
+    "h4": []
+  },
+  "elapsed_seconds": 3.8610048750415444
+}

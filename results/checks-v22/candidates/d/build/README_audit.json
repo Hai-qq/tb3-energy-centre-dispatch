@@ -1,0 +1,22 @@
+{
+  "scope": "candidate D only",
+  "README": "../README.md",
+  "README_sha256": "7609d5202aa00c5d26414f36eb176c00489487614eea3328e5a5be51a515c8e6",
+  "source_of_claims": [
+    "gate_a.json",
+    "costs.json",
+    "visible_comparison.json",
+    "exhaust_pressure.json",
+    "fresh/manifest.json",
+    "fresh_coverage.json",
+    "traits_solution.json",
+    "traits_a16.json",
+    "traits_a19.json",
+    "rule_pressure.json",
+    "final_audit.json",
+    "task_sha256.json"
+  ],
+  "all_referenced_evidence_exists": true,
+  "pending_claims": false,
+  "status": "complete"
+}

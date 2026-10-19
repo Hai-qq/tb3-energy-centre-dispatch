@@ -1,0 +1,555 @@
+{
+  "app": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v16-trials/ecd16-run2-claude/app",
+  "versions": {
+    "D": {
+      "errors": {
+        "visible": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "visible.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit"
+      },
+      "failed": {
+        "test_plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_heat_rejection": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "removed_outages": {
+        "h1": [],
+        "h2": [],
+        "h3": [],
+        "h4": []
+      },
+      "elapsed_seconds": 3.8610048750415444
+    },
+    "no_stop_parts": {
+      "errors": {
+        "visible": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "visible.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit"
+      },
+      "failed": {
+        "test_plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_heat_rejection": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "removed_outages": {
+        "h1": [
+          {
+            "unit": "EC1 condenser",
+            "from": "07:10",
+            "to": "09:20"
+          },
+          {
+            "unit": "LT PHE 1",
+            "from": "18:10",
+            "to": "19:20"
+          }
+        ],
+        "h2": [
+          {
+            "unit": "GE2 jacket water heat exchanger",
+            "from": "18:20",
+            "to": "18:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "09:20",
+            "to": "11:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "AC1 absorber and condenser",
+            "from": "07:10",
+            "to": "10:20"
+          },
+          {
+            "unit": "AC1 generator",
+            "from": "12:40",
+            "to": "12:50"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "GE1 intercooler",
+            "from": "03:50",
+            "to": "05:50"
+          }
+        ]
+      },
+      "elapsed_seconds": 3.8735267920419574
+    },
+    "no_new_parts": {
+      "errors": {
+        "visible": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "visible.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit"
+      },
+      "failed": {
+        "test_plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_heat_rejection": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "removed_outages": {
+        "h1": [],
+        "h2": [
+          {
+            "unit": "LT radiator 1",
+            "from": "21:10",
+            "to": "23:00"
+          },
+          {
+            "unit": "GE1 exhaust heat exchanger",
+            "from": "12:00",
+            "to": "14:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "LT radiator 2",
+            "from": "10:40",
+            "to": "14:20"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "LT radiator 1",
+            "from": "00:00",
+            "to": "03:40"
+          }
+        ]
+      },
+      "elapsed_seconds": 3.9212273340672255
+    },
+    "units_only": {
+      "errors": {
+        "visible": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "visible.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h1.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h2.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h3.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit",
+        "h4.rerun": "exit 1: ValueError: GE1 jacket water and exhaust must feed exactly one heat circuit"
+      },
+      "failed": {
+        "test_plan_covers_the_day": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_electricity_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_balance": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_towers": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_connection_limits": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_gas_and_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_heat_rejection": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_same_plan_every_time": [
+          "visible",
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      },
+      "removed_outages": {
+        "h1": [
+          {
+            "unit": "EC1 condenser",
+            "from": "07:10",
+            "to": "09:20"
+          },
+          {
+            "unit": "LT PHE 1",
+            "from": "18:10",
+            "to": "19:20"
+          }
+        ],
+        "h2": [
+          {
+            "unit": "GE2 jacket water heat exchanger",
+            "from": "18:20",
+            "to": "18:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "09:20",
+            "to": "11:50"
+          },
+          {
+            "unit": "LT radiator 1",
+            "from": "21:10",
+            "to": "23:00"
+          },
+          {
+            "unit": "GE1 exhaust heat exchanger",
+            "from": "12:00",
+            "to": "14:50"
+          }
+        ],
+        "h3": [
+          {
+            "unit": "AC1 absorber and condenser",
+            "from": "07:10",
+            "to": "10:20"
+          },
+          {
+            "unit": "LT radiator 2",
+            "from": "10:40",
+            "to": "14:20"
+          },
+          {
+            "unit": "AC1 generator",
+            "from": "12:40",
+            "to": "12:50"
+          }
+        ],
+        "h4": [
+          {
+            "unit": "LT radiator 1",
+            "from": "00:00",
+            "to": "03:40"
+          },
+          {
+            "unit": "GE1 intercooler",
+            "from": "03:50",
+            "to": "05:50"
+          }
+        ]
+      },
+      "elapsed_seconds": 3.8993626658339053
+    }
+  },
+  "all_passed": false
+}

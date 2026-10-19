@@ -1,0 +1,23 @@
+{
+  "day": "h1",
+  "original_window": [
+    "18:10",
+    "19:20"
+  ],
+  "new_window": [
+    "20:10",
+    "21:20"
+  ],
+  "baseline_plan": "h1-before-phe.json",
+  "baseline_GE1_kwe": {
+    "20:00": 1200,
+    "20:30": 1200,
+    "21:00": 1200
+  },
+  "overlap_with_other_GE1_outages": false,
+  "final_GE1_kwe": {
+    "20:00": 0.0,
+    "20:30": 0.0,
+    "21:00": 0.0
+  }
+}

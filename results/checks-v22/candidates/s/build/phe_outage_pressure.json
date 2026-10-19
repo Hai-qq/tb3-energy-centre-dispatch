@@ -1,0 +1,27 @@
+{
+  "day": "h1",
+  "date": "2026-08-08",
+  "unit": "LT PHE 1",
+  "outage": [
+    "18:10",
+    "19:20"
+  ],
+  "other_engine_outages_overlap": false,
+  "periods": [
+    {
+      "start": "18:00",
+      "before_kwe": 1200.0,
+      "after_kwe": 0.0
+    },
+    {
+      "start": "18:30",
+      "before_kwe": 1200.0,
+      "after_kwe": 0.0
+    },
+    {
+      "start": "19:00",
+      "before_kwe": 1200.0,
+      "after_kwe": 0.0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+diff -ru results/v19-trials/ecd19-run2-claude/app/planner/optimize.py <scratchpad>/v22-eval/a19-s/planner/optimize.py
+--- results/v19-trials/ecd19-run2-claude/app/planner/optimize.py	2026-10-18 11:29:01
++++ <scratchpad>/v22-eval/a19-s/planner/optimize.py	2026-10-18 22:53:05
+@@ -57,6 +57,7 @@
+         known |= {c.id for c in plant.electric_chillers} | {a.id for a in plant.absorption_chillers}
+         known |= set(plant.tower_cells) | set(plant.heat_exchangers)
+         known |= {x for sinks in plant.lt_sinks.values() for x in sinks}
++        known |= set(plant.lt_radiators)  # format adaptation
+         if plant.pv_id:
+             known.add(plant.pv_id)
+         self._spans: dict[str, list[tuple[int, int]]] = {}
+diff -ru results/v19-trials/ecd19-run2-claude/app/planner/plant.py <scratchpad>/v22-eval/a19-s/planner/plant.py
+--- results/v19-trials/ecd19-run2-claude/app/planner/plant.py	2026-10-18 10:29:01
++++ <scratchpad>/v22-eval/a19-s/planner/plant.py	2026-10-18 22:53:42
+@@ -121,6 +121,7 @@
+ class Plant:
+     def __init__(self, d: dict):
+         self.engines = [Engine(x) for x in d["engines"]]
++        self.lt_radiators = [r["id"] for r in d.get("lt_radiators", [])]  # format adaptation
+         self.boilers = [Boiler(x) for x in d["boilers"]]
+         self.electric_chillers = [ElectricChiller(x) for x in d["electric_chillers"]]
+         self.absorption_chillers = [AbsorptionChiller(x) for x in d["absorption_chillers"]]

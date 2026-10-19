@@ -1,0 +1,780 @@
+{
+  "two_point_curve": {
+    "errors": {},
+    "failed": {
+      "test_reported_gas_and_cost": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_heat_balance": [
+        "h1",
+        "h3",
+        "h4"
+      ],
+      "test_least_cost": [
+        "h2",
+        "h3"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "starts_not_in_decision": {
+    "errors": {},
+    "failed": {
+      "test_least_cost": [
+        "h1",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "lt_heat_counted": {
+    "errors": {},
+    "failed": {
+      "test_heat_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_least_cost": [
+        "visible",
+        "h1",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "kva_ignores_engines": {
+    "errors": {
+      "h1": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h1.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+    },
+    "failed": {
+      "test_plan_covers_the_day": [
+        "h1",
+        "h2"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2"
+      ],
+      "test_electricity_balance": [
+        "h1",
+        "h2"
+      ],
+      "test_heat_balance": [
+        "h1",
+        "h2"
+      ],
+      "test_cooling_balance": [
+        "h1",
+        "h2"
+      ],
+      "test_cooling_towers": [
+        "h1",
+        "h2"
+      ],
+      "test_connection_limits": [
+        "h1",
+        "h2"
+      ],
+      "test_reported_gas_and_cost": [
+        "h1",
+        "h2"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h1",
+        "h2"
+      ],
+      "test_least_cost": [
+        "h1",
+        "h2"
+      ],
+      "test_lt_heat_rejection": [
+        "h1",
+        "h2"
+      ],
+      "test_same_plan_every_time": [
+        "h1",
+        "h2"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2"
+    ],
+    "skipped": false
+  },
+  "weekend_from_utc_start": {
+    "errors": {},
+    "failed": {
+      "test_reported_gas_and_cost": [
+        "h1"
+      ],
+      "test_least_cost": [
+        "h1"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1"
+    ],
+    "skipped": false
+  },
+  "kva_engines_absorb_kvar": {
+    "errors": {
+      "h1": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h1.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+    },
+    "failed": {
+      "test_plan_covers_the_day": [
+        "h1",
+        "h2"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2"
+      ],
+      "test_electricity_balance": [
+        "h1",
+        "h2"
+      ],
+      "test_heat_balance": [
+        "h1",
+        "h2"
+      ],
+      "test_cooling_balance": [
+        "h1",
+        "h2"
+      ],
+      "test_cooling_towers": [
+        "h1",
+        "h2"
+      ],
+      "test_connection_limits": [
+        "h1",
+        "h2"
+      ],
+      "test_reported_gas_and_cost": [
+        "h1",
+        "h2"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h1",
+        "h2"
+      ],
+      "test_least_cost": [
+        "h1",
+        "h2"
+      ],
+      "test_lt_heat_rejection": [
+        "h1",
+        "h2"
+      ],
+      "test_same_plan_every_time": [
+        "h1",
+        "h2"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2"
+    ],
+    "skipped": false
+  },
+  "cop_at_dry_bulb": {
+    "errors": {
+      "h1": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h1.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+    },
+    "failed": {
+      "test_electricity_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3"
+      ],
+      "test_least_cost": [
+        "visible",
+        "h1",
+        "h4"
+      ],
+      "test_plan_covers_the_day": [
+        "h1"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h1"
+      ],
+      "test_heat_balance": [
+        "h1"
+      ],
+      "test_cooling_balance": [
+        "h1"
+      ],
+      "test_cooling_towers": [
+        "h1"
+      ],
+      "test_connection_limits": [
+        "h1"
+      ],
+      "test_reported_gas_and_cost": [
+        "h1"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h1"
+      ],
+      "test_lt_heat_rejection": [
+        "h1"
+      ],
+      "test_same_plan_every_time": [
+        "h1"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "no_engine_aux": {
+    "errors": {},
+    "failed": {
+      "test_electricity_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "outages_ignored": {
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "visible",
+        "h1",
+        "h2",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "phe1_outage_ignored": {
+    "errors": {},
+    "failed": {
+      "test_heat_balance": [
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h4"
+    ],
+    "skipped": false
+  },
+  "intercooler_outage_ignored": {
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h2",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h2",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "parts_by_name_prefix": {
+    "errors": {
+      "h2": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+    },
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2"
+      ],
+      "test_plan_covers_the_day": [
+        "h2"
+      ],
+      "test_electricity_balance": [
+        "h2"
+      ],
+      "test_heat_balance": [
+        "h2"
+      ],
+      "test_cooling_balance": [
+        "h2"
+      ],
+      "test_cooling_towers": [
+        "h2"
+      ],
+      "test_connection_limits": [
+        "h2"
+      ],
+      "test_reported_gas_and_cost": [
+        "h2"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h2"
+      ],
+      "test_least_cost": [
+        "h2"
+      ],
+      "test_lt_heat_rejection": [
+        "h2"
+      ],
+      "test_same_plan_every_time": [
+        "h2"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2"
+    ],
+    "skipped": false
+  },
+  "condenser_outage_ignored": {
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h1"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1"
+    ],
+    "skipped": false
+  },
+  "outages_engines_only": {
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "pv_outage_ignored": {
+    "errors": {},
+    "failed": {
+      "test_electricity_balance": [
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h4"
+    ],
+    "skipped": false
+  },
+  "outages_one_per_unit": {
+    "errors": {},
+    "failed": {
+      "test_units_within_ratings_and_availability": [
+        "h2"
+      ],
+      "test_electricity_balance": [
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h2",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "absorber_cooling_water_ignored": {
+    "errors": {},
+    "failed": {
+      "test_electricity_balance": [
+        "h1",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "midnight_state_ignored": {
+    "errors": {},
+    "failed": {
+      "test_reported_gas_and_cost": [
+        "visible",
+        "h1",
+        "h2",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "import_total_in_kw": {
+    "errors": {},
+    "failed": {
+      "test_reported_import_export_and_grid_flags": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "plan_varies_between_runs": {
+    "errors": {},
+    "failed": {
+      "test_same_plan_every_time": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "hangs_after_writing": {
+    "errors": {
+      "visible": "timed out",
+      "visible.rerun": "timed out",
+      "h1": "timed out",
+      "h1.rerun": "timed out",
+      "h2": "timed out",
+      "h2.rerun": "timed out",
+      "h3": "timed out",
+      "h3.rerun": "timed out",
+      "h4": "timed out",
+      "h4.rerun": "timed out"
+    },
+    "failed": {
+      "test_plan_covers_the_day": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_electricity_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_heat_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_balance": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_towers": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_connection_limits": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_gas_and_cost": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_least_cost": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_lt_heat_rejection": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_same_plan_every_time": [
+        "visible",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "lt_radiator_outage_stops_engines": {
+    "errors": {
+      "h2": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h3": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h3.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h4": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h4.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+    },
+    "failed": {
+      "test_plan_covers_the_day": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_electricity_balance": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_heat_balance": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_balance": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_cooling_towers": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_connection_limits": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_gas_and_cost": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_least_cost": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_lt_heat_rejection": [
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "test_same_plan_every_time": [
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  },
+  "exhaust_outage_stops_engine": {
+    "errors": {
+      "h2": "exit 1: RuntimeError: no plan meets the demand within the limits",
+      "h2.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+    },
+    "failed": {
+      "test_plan_covers_the_day": [
+        "h2"
+      ],
+      "test_units_within_ratings_and_availability": [
+        "h2"
+      ],
+      "test_electricity_balance": [
+        "h2"
+      ],
+      "test_heat_balance": [
+        "h2"
+      ],
+      "test_cooling_balance": [
+        "h2"
+      ],
+      "test_cooling_towers": [
+        "h2"
+      ],
+      "test_connection_limits": [
+        "h2"
+      ],
+      "test_reported_gas_and_cost": [
+        "h2"
+      ],
+      "test_reported_import_export_and_grid_flags": [
+        "h2"
+      ],
+      "test_least_cost": [
+        "h2"
+      ],
+      "test_lt_heat_rejection": [
+        "h2"
+      ],
+      "test_same_plan_every_time": [
+        "h2"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h2"
+    ],
+    "skipped": false
+  },
+  "diverter_ignored": {
+    "errors": {},
+    "failed": {
+      "test_least_cost": [
+        "visible",
+        "h1",
+        "h3",
+        "h4"
+      ]
+    },
+    "status": "CAUGHT",
+    "hidden_days_caught": [
+      "h1",
+      "h3",
+      "h4"
+    ],
+    "skipped": false
+  }
+}

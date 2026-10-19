@@ -1,0 +1,116 @@
+--- results/checks-v22/candidates/s/build/candidate_mutants.py
++++ results/checks-v22/candidates/d/build/candidate_mutants.py
+@@ -1,41 +1,93 @@
+-"""Candidate-local mutation definitions; all original anchors remain mandatory."""
++"""D-local mutation wrapper. Every changed S anchor has an explicit equivalent override."""
+ from pathlib import Path
+ import json
++import os
++import shutil
+ import sys
++import tempfile
+ 
+ ROOT = Path(__file__).resolve().parents[5]
+-sys.path.insert(0, str(ROOT / 'tools'))
+-import energy_mutants as M
++B = Path(__file__).resolve().parent
++T = B.parent/'task'
++os.environ.update(ECD_TASK=str(T), PYTHONDONTWRITEBYTECODE='1', OPENBLAS_NUM_THREADS='1', OMP_NUM_THREADS='1')
++sys.path.insert(0, str(ROOT/'results/checks-v22/candidates/s/build'))
++import importlib.util
++spec = importlib.util.spec_from_file_location('s_candidate_mutants', ROOT/'results/checks-v22/candidates/s/build/candidate_mutants.py')
++S = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(S)
++M = S.M
++M.SOL = T/'solution/app'
++M.evaluate.__globals__['TASK'] = T
+ 
+-CAPACITY = '    for sources, sinks in plant.lt_rejection.values():'
+-IGNORE = ('planner/optimize.py', CAPACITY, '    for sources, sinks in ():')
+-M.MUTANTS['lt_capacity_ignored'] = [IGNORE]
+-M.MUTANTS['lt_radiator_outage_stops_engines'] = [IGNORE, ('planner/optimize.py',
++OLD_PARTS = 'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} jacket water and exhaust")'
++PARTS = 'for item in (engine.id, f"{engine.id} intercooler") + plant.engine_jacket[engine.id]'
++HEAT = 'self.heat_kw = np.array([p["jacket_water_heat_kw"] for p in pts], dtype=float) + self.exhaust_kw'
++M.MUTANTS['lt_heat_counted'] = [('planner/plant.py', HEAT,
++    'self.heat_kw = np.array([p["jacket_water_heat_kw"] + p["lt_heat_kw"] for p in pts], dtype=float) + self.exhaust_kw')]
++M.MUTANTS['intercooler_outage_ignored'] = [('planner/optimize.py', PARTS,
++    'for item in (engine.id,) + plant.engine_jacket[engine.id]')]
++M.MUTANTS['ht_source_outage_ignored'] = [('planner/optimize.py', PARTS,
++    'for item in (engine.id, f"{engine.id} intercooler")')]
++M.MUTANTS['parts_by_name_prefix'] = [('planner/optimize.py',
++    PARTS+'\n               + plant.engine_lt_sinks[engine.id])',
++    'for item in (engine.id,) + tuple(o["unit"] for o in day.status.get("outages", [])\n'
++    '                                               if o["unit"].startswith(engine.id + " ")))')]
++M.MUTANTS['heat_can_be_dumped'] = [('planner/optimize.py',
++    '    row[iB:iB + nB] = 1.0\n    row[iY] = -1.0\n    A_eq.append(row)\n'
++    '    b_eq.append(day.heat[t] + plant.lthw_loss_kw - sum(piece[4] for piece in pieces))',
++    '    row[iB:iB + nB] = 1.0\n    row[iY] = -1.0\n    A_ub.append(-row)\n'
++    '    b_ub.append(-(day.heat[t] + plant.lthw_loss_kw - sum(piece[4] for piece in pieces)))')]
++EXHAUST = '_available(day, plant.engine_exhaust[e.id], day.starts[t])'
++M.MUTANTS['exhaust_outage_stops_engine'] = [('planner/optimize.py',
+     '    return all(_available(day, item, hhmm)',
+-    '''    if any(engine.id in sources and any(not _available(day, item, hhmm) for item in sinks)
+-           for sources, sinks in plant.lt_rejection.values()):
+-        return False
+-    return all(_available(day, item, hhmm)''')]
+-M.MUTANTS['lt_capacity_ignores_outages'] = [('planner/optimize.py',
+-    '        capacity = sum(kw for item, kw in sinks.items()\n'
+-    '                       if _available(day, item, day.starts[t]))',
+-    '        capacity = sum(sinks.values())')]
++    '    if not _available(day, plant.engine_exhaust[engine.id], hhmm):\n        return False\n'
++    '    return all(_available(day, item, hhmm)')]
++M.MUTANTS['exhaust_outage_ignored'] = [('planner/optimize.py', EXHAUST, 'True')]
++M.MUTANTS['diverter_ignored'] = [('planner/optimize.py',
++    '    bounds[iY] = (0.0, None)', '    bounds[iY] = (0.0, 0.0)')]
++OVERRIDDEN = ['heat_can_be_dumped', 'lt_heat_counted', 'intercooler_outage_ignored',
++              'ht_source_outage_ignored', 'parts_by_name_prefix']
+ 
+ def preflight():
+     records = []
+     for name, patches in M.MUTANTS.items():
+         texts = {}
+         for rel, old, new in patches:
+-            s = texts.get(rel, (M.SOL / rel).read_text())
++            s = texts.get(rel, (M.SOL/rel).read_text())
+             count = s.count(old)
+             assert count == 1, (name, rel, count)
+             records.append({'mutant': name, 'file': rel, 'anchor_count': count})
+             texts[rel] = s.replace(old, new)
+     return records
+ 
+-if __name__ == '__main__':
++def main():
+     records = preflight()
+     if sys.argv[1:] == ['--preflight']:
+-        print(json.dumps({'mutants': len(M.MUTANTS), 'patches': records}, indent=2))
+-    else:
+-        M.main()
++        print(json.dumps({'mutants': len(M.MUTANTS), 'overridden_S_anchors': OVERRIDDEN,
++                          'patches': records}, indent=2))
++        return
++    names = sys.argv[1:] or list(M.MUTANTS)
++    results = {}
++    missed = []
++    for name in names:
++        with tempfile.TemporaryDirectory() as tmp:
++            app = Path(tmp)/'app'
++            shutil.copytree(M.SOL, app, ignore=shutil.ignore_patterns('__pycache__'))
++            for rel, old, new in M.MUTANTS[name]:
++                p = app/rel
++                s = p.read_text()
++                assert s.count(old) == 1
++                p.write_text(s.replace(old, new))
++            r = M.evaluate(app, quiet=True, timeout=M.RUN_TIMEOUT_S)
++        hidden = sorted({d for days in r['failed'].values() for d in days if d.startswith('h')})
++        status = 'CAUGHT' if r['failed'] else 'MISSED'
++        results[name] = {**r, 'status': status, 'hidden_days_caught': hidden, 'skipped': False}
++        print(f'{name:36s} {status} '+json.dumps(r), flush=True)
++        if (not hidden or not r['failed']) and name != 'diverter_ignored':
++            missed.append(name)
++    label = os.environ.get('MUTANT_GROUP', 'all')
++    (B/f'mutation_results_{label}.json').write_text(json.dumps(results, indent=2)+'\n')
++    assert not missed, missed
++
++if __name__ == '__main__':
++    main()

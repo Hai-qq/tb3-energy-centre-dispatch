@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "changed_files": [
+    "environment/data/plant.json",
+    "environment/planner/plant.py",
+    "solution/app/planner/optimize.py",
+    "solution/app/planner/plant.py",
+    "tests/days/h1/plant.json",
+    "tests/days/h1/status.json",
+    "tests/days/h2/plant.json",
+    "tests/days/h2/status.json",
+    "tests/days/h3/plant.json",
+    "tests/days/h4/plant.json",
+    "tests/days/visible/plant.json",
+    "tests/reference.py",
+    "tests/test_plans.py"
+  ],
+  "environment_changes": [
+    "environment/data/plant.json",
+    "environment/planner/plant.py"
+  ],
+  "protected_files_unchanged": true,
+  "supplied_sha256": {
+    "data/plant.json": "bde65b54fe63ade49c0e81da0edc0c519daa218ec506637954a9173282531bbb",
+    "planner/plant.py": "b566509b770aee53bc0b2a0afa4de91d7c806a44ef94df7459035aa3e9a5bdc7"
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "app": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v19-trials/ecd19-run2-claude/app",
+  "task": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/k/task",
+  "removed_outages": {
+    "h1": [
+      {
+        "unit": "EC1 condenser",
+        "from": "07:10",
+        "to": "09:20"
+      }
+    ],
+    "h2": [
+      {
+        "unit": "GE2 jacket water and exhaust",
+        "from": "18:20",
+        "to": "18:40"
+      },
+      {
+        "unit": "GE1 intercooler",
+        "from": "09:20",
+        "to": "11:50"
+      }
+    ],
+    "h3": [
+      {
+        "unit": "AC1 absorber and condenser",
+        "from": "07:10",
+        "to": "10:20"
+      },
+      {
+        "unit": "AC1 generator",
+        "from": "12:40",
+        "to": "12:50"
+      }
+    ],
+    "h4": [
+      {
+        "unit": "GE1 intercooler",
+        "from": "03:50",
+        "to": "05:50"
+      }
+    ]
+  },
+  "variants": {
+    "K": {
+      "passed": false,
+      "tests": {
+        "test_plan_covers_the_day": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_units_within_ratings_and_availability": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_electricity_balance": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_heat_balance": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_cooling_balance": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_cooling_towers": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_connection_limits": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_reported_gas_and_cost": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_reported_import_export_and_grid_flags": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_same_plan_every_time": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_least_cost": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_single_connection_direction": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_lt_pump_outages": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_shared_gas_entry": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_phe_primary_water_flow": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_lt_heat_rejection": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        }
+      },
+      "rules": {
+        "W": {
+          "test": "test_single_connection_direction",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "P": {
+          "test": "test_lt_pump_outages",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "C2": {
+          "test": "test_shared_gas_entry",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "C4": {
+          "test": "test_phe_primary_water_flow",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "S": {
+          "test": "test_lt_heat_rejection",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        }
+      },
+      "errors": {
+        "h1": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json",
+        "h1.rerun": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json",
+        "h2": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json",
+        "h2.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json",
+        "h3": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json",
+        "h3.rerun": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json",
+        "h4": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json",
+        "h4.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json"
+      },
+      "failed": {
+        "test_plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_electricity_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_towers": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_single_connection_direction": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_pump_outages": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_shared_gas_entry": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_phe_primary_water_flow": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_heat_rejection": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_same_plan_every_time": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      }
+    },
+    "without_old_component_outages": {
+      "passed": false,
+      "tests": {
+        "test_plan_covers_the_day": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_units_within_ratings_and_availability": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_electricity_balance": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_heat_balance": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_cooling_balance": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_cooling_towers": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_connection_limits": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_reported_gas_and_cost": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_reported_import_export_and_grid_flags": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_same_plan_every_time": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_least_cost": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_single_connection_direction": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_lt_pump_outages": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_shared_gas_entry": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_phe_primary_water_flow": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        },
+        "test_lt_heat_rejection": {
+          "visible": true,
+          "h1": false,
+          "h2": false,
+          "h3": false,
+          "h4": false
+        }
+      },
+      "rules": {
+        "W": {
+          "test": "test_single_connection_direction",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "P": {
+          "test": "test_lt_pump_outages",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "C2": {
+          "test": "test_shared_gas_entry",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "C4": {
+          "test": "test_phe_primary_water_flow",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        },
+        "S": {
+          "test": "test_lt_heat_rejection",
+          "days": {
+            "visible": true,
+            "h1": false,
+            "h2": false,
+            "h3": false,
+            "h4": false
+          },
+          "passed": false
+        }
+      },
+      "errors": {
+        "h1": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json",
+        "h1.rerun": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json",
+        "h2": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json",
+        "h2.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json",
+        "h3": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json",
+        "h3.rerun": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json",
+        "h4": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json",
+        "h4.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json"
+      },
+      "failed": {
+        "test_plan_covers_the_day": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_units_within_ratings_and_availability": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_electricity_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_balance": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_cooling_towers": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_connection_limits": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_gas_and_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_reported_import_export_and_grid_flags": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_least_cost": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_single_connection_direction": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_pump_outages": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_shared_gas_entry": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_phe_primary_water_flow": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_lt_heat_rejection": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "test_same_plan_every_time": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ]
+      }
+    }
+  }
+}
+App: /Users/haiy_qq/Desktop/工作/klavis/results/v19-trials/ecd19-run2-claude/app
+K: FAIL
+  W (test_single_connection_direction): FAIL on h1, h2, h3, h4
+  P (test_lt_pump_outages): FAIL on h1, h2, h3, h4
+  C2 (test_shared_gas_entry): FAIL on h1, h2, h3, h4
+  C4 (test_phe_primary_water_flow): FAIL on h1, h2, h3, h4
+  S (test_lt_heat_rejection): FAIL on h1, h2, h3, h4
+  Execution errors: {"h1": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json", "h1.rerun": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json", "h2": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json", "h2.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json", "h3": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json", "h3.rerun": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json", "h4": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json", "h4.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json"}
+without_old_component_outages: FAIL
+  W (test_single_connection_direction): FAIL on h1, h2, h3, h4
+  P (test_lt_pump_outages): FAIL on h1, h2, h3, h4
+  C2 (test_shared_gas_entry): FAIL on h1, h2, h3, h4
+  C4 (test_phe_primary_water_flow): FAIL on h1, h2, h3, h4
+  S (test_lt_heat_rejection): FAIL on h1, h2, h3, h4
+  Execution errors: {"h1": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json", "h1.rerun": "exit 1: ValueError: outage of LT pump 1, which is not in plant.json", "h2": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json", "h2.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json", "h3": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json", "h3.rerun": "exit 1: ValueError: outage of LT radiator 2, which is not in plant.json", "h4": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json", "h4.rerun": "exit 1: ValueError: outage of LT radiator 1, which is not in plant.json"}
+A rule test failing because no plan was produced is an execution/compatibility failure, not a measured physical violation.
+

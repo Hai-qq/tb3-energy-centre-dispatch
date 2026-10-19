@@ -1,0 +1,1178 @@
+[
+  {
+    "day": "h2",
+    "finite_all_off": [],
+    "periods": [
+      {
+        "start": "00:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2391.365055762082,
+        "optimistic_all_off_grid_kva": 2403.6695363381355,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "00:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2385.2579925650557,
+        "optimistic_all_off_grid_kva": 2396.3789456376635,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "01:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2266.4122676579923,
+        "optimistic_all_off_grid_kva": 2276.9396691591637,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "01:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1924.517843866171,
+        "optimistic_all_off_grid_kva": 1933.9923400466962,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "02:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1641.495910780669,
+        "optimistic_all_off_grid_kva": 1649.8882583707473,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "02:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1455.1613382899627,
+        "optimistic_all_off_grid_kva": 1462.4074946655037,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "03:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1344.0557620817845,
+        "optimistic_all_off_grid_kva": 1350.8386030852266,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "03:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1322.096654275093,
+        "optimistic_all_off_grid_kva": 1328.3266967299103,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "04:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1312.4412639405205,
+        "optimistic_all_off_grid_kva": 1318.3142877530345,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "04:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1326.6810408921933,
+        "optimistic_all_off_grid_kva": 1333.1822209521074,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "05:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1347.8806691449813,
+        "optimistic_all_off_grid_kva": 1354.485606514415,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "05:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1414.0052044609665,
+        "optimistic_all_off_grid_kva": 1420.7719620835358,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "06:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1476.8691449814128,
+        "optimistic_all_off_grid_kva": 1483.7953738296023,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "06:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1540.5312267657991,
+        "optimistic_all_off_grid_kva": 1547.5859332006537,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "07:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1626.5947955390334,
+        "optimistic_all_off_grid_kva": 1634.5728245858825,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "07:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1763.8940520446097,
+        "optimistic_all_off_grid_kva": 1772.9431566856147,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "08:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1813.5375464684016,
+        "optimistic_all_off_grid_kva": 1822.7171262844463,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "08:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1928.914498141264,
+        "optimistic_all_off_grid_kva": 1938.897467928504,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "09:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1979.9483271375466,
+        "optimistic_all_off_grid_kva": 1990.3481148117705,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "09:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1938.8944237918215,
+        "optimistic_all_off_grid_kva": 1949.4507807613454,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "10:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1947.8379182156134,
+        "optimistic_all_off_grid_kva": 1957.987069834358,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "10:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1931.259851301115,
+        "optimistic_all_off_grid_kva": 1941.7328789634287,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "11:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1923.9936802973975,
+        "optimistic_all_off_grid_kva": 1934.360794118906,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "11:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1893.6654275092937,
+        "optimistic_all_off_grid_kva": 1904.0511314940984,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "12:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1935.771003717472,
+        "optimistic_all_off_grid_kva": 1945.9422059335034,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "12:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1927.9617100371747,
+        "optimistic_all_off_grid_kva": 1939.0530589361053,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "13:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1939.175464684015,
+        "optimistic_all_off_grid_kva": 1949.4721061950247,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "13:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1946.5672862453532,
+        "optimistic_all_off_grid_kva": 1957.2694142300898,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "14:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1959.718587360595,
+        "optimistic_all_off_grid_kva": 1970.6101977932128,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "14:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2021.8739776951672,
+        "optimistic_all_off_grid_kva": 2031.7318700263768,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "15:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2018.578066914498,
+        "optimistic_all_off_grid_kva": 2028.94072171374,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "15:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2057.9832713754645,
+        "optimistic_all_off_grid_kva": 2067.6014570659545,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "16:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2087.0840148698885,
+        "optimistic_all_off_grid_kva": 2096.7980935525034,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "16:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2052.6769516728627,
+        "optimistic_all_off_grid_kva": 2062.3973108809555,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "17:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2036.4799256505578,
+        "optimistic_all_off_grid_kva": 2045.5202021925136,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "17:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2067.4661710037176,
+        "optimistic_all_off_grid_kva": 2077.5062859699783,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "18:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2005.356505576208,
+        "optimistic_all_off_grid_kva": 2014.4603258582235,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "18:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1976.36468401487,
+        "optimistic_all_off_grid_kva": 1985.4479228177195,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "19:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1882.2490706319702,
+        "optimistic_all_off_grid_kva": 1890.7791843298137,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "19:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1826.864312267658,
+        "optimistic_all_off_grid_kva": 1836.338995239491,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "20:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1748.4825278810408,
+        "optimistic_all_off_grid_kva": 1757.298150657786,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "20:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1703.6055762081783,
+        "optimistic_all_off_grid_kva": 1711.300198471209,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "21:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1627.2204460966543,
+        "optimistic_all_off_grid_kva": 1634.5859965737486,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "21:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1586.2293680297398,
+        "optimistic_all_off_grid_kva": 1594.2082981844085,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "22:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1511.8442379182156,
+        "optimistic_all_off_grid_kva": 1519.5865357808716,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "22:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1462.0330855018587,
+        "optimistic_all_off_grid_kva": 1469.1074647901307,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "23:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1681.0669144981412,
+        "optimistic_all_off_grid_kva": 1688.663960360468,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "23:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2140.9598513011156,
+        "optimistic_all_off_grid_kva": 2151.4009330859963,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      }
+    ],
+    "minimum_optimistic_all_off_grid_kva": 1318.3142877530345,
+    "all_period_grid_lower_bounds_exceed_limit": true
+  },
+  {
+    "day": "h3",
+    "finite_all_off": [],
+    "periods": [
+      {
+        "start": "00:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1252.8379182156134,
+        "optimistic_all_off_grid_kva": 1270.6482004547254,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "00:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1257.4921933085502,
+        "optimistic_all_off_grid_kva": 1274.5949263322634,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "01:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1256.1420074349442,
+        "optimistic_all_off_grid_kva": 1273.5583036683838,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "01:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1249.3453531598511,
+        "optimistic_all_off_grid_kva": 1265.4904430544361,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "02:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1252.1884758364313,
+        "optimistic_all_off_grid_kva": 1267.8555394908226,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "02:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1259.821933085502,
+        "optimistic_all_off_grid_kva": 1276.9260718942546,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "03:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1242.385501858736,
+        "optimistic_all_off_grid_kva": 1258.0800233803823,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "03:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1274.567657992565,
+        "optimistic_all_off_grid_kva": 1291.2354374011938,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "04:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1258.6620817843868,
+        "optimistic_all_off_grid_kva": 1274.2651514193608,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "04:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1254.831970260223,
+        "optimistic_all_off_grid_kva": 1270.3727341167053,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "05:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1296.192936802974,
+        "optimistic_all_off_grid_kva": 1313.238340674654,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "05:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1335.2758364312267,
+        "optimistic_all_off_grid_kva": 1351.8597447062,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "06:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1416.593308550186,
+        "optimistic_all_off_grid_kva": 1434.1940600313344,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "06:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1462.2977695167287,
+        "optimistic_all_off_grid_kva": 1481.060352157737,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "07:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1502.2587360594796,
+        "optimistic_all_off_grid_kva": 1523.3310736891785,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "07:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1571.642750929368,
+        "optimistic_all_off_grid_kva": 1592.792085160154,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "08:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1638.1379182156136,
+        "optimistic_all_off_grid_kva": 1663.8188841024087,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "08:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1689.1297397769515,
+        "optimistic_all_off_grid_kva": 1714.4220127491808,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "09:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1729.3884758364313,
+        "optimistic_all_off_grid_kva": 1754.706100848759,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "09:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1742.6130111524162,
+        "optimistic_all_off_grid_kva": 1767.7748574515056,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "10:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1737.7921933085504,
+        "optimistic_all_off_grid_kva": 1763.9926635686845,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "10:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1705.2434944237918,
+        "optimistic_all_off_grid_kva": 1731.3969548531222,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "11:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1754.1048327137546,
+        "optimistic_all_off_grid_kva": 1783.595459780538,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "11:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1744.5635687732342,
+        "optimistic_all_off_grid_kva": 1769.967085990811,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "12:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1708.599628252788,
+        "optimistic_all_off_grid_kva": 1734.8409292109654,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "12:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1736.7052044609666,
+        "optimistic_all_off_grid_kva": 1762.6476270661155,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "13:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1742.424907063197,
+        "optimistic_all_off_grid_kva": 1770.3322193176598,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "13:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1769.6081784386615,
+        "optimistic_all_off_grid_kva": 1798.3974408336433,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "14:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1777.5944237918216,
+        "optimistic_all_off_grid_kva": 1803.9780196819966,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "14:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1781.1263940520446,
+        "optimistic_all_off_grid_kva": 1808.3155121794534,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "15:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1784.3784386617099,
+        "optimistic_all_off_grid_kva": 1809.487930979591,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "15:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1753.4092936802974,
+        "optimistic_all_off_grid_kva": 1780.376320097647,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "16:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1746.5133828996281,
+        "optimistic_all_off_grid_kva": 1772.2612664749809,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "16:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1742.0066914498143,
+        "optimistic_all_off_grid_kva": 1766.5254606305364,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "17:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1748.2275092936802,
+        "optimistic_all_off_grid_kva": 1770.9691793623017,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "17:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1733.5955390334573,
+        "optimistic_all_off_grid_kva": 1756.3337903020324,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "18:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1712.5434944237918,
+        "optimistic_all_off_grid_kva": 1737.175140938084,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "18:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1696.5762081784387,
+        "optimistic_all_off_grid_kva": 1718.5754682751435,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "19:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1650.9561338289961,
+        "optimistic_all_off_grid_kva": 1673.5879558085933,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "19:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1609.0583643122677,
+        "optimistic_all_off_grid_kva": 1629.7380954506987,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "20:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1562.4583643122678,
+        "optimistic_all_off_grid_kva": 1584.0912064049114,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "20:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1548.4330855018588,
+        "optimistic_all_off_grid_kva": 1567.121791781611,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "21:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1492.5282527881043,
+        "optimistic_all_off_grid_kva": 1511.6853493272704,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "21:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1438.9907063197027,
+        "optimistic_all_off_grid_kva": 1458.703277871986,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "22:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1393.0795539033456,
+        "optimistic_all_off_grid_kva": 1412.8116411976314,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "22:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1347.6527881040893,
+        "optimistic_all_off_grid_kva": 1364.0398371325982,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "23:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1341.1762081784386,
+        "optimistic_all_off_grid_kva": 1360.1509406620628,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "23:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1299.8732342007434,
+        "optimistic_all_off_grid_kva": 1317.0154384028688,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      }
+    ],
+    "minimum_optimistic_all_off_grid_kva": 1258.0800233803823,
+    "all_period_grid_lower_bounds_exceed_limit": true
+  },
+  {
+    "day": "h4",
+    "finite_all_off": [],
+    "periods": [
+      {
+        "start": "00:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1421.7152416356876,
+        "optimistic_all_off_grid_kva": 1438.2863130473088,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "00:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1419.4855018587361,
+        "optimistic_all_off_grid_kva": 1437.4741667199269,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "01:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1406.6676579925652,
+        "optimistic_all_off_grid_kva": 1423.644105822199,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "01:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1397.139033457249,
+        "optimistic_all_off_grid_kva": 1413.706871600282,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "02:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1402.1587360594795,
+        "optimistic_all_off_grid_kva": 1418.7288539773613,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "02:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1397.4910780669145,
+        "optimistic_all_off_grid_kva": 1414.73296182588,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "03:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1376.0765799256505,
+        "optimistic_all_off_grid_kva": 1392.7249706312712,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "03:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1378.4453531598513,
+        "optimistic_all_off_grid_kva": 1395.266136494392,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "04:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1384.8460966542752,
+        "optimistic_all_off_grid_kva": 1403.295033632836,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "04:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1346.8397769516728,
+        "optimistic_all_off_grid_kva": 1364.7701765422746,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "05:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1407.0591078066916,
+        "optimistic_all_off_grid_kva": 1424.5269716161092,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "05:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1473.2661710037173,
+        "optimistic_all_off_grid_kva": 1490.4996513330536,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "06:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1513.6665427509295,
+        "optimistic_all_off_grid_kva": 1532.6220971405676,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "06:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1569.5453531598512,
+        "optimistic_all_off_grid_kva": 1589.346603364314,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "07:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1623.585735963581,
+        "optimistic_all_off_grid_kva": 1644.2878859933267,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "07:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1733.1012265235722,
+        "optimistic_all_off_grid_kva": 1754.7990971554295,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "08:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1816.3120061967466,
+        "optimistic_all_off_grid_kva": 1839.4755513065268,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "08:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1878.6986301369864,
+        "optimistic_all_off_grid_kva": 1906.194980288897,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "09:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1932.0371698856916,
+        "optimistic_all_off_grid_kva": 1960.5585596507728,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "09:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1958.0541832669321,
+        "optimistic_all_off_grid_kva": 1985.1383892840147,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "10:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1973.0999194522756,
+        "optimistic_all_off_grid_kva": 2002.010062947381,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "10:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1972.646919049537,
+        "optimistic_all_off_grid_kva": 2000.1745816892162,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "11:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1984.830424042816,
+        "optimistic_all_off_grid_kva": 2010.2540889663637,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "11:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1983.1301886792453,
+        "optimistic_all_off_grid_kva": 2009.8115098812075,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "12:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2014.7307756117793,
+        "optimistic_all_off_grid_kva": 2041.5616836621034,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "12:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2046.9489932885906,
+        "optimistic_all_off_grid_kva": 2076.4540980058227,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "13:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2001.5311918850382,
+        "optimistic_all_off_grid_kva": 2028.260918148536,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "13:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2051.3472103004297,
+        "optimistic_all_off_grid_kva": 2081.075593823385,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "14:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2077.990128755365,
+        "optimistic_all_off_grid_kva": 2104.281714791234,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "14:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2090.785091543156,
+        "optimistic_all_off_grid_kva": 2117.1847319067656,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "15:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2090.4288237828523,
+        "optimistic_all_off_grid_kva": 2117.9302885841544,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "15:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2090.442560553633,
+        "optimistic_all_off_grid_kva": 2115.8945954309797,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "16:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2121.624429125377,
+        "optimistic_all_off_grid_kva": 2147.490048466251,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "16:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2122.4576044808273,
+        "optimistic_all_off_grid_kva": 2149.9464116155295,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "17:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2074.6214592274678,
+        "optimistic_all_off_grid_kva": 2100.766136219619,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "17:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2038.4877430262045,
+        "optimistic_all_off_grid_kva": 2062.9577112650827,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "18:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 2026.0791840133222,
+        "optimistic_all_off_grid_kva": 2049.0267201508354,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "18:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1961.604958677686,
+        "optimistic_all_off_grid_kva": 1982.7504769659963,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "19:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1929.280165289256,
+        "optimistic_all_off_grid_kva": 1952.0830428489817,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "19:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1908.9821501014198,
+        "optimistic_all_off_grid_kva": 1932.101666425926,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "20:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1849.8172372130489,
+        "optimistic_all_off_grid_kva": 1869.389165232996,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "20:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1780.664174330268,
+        "optimistic_all_off_grid_kva": 1801.9423164306052,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "21:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1740.311790393013,
+        "optimistic_all_off_grid_kva": 1760.5229699668603,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "21:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1662.5172211350293,
+        "optimistic_all_off_grid_kva": 1682.09640644362,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "22:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1608.4596680818217,
+        "optimistic_all_off_grid_kva": 1626.2074479739306,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "22:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1562.8290916059793,
+        "optimistic_all_off_grid_kva": 1581.0740082519762,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "23:00",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1503.1694610778443,
+        "optimistic_all_off_grid_kva": 1521.243198412751,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      },
+      {
+        "start": "23:30",
+        "all_off_feasible": false,
+        "optimistic_all_off_import_kw": 1430.5159851301116,
+        "optimistic_all_off_grid_kva": 1448.2582586378626,
+        "import_limit_kva": 1220.0,
+        "grid_lower_bound_exceeds_limit": true
+      }
+    ],
+    "minimum_optimistic_all_off_grid_kva": 1364.7701765422746,
+    "all_period_grid_lower_bounds_exceed_limit": true
+  }
+]

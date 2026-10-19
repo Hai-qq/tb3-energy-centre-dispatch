@@ -1,0 +1,52 @@
+{
+  "accepted_days": 16,
+  "draws": 33,
+  "weekends": 5,
+  "radiator_outages": [
+    {
+      "day": "f2-draw-0003",
+      "unit": "LT radiator 1",
+      "from": "22:00",
+      "to": "24:00"
+    },
+    {
+      "day": "f5-draw-0015",
+      "unit": "LT radiator 2",
+      "from": "18:30",
+      "to": "24:00"
+    },
+    {
+      "day": "f9-draw-0021",
+      "unit": "LT radiator 1",
+      "from": "08:00",
+      "to": "09:50"
+    },
+    {
+      "day": "f9-draw-0021",
+      "unit": "LT radiator 2",
+      "from": "12:20",
+      "to": "14:50"
+    }
+  ],
+  "phe_outages": [
+    {
+      "day": "f1-draw-0002",
+      "unit": "LT PHE 2",
+      "from": "15:40",
+      "to": "18:30"
+    },
+    {
+      "day": "f13-draw-0025",
+      "unit": "LT PHE 2",
+      "from": "14:50",
+      "to": "18:00"
+    },
+    {
+      "day": "f16-draw-0033",
+      "unit": "LT PHE 2",
+      "from": "13:50",
+      "to": "16:40"
+    }
+  ],
+  "all_candidate_plants": true
+}

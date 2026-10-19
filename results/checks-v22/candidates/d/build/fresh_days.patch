@@ -1,0 +1,27 @@
+--- tools/fresh_days.py
++++ results/checks-v22/candidates/d/build/fresh_days.py
+@@ -28,7 +28,7 @@
+ from datetime import date, timedelta
+ from pathlib import Path
+ 
+-ROOT = Path(__file__).resolve().parents[1]
++ROOT = Path(__file__).resolve().parents[5]
+ TASK = Path(os.environ.get("ECD_TASK", ROOT / "tasks" / "energy-centre-dispatch")).resolve()
+ sys.path.insert(0, str(ROOT / "tools"))
+ sys.path.insert(0, str(TASK / "tests"))
+@@ -44,8 +44,13 @@
+ 
+ UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "LT radiator 1", "LT radiator 2",
+          "CT1", "CT2", "PV1", "GE1 intercooler", "GE2 intercooler", "EC1 condenser", "EC2 condenser",
+-         "AC1 generator", "AC1 absorber and condenser", "GE1 jacket water and exhaust",
+-         "GE2 jacket water and exhaust"]
++         "AC1 generator", "AC1 absorber and condenser", "GE1 jacket water heat exchanger",
++         "GE2 jacket water heat exchanger", "GE1 exhaust heat exchanger", "GE2 exhaust heat exchanger"]
++# Include each primary intercooler outlet; these are already known circuit names.
++UNITS += sorted({item for c in B.PLANT["heat_circuits"].values()
++                 if any(f"{e['id']} intercooler" in c["from"] for e in B.PLANT["engines"])
++                 for item in c["to"] if item not in UNITS})
++
+ 
+ 
+ def last_sunday(year: int, month: int) -> date:

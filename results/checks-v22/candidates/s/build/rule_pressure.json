@@ -1,0 +1,3218 @@
+{
+  "days": [
+    {
+      "day": "visible",
+      "date": "2026-07-21",
+      "radiator_outages": [],
+      "solution_cost_gbp": 6303.5604091900495,
+      "ignored_cost_gbp": 6303.5604091900495,
+      "stopped_plan_feasible": true,
+      "stopped_seconds": 0.8155572500545532,
+      "stopped_error": null,
+      "stopped_cost_premium_gbp": 0.0,
+      "stopped_cost_interpretation": "finite premium",
+      "periods": [
+        {
+          "start": "00:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "00:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1185.878,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 198.97584666666665,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 198.97584666666665,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 998.493,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 172.11733,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 172.11733,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 821.282,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 147.50426666666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 147.50426666666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        }
+      ]
+    },
+    {
+      "day": "h1",
+      "date": "2026-08-08",
+      "radiator_outages": [],
+      "solution_cost_gbp": 6535.573030393996,
+      "ignored_cost_gbp": 6535.573030393996,
+      "stopped_plan_feasible": true,
+      "stopped_seconds": 0.8650260830763727,
+      "stopped_error": null,
+      "stopped_cost_premium_gbp": 0.0,
+      "stopped_cost_interpretation": "finite premium",
+      "periods": [
+        {
+          "start": "00:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 828.026,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 148.40346666666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 148.40346666666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "00:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 798.865,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 144.51533333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 144.51533333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 809.607,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 145.9476,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 145.9476,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 782.3,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 142.30666666666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 142.30666666666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 777.708,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 141.6944,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 141.6944,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 801.084,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 144.81119999999999,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 144.81119999999999,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 786.931,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 142.92413333333334,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 142.92413333333334,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 763.076,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 139.74346666666668,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.74346666666668,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 770.689,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 140.75853333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 140.75853333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 740.537,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 136.73826666666668,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 136.73826666666668,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 787.792,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 143.03893333333335,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 143.03893333333335,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 837.715,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 149.69533333333334,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 149.69533333333334,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1002.552,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 172.69912,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 172.69912,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1014.379,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 174.39432333333335,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 174.39432333333335,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 671.532
+          },
+          "lt_heat_kw": 120.37214,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 120.37214,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 536.366
+          },
+          "lt_heat_kw": 101.40941,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 101.40941,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1067.195,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 181.96461666666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 181.96461666666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 857.591,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 152.34546666666668,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 152.34546666666668,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        }
+      ]
+    },
+    {
+      "day": "h2",
+      "date": "2026-01-14",
+      "radiator_outages": [
+        {
+          "unit": "LT radiator 1",
+          "from": "21:10",
+          "to": "23:00"
+        }
+      ],
+      "solution_cost_gbp": 8745.284682439382,
+      "ignored_cost_gbp": 8607.750251772412,
+      "stopped_plan_feasible": false,
+      "stopped_seconds": 0.6856015420053154,
+      "stopped_error": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/planner/optimize.py\", line 226, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits",
+      "stopped_cost_premium_gbp": null,
+      "stopped_cost_interpretation": "infeasible; no finite cost premium",
+      "periods": [
+        {
+          "start": "00:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "00:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 900.0,
+            "GE2": 500.056
+          },
+          "lt_heat_kw": 254.50756,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 254.50756,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 900.0,
+            "GE2": 478.097
+          },
+          "lt_heat_kw": 251.543095,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 251.543095,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 900.0,
+            "GE2": 468.441
+          },
+          "lt_heat_kw": 250.239535,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 250.239535,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 900.0,
+            "GE2": 482.681
+          },
+          "lt_heat_kw": 252.161935,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 252.161935,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 900.0,
+            "GE2": 503.881
+          },
+          "lt_heat_kw": 255.023935,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 255.023935,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 900.0,
+            "GE2": 570.005
+          },
+          "lt_heat_kw": 263.950675,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 263.950675,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 932.869,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 272.71122333333335,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 272.71122333333335,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 996.531,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 281.83610999999996,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 281.83610999999996,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1082.595,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 294.17195000000004,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 294.17195000000004,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 619.894
+          },
+          "lt_heat_kw": 313.88463,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 313.88463,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 669.538
+          },
+          "lt_heat_kw": 321.08301,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 321.08301,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 784.914
+          },
+          "lt_heat_kw": 337.81253000000004,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 337.81253000000004,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 791.771
+          },
+          "lt_heat_kw": 338.80679499999997,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 338.80679499999997,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 340.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 340.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 682.864
+          },
+          "lt_heat_kw": 323.01528,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 323.01528,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 604.483
+          },
+          "lt_heat_kw": 311.650035,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 311.650035,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1159.606,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 305.21019333333334,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 305.21019333333334,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 294.2615333333333,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 288.3861566666667,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 277.7243066666667,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 270.58473000000004,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1137.067,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 301.97960333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 301.97960333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 340.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 340.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        }
+      ]
+    },
+    {
+      "day": "h3",
+      "date": "2026-04-20",
+      "radiator_outages": [
+        {
+          "unit": "LT radiator 2",
+          "from": "10:40",
+          "to": "14:20"
+        }
+      ],
+      "solution_cost_gbp": 5375.538030470144,
+      "ignored_cost_gbp": 5217.2447076512435,
+      "stopped_plan_feasible": false,
+      "stopped_seconds": 1.136208500014618,
+      "stopped_error": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/planner/optimize.py\", line 226, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits",
+      "stopped_cost_premium_gbp": null,
+      "stopped_cost_interpretation": "infeasible; no finite cost premium",
+      "periods": [
+        {
+          "start": "00:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "00:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1177.667,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 197.79893666666666,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 197.79893666666666,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 990.5,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 170.97166666666666,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 170.97166666666666,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 293.83912999999995,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 299.9458466666666,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 298.09799333333336,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 292.93713333333335,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 744.218,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 137.22906666666665,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 137.22906666666665,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 297.00292666666667,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 301.9804633333333,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 303.30711833333334,
+          "ignored_exceeds_capacity": true,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1151.562,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 304.05722000000003,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 304.05722000000003,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1160.059,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 305.27512333333334,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 305.27512333333334,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1127.089,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 300.5494233333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 300.5494233333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1123.901,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 300.0924766666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 300.0924766666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1114.665,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 298.76865,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 298.76865,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1119.3,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 299.433,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 299.433,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1107.62,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 297.7588666666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 297.7588666666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1092.41,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 295.57876666666664,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 295.57876666666664,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1078.583,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 293.5968966666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 293.5968966666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1036.988,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 287.6349466666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 287.6349466666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1000.493,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 282.40399666666667,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 282.40399666666667,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 956.732,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 276.13158666666664,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 276.13158666666664,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 939.985,
+            "GE2": 600.0
+          },
+          "lt_heat_kw": 273.7311833333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 273.7311833333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 637.924,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 262.05653333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 262.05653333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        }
+      ]
+    },
+    {
+      "day": "h4",
+      "date": "2026-07-29",
+      "radiator_outages": [
+        {
+          "unit": "LT radiator 1",
+          "from": "00:00",
+          "to": "03:40"
+        }
+      ],
+      "solution_cost_gbp": 7269.632435878899,
+      "ignored_cost_gbp": 7269.632435878899,
+      "stopped_plan_feasible": false,
+      "stopped_seconds": 0.7827937498223037,
+      "stopped_error": "Traceback (most recent call last):\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v22/candidates/s/build/stopped-app/planner/optimize.py\", line 226, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits",
+      "stopped_cost_premium_gbp": null,
+      "stopped_cost_interpretation": "infeasible; no finite cost premium",
+      "periods": [
+        {
+          "start": "00:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "00:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1164.531,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 195.91611,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 195.91611,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "01:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1133.862,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 191.52022000000002,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 191.52022000000002,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1182.315,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 198.46515000000002,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 198.46515000000002,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "02:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1104.444,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 187.30364,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 187.30364,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1109.413,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 188.01586333333333,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 188.01586333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "03:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 220.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "04:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "05:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 0.0,
+            "GE2": 800.0
+          },
+          "lt_heat_kw": 139.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 139.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "06:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "07:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "08:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "09:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 927.934,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.00387333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.00387333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "10:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "11:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "12:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "13:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1065.704,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 181.75090666666665,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 181.75090666666665,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "14:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 906.4,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 158.91733333333332,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 158.91733333333332,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 930.947,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 162.43573666666666,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 162.43573666666666,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "15:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 976.966,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 169.03179333333333,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 169.03179333333333,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1140.655,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 192.49388333333334,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 192.49388333333334,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "16:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1132.49,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 191.32356666666666,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 191.32356666666666,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "17:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "18:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "19:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "20:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "21:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "22:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:00",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        },
+        {
+          "start": "23:30",
+          "circuit": "lt_heat_rejection",
+          "engines_kwe": {
+            "GE1": 1200.0,
+            "GE2": 0.0
+          },
+          "lt_heat_kw": 201.0,
+          "capacity_kw": 440.0,
+          "ignored_lt_heat_kw": 201.0,
+          "ignored_exceeds_capacity": false,
+          "both_on_with_reduced_capacity": false
+        }
+      ]
+    }
+  ],
+  "radiator_windows_changed": false,
+  "capacity_violation_pressure": true,
+  "over_stopping_caught_by_infeasibility": true,
+  "finite_over_stopping_cost_premium_requirement_met": false,
+  "both_on_derated_optimum_observed": false,
+  "limitation": "All-off is infeasible in every period of h2-h4; see window_scan.json. Changing only radiator outage windows cannot create a finite premium."
+}
