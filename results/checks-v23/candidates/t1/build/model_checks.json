@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "dry_bulb_c": -10.0,
+      "T_f": 55.0,
+      "T_r": 45.0,
+      "lenient_fraction": 0.0,
+      "strict_fraction": 0.0
+    },
+    {
+      "dry_bulb_c": 2.0,
+      "T_f": 50.0,
+      "T_r": 41.19047619047619,
+      "lenient_fraction": 0.0,
+      "strict_fraction": 0.0
+    },
+    {
+      "dry_bulb_c": 10.0,
+      "T_f": 42.0,
+      "T_r": 35.095238095238095,
+      "lenient_fraction": 0.7103448275862069,
+      "strict_fraction": 0.0
+    },
+    {
+      "dry_bulb_c": 17.0,
+      "T_f": 35.0,
+      "T_r": 29.761904761904763,
+      "lenient_fraction": 1.0,
+      "strict_fraction": 1.0
+    },
+    {
+      "dry_bulb_c": 24.0,
+      "T_f": 34.0,
+      "T_r": 29.0,
+      "lenient_fraction": 1.0,
+      "strict_fraction": 1.0
+    },
+    {
+      "available_PHE_only": true,
+      "part_load_LT_interpolation_kw": 138.0,
+      "off_engine_LT_kw": 0.0,
+      "PHE_outage_blocks_recovery_only": true
+    }
+  ]
+}

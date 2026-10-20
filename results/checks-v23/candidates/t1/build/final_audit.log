@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "gates": {
+    "A": "PASS",
+    "B": "PASS",
+    "B_fresh": "PASS",
+    "C": "PASS with documented dry-bulb UTC exception",
+    "traits": "PASS",
+    "E": "EXECUTED; historical apps fail"
+  },
+  "mutations": 45,
+  "caught": 44,
+  "missed": [
+    "t1_dry_bulb_utc"
+  ],
+  "skipped": 0,
+  "patches_checked": 51,
+  "fixed_radiator_period_certificates": 15,
+  "fresh_radiator_period_certificates": 30,
+  "git_status": "?? results/checks-v23/\n",
+  "branch": "v23-prechecks",
+  "head": "5ae65f8cfb79209ce8a1c2959bc348d430fed23e",
+  "candidate_has_no_pycache_or_empty_directories": true,
+  "python_files_syntax_checked": 29
+}

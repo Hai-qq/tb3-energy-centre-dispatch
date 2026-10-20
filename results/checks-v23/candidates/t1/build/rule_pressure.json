@@ -1,0 +1,3225 @@
+{
+  "visible": {
+    "radiator_certificates": [],
+    "bounds_equal_all_periods": true,
+    "dry_bulb_range_c": [
+      19.9,
+      28.8
+    ],
+    "periods": [
+      {
+        "start": "00:00",
+        "ahu_kw": 60.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.0,
+        "strict_temperature_cap_kw": 60.0,
+        "lt_heat_kw": 148.8144,
+        "R_len_kw": 60.0,
+        "R_strict_kw": 60.0
+      },
+      {
+        "start": "00:30",
+        "ahu_kw": 63.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.6,
+        "strict_temperature_cap_kw": 63.6,
+        "lt_heat_kw": 144.22893333333334,
+        "R_len_kw": 63.6,
+        "R_strict_kw": 63.6
+      },
+      {
+        "start": "01:00",
+        "ahu_kw": 65.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 65.8,
+        "strict_temperature_cap_kw": 65.8,
+        "lt_heat_kw": 143.4996,
+        "R_len_kw": 65.8,
+        "R_strict_kw": 65.8
+      },
+      {
+        "start": "01:30",
+        "ahu_kw": 65.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 65.6,
+        "strict_temperature_cap_kw": 65.6,
+        "lt_heat_kw": 145.8244,
+        "R_len_kw": 65.6,
+        "R_strict_kw": 65.6
+      },
+      {
+        "start": "02:00",
+        "ahu_kw": 63.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.1,
+        "strict_temperature_cap_kw": 63.1,
+        "lt_heat_kw": 144.56146666666666,
+        "R_len_kw": 63.1,
+        "R_strict_kw": 63.1
+      },
+      {
+        "start": "02:30",
+        "ahu_kw": 59.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 59.4,
+        "strict_temperature_cap_kw": 59.4,
+        "lt_heat_kw": 140.31093333333334,
+        "R_len_kw": 59.4,
+        "R_strict_kw": 59.4
+      },
+      {
+        "start": "03:00",
+        "ahu_kw": 55.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 55.9,
+        "strict_temperature_cap_kw": 55.9,
+        "lt_heat_kw": 136.63053333333335,
+        "R_len_kw": 55.9,
+        "R_strict_kw": 55.9
+      },
+      {
+        "start": "03:30",
+        "ahu_kw": 54.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 54.1,
+        "strict_temperature_cap_kw": 54.1,
+        "lt_heat_kw": 139.24186666666665,
+        "R_len_kw": 54.1,
+        "R_strict_kw": 54.1
+      },
+      {
+        "start": "04:00",
+        "ahu_kw": 54.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 54.7,
+        "strict_temperature_cap_kw": 54.7,
+        "lt_heat_kw": 141.93466666666666,
+        "R_len_kw": 54.7,
+        "R_strict_kw": 54.7
+      },
+      {
+        "start": "04:30",
+        "ahu_kw": 57.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 57.6,
+        "strict_temperature_cap_kw": 57.6,
+        "lt_heat_kw": 152.92053333333334,
+        "R_len_kw": 57.6,
+        "R_strict_kw": 57.6
+      },
+      {
+        "start": "05:00",
+        "ahu_kw": 61.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 61.6,
+        "strict_temperature_cap_kw": 61.6,
+        "lt_heat_kw": 165.67507,
+        "R_len_kw": 61.6,
+        "R_strict_kw": 61.6
+      },
+      {
+        "start": "05:30",
+        "ahu_kw": 65.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 65.6,
+        "strict_temperature_cap_kw": 65.6,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 65.6,
+        "R_strict_kw": 65.6
+      },
+      {
+        "start": "06:00",
+        "ahu_kw": 69.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 69.0,
+        "strict_temperature_cap_kw": 69.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 69.0,
+        "R_strict_kw": 69.0
+      },
+      {
+        "start": "06:30",
+        "ahu_kw": 73.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 73.4,
+        "strict_temperature_cap_kw": 73.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 73.4,
+        "R_strict_kw": 73.4
+      },
+      {
+        "start": "07:00",
+        "ahu_kw": 83.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 83.1,
+        "strict_temperature_cap_kw": 83.1,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 83.1,
+        "R_strict_kw": 83.1
+      },
+      {
+        "start": "07:30",
+        "ahu_kw": 100.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 100.6,
+        "strict_temperature_cap_kw": 100.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 100.6,
+        "R_strict_kw": 100.6
+      },
+      {
+        "start": "08:00",
+        "ahu_kw": 118.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 118.8,
+        "strict_temperature_cap_kw": 118.8,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 118.8,
+        "R_strict_kw": 118.8
+      },
+      {
+        "start": "08:30",
+        "ahu_kw": 130.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 130.5,
+        "strict_temperature_cap_kw": 130.5,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 130.5,
+        "R_strict_kw": 130.5
+      },
+      {
+        "start": "09:00",
+        "ahu_kw": 137.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 137.4,
+        "strict_temperature_cap_kw": 137.4,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 137.4,
+        "R_strict_kw": 137.4
+      },
+      {
+        "start": "09:30",
+        "ahu_kw": 142.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 142.7,
+        "strict_temperature_cap_kw": 142.7,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "10:00",
+        "ahu_kw": 147.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 147.2,
+        "strict_temperature_cap_kw": 147.2,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "10:30",
+        "ahu_kw": 150.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.2,
+        "strict_temperature_cap_kw": 150.2,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "11:00",
+        "ahu_kw": 150.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.9,
+        "strict_temperature_cap_kw": 150.9,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.9,
+        "R_strict_kw": 150.9
+      },
+      {
+        "start": "11:30",
+        "ahu_kw": 149.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 149.1,
+        "strict_temperature_cap_kw": 149.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 149.1,
+        "R_strict_kw": 149.1
+      },
+      {
+        "start": "12:00",
+        "ahu_kw": 145.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 145.6,
+        "strict_temperature_cap_kw": 145.6,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 145.6,
+        "R_strict_kw": 145.6
+      },
+      {
+        "start": "12:30",
+        "ahu_kw": 141.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 141.9,
+        "strict_temperature_cap_kw": 141.9,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 141.9,
+        "R_strict_kw": 141.9
+      },
+      {
+        "start": "13:00",
+        "ahu_kw": 139.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 139.4,
+        "strict_temperature_cap_kw": 139.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 139.4,
+        "R_strict_kw": 139.4
+      },
+      {
+        "start": "13:30",
+        "ahu_kw": 139.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 139.2,
+        "strict_temperature_cap_kw": 139.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 139.2,
+        "R_strict_kw": 139.2
+      },
+      {
+        "start": "14:00",
+        "ahu_kw": 141.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 141.4,
+        "strict_temperature_cap_kw": 141.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 141.4,
+        "R_strict_kw": 141.4
+      },
+      {
+        "start": "14:30",
+        "ahu_kw": 145.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 145.0,
+        "strict_temperature_cap_kw": 145.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 145.0,
+        "R_strict_kw": 145.0
+      },
+      {
+        "start": "15:00",
+        "ahu_kw": 148.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 148.6,
+        "strict_temperature_cap_kw": 148.6,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 148.6,
+        "R_strict_kw": 148.6
+      },
+      {
+        "start": "15:30",
+        "ahu_kw": 150.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.7,
+        "strict_temperature_cap_kw": 150.7,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.7,
+        "R_strict_kw": 150.7
+      },
+      {
+        "start": "16:00",
+        "ahu_kw": 150.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.4,
+        "strict_temperature_cap_kw": 150.4,
+        "lt_heat_kw": 248.967145,
+        "R_len_kw": 150.4,
+        "R_strict_kw": 150.4
+      },
+      {
+        "start": "16:30",
+        "ahu_kw": 147.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 147.6,
+        "strict_temperature_cap_kw": 147.6,
+        "lt_heat_kw": 251.40793,
+        "R_len_kw": 147.6,
+        "R_strict_kw": 147.6
+      },
+      {
+        "start": "17:00",
+        "ahu_kw": 142.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 142.9,
+        "strict_temperature_cap_kw": 142.9,
+        "lt_heat_kw": 249.30543,
+        "R_len_kw": 142.9,
+        "R_strict_kw": 142.9
+      },
+      {
+        "start": "17:30",
+        "ahu_kw": 137.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 137.1,
+        "strict_temperature_cap_kw": 137.1,
+        "lt_heat_kw": 249.49886,
+        "R_len_kw": 137.1,
+        "R_strict_kw": 137.1
+      },
+      {
+        "start": "18:00",
+        "ahu_kw": 129.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 129.5,
+        "strict_temperature_cap_kw": 129.5,
+        "lt_heat_kw": 250.03043,
+        "R_len_kw": 129.5,
+        "R_strict_kw": 129.5
+      },
+      {
+        "start": "18:30",
+        "ahu_kw": 118.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 118.2,
+        "strict_temperature_cap_kw": 118.2,
+        "lt_heat_kw": 251.84293,
+        "R_len_kw": 118.2,
+        "R_strict_kw": 118.2
+      },
+      {
+        "start": "19:00",
+        "ahu_kw": 102.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 102.5,
+        "strict_temperature_cap_kw": 102.5,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 102.5,
+        "R_strict_kw": 102.5
+      },
+      {
+        "start": "19:30",
+        "ahu_kw": 87.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 87.8,
+        "strict_temperature_cap_kw": 87.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 87.8,
+        "R_strict_kw": 87.8
+      },
+      {
+        "start": "20:00",
+        "ahu_kw": 79.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 79.1,
+        "strict_temperature_cap_kw": 79.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 79.1,
+        "R_strict_kw": 79.1
+      },
+      {
+        "start": "20:30",
+        "ahu_kw": 74.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 74.8,
+        "strict_temperature_cap_kw": 74.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 74.8,
+        "R_strict_kw": 74.8
+      },
+      {
+        "start": "21:00",
+        "ahu_kw": 71.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 71.4,
+        "strict_temperature_cap_kw": 71.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 71.4,
+        "R_strict_kw": 71.4
+      },
+      {
+        "start": "21:30",
+        "ahu_kw": 67.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 67.4,
+        "strict_temperature_cap_kw": 67.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 67.4,
+        "R_strict_kw": 67.4
+      },
+      {
+        "start": "22:00",
+        "ahu_kw": 63.3,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.3,
+        "strict_temperature_cap_kw": 63.3,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 63.3,
+        "R_strict_kw": 63.3
+      },
+      {
+        "start": "22:30",
+        "ahu_kw": 60.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.1,
+        "strict_temperature_cap_kw": 60.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 60.1,
+        "R_strict_kw": 60.1
+      },
+      {
+        "start": "23:00",
+        "ahu_kw": 59.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 59.0,
+        "strict_temperature_cap_kw": 59.0,
+        "lt_heat_kw": 186.21172666666666,
+        "R_len_kw": 59.0,
+        "R_strict_kw": 59.0
+      },
+      {
+        "start": "23:30",
+        "ahu_kw": 60.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.4,
+        "strict_temperature_cap_kw": 60.4,
+        "lt_heat_kw": 156.28973333333334,
+        "R_len_kw": 60.4,
+        "R_strict_kw": 60.4
+      }
+    ]
+  },
+  "h1": {
+    "radiator_certificates": [],
+    "bounds_equal_all_periods": false,
+    "dry_bulb_range_c": [
+      15.7,
+      30.3
+    ],
+    "periods": [
+      {
+        "start": "00:00",
+        "ahu_kw": 60.0,
+        "T_f": 34.4,
+        "T_r": 29.304761904761904,
+        "lenient_temperature_cap_kw": 60.0,
+        "strict_temperature_cap_kw": 60.0,
+        "lt_heat_kw": 157.1308,
+        "R_len_kw": 60.0,
+        "R_strict_kw": 60.0
+      },
+      {
+        "start": "00:30",
+        "ahu_kw": 63.6,
+        "T_f": 34.6,
+        "T_r": 29.45714285714286,
+        "lenient_temperature_cap_kw": 63.6,
+        "strict_temperature_cap_kw": 63.6,
+        "lt_heat_kw": 153.76626666666667,
+        "R_len_kw": 63.6,
+        "R_strict_kw": 63.6
+      },
+      {
+        "start": "01:00",
+        "ahu_kw": 65.8,
+        "T_f": 34.8,
+        "T_r": 29.60952380952381,
+        "lenient_temperature_cap_kw": 65.8,
+        "strict_temperature_cap_kw": 65.8,
+        "lt_heat_kw": 155.5184,
+        "R_len_kw": 65.8,
+        "R_strict_kw": 65.8
+      },
+      {
+        "start": "01:30",
+        "ahu_kw": 65.6,
+        "T_f": 35.3,
+        "T_r": 29.99047619047619,
+        "lenient_temperature_cap_kw": 65.6,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 151.84853333333334,
+        "R_len_kw": 65.6,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "02:00",
+        "ahu_kw": 63.1,
+        "T_f": 35.1,
+        "T_r": 29.83809523809524,
+        "lenient_temperature_cap_kw": 63.1,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 150.87253333333334,
+        "R_len_kw": 63.1,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "02:30",
+        "ahu_kw": 59.4,
+        "T_f": 35.2,
+        "T_r": 29.914285714285715,
+        "lenient_temperature_cap_kw": 59.4,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 153.4512,
+        "R_len_kw": 59.4,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "03:00",
+        "ahu_kw": 55.9,
+        "T_f": 35.7,
+        "T_r": 30.295238095238094,
+        "lenient_temperature_cap_kw": 55.9,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 151.05506666666668,
+        "R_len_kw": 55.9,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "03:30",
+        "ahu_kw": 54.1,
+        "T_f": 36.0,
+        "T_r": 30.523809523809526,
+        "lenient_temperature_cap_kw": 54.1,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 147.61253333333335,
+        "R_len_kw": 54.1,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "04:00",
+        "ahu_kw": 54.7,
+        "T_f": 35.8,
+        "T_r": 30.371428571428574,
+        "lenient_temperature_cap_kw": 54.7,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 148.71493333333333,
+        "R_len_kw": 54.7,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "04:30",
+        "ahu_kw": 57.6,
+        "T_f": 36.3,
+        "T_r": 30.752380952380953,
+        "lenient_temperature_cap_kw": 57.6,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 145.1164,
+        "R_len_kw": 57.6,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "05:00",
+        "ahu_kw": 61.6,
+        "T_f": 35.9,
+        "T_r": 30.447619047619046,
+        "lenient_temperature_cap_kw": 61.6,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 151.99893333333333,
+        "R_len_kw": 61.6,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "05:30",
+        "ahu_kw": 65.6,
+        "T_f": 34.9,
+        "T_r": 29.685714285714287,
+        "lenient_temperature_cap_kw": 65.6,
+        "strict_temperature_cap_kw": 65.6,
+        "lt_heat_kw": 160.03189333333333,
+        "R_len_kw": 65.6,
+        "R_strict_kw": 65.6
+      },
+      {
+        "start": "06:00",
+        "ahu_kw": 69.0,
+        "T_f": 34.1,
+        "T_r": 29.07619047619048,
+        "lenient_temperature_cap_kw": 69.0,
+        "strict_temperature_cap_kw": 69.0,
+        "lt_heat_kw": 189.1824533333333,
+        "R_len_kw": 69.0,
+        "R_strict_kw": 69.0
+      },
+      {
+        "start": "06:30",
+        "ahu_kw": 73.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 73.4,
+        "strict_temperature_cap_kw": 73.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 73.4,
+        "R_strict_kw": 73.4
+      },
+      {
+        "start": "07:00",
+        "ahu_kw": 83.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 83.1,
+        "strict_temperature_cap_kw": 83.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 83.1,
+        "R_strict_kw": 83.1
+      },
+      {
+        "start": "07:30",
+        "ahu_kw": 100.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 100.6,
+        "strict_temperature_cap_kw": 100.6,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 100.6,
+        "R_strict_kw": 100.6
+      },
+      {
+        "start": "08:00",
+        "ahu_kw": 118.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 118.8,
+        "strict_temperature_cap_kw": 118.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 118.8,
+        "R_strict_kw": 118.8
+      },
+      {
+        "start": "08:30",
+        "ahu_kw": 130.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 130.5,
+        "strict_temperature_cap_kw": 130.5,
+        "lt_heat_kw": 164.11330999999998,
+        "R_len_kw": 130.5,
+        "R_strict_kw": 130.5
+      },
+      {
+        "start": "09:00",
+        "ahu_kw": 137.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 137.4,
+        "strict_temperature_cap_kw": 137.4,
+        "lt_heat_kw": 136.22826666666666,
+        "R_len_kw": 136.22826666666666,
+        "R_strict_kw": 136.22826666666666
+      },
+      {
+        "start": "09:30",
+        "ahu_kw": 142.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 142.7,
+        "strict_temperature_cap_kw": 142.7,
+        "lt_heat_kw": 121.96333333333334,
+        "R_len_kw": 121.96333333333334,
+        "R_strict_kw": 121.96333333333334
+      },
+      {
+        "start": "10:00",
+        "ahu_kw": 147.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 147.2,
+        "strict_temperature_cap_kw": 147.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 147.2,
+        "R_strict_kw": 147.2
+      },
+      {
+        "start": "10:30",
+        "ahu_kw": 150.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.2,
+        "strict_temperature_cap_kw": 150.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.2,
+        "R_strict_kw": 150.2
+      },
+      {
+        "start": "11:00",
+        "ahu_kw": 150.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.9,
+        "strict_temperature_cap_kw": 150.9,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "11:30",
+        "ahu_kw": 149.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 149.1,
+        "strict_temperature_cap_kw": 149.1,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "12:00",
+        "ahu_kw": 145.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 145.6,
+        "strict_temperature_cap_kw": 145.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "12:30",
+        "ahu_kw": 141.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 141.9,
+        "strict_temperature_cap_kw": 141.9,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "13:00",
+        "ahu_kw": 139.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 139.4,
+        "strict_temperature_cap_kw": 139.4,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "13:30",
+        "ahu_kw": 139.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 139.2,
+        "strict_temperature_cap_kw": 139.2,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "14:00",
+        "ahu_kw": 141.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 141.4,
+        "strict_temperature_cap_kw": 141.4,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "14:30",
+        "ahu_kw": 145.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 145.0,
+        "strict_temperature_cap_kw": 145.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "15:00",
+        "ahu_kw": 148.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 148.6,
+        "strict_temperature_cap_kw": 148.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "15:30",
+        "ahu_kw": 150.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.7,
+        "strict_temperature_cap_kw": 150.7,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "16:00",
+        "ahu_kw": 150.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.4,
+        "strict_temperature_cap_kw": 150.4,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "16:30",
+        "ahu_kw": 147.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 147.6,
+        "strict_temperature_cap_kw": 147.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 139.0,
+        "R_strict_kw": 139.0
+      },
+      {
+        "start": "17:00",
+        "ahu_kw": 142.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 142.9,
+        "strict_temperature_cap_kw": 142.9,
+        "lt_heat_kw": 195.92657333333335,
+        "R_len_kw": 142.9,
+        "R_strict_kw": 142.9
+      },
+      {
+        "start": "17:30",
+        "ahu_kw": 137.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 137.1,
+        "strict_temperature_cap_kw": 137.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 137.1,
+        "R_strict_kw": 137.1
+      },
+      {
+        "start": "18:00",
+        "ahu_kw": 129.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 129.5,
+        "strict_temperature_cap_kw": 129.5,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 129.5,
+        "R_strict_kw": 129.5
+      },
+      {
+        "start": "18:30",
+        "ahu_kw": 118.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 118.2,
+        "strict_temperature_cap_kw": 118.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 118.2,
+        "R_strict_kw": 118.2
+      },
+      {
+        "start": "19:00",
+        "ahu_kw": 102.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 102.5,
+        "strict_temperature_cap_kw": 102.5,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 102.5,
+        "R_strict_kw": 102.5
+      },
+      {
+        "start": "19:30",
+        "ahu_kw": 87.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 87.8,
+        "strict_temperature_cap_kw": 87.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 87.8,
+        "R_strict_kw": 87.8
+      },
+      {
+        "start": "20:00",
+        "ahu_kw": 79.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 79.1,
+        "strict_temperature_cap_kw": 79.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 79.1,
+        "R_strict_kw": 79.1
+      },
+      {
+        "start": "20:30",
+        "ahu_kw": 74.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 74.8,
+        "strict_temperature_cap_kw": 74.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 74.8,
+        "R_strict_kw": 74.8
+      },
+      {
+        "start": "21:00",
+        "ahu_kw": 71.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 71.4,
+        "strict_temperature_cap_kw": 71.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 71.4,
+        "R_strict_kw": 71.4
+      },
+      {
+        "start": "21:30",
+        "ahu_kw": 67.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 67.4,
+        "strict_temperature_cap_kw": 67.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 67.4,
+        "R_strict_kw": 67.4
+      },
+      {
+        "start": "22:00",
+        "ahu_kw": 63.3,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.3,
+        "strict_temperature_cap_kw": 63.3,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 63.3,
+        "R_strict_kw": 63.3
+      },
+      {
+        "start": "22:30",
+        "ahu_kw": 60.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.1,
+        "strict_temperature_cap_kw": 60.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 60.1,
+        "R_strict_kw": 60.1
+      },
+      {
+        "start": "23:00",
+        "ahu_kw": 59.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 59.0,
+        "strict_temperature_cap_kw": 59.0,
+        "lt_heat_kw": 196.05901333333333,
+        "R_len_kw": 59.0,
+        "R_strict_kw": 59.0
+      },
+      {
+        "start": "23:30",
+        "ahu_kw": 60.4,
+        "T_f": 34.1,
+        "T_r": 29.07619047619048,
+        "lenient_temperature_cap_kw": 60.4,
+        "strict_temperature_cap_kw": 60.4,
+        "lt_heat_kw": 163.14222666666666,
+        "R_len_kw": 60.4,
+        "R_strict_kw": 60.4
+      }
+    ]
+  },
+  "h2": {
+    "radiator_certificates": [
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "21:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "21:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "22:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "22:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      }
+    ],
+    "bounds_equal_all_periods": false,
+    "dry_bulb_range_c": [
+      1.3,
+      6.4
+    ],
+    "periods": [
+      {
+        "start": "00:00",
+        "ahu_kw": 352.5,
+        "T_f": 49.7,
+        "T_r": 40.96190476190476,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "00:30",
+        "ahu_kw": 351.1,
+        "T_f": 49.5,
+        "T_r": 40.80952380952381,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "01:00",
+        "ahu_kw": 353.3,
+        "T_f": 49.5,
+        "T_r": 40.80952380952381,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "01:30",
+        "ahu_kw": 355.6,
+        "T_f": 49.6,
+        "T_r": 40.885714285714286,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "02:00",
+        "ahu_kw": 355.6,
+        "T_f": 49.7,
+        "T_r": 40.96190476190476,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "02:30",
+        "ahu_kw": 366.9,
+        "T_f": 50.3,
+        "T_r": 41.41904761904762,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "03:00",
+        "ahu_kw": 350.9,
+        "T_f": 49.8,
+        "T_r": 41.03809523809524,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 254.50756,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "03:30",
+        "ahu_kw": 359.1,
+        "T_f": 50.2,
+        "T_r": 41.34285714285714,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 251.543095,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "04:00",
+        "ahu_kw": 364.7,
+        "T_f": 50.4,
+        "T_r": 41.49523809523809,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 250.239535,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "04:30",
+        "ahu_kw": 375.1,
+        "T_f": 50.7,
+        "T_r": 41.72380952380952,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 252.161935,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "05:00",
+        "ahu_kw": 369.1,
+        "T_f": 50.3,
+        "T_r": 41.41904761904762,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 255.023935,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "05:30",
+        "ahu_kw": 383.1,
+        "T_f": 50.7,
+        "T_r": 41.72380952380952,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 263.950675,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "06:00",
+        "ahu_kw": 376.5,
+        "T_f": 50.3,
+        "T_r": 41.41904761904762,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 272.71122333333335,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "06:30",
+        "ahu_kw": 370.9,
+        "T_f": 49.9,
+        "T_r": 41.114285714285714,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 281.83610999999996,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "07:00",
+        "ahu_kw": 383.1,
+        "T_f": 50.0,
+        "T_r": 41.19047619047619,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 294.17195000000004,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "07:30",
+        "ahu_kw": 380.6,
+        "T_f": 49.2,
+        "T_r": 40.58095238095238,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 313.88463,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "08:00",
+        "ahu_kw": 391.3,
+        "T_f": 48.9,
+        "T_r": 40.352380952380955,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 321.08301,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "08:30",
+        "ahu_kw": 398.0,
+        "T_f": 48.7,
+        "T_r": 40.2,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 337.81253000000004,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "09:00",
+        "ahu_kw": 404.9,
+        "T_f": 48.7,
+        "T_r": 40.2,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "09:30",
+        "ahu_kw": 402.7,
+        "T_f": 48.4,
+        "T_r": 39.971428571428575,
+        "lenient_temperature_cap_kw": 1.365084745762538,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 1.365084745762538,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "10:00",
+        "ahu_kw": 394.7,
+        "T_f": 47.9,
+        "T_r": 39.59047619047619,
+        "lenient_temperature_cap_kw": 19.452263610315285,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 19.452263610315285,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "10:30",
+        "ahu_kw": 392.7,
+        "T_f": 47.7,
+        "T_r": 39.43809523809524,
+        "lenient_temperature_cap_kw": 26.708126801152797,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 26.708126801152797,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "11:00",
+        "ahu_kw": 383.4,
+        "T_f": 47.3,
+        "T_r": 39.13333333333333,
+        "lenient_temperature_cap_kw": 40.68734693877554,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 40.68734693877554,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "11:30",
+        "ahu_kw": 376.6,
+        "T_f": 47.1,
+        "T_r": 38.98095238095238,
+        "lenient_temperature_cap_kw": 47.268269794721405,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 47.268269794721405,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "12:00",
+        "ahu_kw": 363.1,
+        "T_f": 46.7,
+        "T_r": 38.67619047619048,
+        "lenient_temperature_cap_kw": 59.906112759643854,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 338.80679499999997,
+        "R_len_kw": 59.906112759643854,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "12:30",
+        "ahu_kw": 356.9,
+        "T_f": 46.6,
+        "T_r": 38.6,
+        "lenient_temperature_cap_kw": 62.45749999999993,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 62.45749999999993,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "13:00",
+        "ahu_kw": 346.9,
+        "T_f": 46.3,
+        "T_r": 38.371428571428574,
+        "lenient_temperature_cap_kw": 71.25513513513508,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 71.25513513513508,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "13:30",
+        "ahu_kw": 329.2,
+        "T_f": 45.6,
+        "T_r": 37.838095238095235,
+        "lenient_temperature_cap_kw": 91.69128834355836,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 91.69128834355836,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "14:00",
+        "ahu_kw": 338.9,
+        "T_f": 45.9,
+        "T_r": 38.06666666666667,
+        "lenient_temperature_cap_kw": 83.64340425531904,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 83.64340425531904,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "14:30",
+        "ahu_kw": 352.5,
+        "T_f": 46.3,
+        "T_r": 38.371428571428574,
+        "lenient_temperature_cap_kw": 72.40540540540535,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 72.40540540540535,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "15:00",
+        "ahu_kw": 358.6,
+        "T_f": 46.4,
+        "T_r": 38.44761904761905,
+        "lenient_temperature_cap_kw": 70.0021556886227,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 70.0021556886227,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "15:30",
+        "ahu_kw": 355.7,
+        "T_f": 46.2,
+        "T_r": 38.2952380952381,
+        "lenient_temperature_cap_kw": 76.71120481927699,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 76.71120481927699,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "16:00",
+        "ahu_kw": 360.4,
+        "T_f": 46.4,
+        "T_r": 38.44761904761905,
+        "lenient_temperature_cap_kw": 70.35353293413166,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 70.35353293413166,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "16:30",
+        "ahu_kw": 375.1,
+        "T_f": 47.1,
+        "T_r": 38.98095238095238,
+        "lenient_temperature_cap_kw": 47.07999999999999,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 47.07999999999999,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "17:00",
+        "ahu_kw": 377.9,
+        "T_f": 47.4,
+        "T_r": 39.20952380952381,
+        "lenient_temperature_cap_kw": 36.47174418604655,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 36.47174418604655,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "17:30",
+        "ahu_kw": 374.6,
+        "T_f": 47.5,
+        "T_r": 39.285714285714285,
+        "lenient_temperature_cap_kw": 32.573913043478306,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 340.0,
+        "R_len_kw": 32.573913043478306,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "18:00",
+        "ahu_kw": 374.5,
+        "T_f": 47.8,
+        "T_r": 39.51428571428571,
+        "lenient_temperature_cap_kw": 21.953448275862154,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 21.953448275862154,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "18:30",
+        "ahu_kw": 365.7,
+        "T_f": 47.9,
+        "T_r": 39.59047619047619,
+        "lenient_temperature_cap_kw": 18.023037249283757,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 18.023037249283757,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "19:00",
+        "ahu_kw": 347.5,
+        "T_f": 47.8,
+        "T_r": 39.51428571428571,
+        "lenient_temperature_cap_kw": 20.370689655172495,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 20.370689655172495,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "19:30",
+        "ahu_kw": 335.3,
+        "T_f": 47.9,
+        "T_r": 39.59047619047619,
+        "lenient_temperature_cap_kw": 16.524813753581746,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 323.01528,
+        "R_len_kw": 16.524813753581746,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "20:00",
+        "ahu_kw": 329.1,
+        "T_f": 48.0,
+        "T_r": 39.666666666666664,
+        "lenient_temperature_cap_kw": 13.16400000000009,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 311.650035,
+        "R_len_kw": 13.16400000000009,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "20:30",
+        "ahu_kw": 327.3,
+        "T_f": 48.1,
+        "T_r": 39.74285714285714,
+        "lenient_temperature_cap_kw": 10.07076923076933,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 305.21019333333334,
+        "R_len_kw": 10.07076923076933,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "21:00",
+        "ahu_kw": 338.9,
+        "T_f": 48.7,
+        "T_r": 40.2,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "21:30",
+        "ahu_kw": 332.4,
+        "T_f": 48.6,
+        "T_r": 40.12380952380953,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "22:00",
+        "ahu_kw": 328.3,
+        "T_f": 48.6,
+        "T_r": 40.12380952380953,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "22:30",
+        "ahu_kw": 330.1,
+        "T_f": 48.8,
+        "T_r": 40.27619047619048,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "23:00",
+        "ahu_kw": 339.0,
+        "T_f": 49.2,
+        "T_r": 40.58095238095238,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 301.97960333333333,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "23:30",
+        "ahu_kw": 347.9,
+        "T_f": 49.5,
+        "T_r": 40.80952380952381,
+        "lenient_temperature_cap_kw": 0.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 340.0,
+        "R_len_kw": 0.0,
+        "R_strict_kw": 0.0
+      }
+    ]
+  },
+  "h3": {
+    "radiator_certificates": [
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "03:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 80.41103448275865
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "04:00",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 78.95937500000002
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "04:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 81.65304075235113
+      }
+    ],
+    "bounds_equal_all_periods": false,
+    "dry_bulb_range_c": [
+      7.0,
+      17.3
+    ],
+    "periods": [
+      {
+        "start": "00:00",
+        "ahu_kw": 205.0,
+        "T_f": 43.8,
+        "T_r": 36.46666666666667,
+        "lenient_temperature_cap_kw": 98.77272727272728,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 98.77272727272728,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "00:30",
+        "ahu_kw": 211.1,
+        "T_f": 43.9,
+        "T_r": 36.542857142857144,
+        "lenient_temperature_cap_kw": 99.19650485436892,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 99.19650485436892,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "01:00",
+        "ahu_kw": 213.3,
+        "T_f": 43.9,
+        "T_r": 36.542857142857144,
+        "lenient_temperature_cap_kw": 100.23029126213592,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 100.23029126213592,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "01:30",
+        "ahu_kw": 215.6,
+        "T_f": 44.0,
+        "T_r": 36.61904761904762,
+        "lenient_temperature_cap_kw": 98.75870967741933,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 98.75870967741933,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "02:00",
+        "ahu_kw": 218.1,
+        "T_f": 44.2,
+        "T_r": 36.77142857142857,
+        "lenient_temperature_cap_kw": 94.78961538461533,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 94.78961538461533,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "02:30",
+        "ahu_kw": 219.4,
+        "T_f": 44.4,
+        "T_r": 36.923809523809524,
+        "lenient_temperature_cap_kw": 90.27541401273888,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 90.27541401273888,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "03:00",
+        "ahu_kw": 223.4,
+        "T_f": 44.7,
+        "T_r": 37.15238095238095,
+        "lenient_temperature_cap_kw": 84.28593059936907,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 84.28593059936907,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "03:30",
+        "ahu_kw": 226.6,
+        "T_f": 44.9,
+        "T_r": 37.304761904761904,
+        "lenient_temperature_cap_kw": 80.41103448275865,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 80.41103448275865,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "04:00",
+        "ahu_kw": 229.7,
+        "T_f": 45.0,
+        "T_r": 37.38095238095238,
+        "lenient_temperature_cap_kw": 78.95937500000002,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 78.95937500000002,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "04:30",
+        "ahu_kw": 230.1,
+        "T_f": 44.9,
+        "T_r": 37.304761904761904,
+        "lenient_temperature_cap_kw": 81.65304075235113,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 81.65304075235113,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "05:00",
+        "ahu_kw": 231.6,
+        "T_f": 44.8,
+        "T_r": 37.22857142857143,
+        "lenient_temperature_cap_kw": 84.77433962264155,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 247.040035,
+        "R_len_kw": 84.77433962264155,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "05:30",
+        "ahu_kw": 220.6,
+        "T_f": 44.2,
+        "T_r": 36.77142857142857,
+        "lenient_temperature_cap_kw": 95.8761538461538,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 253.32226,
+        "R_len_kw": 95.8761538461538,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "06:00",
+        "ahu_kw": 211.5,
+        "T_f": 43.7,
+        "T_r": 36.39047619047619,
+        "lenient_temperature_cap_kw": 104.4410423452768,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 263.69120499999997,
+        "R_len_kw": 104.4410423452768,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "06:30",
+        "ahu_kw": 198.4,
+        "T_f": 43.0,
+        "T_r": 35.85714285714286,
+        "lenient_temperature_cap_kw": 115.07199999999995,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 269.1994133333334,
+        "R_len_kw": 115.07199999999995,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "07:00",
+        "ahu_kw": 188.1,
+        "T_f": 42.2,
+        "T_r": 35.24761904761905,
+        "lenient_temperature_cap_kw": 128.5779452054794,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 264.5783333333334,
+        "R_len_kw": 128.5779452054794,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "07:30",
+        "ahu_kw": 200.6,
+        "T_f": 42.0,
+        "T_r": 35.095238095238095,
+        "lenient_temperature_cap_kw": 142.49517241379309,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 259.2033333333334,
+        "R_len_kw": 142.49517241379309,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "08:00",
+        "ahu_kw": 206.3,
+        "T_f": 41.5,
+        "T_r": 34.714285714285715,
+        "lenient_temperature_cap_kw": 160.69684210526316,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 252.1425,
+        "R_len_kw": 160.69684210526316,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "08:30",
+        "ahu_kw": 195.5,
+        "T_f": 40.6,
+        "T_r": 34.02857142857143,
+        "lenient_temperature_cap_kw": 177.64999999999995,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 177.64999999999995,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "09:00",
+        "ahu_kw": 192.4,
+        "T_f": 40.2,
+        "T_r": 33.72380952380952,
+        "lenient_temperature_cap_kw": 186.45823529411757,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 186.45823529411757,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "09:30",
+        "ahu_kw": 185.2,
+        "T_f": 39.7,
+        "T_r": 33.34285714285714,
+        "lenient_temperature_cap_kw": 185.2,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 185.2,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "10:00",
+        "ahu_kw": 179.7,
+        "T_f": 39.3,
+        "T_r": 33.03809523809524,
+        "lenient_temperature_cap_kw": 179.7,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 179.7,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "10:30",
+        "ahu_kw": 167.7,
+        "T_f": 38.7,
+        "T_r": 32.58095238095238,
+        "lenient_temperature_cap_kw": 167.7,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 295.96949333333333,
+        "R_len_kw": 167.7,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "11:00",
+        "ahu_kw": 150.9,
+        "T_f": 37.9,
+        "T_r": 31.97142857142857,
+        "lenient_temperature_cap_kw": 150.9,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 301.86293,
+        "R_len_kw": 150.9,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "11:30",
+        "ahu_kw": 149.1,
+        "T_f": 37.4,
+        "T_r": 31.59047619047619,
+        "lenient_temperature_cap_kw": 149.1,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 299.99214333333333,
+        "R_len_kw": 149.1,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "12:00",
+        "ahu_kw": 145.6,
+        "T_f": 36.8,
+        "T_r": 31.133333333333336,
+        "lenient_temperature_cap_kw": 145.6,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 294.78684999999996,
+        "R_len_kw": 145.6,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "12:30",
+        "ahu_kw": 141.9,
+        "T_f": 36.1,
+        "T_r": 30.6,
+        "lenient_temperature_cap_kw": 141.9,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 157.86906666666667,
+        "R_len_kw": 141.9,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "13:00",
+        "ahu_kw": 139.4,
+        "T_f": 36.1,
+        "T_r": 30.6,
+        "lenient_temperature_cap_kw": 139.4,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 298.77395333333334,
+        "R_len_kw": 139.4,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "13:30",
+        "ahu_kw": 139.2,
+        "T_f": 35.7,
+        "T_r": 30.295238095238094,
+        "lenient_temperature_cap_kw": 139.2,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 304.2299366666667,
+        "R_len_kw": 139.2,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "14:00",
+        "ahu_kw": 141.4,
+        "T_f": 35.8,
+        "T_r": 30.371428571428574,
+        "lenient_temperature_cap_kw": 141.4,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 305.34363666666667,
+        "R_len_kw": 141.4,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "14:30",
+        "ahu_kw": 145.0,
+        "T_f": 35.4,
+        "T_r": 30.066666666666666,
+        "lenient_temperature_cap_kw": 145.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 306.40029000000004,
+        "R_len_kw": 145.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "15:00",
+        "ahu_kw": 148.6,
+        "T_f": 35.2,
+        "T_r": 29.914285714285715,
+        "lenient_temperature_cap_kw": 148.6,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 307.67638666666664,
+        "R_len_kw": 148.6,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "15:30",
+        "ahu_kw": 150.7,
+        "T_f": 34.7,
+        "T_r": 29.533333333333335,
+        "lenient_temperature_cap_kw": 150.7,
+        "strict_temperature_cap_kw": 150.7,
+        "lt_heat_kw": 300.5494233333333,
+        "R_len_kw": 150.7,
+        "R_strict_kw": 150.7
+      },
+      {
+        "start": "16:00",
+        "ahu_kw": 150.4,
+        "T_f": 35.1,
+        "T_r": 29.83809523809524,
+        "lenient_temperature_cap_kw": 150.4,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 302.52283666666665,
+        "R_len_kw": 150.4,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "16:30",
+        "ahu_kw": 147.6,
+        "T_f": 35.7,
+        "T_r": 30.295238095238094,
+        "lenient_temperature_cap_kw": 147.6,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 300.64373666666665,
+        "R_len_kw": 147.6,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "17:00",
+        "ahu_kw": 142.9,
+        "T_f": 36.1,
+        "T_r": 30.6,
+        "lenient_temperature_cap_kw": 142.9,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 301.24846,
+        "R_len_kw": 142.9,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "17:30",
+        "ahu_kw": 137.1,
+        "T_f": 36.4,
+        "T_r": 30.82857142857143,
+        "lenient_temperature_cap_kw": 137.1,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 299.50065333333333,
+        "R_len_kw": 137.1,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "18:00",
+        "ahu_kw": 129.5,
+        "T_f": 36.9,
+        "T_r": 31.20952380952381,
+        "lenient_temperature_cap_kw": 129.5,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 297.2239466666666,
+        "R_len_kw": 129.5,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "18:30",
+        "ahu_kw": 118.2,
+        "T_f": 37.5,
+        "T_r": 31.666666666666668,
+        "lenient_temperature_cap_kw": 118.2,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 295.09860000000003,
+        "R_len_kw": 118.2,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "19:00",
+        "ahu_kw": 105.0,
+        "T_f": 38.1,
+        "T_r": 32.12380952380953,
+        "lenient_temperature_cap_kw": 105.0,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 288.9688066666667,
+        "R_len_kw": 105.0,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "19:30",
+        "ahu_kw": 100.3,
+        "T_f": 38.5,
+        "T_r": 32.42857142857143,
+        "lenient_temperature_cap_kw": 100.3,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 283.67823,
+        "R_len_kw": 100.3,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "20:00",
+        "ahu_kw": 114.1,
+        "T_f": 39.4,
+        "T_r": 33.114285714285714,
+        "lenient_temperature_cap_kw": 114.1,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 277.5811166666667,
+        "R_len_kw": 114.1,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "20:30",
+        "ahu_kw": 122.3,
+        "T_f": 39.9,
+        "T_r": 33.49523809523809,
+        "lenient_temperature_cap_kw": 122.3,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 275.2847733333333,
+        "R_len_kw": 122.3,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "21:00",
+        "ahu_kw": 121.4,
+        "T_f": 40.0,
+        "T_r": 33.57142857142857,
+        "lenient_temperature_cap_kw": 121.4,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 266.88598,
+        "R_len_kw": 121.4,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "21:30",
+        "ahu_kw": 139.9,
+        "T_f": 40.9,
+        "T_r": 34.25714285714286,
+        "lenient_temperature_cap_kw": 120.94580645161292,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 260.0173016666667,
+        "R_len_kw": 120.94580645161292,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "22:00",
+        "ahu_kw": 148.3,
+        "T_f": 41.4,
+        "T_r": 34.63809523809524,
+        "lenient_temperature_cap_kw": 117.59563380281693,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 254.40542500000004,
+        "R_len_kw": 117.59563380281693,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "22:30",
+        "ahu_kw": 157.6,
+        "T_f": 41.9,
+        "T_r": 35.01904761904762,
+        "lenient_temperature_cap_kw": 114.08276816608998,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 248.76817,
+        "R_len_kw": 114.08276816608998,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "23:00",
+        "ahu_kw": 176.5,
+        "T_f": 42.7,
+        "T_r": 35.628571428571426,
+        "lenient_temperature_cap_kw": 109.10909090909088,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 109.10909090909088,
+        "R_strict_kw": 0.0
+      },
+      {
+        "start": "23:30",
+        "ahu_kw": 185.4,
+        "T_f": 43.0,
+        "T_r": 35.85714285714286,
+        "lenient_temperature_cap_kw": 107.53199999999995,
+        "strict_temperature_cap_kw": 0.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 107.53199999999995,
+        "R_strict_kw": 0.0
+      }
+    ]
+  },
+  "h4": {
+    "radiator_certificates": [
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "00:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 60.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "00:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 63.6
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "01:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 65.8
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "01:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 65.6
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "02:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 63.1
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "02:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 59.4
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "03:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 55.9
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "03:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 54.1
+      }
+    ],
+    "bounds_equal_all_periods": true,
+    "dry_bulb_range_c": [
+      19.2,
+      33.0
+    ],
+    "periods": [
+      {
+        "start": "00:00",
+        "ahu_kw": 60.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.0,
+        "strict_temperature_cap_kw": 60.0,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 60.0,
+        "R_strict_kw": 60.0
+      },
+      {
+        "start": "00:30",
+        "ahu_kw": 63.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.6,
+        "strict_temperature_cap_kw": 63.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 63.6,
+        "R_strict_kw": 63.6
+      },
+      {
+        "start": "01:00",
+        "ahu_kw": 65.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 65.8,
+        "strict_temperature_cap_kw": 65.8,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 65.8,
+        "R_strict_kw": 65.8
+      },
+      {
+        "start": "01:30",
+        "ahu_kw": 65.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 65.6,
+        "strict_temperature_cap_kw": 65.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 65.6,
+        "R_strict_kw": 65.6
+      },
+      {
+        "start": "02:00",
+        "ahu_kw": 63.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.1,
+        "strict_temperature_cap_kw": 63.1,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 63.1,
+        "R_strict_kw": 63.1
+      },
+      {
+        "start": "02:30",
+        "ahu_kw": 59.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 59.4,
+        "strict_temperature_cap_kw": 59.4,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 59.4,
+        "R_strict_kw": 59.4
+      },
+      {
+        "start": "03:00",
+        "ahu_kw": 55.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 55.9,
+        "strict_temperature_cap_kw": 55.9,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 55.9,
+        "R_strict_kw": 55.9
+      },
+      {
+        "start": "03:30",
+        "ahu_kw": 54.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 54.1,
+        "strict_temperature_cap_kw": 54.1,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 54.1,
+        "R_strict_kw": 54.1
+      },
+      {
+        "start": "04:00",
+        "ahu_kw": 54.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 54.7,
+        "strict_temperature_cap_kw": 54.7,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 54.7,
+        "R_strict_kw": 54.7
+      },
+      {
+        "start": "04:30",
+        "ahu_kw": 57.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 57.6,
+        "strict_temperature_cap_kw": 57.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 57.6,
+        "R_strict_kw": 57.6
+      },
+      {
+        "start": "05:00",
+        "ahu_kw": 61.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 61.6,
+        "strict_temperature_cap_kw": 61.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 61.6,
+        "R_strict_kw": 61.6
+      },
+      {
+        "start": "05:30",
+        "ahu_kw": 65.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 65.6,
+        "strict_temperature_cap_kw": 65.6,
+        "lt_heat_kw": 139.0,
+        "R_len_kw": 65.6,
+        "R_strict_kw": 65.6
+      },
+      {
+        "start": "06:00",
+        "ahu_kw": 69.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 69.0,
+        "strict_temperature_cap_kw": 69.0,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 69.0,
+        "R_strict_kw": 69.0
+      },
+      {
+        "start": "06:30",
+        "ahu_kw": 73.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 73.4,
+        "strict_temperature_cap_kw": 73.4,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 73.4,
+        "R_strict_kw": 73.4
+      },
+      {
+        "start": "07:00",
+        "ahu_kw": 83.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 83.1,
+        "strict_temperature_cap_kw": 83.1,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 83.1,
+        "R_strict_kw": 83.1
+      },
+      {
+        "start": "07:30",
+        "ahu_kw": 100.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 100.6,
+        "strict_temperature_cap_kw": 100.6,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 100.6,
+        "R_strict_kw": 100.6
+      },
+      {
+        "start": "08:00",
+        "ahu_kw": 118.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 118.8,
+        "strict_temperature_cap_kw": 118.8,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 118.8,
+        "R_strict_kw": 118.8
+      },
+      {
+        "start": "08:30",
+        "ahu_kw": 130.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 130.5,
+        "strict_temperature_cap_kw": 130.5,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 130.5,
+        "R_strict_kw": 130.5
+      },
+      {
+        "start": "09:00",
+        "ahu_kw": 137.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 137.4,
+        "strict_temperature_cap_kw": 137.4,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 137.4,
+        "R_strict_kw": 137.4
+      },
+      {
+        "start": "09:30",
+        "ahu_kw": 142.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 142.7,
+        "strict_temperature_cap_kw": 142.7,
+        "lt_heat_kw": 162.00387333333333,
+        "R_len_kw": 142.7,
+        "R_strict_kw": 142.7
+      },
+      {
+        "start": "10:00",
+        "ahu_kw": 147.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 147.2,
+        "strict_temperature_cap_kw": 147.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 147.2,
+        "R_strict_kw": 147.2
+      },
+      {
+        "start": "10:30",
+        "ahu_kw": 150.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.2,
+        "strict_temperature_cap_kw": 150.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.2,
+        "R_strict_kw": 150.2
+      },
+      {
+        "start": "11:00",
+        "ahu_kw": 150.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.9,
+        "strict_temperature_cap_kw": 150.9,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.9,
+        "R_strict_kw": 150.9
+      },
+      {
+        "start": "11:30",
+        "ahu_kw": 149.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 149.1,
+        "strict_temperature_cap_kw": 149.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 149.1,
+        "R_strict_kw": 149.1
+      },
+      {
+        "start": "12:00",
+        "ahu_kw": 145.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 145.6,
+        "strict_temperature_cap_kw": 145.6,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 145.6,
+        "R_strict_kw": 145.6
+      },
+      {
+        "start": "12:30",
+        "ahu_kw": 141.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 141.9,
+        "strict_temperature_cap_kw": 141.9,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 141.9,
+        "R_strict_kw": 141.9
+      },
+      {
+        "start": "13:00",
+        "ahu_kw": 139.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 139.4,
+        "strict_temperature_cap_kw": 139.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 139.4,
+        "R_strict_kw": 139.4
+      },
+      {
+        "start": "13:30",
+        "ahu_kw": 139.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 139.2,
+        "strict_temperature_cap_kw": 139.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 139.2,
+        "R_strict_kw": 139.2
+      },
+      {
+        "start": "14:00",
+        "ahu_kw": 141.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 141.4,
+        "strict_temperature_cap_kw": 141.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 141.4,
+        "R_strict_kw": 141.4
+      },
+      {
+        "start": "14:30",
+        "ahu_kw": 145.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 145.0,
+        "strict_temperature_cap_kw": 145.0,
+        "lt_heat_kw": 193.55612666666667,
+        "R_len_kw": 145.0,
+        "R_strict_kw": 145.0
+      },
+      {
+        "start": "15:00",
+        "ahu_kw": 148.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 148.6,
+        "strict_temperature_cap_kw": 148.6,
+        "lt_heat_kw": 197.93467333333334,
+        "R_len_kw": 148.6,
+        "R_strict_kw": 148.6
+      },
+      {
+        "start": "15:30",
+        "ahu_kw": 150.7,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.7,
+        "strict_temperature_cap_kw": 150.7,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.7,
+        "R_strict_kw": 150.7
+      },
+      {
+        "start": "16:00",
+        "ahu_kw": 150.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 150.4,
+        "strict_temperature_cap_kw": 150.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 150.4,
+        "R_strict_kw": 150.4
+      },
+      {
+        "start": "16:30",
+        "ahu_kw": 147.6,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 147.6,
+        "strict_temperature_cap_kw": 147.6,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 147.6,
+        "R_strict_kw": 147.6
+      },
+      {
+        "start": "17:00",
+        "ahu_kw": 142.9,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 142.9,
+        "strict_temperature_cap_kw": 142.9,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 142.9,
+        "R_strict_kw": 142.9
+      },
+      {
+        "start": "17:30",
+        "ahu_kw": 137.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 137.1,
+        "strict_temperature_cap_kw": 137.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 137.1,
+        "R_strict_kw": 137.1
+      },
+      {
+        "start": "18:00",
+        "ahu_kw": 129.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 129.5,
+        "strict_temperature_cap_kw": 129.5,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 129.5,
+        "R_strict_kw": 129.5
+      },
+      {
+        "start": "18:30",
+        "ahu_kw": 118.2,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 118.2,
+        "strict_temperature_cap_kw": 118.2,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 118.2,
+        "R_strict_kw": 118.2
+      },
+      {
+        "start": "19:00",
+        "ahu_kw": 102.5,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 102.5,
+        "strict_temperature_cap_kw": 102.5,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 102.5,
+        "R_strict_kw": 102.5
+      },
+      {
+        "start": "19:30",
+        "ahu_kw": 87.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 87.8,
+        "strict_temperature_cap_kw": 87.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 87.8,
+        "R_strict_kw": 87.8
+      },
+      {
+        "start": "20:00",
+        "ahu_kw": 79.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 79.1,
+        "strict_temperature_cap_kw": 79.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 79.1,
+        "R_strict_kw": 79.1
+      },
+      {
+        "start": "20:30",
+        "ahu_kw": 74.8,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 74.8,
+        "strict_temperature_cap_kw": 74.8,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 74.8,
+        "R_strict_kw": 74.8
+      },
+      {
+        "start": "21:00",
+        "ahu_kw": 71.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 71.4,
+        "strict_temperature_cap_kw": 71.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 71.4,
+        "R_strict_kw": 71.4
+      },
+      {
+        "start": "21:30",
+        "ahu_kw": 67.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 67.4,
+        "strict_temperature_cap_kw": 67.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 67.4,
+        "R_strict_kw": 67.4
+      },
+      {
+        "start": "22:00",
+        "ahu_kw": 63.3,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 63.3,
+        "strict_temperature_cap_kw": 63.3,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 63.3,
+        "R_strict_kw": 63.3
+      },
+      {
+        "start": "22:30",
+        "ahu_kw": 60.1,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.1,
+        "strict_temperature_cap_kw": 60.1,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 60.1,
+        "R_strict_kw": 60.1
+      },
+      {
+        "start": "23:00",
+        "ahu_kw": 59.0,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 59.0,
+        "strict_temperature_cap_kw": 59.0,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 59.0,
+        "R_strict_kw": 59.0
+      },
+      {
+        "start": "23:30",
+        "ahu_kw": 60.4,
+        "T_f": 34.0,
+        "T_r": 29.0,
+        "lenient_temperature_cap_kw": 60.4,
+        "strict_temperature_cap_kw": 60.4,
+        "lt_heat_kw": 201.0,
+        "R_len_kw": 60.4,
+        "R_strict_kw": 60.4
+      }
+    ]
+  },
+  "mutations": {
+    "t1_energy_bus": {
+      "errors": {},
+      "failed": {
+        "test_heat_balance": [
+          "h2",
+          "h3"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h2",
+        "h3"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.23376829107292
+    },
+    "t1_never_recover": {
+      "errors": {},
+      "failed": {
+        "test_least_cost": [
+          "visible",
+          "h1",
+          "h4"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h1",
+        "h4"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.201679999940097
+    },
+    "t1_dry_bulb_utc": {
+      "errors": {},
+      "failed": {},
+      "status": "MISSED",
+      "hidden_days_caught": [],
+      "skipped": false,
+      "elapsed_seconds": 7.171502500073984
+    },
+    "heat_can_be_dumped": {
+      "errors": {},
+      "failed": {
+        "test_heat_balance": [
+          "visible",
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h1",
+        "h3",
+        "h4"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 8.110764958895743
+    },
+    "lt_radiator_outage_ignored": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h2",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "h4"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h2",
+        "h4"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.627404750091955
+    },
+    "parts_by_name_prefix": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h2",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "h4"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h2",
+        "h4"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 8.491614500060678
+    },
+    "intercooler_outage_ignored": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h2",
+          "h4"
+        ],
+        "test_heat_balance": [
+          "h4"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h2",
+        "h4"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.533045792020857
+    },
+    "ht_source_outage_ignored": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h2"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h2"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.383248250000179
+    },
+    "condenser_outage_ignored": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h1"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h1"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.809535541106015
+    },
+    "ac_generator_outage_ignored": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h3"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.807295916834846
+    },
+    "absorption_chiller_parts_ignored": {
+      "errors": {},
+      "failed": {
+        "test_units_within_ratings_and_availability": [
+          "h3"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h3"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.828883958980441
+    },
+    "header_not_shared": {
+      "errors": {},
+      "failed": {
+        "test_electricity_balance": [
+          "h1",
+          "h3",
+          "h4"
+        ]
+      },
+      "status": "CAUGHT",
+      "hidden_days_caught": [
+        "h1",
+        "h3",
+        "h4"
+      ],
+      "skipped": false,
+      "elapsed_seconds": 7.610749083105475
+    }
+  },
+  "fresh_radiator_certificates": {
+    "f1-draw-0002": [],
+    "f10-draw-0023": [],
+    "f11-draw-0030": [],
+    "f12-draw-0032": [],
+    "f13-draw-0033": [
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "07:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "08:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "08:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "09:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "09:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "10:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "10:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 0.0
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "11:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 8.763750000000135
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "11:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 19.54590257879666
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "12:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 36.732325581395386
+      }
+    ],
+    "f14-draw-0034": [],
+    "f15-draw-0038": [
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "19:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 87.8
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "20:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 79.1
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "20:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 74.8
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "21:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 71.4
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "21:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 67.4
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "22:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 63.3
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "22:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 60.1
+      }
+    ],
+    "f16-draw-0045": [],
+    "f2-draw-0003": [
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "22:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 113.3
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "22:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 110.1
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "23:00",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 114.05765124555158
+      },
+      {
+        "engine": "GE1",
+        "sink": "LT radiator 1",
+        "start": "23:30",
+        "minimum_lt_kw": 118.0,
+        "lenient_cap_kw": 115.06125874125871
+      }
+    ],
+    "f3-draw-0012": [],
+    "f4-draw-0013": [],
+    "f5-draw-0014": [],
+    "f6-draw-0015": [],
+    "f7-draw-0016": [
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "00:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 63.6
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "01:00",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 65.8
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "01:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 65.6
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "02:00",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 63.1
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "02:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 59.4
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "03:00",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 55.9
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "03:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 54.1
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "04:00",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 54.7
+      },
+      {
+        "engine": "GE2",
+        "sink": "LT radiator 2",
+        "start": "04:30",
+        "minimum_lt_kw": 83.0,
+        "lenient_cap_kw": 57.6
+      }
+    ],
+    "f8-draw-0020": [],
+    "f9-draw-0022": []
+  }
+}

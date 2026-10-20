@@ -1,0 +1,90 @@
+{
+  "accepted": 16,
+  "draws": 45,
+  "season_counts": {
+    "winter": 4,
+    "spring_autumn": 4,
+    "summer": 8
+  },
+  "LT_outages": [
+    {
+      "day": "f1-draw-0002",
+      "date": "2026-02-09",
+      "outage": {
+        "unit": "LT PHE 2",
+        "from": "15:40",
+        "to": "18:30"
+      }
+    },
+    {
+      "day": "f2-draw-0003",
+      "date": "2026-03-01",
+      "outage": {
+        "unit": "LT radiator 1",
+        "from": "22:00",
+        "to": "24:00"
+      }
+    },
+    {
+      "day": "f7-draw-0016",
+      "date": "2026-07-02",
+      "outage": {
+        "unit": "LT radiator 2",
+        "from": "00:50",
+        "to": "04:40"
+      }
+    },
+    {
+      "day": "f12-draw-0032",
+      "date": "2026-08-26",
+      "outage": {
+        "unit": "LT PHE 2",
+        "from": "13:50",
+        "to": "16:40"
+      }
+    },
+    {
+      "day": "f13-draw-0033",
+      "date": "2026-12-03",
+      "outage": {
+        "unit": "LT radiator 1",
+        "from": "07:50",
+        "to": "12:30"
+      }
+    },
+    {
+      "day": "f15-draw-0038",
+      "date": "2026-07-03",
+      "outage": {
+        "unit": "LT radiator 1",
+        "from": "19:40",
+        "to": "23:00"
+      }
+    },
+    {
+      "day": "f15-draw-0038",
+      "date": "2026-07-03",
+      "outage": {
+        "unit": "LT PHE 1",
+        "from": "14:40",
+        "to": "18:30"
+      }
+    },
+    {
+      "day": "f16-draw-0045",
+      "date": "2026-08-28",
+      "outage": {
+        "unit": "LT PHE 2",
+        "from": "13:40",
+        "to": "15:30"
+      }
+    }
+  ],
+  "results": {
+    "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v23/candidates/t1/task/solution/app": {
+      "errors": {},
+      "failed": {}
+    }
+  },
+  "input_hashes_unchanged": true
+}
