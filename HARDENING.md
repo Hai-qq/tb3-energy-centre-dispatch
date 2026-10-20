@@ -312,6 +312,19 @@ the radiators blocks only the variant that uses the prefix for them too. Within 
 allowed, nothing fair blocks that tool: the other parts can be tied to their units only by
 their names. Over v16 to v19 Opus has passed 2 of 10 trials and GPT none of 6.
 
+## After v19: four rounds of candidates, then v19 in batches (2026-10-18 to 20)
+
+- **v20 to v23.** Each round built candidate changes as full task packages. Fresh Opus
+  implementers then saw only the new visible files ("blind prechecks"). Every candidate was
+  rejected, because a blind implementer handled its new rule: a stated rule gets modelled. The
+  last round, v23, searched about 30 mechanisms for a consequence the data does not state. Its
+  best candidate, T1, was found by all three blind trials. Records: `results/checks-v20/` to
+  `checks-v23/`, each with its README.
+- **v19 in batches.** v19 was run in batches of three Opus and three GPT trials until a batch
+  failed all six. Batch 1 had an Opus pass; batch 2 failed all six. Counting every v19 trial,
+  Opus passed 2 of 8 and GPT 0 of 6. Details: README, "Trial results" (v19), and
+  `results/v19-batches/`.
+
 ## Where to look
 
 1. `README.md`: the delivered task, its evidence and the full history ("How the task came
@@ -332,4 +345,5 @@ their names. Over v16 to v19 Opus has passed 2 of 10 trials and GPT none of 6.
    `ANALYSIS.md`, the differential test in `fuzz/`), and `independent-review/`, our re-run of its
    checks.
 9. `results/checks-v19/`: v19's fairness pre-check (`fairness-precheck/`), build and checks
-   (`build/`), and the release checks.
+   (`build/`), the release checks, and `rubric-self-review.md`, the check against the current
+   36-criterion rubric.

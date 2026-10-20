@@ -1,0 +1,148 @@
+{
+  "checks": {
+    "verifiable": {
+      "outcome": "pass",
+      "explanation": "The verifier is a deterministic pytest suite against an independently-written reference model (reference.py) with no LLM-judge and no runtime network installs (tests/Dockerfile bakes numpy/scipy/pytest/pytest-json-ctrf). I ran the suite myself against both the solution and the broken starter code and got consistent, reproducible pass/fail results."
+    },
+    "solvable": {
+      "outcome": "pass",
+      "explanation": "I ran solution/app's dispatch.py against all five day folders (visible, h1-h4) outside Docker and then ran tests/test_plans.py against the resulting plans: all 55 tests passed. The reported cost for h2 (8879.732) also matched the independent reference MILP optimum (8879.731991) almost exactly, confirming the solution is genuine and correct."
+    },
+    "difficult": {
+      "outcome": "pass",
+      "explanation": "The task requires modeling a non-convex multi-engine CHP unit-commitment problem with coupled electricity/heat/cooling balances, absorption-chiller cooling-water setpoints, part-load tangent-line linearization, and kVA circle constraints — genuine domain expertise well beyond an undergraduate course project. Diffing the buggy and fixed planner code confirms the bugs are subtle physical-modeling errors, not superficial issues."
+    },
+    "interesting": {
+      "outcome": "pass",
+      "explanation": "This models a real, economically meaningful problem (day-ahead dispatch optimization for a hospital CHP/trigeneration plant) that real energy-centre engineers and energy consultants are paid to build and maintain."
+    },
+    "outcome_verified": {
+      "outcome": "pass",
+      "explanation": "Tests only check the resulting plan.json's physical consistency, cost-optimality, and reproducibility — never the method used to produce it. The instruction states the goal (produce a least-cost, physically valid plan) without prescribing any procedure."
+    },
+    "anti_cheat_robustness": {
+      "outcome": "pass",
+      "explanation": "The ground-truth reference model, hidden days (h1-h4), and expected answers live only in the verifier image, which is chmod'd go-rwx and only reachable by root; the agent's artifacts are limited to dispatch.py and planner/, so modifying data files is futile since the verifier supplies its own pristine per-day data copies."
+    },
+    "task_security": {
+      "outcome": "pass",
+      "explanation": "Reviewed environment/Dockerfile, tests/Dockerfile, test.sh, solve.sh and all data/code files; found no credential exfiltration, no suspicious network calls, no obfuscation, and no prompt injection. All actions are directly in service of building, running, and verifying the dispatch tool."
+    },
+    "functional_verification": {
+      "outcome": "pass",
+      "explanation": "Tests execute the tool's reported JSON and recompute physical balances/costs numerically against an independent reference model (reference.py) — no string or keyword matching of source code anywhere in test_plans.py."
+    },
+    "deterministic_reproducible": {
+      "outcome": "pass",
+      "explanation": "I ran the solution's dispatch.py twice independently on the same day's data and the outputs were byte-identical; dependencies are pinned (numpy==2.3.4, scipy==1.17.0) identically in both environment/Dockerfile and tests/Dockerfile, and no live services are used."
+    },
+    "essential_difficulty": {
+      "outcome": "pass",
+      "explanation": "Failures of the broken tool (which I reproduced) stem from genuine physical-modeling errors (gas CV conversion inverted, weekday calc, weather UTC matching, missing heat-circuit dependency/outage logic, tower/condenser accounting) rather than output formatting; the output JSON schema itself is simple and unchanged from the starter code."
+    },
+    "test_instruction_alignment": {
+      "outcome": "pass",
+      "explanation": "Each test (balances, unit/connection limits, reported gas/cost/grid flags, reproducibility, least-cost bound) traces directly to a requirement stated in instruction.md, and no instruction requirement (meets demand, respects limits, correct billing figures, same plan every time, least-cost) lacks a corresponding test."
+    },
+    "novel": {
+      "outcome": "pass",
+      "explanation": "This is a custom synthetic hospital CHP plant with task-specific quirks (heat-circuit dependency chains, absorption-chiller cooling-water floor, maintenance-outage propagation) that is not a standard textbook exercise and cannot be solved by memorized algorithms alone."
+    },
+    "agentic": {
+      "outcome": "pass",
+      "explanation": "Solving requires reading multiple interdependent data/code files, running the tool, diagnosing numerical/physical inconsistencies across several planner modules, and iterating — this cannot be done in a single zero-shot generation."
+    },
+    "reviewable": {
+      "outcome": "pass",
+      "explanation": "Although the domain (CHP dispatch) is specialized, the README's difficulty/solution/verification explanations, together with inspectable solution and reference code, let a non-specialist reviewer verify correctness; I was able to confirm the claims by actually running the solution and test suite."
+    },
+    "instruction_concision": {
+      "outcome": "pass",
+      "explanation": "instruction.md uses absolute paths throughout (/app/data/..., /app/dispatch.py, /app/planner/), is clearly human-written, and describes only the desired end state and necessary domain context (data file contents) without hinting at the specific bugs or prescribing a fix procedure."
+    },
+    "effective_instruction_length": {
+      "outcome": "pass",
+      "explanation": "instruction.md is 411 words (per instruction_word_counts.py) with no referenced external requirement documents; the length is justified by the need to describe five distinct data files and the plant's physical layout, with no evident repetition or irrelevant detail."
+    },
+    "solution_quality": {
+      "outcome": "pass",
+      "explanation": "solve.sh copies the fixed planner/dispatch files into place and runs the real tool to produce a genuine, independently-verified least-cost plan (confirmed by my own run matching the reference MILP optimum almost exactly) rather than echoing a precomputed answer; larger files are kept in solution/app/ rather than inlined as heredocs."
+    },
+    "separate_verifier_configured": {
+      "outcome": "pass",
+      "explanation": "All verifier inputs are satisfied: the declared artifacts (dispatch.py, planner/) plus baked-in tests/days data and reference.py; tests/Dockerfile pre-installs all verifier tooling (numpy, scipy, pytest, pytest-json-ctrf) with no runtime installs in test.sh; environment/data and tests/days/visible are byte-identical, and numpy/scipy versions match exactly between environment/Dockerfile and tests/Dockerfile."
+    },
+    "environment_hygiene": {
+      "outcome": "pass",
+      "explanation": "environment/Dockerfile only copies data/planner/dispatch.py (no tests/solution leakage) and installs only numpy/scipy, which the tool itself needs at runtime; tests/Dockerfile owns all test-only dependencies (pytest, ctrf) and apt usage in environment/Dockerfile is properly updated/cleaned with unpinned apt packages."
+    },
+    "structured_data_schema": {
+      "outcome": "pass",
+      "explanation": "The plan.json output schema is the existing, unchanged structure already implemented in the starter dispatch.py/optimize.py, which the agent must preserve rather than invent — the schema is fully inspectable in the provided code rather than ambiguous."
+    },
+    "typos": {
+      "outcome": "pass",
+      "explanation": "Reviewed instruction.md, task.toml, README.md, and all Python/Dockerfile/data files; found no typos in filenames, paths, commands, or identifiers."
+    },
+    "difficulty_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The README's difficulty explanation concretely names the core physical-modeling pitfalls (mandatory engine heat destinations, maintenance-dependency propagation, absorption-chiller cooling-water floor), notes the data is synthetic but realistic, and identifies that this mirrors an energy-centre operations engineer's real work, without referencing any benchmark pass rates."
+    },
+    "solution_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The README's solution explanation accurately summarizes the actual fixes found in solution/app's diff (heat-destination enforcement, part-load segment handling, compressor/absorption auxiliary power in tower loads, kVA tangent constraints, gas CV and weekday/timezone fixes, DP over engine starts), consistent with the real solution files."
+    },
+    "verification_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The README's verification explanation concretely describes what is checked (balances, limits, billing figures, reproducibility, cost bound) and justifies its tolerances by stating an alternative-algorithm reference solution lands within £0.0003 of the optimum and that each of 27 incomplete fixes fails at least one test, consistent with the actual test_plans.py/reference.py content."
+    },
+    "category_and_tags": {
+      "outcome": "pass",
+      "explanation": "Category 'Operations' with subcategory 'Energy' accurately reflects the task's domain (energy-centre dispatch optimization), and tags (chp, trigeneration, unit-commitment, mixed-integer-programming, debugging) are specific and relevant rather than generic."
+    },
+    "task_name": {
+      "outcome": "pass",
+      "explanation": "'energy-centre-dispatch' is a concise, descriptive, three-word kebab-case slug that clearly conveys the task's subject matter."
+    },
+    "resource_configuration": {
+      "outcome": "pass",
+      "explanation": "Verifier timeout (1800s) comfortably covers 10 tool runs (≤150s each) plus 5 reference MILP solves (each under 1s in my testing); agent timeout (28800s/8h) matches the instruction's stated budget and TB3 guidance; cpus/memory were deliberately raised from defaults (2 cpu, 4GB) to support reliable scipy MILP solving rather than for artificial difficulty."
+    },
+    "task_readme": {
+      "outcome": "pass",
+      "explanation": "README.md contains all required sections (Difficulty, Solution, Verification explanations, Relevant experience) plus a task metadata summary, with no misleading content or unnecessary duplication of instruction/solution text."
+    },
+    "expert_time_estimate": {
+      "outcome": "pass",
+      "explanation": "The 4.0-hour estimate is non-default and plausible given the task's difficulty (several related but distinct physical-modeling bugs across a multi-file package) for an expert who already knows the general shape of the fix."
+    },
+    "task_toml_schema": {
+      "outcome": "pass",
+      "explanation": "task.toml contains only recognized fields (schema_version, artifacts, task.{name,description,authors}, metadata.{author_name,author_email,author_github,category,subcategory,tags,expert_time_estimate_hours,difficulty_explanation}, verifier.{timeout_sec,environment_mode}, agent.timeout_sec, environment.{build_timeout_sec,cpus,memory_mb,storage_mb,gpus}) with no invented fields."
+    },
+    "no_extraneous_files": {
+      "outcome": "pass",
+      "explanation": "Every file in the task directory is required: Dockerfiles, data, planner/dispatch code, solution files, and the tests package; there is no editor cruft, backups, or unused assets."
+    },
+    "artifact_efficiency": {
+      "outcome": "not_applicable",
+      "explanation": "The declared artifacts (dispatch.py and the small planner/ package) are themselves the agent's deliverable fix, not a large build-time-fixed tree or dependency directory, and no [[verifier.collect]] hooks are used."
+    },
+    "verifier_execution_isolation": {
+      "outcome": "pass",
+      "explanation": "test.sh locks /logs/verifier to root (chmod 700) before any agent code runs, executes the agent's dispatch.py as the unprivileged 'nobody' user via subprocess with a bounded timeout, sweeps and kills all nobody-owned processes afterward, and root alone derives the final reward from pytest's exit status after reading only the resulting JSON files (pytest never imports or executes agent code)."
+    },
+    "ctrf_reporting": {
+      "outcome": "pass",
+      "explanation": "test.sh runs pytest with `--ctrf /logs/verifier/ctrf.json`, giving per-test granularity for all discrete checks in test_plans.py."
+    },
+    "do_not_modify_enforced": {
+      "outcome": "pass",
+      "explanation": "The instruction's 'data files are correct and should not be modified' constraint is enforced via verifier isolation: artifacts only include dispatch.py and planner/, so any agent edits to /app/data never reach the verifier, which always supplies its own pristine per-day data copies (confirmed byte-identical to environment/data for the visible day)."
+    },
+    "binary_reward": {
+      "outcome": "pass",
+      "explanation": "test.sh writes exactly 0 or 1 to /logs/verifier/reward.txt based solely on the pytest exit code, with no intermediate scoring, weighting, or partial-credit logic anywhere in the verifier."
+    }
+  }
+}

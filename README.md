@@ -3,12 +3,20 @@
 One original Terminal-Bench 3 task, [`tasks/energy-centre-dispatch`](tasks/energy-centre-dispatch),
 with the scripts and tools used to build, check and run it.
 
-**Status, 2026-10-15.** The delivered task is v8.1 (`main`, `archive/energy-centre-dispatch-v8.1/`).
-After the assignment's reviewer's runs, four hardening versions were built (v9 to v12); Opus 5.5
-solved each of them, and `tasks/energy-centre-dispatch/` now holds v12.
-[`HARDENING.md`](HARDENING.md) sets out where things stand and the open question. The overview,
-table and configuration below describe v8.1; the v9 to v12 rounds are under "Trial results",
-"Failure analysis" and "How the task came about".
+**Status, 2026-10-20.** The task proposed for delivery is v19.
+`archive/energy-centre-dispatch-v19/` is v19 as trialled (task hash `05f58dca0b55b63f`).
+`tasks/energy-centre-dispatch/` adds one field, a `difficulty_explanation` in `task.toml`'s
+metadata, which no agent sees and the verifier does not use (`9a92bbace1766bde`). `main` still
+holds v8.1, the version the assignment's reviewer ran. After the reviewer's runs, eleven
+hardening versions were built (v9 to v19), and every candidate tried after v19 was rejected
+(`results/checks-v20/` to `checks-v23/`). [`HARDENING.md`](HARDENING.md) sets out the rounds.
+The agent sees v8.1's files byte for byte, except for the names of the two LT radiators in
+`plant.json`. v19 differs from v8.1 in its hidden days, its verifier and its solution. v19 was
+run in batches of three Opus and three GPT trials, and the second batch failed all six. Counting
+every v19 trial, Opus passed 2 of 8 and GPT 0 of 6 ("Trial results"). "Fairness of v19" gives
+the evidence that the hidden days ask nothing the visible files leave open. The overview, table
+and configuration below describe v8.1. The later rounds are under "Trial results", "Failure
+analysis" and "How the task came about".
 
 The agent repairs the day-ahead dispatch tool of a hospital trigeneration energy centre: two
 gas-engine CHP sets, two boilers, two electric chillers, an absorption chiller fired from the
@@ -117,6 +125,68 @@ demand and outages; every figure in the plan is recomputed with an independent p
 the plan's cost is compared with the optimum of a whole-day MILP. The difficulty is in how the
 plant couples electricity, heat and cooling, which no single formula or field shows.
 
+## Fairness of v19
+
+v19's hidden days test two judgements that the visible day does not: outages of parts of the
+plant, and cool weather in which the absorption chiller needs the header held at 22 °C. The
+files the agent sees settle both.
+
+- **Every outage names something in `plant.json`.** Each of the 23 outages on the hidden days
+  names a unit or an end of a heat circuit, spelt exactly as in `plant.json` (`GE1 intercooler`,
+  `EC1 condenser`, `AC1 generator`, `PHE1`, `LT radiator 1`, and so on). The instruction says
+  that `plant.json` "lists all of the plant and every connection of its heat circuits", and that
+  `status.json` holds the "planned outages of plant". What an outage takes out follows from the
+  circuits:
+  - an engine cannot run while its jacket water and exhaust heat recovery, its intercooler, or
+    the LT radiator at the end of its LT circuit is out;
+  - a chiller cannot run while its condenser is out, and the absorption chiller also not while
+    its generator is out;
+  - with `PHE1` out, the engines' HT heat can go only to the absorption chiller.
+
+  The shipped tool's docstring says that each output is "held for the whole half-hour", so an
+  outage takes out every half-hour it touches.
+- **Where the data leaves a reading open, both readings pass.** The least-cost bar takes the
+  stricter reading, and the balance checks accept the other. There are three such readings:
+  - whether AC1's auxiliary power counts in the towers' load;
+  - whether the PV array gives anything in a half-hour it is out for only part of;
+  - whether the header may be held warmer than it needs to be.
+
+  The task's README covers these under "Verification explanation".
+- **Readers with no history read the outages the same way.** Two models were given only the
+  instruction, `plant.json` and a status file. Both read outages of the renamed LT radiators as
+  the verifier does (`results/checks-v19/fairness-precheck/`).
+- **An outside audit found verifier defects, now fixed.** GPT Pro audited v17 and found three
+  defects in the verifier, none of which a trial had hit:
+  - a `KeyError` on two part names that `plant.json` lists;
+  - overlapping PV outages counted twice;
+  - a plan that holds the header warmer than it needs to be rejected.
+
+  v18 fixed all three. We reran the audit's checks and got the same results
+  (`results/checks-v18/`).
+- **CI's trajectory review finds no specification failure.** `task_specification` passes for every
+  trial: all 6 of v17, all 6 of v18 and all 14 of v19 (`results/analysis-v17/` to
+  `analysis-v19/`).
+  - For all 14 v19 trials, `reward_hacking`, `difficulty_crux`, `refusals` and `low_timeout`
+    pass as well.
+  - `near_miss` is flagged for 5 of them, the five that failed only on outages of parts and
+    passed 51 of 55 tests. The reviews themselves say that each misses a whole class of
+    outages, not a numeric threshold.
+
+  Every failed v19 trial failed on the header, the parts or both ("Failure analysis", v19).
+- **Both judgements are the trade's practice.**
+  - The absorption chiller's minimum cooling water temperature limits running, not starting. The
+    recommended way to hold it is the tower fans' variable speed and a bypass valve (BROAD,
+    [Control Sequence and Interface webinar](https://broadusa.com/broad/wp-content/uploads/2021/06/2.-Control-Sequence-and-Interface-Webinar-2021.pdf),
+    2021, slide 31).
+  - In availability reporting for combined-cycle and co-generation units, a component outage
+    that the plant downstream sees is charged to that plant as well (NERC GADS,
+    [Module 06, Derate Event Reporting](https://nerc.com/pa/RAPA/gads/GADSTraining/2025_Conventional_GADS_Training_Module_06_Derate_Event_Reporting.pdf),
+    slides 19 to 21).
+
+One caveat remains. The task was revised against its trials' failures from v4 on, and revising a
+task that way can select for traps rather than for difficulty ("How the task came about"). The
+checks above are the guard against that.
+
 ## Repository layout
 
 | path | contents |
@@ -219,6 +289,46 @@ local `jobs/` folder, with hashes; the trials are in `results/v8-trials/` to `re
   task, so the review ran with the default network.
 
 ## Trial results
+
+### v19
+
+Opus and GPT trials on the task files in `archive/energy-centre-dispatch-v19/`. Harbor's task
+checksum, `b4223eae…`, is the same in every trial. The first round stopped at an Opus pass, under
+the rule in force since v11 that any pass stops a round. The task was then run in batches of
+three Opus and three GPT trials, one batch after another, until a batch failed all six. The
+stopping rule was set before the first batch (`results/v19-batches/README.md`). Opus trials ran
+one at a time, and a batch's GPT trials ran alongside its Opus trials.
+
+| Round | Trial | Agent and model | Reward | Agent time | Tests not passed (of 55) |
+|---|---|---|---|---|---|
+| first | `ecd19-run1-claude` | claude-code 2.1.302, `anthropic/claude-opus-5-5` | 0 | 26.7 min | 18: no plan for h3; the connection exceeded on h1, h2 and h4; units run through outages on h1 and h2 |
+| first | `ecd19-run2-claude` | claude-code 2.1.302, `anthropic/claude-opus-5-5` | **1** | 105.4 min | none |
+| batch 1 | `ecd19-b1-run1-claude` | claude-code 2.1.304, `anthropic/claude-opus-5-5` | 0 | 33.9 min | 18: no plan for h3; the connection exceeded on h1, h2 and h4; units run through outages on h1 and h2 |
+| batch 1 | `ecd19-b1-run2-claude-r1` | claude-code 2.1.304, `anthropic/claude-opus-5-5` | 0 | 32.6 min | 4: units run through outages on h1 to h4 |
+| batch 1 | `ecd19-b1-run3-claude` | claude-code 2.1.304, `anthropic/claude-opus-5-5` | **1** | 80.6 min | none |
+| batch 1 | `ecd19-b1-run1-codex` | codex 0.163.0, `openai/gpt-6.1-sol` | 0 | 13.5 min | 4: units run through outages on h1 to h4 |
+| batch 1 | `ecd19-b1-run2-codex` | codex 0.163.0, `openai/gpt-6.1-sol` | 0 | 9.6 min | 4: units run through outages on h1 to h4 |
+| batch 1 | `ecd19-b1-run3-codex` | codex 0.163.0, `openai/gpt-6.1-sol` | 0 | 15.0 min | 44: no plan for any hidden day |
+| batch 2 | `ecd19-b2-run1-claude` | claude-code 2.1.304, `anthropic/claude-opus-5-5` | 0 | 104.3 min | 4: units run through outages on h1 to h4 |
+| batch 2 | `ecd19-b2-run2-claude` | claude-code 2.1.304, `anthropic/claude-opus-5-5` | 0 | 30.9 min | 4: units run through outages on h1 to h4 |
+| batch 2 | `ecd19-b2-run3-claude` | claude-code 2.1.304, `anthropic/claude-opus-5-5` | 0 | 20.2 min | 44: no plan for any hidden day |
+| batch 2 | `ecd19-b2-run1-codex` | codex 0.163.0, `openai/gpt-6.1-sol` | 0 | 11.5 min | 44: no plan for any hidden day |
+| batch 2 | `ecd19-b2-run2-codex` | codex 0.163.0, `openai/gpt-6.1-sol` | 0 | 12.5 min | 44: no plan for any hidden day |
+| batch 2 | `ecd19-b2-run3-codex` | codex 0.163.0, `openai/gpt-6.1-sol` | 0 | 12.3 min | 44: no plan for any hidden day |
+
+Counting every trial, Opus passed 2 of 8 and GPT 0 of 6. Batch 2 is a full round of three trials
+per model in which every trial failed.
+
+One attempt was not counted: in `ecd19-b1-run2-claude`, the container failed to install Claude
+Code (`NetworkConnectionError`), so the agent never started. That slot was run again.
+
+Details:
+- [`results/official-v19.md`](results/official-v19.md) and
+  [`results/official-v19-batches.md`](results/official-v19-batches.md): each tool on each day,
+  and each agent's closing message;
+- [`results/v19-trials/`](results/v19-trials/) and [`results/v19-batches/`](results/v19-batches/):
+  the deliverables and verifier output, and for the batches the stopping rule, the drivers and
+  their log.
 
 ### v12
 
@@ -357,6 +467,30 @@ one was repeated once):
 Details: [`results/cheat-v5.md`](results/cheat-v5.md).
 
 ## Failure analysis
+
+### v19
+
+Each failed trial failed on one or both of the two judgements that the hidden days test
+("Fairness of v19").
+
+- **The header, seven trials.** These are `ecd19-run1-claude`, `ecd19-b1-run1-claude`,
+  `ecd19-b2-run3-claude`, `ecd19-b1-run3-codex`, and `ecd19-b2-run1-codex` to `ecd19-b2-run3-codex`.
+  Each kept the shipped rule, which allows the absorption chiller only when the weather alone
+  gives water at 22 °C. In `ecd19-b2-run3-claude`'s words: "AC1 is only allowed when the towers'
+  natural leaving water is at least 22°C. Raising the tower setpoint to run AC1 on cooler days
+  (wet bulb below 18°C) isn't considered." The four GPT tools apply the same rule in their code.
+  On a cool night the engines' heat then has nowhere to go:
+  - five of the tools write no plan for any hidden day;
+  - the other two write none for h3, and their plans for h1, h2 and h4 exceed the connection limit.
+- **The parts, five trials.** These are `ecd19-b1-run2-claude-r1`, `ecd19-b2-run1-claude`,
+  `ecd19-b2-run2-claude`, `ecd19-b1-run1-codex` and `ecd19-b1-run2-codex`. Each held the header at
+  22 °C while AC1 runs. Each failed only the availability test, on all four hidden days: their
+  plans run units through outages of their parts.
+- **The two passes** held the header and took parts out with their units. Each gives a part's
+  outage to the unit whose id begins the part's name, and finds each engine's LT radiators
+  through its LT circuit. `ecd19-b1-run3-claude` came to the parts by hardening the tool's
+  inputs: "Unknown outage names: a misspelt unit was only warned about … That's now an error.
+  Names of heat-circuit ends such as "GE1 intercooler" now take their unit out."
 
 ### v12
 
