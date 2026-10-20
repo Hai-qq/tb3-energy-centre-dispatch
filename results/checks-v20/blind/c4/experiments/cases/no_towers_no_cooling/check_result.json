@@ -1,0 +1,72 @@
+{
+  "name": "no_towers_no_cooling",
+  "description": "LT radiators and building heat operate while both cooling-tower cells are unavailable.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 6669.710799999997,
+      "gas_kwh": 60496.79999999995,
+      "import_kwh": 16800.0,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 0.0,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 0.0,
+      "phe_kw": 1110.0,
+      "apparent_import_kva": 707.1067811865477,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.5467894990006243,
+    1.934722648999923
+  ],
+  "plan_sha256": "e25b1b14c2b358d286c7bb5baa9324cbe492b9a86f4938f175cbcf4dcf4abe7d",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6669.710800000001,
+    "lower_bound_gbp": 6669.7108,
+    "absolute_gap_gbp": 9.094947017729282e-13,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.03998060799949599,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6669.7108,
+        "incumbent_gbp": 6669.7108,
+        "candidate_gap_gbp": 9.094947017729282e-13,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 6669.710800000001,
+  "improvement_over_witness_gbp": 0.0,
+  "total_seconds": 3.5325075459995787
+}

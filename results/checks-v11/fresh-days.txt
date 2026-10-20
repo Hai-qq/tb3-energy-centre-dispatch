@@ -1,0 +1,11 @@
+the task's five days pass the input checks
+f1: 2026-02-09 Mon (h2 profile), running at midnight ['GE2'], outages CT1 13:10-14:10, CT2 15:40-18:30
+f2: 2026-03-01 Sun (h3 profile), running at midnight [], outages GE1 LT radiator 20:20-24:00, EC1 22:00-24:00, AC1 01:00-05:00, GE2 LT radiator 09:30-14:30
+f3: 2026-08-08 Sat (h1 profile), running at midnight ['GE2'], outages CT1 17:00-21:30, PHE1 13:00-16:50, GE1 LT radiator 21:20-24:00, EC1 20:20-24:00
+f4: 2026-08-06 Thu (h4 profile), running at midnight ['GE1'], outages B2 17:30-19:10
+f5: 2026-02-12 Thu (h2 profile), running at midnight ['GE1', 'GE2'], outages CT1 06:30-07:30, PV1 13:20-17:50, EC2 20:50-24:00
+f6: 2026-11-03 Tue (h3 profile), running at midnight ['GE1'], outages PV1 13:00-16:40, GE2 LT radiator 17:30-20:30
+f7: 2026-07-19 Sun (visible profile), running at midnight ['GE2'], outages GE1 21:40-24:00
+f8: 2026-08-27 Thu (h4 profile), running at midnight ['GE2'], outages PHE1 02:50-06:40, GE2 LT radiator 17:00-18:10, B2 08:20-12:40
+0/8 days failed  tasks/energy-centre-dispatch/solution/app  
+8/8 days failed  tasks/energy-centre-dispatch/environment  cooling_towers:f3,f8; electricity_balance:f3,f4,f5,f6,f7,f8; heat_balance:f1,f2,f3,f4,f5,f6,f7,f8; reported_gas_and_cost:f1,f2,f3,f4,f5,f6,f7,f8; units_within_ratings_and_availability:f2,f3,f4,f6,f7,f8

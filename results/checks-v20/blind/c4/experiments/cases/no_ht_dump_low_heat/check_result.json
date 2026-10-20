@@ -1,0 +1,72 @@
+{
+  "name": "no_ht_dump_low_heat",
+  "description": "Very low buildings heat requires all unused HT to flow to the absorption generator.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 6130.09612782322,
+      "gas_kwh": 68562.67586854464,
+      "import_kwh": 12643.624541711812,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 3.0020430585864233e-13,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2025.7028710725895,
+      "phe_kw": 75.0,
+      "apparent_import_kva": 527.0875543008744,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 48,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.590551580000465,
+    1.605999041999894
+  ],
+  "plan_sha256": "52dd3bad397396a5c48011a627abac049d720d5d99a8aa2d6e5abb612b6f4ec2",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6130.096127823221,
+    "lower_bound_gbp": 6130.096127823219,
+    "absolute_gap_gbp": 1.8189894035458565e-12,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.0696641720005573,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6130.096127823219,
+        "incumbent_gbp": 6130.09612782322,
+        "candidate_gap_gbp": 1.8189894035458565e-12,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 6868.93648,
+  "improvement_over_witness_gbp": 738.8403521767796,
+  "total_seconds": 3.277176112000234
+}

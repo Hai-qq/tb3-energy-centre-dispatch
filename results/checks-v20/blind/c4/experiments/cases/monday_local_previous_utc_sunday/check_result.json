@@ -1,0 +1,70 @@
+{
+  "name": "monday_local_previous_utc_sunday",
+  "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 6303.560319426554,
+      "gas_kwh": 64944.18583948503,
+      "import_kwh": 13775.407766201613,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 2.5579538487363607e-13,
+      "heat_kw": 1.1368683772161603e-13,
+      "cooling_kw": 2.2737367544323206e-13,
+      "cost_gbp": 0.0,
+      "gas_kwh": 2.2737367544323206e-13,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2849.070947368421,
+      "phe_kw": 583.6,
+      "apparent_import_kva": 985.4000415071423,
+      "condenser_entering_c": 24.6
+    },
+    "coverage": {
+      "interior_engine_loads": 3,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.3197085429992512,
+    1.237123820999841
+  ],
+  "plan_sha256": "6384045c2ed53c27a68378e8f7e1163513c3c176982028a0e8fd89e8a7d4a2ec",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6303.560319426553,
+    "lower_bound_gbp": 6303.560319426553,
+    "absolute_gap_gbp": 0.0,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.09624639400044543,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6303.560319426553,
+        "incumbent_gbp": 6303.560319426553,
+        "candidate_gap_gbp": 0.0,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "total_seconds": 2.6626130140002715
+}

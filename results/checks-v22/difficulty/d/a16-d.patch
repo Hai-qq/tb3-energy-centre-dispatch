@@ -1,0 +1,26 @@
+diff -ru results/v16-trials/ecd16-run2-claude/app/planner/plant.py <scratchpad>/v22-eval/a16-d/planner/plant.py
+--- results/v16-trials/ecd16-run2-claude/app/planner/plant.py	2026-10-17 01:51:43
++++ <scratchpad>/v22-eval/a16-d/planner/plant.py	2026-10-19 11:20:33
+@@ -12,7 +12,8 @@
+ import numpy as np
+ 
+ # The engines' heat streams in the part-load table and the ports they leave the engine by.
+-HEAT_STREAMS = {"ht_heat_kw": "jacket water and exhaust", "lt_heat_kw": "intercooler"}
++HEAT_STREAMS = {"jacket_water_heat_kw": "jacket water heat exchanger", "exhaust_heat_kw": "exhaust heat exchanger",
++                "lt_heat_kw": "intercooler"}  # format adaptation
+ 
+ 
+ @dataclass(frozen=True)
+@@ -167,7 +168,11 @@
+ 
+         def is_dump(endpoint: str) -> bool:
+             s = endpoint.lower()
+-            return "radiator" in s or "dump" in s
++            if "radiator" in s or "dump" in s:
++                return True
++            # format adaptation: an exchanger whose own circuit only goes to radiators is a dump outlet
++            nxt = [c for c in circuits.values() if endpoint in c.get("from", [])]
++            return bool(nxt) and all(is_dump(y) for c in nxt for y in c.get("to", []))
+ 
+         # the circuit connections of each unit (an outage of one takes the unit out), and for an
+         # engine also the radiators that take the heat it does not recover

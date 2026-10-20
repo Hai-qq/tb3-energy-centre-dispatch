@@ -1,0 +1,40 @@
+{
+  "test_connection_limits": {
+    "passed": true
+  },
+  "test_cooling_balance": {
+    "passed": true
+  },
+  "test_cooling_towers": {
+    "passed": true
+  },
+  "test_electricity_balance": {
+    "passed": true
+  },
+  "test_heat_balance": {
+    "passed": true
+  },
+  "test_least_cost": {
+    "passed": false,
+    "error": "AssertionError()"
+  },
+  "test_plan_covers_the_day": {
+    "passed": true
+  },
+  "test_reported_gas_and_cost": {
+    "passed": true
+  },
+  "test_reported_import_export_and_grid_flags": {
+    "passed": true
+  },
+  "test_units_within_ratings_and_availability": {
+    "passed": true
+  },
+  "cost_detail": {
+    "true_netted_cost": 4714.541455960673,
+    "directional_milp": 4671.769584601105,
+    "tolerance": 0.934353916920221,
+    "regret": 42.77187135956865
+  },
+  "note": "All original test functions except rerun executed directly; only Day.least_cost uses added direction binaries. No physical dispatch variable was adapted. Determinism not re-tested in this diagnostic."
+}

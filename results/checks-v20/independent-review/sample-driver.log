@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/haiy_qq/Desktop/工作/klavis/results/checks-v20/independent-review/remaining_review.py", line 80, in <module>
+    {'formal':formal,'sample':sample,'probe':probe}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/haiy_qq/Desktop/工作/klavis/results/checks-v20/independent-review/remaining_review.py", line 15, in sample
+    names=sorted(p.name for p in (src/'days').iterdir() if p.is_dir());assert len(names)==200
+                                                                              ^^^^^^^^^^^^^^^
+AssertionError

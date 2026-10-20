@@ -1,0 +1,135 @@
+{
+  "app": "results/v18-trials/ecd18-run3-claude/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6097.315414589223,
+      "delta_gbp": -23.342205488509535,
+      "failures": {
+        "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 118, in test_reported_import_export_and_grid_flags\n    assert ok[margin <= -0.5].all() and not ok[margin > 0.5].any()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n",
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6120.657620077733,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.5473261100000855,
+          "sha256": "5f6aa7ce5ee11d484849bbf2483b25f534a08bc8c685e0b3a36551365b55499c"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.2571070720000534,
+          "sha256": "5f6aa7ce5ee11d484849bbf2483b25f534a08bc8c685e0b3a36551365b55499c"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 7841.263395380141,
+      "delta_gbp": -789.66646903742,
+      "failures": {
+        "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 118, in test_reported_import_export_and_grid_flags\n    assert ok[margin <= -0.5].all() and not ok[margin > 0.5].any()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n",
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 8630.929864417561,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8154527070000768,
+          "sha256": "ed5b0bcf1073b7e60b08f0cda8ecaf5e30282c5c156bf8fcd4a02182976b5cf8"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9205259350001143,
+          "sha256": "ed5b0bcf1073b7e60b08f0cda8ecaf5e30282c5c156bf8fcd4a02182976b5cf8"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5032.918409266794,
+      "delta_gbp": -209.1096408103349,
+      "failures": {
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n",
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 5242.028050077129,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.3005056639999566,
+          "sha256": "88f7a9276d719b86b8e20ca62e03b45fb8f0ec4657b46841521695d9e6f89d67"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.4350550889998885,
+          "sha256": "88f7a9276d719b86b8e20ca62e03b45fb8f0ec4657b46841521695d9e6f89d67"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 6919.105328837999,
+      "delta_gbp": -14.87314872330262,
+      "failures": {
+        "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 118, in test_reported_import_export_and_grid_flags\n    assert ok[margin <= -0.5].all() and not ok[margin > 0.5].any()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n"
+      },
+      "milp_gbp": 6933.978477561302,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.9994626759998937,
+          "sha256": "6fc2a13632696532d1b4f367d99d2445bd1f8ad629f18d5f44f867332f30aabb"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.2629355720000603,
+          "sha256": "6fc2a13632696532d1b4f367d99d2445bd1f8ad629f18d5f44f867332f30aabb"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 5959.00325019005,
+      "delta_gbp": -2.8934612601005938e-05,
+      "failures": {
+        "test_connection_limits": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 93, in test_connection_limits\n    assert (np.hypot(imp, day.kvar - flows[\"engine_kvar\"]) <= day.import_kva + 0.5).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_import_export_and_grid_flags": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 118, in test_reported_import_export_and_grid_flags\n    assert ok[margin <= -0.5].all() and not ok[margin > 0.5].any()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n"
+      },
+      "milp_gbp": 5959.003279124662,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.5303717629999483,
+          "sha256": "091fd529a78a572dde5c844cb7a8a7270acf875157b9eb8fa36aeaa9ab906006"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.1330012339999485,
+          "sha256": "091fd529a78a572dde5c844cb7a8a7270acf875157b9eb8fa36aeaa9ab906006"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "4bca827f24d1c987983d93ad0af2aee324a5a71f593574be0786f306a9f09658",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "0846ac33bcdbcb64acb393e89185afeafab1ad038bb5cdbc14b9635d81750ab5",
+    "planner/optimize.py": "e2a343d78e4efcf2c1c41bfb2d5d596224f54efb8b6da4b0d4195eb914cf6783",
+    "planner/plant.py": "eb4a847c1bce313e84f995e0dc4a4199f2c71b0625471751365f00a04b1c79e1",
+    "planner/tariff.py": "66e9784c2e48adc3115de224028c938e6a13323cdd00029574163890c4aa807d"
+  }
+}

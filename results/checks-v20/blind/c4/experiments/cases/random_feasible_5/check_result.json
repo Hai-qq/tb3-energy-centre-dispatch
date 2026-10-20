@@ -1,0 +1,72 @@
+{
+  "name": "random_feasible_5",
+  "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 7,
+    "recomputed_summary": {
+      "cost_gbp": 6221.036979345197,
+      "gas_kwh": 93434.77535906127,
+      "import_kwh": 8065.01050446958,
+      "export_kwh": 151.83735695694713
+    },
+    "maximum_residuals": {
+      "electricity_kw": 4.334310688136611e-13,
+      "heat_kw": 7.105427357601002e-13,
+      "cooling_kw": 4.547473508864641e-13,
+      "cost_gbp": 2.842170943040401e-14,
+      "gas_kwh": 4.547473508864641e-13,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 3461.141755558025,
+      "phe_kw": 1672.0,
+      "apparent_import_kva": 1071.4423155185261,
+      "condenser_entering_c": 38.62761034429887
+    },
+    "coverage": {
+      "interior_engine_loads": 22,
+      "cold_absorber_periods": 30,
+      "curtailment_periods": 1,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 5,
+      "tower_binding_periods": 7,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    2.045261168000252,
+    2.9658684490004816
+  ],
+  "plan_sha256": "7ff7d4e57e92350373fb3063cbf7e7721ef17419017c3f15792c7d3edd434d86",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6221.036979345196,
+    "lower_bound_gbp": 6221.0369793451955,
+    "absolute_gap_gbp": 9.094947017729282e-13,
+    "tolerance_gbp": 0.0002,
+    "seconds": 1.0210450619997573,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 1120,
+    "binary_variables": 256,
+    "constraints": 1984,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6221.0369793451955,
+        "incumbent_gbp": 6221.0369793451955,
+        "candidate_gap_gbp": 9.094947017729282e-13,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 8274.385201095045,
+  "improvement_over_witness_gbp": 2053.3482217498486,
+  "total_seconds": 6.08431613600078
+}

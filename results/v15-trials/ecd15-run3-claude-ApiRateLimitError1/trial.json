@@ -1,0 +1,30 @@
+{
+ "job": "ecd15-run3-claude-ApiRateLimitError1",
+ "trial": "energy-centre-dispatch-v15__5sK2WiR",
+ "task": "terminal-bench/energy-centre-dispatch",
+ "task_files": "archive/energy-centre-dispatch-v15",
+ "task_hash": "d024446c9090f389",
+ "harbor_task_checksum": "aa2695e0ea33f76311183b1df8d0116ee3a7bcde14ef7a7d7f18df68c50b9406",
+ "agent": {
+  "name": "claude-code",
+  "version": "2.1.301",
+  "model": "anthropic/claude-opus-5-5",
+  "kwargs": {
+   "reasoning_effort": "max"
+  },
+  "env_from_config": []
+ },
+ "extra_instruction": false,
+ "agent_setup_timeout_multiplier": 5.0,
+ "started_at": "2026-10-16T09:27:26.228741Z",
+ "agent_started_at": "2026-10-16T09:28:17.140568Z",
+ "agent_finished_at": "2026-10-16T09:48:53.303979Z",
+ "agent_minutes": 20.6,
+ "tokens": {
+  "n_input_tokens": 2166936,
+  "n_cache_tokens": 2005193,
+  "n_output_tokens": 128944
+ },
+ "exception": "ApiRateLimitError",
+ "reward": 0.0
+}

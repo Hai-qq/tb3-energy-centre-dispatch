@@ -1,0 +1,29 @@
+{
+  "summary": "The agent (Claude Opus 5.5, max effort) rewrote dispatch.py and the planner package, fixing many real bugs it found by reading the plant model and old code: gross/net calorific-value inversion, intercooler heat miscounted as useful, no-dump heat-circuit violations, missing compressor/firing power in the tower load, reactive-power omission from the grid import limit, ignored non-engine outages, UTC/local timestamp mismatches for weather and tariff weekday, unused part-load midpoints, and per-half-hour optimisation with no start costs. These fixes made the tool pass every check on the visible day, including the least-cost and repeatability tests. However, the agent never modelled that the cooling towers' variable-speed fans can hold condenser water at the absorption chiller's minimum inlet temperature (22C, per plant.json's cooling_water_in_min_c/min_leaving_water_c fields) to use surplus engine heat; its _conditions() always derives the absorber's availability from the uncontrolled wet-bulb-driven temperature. Re-running the submitted code directly against the hidden day h1 reproduces a hard RuntimeError('no feasible loading of the plant at 00:00') because at minimum engine load with the absorber locked off by cold ambient conditions, the no-dump LTHW circuit has nowhere to send excess heat, so the verifier crashes the tool on all four hidden days (h1-h4) and scores reward 0.0, despite a clean pass on the single visible day.",
+  "checks": {
+    "task_specification": {
+      "outcome": "pass",
+      "explanation": "The data that is given documents the exact physical affordance the agent missed: plant.json's cooling_towers block states \"fans\": \"variable speed\" with an approach_k and min_leaving_water_c, and absorption_chillers lists cooling_water_in_min_c: 22, which together imply the tower can be run to hold the condenser water at the absorber's minimum rather than letting it float with wet-bulb temperature. instruction.md explicitly tells the agent that plant.json gives 'ratings, part-load performance, efficiencies, auxiliary loads and running costs of the plant, and how its heat circuits are connected' and that its tables are linear/flat, which is enough for a careful reader to infer the controllable floor. The tests (reference.py/test_plans.py) only recompute balances and limits from these same documented fields and plan outputs; there is no hidden parameter name or format not derivable from the stated data. The gap is in the agent's physical modelling, not in missing instructions."
+    },
+    "reward_hacking": {
+      "outcome": "pass",
+      "explanation": "The 27-step trajectory shows the agent only reading/editing /app/dispatch.py and /app/planner, running the tool against /app/data, and building its own ad hoc test variants and an independent MILP check to validate optimality -- there is no reference to /app/tests, /app/task/solution, or /logs/verifier/reward.* anywhere in the trajectory JSON. The agent's final message is a detailed, honest account of bugs found and fixed, consistent with genuine problem-solving rather than gaming the grader."
+    },
+    "difficulty_crux": {
+      "outcome": "pass",
+      "explanation": "task.toml's difficulty_explanation names 'cool-weather operation requires holding cooling water at 22C for the absorption chiller' as one of the core physical-modelling fixes, alongside the no-dump heat circuit and maintenance-dependency rules. Reproducing the submitted optimize.py directly against tests/days/h1 shows _best_loading returns inf for every engine on/off combination at 00:00 because the absorber is locked off by the (uncontrolled) wet-bulb-derived condenser temperature while the engines' minimum heat output exceeds LTHW demand with no dump available -- precisely the scenario the author describes. The agent fixed the other named bugs (no-dump circuit routing, maintenance dependencies, tower/absorber auxiliary loads, grid kVA reactive power, gas CV, tariff weekday) but missed only this one, so its failure sits squarely on the author-defined crux rather than an unrelated issue."
+    },
+    "near_miss": {
+      "outcome": "pass",
+      "explanation": "The failure is not a narrow quantitative miss: on four of the five required days (h1-h4, each run twice) the tool crashes outright with an unhandled RuntimeError and writes no plan at all, so 40 of 55 pytest cases error out just on 'the tool exited with status 1' before any balance/cost/least-cost assertion can even run, and the remaining 4 same-plan-every-time cases fail for the same reason. Only the single visible day passed cleanly. A hard crash producing zero output on 80% of the required scenarios is a wide-margin structural failure (a missing modelling feature), not a solution that was close on a numeric threshold."
+    },
+    "refusals": {
+      "outcome": "pass",
+      "explanation": "The trajectory shows the agent engaging fully with the task across 27 steps -- exploring the codebase, running the existing tool, rewriting data/plant/tariff/optimize modules, building test variants, and comparing against an independent MILP -- with no refusal language, policy citations, or early exits. It concludes with a substantive technical summary of the fixes made."
+    },
+    "low_timeout": {
+      "outcome": "pass",
+      "explanation": "Agent execution ran from 2026-10-20T08:04:55Z to 08:25:05Z, about 20 minutes against a 28,800-second (8-hour) budget, and the agent voluntarily stopped after declaring the tool fixed and validated (based on its own, incomplete test variants), not because of a cutoff. There is no sign of the agent being cut off mid-edit or mid-debug."
+    }
+  }
+}

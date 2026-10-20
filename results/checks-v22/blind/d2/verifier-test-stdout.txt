@@ -1,0 +1,551 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 0 warning: 00:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 121.3 kVA
+warning: 00:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 100.2 kVA
+warning: 01:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 123.3 kVA
+warning: 01:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 98.0 kVA
+warning: 02:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 90.3 kVA
+warning: 02:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 99.0 kVA
+warning: 03:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 83.8 kVA
+warning: 03:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 114.0 kVA
+warning: 04:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 80.3 kVA
+warning: 04:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 97.4 kVA
+warning: 05:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 104.7 kVA
+warning: 05:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 139.1 kVA
+warning: 21:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 323.0 kVA
+warning: 22:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 286.6 kVA
+warning: 22:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 218.4 kVA
+warning: 23:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 167.4 kVA
+warning: 23:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 134.7 kVA
+
+h1.rerun: tool exited 0 warning: 00:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 121.3 kVA
+warning: 00:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 100.2 kVA
+warning: 01:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 123.3 kVA
+warning: 01:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 98.0 kVA
+warning: 02:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 90.3 kVA
+warning: 02:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 99.0 kVA
+warning: 03:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 83.8 kVA
+warning: 03:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 114.0 kVA
+warning: 04:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 80.3 kVA
+warning: 04:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 97.4 kVA
+warning: 05:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 104.7 kVA
+warning: 05:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 139.1 kVA
+warning: 21:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 323.0 kVA
+warning: 22:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 286.6 kVA
+warning: 22:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 218.4 kVA
+warning: 23:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 167.4 kVA
+warning: 23:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 134.7 kVA
+
+h2: tool exited 0 warning: 00:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 12.7 kVA
+warning: 00:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 8.2 kVA
+
+h2.rerun: tool exited 0 warning: 00:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 12.7 kVA
+warning: 00:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 8.2 kVA
+
+h3: tool exited 1 Traceback (most recent call last):
+  File "/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/app/planner/optimize.py", line 353, in plan_day
+    raise RuntimeError(f"the demand at {h.start} cannot be met with the plant in service")
+RuntimeError: the demand at 13:30 cannot be met with the plant in service
+
+h3.rerun: tool exited 1 Traceback (most recent call last):
+  File "/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/app/planner/optimize.py", line 353, in plan_day
+    raise RuntimeError(f"the demand at {h.start} cannot be met with the plant in service")
+RuntimeError: the demand at 13:30 cannot be met with the plant in service
+
+h4: tool exited 0 warning: 00:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 218.3 kVA
+warning: 00:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 217.5 kVA
+warning: 01:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 203.6 kVA
+warning: 01:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 193.7 kVA
+warning: 02:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 198.7 kVA
+warning: 02:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 194.7 kVA
+warning: 03:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 172.7 kVA
+warning: 03:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 175.3 kVA
+warning: 04:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 183.3 kVA
+warning: 04:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 144.8 kVA
+warning: 06:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 312.6 kVA
+warning: 06:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 369.3 kVA
+warning: 07:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 424.3 kVA
+warning: 07:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 534.8 kVA
+warning: 22:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 361.1 kVA
+warning: 23:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 301.2 kVA
+warning: 23:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 228.3 kVA
+
+h4.rerun: tool exited 0 warning: 00:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 218.3 kVA
+warning: 00:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 217.5 kVA
+warning: 01:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 203.6 kVA
+warning: 01:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 193.7 kVA
+warning: 02:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 198.7 kVA
+warning: 02:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 194.7 kVA
+warning: 03:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 172.7 kVA
+warning: 03:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 175.3 kVA
+warning: 04:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 183.3 kVA
+warning: 04:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 144.8 kVA
+warning: 06:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 312.6 kVA
+warning: 06:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 369.3 kVA
+warning: 07:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 424.3 kVA
+warning: 07:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 534.8 kVA
+warning: 22:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 361.1 kVA
+warning: 23:00: the demand cannot be met within the connection's capacity; the plan exceeds it by 301.2 kVA
+warning: 23:30: the demand cannot be met within the connection's capacity; the plan exceeds it by 228.3 kVA
+
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 60 items
+
+test_plans.py .................F..F.......F....EEEEEEEEEEE......F..F.... [ 96%]
+F.                                                                       [100%]
+
+==================================== ERRORS ====================================
+________________ ERROR at setup of test_plan_covers_the_day[h3] ________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+_______ ERROR at setup of test_units_within_ratings_and_availability[h3] _______
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+________________ ERROR at setup of test_electricity_balance[h3] ________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+___________________ ERROR at setup of test_heat_balance[h3] ____________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+__________________ ERROR at setup of test_cooling_balance[h3] __________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+__________________ ERROR at setup of test_cooling_towers[h3] ___________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+_________________ ERROR at setup of test_connection_limits[h3] _________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+_______________ ERROR at setup of test_reported_gas_and_cost[h3] _______________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+_______ ERROR at setup of test_reported_import_export_and_grid_flags[h3] _______
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+____________________ ERROR at setup of test_least_cost[h3] _____________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+_________________ ERROR at setup of test_lt_heat_rejection[h3] _________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+=================================== FAILURES ===================================
+__________________________ test_connection_limits[h1] __________________________
+
+case = (<reference.Day object at 0xffff5cb07ed0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...1532.16056338,  392.7       ,    0.        ,
+          0.        ,    0.        ,    0.        ,    0.        ]), ...})
+
+    def test_connection_limits(case):
+        day, plan, flows = case
+        imp, exp = series(plan, "import_kw"), series(plan, "export_kw")
+        assert (imp >= -0.5).all() and (exp >= -0.5).all()
+>       assert (np.hypot(imp, day.kvar - flows["engine_kvar"]) <= day.import_kva + 0.5).all()
+E       AssertionError: assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff5c611e30>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff5c611e30> = array([1341.25788659, 1320.16640698, 1343.30674302, 1318.03883247,\n       1310.29404167, 1318.97762148, 1303.82525688,...02697,  283.78150648, 1205.36166411, 1543.00868854,\n       1506.64217977, 1438.43537692, 1387.43112103, 1354.67057156]) <= (1220.0 + 0.5).all
+E        +      where array([1341.25788659, 1320.16640698, 1343.30674302, 1318.03883247,\n       1310.29404167, 1318.97762148, 1303.82525688,...02697,  283.78150648, 1205.36166411, 1543.00868854,\n       1506.64217977, 1438.43537692, 1387.43112103, 1354.67057156]) = <ufunc 'hypot'>(array([1325.344, 1302.739, 1325.957, 1300.352, 1293.275, 1303.634,\n       1288.441, 1317.296, 1284.736, 1299.882, 1308..., 1127.967, 1028.24 ,    0.   ,    0.   ,    0.   ,\n       1201.31 , 1524.73 , 1488.626, 1421.419, 1371.66 , 1337.884]), (array([206. , 213.8, 215.2, 215.2, 210.5, 200.6, 199.7, 210.4, 200.3,\n       214.2, 209.6, 224.5, 224.4, 226.6, 235.8,...315.8, 315.6, 302.3,\n       303.8, 297.7, 264.4, 263.7, 253.2, 246.1, 231.7, 236.8, 232.3,\n       220.6, 208.6, 212.6]) - array([  0.        ,   0.        ,   0.        ,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.  ...545.61002697, 529.88150648, 132.95272054,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.        ])))
+E        +        where <ufunc 'hypot'> = np.hypot
+E        +        and   array([206. , 213.8, 215.2, 215.2, 210.5, 200.6, 199.7, 210.4, 200.3,\n       214.2, 209.6, 224.5, 224.4, 226.6, 235.8,...315.8, 315.6, 302.3,\n       303.8, 297.7, 264.4, 263.7, 253.2, 246.1, 231.7, 236.8, 232.3,\n       220.6, 208.6, 212.6]) = <reference.Day object at 0xffff5cb07ed0>.kvar
+E        +      and   1220.0 = <reference.Day object at 0xffff5cb07ed0>.import_kva
+
+test_plans.py:96: AssertionError
+_____________________________ test_least_cost[h1] ______________________________
+
+case = (<reference.Day object at 0xffff5cb07ed0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...1532.16056338,  392.7       ,    0.        ,
+          0.        ,    0.        ,    0.        ,    0.        ]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(6967.80479173007) <= (6159.09830750032 + 1.231819661500064)
+E        +  where np.float64(6967.80479173007) = <built-in method sum of numpy.ndarray object at 0xffff5c611ad0>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff5c611ad0> = array([ 98.81970285,  97.14219542,  98.79470703,  96.95105596,\n        96.56127887,  97.11743108,  96.21090966,  98.18...109.88716496, 107.33677473, 166.92444373, 181.29009773,\n       176.63355015, 168.53205971, 162.62810486, 158.55666548]).sum
+E        +  and   1.231819661500064 = max(0.5, (0.0002 * 6159.09830750032))
+
+test_plans.py:134: AssertionError
+__________________________ test_connection_limits[h2] __________________________
+
+case = (<reference.Day object at 0xffff5c664050>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...,
+       2072.6898 , 2045.763  , 1290.     , 1290.     , 1290.     ,
+       1290.     , 2032.24   , 2029.     ]), ...})
+
+    def test_connection_limits(case):
+        day, plan, flows = case
+        imp, exp = series(plan, "import_kw"), series(plan, "export_kw")
+        assert (imp >= -0.5).all() and (exp >= -0.5).all()
+>       assert (np.hypot(imp, day.kvar - flows["engine_kvar"]) <= day.import_kva + 0.5).all()
+E       AssertionError: assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff5c639110>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff5c639110> = array([1232.71266494, 1228.23219891, 1112.37887685,  783.33787677,\n        525.62653394,  380.09585845,  324.97615356,...88017,  416.25452358,  517.8854973 ,  479.78885605,\n        420.01932286,  386.22020322,  410.94631253,  487.25085462]) <= (1220.0 + 0.5).all
+E        +      where array([1232.71266494, 1228.23219891, 1112.37887685,  783.33787677,\n        525.62653394,  380.09585845,  324.97615356,...88017,  416.25452358,  517.8854973 ,  479.78885605,\n        420.01932286,  386.22020322,  410.94631253,  487.25085462]) = <ufunc 'hypot'>(array([1223.365, 1217.258, 1098.412,  756.518,  473.496,  287.161,\n          0.   ,    0.   ,    0.   ,    0.   ,    0...,  808.365,  714.249,    0.   ,    0.   ,    0.   ,\n        459.22 ,  418.229,  343.844,  294.033,    0.   ,  196.96 ]), (array([242.9, 230.6, 218.7, 191.2, 166.2, 145.4, 135.2, 128.5, 124.3,\n       131.5, 133.6, 138.5, 143.2, 147.6, 161.3,...200. , 192.1, 204. ,\n       191.3, 189.7, 179.4, 186.3, 175.8, 162.1, 155. , 159.3, 153.2,\n       144. , 160. , 211.7]) - array([394.42092621, 394.42092621, 394.42092621, 394.42092621,\n       394.42092621, 394.42092621, 460.17615356, 452.95...593.10488017, 578.35452358, 394.42092621, 394.42092621,\n       394.42092621, 394.42092621, 570.94631253, 657.36821036])))
+E        +        where <ufunc 'hypot'> = np.hypot
+E        +        and   array([242.9, 230.6, 218.7, 191.2, 166.2, 145.4, 135.2, 128.5, 124.3,\n       131.5, 133.6, 138.5, 143.2, 147.6, 161.3,...200. , 192.1, 204. ,\n       191.3, 189.7, 179.4, 186.3, 175.8, 162.1, 155. , 159.3, 153.2,\n       144. , 160. , 211.7]) = <reference.Day object at 0xffff5c664050>.kvar
+E        +      and   1220.0 = <reference.Day object at 0xffff5c664050>.import_kva
+
+test_plans.py:96: AssertionError
+__________________________ test_connection_limits[h4] __________________________
+
+case = (<reference.Day object at 0xffff5c665310>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...1610.26056338, 1592.06056338, 1556.76056338,
+       1527.86056338,    0.        ,    0.        ,    0.        ]), ...})
+
+    def test_connection_limits(case):
+        day, plan, flows = case
+        imp, exp = series(plan, "import_kw"), series(plan, "export_kw")
+        assert (imp >= -0.5).all() and (exp >= -0.5).all()
+>       assert (np.hypot(imp, day.kvar - flows["engine_kvar"]) <= day.import_kva + 0.5).all()
+E       AssertionError: assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff5c63b210>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff5c63b210> = array([1438.2860742 , 1437.47465863, 1423.64444375, 1413.70683854,\n       1418.72911484, 1414.73288471, 1392.72538568,...10279,  291.31230103,  293.7825569 ,  273.56835056,\n        272.67225555, 1581.0739177 , 1521.24274281, 1448.25827333]) <= (1220.0 + 0.5).all
+E        +      where array([1438.2860742 , 1437.47465863, 1423.64444375, 1413.70683854,\n       1418.72911484, 1414.73288471, 1392.72538568,...10279,  291.31230103,  293.7825569 ,  273.56835056,\n        272.67225555, 1581.0739177 , 1521.24274281, 1448.25827333]) = <ufunc 'hypot'>(array([1421.715, 1419.486, 1406.668, 1397.139, 1402.159, 1397.491,\n       1376.077, 1378.445, 1384.846, 1346.84 ,  935...,    0.   ,    0.   ,    0.   ,    0.   ,    0.   ,\n          0.   ,    0.   ,    0.   , 1562.829, 1503.169, 1430.516]), (array([217.7, 226.7, 219.2, 215.8, 216.2, 220.2, 214.7, 216. , 226.8,\n       220.5, 222.4, 226. , 240.3, 250.1, 260.1,...342.7, 330.4, 316.8,\n       305.8, 288.8, 297.5, 298. , 269.8, 276.1, 266. , 255.9, 239.6,\n       239.5, 233.8, 226. ]) - array([  0.        ,   0.        ,   0.        ,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.  ...589.83710279, 567.41230103, 559.7825569 , 529.46835056,\n       512.27225555,   0.        ,   0.        ,   0.        ])))
+E        +        where <ufunc 'hypot'> = np.hypot
+E        +        and   array([217.7, 226.7, 219.2, 215.8, 216.2, 220.2, 214.7, 216. , 226.8,\n       220.5, 222.4, 226. , 240.3, 250.1, 260.1,...342.7, 330.4, 316.8,\n       305.8, 288.8, 297.5, 298. , 269.8, 276.1, 266. , 255.9, 239.6,\n       239.5, 233.8, 226. ]) = <reference.Day object at 0xffff5c665310>.kvar
+E        +      and   1220.0 = <reference.Day object at 0xffff5c665310>.import_kva
+
+test_plans.py:96: AssertionError
+_____________________________ test_least_cost[h4] ______________________________
+
+case = (<reference.Day object at 0xffff5c665310>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...1610.26056338, 1592.06056338, 1556.76056338,
+       1527.86056338,    0.        ,    0.        ,    0.        ]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(6688.545029429222) <= (6155.441911000718 + 1.2310883822001437)
+E        +  where np.float64(6688.545029429222) = <built-in method sum of numpy.ndarray object at 0xffff5c612010>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff5c612010> = array([105.48612506, 105.30348428, 104.72666659, 103.79278437,\n       104.30979973, 103.83629889, 102.1832909 , 102.60...117.05861523, 113.42241845, 112.18525028, 107.26978121,\n       104.48142277, 185.09779855, 177.92121855, 169.38938535]).sum
+E        +  and   1.2310883822001437 = max(0.5, (0.0002 * 6155.441911000718))
+
+test_plans.py:134: AssertionError
+________________________ test_same_plan_every_time[h3] _________________________
+
+name = 'h3'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+>       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:29: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_units_within_ratings_and_availability[visible]
+PASSED test_plans.py::test_electricity_balance[visible]
+PASSED test_plans.py::test_heat_balance[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_gas_and_cost[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_lt_heat_rejection[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h1]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h1]
+PASSED test_plans.py::test_electricity_balance[h1]
+PASSED test_plans.py::test_heat_balance[h1]
+PASSED test_plans.py::test_cooling_balance[h1]
+PASSED test_plans.py::test_cooling_towers[h1]
+PASSED test_plans.py::test_reported_gas_and_cost[h1]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h1]
+PASSED test_plans.py::test_lt_heat_rejection[h1]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_heat_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_reported_gas_and_cost[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_least_cost[h2]
+PASSED test_plans.py::test_lt_heat_rejection[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h4]
+PASSED test_plans.py::test_electricity_balance[h4]
+PASSED test_plans.py::test_heat_balance[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_reported_gas_and_cost[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_lt_heat_rejection[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h1]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+ERROR test_plans.py::test_plan_covers_the_day[h3] - AssertionError: h3: the t...
+ERROR test_plans.py::test_units_within_ratings_and_availability[h3] - Asserti...
+ERROR test_plans.py::test_electricity_balance[h3] - AssertionError: h3: the t...
+ERROR test_plans.py::test_heat_balance[h3] - AssertionError: h3: the tool exi...
+ERROR test_plans.py::test_cooling_balance[h3] - AssertionError: h3: the tool ...
+ERROR test_plans.py::test_cooling_towers[h3] - AssertionError: h3: the tool e...
+ERROR test_plans.py::test_connection_limits[h3] - AssertionError: h3: the too...
+ERROR test_plans.py::test_reported_gas_and_cost[h3] - AssertionError: h3: the...
+ERROR test_plans.py::test_reported_import_export_and_grid_flags[h3] - Asserti...
+ERROR test_plans.py::test_least_cost[h3] - AssertionError: h3: the tool exite...
+ERROR test_plans.py::test_lt_heat_rejection[h3] - AssertionError: h3: the too...
+FAILED test_plans.py::test_connection_limits[h1] - AssertionError: assert np....
+FAILED test_plans.py::test_least_cost[h1] - assert np.float64(6967.8047917300...
+FAILED test_plans.py::test_connection_limits[h2] - AssertionError: assert np....
+FAILED test_plans.py::test_connection_limits[h4] - AssertionError: assert np....
+FAILED test_plans.py::test_least_cost[h4] - assert np.float64(6688.5450294292...
+FAILED test_plans.py::test_same_plan_every_time[h3] - AssertionError: h3: the...
+=================== 6 failed, 43 passed, 11 errors in 1.23s ====================

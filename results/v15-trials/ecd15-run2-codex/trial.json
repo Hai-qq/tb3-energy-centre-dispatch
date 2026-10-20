@@ -1,0 +1,30 @@
+{
+ "job": "ecd15-run2-codex",
+ "trial": "energy-centre-dispatch-v15__uPauHAe",
+ "task": "terminal-bench/energy-centre-dispatch",
+ "task_files": "archive/energy-centre-dispatch-v15",
+ "task_hash": "d024446c9090f389",
+ "harbor_task_checksum": "aa2695e0ea33f76311183b1df8d0116ee3a7bcde14ef7a7d7f18df68c50b9406",
+ "agent": {
+  "name": "codex",
+  "version": "0.163.0",
+  "model": "openai/gpt-6.1-sol",
+  "kwargs": {
+   "reasoning_effort": "xhigh"
+  },
+  "env_from_config": []
+ },
+ "extra_instruction": false,
+ "agent_setup_timeout_multiplier": 5.0,
+ "started_at": "2026-10-16T13:50:35.094466Z",
+ "agent_started_at": "2026-10-16T13:51:15.115962Z",
+ "agent_finished_at": "2026-10-16T14:08:35.134431Z",
+ "agent_minutes": 17.3,
+ "tokens": {
+  "n_input_tokens": 1045222,
+  "n_cache_tokens": 971264,
+  "n_output_tokens": 40220
+ },
+ "exception": null,
+ "reward": 1.0
+}

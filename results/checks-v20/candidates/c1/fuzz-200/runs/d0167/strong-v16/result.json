@@ -1,0 +1,21 @@
+{
+  "bad_availability_periods": [],
+  "command": [
+    "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+    "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+    "--data",
+    "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0167",
+    "--output",
+    "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0167/strong-v16/plan.json"
+  ],
+  "cost_gbp": 6789.406301024172,
+  "delta_gbp": 14.003686557529363,
+  "failures": {
+    "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  },
+  "milp_gbp": 6775.402614466642,
+  "passed": false,
+  "returncode": 0,
+  "seconds": 2.10569105400009,
+  "simultaneous_periods": 0
+}

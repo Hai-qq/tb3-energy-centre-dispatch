@@ -1,0 +1,27 @@
+[
+  {
+    "id": "q02",
+    "peak_kw": 2380,
+    "night_cooling_kw": 190,
+    "night_heat_kw": 1800,
+    "site_q_per_p": 0.1,
+    "reference_cost": 8620.34634275042,
+    "returncode": 0,
+    "violations": [
+      {
+        "period": "00:00",
+        "excess_kva": 9.373251328066317,
+        "net_kvar": -151.52092621463575,
+        "import_kw": 1220.0
+      },
+      {
+        "period": "00:30",
+        "excess_kva": 8.232198906143822,
+        "net_kvar": -163.82092621463576,
+        "import_kw": 1217.258
+      }
+    ],
+    "mutant_cost": 8616.771093577503,
+    "max_excess_kva": 9.373251328066317
+  }
+]

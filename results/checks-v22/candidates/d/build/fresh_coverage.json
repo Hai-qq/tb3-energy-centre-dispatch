@@ -1,0 +1,83 @@
+{
+  "accepted_days": 16,
+  "draws": 31,
+  "seed": 2026,
+  "weekends": 4,
+  "outages": {
+    "exhaust": [
+      {
+        "day": "f1-draw-0002",
+        "unit": "GE2 exhaust heat exchanger",
+        "from": "15:40",
+        "to": "18:30"
+      },
+      {
+        "day": "f15-draw-0025",
+        "unit": "GE1 exhaust heat exchanger",
+        "from": "08:20",
+        "to": "13:30"
+      }
+    ],
+    "jacket": [
+      {
+        "day": "f1-draw-0002",
+        "unit": "GE2 jacket water heat exchanger",
+        "from": "13:10",
+        "to": "14:10"
+      },
+      {
+        "day": "f10-draw-0015",
+        "unit": "GE1 jacket water heat exchanger",
+        "from": "18:10",
+        "to": "22:40"
+      },
+      {
+        "day": "f11-draw-0020",
+        "unit": "GE2 jacket water heat exchanger",
+        "from": "11:10",
+        "to": "12:50"
+      },
+      {
+        "day": "f12-draw-0022",
+        "unit": "GE1 jacket water heat exchanger",
+        "from": "20:20",
+        "to": "24:00"
+      }
+    ],
+    "phe": [
+      {
+        "day": "f3-draw-0005",
+        "unit": "LT PHE 2",
+        "from": "12:20",
+        "to": "15:00"
+      },
+      {
+        "day": "f15-draw-0025",
+        "unit": "LT PHE 1",
+        "from": "13:20",
+        "to": "15:10"
+      }
+    ],
+    "radiator": [
+      {
+        "day": "f2-draw-0003",
+        "unit": "LT radiator 1",
+        "from": "22:00",
+        "to": "24:00"
+      },
+      {
+        "day": "f7-draw-0011",
+        "unit": "LT radiator 2",
+        "from": "21:10",
+        "to": "24:00"
+      },
+      {
+        "day": "f16-draw-0031",
+        "unit": "LT radiator 1",
+        "from": "17:00",
+        "to": "19:30"
+      }
+    ]
+  },
+  "all_candidate_plants": true
+}

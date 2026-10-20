@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+    "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/finalize.py"
+  ],
+  "eval_energy_direct_exit_code": 0,
+  "energy_mutants_no_arguments_exit_code": 0,
+  "mutants_caught": 41,
+  "mutants_total": 41,
+  "git_status": " M tasks/energy-centre-dispatch/tests/reference.py\n?? results/checks-v18/independent-review/\n",
+  "tracked_changes": [
+    "tasks/energy-centre-dispatch/tests/reference.py"
+  ],
+  "task_tree_differences": [
+    "tests/reference.py"
+  ],
+  "tests_days_hashes_match_initial": true,
+  "reference_exactly_one_threshold_and_comment_replacement": true,
+  "bytecode_directories_in_task_and_new_results": [],
+  "head": "cefe1e3671729a3517bdb38c603d4f95cf89a88e",
+  "branch": "v18-gptpro"
+}

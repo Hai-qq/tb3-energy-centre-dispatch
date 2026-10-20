@@ -1,0 +1,60 @@
+$ git status --porcelain --untracked-files=all
+ M tasks/energy-centre-dispatch/environment/data/plant.json
+ M tasks/energy-centre-dispatch/solution/app/planner/optimize.py
+ M tasks/energy-centre-dispatch/solution/app/planner/plant.py
+ M tasks/energy-centre-dispatch/tests/days/h1/plant.json
+ M tasks/energy-centre-dispatch/tests/days/h2/plant.json
+ M tasks/energy-centre-dispatch/tests/days/h2/status.json
+ M tasks/energy-centre-dispatch/tests/days/h3/plant.json
+ M tasks/energy-centre-dispatch/tests/days/h3/status.json
+ M tasks/energy-centre-dispatch/tests/days/h4/plant.json
+ M tasks/energy-centre-dispatch/tests/days/h4/status.json
+ M tasks/energy-centre-dispatch/tests/days/visible/plant.json
+ M tasks/energy-centre-dispatch/tests/reference.py
+ M tools/build_energy_days.py
+ M tools/energy_mutants.py
+ M tools/fresh_days.py
+?? results/checks-v19/build/A-prime.json
+?? results/checks-v19/build/README.md
+?? results/checks-v19/build/availability-violations.json
+?? results/checks-v19/build/baseline-snapshot.json
+?? results/checks-v19/build/canonical-deliveries.json
+?? results/checks-v19/build/canonical-eval.command.json
+?? results/checks-v19/build/canonical-eval.log
+?? results/checks-v19/build/canonical-mutants.command.json
+?? results/checks-v19/build/canonical-mutants.log
+?? results/checks-v19/build/canonical-runner.log
+?? results/checks-v19/build/deliveries-runner.log
+?? results/checks-v19/build/existing-caches.json
+?? results/checks-v19/build/final-checks.log
+?? results/checks-v19/build/final-integrity.json
+?? results/checks-v19/build/fresh-2026.command.json
+?? results/checks-v19/build/fresh-2026.log
+?? results/checks-v19/build/fresh-2026.manifest.json
+?? results/checks-v19/build/fresh-2403.command.json
+?? results/checks-v19/build/fresh-2403.log
+?? results/checks-v19/build/fresh-2403.manifest.json
+?? results/checks-v19/build/fresh-87123.command.json
+?? results/checks-v19/build/fresh-87123.log
+?? results/checks-v19/build/fresh-87123.manifest.json
+?? results/checks-v19/build/fresh-runner.log
+?? results/checks-v19/build/fresh-summary-runner.log
+?? results/checks-v19/build/fresh-summary.json
+?? results/checks-v19/build/gates.json
+?? results/checks-v19/build/matrix-runner.log
+?? results/checks-v19/build/matrix.json
+?? results/checks-v19/build/mutants-runner.log
+?? results/checks-v19/build/mutants.json
+?? results/checks-v19/build/mutants.md
+?? results/checks-v19/build/oracle-costs.json
+?? results/checks-v19/build/oracle-pytest.log
+?? results/checks-v19/build/plant-v8.1.diff
+?? results/checks-v19/build/report.log
+?? results/checks-v19/build/report.py
+?? results/checks-v19/build/runtime.json
+?? results/checks-v19/build/topology-probe.json
+?? results/checks-v19/build/v18-comparison.json
+?? results/checks-v19/build/v18-invariance.json
+?? results/checks-v19/build/verify.py
+$ git diff -- tasks/energy-centre-dispatch/instruction.md tasks/energy-centre-dispatch/environment/planner tasks/energy-centre-dispatch/environment/dispatch.py
+$ git diff --check

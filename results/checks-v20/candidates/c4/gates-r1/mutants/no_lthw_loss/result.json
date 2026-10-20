@@ -1,0 +1,113 @@
+{
+  "app": "results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/planner/optimize.py\", line 219, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/planner/optimize.py\", line 219, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 2.786128180000105
+        },
+        {
+          "returncode": 1,
+          "seconds": 2.1017073289999644
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 9019.457979807474,
+      "delta_gbp": -88.21791639299227,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 9107.675896200466,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.210971083000004,
+          "sha256": "c952a3e6212a348ee59030655172a9d16bc59640752d7de21c9b193a73b35c01"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.6972813219999807,
+          "sha256": "c952a3e6212a348ee59030655172a9d16bc59640752d7de21c9b193a73b35c01"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5366.854860488187,
+      "delta_gbp": -8.683179981097055,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.3035676479998983,
+          "sha256": "e89c94a3c6af063c28e7fa50c19b8530b2bd13375db11ecf9f1b31012e9defe6"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.1139107670001067,
+          "sha256": "e89c94a3c6af063c28e7fa50c19b8530b2bd13375db11ecf9f1b31012e9defe6"
+        }
+      ]
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/planner/optimize.py\", line 219, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/gates-r1/mutant_apps/no_lthw_loss/planner/optimize.py\", line 219, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 2.5527489699998114
+        },
+        {
+          "returncode": 1,
+          "seconds": 2.5106878569999935
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6292.648755287801,
+      "delta_gbp": -10.91156413875251,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.520974009999918,
+          "sha256": "d1145755f9a572568338a5ad9b744fed3b76e383a2bbe61f7d02d286932546d3"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.1032211220003774,
+          "sha256": "d1145755f9a572568338a5ad9b744fed3b76e383a2bbe61f7d02d286932546d3"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "c701b339504d4aef548bceacc9ef1542f1fac0bcb957cadd2a9b07032a30af8d",
+    "planner/plant.py": "fe12a7f73a161eadcc9bd32dd5fcc65bacb71ad95b50ff08c1cf07ccf5a72206",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

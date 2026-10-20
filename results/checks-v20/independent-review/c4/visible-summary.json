@@ -1,0 +1,19 @@
+{
+  "instruction_identical": true,
+  "fields": [
+    {
+      "path": "data/plant.json/heat_exchangers",
+      "before": null,
+      "after": [
+        {
+          "id": "PHE1",
+          "primary_circuit": "engine_ht",
+          "secondary_circuit": "lthw",
+          "primary_maximum_water_flow_kg_per_s": 20.0,
+          "water_specific_heat_kj_per_kg_k": 4.18
+        }
+      ]
+    }
+  ],
+  "environment_file_count": 12
+}

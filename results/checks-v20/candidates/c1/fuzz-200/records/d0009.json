@@ -1,0 +1,85 @@
+{
+  "apps": {
+    "blind": {
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c1/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0009",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0009/blind/plan.json"
+      ],
+      "failures": {
+        "execution_or_flow": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 127, in run_one\n    raise RuntimeError(f\"exit {proc.returncode}: {proc.stderr[-1500:]}\")\nRuntimeError: exit 2: dispatch: unknown outage unit: EC1 condenser\n\n"
+      },
+      "passed": false,
+      "returncode": 2,
+      "seconds": 0.4965808510005445
+    },
+    "oracle": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/solution/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0009",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0009/oracle/plan.json"
+      ],
+      "cost_gbp": 7013.5577889573515,
+      "delta_gbp": 0.00037659998088201974,
+      "failures": {},
+      "milp_gbp": 7013.557412357371,
+      "passed": true,
+      "returncode": 0,
+      "seconds": 3.177427421000175,
+      "simultaneous_periods": 0
+    },
+    "strong-v16": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0009",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0009/strong-v16/plan.json"
+      ],
+      "cost_gbp": 7020.082348969554,
+      "delta_gbp": 6.52493661218341,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 7013.557412357371,
+      "passed": false,
+      "returncode": 0,
+      "seconds": 2.7058322049997514,
+      "simultaneous_periods": 0
+    },
+    "strong-v19": {
+      "bad_availability_periods": [],
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0009",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0009/strong-v19/plan.json"
+      ],
+      "cost_gbp": 7023.067058379169,
+      "delta_gbp": 9.50964602179829,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 101, in test_reported_gas_and_cost\n    assert np.allclose(cost, flows[\"cost\"], rtol=0.002, atol=0.05)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_single_connection_direction": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/fuzz_v20.py\", line 137, in run_one\n    func((day,plan,flows))\n    ~~~~^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/test_plans.py\", line 137, in test_single_connection_direction\n    assert (np.minimum(imp, exp) <= 0.5).all(), \"one steady operating point cannot import and export simultaneously\"\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError: one steady operating point cannot import and export simultaneously\n"
+      },
+      "milp_gbp": 7013.557412357371,
+      "passed": false,
+      "returncode": 0,
+      "seconds": 2.029434513000524,
+      "simultaneous_periods": 14
+    }
+  },
+  "id": "d0009",
+  "season": "winter"
+}

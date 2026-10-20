@@ -1,0 +1,167 @@
+{
+  "task": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch",
+  "app": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app",
+  "exit_code": 1,
+  "tests": 55,
+  "passed": 51,
+  "failures": {
+    "test_units_within_ratings_and_availability[h1]": {
+      "kind": "failure",
+      "message": "assert np.False_\n +  where np.False_ = <built-in method all of numpy.ndarray object at 0x107115710>()\n +    where <built-in method all of numpy.ndarray object at 0x107115710> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True, False,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all",
+      "text": "case = (<reference.Day object at 0x1070f9590>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 8...568 , 45.49568 , 45.458192, 45.817452,\n       46.015826, 46.303234, 46.678114, 47.007696, 45.9458  , 43.9372  ]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x107115710>()\nE        +    where <built-in method all of numpy.ndarray object at 0x107115710> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True, False,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:54: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h2]": {
+      "kind": "failure",
+      "message": "assert np.False_\n +  where np.False_ = <built-in method all of numpy.ndarray object at 0x1072dac70>()\n +    where <built-in method all of numpy.ndarray object at 0x1072dac70> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\\n       False, False,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all",
+      "text": "case = (<reference.Day object at 0x1070f9950>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 1...    , 56.      , 56.      , 56.      ,\n       24.      , 24.      , 24.      , 24.      , 56.      , 58.51482 ]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x1072dac70>()\nE        +    where <built-in method all of numpy.ndarray object at 0x1072dac70> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\\n       False, False,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:54: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h3]": {
+      "kind": "failure",
+      "message": "assert np.False_\n +  where np.False_ = <built-in method all of numpy.ndarray object at 0x1071d54d0>()\n +    where <built-in method all of numpy.ndarray object at 0x1071d54d0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True, False,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all",
+      "text": "case = (<reference.Day object at 0x1070fa0d0>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 1...8144, 67.332244, 66.78935 , 67.204072,\n       66.0056  , 35.317688, 35.331746, 35.714436, 36.567288, 36.42046 ]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x1071d54d0>()\nE        +    where <built-in method all of numpy.ndarray object at 0x1071d54d0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True,  True,  True, False,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:54: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h4]": {
+      "kind": "failure",
+      "message": "assert np.False_\n +  where np.False_ = <built-in method all of numpy.ndarray object at 0x1072100f0>()\n +    where <built-in method all of numpy.ndarray object at 0x1072100f0> = array([ True,  True,  True,  True,  True,  True,  True,  True, False,\\n       False, False, False,  True,  True,  True,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all",
+      "text": "case = (<reference.Day object at 0x1070faad0>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 0...6742, 45.048948, 44.920864, 44.59753 ,\n       44.881814, 45.4332  , 45.884618, 46.626568, 46.90929 , 47.118598]), ...})\n\n    def test_units_within_ratings_and_availability(case):\n        _, _, flows = case\n>       assert flows[\"running_ok\"].all()\nE       assert np.False_\nE        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x1072100f0>()\nE        +    where <built-in method all of numpy.ndarray object at 0x1072100f0> = array([ True,  True,  True,  True,  True,  True,  True,  True, False,\\n       False, False, False,  True,  True,  True,... True,  True,  True,\\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\\n        True,  True,  True]).all\n\ntest_plans.py:54: AssertionError"
+    }
+  },
+  "execution_errors": {},
+  "calls": [
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/visible",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/visible.json"
+      ],
+      "seconds": 0.44267291692085564,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/visible",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/visible.rerun.json"
+      ],
+      "seconds": 0.46237462502904236,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h1",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h1.json"
+      ],
+      "seconds": 0.5320281249005347,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h1",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h1.rerun.json"
+      ],
+      "seconds": 0.531893374864012,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h2",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h2.json"
+      ],
+      "seconds": 0.6069894169922918,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h2",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h2.rerun.json"
+      ],
+      "seconds": 0.6101738328579813,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h3",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h3.json"
+      ],
+      "seconds": 0.6826070831157267,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h3",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h3.rerun.json"
+      ],
+      "seconds": 0.6720859999768436,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h4",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h4.json"
+      ],
+      "seconds": 0.54927241592668,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run2-claude/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h4",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/plans/h4.rerun.json"
+      ],
+      "seconds": 0.5414622910320759,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpyuzb9dgq/report.xml",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py"
+      ],
+      "seconds": 1.0452354999724776,
+      "exit_code": 1
+    }
+  ],
+  "artifacts": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/runs/before/eval-v17-run2-claude"
+}

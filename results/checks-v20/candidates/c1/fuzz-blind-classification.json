@@ -1,0 +1,1475 @@
+{
+  "accepted_days": 200,
+  "passed_days": 91,
+  "failed_days": 109,
+  "all_failures_are_old_component_name_rejection": true,
+  "all_output_plans_pass_new_grid_direction_rule": true,
+  "unknown_name_day_counts": {
+    "GE1 jacket water and exhaust": 19,
+    "AC1 absorber and condenser": 17,
+    "GE1 intercooler": 15,
+    "EC1 condenser": 16,
+    "GE2 intercooler": 19,
+    "GE2 jacket water and exhaust": 20,
+    "AC1 generator": 16,
+    "EC2 condenser": 21
+  },
+  "min_signed_delta_gbp": -20.577533182157822,
+  "max_signed_delta_gbp": 0.002639397246639419,
+  "direction_failure_count": 0,
+  "rows": [
+    {
+      "id": "d0001",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.00032406801346951397
+    },
+    {
+      "id": "d0004",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -9.094947017729282e-13
+    },
+    {
+      "id": "d0005",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0006",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0008",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0009",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0010",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 1.8189894035458565e-12
+    },
+    {
+      "id": "d0012",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0014",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust",
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0016",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0017",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0018",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0020",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0021",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0006831155296822544
+    },
+    {
+      "id": "d0022",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0024",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "AC1 generator"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0025",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0026",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0028",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -0.19123986369595514
+    },
+    {
+      "id": "d0029",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0030",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0031",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0001490349723098916
+    },
+    {
+      "id": "d0032",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0033",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0034",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0035",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0036",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0037",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0038",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0039",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0040",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0042",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0044",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0045",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0046",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0048",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0049",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0015689189840486506
+    },
+    {
+      "id": "d0050",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0052",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -9.094947017729282e-13
+    },
+    {
+      "id": "d0054",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0056",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0057",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0058",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0060",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0061",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0062",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 6.366462912410498e-12
+    },
+    {
+      "id": "d0064",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0066",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0068",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0069",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0070",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 1.8189894035458565e-12
+    },
+    {
+      "id": "d0072",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "EC1 condenser",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0073",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0003719128617376555
+    },
+    {
+      "id": "d0074",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0076",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0078",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0080",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0082",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 4.547473508864641e-12
+    },
+    {
+      "id": "d0083",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -20.577533182157822
+    },
+    {
+      "id": "d0084",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0085",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0086",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0088",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0089",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0090",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0092",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0093",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0094",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0096",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0098",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0099",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0100",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0101",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0102",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0103",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -8.998559150461006
+    },
+    {
+      "id": "d0105",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0106",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 1.0913936421275139e-11
+    },
+    {
+      "id": "d0108",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0109",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0110",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0112",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -1.6915015139175011
+    },
+    {
+      "id": "d0113",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0002912498412115383
+    },
+    {
+      "id": "d0114",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0115",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -6.134906023965414
+    },
+    {
+      "id": "d0116",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0118",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0120",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0121",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0122",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0124",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0126",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0128",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0129",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0130",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0132",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0133",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.226380461768713e-05
+    },
+    {
+      "id": "d0134",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0135",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser",
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0136",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0137",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0138",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0140",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0141",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0142",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0144",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0145",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.00016867786234797677
+    },
+    {
+      "id": "d0146",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0148",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0150",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0152",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0153",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0154",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 1.8189894035458565e-12
+    },
+    {
+      "id": "d0155",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0156",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0157",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.641860742704011e-06
+    },
+    {
+      "id": "d0158",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0159",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0160",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0161",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0162",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0163",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0164",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0166",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0167",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -12.407885222846744
+    },
+    {
+      "id": "d0168",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0169",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0170",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0172",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0173",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0174",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0177",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0178",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 1.000444171950221e-11
+    },
+    {
+      "id": "d0179",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0180",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.002471290094035794
+    },
+    {
+      "id": "d0181",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0182",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0184",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0185",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0187",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0189",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0190",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0192",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "AC1 generator"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0193",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0007430714458678267
+    },
+    {
+      "id": "d0194",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0196",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0197",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -9.094947017729282e-13
+    },
+    {
+      "id": "d0198",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0199",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.00026403488027426647
+    },
+    {
+      "id": "d0202",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0203",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0204",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0205",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0206",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0208",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0210",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0212",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0213",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0214",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0216",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0217",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0218",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0220",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 9.094947017729282e-13
+    },
+    {
+      "id": "d0221",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator",
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0222",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0225",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.00012572063860716298
+    },
+    {
+      "id": "d0226",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0227",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0228",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -1.4578504188957595
+    },
+    {
+      "id": "d0229",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.002639397246639419
+    },
+    {
+      "id": "d0232",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0233",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0234",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser",
+        "AC1 generator",
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0236",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0237",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0007786107953506871
+    },
+    {
+      "id": "d0238",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0240",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser",
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0241",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 8.226220506912796e-05
+    },
+    {
+      "id": "d0242",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC1 condenser",
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0244",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0246",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0248",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser",
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0250",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0252",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0253",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 8.110508042591391e-05
+    },
+    {
+      "id": "d0254",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 absorber and condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0256",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0257",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.00023211304960568668
+    },
+    {
+      "id": "d0258",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0260",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 2.7284841053187847e-12
+    },
+    {
+      "id": "d0262",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 2.091837814077735e-11
+    },
+    {
+      "id": "d0264",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "EC2 condenser"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0265",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0266",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE1 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0268",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 intercooler"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0269",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "GE2 jacket water and exhaust"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0270",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": -9.094947017729282e-13
+    },
+    {
+      "id": "d0272",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0274",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 0.0
+    },
+    {
+      "id": "d0276",
+      "passed": false,
+      "unknown_port_names_in_input": [
+        "AC1 generator"
+      ],
+      "delta_gbp": null
+    },
+    {
+      "id": "d0277",
+      "passed": true,
+      "unknown_port_names_in_input": [],
+      "delta_gbp": 4.335187895776471e-05
+    }
+  ],
+  "interpretation": "Whole-task failures do not satisfy the new-difficulty prompt gate: the blind implementation modeled direction correctly. Negative cost differences within accepted physical checks are not losses."
+}

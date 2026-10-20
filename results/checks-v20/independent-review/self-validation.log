@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/haiy_qq/Desktop/工作/klavis/results/checks-v20/independent-review/final_validate.py", line 51, in <module>
+    check('no_repository_pycache',not cache,cache)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haiy_qq/Desktop/工作/klavis/results/checks-v20/independent-review/final_validate.py", line 6, in check
+    checks[name]={'pass':bool(value),'detail':detail};assert value,(name,detail)
+                                                             ^^^^^
+AssertionError: ('no_repository_pycache', ['jobs/ecd19-oracle/energy-centre-dispatch-v19__EFNJ8z3/artifacts/app/planner/__pycache__', 'jobs/ecd17-run2-codex/energy-centre-dispatch-v17__K6NXJSg/artifacts/app/planner/__pycache__', 'jobs/ecd18-run3-codex/energy-centre-dispatch-v18__kQcd7rp/artifacts/app/planner/__pycache__', 'jobs/ecd18-run1-codex/energy-centre-dispatch-v18__ns8Uob3/artifacts/app/planner/__pycache__', 'jobs/ecd18-run1-claude/energy-centre-dispatch-v18__iKEwnVA/artifacts/app/planner/__pycache__', 'jobs/ecd17-run1-codex/energy-centre-dispatch-v17__A4qVNiw/artifacts/app/planner/__pycache__', 'jobs/ecd17-run3-codex/energy-centre-dispatch-v17__NrJUaae/artifacts/app/planner/__pycache__', 'jobs/ecd18-run2-codex/energy-centre-dispatch-v18__ZU8gkYy/artifacts/app/planner/__pycache__', 'jobs/ecd17-run1-claude/energy-centre-dispatch-v17__ZWTqkVF/artifacts/app/planner/__pycache__', 'jobs/ecd18-oracle/energy-centre-dispatch-v18__9YJCQU6/artifacts/app/planner/__pycache__'])

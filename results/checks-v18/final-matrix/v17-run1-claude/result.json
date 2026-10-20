@@ -1,0 +1,105 @@
+{
+  "app": "results/v17-trials/ecd17-run1-claude/app",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: EC1 condenser\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: EC1 condenser\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.8753550940000423
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.921608118000222
+        }
+      ]
+    },
+    "h2": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.9873106720006035
+        },
+        {
+          "returncode": 1,
+          "seconds": 1.9094159959986428
+        }
+      ]
+    },
+    "h3": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 1.4515143200005696
+        },
+        {
+          "returncode": 1,
+          "seconds": 1.12493933100086
+        }
+      ]
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 61, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py\", line 259, in plan_day\n    raise ValueError(f\"outage of unknown plant: {', '.join(sorted(unknown))}\")\nValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 1.0249028999987786
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.8274773769990134
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.9393143030010833,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.297597847000361,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "72af8431b788a9c67f1d1509bd7e0a161de0f6a641d54a5ef23569ca76a63417",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "6d16a3a1bac999fdb9e0a1abe59de90678497c3310931c38f12a25a44531f857",
+    "planner/optimize.py": "769b0218a2c7dbdfe700a1ba23a969888456eb766cc76f1e7771e8f2189ffd6f",
+    "planner/plant.py": "d9cbad4f2eb645b1db0ed372021fd04549fd6aef0b42c4919b26a4ed6ef4e18e",
+    "planner/tariff.py": "4ed3cf9d28998621c8ba3562dc0594e02b621a7e129b7ecc51d9cf058bd900de"
+  }
+}

@@ -1,0 +1,5 @@
+grid_direction_ignored CAUGHT {"errors": {}, "failed": {"test_reported_gas_and_cost": ["h1"], "test_single_connection_direction": ["h1"]}}
+lt_pump_outage_ignored CAUGHT {"errors": {}, "failed": {"test_units_within_ratings_and_availability": ["h1", "h3"], "test_lt_pump_outages": ["h1", "h3"]}}
+shared_gas_limit_ignored CAUGHT {"errors": {}, "failed": {"test_shared_gas_entry": ["h2"]}}
+phe_flow_limit_ignored CAUGHT {"errors": {}, "failed": {"test_phe_primary_water_flow": ["h2"]}}
+lt_capacity_ignored CAUGHT {"errors": {}, "failed": {"test_lt_heat_rejection": ["h2", "h3"]}}

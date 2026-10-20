@@ -1,0 +1,214 @@
+{
+  "all_rules_have_hidden_pressure": true,
+  "phe_outage": {
+    "day": "h1",
+    "original_window": [
+      "18:10",
+      "19:20"
+    ],
+    "new_window": [
+      "20:10",
+      "21:20"
+    ],
+    "baseline_plan": "h1-before-phe.json",
+    "baseline_GE1_kwe": {
+      "20:00": 1200,
+      "20:30": 1200,
+      "21:00": 1200
+    },
+    "overlap_with_other_GE1_outages": false,
+    "final_GE1_kwe": {
+      "20:00": 0.0,
+      "20:30": 0.0,
+      "21:00": 0.0
+    }
+  },
+  "rules": {
+    "W": [
+      {
+        "mutant": "grid_direction_ignored",
+        "caught_on_hidden_days": {
+          "test_reported_gas_and_cost": [
+            "h1"
+          ],
+          "test_single_connection_direction": [
+            "h1"
+          ]
+        },
+        "execution_errors": {}
+      }
+    ],
+    "P": [
+      {
+        "mutant": "lt_pump_outage_ignored",
+        "caught_on_hidden_days": {
+          "test_units_within_ratings_and_availability": [
+            "h1",
+            "h3"
+          ],
+          "test_lt_pump_outages": [
+            "h1",
+            "h3"
+          ]
+        },
+        "execution_errors": {}
+      }
+    ],
+    "C2": [
+      {
+        "mutant": "shared_gas_limit_ignored",
+        "caught_on_hidden_days": {
+          "test_shared_gas_entry": [
+            "h2"
+          ]
+        },
+        "execution_errors": {}
+      },
+      {
+        "mutant": "shared_gas_only_engines",
+        "caught_on_hidden_days": {
+          "test_shared_gas_entry": [
+            "h2"
+          ]
+        },
+        "execution_errors": {}
+      }
+    ],
+    "C4": [
+      {
+        "mutant": "phe_flow_limit_ignored",
+        "caught_on_hidden_days": {
+          "test_phe_primary_water_flow": [
+            "h2"
+          ]
+        },
+        "execution_errors": {}
+      },
+      {
+        "mutant": "phe_counts_all_engine_ht",
+        "caught_on_hidden_days": {
+          "test_least_cost": [
+            "h2",
+            "h3"
+          ]
+        },
+        "execution_errors": {}
+      }
+    ],
+    "S": [
+      {
+        "mutant": "lt_capacity_ignored",
+        "caught_on_hidden_days": {
+          "test_lt_heat_rejection": [
+            "h2",
+            "h3"
+          ]
+        },
+        "execution_errors": {}
+      },
+      {
+        "mutant": "lt_capacity_ignores_outages",
+        "caught_on_hidden_days": {
+          "test_lt_heat_rejection": [
+            "h2",
+            "h3"
+          ]
+        },
+        "execution_errors": {}
+      },
+      {
+        "mutant": "lt_radiator_outage_stops_engines",
+        "caught_on_hidden_days": {
+          "test_plan_covers_the_day": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_units_within_ratings_and_availability": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_electricity_balance": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_heat_balance": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_cooling_balance": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_cooling_towers": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_connection_limits": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_reported_gas_and_cost": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_reported_import_export_and_grid_flags": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_least_cost": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_single_connection_direction": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_lt_pump_outages": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_shared_gas_entry": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_phe_primary_water_flow": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_lt_heat_rejection": [
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "test_same_plan_every_time": [
+            "h2",
+            "h3",
+            "h4"
+          ]
+        },
+        "execution_errors": {
+          "h2": "exit 1: RuntimeError: no plan meets the demand within the limits",
+          "h2.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits",
+          "h3": "exit 1: RuntimeError: no plan meets the demand within the limits",
+          "h3.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits",
+          "h4": "exit 1: RuntimeError: no plan meets the demand within the limits",
+          "h4.rerun": "exit 1: RuntimeError: no plan meets the demand within the limits"
+        }
+      }
+    ]
+  }
+}

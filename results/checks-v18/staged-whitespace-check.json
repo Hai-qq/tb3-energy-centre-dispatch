@@ -1,0 +1,26 @@
+{
+  "staged_check_exit": 2,
+  "source_documentation_check_exit": 2,
+  "explanation": "The complete staged check exits2 for original stdout spaces, unified-patch context, two CRLF fixture CSVs, and one frozen blind-source blank line. Their bytes are retained. Task, tools, authored documentation and other Python files pass the scoped check; the blind runtime is intentionally not edited after evaluation.",
+  "retained_evidence_paths": [
+    "results/checks-v18/baseline-blind.log",
+    "results/checks-v18/baseline-fresh-2026.log",
+    "results/checks-v18/baseline-fresh-2403.log",
+    "results/checks-v18/baseline-fresh-87123.log",
+    "results/checks-v18/baseline-mutants.log",
+    "results/checks-v18/baseline.log",
+    "results/checks-v18/blind/app/planner/plant.py",
+    "results/checks-v18/fairness/fixtures/acceptance_interval/demand.csv",
+    "results/checks-v18/fairness/fixtures/acceptance_interval/weather.csv",
+    "results/checks-v18/final-fresh-87123.log",
+    "results/checks-v18/final-fresh-verified-2026.log",
+    "results/checks-v18/final-fresh-verified-2403.log",
+    "results/checks-v18/final-fresh-verified-87123.log",
+    "results/checks-v18/final-matrix.log",
+    "results/checks-v18/final-mutants.log",
+    "results/checks-v18/nondeterministic-mutant-recheck.log",
+    "results/checks-v18/opponents/ecd17-run2-claude-parts.patch",
+    "results/checks-v18/targeted-mutants.log"
+  ],
+  "authored_source_and_documentation_except_frozen_blind_exit": 0
+}

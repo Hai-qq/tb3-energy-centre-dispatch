@@ -1,0 +1,676 @@
+{
+  "candidates": {
+    "c1": {
+      "gates": {
+        "B_five_days_and_milp_0.001": true,
+        "C_all_mutants_caught": true,
+        "E_two_old_strong_fail": true,
+        "F_seven_old_failed_still_fail": true
+      },
+      "oracle_max_abs_delta_gbp": 0.00018111916324414779,
+      "apps": {
+        "oracle": {
+          "passed": true,
+          "failed_days": [],
+          "max_seconds": 2.994437483999718
+        },
+        "strong-v16-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h4"
+          ],
+          "max_seconds": 2.6347323830000278
+        },
+        "strong-v19-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.4370790480002142
+        },
+        "v18-run1-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 1.4957408870000108
+        },
+        "v18-run1-codex": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 4.133334528999967
+        },
+        "v18-run2-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 0.6923655470000085
+        },
+        "v18-run2-codex": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.0689601120002408
+        },
+        "v18-run3-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.5473261100000855
+        },
+        "v18-run3-codex": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.9772676170000523
+        },
+        "v19-run1-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.080188340999939
+        },
+        "blind": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.3964623519996167
+        }
+      },
+      "mutants_caught": 43,
+      "mutants_total": 43
+    },
+    "c2": {
+      "gates": {
+        "B_five_days_and_milp_0.001": true,
+        "C_all_mutants_caught": true,
+        "E_two_old_strong_fail": true,
+        "F_seven_old_failed_still_fail": true
+      },
+      "oracle_max_abs_delta_gbp": 0.0002768520544123021,
+      "apps": {
+        "oracle": {
+          "passed": true,
+          "failed_days": [],
+          "max_seconds": 2.9814583769998535
+        },
+        "strong-v16-claude": {
+          "passed": false,
+          "failed_days": [
+            "h2"
+          ],
+          "max_seconds": 3.3344973200000823
+        },
+        "strong-v19-claude": {
+          "passed": false,
+          "failed_days": [
+            "h2"
+          ],
+          "max_seconds": 2.106375122999907
+        },
+        "v18-run1-claude": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.042527783999958
+        },
+        "v18-run1-codex": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 1.95008722700004
+        },
+        "v18-run2-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 0.8013863750002201
+        },
+        "v18-run2-codex": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 1.1256051899999875
+        },
+        "v18-run3-claude": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.5520660080001107
+        },
+        "v18-run3-codex": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.1265518930003964
+        },
+        "v19-run1-claude": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.479282473999774
+        },
+        "blind": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 1.6869433359997856
+        }
+      },
+      "mutants_caught": 44,
+      "mutants_total": 44
+    },
+    "c4": {
+      "gates": {
+        "B_five_days_and_milp_0.001": true,
+        "C_all_mutants_caught": true,
+        "E_two_old_strong_fail": true,
+        "F_seven_old_failed_still_fail": true
+      },
+      "oracle_max_abs_delta_gbp": 0.0002768520544123021,
+      "apps": {
+        "oracle": {
+          "passed": true,
+          "failed_days": [],
+          "max_seconds": 2.6788368160000573
+        },
+        "strong-v16-claude": {
+          "passed": false,
+          "failed_days": [
+            "h2"
+          ],
+          "max_seconds": 2.509850429999915
+        },
+        "strong-v19-claude": {
+          "passed": false,
+          "failed_days": [
+            "h2"
+          ],
+          "max_seconds": 1.8833857150002586
+        },
+        "v18-run1-claude": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 1.9750482859999465
+        },
+        "v18-run1-codex": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.950917917999959
+        },
+        "v18-run2-claude": {
+          "passed": false,
+          "failed_days": [
+            "visible",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 0.6752065670002594
+        },
+        "v18-run2-codex": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 3.357350158999907
+        },
+        "v18-run3-claude": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 3.2607502229998317
+        },
+        "v18-run3-codex": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 1.9558167609998236
+        },
+        "v19-run1-claude": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.234377819999736
+        },
+        "blind": {
+          "passed": false,
+          "failed_days": [
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "max_seconds": 2.3101970919997257
+        }
+      },
+      "mutants_caught": 44,
+      "mutants_total": 44
+    }
+  },
+  "fuzz": {
+    "accepted": 200,
+    "apps": {
+      "blind": {
+        "failed_days": 109,
+        "failure_tests": {
+          "execution_or_flow": 109
+        },
+        "max_abs_delta_gbp": 20.577533182157822,
+        "max_seconds": 6.237893394000821,
+        "passed_days": 91
+      },
+      "oracle": {
+        "failed_days": 0,
+        "failure_tests": {},
+        "max_abs_delta_gbp": 0.0004891965163551504,
+        "max_seconds": 5.684199125000305,
+        "passed_days": 200
+      },
+      "strong-v16": {
+        "failed_days": 83,
+        "failure_tests": {
+          "test_least_cost": 83
+        },
+        "max_abs_delta_gbp": 57.58646381154631,
+        "max_seconds": 4.557266060999609,
+        "passed_days": 117
+      },
+      "strong-v19": {
+        "failed_days": 200,
+        "failure_tests": {
+          "test_least_cost": 113,
+          "test_reported_gas_and_cost": 200,
+          "test_single_connection_direction": 200
+        },
+        "max_abs_delta_gbp": 57.64249091799229,
+        "max_seconds": 3.4287425289994644,
+        "passed_days": 0
+      }
+    },
+    "draws": 277,
+    "inputs_and_apps_unchanged": true,
+    "maintenance_coverage": {
+      "AC1": 43,
+      "AC1 absorber and condenser": 17,
+      "AC1 generator": 16,
+      "B1": 26,
+      "B2": 20,
+      "CT1": 19,
+      "CT2": 25,
+      "EC1": 37,
+      "EC1 condenser": 16,
+      "EC2": 28,
+      "EC2 condenser": 21,
+      "GE1": 18,
+      "GE1 intercooler": 15,
+      "GE1 jacket water and exhaust": 19,
+      "GE2": 39,
+      "GE2 intercooler": 19,
+      "GE2 jacket water and exhaust": 20,
+      "LT radiator 1": 11,
+      "LT radiator 2": 20,
+      "PHE1": 12,
+      "PV1": 12
+    },
+    "previous_app_records_and_raw_runs_unchanged": true,
+    "seasons": {
+      "autumn": 64,
+      "spring": 66,
+      "summer": 17,
+      "winter": 53
+    }
+  },
+  "fresh": {
+    "2026": {
+      "days": 16,
+      "results": {
+        "results/checks-v20/candidates/c1/task/solution/app": {
+          "errors": {},
+          "failed": {}
+        }
+      },
+      "inputs_unchanged": true
+    },
+    "2403": {
+      "days": 16,
+      "results": {
+        "results/checks-v20/candidates/c1/task/solution/app": {
+          "errors": {},
+          "failed": {}
+        }
+      },
+      "inputs_unchanged": true
+    },
+    "87123": {
+      "days": 16,
+      "results": {
+        "results/checks-v20/candidates/c1/task/solution/app": {
+          "errors": {},
+          "failed": {}
+        }
+      },
+      "inputs_unchanged": true
+    }
+  },
+  "fresh_by_candidate": {
+    "c1": {
+      "2026": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c1/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      },
+      "2403": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c1/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      },
+      "87123": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c1/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      }
+    },
+    "c2": {
+      "2026": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c2/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      },
+      "2403": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c2/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      },
+      "87123": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c2/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      }
+    },
+    "c4": {
+      "2026": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c4/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      },
+      "2403": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c4/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      },
+      "87123": {
+        "days": 16,
+        "completed": true,
+        "passed": true,
+        "results": {
+          "results/checks-v20/candidates/c4/task/solution/app": {
+            "errors": {},
+            "failed": {}
+          }
+        },
+        "inputs_unchanged": true
+      }
+    }
+  },
+  "precheck_decisions": {
+    "scope": "Five candidate investigations; three completed triple prechecks. These are isolated substitutes, not formal Opus/GPT trials.",
+    "promoted_candidate": null,
+    "canonical_task_changed": false,
+    "overall_decision": "No qualifying v20 from these candidates. Retain v19 canonical task and deliver reproducible rejected candidates and evidence.",
+    "candidates": {
+      "c1": {
+        "mechanism": "Single steady grid direction under buy-below-sell tariffs",
+        "fairness_readers": 2,
+        "fairness_result": "converged on steady half-hour interpretation",
+        "prompt_precheck_completed": true,
+        "blind_new_requirement_correct": true,
+        "blind_whole_task_passed": false,
+        "blind_old_failure": "Rejects eight pre-existing named heat-route ports; h1-h4 exit before plans",
+        "two_strong_semantic_failures": true,
+        "format_adaptation_lines": 0,
+        "three_prechecks_completed": true,
+        "eligible": false,
+        "decision": "reject: frozen best implementation solved the new requirement",
+        "evidence": [
+          "BLIND_C1_REVIEW.md",
+          "../candidates/c1/blind-eval/matrix.json",
+          "../candidates/c1/fuzz-200/summary.json"
+        ]
+      },
+      "c2": {
+        "mechanism": "Shared 550 standard m3/h gas entry at 39.6 MJ/standard m3 gross CV",
+        "fairness_readers": 2,
+        "fairness_result": "converged on 6050 gross kW total including engines and boilers",
+        "prompt_precheck_completed": true,
+        "blind_new_requirement_correct": true,
+        "blind_whole_task_passed": false,
+        "blind_old_failure": "h1-h4 reject pre-existing named heat-route ports; hidden gas assertions did not run",
+        "new_rule_binding_evidence": "48 frozen selftest periods binding at 550; external replay of that frozen day passes all tests",
+        "two_strong_semantic_failures": true,
+        "format_adaptation_lines": 0,
+        "three_prechecks_completed": true,
+        "eligible": false,
+        "decision": "reject: frozen best implementation solved the new requirement",
+        "evidence": [
+          "BLIND_C2_REVIEW.md",
+          "../candidates/c2/blind-eval/matrix.json",
+          "../candidates/c2/frozen-binding-audit-r1/result.json"
+        ]
+      },
+      "c3": {
+        "mechanism": "Local chiller feeder apparent-power rating",
+        "fairness_readers": 0,
+        "fairness_result": "not prechecked; rating needs unambiguous continuous-limit semantics",
+        "prompt_precheck_completed": false,
+        "blind_new_requirement_correct": null,
+        "blind_whole_task_passed": null,
+        "two_strong_semantic_failures": null,
+        "three_prechecks_completed": false,
+        "eligible": false,
+        "decision": "screened only: original 400 kVA three-chiller proposal nonbinding, smaller variants infeasible or nonbinding; single-EC1 variants need full prechecks",
+        "evidence": [
+          "../limit-probes/results.json",
+          "../remaining-screens/results.json"
+        ]
+      },
+      "c4": {
+        "mechanism": "PHE1 primary flow 20 kg/s at stated 90/70 C and cp=4.18",
+        "fairness_readers": 2,
+        "fairness_result": "conditional convergence: requires the stated temperatures to be fixed model operating conditions, not freely variable nominal design values",
+        "prompt_precheck_completed": true,
+        "blind_new_requirement_correct": true,
+        "blind_whole_task_passed": false,
+        "blind_old_failure": "h1-h4 run equipment whose pre-existing named ports are out; only availability assertion fails",
+        "new_rule_binding_evidence": "External h2 has 27 binding PHE periods; frozen selftests exercise HT above 1672 with correct AC heat subtraction",
+        "two_strong_semantic_failures": true,
+        "format_adaptation_lines": 0,
+        "three_prechecks_completed": true,
+        "eligible": false,
+        "decision": "reject: frozen best implementation solved the new requirement; fairness temperature caveat independently remains",
+        "evidence": [
+          "BLIND_C4_REVIEW.md",
+          "../candidates/c4/blind-eval/matrix.json",
+          "../candidates/c4/blind-new-rule.json"
+        ]
+      },
+      "c5": {
+        "mechanism": "Parallel independently isolatable GE1 LT rejection branches",
+        "fairness_readers": 0,
+        "fairness_result": "not prechecked; exact NHS topology primary-source gap",
+        "prompt_precheck_completed": false,
+        "blind_new_requirement_correct": null,
+        "blind_whole_task_passed": null,
+        "two_strong_semantic_failures": false,
+        "three_prechecks_completed": false,
+        "eligible": false,
+        "decision": "reject at screen: A19 passes all five days and exact topology authenticity is unverified",
+        "evidence": [
+          "../remaining-screens/results.json",
+          "../research/mechanisms-sources.md"
+        ]
+      }
+    }
+  }
+}

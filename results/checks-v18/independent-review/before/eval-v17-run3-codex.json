@@ -1,0 +1,464 @@
+{
+  "task": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch",
+  "app": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app",
+  "exit_code": 1,
+  "tests": 55,
+  "passed": 11,
+  "failures": {
+    "test_plan_covers_the_day[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_electricity_balance[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_heat_balance[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_balance[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_towers[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_connection_limits[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_gas_and_cost[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_import_export_and_grid_flags[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_least_cost[h1]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_plan_covers_the_day[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_electricity_balance[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_heat_balance[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_balance[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_towers[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_connection_limits[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_gas_and_cost[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_import_export_and_grid_flags[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_least_cost[h2]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h2]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_plan_covers_the_day[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_electricity_balance[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_heat_balance[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_balance[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_towers[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_connection_limits[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_gas_and_cost[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_import_export_and_grid_flags[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_least_cost[h3]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_plan_covers_the_day[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_units_within_ratings_and_availability[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_electricity_balance[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_heat_balance[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_balance[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_cooling_towers[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_connection_limits[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_gas_and_cost[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_reported_import_export_and_grid_flags[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_least_cost[h4]": {
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\"",
+      "text": "request = <SubRequest 'case' for <Function test_plan_covers_the_day[h4]>>\n\n    @pytest.fixture(scope=\"module\", params=DAYS)\n    def case(request):\n        day = Day(HERE / \"days\" / request.param)\n>       plan = load_plan(request.param)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_plans.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_same_plan_every_time[h1]": {
+      "kind": "failure",
+      "message": "AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists",
+      "text": "name = 'h1'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:124: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h1'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h1: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_same_plan_every_time[h2]": {
+      "kind": "failure",
+      "message": "AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists",
+      "text": "name = 'h2'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:124: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h2'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h2: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_same_plan_every_time[h3]": {
+      "kind": "failure",
+      "message": "AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists",
+      "text": "name = 'h3'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:124: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h3'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h3: exit 1: RuntimeError: no feasible loading at 13:30\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.error').exists\n\ntest_plans.py:29: AssertionError"
+    },
+    "test_same_plan_every_time[h4]": {
+      "kind": "failure",
+      "message": "AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nassert not True\n +  where True = exists()\n +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists",
+      "text": "name = 'h4'\n\n    @pytest.mark.parametrize(\"name\", DAYS)\n    def test_same_plan_every_time(name):\n>       first, again = load_plan(name), load_plan(f\"{name}.rerun\")\n                       ^^^^^^^^^^^^^^^\n\ntest_plans.py:124: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'h4'\n\n    def load_plan(name):\n        error = PLANS / f\"{name}.error\"\n>       assert not error.exists(), f\"{name}: {error.read_text().strip()}\"\nE       AssertionError: h4: exit 1: RuntimeError: no feasible loading at 00:00\nE       assert not True\nE        +  where True = exists()\nE        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.error').exists\n\ntest_plans.py:29: AssertionError"
+    }
+  },
+  "execution_errors": {
+    "h1": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h1",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.json"
+      ],
+      "seconds": 0.2698300830088556,
+      "exit_code": 1
+    },
+    "h1.rerun": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h1",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.rerun.json"
+      ],
+      "seconds": 0.25906975008547306,
+      "exit_code": 1
+    },
+    "h2": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h2",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.json"
+      ],
+      "seconds": 0.2661939999088645,
+      "exit_code": 1
+    },
+    "h2.rerun": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h2",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.rerun.json"
+      ],
+      "seconds": 0.26191904209554195,
+      "exit_code": 1
+    },
+    "h3": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h3",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.json"
+      ],
+      "seconds": 0.4008097080513835,
+      "exit_code": 1
+    },
+    "h3.rerun": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h3",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.rerun.json"
+      ],
+      "seconds": 0.4034942500293255,
+      "exit_code": 1
+    },
+    "h4": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h4",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.json"
+      ],
+      "seconds": 0.2638347919564694,
+      "exit_code": 1
+    },
+    "h4.rerun": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h4",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.rerun.json"
+      ],
+      "seconds": 0.274020167067647,
+      "exit_code": 1
+    }
+  },
+  "calls": [
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/visible",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/visible.json"
+      ],
+      "seconds": 0.4754943330772221,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/visible",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/visible.rerun.json"
+      ],
+      "seconds": 0.4684764170087874,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h1",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.json"
+      ],
+      "seconds": 0.2698300830088556,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h1",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h1.rerun.json"
+      ],
+      "seconds": 0.25906975008547306,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h2",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.json"
+      ],
+      "seconds": 0.2661939999088645,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h2",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h2.rerun.json"
+      ],
+      "seconds": 0.26191904209554195,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h3",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.json"
+      ],
+      "seconds": 0.4008097080513835,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h3",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h3.rerun.json"
+      ],
+      "seconds": 0.4034942500293255,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h4",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.json"
+      ],
+      "seconds": 0.2638347919564694,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v17-trials/ecd17-run3-codex/app/dispatch.py",
+        "--data",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/days/h4",
+        "--output",
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/plans/h4.rerun.json"
+      ],
+      "seconds": 0.274020167067647,
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpne7t3sbg/report.xml",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tasks/energy-centre-dispatch/tests/test_plans.py"
+      ],
+      "seconds": 0.6194121248554438,
+      "exit_code": 1
+    }
+  ],
+  "artifacts": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/runs/before/eval-v17-run3-codex"
+}

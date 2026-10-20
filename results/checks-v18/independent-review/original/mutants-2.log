@@ -1,0 +1,11 @@
+$ ECD_TASK=/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/original /private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python tools/energy_mutants.py gas_net_to_gross_divided towers_take_cooling_only kva_as_kw cewt_without_minimum outage_by_period_start ht_source_outage_ignored outages_engines_only outages_one_per_unit midnight_state_ignored plan_varies_between_runs
+gas_net_to_gross_divided     CAUGHT  least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  
+towers_take_cooling_only     CAUGHT  cooling_towers:h1,h4  
+kva_as_kw                    CAUGHT  connection_limits:h1,h2  
+cewt_without_minimum         CAUGHT  electricity_balance:h2,h3  
+outage_by_period_start       CAUGHT  electricity_balance:h4; heat_balance:h4; units_within_ratings_and_availability:h1,h2,h3,h4  
+ht_source_outage_ignored     CAUGHT  units_within_ratings_and_availability:h2  
+outages_engines_only         CAUGHT  units_within_ratings_and_availability:h1,h2,h3,h4  
+outages_one_per_unit         CAUGHT  electricity_balance:h4; units_within_ratings_and_availability:h2  
+midnight_state_ignored       CAUGHT  reported_gas_and_cost:h1,h2  
+plan_varies_between_runs     CAUGHT  same_plan_every_time:visible,h1,h2,h3,h4  

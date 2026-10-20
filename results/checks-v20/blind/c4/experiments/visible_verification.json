@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "periods": 48,
+  "engine_starts": 2,
+  "recomputed_summary": {
+    "cost_gbp": 6303.560319426554,
+    "gas_kwh": 64944.18583948503,
+    "import_kwh": 13775.407766201613,
+    "export_kwh": 0.0
+  },
+  "maximum_residuals": {
+    "electricity_kw": 2.5579538487363607e-13,
+    "heat_kw": 1.1368683772161603e-13,
+    "cooling_kw": 2.2737367544323206e-13,
+    "cost_gbp": 0.0,
+    "gas_kwh": 2.2737367544323206e-13,
+    "grid_kva_excess": 0.0
+  },
+  "maxima": {
+    "tower_rejection_kw": 2849.070947368421,
+    "phe_kw": 583.6,
+    "apparent_import_kva": 985.4000415071423,
+    "condenser_entering_c": 24.6
+  },
+  "coverage": {
+    "interior_engine_loads": 3,
+    "cold_absorber_periods": 0,
+    "curtailment_periods": 0,
+    "grid_binding_periods": 0,
+    "phe_binding_periods": 0,
+    "tower_binding_periods": 0,
+    "modulated_cooling_water_periods": 0
+  }
+}

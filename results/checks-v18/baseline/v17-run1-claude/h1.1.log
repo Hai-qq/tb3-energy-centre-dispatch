@@ -1,0 +1,11 @@
+$ /workspace/scratch/3a594630faca/ecd-venv/bin/python /workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py --data /workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/archive/energy-centre-dispatch-v17/tests/days/h1 --output /workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/checks-v18/baseline/v17-run1-claude/h1.rerun.json
+Traceback (most recent call last):
+  File "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py", line 61, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/results/v17-trials/ecd17-run1-claude/app/planner/optimize.py", line 259, in plan_day
+    raise ValueError(f"outage of unknown plant: {', '.join(sorted(unknown))}")
+ValueError: outage of unknown plant: EC1 condenser

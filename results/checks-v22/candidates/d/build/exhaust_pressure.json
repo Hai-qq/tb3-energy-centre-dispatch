@@ -1,0 +1,96 @@
+{
+  "initial_v15_window": {
+    "day": "h2",
+    "window": [
+      "09:20",
+      "14:50"
+    ],
+    "cost_gbp": 8811.121490234736,
+    "stopped": {
+      "feasible": false,
+      "error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    "ignored": {
+      "cost_gbp": 8745.284758551525,
+      "cost_difference_gbp": -65.83673168321184,
+      "heat_violations": [
+        {
+          "start": "12:00",
+          "recovered_exceeds_upper_kw": 449.99999999999994
+        },
+        {
+          "start": "12:30",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "13:00",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "13:30",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "14:00",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "14:30",
+          "recovered_exceeds_upper_kw": 450.0
+        }
+      ]
+    },
+    "pressure_a": true,
+    "pressure_b": true,
+    "overlaps_existing_GE1_intercooler": [
+      "09:20",
+      "11:50"
+    ]
+  },
+  "final": {
+    "day": "h2",
+    "window": [
+      "12:00",
+      "14:50"
+    ],
+    "cost_gbp": 8811.121490234736,
+    "stopped": {
+      "feasible": false,
+      "error": "no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    "ignored": {
+      "cost_gbp": 8745.284758551525,
+      "cost_difference_gbp": -65.83673168321184,
+      "heat_violations": [
+        {
+          "start": "12:00",
+          "recovered_exceeds_upper_kw": 449.99999999999994
+        },
+        {
+          "start": "12:30",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "13:00",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "13:30",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "14:00",
+          "recovered_exceeds_upper_kw": 450.0
+        },
+        {
+          "start": "14:30",
+          "recovered_exceeds_upper_kw": 450.0
+        }
+      ]
+    },
+    "pressure_a": true,
+    "pressure_b": true,
+    "other_GE1_outages_overlap": false
+  },
+  "reason_for_change": "The v15 window overlaps existing GE1 intercooler maintenance 09:20-11:50. Move the start to 12:00; no other input is changed."
+}

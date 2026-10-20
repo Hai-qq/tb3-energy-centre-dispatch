@@ -1,0 +1,72 @@
+{
+  "name": "very_hot_flat_table_ends",
+  "description": "Wet bulb and condenser temperature above the last performance-table points.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 6671.1467865332925,
+      "gas_kwh": 92854.52455255894,
+      "import_kwh": 10525.416039916838,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 1.1368683772161603e-13,
+      "heat_kw": 2.2737367544323206e-13,
+      "cooling_kw": 0.0,
+      "cost_gbp": 2.842170943040401e-14,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2850.0,
+      "phe_kw": 887.4647887323946,
+      "apparent_import_kva": 669.7769515149873,
+      "condenser_entering_c": 39.0
+    },
+    "coverage": {
+      "interior_engine_loads": 34,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 34,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.4652509820007253,
+    1.6059473780005646
+  ],
+  "plan_sha256": "02e530c8ed0ed02f4ed470aaeaf1c3aa7242eff2d36407db7245bf172179f669",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6671.146786533293,
+    "lower_bound_gbp": 6671.1467865332925,
+    "absolute_gap_gbp": 9.094947017729282e-13,
+    "tolerance_gbp": 0.0002,
+    "seconds": 5.177372567999555,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6671.1467865332925,
+        "incumbent_gbp": 6671.1467865332925,
+        "candidate_gap_gbp": 9.094947017729282e-13,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 122,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 8244.1790320442,
+  "improvement_over_witness_gbp": 1573.0322455109063,
+  "total_seconds": 8.25772543400035
+}

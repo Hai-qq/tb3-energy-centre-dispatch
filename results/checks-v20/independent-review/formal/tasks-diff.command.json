@@ -1,0 +1,20 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "9db5808",
+    "HEAD",
+    "--",
+    "tasks/"
+  ],
+  "ECD_TASK": null,
+  "TMPDIR": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v20-review/tmp-formal",
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "returncode": 0,
+  "seconds": 0.016767708119004965,
+  "log": "formal/tasks-diff.log"
+}

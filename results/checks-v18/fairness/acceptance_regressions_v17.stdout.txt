@@ -1,0 +1,157 @@
+{
+  "reference": "archive/energy-centre-dispatch-v17/tests/reference.py",
+  "cases": [
+    {
+      "case": "natural_header",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0,
+      "current_reference_balance_residual_kw": 0.0,
+      "current_reference_electricity_acceptance": true,
+      "interval_at_modified_period": {
+        "low_kw": 148.69888475836433,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 148.69888475836433,
+        "projected_kw": 148.69888475836433
+      }
+    },
+    {
+      "case": "warmer_without_ac",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0,
+      "current_reference_balance_residual_kw": 29.87254381306434,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 148.69888475836433,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 178.57142857142867,
+        "projected_kw": 178.57142857142867
+      }
+    },
+    {
+      "case": "both_ec_common_27_3C",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0,
+      "current_reference_balance_residual_kw": 67.78294656348908,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 279.54000625369144,
+        "high_kw": 462.2926093514329,
+        "inferred_kw": 347.3229528171805,
+        "projected_kw": 347.3229528171805
+      }
+    },
+    {
+      "case": "small_positive_ac_0_4_at22",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0,
+      "current_reference_balance_residual_kw": 5.147269087789539,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 153.84615384615384,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 153.84615384615387,
+        "projected_kw": 153.84615384615387
+      }
+    },
+    {
+      "case": "ac_needs22_not21",
+      "expected_electricity_acceptance": false,
+      "theoretical_interval_residual_kw": 5.147269087789454,
+      "current_reference_balance_residual_kw": 5.684341886080802e-14,
+      "current_reference_electricity_acceptance": true,
+      "interval_at_modified_period": {
+        "low_kw": 153.84615384615384,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 148.6988847583644,
+        "projected_kw": 153.84615384615384
+      }
+    },
+    {
+      "case": "below_minimum_by5",
+      "expected_electricity_acceptance": false,
+      "theoretical_interval_residual_kw": 5.0,
+      "current_reference_balance_residual_kw": 5.0,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 148.69888475836433,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 143.69888475836433,
+        "projected_kw": 148.69888475836433
+      }
+    },
+    {
+      "case": "above_maximum_by5",
+      "expected_electricity_acceptance": false,
+      "theoretical_interval_residual_kw": 4.999999999999943,
+      "current_reference_balance_residual_kw": 112.71137165189202,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 148.69888475836433,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 261.41025641025635,
+        "projected_kw": 256.4102564102564
+      }
+    },
+    {
+      "case": "zero_ec_cannot_absorb5",
+      "expected_electricity_acceptance": false,
+      "theoretical_interval_residual_kw": 5.0,
+      "current_reference_balance_residual_kw": 5.0,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 0.0,
+        "high_kw": 0.0,
+        "inferred_kw": 5.0,
+        "projected_kw": 0.0
+      }
+    },
+    {
+      "case": "above_hot_endpoint_rounding_0_001",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0009999999999195097,
+      "current_reference_balance_residual_kw": 107.712371651892,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_modified_period": {
+        "low_kw": 148.69888475836433,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 256.4112564102563,
+        "projected_kw": 256.4102564102564
+      }
+    },
+    {
+      "case": "below_cold_endpoint_rounding_0_001",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0009999999999763531,
+      "current_reference_balance_residual_kw": 0.0009999999999763531,
+      "current_reference_electricity_acceptance": true,
+      "interval_at_modified_period": {
+        "low_kw": 148.69888475836433,
+        "high_kw": 256.4102564102564,
+        "inferred_kw": 148.69788475836435,
+        "projected_kw": 148.69888475836433
+      }
+    },
+    {
+      "case": "authentic_v17_codex_warm_witness_48_periods",
+      "expected_electricity_acceptance": true,
+      "theoretical_interval_residual_kw": 0.0,
+      "current_reference_balance_residual_kw": 13.158878504672884,
+      "current_reference_electricity_acceptance": false,
+      "interval_at_16_00": {
+        "low_kw": 130.84112149532712,
+        "high_kw": 205.88235294117646,
+        "inferred_kw": 144.0,
+        "projected_kw": 144.0
+      }
+    }
+  ],
+  "classification_disagreements": [
+    "warmer_without_ac",
+    "both_ec_common_27_3C",
+    "small_positive_ac_0_4_at22",
+    "ac_needs22_not21",
+    "above_hot_endpoint_rounding_0_001",
+    "authentic_v17_codex_warm_witness_48_periods"
+  ],
+  "note": "Isolated EC-envelope regressions; full-plan ratings, availability, heat, cooling, costs and least-cost tests must still run separately."
+}

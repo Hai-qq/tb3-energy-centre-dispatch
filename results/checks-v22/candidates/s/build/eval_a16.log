@@ -1,0 +1,22 @@
+  planner failed on visible: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on visible.rerun: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h1: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h1.rerun: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h2: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h2.rerun: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h3: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h3.rerun: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h4: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  planner failed on h4.rerun: exit 1: ValueError: the engines' recovered heat must feed one heat circuit
+  FAIL test_connection_limits: visible,h1,h2,h3,h4
+  FAIL test_cooling_balance: visible,h1,h2,h3,h4
+  FAIL test_cooling_towers: visible,h1,h2,h3,h4
+  FAIL test_electricity_balance: visible,h1,h2,h3,h4
+  FAIL test_heat_balance: visible,h1,h2,h3,h4
+  FAIL test_least_cost: visible,h1,h2,h3,h4
+  FAIL test_lt_heat_rejection: visible,h1,h2,h3,h4
+  FAIL test_plan_covers_the_day: visible,h1,h2,h3,h4
+  FAIL test_reported_gas_and_cost: visible,h1,h2,h3,h4
+  FAIL test_reported_import_export_and_grid_flags: visible,h1,h2,h3,h4
+  FAIL test_same_plan_every_time: visible,h1,h2,h3,h4
+  FAIL test_units_within_ratings_and_availability: visible,h1,h2,h3,h4

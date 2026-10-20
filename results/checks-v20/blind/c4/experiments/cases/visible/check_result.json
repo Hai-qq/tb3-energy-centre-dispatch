@@ -1,0 +1,70 @@
+{
+  "name": "visible",
+  "description": "Unmodified supplied day.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 6303.560319426554,
+      "gas_kwh": 64944.18583948503,
+      "import_kwh": 13775.407766201613,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 2.5579538487363607e-13,
+      "heat_kw": 1.1368683772161603e-13,
+      "cooling_kw": 2.2737367544323206e-13,
+      "cost_gbp": 0.0,
+      "gas_kwh": 2.2737367544323206e-13,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2849.070947368421,
+      "phe_kw": 583.6,
+      "apparent_import_kva": 985.4000415071423,
+      "condenser_entering_c": 24.6
+    },
+    "coverage": {
+      "interior_engine_loads": 3,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.324265917000048,
+    1.5075021470001957
+  ],
+  "plan_sha256": "18b4549413669908993d72ad5b166f828b1aa873fb5cc3e838718b09a3118eaa",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 6303.560319426553,
+    "lower_bound_gbp": 6303.560319426553,
+    "absolute_gap_gbp": 0.0,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.10626864499954536,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 6303.560319426553,
+        "incumbent_gbp": 6303.560319426553,
+        "candidate_gap_gbp": 0.0,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "total_seconds": 2.9470473039991703
+}

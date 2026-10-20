@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "app": "A16",
+      "elapsed_s": 0.32991270907223225,
+      "cost_gbp": 5390.732890685639,
+      "starts": 3,
+      "period_1200": {
+        "start": "12:00",
+        "engines_kwe": {
+          "GE1": 0.0,
+          "GE2": 0.0
+        },
+        "boilers_kw": {
+          "B1": 2000.0,
+          "B2": 75.0
+        },
+        "chillers_kw": {
+          "EC1": 500.0,
+          "EC2": 0.0,
+          "AC1": -0.0
+        },
+        "pv_kw": 0.0,
+        "import_kw": 1326.923076923077,
+        "export_kw": 0.0,
+        "gas_kwh": 1150.1530985821742,
+        "cost_gbp": 199.97396748063227,
+        "grid_ok": false
+      },
+      "grid_failed_periods": 4,
+      "lt_outage_window_kw": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximum_lt_kw": 252.1946153846154
+    },
+    {
+      "app": "A19",
+      "elapsed_s": 0.2759325001388788,
+      "cost_gbp": 4934.822204468848,
+      "starts": 1,
+      "period_1200": {
+        "start": "12:00",
+        "engines_kwe": {
+          "GE1": 900.0,
+          "GE2": 482.9230769230769
+        },
+        "boilers_kw": {
+          "B1": 296.22307692307686,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "EC1": 500.0,
+          "EC2": 0.0,
+          "AC1": 0.0
+        },
+        "pv_kw": 0.0,
+        "import_kw": 0.0,
+        "export_kw": 0.0,
+        "gas_kwh": 2167.310958521037,
+        "cost_gbp": 102.24629592643433,
+        "grid_ok": true
+      },
+      "grid_failed_periods": 0,
+      "lt_outage_window_kw": [
+        252.1946153846154,
+        252.1946153846154,
+        252.1946153846154,
+        252.1946153846154
+      ],
+      "maximum_lt_kw": 252.1946153846154
+    }
+  ],
+  "comparison_excluding_runtime": [],
+  "matches": true,
+  "all_witness_checks_pass": true
+}

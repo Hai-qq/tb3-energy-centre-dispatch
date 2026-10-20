@@ -1,0 +1,26 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -174,7 +174,7 @@
+         bounds[iE + j] = (0.0, ch.max_kw)
+     for j, a in enumerate(absorbers):
+         bounds[iA + j] = (0.0, a.max_kw)
+-    bounds[iH] = (0.0, math.inf if h.exchanger else 0.0)
++    bounds[iH] = (0.0, plant.review_phe_limit if h.exchanger else 0.0)
+     bounds[iV] = (h.pv_lo, h.pv_hi)
+     c[iI] = DT_H * h.rate
+     c[iX] = -DT_H * tariff.export_rate
+--- a/planner/plant.py
++++ b/planner/plant.py
+@@ -136,6 +136,12 @@
+         self.pv_max_kw = float(pv["inverter_ac_kw"]) if pv else 0.0
+ 
+         self._connect(d["heat_circuits"])
++        self.review_phe_limit = math.inf
++        for hx in d.get("heat_exchangers", []):
++            circ = d["heat_circuits"][hx["primary_circuit"]]
++            self.review_phe_limit = min(self.review_phe_limit,
++                hx["primary_maximum_water_flow_kg_per_s"] * hx["water_specific_heat_kj_per_kg_k"] *
++                (circ["flow_c"] - circ["return_c"]))
+ 
+     def _connect(self, circuits: dict) -> None:
+         """Check the heat circuits are connected as the dispatch model has them, and keep their sinks.

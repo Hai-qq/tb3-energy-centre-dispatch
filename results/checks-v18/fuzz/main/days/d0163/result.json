@@ -1,0 +1,52 @@
+{
+  "id": "d0163",
+  "index": 162,
+  "season": "summer",
+  "scenario": 0,
+  "base": "h4",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0005858500110775822,
+      "max_heat_balance_kw": 0.0007089201878898166,
+      "max_tower_excess_kw": -8.24285547393265,
+      "max_grid_excess_kva": 389.4944470125861,
+      "recomputed_cost_gbp": 8155.952186710982,
+      "elapsed_seconds": 2.334132,
+      "stderr": "warning: 13:30: the demand cannot be met within the connection's capacity\nwarning: 14:00: the demand cannot be met within the connection's capacity\nwarning: 14:30: the demand cannot be met within the connection's capacity\nwarning: 15:00: the demand cannot be met within the connection's capacity\nwarning: 15:30: the demand cannot be met within the connection's capacity\nwarning: 16:00: the demand cannot be met within the connection's capacity\nwarning: 16:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 13:30')",
+      "elapsed_seconds": 1.566198
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0005818132095782858,
+      "max_heat_balance_kw": 0.00071267605619596,
+      "max_tower_excess_kw": -0.004410519359225873,
+      "max_grid_excess_kva": 371.79817597984083,
+      "recomputed_cost_gbp": 8140.263447963741,
+      "elapsed_seconds": 1.91861
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.3803340889999163
+  }
+}

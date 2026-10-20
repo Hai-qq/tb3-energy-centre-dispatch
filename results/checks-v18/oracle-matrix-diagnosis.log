@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 18, in <module>
+  File "/workspace/scratch/3a594630faca/tb3-energy-centre-dispatch/tasks/energy-centre-dispatch/tests/reference.py", line 348, in least_cost
+    raise RuntimeError(f"no feasible plan: {res.message}")
+RuntimeError: no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)

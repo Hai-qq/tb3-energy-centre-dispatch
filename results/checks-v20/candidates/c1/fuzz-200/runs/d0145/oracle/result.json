@@ -1,0 +1,19 @@
+{
+  "bad_availability_periods": [],
+  "command": [
+    "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+    "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/solution/app/dispatch.py",
+    "--data",
+    "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/days/d0145",
+    "--output",
+    "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/fuzz-200/runs/d0145/oracle/plan.json"
+  ],
+  "cost_gbp": 6857.0648960037215,
+  "delta_gbp": -0.00021186053436395014,
+  "failures": {},
+  "milp_gbp": 6857.065107864256,
+  "passed": true,
+  "returncode": 0,
+  "seconds": 4.359262373000092,
+  "simultaneous_periods": 0
+}

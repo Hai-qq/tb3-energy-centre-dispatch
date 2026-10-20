@@ -1,0 +1,40 @@
+  planner failed on d0014: exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust
+  planner failed on d0014.rerun: exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust
+  planner failed on d0026: exit 2: dispatch: unknown outage unit: EC1 condenser
+  planner failed on d0026.rerun: exit 2: dispatch: unknown outage unit: EC1 condenser
+  planner failed on d0035: exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust
+  planner failed on d0035.rerun: exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust
+  planner failed on d0045: exit 2: dispatch: unknown outage unit: AC1 generator
+  planner failed on d0045.rerun: exit 2: dispatch: unknown outage unit: AC1 generator
+  planner failed on d0057: exit 2: dispatch: unknown outage unit: EC2 condenser
+  planner failed on d0057.rerun: exit 2: dispatch: unknown outage unit: EC2 condenser
+  planner failed on d0093: exit 2: dispatch: unknown outage unit: EC1 condenser
+  planner failed on d0093.rerun: exit 2: dispatch: unknown outage unit: EC1 condenser
+  planner failed on d0105: exit 2: dispatch: unknown outage unit: GE2 intercooler
+  planner failed on d0105.rerun: exit 2: dispatch: unknown outage unit: GE2 intercooler
+  planner failed on d0128: exit 2: dispatch: unknown outage unit: AC1 absorber and condenser
+  planner failed on d0128.rerun: exit 2: dispatch: unknown outage unit: AC1 absorber and condenser
+  planner failed on d0150: exit 2: dispatch: unknown outage unit: AC1 generator
+  planner failed on d0150.rerun: exit 2: dispatch: unknown outage unit: AC1 generator
+  planner failed on d0192: exit 2: dispatch: unknown outage unit: AC1 generator
+  planner failed on d0192.rerun: exit 2: dispatch: unknown outage unit: AC1 generator
+  planner failed on d0203: exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust
+  planner failed on d0203.rerun: exit 2: dispatch: unknown outage unit: GE1 jacket water and exhaust
+  planner failed on d0216: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust
+  planner failed on d0216.rerun: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust
+  planner failed on d0227: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust
+  planner failed on d0227.rerun: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust
+  planner failed on d0265: exit 2: dispatch: unknown outage unit: GE1 intercooler
+  planner failed on d0265.rerun: exit 2: dispatch: unknown outage unit: GE1 intercooler
+  FAIL test_connection_limits: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_cooling_balance: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_cooling_towers: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_electricity_balance: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_heat_balance: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_least_cost: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_plan_covers_the_day: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_reported_gas_and_cost: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_reported_import_export_and_grid_flags: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_same_plan_every_time: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_single_connection_direction: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265
+  FAIL test_units_within_ratings_and_availability: d0014,d0026,d0035,d0045,d0057,d0093,d0105,d0128,d0150,d0192,d0203,d0216,d0227,d0265

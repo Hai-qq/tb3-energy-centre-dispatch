@@ -1,0 +1,13 @@
+blind gas_binding: PASS delta=5.347828846424818e-10 
+{
+  "candidate": "c2",
+  "source_case": "results/checks-v20/blind/c2/experiments/cases/gas_binding",
+  "source_plan_sha256": "d9977f12af1990ad44ee83a2bb229568f7a9e767bba31a3e71e627d676ee0e56",
+  "source_was_frozen_before_external_evaluation": true,
+  "diagnostic_is_not_a_hidden_day_pass": true,
+  "frozen_plan_peak_standard_m3_per_hour": 550.0000000000202,
+  "frozen_plan_binding_periods": 48,
+  "frozen_plan_exceeding_periods": 0,
+  "frozen_plan_gas_gross_kwh": 145200.00000000533,
+  "frozen_files_unchanged": true
+}

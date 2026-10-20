@@ -1,0 +1,13 @@
+$ /workspace/scratch/e1216eed3f00/ecd-venv/bin/python /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py --data /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/task/tests/days/h2 --output /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c1/gates-r1/apps/v18-run2-claude/h2.json
+Traceback (most recent call last):
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py", line 41, in main
+    plant = Plant(day.plant)
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py", line 145, in __init__
+    self.heat_exchangers = self._check_circuits(circuits)
+                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py", line 177, in _check_circuits
+    raise ValueError(f"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}")
+ValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']

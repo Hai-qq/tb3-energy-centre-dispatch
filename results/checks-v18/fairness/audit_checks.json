@@ -1,0 +1,625 @@
+{
+  "runtime": {
+    "python": "3.13.16",
+    "numpy": "2.3.4"
+  },
+  "visibility": {
+    "files_compared": 13,
+    "mismatches": [],
+    "other_version_mismatches": {
+      "v8": [
+        "environment/Dockerfile"
+      ],
+      "v8.1": [],
+      "v16": [],
+      "v17": []
+    },
+    "v17_reference_sha256": "6f4a64c8d66334be60e50f7813f85aec2beb9f3d9a78049553809b1e6766c69d"
+  },
+  "names": {
+    "all_named_endpoints": [
+      "AC1 absorber and condenser",
+      "AC1 generator",
+      "B1",
+      "B2",
+      "CT1",
+      "CT2",
+      "EC1 condenser",
+      "EC2 condenser",
+      "GE1 LT radiator",
+      "GE1 intercooler",
+      "GE1 jacket water and exhaust",
+      "GE2 LT radiator",
+      "GE2 intercooler",
+      "GE2 jacket water and exhaust",
+      "PHE1",
+      "hospital buildings"
+    ],
+    "missing_from_v17_availability": [
+      "GE1 jacket water and exhaust",
+      "GE2 jacket water and exhaust",
+      "hospital buildings"
+    ],
+    "literal_component_outage_failures": {
+      "GE1 jacket water and exhaust": "KeyError: 'GE1 jacket water and exhaust'",
+      "GE2 jacket water and exhaust": "KeyError: 'GE2 jacket water and exhaust'"
+    },
+    "interpretation": "Do not treat hospital buildings as a component outage without specifying the changed demand."
+  },
+  "outages": {
+    "dependency_cases": [
+      {
+        "unit": "GE1",
+        "part": "GE1 intercooler",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "GE1",
+        "part": "GE1 LT radiator",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "GE2",
+        "part": "GE2 intercooler",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "GE2",
+        "part": "GE2 LT radiator",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "EC1",
+        "part": "EC1 condenser",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "EC2",
+        "part": "EC2 condenser",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "AC1",
+        "part": "AC1 generator",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      },
+      {
+        "unit": "AC1",
+        "part": "AC1 absorber and condenser",
+        "off_period_starts_minutes": [
+          600,
+          750,
+          840,
+          870
+        ]
+      }
+    ],
+    "multi_interval_union": "PASS",
+    "period_boundaries": "Outage end 13:00 leaves the 13:00 period available; a 10-minute outage disables the full containing period."
+  },
+  "pv_overlap": {
+    "forecast_kw": 257.8,
+    "unavailable_union_minutes": 15,
+    "v17_added_minutes": 20,
+    "v17_pv_max_kw": 85.93333333333335,
+    "union_based_pv_max_kw": 128.9,
+    "false_rejection_potential_kw": 42.966666666666654,
+    "finding": "Confirmed v17 verifier bug: overlapping PV outages are summed instead of unioned. All-off interpretation still passes."
+  },
+  "arithmetic": {
+    "manual_case": "GE1 750kWe (mid-segment, already running), GE2 400kWe (new start), B1 905kW, B2 830kW, EC1 650kW, EC2 520kW, AC1 355kW, grid import100kW at 22C",
+    "gas_kwh": 2756.1800000000003,
+    "cost_gbp": 160.41883,
+    "engine_ht_kw": 1562.5,
+    "aux_kw": 63.81,
+    "electric_chiller_power_kw": 200.0,
+    "absorption_drive_kw": 500.0,
+    "tower_rejection_kw_excluding_absorber_aux": 2225.0,
+    "starts": 1,
+    "status": "PASS"
+  },
+  "limits": {
+    "generator_rating_redundant_with_current_fixed_plant": {
+      "GE1": {
+        "at_rated_kva": 1263.157894736842,
+        "rated_kva": 1500
+      },
+      "GE2": {
+        "at_rated_kva": 842.1052631578948,
+        "rated_kva": 1000
+      }
+    },
+    "ac_hot_water_satisfied_c": {
+      "engine_ht_flow": 90,
+      "ac_required_minimum": 85
+    },
+    "lt_not_usable_for_ac_c": {
+      "lt_flow": 40,
+      "ac_required_minimum": 85
+    },
+    "negative_net_kvar_at_site50_and_engines2000kwe": -607.3682103577263,
+    "connection_pmax_kw_at_negative_q": 1058.066092948287,
+    "overestimate_if_negative_q_ignored_kw": 161.93390705171305,
+    "actual_v17_site_kvar_ranges": {
+      "visible": [
+        201.9,
+        327.3
+      ],
+      "h1": [
+        199.7,
+        345.9
+      ],
+      "h2": [
+        50.0,
+        352.1
+      ],
+      "h3": [
+        198.1,
+        323.0
+      ],
+      "h4": [
+        214.7,
+        350.5
+      ]
+    },
+    "actual_v17_absolute_net_kvar_bound": 607.3682103577263,
+    "actual_v17_apparent_export_bound_kva": 656.8075387456719,
+    "181_tangent_max_radial_excess_kva": 0.04645563059913371,
+    "connection_test_allowance_kva": 0.5
+  },
+  "absorber_mode_threshold": {
+    "local_time": "00:00",
+    "ac_output_kw": 0.4,
+    "ec1_output_kw": 1000.0,
+    "physical_header_floor_c": 22,
+    "v17_recomputed_ec_power_kw": 148.69888475836433,
+    "ec_power_with_positive_absorber_kw": 153.84615384615384,
+    "difference_kw": 5.14726908778951,
+    "finding": "A >0.5 kW mode threshold can reject a plan whose small positive AC output correctly needs the warm header. Numerical-boundary issue, inadmissible as a hardness trap."
+  },
+  "statistics": {
+    "recovered_historical_rows": [
+      {
+        "version": "v8",
+        "trial": "ecd8-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 26.4,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run1-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 17.2,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run1-codex-overloaded",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 0.5,
+        "exception": "ApiOverloadedError",
+        "reward": 0.0
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run2-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 29.9,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run2-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 13.3,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run3-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 41.5,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run3-claude-NetworkConnectionError1",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": null,
+        "exception": "NetworkConnectionError",
+        "reward": null
+      },
+      {
+        "version": "v8",
+        "trial": "ecd8-run3-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 16.0,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v8-rerun",
+        "trial": "ecd8-rerun1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 37.4,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v9",
+        "trial": "ecd9-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 33.0,
+        "exception": null,
+        "reward": 1.0
+      },
+      {
+        "version": "v10",
+        "trial": "ecd10-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 32.7,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v10",
+        "trial": "ecd10-run1-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 29.4,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v10",
+        "trial": "ecd10-run2-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 56.1,
+        "exception": null,
+        "reward": 1.0
+      },
+      {
+        "version": "v11",
+        "trial": "ecd11-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 43.1,
+        "exception": null,
+        "reward": 1.0
+      },
+      {
+        "version": "v12",
+        "trial": "ecd12-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 96.9,
+        "exception": "VerifierTimeoutError",
+        "reward": null
+      },
+      {
+        "version": "v13",
+        "trial": "ecd13-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 116.2,
+        "exception": null,
+        "reward": 1.0
+      },
+      {
+        "version": "v14",
+        "trial": "ecd14-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 27.8,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v14",
+        "trial": "ecd14-run2-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 34.8,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v15",
+        "trial": "ecd15-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 91.1,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v15",
+        "trial": "ecd15-run1-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 12.9,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v15",
+        "trial": "ecd15-run2-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 32.9,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v15",
+        "trial": "ecd15-run2-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 17.3,
+        "exception": null,
+        "reward": 1.0
+      },
+      {
+        "version": "v15",
+        "trial": "ecd15-run3-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 44.6,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v15",
+        "trial": "ecd15-run3-claude-ApiRateLimitError1",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 20.6,
+        "exception": "ApiRateLimitError",
+        "reward": 0.0
+      },
+      {
+        "version": "v16",
+        "trial": "ecd16-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 98.5,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v16",
+        "trial": "ecd16-run2-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 91.1,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v17",
+        "trial": "ecd17-run1-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 132.9,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v17",
+        "trial": "ecd17-run1-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 8.7,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v17",
+        "trial": "ecd17-run2-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 28.2,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v17",
+        "trial": "ecd17-run2-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 11.0,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v17",
+        "trial": "ecd17-run3-claude",
+        "agent": {
+          "name": "claude-code",
+          "model": "anthropic/claude-opus-5-5"
+        },
+        "minutes": 27.5,
+        "exception": null,
+        "reward": 0.0
+      },
+      {
+        "version": "v17",
+        "trial": "ecd17-run3-codex",
+        "agent": {
+          "name": "codex",
+          "model": "openai/gpt-6.1-sol"
+        },
+        "minutes": 10.1,
+        "exception": null,
+        "reward": 0.0
+      }
+    ],
+    "v17_zero_of_three_exact_one_sided_95_percent_upper_bound": 0.6315968501359612,
+    "illustrative_bayesian_sensitivity_each_model_v17_0_of_3": {
+      "uniform_beta_1_1_prior": {
+        "posterior_mean_single_trial_pass": 0.2,
+        "posterior_95_percent_interval": [
+          0.006309463209709866,
+          0.6023646356164746
+        ],
+        "next_three_all_fail": 0.5714285714285715,
+        "next_three_each_model_all_fail_assuming_independent_models": 0.32653061224489804
+      },
+      "jeffreys_beta_half_half_prior": {
+        "posterior_mean_single_trial_pass": 0.125,
+        "posterior_95_percent_interval": [
+          0.00015063602543656843,
+          0.5355832430429502
+        ],
+        "next_three_all_fail": 0.7218749999999999,
+        "next_three_each_model_all_fail_assuming_independent_models": 0.5211035156249999
+      }
+    },
+    "fixed_pass_rate_scenarios": [
+      {
+        "opus_p": 0.05,
+        "gpt_p": 0.02,
+        "probability_next_six_all_fail": 0.8069544909999998
+      },
+      {
+        "opus_p": 0.1,
+        "gpt_p": 0.05,
+        "probability_next_six_all_fail": 0.625026375
+      },
+      {
+        "opus_p": 0.15,
+        "gpt_p": 0.05,
+        "probability_next_six_all_fail": 0.5265354218749999
+      },
+      {
+        "opus_p": 0.2,
+        "gpt_p": 0.1,
+        "probability_next_six_all_fail": 0.37324800000000014
+      },
+      {
+        "opus_p": 0.25,
+        "gpt_p": 0.15,
+        "probability_next_six_all_fail": 0.25908398437499996
+      },
+      {
+        "opus_p": 0.3,
+        "gpt_p": 0.1,
+        "probability_next_six_all_fail": 0.25004699999999996
+      }
+    ],
+    "warning": "Probabilities assume independent fresh runs at a fixed version. Historical versions, adaptive stop-on-pass, visible cues, verifier corrections and selection invalidate naive pooling."
+  }
+}

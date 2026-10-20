@@ -1,0 +1,120 @@
+{
+  "app": "results/checks-v20/candidates/c4/gates-r1/mutant_apps/gas_net_to_gross_divided",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.647743955096,
+      "delta_gbp": 0.0002768520544123021,
+      "failures": {
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 100, in test_reported_gas_and_cost\n    assert np.abs(gas - flows[\"gas_kwh\"]).max() <= 0.5 + 0.002 * flows[\"gas_kwh\"].max()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.9884663839998211,
+          "sha256": "9528e538e62a429ee8fb391a4dc55e3b842378fdbfde2464dddc8d4308352f89"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.7761304000000564,
+          "sha256": "9528e538e62a429ee8fb391a4dc55e3b842378fdbfde2464dddc8d4308352f89"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 9107.675997180833,
+      "delta_gbp": 0.0001009803672786802,
+      "failures": {
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 100, in test_reported_gas_and_cost\n    assert np.abs(gas - flows[\"gas_kwh\"]).max() <= 0.5 + 0.002 * flows[\"gas_kwh\"].max()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 9107.675896200466,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 3.8597358590000113,
+          "sha256": "a3d65383fa6cc405446177c76da4663fcf2e38564b7db5acec39645576bc9c6d"
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.255925487999775,
+          "sha256": "a3d65383fa6cc405446177c76da4663fcf2e38564b7db5acec39645576bc9c6d"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5377.373096293344,
+      "delta_gbp": 1.835055824059964,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 100, in test_reported_gas_and_cost\n    assert np.abs(gas - flows[\"gas_kwh\"]).max() <= 0.5 + 0.002 * flows[\"gas_kwh\"].max()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.956325816000117,
+          "sha256": "16fd84373dfa246349cf31253051bad1171914f04a9f88e2eebd88c742baace6"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.675815878999856,
+          "sha256": "16fd84373dfa246349cf31253051bad1171914f04a9f88e2eebd88c742baace6"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 100, in test_reported_gas_and_cost\n    assert np.abs(gas - flows[\"gas_kwh\"]).max() <= 0.5 + 0.002 * flows[\"gas_kwh\"].max()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.9207573870003216,
+          "sha256": "c1c239d72580d71c85eca3d48bdd5e884bf7a5782b4e5939dc3fb1caeefc8b09"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.2233781469999485,
+          "sha256": "c1c239d72580d71c85eca3d48bdd5e884bf7a5782b4e5939dc3fb1caeefc8b09"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {
+        "test_reported_gas_and_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 100, in test_reported_gas_and_cost\n    assert np.abs(gas - flows[\"gas_kwh\"]).max() <= 0.5 + 0.002 * flows[\"gas_kwh\"].max()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.250128524000047,
+          "sha256": "3e9929eba0806f8670b0a9b1fcf2092fe42f28ebd7f349c9b40fa72548009795"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.10316343400018,
+          "sha256": "3e9929eba0806f8670b0a9b1fcf2092fe42f28ebd7f349c9b40fa72548009795"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "89154c25507514687599259734b7198b4d56cde225e309addf93b6cbbcf544ec",
+    "planner/plant.py": "fe12a7f73a161eadcc9bd32dd5fcc65bacb71ad95b50ff08c1cf07ccf5a72206",
+    "planner/tariff.py": "39437e966de1a7b6d91014afc4de6bb640b0f9b21da6c0e23aba5afbe64339fc"
+  }
+}

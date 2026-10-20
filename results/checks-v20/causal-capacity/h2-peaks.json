@@ -1,0 +1,180 @@
+{
+  "c2": {
+    "oracle": {
+      "first_peak_start": "17:30",
+      "limit": 550,
+      "peak": 550.0000911375189,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 816.972,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 241.2,
+          "EC2": 0.0
+        },
+        "cost_gbp": 216.358,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 697.881
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3025.0,
+        "grid_ok": true,
+        "import_kw": 225.585,
+        "pv_kw": 0.0,
+        "start": "17:30"
+      },
+      "unit": "Sm3/h",
+      "violating_periods": 0
+    },
+    "strong-v16-claude": {
+      "first_peak_start": "08:30",
+      "limit": 550,
+      "peak": 596.3380780959475,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 0.0,
+          "B2": 1004.251
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 234.8,
+          "EC2": 0.0
+        },
+        "cost_gbp": 154.18,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 784.914
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3279.86,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 15.2,
+        "start": "08:30"
+      },
+      "unit": "Sm3/h",
+      "violating_periods": 7
+    },
+    "strong-v19-claude": {
+      "first_peak_start": "08:30",
+      "limit": 550,
+      "peak": 596.3380780959475,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 0.0,
+          "B2": 1004.251
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 234.8,
+          "EC2": 0.0
+        },
+        "cost_gbp": 154.18,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 784.914
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3279.86,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 15.2,
+        "start": "08:30"
+      },
+      "unit": "Sm3/h",
+      "violating_periods": 7
+    }
+  },
+  "c4": {
+    "oracle": {
+      "first_peak_start": "07:00",
+      "limit": 20,
+      "peak": 20.000006048251233,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 0.0,
+          "B2": 1620.8
+        },
+        "chillers_kw": {
+          "AC1": 219.2,
+          "EC1": 0.0,
+          "EC2": 0.0
+        },
+        "cost_gbp": 152.085,
+        "engines_kwe": {
+          "GE1": 1060.997,
+          "GE2": 593.826
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3276.743,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 0.0,
+        "start": "07:00"
+      },
+      "unit": "kg/s",
+      "violating_periods": 0
+    },
+    "strong-v16-claude": {
+      "first_peak_start": "17:30",
+      "limit": 20,
+      "peak": 26.19617224880383,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 755.7,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 241.2,
+          "EC2": 0.0
+        },
+        "cost_gbp": 199.502,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 800.0
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3109.954,
+        "grid_ok": true,
+        "import_kw": 123.466,
+        "pv_kw": 0.0,
+        "start": "17:30"
+      },
+      "unit": "kg/s",
+      "violating_periods": 19
+    },
+    "strong-v19-claude": {
+      "first_peak_start": "17:30",
+      "limit": 20,
+      "peak": 26.19617224880383,
+      "peak_period": {
+        "boilers_kw": {
+          "B1": 755.7,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 241.2,
+          "EC2": 0.0
+        },
+        "cost_gbp": 199.502,
+        "engines_kwe": {
+          "GE1": 1200.0,
+          "GE2": 800.0
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 3109.954,
+        "grid_ok": true,
+        "import_kw": 123.466,
+        "pv_kw": 0.0,
+        "start": "17:30"
+      },
+      "unit": "kg/s",
+      "violating_periods": 19
+    }
+  }
+}

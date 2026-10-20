@@ -1,0 +1,111 @@
+{
+  "app": "results/v16-trials/ecd16-run2-claude/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.6573082883915,
+      "delta_gbp": 0.009841185349614534,
+      "failures": {},
+      "milp_gbp": 6426.647467103042,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.7165761119999843,
+          "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.6201530159996764,
+          "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8879.735705373085,
+      "delta_gbp": -227.94019082738123,
+      "failures": {
+        "test_phe_primary_water_flow": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 139, in test_phe_primary_water_flow\n    assert (flows[\"engine_heat\"] - flows[\"ac_heat\"] <= capacity + KW).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 9107.675896200466,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.6278165869998702,
+          "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.6474426589998075,
+          "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {},
+      "milp_gbp": 5375.538040469284,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8920654449998437,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9533945890002542,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.983049960898,
+      "delta_gbp": 0.011209427864741883,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.9123261959998672,
+          "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.5357007009997687,
+          "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.2768119840002328,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.3007163269999182,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+    "planner/optimize.py": "e1d50e78f3318398fe7ccf28468ee6ed4815576647d44995649f9fd0997db31a",
+    "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+    "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+  }
+}

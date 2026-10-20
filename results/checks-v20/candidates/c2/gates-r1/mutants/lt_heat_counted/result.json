@@ -1,0 +1,114 @@
+{
+  "app": "results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 2.633116212999994
+        },
+        {
+          "returncode": 1,
+          "seconds": 3.1532201360000727
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8645.070142818342,
+      "delta_gbp": -328.6499579941119,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 8973.720100812454,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.002050876999874,
+          "sha256": "31b6ac381e8e0231683751bf2501bd0bc17bf9f9115bf4047e1ab6c9174d0e66"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.562395801999628,
+          "sha256": "31b6ac381e8e0231683751bf2501bd0bc17bf9f9115bf4047e1ab6c9174d0e66"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5463.556873763395,
+      "delta_gbp": 88.01883329411066,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.6417401439998685,
+          "sha256": "2876adbc062f43e1456d90250382beb63d1c5b6cfce13ce0bbae1794e2ee3934"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9952374889999192,
+          "sha256": "2876adbc062f43e1456d90250382beb63d1c5b6cfce13ce0bbae1794e2ee3934"
+        }
+      ]
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/dispatch.py\", line 43, in main\n    periods, starts = plan_day(day, plant, tariff)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/gates-r1/mutant_apps/lt_heat_counted/planner/optimize.py\", line 221, in plan_day\n    raise RuntimeError(\"no plan meets the demand within the limits\")\nRuntimeError: no plan meets the demand within the limits\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 2.5555551780003043
+        },
+        {
+          "returncode": 1,
+          "seconds": 2.0821321839998745
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6271.748211763101,
+      "delta_gbp": -31.81210766345248,
+      "failures": {
+        "test_heat_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 71, in test_heat_balance\n    assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.1067107799999576,
+          "sha256": "c6f5a1ff9634edaac68eb4bc4568ab43e70161089884fbbdefc321cfa1b7ca16"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.1463655990000916,
+          "sha256": "c6f5a1ff9634edaac68eb4bc4568ab43e70161089884fbbdefc321cfa1b7ca16"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "ea0f6a0e0e94fd4c39d42b12d038eb1bceebd3b6118378b04495c54af5040a5f",
+    "planner/plant.py": "06868b56c93845c0e697577f303081d9371dee0f86c6511c8eab119e824f8678",
+    "planner/tariff.py": "e034a8c359d5b0903ffcf3475626ad25597f3ca2cfa912a7dc2791b457046e27"
+  }
+}

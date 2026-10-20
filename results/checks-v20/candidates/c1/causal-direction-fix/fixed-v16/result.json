@@ -1,0 +1,109 @@
+{
+  "app": "results/checks-v20/audit/arbitrage/diagnostic-direction-fixed/v16/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6120.667365530191,
+      "delta_gbp": 0.00974545245844638,
+      "failures": {},
+      "milp_gbp": 6120.657620077733,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.380660350999733,
+          "sha256": "e8ebe2c0d5430e229d922837ec065d0b426cdb0d30430615bb81a91677d10c12"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.3934927430000243,
+          "sha256": "e8ebe2c0d5430e229d922837ec065d0b426cdb0d30430615bb81a91677d10c12"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8630.934564354102,
+      "delta_gbp": 0.004699936540419003,
+      "failures": {},
+      "milp_gbp": 8630.929864417561,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.7718028309996043,
+          "sha256": "7167ea65da6fc03639a89ec6e1a5851d1076d4cacfe96e50ce94256cc9371381"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.354053075000138,
+          "sha256": "7167ea65da6fc03639a89ec6e1a5851d1076d4cacfe96e50ce94256cc9371381"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5242.027896042251,
+      "delta_gbp": -0.000154034877596132,
+      "failures": {},
+      "milp_gbp": 5242.028050077129,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.9458483459998206,
+          "sha256": "48102b930755c4daeccf085f7ffb1bf690e1235f10dec8ced8e96c2ead62faa6"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.950196655000127,
+          "sha256": "48102b930755c4daeccf085f7ffb1bf690e1235f10dec8ced8e96c2ead62faa6"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 6933.9896824790985,
+      "delta_gbp": 0.011204917796931113,
+      "failures": {},
+      "milp_gbp": 6933.978477561302,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.196525353999732,
+          "sha256": "b9c167e11809ba15f3f8fa43a8d83fa5192570b074d079b2063384eb27ec5082"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.016105406999941,
+          "sha256": "b9c167e11809ba15f3f8fa43a8d83fa5192570b074d079b2063384eb27ec5082"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 5959.00325019005,
+      "delta_gbp": -2.8934612601005938e-05,
+      "failures": {},
+      "milp_gbp": 5959.003279124662,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.926809258999583,
+          "sha256": "45afca5a468f66ba0919c6f8c862fe7a25133fac62226c48b296cd7c7a7737a7"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9089740600002187,
+          "sha256": "45afca5a468f66ba0919c6f8c862fe7a25133fac62226c48b296cd7c7a7737a7"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+    "planner/optimize.py": "b357a2f091c3234695c79c2a027ae6b3776097b0221a2022c1221d2d65424a9a",
+    "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+    "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+  }
+}

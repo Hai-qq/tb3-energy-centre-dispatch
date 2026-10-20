@@ -1,0 +1,965 @@
+{
+  "date": "2026-07-21",
+  "periods": [
+    {
+      "start": "00:00",
+      "forecast_utc": "2026-07-20T23:00:00+00:00",
+      "minimum_condenser_entering_c": 22.6,
+      "selected_condenser_entering_c": 22.6,
+      "electric_chiller_power_kw": 9.687824038000022,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 574.7,
+      "phe_heat_to_lthw_kw": 325.29999999999995,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1063.064638038,
+      "available_tower_rejection_kw": 3402.5,
+      "net_grid_kvar": -49.84728414309055,
+      "grid_kva": 501.8463843241922,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "00:30",
+      "forecast_utc": "2026-07-20T23:30:00+00:00",
+      "minimum_condenser_entering_c": 22.6,
+      "selected_condenser_entering_c": 22.6,
+      "electric_chiller_power_kw": 5.7696779260000675,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 575.6,
+      "phe_heat_to_lthw_kw": 324.4,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1035.760549926,
+      "available_tower_rejection_kw": 3402.5,
+      "net_grid_kvar": -49.24728414309055,
+      "grid_kva": 497.0064713246477,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "01:00",
+      "forecast_utc": "2026-07-21T00:00:00+00:00",
+      "minimum_condenser_entering_c": 22.5,
+      "selected_condenser_entering_c": 22.5,
+      "electric_chiller_power_kw": 4.947475537999834,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 573.8000000000001,
+      "phe_heat_to_lthw_kw": 326.19999999999993,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1026.7102315379998,
+      "available_tower_rejection_kw": 3418.75,
+      "net_grid_kvar": -52.547284143090536,
+      "grid_kva": 498.08979364873744,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "01:30",
+      "forecast_utc": "2026-07-21T00:30:00+00:00",
+      "minimum_condenser_entering_c": 22.7,
+      "selected_condenser_entering_c": 22.7,
+      "electric_chiller_power_kw": 6.794166337999995,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 574.8000000000001,
+      "phe_heat_to_lthw_kw": 325.19999999999993,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1041.772542338,
+      "available_tower_rejection_kw": 3386.25,
+      "net_grid_kvar": -60.84728414309055,
+      "grid_kva": 477.86228442715293,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "02:00",
+      "forecast_utc": "2026-07-21T01:00:00+00:00",
+      "minimum_condenser_entering_c": 22.7,
+      "selected_condenser_entering_c": 22.7,
+      "electric_chiller_power_kw": 6.102010248000068,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 573.8000000000001,
+      "phe_heat_to_lthw_kw": 326.19999999999993,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1034.9647662480002,
+      "available_tower_rejection_kw": 3386.25,
+      "net_grid_kvar": -45.94728414309054,
+      "grid_kva": 505.6566292718101,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "02:30",
+      "forecast_utc": "2026-07-21T01:30:00+00:00",
+      "minimum_condenser_entering_c": 22.8,
+      "selected_condenser_entering_c": 22.8,
+      "electric_chiller_power_kw": 3.2564873420000247,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 588.9000000000001,
+      "phe_heat_to_lthw_kw": 311.0999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1040.055105342,
+      "available_tower_rejection_kw": 3370.0,
+      "net_grid_kvar": -61.047284143090536,
+      "grid_kva": 471.12701402948903,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "03:00",
+      "forecast_utc": "2026-07-21T02:00:00+00:00",
+      "minimum_condenser_entering_c": 22.5,
+      "selected_condenser_entering_c": 22.5,
+      "electric_chiller_power_kw": 0.7985909979998809,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 586.9000000000001,
+      "phe_heat_to_lthw_kw": 313.0999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1018.665968998,
+      "available_tower_rejection_kw": 3418.75,
+      "net_grid_kvar": -54.64728414309053,
+      "grid_kva": 466.1800232897939,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "03:30",
+      "forecast_utc": "2026-07-21T02:30:00+00:00",
+      "minimum_condenser_entering_c": 22.4,
+      "selected_condenser_entering_c": 22.4,
+      "electric_chiller_power_kw": 2.9837753509999096,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 579.4000000000001,
+      "phe_heat_to_lthw_kw": 320.5999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1021.9340033509999,
+      "available_tower_rejection_kw": 3435.0,
+      "net_grid_kvar": -50.547284143090536,
+      "grid_kva": 474.03667648096894,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "04:00",
+      "forecast_utc": "2026-07-21T03:00:00+00:00",
+      "minimum_condenser_entering_c": 22.5,
+      "selected_condenser_entering_c": 22.5,
+      "electric_chiller_power_kw": 4.985362035000012,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 553.6,
+      "phe_heat_to_lthw_kw": 346.4,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 992.132594035,
+      "available_tower_rejection_kw": 3418.75,
+      "net_grid_kvar": -56.84728414309055,
+      "grid_kva": 475.54263748339474,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "04:30",
+      "forecast_utc": "2026-07-21T03:30:00+00:00",
+      "minimum_condenser_entering_c": 22.4,
+      "selected_condenser_entering_c": 22.4,
+      "electric_chiller_power_kw": 13.01248049899997,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 489.0,
+      "phe_heat_to_lthw_kw": 411.0,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 940.250660499,
+      "available_tower_rejection_kw": 3435.0,
+      "net_grid_kvar": -46.94728414309054,
+      "grid_kva": 496.773996187813,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "05:00",
+      "forecast_utc": "2026-07-21T04:00:00+00:00",
+      "minimum_condenser_entering_c": 22.5,
+      "selected_condenser_entering_c": 22.5,
+      "electric_chiller_power_kw": 20.066536204000066,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 447.50000000000006,
+      "phe_heat_to_lthw_kw": 452.49999999999994,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 920.456486204,
+      "available_tower_rejection_kw": 3418.75,
+      "net_grid_kvar": -57.047284143090536,
+      "grid_kva": 503.3993477548759,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "05:30",
+      "forecast_utc": "2026-07-21T04:30:00+00:00",
+      "minimum_condenser_entering_c": 22.7,
+      "selected_condenser_entering_c": 22.7,
+      "electric_chiller_power_kw": 39.630429641000106,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 386.40000000000003,
+      "phe_heat_to_lthw_kw": 513.5999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 957.7659976410002,
+      "available_tower_rejection_kw": 3386.25,
+      "net_grid_kvar": -38.14728414309053,
+      "grid_kva": 583.6140595426835,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "06:00",
+      "forecast_utc": "2026-07-21T05:00:00+00:00",
+      "minimum_condenser_entering_c": 22.8,
+      "selected_condenser_entering_c": 22.8,
+      "electric_chiller_power_kw": 50.704430380000076,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 338.8,
+      "phe_heat_to_lthw_kw": 561.2,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 955.79648638,
+      "available_tower_rejection_kw": 3370.0,
+      "net_grid_kvar": -29.547284143090536,
+      "grid_kva": 644.5740664754843,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "06:30",
+      "forecast_utc": "2026-07-21T05:30:00+00:00",
+      "minimum_condenser_entering_c": 23.0,
+      "selected_condenser_entering_c": 23.0,
+      "electric_chiller_power_kw": 67.06916334700028,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 337.1,
+      "phe_heat_to_lthw_kw": 562.9,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1069.6346653470002,
+      "available_tower_rejection_kw": 3337.5,
+      "net_grid_kvar": -15.64728414309053,
+      "grid_kva": 699.4097187800479,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "07:00",
+      "forecast_utc": "2026-07-21T06:00:00+00:00",
+      "minimum_condenser_entering_c": 22.9,
+      "selected_condenser_entering_c": 22.9,
+      "electric_chiller_power_kw": 77.75641127400016,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 319.9,
+      "phe_heat_to_lthw_kw": 580.1,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1119.453249274,
+      "available_tower_rejection_kw": 3353.75,
+      "net_grid_kvar": -12.947284143090542,
+      "grid_kva": 717.8700153997705,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "07:30",
+      "forecast_utc": "2026-07-21T06:30:00+00:00",
+      "minimum_condenser_entering_c": 22.9,
+      "selected_condenser_entering_c": 22.9,
+      "electric_chiller_power_kw": 89.72703453800004,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 316.40000000000003,
+      "phe_heat_to_lthw_kw": 583.5999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1200.7692025380002,
+      "available_tower_rejection_kw": 3353.75,
+      "net_grid_kvar": 9.952715856909435,
+      "grid_kva": 780.6326514460804,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "08:00",
+      "forecast_utc": "2026-07-21T07:00:00+00:00",
+      "minimum_condenser_entering_c": 23.2,
+      "selected_condenser_entering_c": 23.2,
+      "electric_chiller_power_kw": 94.61540930999999,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 332.6,
+      "phe_heat_to_lthw_kw": 567.4,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1258.0106213100003,
+      "available_tower_rejection_kw": 3305.0,
+      "net_grid_kvar": 7.452715856909435,
+      "grid_kva": 839.4437051653221,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "08:30",
+      "forecast_utc": "2026-07-21T07:30:00+00:00",
+      "minimum_condenser_entering_c": 23.2,
+      "selected_condenser_entering_c": 23.2,
+      "electric_chiller_power_kw": 108.39983948600005,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 373.90000000000003,
+      "phe_heat_to_lthw_kw": 526.0999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1428.940157486,
+      "available_tower_rejection_kw": 3305.0,
+      "net_grid_kvar": 34.65271585690948,
+      "grid_kva": 938.1803438652578,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "09:00",
+      "forecast_utc": "2026-07-21T08:00:00+00:00",
+      "minimum_condenser_entering_c": 23.4,
+      "selected_condenser_entering_c": 23.4,
+      "electric_chiller_power_kw": 116.8905416330001,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 399.20000000000005,
+      "phe_heat_to_lthw_kw": 500.79999999999995,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1528.726045633,
+      "available_tower_rejection_kw": 3272.5,
+      "net_grid_kvar": 40.952715856909435,
+      "grid_kva": 937.6208239492626,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "09:30",
+      "forecast_utc": "2026-07-21T08:30:00+00:00",
+      "minimum_condenser_entering_c": 23.3,
+      "selected_condenser_entering_c": 23.3,
+      "electric_chiller_power_kw": 126.34265002000006,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 446.8,
+      "phe_heat_to_lthw_kw": 453.2,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1681.62166602,
+      "available_tower_rejection_kw": 3288.75,
+      "net_grid_kvar": 32.75271585690945,
+      "grid_kva": 933.6963017983652,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "10:00",
+      "forecast_utc": "2026-07-21T09:00:00+00:00",
+      "minimum_condenser_entering_c": 23.7,
+      "selected_condenser_entering_c": 23.7,
+      "electric_chiller_power_kw": 142.22590927700017,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 462.3,
+      "phe_heat_to_lthw_kw": 437.7,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1810.047035277,
+      "available_tower_rejection_kw": 3223.75,
+      "net_grid_kvar": 57.05271585690946,
+      "grid_kva": 985.4000415074764,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "10:30",
+      "forecast_utc": "2026-07-21T09:30:00+00:00",
+      "minimum_condenser_entering_c": 23.5,
+      "selected_condenser_entering_c": 23.5,
+      "electric_chiller_power_kw": 161.00040567999983,
+      "engine_ht_kw": 900.0,
+      "absorption_generator_heat_kw": 478.50000000000006,
+      "phe_heat_to_lthw_kw": 421.49999999999994,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 0.0,
+        "GE2": 139.0
+      },
+      "tower_rejection_kw": 1978.87457568,
+      "available_tower_rejection_kw": 3256.25,
+      "net_grid_kvar": 45.35271585690947,
+      "grid_kva": 958.4481973450927,
+      "gas_entry_gross_kw": 2204.92,
+      "gas_entry_standard_m3_per_hour": 200.44727272727272
+    },
+    {
+      "start": "11:00",
+      "forecast_utc": "2026-07-21T10:00:00+00:00",
+      "minimum_condenser_entering_c": 23.6,
+      "selected_condenser_entering_c": 23.6,
+      "electric_chiller_power_kw": 120.8750814330001,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 863.7,
+      "phe_heat_to_lthw_kw": 426.29999999999995,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2353.466075433,
+      "available_tower_rejection_kw": 3240.0,
+      "net_grid_kvar": -95.02092621463589,
+      "grid_kva": 523.5609344197359,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "11:30",
+      "forecast_utc": "2026-07-21T10:30:00+00:00",
+      "minimum_condenser_entering_c": 23.8,
+      "selected_condenser_entering_c": 23.8,
+      "electric_chiller_power_kw": 129.90369155,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 884.6999999999999,
+      "phe_heat_to_lthw_kw": 405.30000000000007,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2448.32270555,
+      "available_tower_rejection_kw": 3207.5,
+      "net_grid_kvar": -92.12092621463586,
+      "grid_kva": 572.2857273700475,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "12:00",
+      "forecast_utc": "2026-07-21T11:00:00+00:00",
+      "minimum_condenser_entering_c": 23.7,
+      "selected_condenser_entering_c": 23.7,
+      "electric_chiller_power_kw": 137.79468737200008,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 887.1,
+      "phe_heat_to_lthw_kw": 402.9,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2511.551189372,
+      "available_tower_rejection_kw": 3223.75,
+      "net_grid_kvar": -84.42092621463587,
+      "grid_kva": 541.5714798560339,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "12:30",
+      "forecast_utc": "2026-07-21T11:30:00+00:00",
+      "minimum_condenser_entering_c": 24.2,
+      "selected_condenser_entering_c": 24.2,
+      "electric_chiller_power_kw": 159.87660283100013,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 897.1000000000001,
+      "phe_heat_to_lthw_kw": 392.89999999999986,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2667.9893048310005,
+      "available_tower_rejection_kw": 3142.5,
+      "net_grid_kvar": -84.12092621463586,
+      "grid_kva": 573.7891156041095,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "13:00",
+      "forecast_utc": "2026-07-21T12:00:00+00:00",
+      "minimum_condenser_entering_c": 24.3,
+      "selected_condenser_entering_c": 24.3,
+      "electric_chiller_power_kw": 157.96088591699996,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 896.9,
+      "phe_heat_to_lthw_kw": 393.1,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2650.6704639170002,
+      "available_tower_rejection_kw": 3126.25,
+      "net_grid_kvar": -89.92092621463587,
+      "grid_kva": 586.8010973870233,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "13:30",
+      "forecast_utc": "2026-07-21T12:30:00+00:00",
+      "minimum_condenser_entering_c": 24.3,
+      "selected_condenser_entering_c": 24.3,
+      "electric_chiller_power_kw": 167.62139573800005,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 905.5,
+      "phe_heat_to_lthw_kw": 384.5,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2732.965305738,
+      "available_tower_rejection_kw": 3126.25,
+      "net_grid_kvar": -85.32092621463585,
+      "grid_kva": 625.3134617639357,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "14:00",
+      "forecast_utc": "2026-07-21T13:00:00+00:00",
+      "minimum_condenser_entering_c": 24.4,
+      "selected_condenser_entering_c": 24.4,
+      "electric_chiller_power_kw": 174.25352348999976,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 901.9000000000001,
+      "phe_heat_to_lthw_kw": 388.0999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2769.1412014899997,
+      "available_tower_rejection_kw": 3110.0,
+      "net_grid_kvar": -67.12092621463586,
+      "grid_kva": 631.9160420703113,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "14:30",
+      "forecast_utc": "2026-07-21T13:30:00+00:00",
+      "minimum_condenser_entering_c": 24.6,
+      "selected_condenser_entering_c": 24.6,
+      "electric_chiller_power_kw": 183.300084531,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 898.0000000000001,
+      "phe_heat_to_lthw_kw": 391.9999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2817.126844531,
+      "available_tower_rejection_kw": 3077.5,
+      "net_grid_kvar": -86.72092621463588,
+      "grid_kva": 657.3720891222507,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "15:00",
+      "forecast_utc": "2026-07-21T14:00:00+00:00",
+      "minimum_condenser_entering_c": 24.5,
+      "selected_condenser_entering_c": 24.5,
+      "electric_chiller_power_kw": 184.756210526,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 881.0,
+      "phe_heat_to_lthw_kw": 409.0,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2802.0174305259998,
+      "available_tower_rejection_kw": 3093.75,
+      "net_grid_kvar": -80.72092621463588,
+      "grid_kva": 618.6066104690149,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "15:30",
+      "forecast_utc": "2026-07-21T14:30:00+00:00",
+      "minimum_condenser_entering_c": 24.5,
+      "selected_condenser_entering_c": 24.5,
+      "electric_chiller_power_kw": 195.37094736799992,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 873.5,
+      "phe_heat_to_lthw_kw": 416.5,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2862.7150173679997,
+      "available_tower_rejection_kw": 3093.75,
+      "net_grid_kvar": -91.72092621463588,
+      "grid_kva": 642.000757478094,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "16:00",
+      "forecast_utc": "2026-07-21T15:00:00+00:00",
+      "minimum_condenser_entering_c": 24.5,
+      "selected_condenser_entering_c": 24.5,
+      "electric_chiller_power_kw": 183.8258526320001,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 865.4,
+      "phe_heat_to_lthw_kw": 424.6,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2768.643400632,
+      "available_tower_rejection_kw": 3093.75,
+      "net_grid_kvar": -96.92092621463587,
+      "grid_kva": 625.893143470552,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "16:30",
+      "forecast_utc": "2026-07-21T15:30:00+00:00",
+      "minimum_condenser_entering_c": 24.6,
+      "selected_condenser_entering_c": 24.6,
+      "electric_chiller_power_kw": 185.9890109889997,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 852.5,
+      "phe_heat_to_lthw_kw": 437.5,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2757.205060989,
+      "available_tower_rejection_kw": 3077.5,
+      "net_grid_kvar": -95.12092621463586,
+      "grid_kva": 653.564147961406,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "17:00",
+      "forecast_utc": "2026-07-21T16:00:00+00:00",
+      "minimum_condenser_entering_c": 24.5,
+      "selected_condenser_entering_c": 24.5,
+      "electric_chiller_power_kw": 165.16800000000006,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 856.5,
+      "phe_heat_to_lthw_kw": 433.5,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2623.84653,
+      "available_tower_rejection_kw": 3093.75,
+      "net_grid_kvar": -97.02092621463589,
+      "grid_kva": 644.7876694948399,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "17:30",
+      "forecast_utc": "2026-07-21T16:30:00+00:00",
+      "minimum_condenser_entering_c": 24.3,
+      "selected_condenser_entering_c": 24.3,
+      "electric_chiller_power_kw": 157.90572503099986,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 849.9,
+      "phe_heat_to_lthw_kw": 440.1,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2569.181163031,
+      "available_tower_rejection_kw": 3126.25,
+      "net_grid_kvar": -105.52092621463589,
+      "grid_kva": 594.0284522140931,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "18:00",
+      "forecast_utc": "2026-07-21T17:00:00+00:00",
+      "minimum_condenser_entering_c": 24.1,
+      "selected_condenser_entering_c": 24.1,
+      "electric_chiller_power_kw": 147.84388220700004,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 840.1,
+      "phe_heat_to_lthw_kw": 449.9,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2488.666244207,
+      "available_tower_rejection_kw": 3158.75,
+      "net_grid_kvar": -99.22092621463588,
+      "grid_kva": 574.400761910171,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "18:30",
+      "forecast_utc": "2026-07-21T17:30:00+00:00",
+      "minimum_condenser_entering_c": 24.2,
+      "selected_condenser_entering_c": 24.2,
+      "electric_chiller_power_kw": 138.71390507900014,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 821.3000000000001,
+      "phe_heat_to_lthw_kw": 468.69999999999993,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2388.942611079,
+      "available_tower_rejection_kw": 3142.5,
+      "net_grid_kvar": -109.72092621463588,
+      "grid_kva": 570.3950142725076,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "19:00",
+      "forecast_utc": "2026-07-21T18:00:00+00:00",
+      "minimum_condenser_entering_c": 24.0,
+      "selected_condenser_entering_c": 24.0,
+      "electric_chiller_power_kw": 111.32661156999987,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 829.4000000000001,
+      "phe_heat_to_lthw_kw": 460.5999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2216.08183957,
+      "available_tower_rejection_kw": 3175.0,
+      "net_grid_kvar": -116.52092621463589,
+      "grid_kva": 489.0653066485271,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "19:30",
+      "forecast_utc": "2026-07-21T18:30:00+00:00",
+      "minimum_condenser_entering_c": 23.8,
+      "selected_condenser_entering_c": 23.8,
+      "electric_chiller_power_kw": 97.97292863,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 800.5000000000001,
+      "phe_heat_to_lthw_kw": 489.4999999999999,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 2076.4767386300005,
+      "available_tower_rejection_kw": 3207.5,
+      "net_grid_kvar": -124.72092621463588,
+      "grid_kva": 485.6643204959285,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "20:00",
+      "forecast_utc": "2026-07-21T19:00:00+00:00",
+      "minimum_condenser_entering_c": 23.6,
+      "selected_condenser_entering_c": 23.6,
+      "electric_chiller_power_kw": 84.77149837099996,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 799.3000000000001,
+      "phe_heat_to_lthw_kw": 490.69999999999993,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1984.556564371,
+      "available_tower_rejection_kw": 3240.0,
+      "net_grid_kvar": -125.52092621463589,
+      "grid_kva": 446.6564150397141,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "20:30",
+      "forecast_utc": "2026-07-21T19:30:00+00:00",
+      "minimum_condenser_entering_c": 23.4,
+      "selected_condenser_entering_c": 23.4,
+      "electric_chiller_power_kw": 72.46370250600013,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 797.1999999999999,
+      "phe_heat_to_lthw_kw": 492.80000000000007,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1896.3159665060002,
+      "available_tower_rejection_kw": 3272.5,
+      "net_grid_kvar": -137.22092621463588,
+      "grid_kva": 401.9632907842026,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "21:00",
+      "forecast_utc": "2026-07-21T20:00:00+00:00",
+      "minimum_condenser_entering_c": 23.4,
+      "selected_condenser_entering_c": 23.4,
+      "electric_chiller_power_kw": 56.395149555000046,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 807.6,
+      "phe_heat_to_lthw_kw": 482.4,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1798.8098615550002,
+      "available_tower_rejection_kw": 3272.5,
+      "net_grid_kvar": -138.22092621463588,
+      "grid_kva": 385.25871433523486,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "21:30",
+      "forecast_utc": "2026-07-21T20:30:00+00:00",
+      "minimum_condenser_entering_c": 23.5,
+      "selected_condenser_entering_c": 23.5,
+      "electric_chiller_power_kw": 38.87805273799994,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 843.4,
+      "phe_heat_to_lthw_kw": 446.6,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1733.851960738,
+      "available_tower_rejection_kw": 3256.25,
+      "net_grid_kvar": -148.42092621463587,
+      "grid_kva": 325.28634910411336,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "22:00",
+      "forecast_utc": "2026-07-21T21:00:00+00:00",
+      "minimum_condenser_entering_c": 23.1,
+      "selected_condenser_entering_c": 23.1,
+      "electric_chiller_power_kw": 19.95089964000004,
+      "engine_ht_kw": 1290.0,
+      "absorption_generator_heat_kw": 876.7,
+      "phe_heat_to_lthw_kw": 413.29999999999995,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 201.0,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1657.5449536400001,
+      "available_tower_rejection_kw": 3321.25,
+      "net_grid_kvar": -159.92092621463587,
+      "grid_kva": 286.1116402193255,
+      "gas_entry_gross_kw": 3179.9600000000005,
+      "gas_entry_standard_m3_per_hour": 289.08727272727276
+    },
+    {
+      "start": "22:30",
+      "forecast_utc": "2026-07-21T21:30:00+00:00",
+      "minimum_condenser_entering_c": 23.1,
+      "selected_condenser_entering_c": 23.1,
+      "electric_chiller_power_kw": -2.042810365310288e-13,
+      "engine_ht_kw": 1281.5267605632,
+      "absorption_generator_heat_kw": 911.1267605633803,
+      "phe_heat_to_lthw_kw": 370.39999999981967,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 198.97583724565334,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1572.2585605633801,
+      "available_tower_rejection_kw": 3321.25,
+      "net_grid_kvar": -159.37922767755103,
+      "grid_kva": 258.68393072279633,
+      "gas_entry_gross_kw": 3148.926289827196,
+      "gas_entry_standard_m3_per_hour": 286.26602634792687
+    },
+    {
+      "start": "23:00",
+      "forecast_utc": "2026-07-21T22:00:00+00:00",
+      "minimum_condenser_entering_c": 22.8,
+      "selected_condenser_entering_c": 22.8,
+      "electric_chiller_power_kw": 1.5276668818842154e-13,
+      "engine_ht_kw": 1169.0957746476,
+      "absorption_generator_heat_kw": 819.2957746478875,
+      "phe_heat_to_lthw_kw": 349.79999999971244,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 172.11732394359333,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1413.7931746478876,
+      "available_tower_rejection_kw": 3370.0,
+      "net_grid_kvar": -102.48876434414046,
+      "grid_kva": 350.23553825711576,
+      "gas_entry_gross_kw": 2737.141557745427,
+      "gas_entry_standard_m3_per_hour": 248.8310507041297
+    },
+    {
+      "start": "23:30",
+      "forecast_utc": "2026-07-21T22:30:00+00:00",
+      "minimum_condenser_entering_c": 22.7,
+      "selected_condenser_entering_c": 22.7,
+      "electric_chiller_power_kw": 9.769962616701378e-14,
+      "engine_ht_kw": 1037.8422535214168,
+      "absorption_generator_heat_kw": 707.0422535211268,
+      "phe_heat_to_lthw_kw": 330.80000000028997,
+      "engine_lt_radiator_heat_kw": {
+        "GE1": 147.50432778493334,
+        "GE2": 0.0
+      },
+      "tower_rejection_kw": 1220.086253521127,
+      "available_tower_rejection_kw": 3386.25,
+      "net_grid_kvar": -50.342489934028066,
+      "grid_kva": 507.9623375237068,
+      "gas_entry_gross_kw": 2354.9838313963123,
+      "gas_entry_standard_m3_per_hour": 214.08943921784658
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "app": "results/checks-v20/candidates/c1/gates-r1/mutant_apps/plan_varies_between_runs",
+  "days": {
+    "h1": {
+      "cost_gbp": 6120.657801196896,
+      "delta_gbp": 0.00018111916324414779,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 6120.657620077733,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.79027909899969,
+          "sha256": "8fd38faf65b3a3a3fcf0ef0f869a47dd5831318d13fe83fcb7af106147af264d"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.786964074000025,
+          "sha256": "f325e7dc2bb55408dfb2258f8a12a460c07334eb976e468a94e5149cc83ba8c5"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8630.929843864109,
+      "delta_gbp": -2.055345248663798e-05,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 8630.929864417561,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.015248616000008,
+          "sha256": "6530a8246c438646b8f637b186c985ac426ad1360f15e5a48bbb81cbdd181a3b"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.0768990400001712,
+          "sha256": "ef3ebe2a5f38b3f852cf600d4822bd2656a22ce47535a04d96a3de57629f7156"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5242.027896042251,
+      "delta_gbp": -0.000154034877596132,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 5242.028050077129,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.4413878689997546,
+          "sha256": "d23b237be0a09b6dfcfda3943189decf25e674ac493dd13aac127c419559e996"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.745963194000069,
+          "sha256": "e700de3abcdfb06d6e289c3cacb0f5d8e627411685bd8c3b578038e45a8f9ca9"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 6933.978453059349,
+      "delta_gbp": -2.450195279379841e-05,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 6933.978477561302,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.1533688039999106,
+          "sha256": "ee92bff9d1915eff2b63e8566ba00c915ff574266191ab4779c6e826059d8c76"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.2217812919998323,
+          "sha256": "29c9090cdaa7665aa62d70f36445a8c475a709ec1d772b4dba823c9b8793ee47"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 5959.00325019005,
+      "delta_gbp": -2.8934612601005938e-05,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 5959.003279124662,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.0134594379997,
+          "sha256": "307c9f9ceb7a92ca52ab78dc20f85d8da3d01cc40ca451201983941f6a4fe3d0"
+        },
+        {
+          "returncode": 0,
+          "seconds": 3.9536079969998354,
+          "sha256": "187a5a163e38556b8ae42daf63cf8268220dcaf09922e72166c1df395567528c"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "c0548f4549b0a32d24138705a52d27b17404c8b9b5e2c0f507d05c5540300a5a",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "95d1ed1e2dac94b135ce1b2b3c38b09c94a1f25307c7f2befe86c9128e6dd0bb",
+    "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

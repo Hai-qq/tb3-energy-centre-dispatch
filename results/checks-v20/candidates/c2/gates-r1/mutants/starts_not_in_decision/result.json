@@ -1,0 +1,115 @@
+{
+  "app": "results/checks-v20/candidates/c2/gates-r1/mutant_apps/starts_not_in_decision",
+  "days": {
+    "h1": {
+      "cost_gbp": 6457.6330374820955,
+      "delta_gbp": 30.98557037905357,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.7318538089998583,
+          "sha256": "446ce8ed01d8453554a39beefb38e06fa4410def7b7d44003d9abe110adcf91d"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.907387030999871,
+          "sha256": "446ce8ed01d8453554a39beefb38e06fa4410def7b7d44003d9abe110adcf91d"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8973.72005412872,
+      "delta_gbp": -4.668373367167078e-05,
+      "failures": {},
+      "milp_gbp": 8973.720100812454,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.494151243000033,
+          "sha256": "5c0424ac43bf672382d005814deb89c37cf257ec9774098915abcdc375ddb6df"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.5685904729998583,
+          "sha256": "5c0424ac43bf672382d005814deb89c37cf257ec9774098915abcdc375ddb6df"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5399.393293532863,
+      "delta_gbp": 23.855253063578857,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.7417759820000356,
+          "sha256": "3ec436d9b983f021698ec2020496717de1142eaef87a3881d0a6bef8d5fc5257"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.6290871840001273,
+          "sha256": "3ec436d9b983f021698ec2020496717de1142eaef87a3881d0a6bef8d5fc5257"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.090526809000039,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8752530400001888,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6349.048954748249,
+      "delta_gbp": 45.488635321696165,
+      "failures": {
+        "test_least_cost": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 131, in test_least_cost\n    assert flows[\"cost\"].sum() <= best + max(0.5, 2e-4 * best)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.3031906940000226,
+          "sha256": "cd75de30c32778bc01777f7a26dafcc9ee63ca884583647c9e45178fc1843814"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9101037049999832,
+          "sha256": "cd75de30c32778bc01777f7a26dafcc9ee63ca884583647c9e45178fc1843814"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "6e5cb4654bb90da669076680ab6b51b65a2d0dc3d382ea74caf8f039c90c512e",
+    "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "planner/tariff.py": "e034a8c359d5b0903ffcf3475626ad25597f3ca2cfa912a7dc2791b457046e27"
+  }
+}

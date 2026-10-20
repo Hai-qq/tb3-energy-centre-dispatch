@@ -1,0 +1,220 @@
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/environment/data/plant.json results/checks-v21/candidates/p/task/environment/data/plant.json
+--- tasks/energy-centre-dispatch/environment/data/plant.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/environment/data/plant.json	2026-10-18 18:47:45
+@@ -189,7 +189,8 @@
+       ],
+       "to": [
+         "LT radiator 1"
+-      ]
++      ],
++      "pump": "LT pump 1"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -199,7 +200,8 @@
+       ],
+       "to": [
+         "LT radiator 2"
+-      ]
++      ],
++      "pump": "LT pump 2"
+     },
+     "lthw": {
+       "flow_c": 80,
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/solution/app/planner/plant.py results/checks-v21/candidates/p/task/solution/app/planner/plant.py
+--- tasks/energy-centre-dispatch/solution/app/planner/plant.py	2026-10-18 09:20:13
++++ results/checks-v21/candidates/p/task/solution/app/planner/plant.py	2026-10-18 18:47:45
+@@ -93,9 +93,10 @@
+ class Plant:
+     def __init__(self, d: dict):
+         self.engines = [Engine(x) for x in d["engines"]]
+-        # Every outlet of an intercooler circuit is needed to reject its LT heat.
++        # Every outlet and pump of an intercooler circuit is needed to reject its LT heat.
+         self.engine_lt_sinks = {e.id: tuple(item for c in d["heat_circuits"].values()
+-                                          if f"{e.id} intercooler" in c["from"] for item in c["to"])
++                                          if f"{e.id} intercooler" in c["from"]
++                                          for item in c["to"] + ([c["pump"]] if "pump" in c else []))
+                                 for e in self.engines}
+         self.boilers = [Boiler(x) for x in d["boilers"]]
+         self.electric_chillers = [ElectricChiller(x) for x in d["electric_chillers"]]
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h1/plant.json results/checks-v21/candidates/p/task/tests/days/h1/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h1/plant.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/h1/plant.json	2026-10-18 18:47:45
+@@ -189,7 +189,8 @@
+       ],
+       "to": [
+         "LT radiator 1"
+-      ]
++      ],
++      "pump": "LT pump 1"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -199,7 +200,8 @@
+       ],
+       "to": [
+         "LT radiator 2"
+-      ]
++      ],
++      "pump": "LT pump 2"
+     },
+     "lthw": {
+       "flow_c": 80,
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h1/status.json results/checks-v21/candidates/p/task/tests/days/h1/status.json
+--- tasks/energy-centre-dispatch/tests/days/h1/status.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/h1/status.json	2026-10-18 18:48:22
+@@ -19,6 +19,11 @@
+       "unit": "GE1",
+       "from": "11:20",
+       "to": "17:00"
++    },
++    {
++      "unit": "LT pump 1",
++      "from": "18:10",
++      "to": "19:20"
+     }
+   ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h2/plant.json results/checks-v21/candidates/p/task/tests/days/h2/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h2/plant.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/h2/plant.json	2026-10-18 18:47:45
+@@ -189,7 +189,8 @@
+       ],
+       "to": [
+         "LT radiator 1"
+-      ]
++      ],
++      "pump": "LT pump 1"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -199,7 +200,8 @@
+       ],
+       "to": [
+         "LT radiator 2"
+-      ]
++      ],
++      "pump": "LT pump 2"
+     },
+     "lthw": {
+       "flow_c": 80,
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h3/plant.json results/checks-v21/candidates/p/task/tests/days/h3/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h3/plant.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/h3/plant.json	2026-10-18 18:47:45
+@@ -189,7 +189,8 @@
+       ],
+       "to": [
+         "LT radiator 1"
+-      ]
++      ],
++      "pump": "LT pump 1"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -199,7 +200,8 @@
+       ],
+       "to": [
+         "LT radiator 2"
+-      ]
++      ],
++      "pump": "LT pump 2"
+     },
+     "lthw": {
+       "flow_c": 80,
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h3/status.json results/checks-v21/candidates/p/task/tests/days/h3/status.json
+--- tasks/energy-centre-dispatch/tests/days/h3/status.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/h3/status.json	2026-10-18 18:48:22
+@@ -21,6 +21,11 @@
+       "unit": "EC1",
+       "from": "13:40",
+       "to": "16:20"
++    },
++    {
++      "unit": "LT pump 2",
++      "from": "17:10",
++      "to": "17:20"
+     }
+   ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h4/plant.json results/checks-v21/candidates/p/task/tests/days/h4/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h4/plant.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/h4/plant.json	2026-10-18 18:47:45
+@@ -189,7 +189,8 @@
+       ],
+       "to": [
+         "LT radiator 1"
+-      ]
++      ],
++      "pump": "LT pump 1"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -199,7 +200,8 @@
+       ],
+       "to": [
+         "LT radiator 2"
+-      ]
++      ],
++      "pump": "LT pump 2"
+     },
+     "lthw": {
+       "flow_c": 80,
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/visible/plant.json results/checks-v21/candidates/p/task/tests/days/visible/plant.json
+--- tasks/energy-centre-dispatch/tests/days/visible/plant.json	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/days/visible/plant.json	2026-10-18 18:47:45
+@@ -189,7 +189,8 @@
+       ],
+       "to": [
+         "LT radiator 1"
+-      ]
++      ],
++      "pump": "LT pump 1"
+     },
+     "ge2_lt": {
+       "flow_c": 40,
+@@ -199,7 +200,8 @@
+       ],
+       "to": [
+         "LT radiator 2"
+-      ]
++      ],
++      "pump": "LT pump 2"
+     },
+     "lthw": {
+       "flow_c": 80,
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/reference.py results/checks-v21/candidates/p/task/tests/reference.py
+--- tasks/energy-centre-dispatch/tests/reference.py	2026-10-18 09:19:46
++++ results/checks-v21/candidates/p/task/tests/reference.py	2026-10-18 18:47:45
+@@ -105,6 +105,7 @@
+                   for part in ("generator", "absorber and condenser")]
+         circuits = self.plant["heat_circuits"].values()
+         units += [item for c in circuits for item in c["from"] + c["to"]]
++        units += [c["pump"] for c in circuits if "pump" in c]
+         self.available = {u: np.ones(N, dtype=bool) for u in units}
+         for o in self.status.get("outages", []):
+             a, b = _hm(o["from"]), _hm(o["to"])
+@@ -116,7 +117,7 @@
+             self.available[e["id"]] &= self.available[f"{e['id']} intercooler"]
+             for circuit in circuits:
+                 if f"{e['id']} intercooler" in circuit["from"]:
+-                    for item in circuit["to"]:
++                    for item in circuit["to"] + ([circuit["pump"]] if "pump" in circuit else []):
+                         self.available[e["id"]] &= self.available[item]
+             self.available[e["id"]] &= self.available[f"{e['id']} jacket water and exhaust"]
+         for c in self.plant["electric_chillers"]:
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/test_plans.py results/checks-v21/candidates/p/task/tests/test_plans.py
+--- tasks/energy-centre-dispatch/tests/test_plans.py	2026-10-17 22:42:45
++++ results/checks-v21/candidates/p/task/tests/test_plans.py	2026-10-18 18:47:45
+@@ -129,3 +129,12 @@
+     day, _, flows = case
+     best = day.least_cost()["cost"]
+     assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
++
++
++def test_lt_pump_outages(case):
++    day, plan, _ = case
++    for engine in day.engines:
++        for circuit in day.plant["heat_circuits"].values():
++            if f"{engine['id']} intercooler" in circuit["from"] and "pump" in circuit:
++                unavailable = ~day.available[circuit["pump"]]
++                assert (series(plan, "engines_kwe", engine["id"])[unavailable] <= 0.5).all()

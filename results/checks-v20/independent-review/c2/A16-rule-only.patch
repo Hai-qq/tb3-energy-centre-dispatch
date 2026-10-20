@@ -1,0 +1,33 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -259,6 +259,20 @@
+             row[self.iA + j] = 1.0 + 1.0 / a.cop + (a.aux_per_kw if self.absorber_aux_to_towers else 0.0)
+         put(False, row, max(self.tower_capacity - TOWER_MARGIN, 0.0))
+ 
++        entry = tariff.review_gas_entry
++        if entry is not None:
++            row = np.zeros(n)
++            fuel_const = 0.0
++            for j, (e, s) in enumerate(zip(plant.engines, segs)):
++                if s is not None and e.id in entry["supplies"]:
++                    row[self.iP + j] = tariff.billed_gas(s.fuel_slope, e.fuel_basis)
++                    fuel_const += tariff.billed_gas(s.fuel_lo - s.fuel_slope * s.lo, e.fuel_basis)
++            for j, b in enumerate(plant.boilers):
++                if b.id in entry["supplies"]:
++                    row[self.iB + j] = tariff.billed_gas(1.0 / b.efficiency, b.fuel_basis)
++            put(False, row, entry["maximum_standard_m3_per_hour"] *
++                entry["gross_calorific_value_mj_per_standard_m3"] / 3.6 - fuel_const)
++
+         kq = np.zeros(n)  # reactive power from the generators per kW of their output
+         for j, (e, s) in enumerate(zip(plant.engines, segs)):
+             if s is not None:
+--- a/planner/tariff.py
++++ b/planner/tariff.py
+@@ -22,6 +22,7 @@
+         self.import_capacity_kva = float(el["import_capacity_kva"])
+         self.export_limit_kw = float(el["export_limit_kw"])
+         gas = supply["gas"]
++        self.review_gas_entry = gas.get("entry")
+         self.gas_rate = gas["rate_p_per_kwh"] / 100.0
+         self.gas_basis = gas["billing_basis"]
+         self.gross_per_net = gas["gross_to_net_cv_ratio"]

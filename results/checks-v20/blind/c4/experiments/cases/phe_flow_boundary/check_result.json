@@ -1,0 +1,72 @@
+{
+  "name": "phe_flow_boundary",
+  "description": "With both boilers unavailable, PHE transfers exactly its 1672 kW hydraulic capacity.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 10006.114719999998,
+      "gas_kwh": 129237.1200000001,
+      "import_kwh": 16800.0,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 8.526512829121202e-14,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 1615.2646153846154,
+      "phe_kw": 1672.0,
+      "apparent_import_kva": 707.1067811865476,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 48,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.3608321220008293,
+    2.0998430119998375
+  ],
+  "plan_sha256": "ad393191ec162378717e689c3267002e327645725b25f0be4fbd368d8996f614",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 10006.114720000001,
+    "lower_bound_gbp": 10006.114719999998,
+    "absolute_gap_gbp": 3.637978807091713e-12,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.06758841800001392,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 10006.114719999998,
+        "incumbent_gbp": 10006.114719999998,
+        "candidate_gap_gbp": 3.637978807091713e-12,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 10006.114720000001,
+  "improvement_over_witness_gbp": 0.0,
+  "total_seconds": 3.5429838930003825
+}

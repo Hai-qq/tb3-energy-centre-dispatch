@@ -1,0 +1,95 @@
+{
+  "command_source": "results/checks-v20/research/ADDITIONAL_DESIGN_AUDIT.md",
+  "command_source_sha256": "1879334c068161c4a0ccd4cbd5c89c57bd2fae8916d64d28a94648f14a26f9c4",
+  "returncode": 0,
+  "records": [
+    {
+      "app": "A16",
+      "cost_gbp": 5390.732890685639,
+      "elapsed_s": 1.0569414980000147,
+      "grid_failed_periods": 4,
+      "lt_outage_window_kw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_lt_kw": 252.1946153846154,
+      "period_1200": {
+        "boilers_kw": {
+          "B1": 2000.0,
+          "B2": 75.0
+        },
+        "chillers_kw": {
+          "AC1": -0.0,
+          "EC1": 500.0,
+          "EC2": 0.0
+        },
+        "cost_gbp": 199.97396748063227,
+        "engines_kwe": {
+          "GE1": 0.0,
+          "GE2": 0.0
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 1150.1530985821742,
+        "grid_ok": false,
+        "import_kw": 1326.923076923077,
+        "pv_kw": 0.0,
+        "start": "12:00"
+      },
+      "probe": "unapproved shared-LT graph surrogate, not an NHS-validated candidate",
+      "starts": 3
+    },
+    {
+      "app": "A19",
+      "cost_gbp": 4934.822204468848,
+      "elapsed_s": 0.8843134529997769,
+      "grid_failed_periods": 0,
+      "lt_outage_window_kw": [
+        252.1946153846154,
+        252.1946153846154,
+        252.1946153846154,
+        252.1946153846154
+      ],
+      "maximum_lt_kw": 252.1946153846154,
+      "period_1200": {
+        "boilers_kw": {
+          "B1": 296.22307692307686,
+          "B2": 0.0
+        },
+        "chillers_kw": {
+          "AC1": 0.0,
+          "EC1": 500.0,
+          "EC2": 0.0
+        },
+        "cost_gbp": 102.24629592643433,
+        "engines_kwe": {
+          "GE1": 900.0,
+          "GE2": 482.9230769230769
+        },
+        "export_kw": 0.0,
+        "gas_kwh": 2167.310958521037,
+        "grid_ok": true,
+        "import_kw": 0.0,
+        "pv_kw": 0.0,
+        "start": "12:00"
+      },
+      "probe": "unapproved shared-LT graph surrogate, not an NHS-validated candidate",
+      "starts": 1
+    },
+    {
+      "available_lt_capacity_kw": 220,
+      "certificate": "constant GE1 full output; GE2 and AC1 stopped; EC1=500; B1=785",
+      "electric_cop": 6.5,
+      "grid_p_kw": 158.9230769230769,
+      "grid_q_kvar": 55.57907378536419,
+      "grid_s_kva": 168.36144992704587,
+      "ht_kw": 1290,
+      "lt_kw": 201,
+      "lthw_delivered_kw": 2000,
+      "tower_capacity_kw": 3500,
+      "tower_kw": 576.9230769230769
+    }
+  ],
+  "scope": "Post-audit root in-memory model replay; not a visible candidate, CLI gate, or NHS-authenticated topology."
+}

@@ -1,0 +1,109 @@
+{
+  "app": "results/checks-v20/candidates/c4/task/solution/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.647743955096,
+      "delta_gbp": 0.0002768520544123021,
+      "failures": {},
+      "milp_gbp": 6426.647467103042,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8812493850000465,
+          "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.138080431000162,
+          "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 9107.675997180833,
+      "delta_gbp": 0.0001009803672786802,
+      "failures": {},
+      "milp_gbp": 9107.675896200466,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.3250632169997516,
+          "sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.713913871999921,
+          "sha256": "6caaf6138a1f3be761b55748a019902ca2b944e4e7b864bd95bd6a05f27842c1"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {},
+      "milp_gbp": 5375.538040469284,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.6788368160000573,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.514366554999924,
+          "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.9380894060000173,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8775136440003735,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.5140779409998686,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.335234958000001,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "89154c25507514687599259734b7198b4d56cde225e309addf93b6cbbcf544ec",
+    "planner/plant.py": "fe12a7f73a161eadcc9bd32dd5fcc65bacb71ad95b50ff08c1cf07ccf5a72206",
+    "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+  }
+}

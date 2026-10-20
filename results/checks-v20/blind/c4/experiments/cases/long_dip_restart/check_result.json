@@ -1,0 +1,70 @@
+{
+  "name": "long_dip_restart",
+  "description": "Economic shutdown decision across a low-demand interval with initial engine running.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 3727.1989319708305,
+      "gas_kwh": 27346.333373278347,
+      "import_kwh": 10213.28667388948,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 4.263256414560601e-14,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 963.3802816901409,
+      "phe_kw": 75.0,
+      "apparent_import_kva": 484.2792564757672,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 38,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    0.9178887520001808,
+    0.9060125300002255
+  ],
+  "plan_sha256": "11f16c3317f502a6ee63463b2107e7dc9d792299105888a7ab48f704bbae2367",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 3727.1989319708287,
+    "lower_bound_gbp": 3727.1989319708287,
+    "absolute_gap_gbp": 0.0,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.03715168300004734,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 3727.1989319708287,
+        "incumbent_gbp": 3727.1989319708287,
+        "candidate_gap_gbp": 0.0,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "total_seconds": 1.8721700719997898
+}

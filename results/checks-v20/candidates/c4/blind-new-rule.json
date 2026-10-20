@@ -1,0 +1,82 @@
+{
+  "candidate": "c4",
+  "rule": "(engine_heat-ac_heat)/(4.18*(90-70)) <= 20 kg/s",
+  "new_rule_correct": true,
+  "whole_task_passed": false,
+  "days": {
+    "visible": {
+      "source_plan": "results/checks-v20/candidates/c4/blind-eval/blind/visible.json",
+      "source_sha256": "18b4549413669908993d72ad5b166f828b1aa873fb5cc3e838718b09a3118eaa",
+      "peak_flow_kg_per_s": 6.980861244019139,
+      "peak_period_start": "07:30",
+      "periods_at_flow_limit": 0,
+      "periods_above_limit_plus_0_01": 0,
+      "old_availability_violation_starts": []
+    },
+    "h1": {
+      "source_plan": "results/checks-v20/candidates/c4/blind-eval/blind/h1.json",
+      "source_sha256": "bec74611532a21d70b15b7a054dddc2cac91006b63880935195324f8b37f2c95",
+      "peak_flow_kg_per_s": 6.003588516746413,
+      "peak_period_start": "07:30",
+      "periods_at_flow_limit": 0,
+      "periods_above_limit_plus_0_01": 0,
+      "old_availability_violation_starts": [
+        "07:00",
+        "07:30",
+        "08:00",
+        "08:30",
+        "09:00"
+      ]
+    },
+    "h2": {
+      "source_plan": "results/checks-v20/candidates/c4/blind-eval/blind/h2.json",
+      "source_sha256": "f179f99f5a67d05f82719bd8d678c14608688557b3f8035acf289874f7391eec",
+      "peak_flow_kg_per_s": 20.000000000000004,
+      "peak_period_start": "09:30",
+      "periods_at_flow_limit": 27,
+      "periods_above_limit_plus_0_01": 0,
+      "old_availability_violation_starts": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "18:00",
+        "18:30"
+      ]
+    },
+    "h3": {
+      "source_plan": "results/checks-v20/candidates/c4/blind-eval/blind/h3.json",
+      "source_sha256": "609652ee62a8fda7d21520a869dfede762b9cbc4d31171f6618633b50acc0a71",
+      "peak_flow_kg_per_s": 19.265550239234454,
+      "peak_period_start": "07:00",
+      "periods_at_flow_limit": 0,
+      "periods_above_limit_plus_0_01": 0,
+      "old_availability_violation_starts": [
+        "07:00",
+        "07:30",
+        "08:00",
+        "08:30",
+        "09:00",
+        "09:30",
+        "10:00",
+        "12:30"
+      ]
+    },
+    "h4": {
+      "source_plan": "results/checks-v20/candidates/c4/blind-eval/blind/h4.json",
+      "source_sha256": "2e2af98bf6fcb468846a885d1aafdbc5702cd96cb265f61c5ca2f2d5b8387dad",
+      "peak_flow_kg_per_s": 5.830143540669857,
+      "peak_period_start": "05:30",
+      "periods_at_flow_limit": 0,
+      "periods_above_limit_plus_0_01": 0,
+      "old_availability_violation_starts": [
+        "04:00",
+        "04:30",
+        "05:00",
+        "05:30"
+      ]
+    }
+  }
+}

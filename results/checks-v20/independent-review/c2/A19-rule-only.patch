@@ -1,0 +1,34 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -220,6 +220,21 @@
+     # connection: active^2 + reactive^2 <= capacity^2, where the active power is the import or the
+     # export and the reactive power from the grid is the site's less what the engines' generators
+     # supply. Tangent planes are added until it holds.
++    entry = tariff.review_gas_entry
++    if entry is not None:
++        row = np.zeros(n)
++        fuel_const = 0.0
++        for j, (e, s) in enumerate(run):
++            if e.id in entry["supplies"]:
++                row[j] = tariff.billed_gas(s.fuel_slope, e.fuel_basis)
++                fuel_const += tariff.billed_gas(s.fuel_at_zero, e.fuel_basis)
++        for j, b in enumerate(boilers):
++            if b.id in entry["supplies"]:
++                row[iB + j] = tariff.billed_gas(1.0 / b.efficiency, b.fuel_basis)
++        A_ub.append(row)
++        b_ub.append(entry["maximum_standard_m3_per_hour"] *
++                    entry["gross_calorific_value_mj_per_standard_m3"] / 3.6 - fuel_const)
++
+     radius = tariff.import_capacity_kva - KVA_MARGIN
+ 
+     def tangent(theta: float) -> None:
+--- a/planner/tariff.py
++++ b/planner/tariff.py
+@@ -25,6 +25,7 @@
+         self.import_capacity_kva = float(el["import_capacity_kva"])
+         self.export_limit_kw = float(el["export_limit_kw"])
+         gas = supply["gas"]
++        self.review_gas_entry = gas.get("entry")
+         self.gas_rate = gas["rate_p_per_kwh"] / 100.0
+         self.gas_basis = gas["billing_basis"]
+         self.gross_per_net = gas["gross_to_net_cv_ratio"]

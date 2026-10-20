@@ -1,0 +1,119 @@
+{
+  "app": "results/checks-v20/candidates/c2/gates-r1/mutant_apps/plan_varies_between_runs",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.647743955096,
+      "delta_gbp": 0.0002768520544123021,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.111255103000076,
+          "sha256": "ea3306b26a52a69fa12add9184351ba675215d1118b918757893424293a4b0d8"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.7222159810003177,
+          "sha256": "893ad5a3b06352f7af183a86cb741b5d2819a18ab52ec0732e0f02463bbecd4f"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8973.72005412872,
+      "delta_gbp": -4.668373367167078e-05,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 8973.720100812454,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.5848561049997443,
+          "sha256": "7b35ea5826831edf490195ce08190d709a735b4117aad46260ba142a699b9856"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.6108209590001934,
+          "sha256": "2c662afaf854a57d87554e866adc816f49407ce67c49830c5d4b0512fac110fc"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5375.538030470144,
+      "delta_gbp": -9.999140274885576e-06,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.0915969950001454,
+          "sha256": "aeab75485d4310d8e0fd27d8e4319408fcac1dd8d4641e678da60ae73e93f442"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9020141850000982,
+          "sha256": "5a12ea0ff6e97a362be6de94081c98bf9336e9b8fc48843c3483b496755dd5f3"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.793329148000339,
+          "sha256": "a3191d7633bfb4b242fd1185bc3e558a4abdbabee77b188c3996c0b05fafcd36"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.970325197999955,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "milp_gbp": 6303.560319426553,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.307172896999873,
+          "sha256": "8b97d92c45cb884a4c6289be120c7c230eb91d5d7b969a485ffe24efc61b0ce8"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9709702059999472,
+          "sha256": "3c56ac40c96acdeb18de24d0bfd66e210eb00af5a5db356288540c2c8f190c14"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "c0548f4549b0a32d24138705a52d27b17404c8b9b5e2c0f507d05c5540300a5a",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "ea0f6a0e0e94fd4c39d42b12d038eb1bceebd3b6118378b04495c54af5040a5f",
+    "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "planner/tariff.py": "e034a8c359d5b0903ffcf3475626ad25597f3ca2cfa912a7dc2791b457046e27"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "base_commit": "5ae65f8cfb79209ce8a1c2959bc348d430fed23e",
+  "environment_changed_files": [
+    "data/demand.csv",
+    "data/plant.json",
+    "planner/data.py",
+    "planner/optimize.py",
+    "planner/plant.py"
+  ],
+  "all_task_changed_files": [
+    "README.md",
+    "environment/data/demand.csv",
+    "environment/data/plant.json",
+    "environment/planner/data.py",
+    "environment/planner/optimize.py",
+    "environment/planner/plant.py",
+    "instruction.md",
+    "solution/app/planner/data.py",
+    "solution/app/planner/optimize.py",
+    "solution/app/planner/plant.py",
+    "tests/days/h1/demand.csv",
+    "tests/days/h1/plant.json",
+    "tests/days/h2/demand.csv",
+    "tests/days/h2/plant.json",
+    "tests/days/h3/demand.csv",
+    "tests/days/h3/plant.json",
+    "tests/days/h3/status.json",
+    "tests/days/h4/demand.csv",
+    "tests/days/h4/plant.json",
+    "tests/days/visible/demand.csv",
+    "tests/days/visible/plant.json",
+    "tests/reference.py",
+    "tests/test_plans.py"
+  ],
+  "source_sha256": {
+    "data/demand.csv": "873ba46026b564283048296cb9c2fc59a86d4b37f75d09eea29b395eb34ec31b",
+    "data/plant.json": "9a06986c88f8e8e8c99b5dc80ae000f3a61d7393dc0d862fd0fbfc96d4e8f295",
+    "planner/data.py": "78d95acedcbea97bfbf8ab8a70988d59808b3dba6c9f37afb752f7ee9f9c1502",
+    "planner/optimize.py": "38c05d35f274908eb7145524768912796af3a4509e299c5493985d200afca261",
+    "planner/plant.py": "b2b6baf97a972bcaa821c9e91fa7e415618234b06b436a5c2cbdf675764f457e"
+  },
+  "instruction_only_named_sentence_changed": true,
+  "all_six_original_plants_byte_identical": true,
+  "existing_tests_preserved_except_heat_assertion": true,
+  "new_tests": 0,
+  "complete_file_inventory_preserved": true
+}

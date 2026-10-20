@@ -1,0 +1,42 @@
+diff -ru results/v19-trials/ecd19-run2-claude/app/planner/optimize.py <scratchpad>/v22-eval/a19-d/planner/optimize.py
+--- results/v19-trials/ecd19-run2-claude/app/planner/optimize.py	2026-10-18 11:29:01
++++ <scratchpad>/v22-eval/a19-d/planner/optimize.py	2026-10-19 11:20:33
+@@ -57,6 +57,7 @@
+         known |= {c.id for c in plant.electric_chillers} | {a.id for a in plant.absorption_chillers}
+         known |= set(plant.tower_cells) | set(plant.heat_exchangers)
+         known |= {x for sinks in plant.lt_sinks.values() for x in sinks}
++        known |= set(plant.lt_radiators)  # format adaptation
+         if plant.pv_id:
+             known.add(plant.pv_id)
+         self._spans: dict[str, list[tuple[int, int]]] = {}
+diff -ru results/v19-trials/ecd19-run2-claude/app/planner/plant.py <scratchpad>/v22-eval/a19-d/planner/plant.py
+--- results/v19-trials/ecd19-run2-claude/app/planner/plant.py	2026-10-18 10:29:01
++++ <scratchpad>/v22-eval/a19-d/planner/plant.py	2026-10-19 11:20:33
+@@ -41,7 +41,7 @@
+         points = sorted(d["part_load"], key=lambda p: p["kwe"])
+         self._kwe = np.array([p["kwe"] for p in points], dtype=float)
+         self._fuel = np.array([p["fuel_kw"] for p in points], dtype=float)
+-        self._ht = np.array([p["ht_heat_kw"] for p in points], dtype=float)
++        self._ht = np.array([p["jacket_water_heat_kw"] + p["exhaust_heat_kw"] for p in points], dtype=float)  # format adaptation
+         self.min_kwe = float(self._kwe[0])
+         self.rated_kwe = float(d["rated_kwe"])
+         if len(points) < 2 or abs(self._kwe[-1] - self.rated_kwe) > 1e-6:
+@@ -121,6 +121,7 @@
+ class Plant:
+     def __init__(self, d: dict):
+         self.engines = [Engine(x) for x in d["engines"]]
++        self.lt_radiators = [r["id"] for r in d.get("lt_radiators", [])]  # format adaptation
+         self.boilers = [Boiler(x) for x in d["boilers"]]
+         self.electric_chillers = [ElectricChiller(x) for x in d["electric_chillers"]]
+         self.absorption_chillers = [AbsorptionChiller(x) for x in d["absorption_chillers"]]
+@@ -151,8 +152,8 @@
+                 raise ValueError(f"heat circuits: '{source}' must feed exactly one circuit")
+             return hits[0]
+ 
+-        ht_name, ht = find(f"{self.engines[0].id} jacket water and exhaust")
+-        if set(ht["from"]) != {f"{e.id} jacket water and exhaust" for e in self.engines}:
++        ht_name, ht = find(f"{self.engines[0].id} jacket water heat exchanger")  # format adaptation
++        if set(ht["from"]) != {f"{e.id} {part} heat exchanger" for e in self.engines for part in ("jacket water", "exhaust")}:
+             raise ValueError(f"heat circuits: {ht_name} must collect the HT heat of every engine")
+         lthw_names = {find(b.id)[0] for b in self.boilers}
+         if len(lthw_names) != 1:

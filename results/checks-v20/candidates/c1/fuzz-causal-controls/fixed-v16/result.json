@@ -1,0 +1,52 @@
+{
+  "app": "results/checks-v20/audit/arbitrage/diagnostic-direction-fixed/v16/app",
+  "days": {
+    "d0217": {
+      "cost_gbp": 6029.9401302253045,
+      "delta_gbp": -0.00011350605655024992,
+      "failures": {},
+      "milp_gbp": 6029.940243731361,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.095118762999846,
+          "sha256": "f403c6a8a5fe9199337da187aff2d38d5187e2c68e4adf60bd6244e6d082d12b"
+        },
+        {
+          "returncode": 0,
+          "seconds": 4.326010026999938,
+          "sha256": "f403c6a8a5fe9199337da187aff2d38d5187e2c68e4adf60bd6244e6d082d12b"
+        }
+      ]
+    },
+    "d0229": {
+      "cost_gbp": 6462.758598738806,
+      "delta_gbp": 0.002523572829886689,
+      "failures": {},
+      "milp_gbp": 6462.756075165976,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 4.434276412000145,
+          "sha256": "a70af1337645a02625a1bc7dd425ce703fca1af92d3ea313db832c18d04cd529"
+        },
+        {
+          "returncode": 0,
+          "seconds": 6.415100336999785,
+          "sha256": "a70af1337645a02625a1bc7dd425ce703fca1af92d3ea313db832c18d04cd529"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+    "planner/optimize.py": "b357a2f091c3234695c79c2a027ae6b3776097b0221a2022c1221d2d65424a9a",
+    "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+    "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+  }
+}

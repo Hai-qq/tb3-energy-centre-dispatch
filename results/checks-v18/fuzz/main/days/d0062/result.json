@@ -1,0 +1,52 @@
+{
+  "id": "d0062",
+  "index": 61,
+  "season": "spring",
+  "scenario": 7,
+  "base": "h3",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0006923076923328608,
+      "max_heat_balance_kw": 0.0008225352112276596,
+      "max_tower_excess_kw": -1696.1625135427953,
+      "max_grid_excess_kva": 440.44066235924265,
+      "recomputed_cost_gbp": 6099.257647732324,
+      "elapsed_seconds": 3.077693,
+      "stderr": "warning: 21:00: the demand cannot be met within the connection's capacity\nwarning: 21:30: the demand cannot be met within the connection's capacity\nwarning: 22:00: the demand cannot be met within the connection's capacity\nwarning: 22:30: the demand cannot be met within the connection's capacity\nwarning: 23:00: the demand cannot be met within the connection's capacity\nwarning: 23:30: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 21:00')",
+      "elapsed_seconds": 2.512738
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0006923076923328608,
+      "max_heat_balance_kw": 0.0008225352112276596,
+      "max_tower_excess_kw": -1696.1625135427953,
+      "max_grid_excess_kva": 440.44066235924265,
+      "recomputed_cost_gbp": 6099.257647732324,
+      "elapsed_seconds": 2.763871
+    }
+  },
+  "reference_extension": null,
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.2941107189999457
+  }
+}

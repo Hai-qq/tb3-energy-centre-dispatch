@@ -1,0 +1,18 @@
+  planner failed on h2: exit 1: ValueError: outage of LT radiator 1, which is not in plant.json
+  planner failed on h2.rerun: exit 1: ValueError: outage of LT radiator 1, which is not in plant.json
+  planner failed on h3: exit 1: ValueError: outage of LT radiator 2, which is not in plant.json
+  planner failed on h3.rerun: exit 1: ValueError: outage of LT radiator 2, which is not in plant.json
+  planner failed on h4: exit 1: ValueError: outage of LT radiator 1, which is not in plant.json
+  planner failed on h4.rerun: exit 1: ValueError: outage of LT radiator 1, which is not in plant.json
+  FAIL test_connection_limits: h2,h3,h4
+  FAIL test_cooling_balance: h2,h3,h4
+  FAIL test_cooling_towers: h2,h3,h4
+  FAIL test_electricity_balance: h2,h3,h4
+  FAIL test_heat_balance: h2,h3,h4
+  FAIL test_least_cost: h2,h3,h4
+  FAIL test_lt_heat_rejection: h2,h3,h4
+  FAIL test_plan_covers_the_day: h2,h3,h4
+  FAIL test_reported_gas_and_cost: h2,h3,h4
+  FAIL test_reported_import_export_and_grid_flags: h2,h3,h4
+  FAIL test_same_plan_every_time: h2,h3,h4
+  FAIL test_units_within_ratings_and_availability: h2,h3,h4

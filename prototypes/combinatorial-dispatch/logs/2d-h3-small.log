@@ -1,0 +1,52 @@
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [2e-02, 1e+03]
+  Cost   [2e-02, 4e+01]
+  Bound  [1e+00, 3e+03]
+  RHS    [1e+00, 4e+03]
+Presolving model
+2342 rows, 2111 cols, 9184 nonzeros  0s
+2193 rows, 1960 cols, 9004 nonzeros  0s
+
+Solving MIP model with:
+   2193 rows
+   1960 cols (480 binary, 0 integer, 2 implied int., 1478 continuous)
+   9004 nonzeros
+MIP-Timing:      0.0091 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -6630.029677    inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   10442.380742    inf                  inf        0      0      3      1521     0.0s
+ R       0       0         0   0.00%   10565.761289    11098.011331       4.80%      643    156      3      1952     0.1s
+ L       0       0         0   0.00%   10614.517614    10614.631053       0.00%     2913    326    102      2697     0.7s
+         1       0         1 100.00%   10614.517614    10614.631053       0.00%     2913    326    102      5054     0.7s
+
+Solving report
+  Status            Optimal
+  Primal bound      10614.631053
+  Dual bound        10614.5176141
+  Gap               0.00107% (tolerance: 0.01%)
+  P-D integral      0.02635379898
+  Solution status   feasible
+                    10614.631053 (objective)
+                    0 (bound viol.)
+                    8.881784197e-15 (int. viol.)
+                    0 (row viol.)
+  Timing            0.66 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 4
+  Nodes             1
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     5054 (total)
+                    0 (strong br.)
+                    1176 (separation)
+                    2357 (heuristics)
+SUMMARY days=2 base=h3 store=small vars=2112 binaries=480 rows=2392 nnz=9431 build=0.00s solve=0.7s status=0 cost=10614.63 bound=10614.52 gap=1.0687032063770055e-05

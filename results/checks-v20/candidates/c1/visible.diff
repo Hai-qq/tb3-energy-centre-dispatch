@@ -1,0 +1,29 @@
+--- v19/app/data/supply.json
++++ c1/app/data/supply.json
+@@ -8,7 +8,7 @@
+         {
+           "from": "00:00",
+           "to": "07:00",
+-          "rate": 13.8
++          "rate": 7.0
+         },
+         {
+           "from": "07:00",
+@@ -30,7 +30,7 @@
+         {
+           "from": "00:00",
+           "to": "07:00",
+-          "rate": 13.8
++          "rate": 7.0
+         },
+         {
+           "from": "07:00",
+@@ -39,7 +39,7 @@
+         }
+       ]
+     },
+-    "export_rate_p_per_kwh": 5.9
++    "export_rate_p_per_kwh": 12.0
+   },
+   "gas": {
+     "rate_p_per_kwh": 4.35,

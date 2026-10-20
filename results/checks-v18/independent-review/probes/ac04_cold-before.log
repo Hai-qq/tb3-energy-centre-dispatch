@@ -1,0 +1,26 @@
+$ PLANS_DIR=/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/probe-plans/ac04_cold-before /private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python -m pytest -q -p no:cacheprovider '--junitxml=/Users/haiy_qq/Desktop/工作/klavis/results/checks-v18/independent-review/probes/ac04_cold-before.xml' '/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/original/tests/test_plans.py::test_electricity_balance[h3]'
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_________________________ test_electricity_balance[h3] _________________________
+
+case = (<reference.Day object at 0x10619fb60>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1': 1...8144, 67.332244, 66.78935 , 67.204072,
+       66.0056  , 35.317688, 35.331746, 35.714436, 36.567288, 36.42046 ]), ...})
+
+    def test_electricity_balance(case):
+        day, plan, flows = case
+        pv = series(plan, "pv_kw")
+        assert (pv >= -0.5).all() and (pv <= day.pv_max + 0.5).all()
+        supply = sum(series(plan, "engines_kwe", e["id"]) for e in day.engines) + pv
+        supply += series(plan, "import_kw") - series(plan, "export_kw")
+        use = day.elec + flows["aux"] + flows["ec_elec"]
+>       assert np.abs(supply - use).max() <= KW
+E       AssertionError: assert np.float64(1.846325421790425) <= 1.0
+E        +  where np.float64(1.846325421790425) = <built-in method max of numpy.ndarray object at 0x10677e490>()
+E        +    where <built-in method max of numpy.ndarray object at 0x10677e490> = array([7.23076921e-05, 3.07692289e-07, 9.13846154e-05, 0.00000000e+00,\n       0.00000000e+00, 0.00000000e+00, 2.273736...0.00000000e+00, 4.00000000e-04, 1.49538462e-04,\n       2.84461538e-04, 3.59076923e-04, 0.00000000e+00, 0.00000000e+00]).max
+E        +      where array([7.23076921e-05, 3.07692289e-07, 9.13846154e-05, 0.00000000e+00,\n       0.00000000e+00, 0.00000000e+00, 2.273736...0.00000000e+00, 4.00000000e-04, 1.49538462e-04,\n       2.84461538e-04, 3.59076923e-04, 0.00000000e+00, 0.00000000e+00]) = <ufunc 'absolute'>((array([1258.518     , 1261.847     , 1263.623     , 1255.423     ,\n       1262.26      , 1270.057     , 1251.802     ,...     , 1539.985     , 1490.906     , 1453.34      ,\n       1407.171     , 1359.339     , 1347.659     , 1307.07      ]) - array([1258.51807231, 1261.84700031, 1263.62309138, 1255.423     ,\n       1262.26      , 1270.057     , 1251.802     ,...     , 1539.985     , 1490.9056    , 1453.34014954,\n       1407.17128446, 1359.33935908, 1347.659     , 1307.07      ])))
+E        +        where <ufunc 'absolute'> = np.abs
+
+test_plans.py:64: AssertionError
+=========================== short test summary info ============================
+FAILED test_plans.py::test_electricity_balance[h3] - AssertionError: assert n...
+1 failed in 0.27s

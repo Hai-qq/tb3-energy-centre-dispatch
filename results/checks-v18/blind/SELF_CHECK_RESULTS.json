@@ -1,0 +1,85 @@
+{
+  "test_visible_and_determinism": {
+    "passed": true,
+    "elapsed_s": 6.968252926999412,
+    "detail": {
+      "elapsed_s": 1.2970196790001864,
+      "stats": {
+        "lp_calls": 390,
+        "max_conic_iterations": 3
+      },
+      "raw_max_errors": {
+        "electric_kw": 2.5579538487363607e-13,
+        "heat_kw": 1.1368683772161603e-13,
+        "cool_kw": 1.1368683772161603e-13,
+        "gas_kwh": 0.0,
+        "cost_gbp": 0.0,
+        "grid_excess_kva": 0.0
+      },
+      "serialized_max_errors": {
+        "electric_kw": 0.0004863797469738529,
+        "heat_kw": 0.00042018779339514367,
+        "cool_kw": 2.2737367544323206e-13,
+        "gas_kwh": 0.0005667999996603612,
+        "cost_gbp": 0.0004529999999931533,
+        "grid_excess_kva": 0.0
+      },
+      "output_sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5",
+      "cost_gbp": 6303.560319426553,
+      "gas_kwh": 64944.185839485,
+      "engine_starts": 2
+    }
+  },
+  "test_interpolation_and_billing": {
+    "passed": true,
+    "elapsed_s": 0.0003890250000040396,
+    "detail": null
+  },
+  "test_local_calendar_and_weather": {
+    "passed": true,
+    "elapsed_s": 0.011414603000048373,
+    "detail": null
+  },
+  "test_conic_root": {
+    "passed": true,
+    "elapsed_s": 0.044733964999977616,
+    "detail": {
+      "closed_form_kwe": 799.5024149930226,
+      "optimized_kwe": 799.5024149976533
+    }
+  },
+  "test_startup_dynamic_program": {
+    "passed": true,
+    "elapsed_s": 0.13765858999977354,
+    "detail": {
+      "optimal_cost_gbp": 323.8029799538462,
+      "middle_period_penalty_gbp": 4.740930679643007
+    }
+  },
+  "test_condenser_regimes": {
+    "passed": true,
+    "elapsed_s": 0.030896956000106002,
+    "detail": null
+  },
+  "test_outages_and_heat_routing": {
+    "passed": true,
+    "elapsed_s": 0.17450820900012332,
+    "detail": null
+  },
+  "test_pv_and_export": {
+    "passed": true,
+    "elapsed_s": 0.029994169999554288,
+    "detail": null
+  },
+  "test_constructed_feasible_cases": {
+    "passed": true,
+    "elapsed_s": 7.185641152000244,
+    "detail": {
+      "constructed_cases": 96,
+      "worst_period_s": 0.3362386990002051,
+      "maximum_lp_calls": 63,
+      "maximum_conic_iterations": 16
+    }
+  },
+  "total_elapsed_s": 14.585797482000089
+}

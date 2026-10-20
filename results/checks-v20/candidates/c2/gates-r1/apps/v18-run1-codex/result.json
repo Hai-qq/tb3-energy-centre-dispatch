@@ -1,0 +1,118 @@
+{
+  "app": "results/v18-trials/ecd18-run1-codex/app",
+  "days": {
+    "h1": {
+      "cost_gbp": 6403.3010884987325,
+      "delta_gbp": -23.346378604309393,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 6426.647467103042,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.4615058569997927,
+          "sha256": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.5360440059998837,
+          "sha256": "2291e317d5d035224f23075e82cfe81eca48c1443445ca98d321839a38aa6cf2"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8063.680409680776,
+      "delta_gbp": -910.0396911316775,
+      "failures": {
+        "test_shared_gas_entry": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 138, in test_shared_gas_entry\n    assert (volume_per_hour <= entry[\"maximum_standard_m3_per_hour\"] + 0.1).all()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n",
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 8973.720100812454,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.5567696349999096,
+          "sha256": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.915686107000056,
+          "sha256": "790a805608e1ed1c4ca59da4c03ca9a42be8bb2c83d48f543cc6332db4d9cc58"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5182.628511561112,
+      "delta_gbp": -192.90952890817243,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.95008722700004,
+          "sha256": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.8423739130003014,
+          "sha256": "3b54f836a576d9eef73ba8ee2e7e6da8b9588df0118bd4cebc2e21fc35db9a22"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7270.932347828511,
+      "delta_gbp": -40.03949270452176,
+      "failures": {
+        "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+      },
+      "milp_gbp": 7310.971840533033,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.3418379160002587,
+          "sha256": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.364871253000274,
+          "sha256": "9974598ec6389602b5dceacfc230f49e87520823e33a1ff1437c28ec006dc8bc"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5603194264295,
+      "delta_gbp": -1.2369127944111824e-10,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.338342883000223,
+          "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.245202466000137,
+          "sha256": "e6be830c5a077aa0fe10cd7b5cbe585dbcd2c5577d7a1023472e274f475eaa2c"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "34c32adf25230f80a85aa1202d83a72f9bf6c6cb60b33cd582ea68e63b6a01e5",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "5d0b1f8d0b3f481177ccd632a1a4ded83c367f8de2a159ac9fbf5ab174f61066",
+    "planner/optimize.py": "a62e94d51c6136b6a59b7c55b716e8a00bdd34d9a87ad9504cdeb40eff1dc446",
+    "planner/plant.py": "4778f9b018dab93cf8c5a6e8136137d7bb52114449310051cae438047993cd4a",
+    "planner/tariff.py": "cb412882e0b24915a4c9813c6075423bb0158d7b2a30218c6244292ec89aef59"
+  }
+}

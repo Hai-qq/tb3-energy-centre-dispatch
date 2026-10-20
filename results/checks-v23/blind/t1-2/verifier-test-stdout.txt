@@ -1,0 +1,146 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 0 
+h1.rerun: tool exited 0 
+h2: tool exited 0 
+h2.rerun: tool exited 0 
+h3: tool exited 0 
+h3.rerun: tool exited 0 
+h4: tool exited 0 
+h4.rerun: tool exited 0 
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 55 items
+
+test_plans.py ...........F.........F.........F.........F.F...........    [100%]
+
+=================================== FAILURES ===================================
+________________ test_units_within_ratings_and_availability[h1] ________________
+
+case = (<reference.Day object at 0xffff54247d90>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...568 , 45.49568 , 45.458192, 45.817452,
+       46.015826, 46.303234, 46.678114, 47.007696, 45.9458  , 43.9372  ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff53d488d0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff53d488d0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True, False,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+________________ test_units_within_ratings_and_availability[h2] ________________
+
+case = (<reference.Day object at 0xffff54247ed0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...    , 56.      , 56.      , 56.      ,
+       24.      , 24.      , 24.      , 24.      , 56.      , 56.      ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff53da4db0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff53da4db0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n       False, False,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+________________ test_units_within_ratings_and_availability[h3] ________________
+
+case = (<reference.Day object at 0xffff53db4910>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...8144, 67.332244, 66.78935 , 67.204072,
+       66.0056  , 65.5414  , 64.8     , 64.3226  , 35.514632, 35.204168]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff53da6d90>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff53da6d90> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True, False,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+________________ test_units_within_ratings_and_availability[h4] ________________
+
+case = (<reference.Day object at 0xffff53db51d0>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...6742, 45.048948, 44.920864, 44.59753 ,
+       44.881814, 45.4332  , 45.884618, 46.626568, 46.90929 , 47.118598]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff53dc08d0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff53dc08d0> = array([ True,  True,  True,  True,  True,  True,  True,  True, False,\n       False, False, False,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:54: AssertionError
+____________________________ test_heat_balance[h4] _____________________________
+
+case = (<reference.Day object at 0xffff53db51d0>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...6742, 45.048948, 44.920864, 44.59753 ,
+       44.881814, 45.4332  , 45.884618, 46.626568, 46.90929 , 47.118598]), ...})
+
+    def test_heat_balance(case):
+        day, plan, flows = case
+        boilers = sum(series(plan, "boilers_kw", b["id"]) for b in day.plant["boilers"])
+        lthw = flows["engine_heat"] - flows["ac_heat"] + boilers
+        upper = day.heat + day.lthw_loss + day.ahu
+        assert (lthw <= upper + KW).all()  # no HT dump
+>       assert (lthw >= upper - flows["R_len"] - KW).all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff53dc0c90>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff53dc0c90> = array([307.4       , 306.2       , 319.        , 307.5       ,\n       314.6       , 308.3       , 301.        , 311.6 ...462.8       , 483.5       , 465.3       , 430.        ,\n       401.1       , 353.6       , 335.5       , 322.1       ]) >= ((array([367.4, 369.8, 384.8, 373.1, 377.7, 367.7, 356.9, 365.7, 394.9,\n       438.4, 508.9, 553. , 609.6, 608.1, 633.9,...558.6, 568.9, 570.4,\n       568.9, 564.5, 553.4, 542.4, 541.9, 558.3, 536.7, 497.4, 464.4,\n       413.7, 394.5, 382.5]) - array([ 60. ,  63.6,  65.8,  65.6,  63.1,  59.4,  55.9,  54.1,   0. ,\n         0. ,   0. ,   0. ,  69. ,  73.4,  83.1,...147.6, 142.9, 137.1,\n       129.5, 118.2, 102.5,  87.8,  79.1,  74.8,  71.4,  67.4,  63.3,\n        60.1,  59. ,  60.4])) - 1.0).all
+
+test_plans.py:73: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_units_within_ratings_and_availability[visible]
+PASSED test_plans.py::test_electricity_balance[visible]
+PASSED test_plans.py::test_heat_balance[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_gas_and_cost[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h1]
+PASSED test_plans.py::test_electricity_balance[h1]
+PASSED test_plans.py::test_heat_balance[h1]
+PASSED test_plans.py::test_cooling_balance[h1]
+PASSED test_plans.py::test_cooling_towers[h1]
+PASSED test_plans.py::test_connection_limits[h1]
+PASSED test_plans.py::test_reported_gas_and_cost[h1]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h1]
+PASSED test_plans.py::test_least_cost[h1]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_heat_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_connection_limits[h2]
+PASSED test_plans.py::test_reported_gas_and_cost[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_least_cost[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h3]
+PASSED test_plans.py::test_electricity_balance[h3]
+PASSED test_plans.py::test_heat_balance[h3]
+PASSED test_plans.py::test_cooling_balance[h3]
+PASSED test_plans.py::test_cooling_towers[h3]
+PASSED test_plans.py::test_connection_limits[h3]
+PASSED test_plans.py::test_reported_gas_and_cost[h3]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h3]
+PASSED test_plans.py::test_least_cost[h3]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_electricity_balance[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_connection_limits[h4]
+PASSED test_plans.py::test_reported_gas_and_cost[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_least_cost[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h1]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h3]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+FAILED test_plans.py::test_units_within_ratings_and_availability[h1] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h2] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h3] - assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h4] - assert...
+FAILED test_plans.py::test_heat_balance[h4] - assert np.False_
+========================= 5 failed, 50 passed in 1.20s =========================

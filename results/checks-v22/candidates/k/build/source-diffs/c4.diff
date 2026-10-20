@@ -1,0 +1,237 @@
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/environment/data/plant.json results/checks-v20/candidates/c4/task/environment/data/plant.json
+--- tasks/energy-centre-dispatch/environment/data/plant.json	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/environment/data/plant.json	2026-10-18 18:11:29
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/solution/app/planner/optimize.py results/checks-v20/candidates/c4/task/solution/app/planner/optimize.py
+--- tasks/energy-centre-dispatch/solution/app/planner/optimize.py	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/solution/app/planner/optimize.py	2026-10-18 18:11:29
+@@ -126,6 +126,17 @@
+     else:
+         A_eq.append(row)
+         b_eq.append(sum(piece[4] for piece in pieces))
++    for hx in plant.heat_exchangers:
++        if hx["id"] == "PHE1":
++            row = np.zeros(n)
++            for j, piece in enumerate(pieces):
++                row[j] = piece[5]
++            for j, a in enumerate(absorbers):
++                row[iA + j] = -1.0 / a.cop
++            circ = plant.circuits[hx["primary_circuit"]]
++            cap_kw = hx["primary_maximum_water_flow_kg_per_s"] * hx["water_specific_heat_kj_per_kg_k"] * (circ["flow_c"] - circ["return_c"])
++            A_ub.append(row)
++            b_ub.append(cap_kw - sum(piece[4] for piece in pieces))
+     # cooling
+     row = np.zeros(n)
+     row[iE:iE + nE] = 1.0
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/solution/app/planner/plant.py results/checks-v20/candidates/c4/task/solution/app/planner/plant.py
+--- tasks/energy-centre-dispatch/solution/app/planner/plant.py	2026-10-18 09:20:13
++++ results/checks-v20/candidates/c4/task/solution/app/planner/plant.py	2026-10-18 18:11:29
+@@ -92,6 +92,8 @@
+ 
+ class Plant:
+     def __init__(self, d: dict):
++        self.heat_exchangers = d.get("heat_exchangers", [])
++        self.circuits = d["heat_circuits"]
+         self.engines = [Engine(x) for x in d["engines"]]
+         # Every outlet of an intercooler circuit is needed to reject its LT heat.
+         self.engine_lt_sinks = {e.id: tuple(item for c in d["heat_circuits"].values()
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h1/plant.json results/checks-v20/candidates/c4/task/tests/days/h1/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h1/plant.json	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/tests/days/h1/plant.json	2026-10-18 18:11:29
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h2/plant.json results/checks-v20/candidates/c4/task/tests/days/h2/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h2/plant.json	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/tests/days/h2/plant.json	2026-10-18 18:11:29
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h3/plant.json results/checks-v20/candidates/c4/task/tests/days/h3/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h3/plant.json	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/tests/days/h3/plant.json	2026-10-18 18:11:29
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/h4/plant.json results/checks-v20/candidates/c4/task/tests/days/h4/plant.json
+--- tasks/energy-centre-dispatch/tests/days/h4/plant.json	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/tests/days/h4/plant.json	2026-10-18 18:11:29
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/days/visible/plant.json results/checks-v20/candidates/c4/task/tests/days/visible/plant.json
+--- tasks/energy-centre-dispatch/tests/days/visible/plant.json	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/tests/days/visible/plant.json	2026-10-18 18:11:29
+@@ -229,5 +229,14 @@
+   "pv": {
+     "id": "PV1",
+     "inverter_ac_kw": 280
+-  }
++  },
++  "heat_exchangers": [
++    {
++      "id": "PHE1",
++      "primary_circuit": "engine_ht",
++      "secondary_circuit": "lthw",
++      "primary_maximum_water_flow_kg_per_s": 20.0,
++      "water_specific_heat_kj_per_kg_k": 4.18
++    }
++  ]
+ }
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/reference.py results/checks-v20/candidates/c4/task/tests/reference.py
+--- tasks/energy-centre-dispatch/tests/reference.py	2026-10-18 09:19:46
++++ results/checks-v20/candidates/c4/task/tests/reference.py	2026-10-18 18:11:29
+@@ -253,7 +253,7 @@
+ 
+         for t in range(N):
+             el = {v(t, "I"): 1.0, v(t, "X"): -1.0}
+-            heat_terms, gen = {}, {}
++            heat_terms, gen, gas_terms = {}, {}, {}
+             for g, e in enumerate(eng):
+                 kw, fuel, heat = self.curve[e["id"]]
+                 nseg = len(kw) - 1
+@@ -265,6 +265,7 @@
+                 # cost and flows at minimum load, per running engine
+                 c[v(t, f"U{g}")] = DT_H * (fuel[0] * self.gross_net * self.gas_rate
+                                            + kw[0] * e["maintenance_gbp_per_mwhe"] / 1000.0)
++                gas_terms[v(t, f"U{g}")] = fuel[0] * self.gross_net
+                 el[v(t, f"U{g}")] = kw[0] - e["auxiliary_kwe"]
+                 heat_terms[v(t, f"U{g}")] = heat[0]
+                 gen[v(t, f"U{g}")] = kw[0] * self.q_per_kw[e["id"]]
+@@ -274,6 +275,7 @@
+                     hi[d] = length
+                     c[d] = DT_H * ((fuel[s + 1] - fuel[s]) / length * self.gross_net * self.gas_rate
+                                    + e["maintenance_gbp_per_mwhe"] / 1000.0)
++                    gas_terms[d] = (fuel[s + 1] - fuel[s]) / length * self.gross_net
+                     el[d] = 1.0
+                     heat_terms[d] = (heat[s + 1] - heat[s]) / length
+                     gen[d] = self.q_per_kw[e["id"]]
+@@ -296,6 +298,7 @@
+             for b, bl in enumerate(boil):
+                 hi[v(t, f"B{b}")] = bl["max_kw"] if self.available[bl["id"]][t] else 0.0
+                 c[v(t, f"B{b}")] = DT_H * self.gas_rate / bl["efficiency"]
++                gas_terms[v(t, f"B{b}")] = 1.0 / bl["efficiency"]
+             # Z = 1: the absorption chillers may run and the condenser water header is held warm
+             # enough for them; each electric chiller's output is E (header cold) or H (header warm)
+             z = v(t, "Z")
+@@ -340,6 +343,38 @@
+             cl.update({v(t, f"A{a}"): 1.0 for a in range(len(acs))})
+             add(cl, self.cool[t], self.cool[t])
+             add(rejection, -np.inf, self.tower_max[t])
++            entry = self.supply["gas"].get("entry")
++            if entry:
++                fuel_cap = entry["maximum_standard_m3_per_hour"] * entry["gross_calorific_value_mj_per_standard_m3"] / 3.6
++                add(gas_terms, -np.inf, fuel_cap)
++            for feeder in self.plant.get("electrical_distribution", {}).get("feeders", []):
++                active, reactive = {}, {}
++                for i, ch in enumerate(ecs):
++                    if ch["id"] in feeder["loads"]:
++                        pf = ch["electrical_power_factor"]
++                        tan = math.sqrt(1.0 - pf * pf) / pf
++                        for mode in ("E", "H"):
++                            j = v(t, f"{mode}{i}")
++                            active[j], reactive[j] = -el[j], -el[j] * tan
++                for a, ac in enumerate(acs):
++                    if ac["id"] in feeder["loads"]:
++                        pf = ac["electrical_power_factor"]
++                        j = v(t, f"A{a}")
++                        active[j] = -el[j]
++                        reactive[j] = -el[j] * math.sqrt(1.0 - pf * pf) / pf
++                # Equal fixed PF gives an exact linear feeder bound here, independently
++                # derived from its complete active/reactive load components.
++                for th in np.linspace(0.0, np.pi / 2, 91):
++                    row = {j: active.get(j, 0.0) * math.cos(th) + reactive.get(j, 0.0) * math.sin(th)
++                           for j in active.keys() | reactive.keys()}
++                    cap = feeder["rated_kva"] - feeder["other_load_kw"] * math.cos(th) - feeder["other_load_kvar"] * math.sin(th)
++                    add(row, -np.inf, cap)
++            for hx in self.plant.get("heat_exchangers", []):
++                if hx["id"] == "PHE1":
++                    circ = self.plant["heat_circuits"][hx["primary_circuit"]]
++                    cap = hx["primary_maximum_water_flow_kg_per_s"] * hx["water_specific_heat_kj_per_kg_k"] * (circ["flow_c"] - circ["return_c"])
++                    add(absorb, -np.inf, cap)
++
+             # apparent power at the connection: |(I, kvar - engine kvar)| <= kVA
+             for th in np.linspace(-np.pi / 2, np.pi / 2, CUTS):
+                 cut = {v(t, "I"): math.cos(th)}
+diff -ru --exclude __pycache__ tasks/energy-centre-dispatch/tests/test_plans.py results/checks-v20/candidates/c4/task/tests/test_plans.py
+--- tasks/energy-centre-dispatch/tests/test_plans.py	2026-10-17 22:42:45
++++ results/checks-v20/candidates/c4/task/tests/test_plans.py	2026-10-18 18:11:29
+@@ -129,3 +129,11 @@
+     day, _, flows = case
+     best = day.least_cost()["cost"]
+     assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
++
++
++def test_phe_primary_water_flow(case):
++    day, _, flows = case
++    hx = next(h for h in day.plant["heat_exchangers"] if h["id"] == "PHE1")
++    circ = day.plant["heat_circuits"][hx["primary_circuit"]]
++    capacity = hx["primary_maximum_water_flow_kg_per_s"] * hx["water_specific_heat_kj_per_kg_k"] * (circ["flow_c"] - circ["return_c"])
++    assert (flows["engine_heat"] - flows["ac_heat"] <= capacity + KW).all()

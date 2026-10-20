@@ -1,0 +1,29 @@
+--- a/planner/optimize.py
++++ b/planner/optimize.py
+@@ -175,6 +175,15 @@
+         return best
+ 
+     def _solve(self, segs: list[Segment | None], water: _Water) -> Loading | None:
++        best = None
++        for direction in ((True, False) if self.import_rate < self.tariff.export_rate else (None,)):
++            candidate = self._solve_direction(segs, water, direction)
++            if candidate is not None and (best is None or _better(
++                    (candidate.excess_kva, candidate.cost), (best.excess_kva, best.cost))):
++                best = candidate
++        return best
++
++    def _solve_direction(self, segs, water, import_only):
+         plant, tariff = self.plant, self.tariff
+         gas = tariff.gas_rate
+         n = self.n
+@@ -208,6 +217,10 @@
+         c[self.iS] = EXCESS_GBP_PER_KVA
+         bounds[self.iS] = (0.0, None)
+ 
++        if import_only is True:
++            bounds[self.iX] = (0.0, 0.0)
++        elif import_only is False:
++            bounds[self.iI] = (0.0, 0.0)
+         A_eq, b_eq, A_ub, b_ub = [], [], [], []
+ 
+         def put(eq: bool, row: np.ndarray, rhs: float) -> None:

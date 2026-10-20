@@ -1,0 +1,113 @@
+{
+  "app": "results/checks-v20/candidates/c2/gates-r1/mutant_apps/cewt_without_minimum",
+  "days": {
+    "h1": {
+      "cost_gbp": 6426.647743955096,
+      "delta_gbp": 0.0002768520544123021,
+      "failures": {},
+      "milp_gbp": 6426.647467103042,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8259826669996073,
+          "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.7425503899999057,
+          "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+        }
+      ]
+    },
+    "h2": {
+      "cost_gbp": 8959.11555419484,
+      "delta_gbp": -14.604546617614687,
+      "failures": {
+        "test_electricity_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 64, in test_electricity_balance\n    assert np.abs(supply - use).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 8973.720100812454,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.5274759290000475,
+          "sha256": "7b98d7492f72be2b5c1c893dc8e5741484703f6d94d6ad589e69e71ac60e5b99"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.570499572999779,
+          "sha256": "7b98d7492f72be2b5c1c893dc8e5741484703f6d94d6ad589e69e71ac60e5b99"
+        }
+      ]
+    },
+    "h3": {
+      "cost_gbp": 5366.522018645144,
+      "delta_gbp": -9.016021824139898,
+      "failures": {
+        "test_electricity_balance": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/test_plans.py\", line 64, in test_electricity_balance\n    assert np.abs(supply - use).max() <= KW\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "milp_gbp": 5375.538040469284,
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 1.8922498950000772,
+          "sha256": "ff1c50b08b201f755ca830651af1108ff2beabd4f73ed9d8bc4f5a2f4f99622e"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.0685941079996155,
+          "sha256": "ff1c50b08b201f755ca830651af1108ff2beabd4f73ed9d8bc4f5a2f4f99622e"
+        }
+      ]
+    },
+    "h4": {
+      "cost_gbp": 7310.971820541148,
+      "delta_gbp": -1.9991884983028285e-05,
+      "failures": {},
+      "milp_gbp": 7310.971840533033,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.1780020420001165,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        },
+        {
+          "returncode": 0,
+          "seconds": 2.0538895689996934,
+          "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+        }
+      ]
+    },
+    "visible": {
+      "cost_gbp": 6303.5604091900495,
+      "delta_gbp": 8.976349636213854e-05,
+      "failures": {},
+      "milp_gbp": 6303.560319426553,
+      "passed": true,
+      "runs": [
+        {
+          "returncode": 0,
+          "seconds": 2.1025872219997837,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        },
+        {
+          "returncode": 0,
+          "seconds": 1.9141175699996893,
+          "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "planner/optimize.py": "ea0f6a0e0e94fd4c39d42b12d038eb1bceebd3b6118378b04495c54af5040a5f",
+    "planner/plant.py": "b04da6efa232c048550c4b8fd79d3698f4529ba7ec4d9939c1d6f6558e8c17ee",
+    "planner/tariff.py": "e034a8c359d5b0903ffcf3475626ad25597f3ca2cfa912a7dc2791b457046e27"
+  }
+}

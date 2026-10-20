@@ -1,0 +1,21 @@
+MILP visible: 6303.560319427
+MILP h1: 6426.647467103
+MILP h2: 8879.731991259
+MILP h3: 5375.538040469
+MILP h4: 7310.971840533
+ht_source_outage_ignored visible: PASS delta=8.976349636213854e-05 
+ht_source_outage_ignored h1: PASS delta=0.0002768520544123021 
+ht_source_outage_ignored h2: FAIL delta=-259.3857246204316 test_units_within_ratings_and_availability
+ht_source_outage_ignored h3: PASS delta=-9.999140274885576e-06 
+ht_source_outage_ignored h4: PASS delta=-1.9991884983028285e-05 
+ac_generator_outage_ignored visible: PASS delta=8.976349636213854e-05 
+ac_generator_outage_ignored h1: PASS delta=0.0002768520544123021 
+ac_generator_outage_ignored h2: PASS delta=-7.61121427785838e-05 
+ac_generator_outage_ignored h3: FAIL delta=-30.346996204940297 test_units_within_ratings_and_availability
+ac_generator_outage_ignored h4: PASS delta=-1.9991884983028285e-05 
+kva_positive_reactive_only visible: PASS delta=8.976349636213854e-05 
+kva_positive_reactive_only h1: PASS delta=0.0002768520544123021 
+kva_positive_reactive_only h2: FAIL delta=-3.57524917291812 test_connection_limits
+kva_positive_reactive_only h3: PASS delta=-9.999140274885576e-06 
+kva_positive_reactive_only h4: PASS delta=-1.9991884983028285e-05 
+MUTANTS 3/3 caught

@@ -1,0 +1,196 @@
+{
+  "candidate": "w",
+  "gates": {
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "E": "COMPARISON_COMPLETE"
+  },
+  "standard_answer_exit": 0,
+  "base_mutants": 42,
+  "candidate_mutants": 1,
+  "all_caught": true,
+  "patch_skips": 0,
+  "mutant_failures": {
+    "weather_by_utc_date": "connection_limits:h1; cooling_balance:h1; cooling_towers:h1,h4; electricity_balance:visible,h1,h3,h4; heat_balance:h1; least_cost:visible,h1; plan_covers_the_day:h1; reported_gas_and_cost:h1; reported_import_export_and_grid_flags:h1; same_plan_every_time:h1; single_connection_direction:h1; units_within_ratings_and_availability:h1  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "two_point_curve": "heat_balance:visible,h1,h2,h3,h4; least_cost:h2; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+    "gas_net_to_gross_divided": "least_cost:h2,h3; reported_gas_and_cost:visible,h1,h2,h3,h4  ",
+    "starts_not_in_decision": "least_cost:visible,h1,h3  ",
+    "heat_can_be_dumped": "heat_balance:visible,h1,h3,h4  ",
+    "lt_heat_counted": "connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h3,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; single_connection_direction:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "towers_take_cooling_only": "cooling_towers:h1,h4  ",
+    "kva_ignores_engines": "connection_limits:h1,h2; cooling_balance:h1,h2; cooling_towers:h1,h2; electricity_balance:h1,h2; heat_balance:h1,h2; least_cost:h1,h2; plan_covers_the_day:h1,h2; reported_gas_and_cost:h1,h2; reported_import_export_and_grid_flags:h1,h2; same_plan_every_time:h1,h2; single_connection_direction:h1,h2; units_within_ratings_and_availability:h1,h2  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "absorber_needs_cold_weather": "connection_limits:h1,h2,h3,h4; cooling_balance:h1,h2,h3,h4; cooling_towers:h1,h2,h3,h4; electricity_balance:h1,h2,h3,h4; heat_balance:h1,h2,h3,h4; least_cost:h1,h2,h3,h4; plan_covers_the_day:h1,h2,h3,h4; reported_gas_and_cost:h1,h2,h3,h4; reported_import_export_and_grid_flags:h1,h2,h3,h4; same_plan_every_time:h1,h2,h3,h4; single_connection_direction:h1,h2,h3,h4; units_within_ratings_and_availability:h1,h2,h3,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h3:exit 1: RuntimeError: no plan meets the demand within the li; h3.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "weekend_from_utc_start": "least_cost:h1,h3; reported_gas_and_cost:h1,h3  ",
+    "kva_as_kw": "connection_limits:h1,h2  ",
+    "kva_engines_absorb_kvar": "connection_limits:h1,h2,h4; cooling_balance:h1,h2,h4; cooling_towers:h1,h2,h4; electricity_balance:h1,h2,h4; heat_balance:h1,h2,h4; least_cost:h1,h2,h4; plan_covers_the_day:h1,h2,h4; reported_gas_and_cost:h1,h2,h4; reported_import_export_and_grid_flags:h1,h2,h4; same_plan_every_time:h1,h2,h4; single_connection_direction:h1,h2,h4; units_within_ratings_and_availability:h1,h2,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h2:exit 1: RuntimeError: no plan meets the demand within the li; h2.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "towers_absorber_only": "cooling_towers:h1,h4  ",
+    "cop_at_dry_bulb": "connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:h1,h4; least_cost:visible,h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; single_connection_direction:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "cewt_without_minimum": "electricity_balance:h2,h3  ",
+    "no_engine_aux": "electricity_balance:visible,h1,h2,h3,h4  ",
+    "no_lthw_loss": "connection_limits:h1,h4; cooling_balance:h1,h4; cooling_towers:h1,h4; electricity_balance:h1,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:h1,h4; plan_covers_the_day:h1,h4; reported_gas_and_cost:h1,h4; reported_import_export_and_grid_flags:h1,h4; same_plan_every_time:h1,h4; single_connection_direction:h1,h4; units_within_ratings_and_availability:h1,h4  h1:exit 1: RuntimeError: no plan meets the demand within the li; h1.rerun:exit 1: RuntimeError: no plan meets the demand within the li; h4:exit 1: RuntimeError: no plan meets the demand within the li; h4.rerun:exit 1: RuntimeError: no plan meets the demand within the li",
+    "outages_ignored": "units_within_ratings_and_availability:visible,h1,h2,h3,h4  ",
+    "outage_by_period_start": "electricity_balance:h4; heat_balance:h4; units_within_ratings_and_availability:h1,h2,h3,h4  ",
+    "phe1_outage_ignored": "heat_balance:h4  ",
+    "lt_radiator_outage_ignored": "units_within_ratings_and_availability:h2,h3,h4  ",
+    "intercooler_outage_ignored": "units_within_ratings_and_availability:h2,h4  ",
+    "ht_source_outage_ignored": "units_within_ratings_and_availability:h2  ",
+    "parts_by_name_prefix": "units_within_ratings_and_availability:h2,h3,h4  ",
+    "ac_generator_outage_ignored": "units_within_ratings_and_availability:h3  ",
+    "condenser_outage_ignored": "units_within_ratings_and_availability:h1  ",
+    "absorption_chiller_parts_ignored": "units_within_ratings_and_availability:h3  ",
+    "outages_engines_only": "units_within_ratings_and_availability:h1,h2,h3,h4  ",
+    "tower_cell_outage_ignored": "cooling_towers:h1  ",
+    "pv_outage_ignored": "electricity_balance:h4  ",
+    "kva_positive_reactive_only": "connection_limits:h2  ",
+    "outages_one_per_unit": "electricity_balance:h4; units_within_ratings_and_availability:h2  ",
+    "outage_capacity_prorated": "units_within_ratings_and_availability:h1,h2,h3,h4  ",
+    "absorber_cooling_water_ignored": "electricity_balance:h1,h3,h4  ",
+    "header_not_shared": "electricity_balance:h1,h3,h4  ",
+    "midnight_state_ignored": "reported_gas_and_cost:h1,h2  ",
+    "saturday_is_weekday": "least_cost:h1; reported_gas_and_cost:h1  ",
+    "import_total_in_kw": "reported_import_export_and_grid_flags:visible,h1,h2,h3,h4  ",
+    "grid_flag_without_generators": "reported_import_export_and_grid_flags:h1,h2  ",
+    "plan_varies_between_runs": "same_plan_every_time:visible,h1,h2,h3,h4  ",
+    "exits_with_error_after_writing": "connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; single_connection_direction:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:exit 77; visible.rerun:exit 77; h1:exit 77; h1.rerun:exit 77; h2:exit 77; h2.rerun:exit 77; h3:exit 77; h3.rerun:exit 77; h4:exit 77; h4.rerun:exit 77",
+    "hangs_after_writing": "connection_limits:visible,h1,h2,h3,h4; cooling_balance:visible,h1,h2,h3,h4; cooling_towers:visible,h1,h2,h3,h4; electricity_balance:visible,h1,h2,h3,h4; heat_balance:visible,h1,h2,h3,h4; least_cost:visible,h1,h2,h3,h4; plan_covers_the_day:visible,h1,h2,h3,h4; reported_gas_and_cost:visible,h1,h2,h3,h4; reported_import_export_and_grid_flags:visible,h1,h2,h3,h4; same_plan_every_time:visible,h1,h2,h3,h4; single_connection_direction:visible,h1,h2,h3,h4; units_within_ratings_and_availability:visible,h1,h2,h3,h4  visible:timed out; visible.rerun:timed out; h1:timed out; h1.rerun:timed out; h2:timed out; h2.rerun:timed out; h3:timed out; h3.rerun:timed out; h4:timed out; h4.rerun:timed out",
+    "grid_direction_ignored": "reported_gas_and_cost:h1; single_connection_direction:h1  "
+  },
+  "max_abs_cost_gap_gbp": 0.00017656224008533172,
+  "task_sha256": {
+    "README.md": "a1c8ea83763af8062ea6bf20d1c6d467750d0bbb6b8bc02ca77e173e51350120",
+    "environment/Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+    "environment/data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "environment/data/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "environment/data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "environment/data/supply.json": "1c38373800e11c00a609383adfaabf441fd9d74c18e61943edd77f6b4f37526b",
+    "environment/data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "environment/dispatch.py": "9fb16a25019bea5455352acab6c7916f0f1fa4a33c01f83ec648cda0fdacbcf0",
+    "environment/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "environment/planner/data.py": "6c48950527f82f5e5e6b8dc4b662c383319e1227728492a58ab7cfe17952264e",
+    "environment/planner/optimize.py": "1686479f21ebdc9f2bc9e9a1664f560ce669930ab60a44c7870f64235d46c8f3",
+    "environment/planner/plant.py": "a49f216f55379b441e5961f8e661ce928220cf94466be1787dc59f987cba9233",
+    "environment/planner/tariff.py": "5d7a65b7246aec55dfd42be887db20e04c7751ca3b2b6dbfcdccd6234c7906ca",
+    "instruction.md": "2b85dfbc1ab92733ba9dd786d22eb8fbc7d7d72d4cd621b4c31d0df4be2390a8",
+    "solution/app/dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+    "solution/app/planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "solution/app/planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+    "solution/app/planner/optimize.py": "95d1ed1e2dac94b135ce1b2b3c38b09c94a1f25307c7f2befe86c9128e6dd0bb",
+    "solution/app/planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+    "solution/app/planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e",
+    "solution/solve.sh": "fd58635c3ec503faa2d45c5c87d489c909c1a3dbfca091c73a1604802b0e29f3",
+    "task.toml": "101dc7df6d97e8a09cde11d67f30d92981ce027e885e84eb611ab08f8fb2820b",
+    "tests/Dockerfile": "31a7835ba7a0b6e2909300e0d64435ff7dd839826dcbe6ab77a2a82222d30268",
+    "tests/days/h1/demand.csv": "0d0e0fff0ae8423b4d8c124e0c291bd6a347b89c287bcd32055e10f962dc8134",
+    "tests/days/h1/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tests/days/h1/status.json": "17d0a361075ce59a41da363d8075494a94a6bccde3e4b4fca4fcffc3ecb9bcdf",
+    "tests/days/h1/supply.json": "1c38373800e11c00a609383adfaabf441fd9d74c18e61943edd77f6b4f37526b",
+    "tests/days/h1/weather.csv": "c5e19a4cfd334e55c9f9a929eab962c5179d7215d20e156333b1b0e471d10e43",
+    "tests/days/h2/demand.csv": "5eca730f8ed18c0cc5df88ebc63cb311d1c656a6124e6305bfdb433d195410da",
+    "tests/days/h2/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tests/days/h2/status.json": "62c69c06dd4e06bdf420ecc9e76a7ae2c789c8bd1f7eb5868c70651c94877204",
+    "tests/days/h2/supply.json": "1c38373800e11c00a609383adfaabf441fd9d74c18e61943edd77f6b4f37526b",
+    "tests/days/h2/weather.csv": "05f3b81800fc31e950a743cf199d1aabe63bbdf96c4cc2c439396426e54a194a",
+    "tests/days/h3/demand.csv": "8c7b3cea2cdd3dbf18e7b82ac6157fef5e1f2a059a61cd143857adb870db115a",
+    "tests/days/h3/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tests/days/h3/status.json": "527480ab41930d7f6dc69aa2ace937487e6fa738564f7d7ad0bf723232e36f33",
+    "tests/days/h3/supply.json": "1c38373800e11c00a609383adfaabf441fd9d74c18e61943edd77f6b4f37526b",
+    "tests/days/h3/weather.csv": "ed390ebf88b1b2ae8fe7309006c1423e73169de404d4fd9008749d9ad6aa80b4",
+    "tests/days/h4/demand.csv": "fcde2307daa4537b9ac5f66f2c801a90993958a02aecd68268b486c8bac482ba",
+    "tests/days/h4/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tests/days/h4/status.json": "0a8146dd1d76e00614842724353380069a978a071b2a4e3c62b33a559f9ac1e1",
+    "tests/days/h4/supply.json": "1c38373800e11c00a609383adfaabf441fd9d74c18e61943edd77f6b4f37526b",
+    "tests/days/h4/weather.csv": "094de079b7511a646bde7af8a49f9f721a4f52fcbe8a65ac55b9b61deea86ac5",
+    "tests/days/visible/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+    "tests/days/visible/plant.json": "61f6bff7867ee45a188ee3f04302843411b888453174d23e3445f8fc98729e8b",
+    "tests/days/visible/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+    "tests/days/visible/supply.json": "1c38373800e11c00a609383adfaabf441fd9d74c18e61943edd77f6b4f37526b",
+    "tests/days/visible/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+    "tests/reference.py": "30b10f2a8dbe35d7cf2d2e2f8b008642411b1cfa1da41095058e7d789ff9ae5c",
+    "tests/test.sh": "9a07f03433a6faf7c97cdab9bf28eba06e51a19976bf7e5c54bc6a88337fe874",
+    "tests/test_plans.py": "b7844611f84a37eb10102d1b11fb2b4ff210fa6b7d89eb7f1b63a9249bb5ccd4"
+  },
+  "shared_tool_sha256": {
+    "eval_energy.py": "0713a6ca963bbf20c66f8122b8bf529213ffee667b86822c477ca023b262b66c",
+    "energy_mutants.py": "a5cd11e8b6cf91ca600e72b04eb5bb1705da7a5e6665f64a7a23b1e0c1824029",
+    "fresh_days.py": "f03afa29f7e6dd0641ac3bc02a297a56515d542660a18cd796420abb2248f2d0",
+    "build_energy_days.py": "d72b19bcb5f67b874cf3ac97c3caca297ac312207e20efc9aa0b3bb11f21aa7f"
+  },
+  "runs": {
+    "fresh": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/fresh_days.py",
+        "--days",
+        "16",
+        "--seed",
+        "2026",
+        "--output",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/build/fresh",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task/solution/app"
+      ],
+      "ECD_TASK": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task",
+      "exit_code": 0,
+      "seconds": 55.31
+    },
+    "mutants_base": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/energy_mutants.py"
+      ],
+      "ECD_TASK": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task",
+      "exit_code": 0,
+      "seconds": 631.821
+    },
+    "eval_solution": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/eval_energy.py",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task/solution/app"
+      ],
+      "ECD_TASK": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task",
+      "exit_code": 0,
+      "seconds": 14.386
+    },
+    "eval_a19": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/eval_energy.py",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v19-trials/ecd19-run2-claude/app"
+      ],
+      "ECD_TASK": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task",
+      "exit_code": 1,
+      "seconds": 10.035
+    },
+    "mutants_new": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/build/candidate_mutants.py"
+      ],
+      "ECD_TASK": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task",
+      "exit_code": 0,
+      "seconds": 14.102
+    },
+    "verify": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/build/verify_candidate.py",
+        "w"
+      ],
+      "exit_code": 0,
+      "seconds": 7.711747333873063
+    },
+    "eval_a16": {
+      "command": [
+        "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/tools/eval_energy.py",
+        "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/v16-trials/ecd16-run2-claude/app"
+      ],
+      "ECD_TASK": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v21/candidates/w/task",
+      "exit_code": 0,
+      "seconds": 12.14
+    }
+  },
+  "harbor_run": false,
+  "docker_run": false
+}

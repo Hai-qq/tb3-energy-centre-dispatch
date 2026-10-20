@@ -1,0 +1,344 @@
+{
+  "app": "/Users/haiy_qq/Desktop/\u5de5\u4f5c/klavis/results/checks-v23/candidates/t1/task/solution/app",
+  "versions": {
+    "T1": {
+      "errors": {},
+      "failed": {},
+      "edits": {
+        "h1": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": []
+        },
+        "h2": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": []
+        },
+        "h3": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": []
+        },
+        "h4": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": []
+        }
+      },
+      "elapsed_seconds": 8.246582249877974
+    },
+    "no_part_outages": {
+      "errors": {},
+      "failed": {},
+      "edits": {
+        "h1": {
+          "removed_outages": [
+            {
+              "unit": "EC1 condenser",
+              "from": "07:10",
+              "to": "09:20"
+            }
+          ],
+          "zeroed_ahu_periods": []
+        },
+        "h2": {
+          "removed_outages": [
+            {
+              "unit": "GE2 jacket water and exhaust",
+              "from": "18:20",
+              "to": "18:40"
+            },
+            {
+              "unit": "GE1 intercooler",
+              "from": "09:20",
+              "to": "11:50"
+            },
+            {
+              "unit": "LT radiator 1",
+              "from": "21:10",
+              "to": "23:00"
+            }
+          ],
+          "zeroed_ahu_periods": []
+        },
+        "h3": {
+          "removed_outages": [
+            {
+              "unit": "AC1 absorber and condenser",
+              "from": "07:10",
+              "to": "10:20"
+            },
+            {
+              "unit": "LT radiator 2",
+              "from": "03:40",
+              "to": "04:50"
+            },
+            {
+              "unit": "AC1 generator",
+              "from": "12:40",
+              "to": "12:50"
+            }
+          ],
+          "zeroed_ahu_periods": []
+        },
+        "h4": {
+          "removed_outages": [
+            {
+              "unit": "LT radiator 1",
+              "from": "00:00",
+              "to": "03:40"
+            },
+            {
+              "unit": "GE1 intercooler",
+              "from": "03:50",
+              "to": "05:50"
+            }
+          ],
+          "zeroed_ahu_periods": []
+        }
+      },
+      "elapsed_seconds": 8.237378958845511
+    },
+    "no_t1": {
+      "errors": {},
+      "failed": {},
+      "edits": {
+        "h1": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": []
+        },
+        "h2": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": [
+            "00:00",
+            "00:30",
+            "01:00",
+            "01:30",
+            "02:00",
+            "02:30",
+            "03:00",
+            "03:30",
+            "04:00",
+            "04:30",
+            "05:00",
+            "05:30",
+            "06:00",
+            "06:30",
+            "07:00",
+            "07:30",
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "17:00",
+            "17:30",
+            "18:00",
+            "18:30",
+            "19:00",
+            "19:30",
+            "20:00",
+            "20:30",
+            "21:00",
+            "21:30",
+            "22:00",
+            "22:30",
+            "23:00",
+            "23:30"
+          ]
+        },
+        "h3": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": [
+            "00:00",
+            "00:30",
+            "01:00",
+            "01:30",
+            "02:00",
+            "02:30",
+            "03:00",
+            "03:30",
+            "04:00",
+            "04:30",
+            "05:00",
+            "05:30",
+            "06:00",
+            "06:30",
+            "07:00",
+            "07:30",
+            "08:00",
+            "08:30",
+            "09:00",
+            "21:30",
+            "22:00",
+            "22:30",
+            "23:00",
+            "23:30"
+          ]
+        },
+        "h4": {
+          "removed_outages": [],
+          "zeroed_ahu_periods": []
+        }
+      },
+      "elapsed_seconds": 7.60062550008297
+    },
+    "header_only": {
+      "errors": {},
+      "failed": {},
+      "edits": {
+        "h1": {
+          "removed_outages": [
+            {
+              "unit": "EC1 condenser",
+              "from": "07:10",
+              "to": "09:20"
+            }
+          ],
+          "zeroed_ahu_periods": []
+        },
+        "h2": {
+          "removed_outages": [
+            {
+              "unit": "GE2 jacket water and exhaust",
+              "from": "18:20",
+              "to": "18:40"
+            },
+            {
+              "unit": "GE1 intercooler",
+              "from": "09:20",
+              "to": "11:50"
+            },
+            {
+              "unit": "LT radiator 1",
+              "from": "21:10",
+              "to": "23:00"
+            }
+          ],
+          "zeroed_ahu_periods": [
+            "00:00",
+            "00:30",
+            "01:00",
+            "01:30",
+            "02:00",
+            "02:30",
+            "03:00",
+            "03:30",
+            "04:00",
+            "04:30",
+            "05:00",
+            "05:30",
+            "06:00",
+            "06:30",
+            "07:00",
+            "07:30",
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "17:00",
+            "17:30",
+            "18:00",
+            "18:30",
+            "19:00",
+            "19:30",
+            "20:00",
+            "20:30",
+            "21:00",
+            "21:30",
+            "22:00",
+            "22:30",
+            "23:00",
+            "23:30"
+          ]
+        },
+        "h3": {
+          "removed_outages": [
+            {
+              "unit": "AC1 absorber and condenser",
+              "from": "07:10",
+              "to": "10:20"
+            },
+            {
+              "unit": "LT radiator 2",
+              "from": "03:40",
+              "to": "04:50"
+            },
+            {
+              "unit": "AC1 generator",
+              "from": "12:40",
+              "to": "12:50"
+            }
+          ],
+          "zeroed_ahu_periods": [
+            "00:00",
+            "00:30",
+            "01:00",
+            "01:30",
+            "02:00",
+            "02:30",
+            "03:00",
+            "03:30",
+            "04:00",
+            "04:30",
+            "05:00",
+            "05:30",
+            "06:00",
+            "06:30",
+            "07:00",
+            "07:30",
+            "08:00",
+            "08:30",
+            "09:00",
+            "21:30",
+            "22:00",
+            "22:30",
+            "23:00",
+            "23:30"
+          ]
+        },
+        "h4": {
+          "removed_outages": [
+            {
+              "unit": "LT radiator 1",
+              "from": "00:00",
+              "to": "03:40"
+            },
+            {
+              "unit": "GE1 intercooler",
+              "from": "03:50",
+              "to": "05:50"
+            }
+          ],
+          "zeroed_ahu_periods": []
+        }
+      },
+      "elapsed_seconds": 8.162987333955243
+    }
+  },
+  "all_passed": true
+}

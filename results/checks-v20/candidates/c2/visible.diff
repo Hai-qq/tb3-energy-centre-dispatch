@@ -1,0 +1,23 @@
+--- v19/app/data/supply.json
++++ c2/app/data/supply.json
+@@ -44,6 +44,19 @@
+   "gas": {
+     "rate_p_per_kwh": 4.35,
+     "billing_basis": "gross CV",
+-    "gross_to_net_cv_ratio": 1.108
++    "gross_to_net_cv_ratio": 1.108,
++    "entry": {
++      "id": "GAS-IN",
++      "maximum_standard_m3_per_hour": 550.0,
++      "standard_temperature_c": 15.0,
++      "standard_pressure_bar_absolute": 1.01325,
++      "gross_calorific_value_mj_per_standard_m3": 39.6,
++      "supplies": [
++        "GE1",
++        "GE2",
++        "B1",
++        "B2"
++      ]
++    }
+   }
+ }

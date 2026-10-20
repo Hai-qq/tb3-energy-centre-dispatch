@@ -1,0 +1,14 @@
+App: /Users/haiy_qq/Desktop/工作/klavis/results/checks-v22/candidates/k/task/solution/app
+K: PASS
+  W (test_single_connection_direction): PASS on all days
+  P (test_lt_pump_outages): PASS on all days
+  C2 (test_shared_gas_entry): PASS on all days
+  C4 (test_phe_primary_water_flow): PASS on all days
+  S (test_lt_heat_rejection): PASS on all days
+without_old_component_outages: PASS
+  W (test_single_connection_direction): PASS on all days
+  P (test_lt_pump_outages): PASS on all days
+  C2 (test_shared_gas_entry): PASS on all days
+  C4 (test_phe_primary_water_flow): PASS on all days
+  S (test_lt_heat_rejection): PASS on all days
+A rule test failing because no plan was produced is an execution/compatibility failure, not a measured physical violation.

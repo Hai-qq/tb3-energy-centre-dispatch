@@ -1,0 +1,45 @@
+MILP visible: 6303.560319427
+MILP h1: 6426.647467103
+MILP h2: 8460.684837694
+MILP h3: 5345.190996902
+MILP h4: 7310.971840533
+oracle visible: PASS delta=8.976349636213854e-05 
+oracle h1: PASS delta=-5.812224697746387 
+oracle h2: PASS delta=-9.636619870434515e-05 
+oracle h3: PASS delta=4.736275695904624e-05 
+oracle h4: PASS delta=-14.878995913984909 
+strong-v16-claude visible: PASS delta=8.976349636213854e-05 
+strong-v16-claude h1: PASS delta=0.009841185349614534 
+strong-v16-claude h2: PASS delta=-9.636619870434515e-05 
+strong-v16-claude h3: PASS delta=4.736275695904624e-05 
+strong-v16-claude h4: PASS delta=0.011209427864741883 
+v17-run1-claude visible: PASS delta=8.976349636213854e-05 
+v17-run1-claude h1: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run1-claude h2: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run1-claude h3: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run1-claude h4: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run2-claude visible: PASS delta=8.976349636213854e-05 
+v17-run2-claude h1: FAIL delta=-23.34229948490065 test_units_within_ratings_and_availability
+v17-run2-claude h2: FAIL delta=-556.6694643880273 test_units_within_ratings_and_availability
+v17-run2-claude h3: FAIL delta=-162.56245111782118 test_units_within_ratings_and_availability
+v17-run2-claude h4: FAIL delta=-40.03356266433457 test_units_within_ratings_and_availability
+v17-run3-claude visible: PASS delta=8.976349636213854e-05 
+v17-run3-claude h1: FAIL delta=717.0962292699069 test_units_within_ratings_and_availability, test_connection_limits, test_least_cost
+v17-run3-claude h2: FAIL delta=-880.9859887761304 test_units_within_ratings_and_availability
+v17-run3-claude h3: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run3-claude h4: FAIL delta=445.52139873567467 test_connection_limits, test_least_cost
+v17-run1-codex visible: PASS delta=1.354410414933227e-07 
+v17-run1-codex h1: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run1-codex h2: FAIL delta=-556.669390157359 test_units_within_ratings_and_availability
+v17-run1-codex h3: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run1-codex h4: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run2-codex visible: PASS delta=-1.2369127944111824e-10 
+v17-run2-codex h1: FAIL delta=-23.346378604309393 test_units_within_ratings_and_availability
+v17-run2-codex h2: FAIL delta=-556.6693902334055 test_units_within_ratings_and_availability
+v17-run2-codex h3: FAIL delta=-162.56248534047518 test_units_within_ratings_and_availability
+v17-run2-codex h4: FAIL delta=-40.03949270452176 test_units_within_ratings_and_availability
+v17-run3-codex visible: PASS delta=8.976349636213854e-05 
+v17-run3-codex h1: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run3-codex h2: FAIL delta=-880.9859887761304 test_units_within_ratings_and_availability
+v17-run3-codex h3: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time
+v17-run3-codex h4: FAIL delta=n/a execution_0, execution_1, test_same_plan_every_time

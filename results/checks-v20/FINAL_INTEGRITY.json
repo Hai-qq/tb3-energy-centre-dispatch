@@ -1,0 +1,81 @@
+{
+  "candidates": {
+    "c1": {
+      "all_historical_apps_unchanged": true,
+      "evaluated_task_unchanged": true,
+      "fresh": {
+        "2026": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        },
+        "2403": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        },
+        "87123": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        }
+      },
+      "frozen_blind_files_unchanged": 323,
+      "visible_unchanged": true
+    },
+    "c2": {
+      "all_historical_apps_unchanged": true,
+      "evaluated_task_unchanged": true,
+      "fresh": {
+        "2026": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        },
+        "2403": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        },
+        "87123": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        }
+      },
+      "frozen_blind_files_unchanged": 198,
+      "visible_unchanged": true
+    },
+    "c4": {
+      "all_historical_apps_unchanged": true,
+      "evaluated_task_unchanged": true,
+      "fresh": {
+        "2026": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        },
+        "2403": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        },
+        "87123": {
+          "all_tests_passed": true,
+          "days": 16,
+          "inputs_unchanged": true
+        }
+      },
+      "frozen_blind_files_unchanged": 307,
+      "visible_unchanged": true
+    }
+  },
+  "canonical_task_and_baseline_identical": true,
+  "clock_observation_utc": "2026-10-18 06:46:06 UTC",
+  "reader_files_unchanged": 6,
+  "scope_note": "Tracked diff checked here; exact staged and committed path scope is checked again when publishing.",
+  "tracked_changed_paths_at_check": [
+    "tools/fresh_days.py"
+  ],
+  "tracked_changed_paths_within_allowed_scope": true
+}

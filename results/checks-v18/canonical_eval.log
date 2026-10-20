@@ -1,0 +1,12 @@
+oracle tasks/energy-centre-dispatch/solution/app
+  all tests pass
+{"errors": {}, "failed": {}, "elapsed_seconds": 50.32958400899952}
+strong-v16-claude results/v16-trials/ecd16-run2-claude/app
+  all tests pass
+{"errors": {}, "failed": {}, "elapsed_seconds": 38.91033628600053}
+patched-v17-claude results/checks-v18/opponents/ecd17-run2-claude-parts/app
+  all tests pass
+{"errors": {}, "failed": {}, "elapsed_seconds": 31.13034882699867}
+patched-v17-codex results/checks-v18/opponents/ecd17-run2-codex-parts/app
+  all tests pass
+{"errors": {}, "failed": {}, "elapsed_seconds": 41.0265580439991}

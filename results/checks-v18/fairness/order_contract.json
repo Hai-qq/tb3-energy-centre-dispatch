@@ -1,0 +1,33 @@
+{
+  "provenance": {
+    "kind": "post-cleanup recovery rerun",
+    "executed_utc": "2026-10-17T11:02:14.776198+00:00",
+    "python": "3.13.16",
+    "numpy": "2.3.4",
+    "scipy": "1.17.0",
+    "reference_sha256": "9a76ed87d2ef7ab13f9734ddfffec29ba8715a61ada2745851e63efe480970b4",
+    "source": "Script recovered from the conversation; this output was newly executed, not recreated from the lost original log."
+  },
+  "weather_permutation_changes_current_reference_inputs": false,
+  "demand_permutation_preserves_all_timestamp_keyed_values": true,
+  "current_reference_preserves_demand_row_order": {
+    "original_first_clock": 0,
+    "permuted_first_clock": 720
+  },
+  "isolated_identical_physical_engine_schedule": {
+    "running_at_midnight": [
+      "GE1"
+    ],
+    "GE1_on_local_times": "12:00 to 24:00",
+    "GE2": "off"
+  },
+  "chronological_order": {
+    "starts_reported_by_current_reference": 1,
+    "cost_reported_by_current_reference": 1103.33108
+  },
+  "noon_first_row_order": {
+    "starts_reported_by_current_reference": 0,
+    "cost_reported_by_current_reference": 1065.33108
+  },
+  "limitation": "This proves reference chronology dependence; it does not decide whether unordered input is within the promised production schema, nor evaluate an opponent or a complete feasible plan."
+}

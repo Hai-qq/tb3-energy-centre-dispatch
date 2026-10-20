@@ -1,0 +1,329 @@
+{
+  "oracle": {
+    "app": "tasks/energy-centre-dispatch/solution/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.647743955096,
+        "delta_gbp": 0.0002768520544123021,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.580522632999873,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.787578081999982,
+            "sha256": "715c175ebc7b58c38ac457a1ee7831a202c7864a5768e73a46ad0b493b5ac93a"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.731915146565,
+        "delta_gbp": -7.61121427785838e-05,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.2972711540001,
+            "sha256": "64a453bd96c7485d8f5ad842eb82c8a0dfc38c828128a532eee85a4acf84ff74"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.1549682800000483,
+            "sha256": "64a453bd96c7485d8f5ad842eb82c8a0dfc38c828128a532eee85a4acf84ff74"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 4.014997018000031,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 4.5255428349998965,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.971820541148,
+        "delta_gbp": -1.9991884983028285e-05,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.561687574999951,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.9908981199998834,
+            "sha256": "57030c0f83407f54e54ac0e23cb9b5eadc1b2ac83e02002b77dce532ffc73f44"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 4.008486744000038,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.3821038750002117,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "faf0be714a15499bcfeafef6a2a3dd971c97f3f6396fc7d6e647bce7beb4c6c8",
+      "planner/optimize.py": "ca57ad92449e4ae4a1becb699451ce6be20d3232684eb6a9e9fdff64b0e8f617",
+      "planner/plant.py": "a49edf43be5969be0c43a3ba98c8ccabd44ae1310b486099c1303b176068e4c6",
+      "planner/tariff.py": "74dfe947beb22d0019b9a858e1871029d10337e4396e712f2574081d5dba9b4e"
+    }
+  },
+  "strong-v16-claude": {
+    "app": "results/v16-trials/ecd16-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6426.6573082883915,
+        "delta_gbp": 0.009841185349614534,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.76729159599995,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.1445909799999754,
+            "sha256": "286066bfd8a384c97ecbe9f85da776d7ca755c4c357690fab0c5605a1e09e986"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.735705373085,
+        "delta_gbp": 0.003714114376634825,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.2810897540000497,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.912668652000093,
+            "sha256": "bcfd784a2307869f1d981e0b700d03f81151d14b813047080cdece177e147a21"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.782267069999989,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.139714638999976,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7310.983049960898,
+        "delta_gbp": 0.011209427864741883,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.1371415760002037,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.690603246999899,
+            "sha256": "8f69a7728d3e6f89b93e557ba0439d99067e0b7f23544f8dfd944a706a28d1a0"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.389003076000108,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.8834685560000253,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "cc653190eca69294cf68359190928ccaee3f1fdac45697fd25107e5adb94f659",
+      "planner/optimize.py": "e1d50e78f3318398fe7ccf28468ee6ed4815576647d44995649f9fd0997db31a",
+      "planner/plant.py": "c1fe7ecca1d77f0e29c20ef381618fbf06748541b4e0c97f493abfe448985587",
+      "planner/tariff.py": "89c3e063535bae50d1a5f7e046b51c1bffdbaaeeef9aa8fff9e65f7323026db3"
+    }
+  },
+  "strong-v19-claude": {
+    "app": "results/v19-trials/ecd19-run2-claude/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6420.842876285666,
+        "delta_gbp": -5.8045908173762655,
+        "failures": {},
+        "milp_gbp": 6426.647467103042,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 4.047837169000104,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.305429371999935,
+            "sha256": "04cc696bc20221ae3b7ff448a29ed0597f7a206aa71560cb1b0b363a9bbbadf1"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8879.737220223913,
+        "delta_gbp": 0.005228965204878477,
+        "failures": {},
+        "milp_gbp": 8879.731991258708,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 3.2027410650000547,
+            "sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.9118208679999498,
+            "sha256": "4c2b49b7c18685935973a429249477d6d890ddea96049c20b15c46b6c2103ba3"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5375.538030470144,
+        "delta_gbp": -9.999140274885576e-06,
+        "failures": {},
+        "milp_gbp": 5375.538040469284,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.826818038000056,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.968996498000024,
+            "sha256": "f08f45c49ce3b77b070991f12403dec6f4955a517c85e18809409ec9dc20c1e3"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7296.098696319798,
+        "delta_gbp": -14.87314421323481,
+        "failures": {},
+        "milp_gbp": 7310.971840533033,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.3177988700001606,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.4281548960000237,
+            "sha256": "6c2f99a54da5eed368d331560e91aa69a8fe00e4721b0701990d9732128d2f54"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.5604091900495,
+        "delta_gbp": 8.976349636213854e-05,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.487350749999905,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          },
+          {
+            "returncode": 0,
+            "seconds": 3.126636990999941,
+            "sha256": "e38c867d8aac236235635c2b1bd170e7b000714a46f69601bad43d234829c9a5"
+          }
+        ]
+      }
+    },
+    "passed": true,
+    "source_sha256": {
+      "dispatch.py": "f30c9e0f1432cbb4ce0edc06bf04ef445cd64134ba0c826ee853477a353a4482",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "e37c098f1c0604abec1d8d98dfab95c5e21fe88141e8eb0e222d1f1e9013f151",
+      "planner/optimize.py": "1fc08edbb14d249fb16dfe10cdc1082fb7c148b28d0529e62ffed95716ad6923",
+      "planner/plant.py": "1dfa72d3c71fd78202079559deea986e4265b226a2130956f65d3cfa63d8ecfc",
+      "planner/tariff.py": "f885a4a9982601918c8bd0be0814d9cac996e673f19c942d97c02322d1866a3b"
+    }
+  }
+}

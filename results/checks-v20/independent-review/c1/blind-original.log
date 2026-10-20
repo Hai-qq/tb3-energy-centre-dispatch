@@ -1,0 +1,20 @@
+  planner failed on h1: exit 2: dispatch: unknown outage unit: EC1 condenser
+  planner failed on h1.rerun: exit 2: dispatch: unknown outage unit: EC1 condenser
+  planner failed on h2: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust
+  planner failed on h2.rerun: exit 2: dispatch: unknown outage unit: GE2 jacket water and exhaust
+  planner failed on h3: exit 2: dispatch: unknown outage unit: AC1 absorber and condenser
+  planner failed on h3.rerun: exit 2: dispatch: unknown outage unit: AC1 absorber and condenser
+  planner failed on h4: exit 2: dispatch: unknown outage unit: GE1 intercooler
+  planner failed on h4.rerun: exit 2: dispatch: unknown outage unit: GE1 intercooler
+  FAIL test_connection_limits: h1,h2,h3,h4
+  FAIL test_cooling_balance: h1,h2,h3,h4
+  FAIL test_cooling_towers: h1,h2,h3,h4
+  FAIL test_electricity_balance: h1,h2,h3,h4
+  FAIL test_heat_balance: h1,h2,h3,h4
+  FAIL test_least_cost: h1,h2,h3,h4
+  FAIL test_plan_covers_the_day: h1,h2,h3,h4
+  FAIL test_reported_gas_and_cost: h1,h2,h3,h4
+  FAIL test_reported_import_export_and_grid_flags: h1,h2,h3,h4
+  FAIL test_same_plan_every_time: h1,h2,h3,h4
+  FAIL test_single_connection_direction: h1,h2,h3,h4
+  FAIL test_units_within_ratings_and_availability: h1,h2,h3,h4

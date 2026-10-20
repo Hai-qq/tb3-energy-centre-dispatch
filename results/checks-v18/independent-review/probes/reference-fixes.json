@@ -1,0 +1,43 @@
+{
+  "pv-union": {
+    "forecast_kw": 236.6,
+    "expected_pv_max_kw": 118.3,
+    "observed_pv_max_kw": 118.3,
+    "passed": true,
+    "status": {
+      "date": "2026-04-20",
+      "running_at_midnight": [],
+      "outages": [
+        {
+          "unit": "PV1",
+          "from": "12:05",
+          "to": "12:15"
+        },
+        {
+          "unit": "PV1",
+          "from": "12:10",
+          "to": "12:20"
+        }
+      ]
+    }
+  },
+  "ht-name": {
+    "loaded_without_KeyError": true,
+    "GE1_available_at_1200": false,
+    "unavailable_periods": [
+      24
+    ],
+    "passed": true,
+    "status": {
+      "date": "2026-04-20",
+      "running_at_midnight": [],
+      "outages": [
+        {
+          "unit": "GE1 jacket water and exhaust",
+          "from": "12:05",
+          "to": "12:20"
+        }
+      ]
+    }
+  }
+}

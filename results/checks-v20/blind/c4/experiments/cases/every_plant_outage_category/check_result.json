@@ -1,0 +1,72 @@
+{
+  "name": "every_plant_outage_category",
+  "description": "Boiler, electric/absorption chiller, tower, PHE, PV and LT radiator outages.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 5410.0368666211525,
+      "gas_kwh": 70270.1694181241,
+      "import_kwh": 8493.87958520272,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 2.5579538487363607e-13,
+      "heat_kw": 3.410605131648481e-13,
+      "cooling_kw": 0.0,
+      "cost_gbp": 1.4210854715202004e-14,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2060.7933251684017,
+      "phe_kw": 1110.0,
+      "apparent_import_kva": 997.2624173203625,
+      "condenser_entering_c": 26.0
+    },
+    "coverage": {
+      "interior_engine_loads": 32,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 8,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.499646397000106,
+    1.4550140619994636
+  ],
+  "plan_sha256": "d6443c09512af7cb5f52666f684b05beaf5690fc8a3dcd75f81e2dad9b6dee8d",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 5410.036866621156,
+    "lower_bound_gbp": 5410.036866621155,
+    "absolute_gap_gbp": 9.094947017729282e-13,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.09632317300020077,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 5410.036866621155,
+        "incumbent_gbp": 5410.036866621156,
+        "candidate_gap_gbp": 9.094947017729282e-13,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 6814.749997735472,
+  "improvement_over_witness_gbp": 1404.7131311143157,
+  "total_seconds": 3.0624392869995063
+}

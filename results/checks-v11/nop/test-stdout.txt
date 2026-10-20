@@ -1,0 +1,612 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 1 Traceback (most recent call last):
+  File "/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/app/planner/optimize.py", line 149, in plan_day
+    raise RuntimeError(f"no feasible loading at {day.starts[t]}")
+RuntimeError: no feasible loading at 14:00
+
+h1.rerun: tool exited 1 Traceback (most recent call last):
+  File "/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/app/planner/optimize.py", line 149, in plan_day
+    raise RuntimeError(f"no feasible loading at {day.starts[t]}")
+RuntimeError: no feasible loading at 14:00
+
+h2: tool exited 0 
+h2.rerun: tool exited 0 
+h3: tool exited 0 
+h3.rerun: tool exited 0 
+h4: tool exited 0 
+h4.rerun: tool exited 0 
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 55 items
+
+test_plans.py .FFF...F..EEEEEEEEEE.F.F...F...FFF...F...FFF...F...F...    [100%]
+
+==================================== ERRORS ====================================
+________________ ERROR at setup of test_plan_covers_the_day[h1] ________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+_______ ERROR at setup of test_units_within_ratings_and_availability[h1] _______
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+________________ ERROR at setup of test_electricity_balance[h1] ________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+___________________ ERROR at setup of test_heat_balance[h1] ____________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+__________________ ERROR at setup of test_cooling_balance[h1] __________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+__________________ ERROR at setup of test_cooling_towers[h1] ___________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+_________________ ERROR at setup of test_connection_limits[h1] _________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+_______________ ERROR at setup of test_reported_gas_and_cost[h1] _______________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+_______ ERROR at setup of test_reported_import_export_and_grid_flags[h1] _______
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+____________________ ERROR at setup of test_least_cost[h1] _____________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h1]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+=================================== FAILURES ===================================
+_____________ test_units_within_ratings_and_availability[visible] ______________
+
+case = (<reference.Day object at 0xffff4898ef90>, {'date': '2026-07-21', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 72.4384  , 70.2318  , 68.7974  , 43.044   ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff47f6bf90>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff47f6bf90> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,...False, False, False,\n       False, False, False, False, False, False, False, False,  True,\n        True,  True,  True]).all
+
+test_plans.py:53: AssertionError
+______________________ test_electricity_balance[visible] _______________________
+
+case = (<reference.Day object at 0xffff4898ef90>, {'date': '2026-07-21', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 72.4384  , 70.2318  , 68.7974  , 43.044   ]), ...})
+
+    def test_electricity_balance(case):
+        day, plan, flows = case
+        pv = series(plan, "pv_kw")
+>       assert (pv >= -0.5).all() and (pv <= day.pv + 0.5).all()
+E       assert (np.True_ and np.False_)
+E        +  where np.True_ = <built-in method all of numpy.ndarray object at 0xffff47fd65b0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff47fd65b0> = array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   5.2,\n        21.6,  41.4,  63.7,  87.1, 110.9, 132.8,...135.8, 110.8,  87.4,\n        64. ,  42.5,  21.5,   5.2,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) >= -0.5.all
+E        +  and   np.False_ = <built-in method all of numpy.ndarray object at 0xffff47fd4090>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff47fd4090> = array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   5.2,\n        21.6,  41.4,  63.7,  87.1, 110.9, 132.8,...135.8, 110.8,  87.4,\n        64. ,  42.5,  21.5,   5.2,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) <= (array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   5.2,  21.6,  41.4,  63.7,  87.1,...176.6, 155.1, 135.8,\n       110.8,  87.4,  64. ,  42.5,  21.5,   5.2,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) + 0.5).all
+E        +      where array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   5.2,  21.6,  41.4,  63.7,  87.1,...176.6, 155.1, 135.8,\n       110.8,  87.4,  64. ,  42.5,  21.5,   5.2,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) = <reference.Day object at 0xffff4898ef90>.pv
+
+test_plans.py:59: AssertionError
+__________________________ test_heat_balance[visible] __________________________
+
+case = (<reference.Day object at 0xffff4898ef90>, {'date': '2026-07-21', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 72.4384  , 70.2318  , 68.7974  , 43.044   ]), ...})
+
+    def test_heat_balance(case):
+        day, plan, flows = case
+        boilers = sum(series(plan, "boilers_kw", b["id"]) for b in day.plant["boilers"])
+        lthw = flows["engine_heat"] - flows["ac_heat"] + boilers
+>       assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW
+E       AssertionError: assert np.float64(606.7460366197179) <= 1.0
+E        +  where np.float64(606.7460366197179) = <built-in method max of numpy.ndarray object at 0xffff47fd6910>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff47fd6910> = array([303.15070423, 338.27605634, 345.49014085, 329.30704225,\n       335.49014085, 361.01267606, 382.81549296, 363.06...305.04053662, 247.03123662, 243.19083662, 238.59103662,\n       321.4454338 , 487.18283944, 565.77082535, 252.15774648]).max
+E        +      where array([303.15070423, 338.27605634, 345.49014085, 329.30704225,\n       335.49014085, 361.01267606, 382.81549296, 363.06...305.04053662, 247.03123662, 243.19083662, 238.59103662,\n       321.4454338 , 487.18283944, 565.77082535, 252.15774648]) = <ufunc 'absolute'>(((array([628.45070423, 662.67605634, 671.69014085, 654.50704225,\n       661.69014085, 672.11267606, 695.91549296, 683.66...795.74053662, 739.83123662, 725.59083662, 685.19103662,\n       734.7454338 , 857.58283944, 915.57082535, 582.95774648]) - array([250.3, 249.4, 251.2, 250.2, 251.2, 236.1, 238.1, 245.6, 271.4,\n       336. , 377.5, 438.6, 486.2, 487.9, 505.1,...362.5, 358.5, 365.1,\n       374.9, 393.7, 385.6, 414.5, 415.7, 417.8, 407.4, 371.6, 338.3,\n       295.4, 274.8, 255.8])) - 75))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +        and   array([250.3, 249.4, 251.2, 250.2, 251.2, 236.1, 238.1, 245.6, 271.4,\n       336. , 377.5, 438.6, 486.2, 487.9, 505.1,...362.5, 358.5, 365.1,\n       374.9, 393.7, 385.6, 414.5, 415.7, 417.8, 407.4, 371.6, 338.3,\n       295.4, 274.8, 255.8]) = <reference.Day object at 0xffff4898ef90>.heat
+E        +        and   75 = <reference.Day object at 0xffff4898ef90>.lthw_loss
+
+test_plans.py:70: AssertionError
+_____________________ test_reported_gas_and_cost[visible] ______________________
+
+case = (<reference.Day object at 0xffff4898ef90>, {'date': '2026-07-21', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 72.4384  , 70.2318  , 68.7974  , 43.044   ]), ...})
+
+    def test_reported_gas_and_cost(case):
+        _, plan, flows = case
+        gas, cost = series(plan, "gas_kwh"), series(plan, "cost_gbp")
+>       assert np.abs(gas - flows["gas_kwh"]).max() <= 0.5 + 0.002 * flows["gas_kwh"].max()
+E       AssertionError: assert np.float64(472.47129740000037) <= (0.5 + (0.002 * np.float64(2567.3872974000005)))
+E        +  where np.float64(472.47129740000037) = <built-in method max of numpy.ndarray object at 0xffff47fd6e50>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff47fd6e50> = array([294.854     , 294.854     , 294.854     , 294.854     ,\n       294.854     , 294.854     , 294.854     , 294.85...423.5304614 , 411.1088613 , 405.82673323, 390.84147727,\n       381.6371793 , 374.8013636 , 362.24642977, 294.854     ]).max
+E        +      where array([294.854     , 294.854     , 294.854     , 294.854     ,\n       294.854     , 294.854     , 294.854     , 294.85...423.5304614 , 411.1088613 , 405.82673323, 390.84147727,\n       381.6371793 , 374.8013636 , 362.24642977, 294.854     ]) = <ufunc 'absolute'>((array([1295.126, 1295.126, 1295.126, 1295.126, 1295.126, 1295.126,\n       1295.126, 1295.126, 1295.126, 1295.126, 1295..., 2012.766, 1932.735, 1920.182, 1868.5  , 1808.037,\n       1787.241, 1728.243, 1692.01 , 1665.095, 1615.674, 1295.126]) - array([1589.98      , 1589.98      , 1589.98      , 1589.98      ,\n       1589.98      , 1589.98      , 1589.98      ,...4614 , 2219.1458613 , 2193.06773323, 2119.08447727,\n       2073.6471793 , 2039.8963636 , 1977.92042977, 1589.98      ])))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +  and   np.float64(2567.3872974000005) = <built-in method max of numpy.ndarray object at 0xffff47f6bbd0>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff47f6bbd0> = array([1589.98      , 1589.98      , 1589.98      , 1589.98      ,\n       1589.98      , 1589.98      , 1589.98      ,...4614 , 2219.1458613 , 2193.06773323, 2119.08447727,\n       2073.6471793 , 2039.8963636 , 1977.92042977, 1589.98      ]).max
+
+test_plans.py:100: AssertionError
+________________ test_units_within_ratings_and_availability[h2] ________________
+
+case = (<reference.Day object at 0xffff47ff0cd0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'condenser_water_c': ...32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 56.]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff48004630>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff48004630> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True, False, False, False,... True,  True,  True,\n        True,  True,  True,  True,  True,  True, False, False, False,\n       False, False, False]).all
+
+test_plans.py:53: AssertionError
+____________________________ test_heat_balance[h2] _____________________________
+
+case = (<reference.Day object at 0xffff47ff0cd0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'condenser_water_c': ...32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 56.]), ...})
+
+    def test_heat_balance(case):
+        day, plan, flows = case
+        boilers = sum(series(plan, "boilers_kw", b["id"]) for b in day.plant["boilers"])
+        lthw = flows["engine_heat"] - flows["ac_heat"] + boilers
+>       assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW
+E       AssertionError: assert np.float64(340.0) <= 1.0
+E        +  where np.float64(340.0) = <built-in method max of numpy.ndarray object at 0xffff48004e70>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48004e70> = array([283.14225, 283.3299 , 282.6183 , 283.25365, 283.7323 , 282.6683 ,\n       282.5757 , 283.2365 , 283.4743 , 282.8..., 340.     , 340.     , 340.     , 340.     ,\n       319.0146 , 306.0998 , 282.6696 , 278.11315, 279.9329 , 282.3924 ]).max
+E        +      where array([283.14225, 283.3299 , 282.6183 , 283.25365, 283.7323 , 282.6683 ,\n       282.5757 , 283.2365 , 283.4743 , 282.8..., 340.     , 340.     , 340.     , 340.     ,\n       319.0146 , 306.0998 , 282.6696 , 278.11315, 279.9329 , 282.3924 ]) = <ufunc 'absolute'>(((array([2073.15775, 2023.7701 , 2022.9817 , 2076.04635, 2066.4677 ,\n       2153.6317 , 2164.7243 , 2171.3635 , 2231.225...9.4    ,\n       2503.3    , 2520.     , 2378.2854 , 2336.5002 , 2337.7304 ,\n       2295.88685, 2205.6671 , 2084.7076 ]) - array([2281.3, 2232.1, 2230.6, 2284.3, 2275.2, 2361.3, 2372.3, 2379.6,\n       2439.7, 2697.4, 2892.5, 2990.8, 3161. , ...2919.5, 2870.7, 2892.2, 2820.3, 2826.8, 2794.4,\n       2768.3, 2785. , 2622.3, 2567.6, 2545.4, 2499. , 2410.6, 2292.1])) - 75))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +        and   array([2281.3, 2232.1, 2230.6, 2284.3, 2275.2, 2361.3, 2372.3, 2379.6,\n       2439.7, 2697.4, 2892.5, 2990.8, 3161. , ...2919.5, 2870.7, 2892.2, 2820.3, 2826.8, 2794.4,\n       2768.3, 2785. , 2622.3, 2567.6, 2545.4, 2499. , 2410.6, 2292.1]) = <reference.Day object at 0xffff47ff0cd0>.heat
+E        +        and   75 = <reference.Day object at 0xffff47ff0cd0>.lthw_loss
+
+test_plans.py:70: AssertionError
+________________________ test_reported_gas_and_cost[h2] ________________________
+
+case = (<reference.Day object at 0xffff47ff0cd0>, {'date': '2026-01-14', 'periods': [{'start': '00:00', 'condenser_water_c': ...32., 32., 32., 32., 32., 32., 32., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 56.]), ...})
+
+    def test_reported_gas_and_cost(case):
+        _, plan, flows = case
+        gas, cost = series(plan, "gas_kwh"), series(plan, "cost_gbp")
+>       assert np.abs(gas - flows["gas_kwh"]).max() <= 0.5 + 0.002 * flows["gas_kwh"].max()
+E       AssertionError: assert np.float64(499.2996795580111) <= (0.5 + (0.002 * np.float64(3136.915138121547)))
+E        +  where np.float64(499.2996795580111) = <built-in method max of numpy.ndarray object at 0xffff48005230>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48005230> = array([420.16300012, 419.26896925, 422.65644403, 419.63095324,\n       417.35570861, 422.41693358, 422.85513325, 419.71...499.29892265, 499.29944199, 482.67052087, 472.43903095,\n       453.87386533, 444.08398993, 435.4314822 , 423.72617483]).max
+E        +      where array([420.16300012, 419.26896925, 422.65644403, 419.63095324,\n       417.35570861, 422.41693358, 422.85513325, 419.71...499.29892265, 499.29944199, 482.67052087, 472.43903095,\n       453.87386533, 444.08398993, 435.4314822 , 423.72617483]) = <ufunc 'absolute'>((array([1943.865, 1914.492, 1921.971, 1944.22 , 1933.612, 1993.593,\n       2000.743, 1997.083, 2027.509, 2176.891, 2293..., 2394.964, 2398.555, 2380.655, 2366.235, 2375.461,\n       2258.372, 2211.412, 2168.777, 2122.803, 2052.747, 1958.571]) - array([2364.02800012, 2333.76096925, 2344.62744403, 2363.85095324,\n       2350.96770861, 2416.00993358, 2423.59813325,...92265, 2874.76044199, 2741.04252087, 2683.85103095,\n       2622.65086533, 2566.88698993, 2488.1784822 , 2382.29717483])))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +  and   np.float64(3136.915138121547) = <built-in method max of numpy.ndarray object at 0xffff47f6b030>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff47f6b030> = array([2364.02800012, 2333.76096925, 2344.62744403, 2363.85095324,\n       2350.96770861, 2416.00993358, 2423.59813325,...92265, 2874.76044199, 2741.04252087, 2683.85103095,\n       2622.65086533, 2566.88698993, 2488.1784822 , 2382.29717483]).max
+
+test_plans.py:100: AssertionError
+________________ test_units_within_ratings_and_availability[h3] ________________
+
+case = (<reference.Day object at 0xffff47ff0190>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'condenser_water_c': ...56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 32.]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff480056b0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff480056b0> = array([ True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True,  True,  True,  True,... True,  True,  True,\n        True,  True,  True,  True,  True,  True,  True,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:53: AssertionError
+_________________________ test_electricity_balance[h3] _________________________
+
+case = (<reference.Day object at 0xffff47ff0190>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'condenser_water_c': ...56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 32.]), ...})
+
+    def test_electricity_balance(case):
+        day, plan, flows = case
+        pv = series(plan, "pv_kw")
+>       assert (pv >= -0.5).all() and (pv <= day.pv + 0.5).all()
+E       assert (np.True_ and np.False_)
+E        +  where np.True_ = <built-in method all of numpy.ndarray object at 0xffff48006910>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff48006910> = array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   4.8,  20.1,  46. ,  67.9,  93.1,... 91.9,  65.5,  37.3,\n        23.3,   5. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) >= -0.5.all
+E        +  and   np.False_ = <built-in method all of numpy.ndarray object at 0xffff480058f0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff480058f0> = array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   4.8,  20.1,  46. ,  67.9,  93.1,... 91.9,  65.5,  37.3,\n        23.3,   5. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) <= (array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ,   4.8,  20.1,  46. ,...141.5,  98. ,  91.9,\n        65.5,  37.3,  23.3,   5. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) + 0.5).all
+E        +      where array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ,   4.8,  20.1,  46. ,...141.5,  98. ,  91.9,\n        65.5,  37.3,  23.3,   5. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) = <reference.Day object at 0xffff47ff0190>.pv
+
+test_plans.py:59: AssertionError
+____________________________ test_heat_balance[h3] _____________________________
+
+case = (<reference.Day object at 0xffff47ff0190>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'condenser_water_c': ...56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 32.]), ...})
+
+    def test_heat_balance(case):
+        day, plan, flows = case
+        boilers = sum(series(plan, "boilers_kw", b["id"]) for b in day.plant["boilers"])
+        lthw = flows["engine_heat"] - flows["ac_heat"] + boilers
+>       assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW
+E       AssertionError: assert np.float64(1200.2346) <= 1.0
+E        +  where np.float64(1200.2346) = <built-in method max of numpy.ndarray object at 0xffff48006d90>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48006d90> = array([ 299.     ,  313.4    ,  279.8    ,  295.5    ,  252.7    ,\n        250.6    ,  259.4    ,  245.6    ,  140.2  ...2.574  ,\n        664.88395,  688.0633 ,  720.179  ,  739.6364 ,  712.9442 ,\n        710.17   ,  760.8586 ,  283.     ]).max
+E        +      where array([ 299.     ,  313.4    ,  279.8    ,  295.5    ,  252.7    ,\n        250.6    ,  259.4    ,  245.6    ,  140.2  ...2.574  ,\n        664.88395,  688.0633 ,  720.179  ,  739.6364 ,  712.9442 ,\n        710.17   ,  760.8586 ,  283.     ]) = <ufunc 'absolute'>(((array([1290.     , 1290.     , 1290.     , 1290.     , 1290.     ,\n       1290.     , 1290.     , 1290.     , 1290.   ...7.374  ,\n       1898.18395, 1884.7633 , 1849.379  , 1817.2364 , 1789.6442 ,\n       1762.37   , 1758.4586 , 1290.     ]) - array([ 916. ,  901.6,  935.2,  919.5,  962.3,  964.4,  955.6,  969.4,\n       1074.8, 1203.3, 1337.4, 1505.2, 1505.7, ... 990. , 1015.5, 1072.5, 1091.2, 1110.5, 1149.8,\n       1158.3, 1121.7, 1054.2, 1002.6, 1001.7,  977.2,  922.6,  932. ])) - 75))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +        and   array([ 916. ,  901.6,  935.2,  919.5,  962.3,  964.4,  955.6,  969.4,\n       1074.8, 1203.3, 1337.4, 1505.2, 1505.7, ... 990. , 1015.5, 1072.5, 1091.2, 1110.5, 1149.8,\n       1158.3, 1121.7, 1054.2, 1002.6, 1001.7,  977.2,  922.6,  932. ]) = <reference.Day object at 0xffff47ff0190>.heat
+E        +        and   75 = <reference.Day object at 0xffff47ff0190>.lthw_loss
+
+test_plans.py:70: AssertionError
+________________________ test_reported_gas_and_cost[h3] ________________________
+
+case = (<reference.Day object at 0xffff47ff0190>, {'date': '2026-04-20', 'periods': [{'start': '00:00', 'condenser_water_c': ...56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56., 56.,
+       56., 56., 56., 56., 56., 56., 56., 56., 32.]), ...})
+
+    def test_reported_gas_and_cost(case):
+        _, plan, flows = case
+        gas, cost = series(plan, "gas_kwh"), series(plan, "cost_gbp")
+>       assert np.abs(gas - flows["gas_kwh"]).max() <= 0.5 + 0.002 * flows["gas_kwh"].max()
+E       AssertionError: assert np.float64(467.2244660000001) <= (0.5 + (0.002 * np.float64(2542.931466)))
+E        +  where np.float64(467.2244660000001) = <built-in method max of numpy.ndarray object at 0xffff48007330>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48007330> = array([294.854     , 294.854     , 294.854     , 294.854     ,\n       294.854     , 294.854     , 294.854     , 294.85...419.2690223 , 416.9176242 , 404.72344317, 392.80141407,\n       382.56643137, 372.448795  , 370.9979351 , 294.854     ]).max
+E        +      where array([294.854     , 294.854     , 294.854     , 294.854     ,\n       294.854     , 294.854     , 294.854     , 294.85...419.2690223 , 416.9176242 , 404.72344317, 392.80141407,\n       382.56643137, 372.448795  , 370.9979351 , 294.854     ]) = <ufunc 'absolute'>((array([1295.126, 1295.126, 1295.126, 1295.126, 1295.126, 1295.126,\n       1295.126, 1295.126, 1295.126, 1295.126, 1295..., 1997.457, 1947.542, 1892.425, 1845.109, 1832.199,\n       1782.901, 1735.961, 1695.667, 1655.838, 1650.126, 1295.126]) - array([1589.98      , 1589.98      , 1589.98      , 1589.98      ,\n       1589.98      , 1589.98      , 1589.98      ,...0223 , 2249.1166242 , 2187.62444317, 2128.76241407,\n       2078.23343137, 2028.286795  , 2021.1239351 , 1589.98      ])))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +  and   np.float64(2542.931466) = <built-in method max of numpy.ndarray object at 0xffff48006070>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48006070> = array([1589.98      , 1589.98      , 1589.98      , 1589.98      ,\n       1589.98      , 1589.98      , 1589.98      ,...0223 , 2249.1166242 , 2187.62444317, 2128.76241407,\n       2078.23343137, 2028.286795  , 2021.1239351 , 1589.98      ]).max
+
+test_plans.py:100: AssertionError
+________________ test_units_within_ratings_and_availability[h4] ________________
+
+case = (<reference.Day object at 0xffff47ff0a50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 56.      , 56.      , 56.      , 56.      ]), ...})
+
+    def test_units_within_ratings_and_availability(case):
+        _, _, flows = case
+>       assert flows["running_ok"].all()
+E       assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff47a506f0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff47a506f0> = array([False, False, False, False, False, False, False, False,  True,\n        True,  True,  True,  True,  True, False,...False, False, False,\n       False, False, False, False, False, False, False,  True,  True,\n        True,  True,  True]).all
+
+test_plans.py:53: AssertionError
+_________________________ test_electricity_balance[h4] _________________________
+
+case = (<reference.Day object at 0xffff47ff0a50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 56.      , 56.      , 56.      , 56.      ]), ...})
+
+    def test_electricity_balance(case):
+        day, plan, flows = case
+        pv = series(plan, "pv_kw")
+>       assert (pv >= -0.5).all() and (pv <= day.pv + 0.5).all()
+E       assert (np.True_ and np.False_)
+E        +  where np.True_ = <built-in method all of numpy.ndarray object at 0xffff47a509f0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff47a509f0> = array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0.6,\n        14.2,  32.2,  53.5,  75.6,  97.2, 119.5,...123.8,  96.5,  74.3,\n        54.7,  31.9,  14. ,   0.6,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) >= -0.5.all
+E        +  and   np.False_ = <built-in method all of numpy.ndarray object at 0xffff47a508d0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff47a508d0> = array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0.6,\n        14.2,  32.2,  53.5,  75.6,  97.2, 119.5,...123.8,  96.5,  74.3,\n        54.7,  31.9,  14. ,   0.6,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) <= (array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0.6,  14.2,  32.2,  53.5,  75.6,...  0. ,   0. ,   0. ,\n         0. ,   0. ,  54.7,  31.9,  14. ,   0.6,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) + 0.5).all
+E        +      where array([  0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,   0. ,\n         0. ,   0.6,  14.2,  32.2,  53.5,  75.6,...  0. ,   0. ,   0. ,\n         0. ,   0. ,  54.7,  31.9,  14. ,   0.6,   0. ,   0. ,   0. ,\n         0. ,   0. ,   0. ]) = <reference.Day object at 0xffff47ff0a50>.pv
+
+test_plans.py:59: AssertionError
+____________________________ test_heat_balance[h4] _____________________________
+
+case = (<reference.Day object at 0xffff47ff0a50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 56.      , 56.      , 56.      , 56.      ]), ...})
+
+    def test_heat_balance(case):
+        day, plan, flows = case
+        boilers = sum(series(plan, "boilers_kw", b["id"]) for b in day.plant["boilers"])
+        lthw = flows["engine_heat"] - flows["ac_heat"] + boilers
+>       assert np.abs(lthw - day.heat - day.lthw_loss).max() <= KW
+E       AssertionError: assert np.float64(1543.7109) <= 1.0
+E        +  where np.float64(1543.7109) = <built-in method max of numpy.ndarray object at 0xffff480055f0>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff480055f0> = array([ 982.6       ,  983.8       ,  971.        ,  982.5       ,\n        975.4       ,  981.7       ,  989.        ,...23662,  395.53083662,  374.03223662,  337.95303662,\n       1540.63955   , 1543.7109    , 1521.1918    , 1490.7834    ]).max
+E        +      where array([ 982.6       ,  983.8       ,  971.        ,  982.5       ,\n        975.4       ,  981.7       ,  989.        ,...23662,  395.53083662,  374.03223662,  337.95303662,\n       1540.63955   , 1543.7109    , 1521.1918    , 1490.7834    ]) = <ufunc 'absolute'>(((array([1290.        , 1290.        , 1290.        , 1290.        ,\n       1290.        , 1290.        , 1290.        ,...23662,  879.03083662,  839.33223662,  767.95303662,\n       1941.73955   , 1897.3109    , 1856.6918    , 1812.8834    ]) - array([232.4, 231.2, 244. , 232.5, 239.6, 233.3, 226. , 236.6, 265.2,\n       305.8, 372.3, 412.4, 465.6, 459.7, 475.8,...336. , 351. , 358.3,\n       364.4, 371.3, 375.9, 379.6, 387.8, 408.5, 390.3, 355. , 326.1,\n       278.6, 260.5, 247.1])) - 75))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +        and   array([232.4, 231.2, 244. , 232.5, 239.6, 233.3, 226. , 236.6, 265.2,\n       305.8, 372.3, 412.4, 465.6, 459.7, 475.8,...336. , 351. , 358.3,\n       364.4, 371.3, 375.9, 379.6, 387.8, 408.5, 390.3, 355. , 326.1,\n       278.6, 260.5, 247.1]) = <reference.Day object at 0xffff47ff0a50>.heat
+E        +        and   75 = <reference.Day object at 0xffff47ff0a50>.lthw_loss
+
+test_plans.py:70: AssertionError
+________________________ test_reported_gas_and_cost[h4] ________________________
+
+case = (<reference.Day object at 0xffff47ff0a50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'condenser_water_c': ...    , 73.6     , 73.6     , 73.6     ,
+       73.6     , 73.6     , 56.      , 56.      , 56.      , 56.      ]), ...})
+
+    def test_reported_gas_and_cost(case):
+        _, plan, flows = case
+        gas, cost = series(plan, "gas_kwh"), series(plan, "cost_gbp")
+>       assert np.abs(gas - flows["gas_kwh"]).max() <= 0.5 + 0.002 * flows["gas_kwh"].max()
+E       AssertionError: assert np.float64(499.299) <= (0.5 + (0.002 * np.float64(2692.44)))
+E        +  where np.float64(499.299) = <built-in method max of numpy.ndarray object at 0xffff48006df0>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48006df0> = array([294.854     , 294.854     , 294.854     , 294.854     ,\n       294.854     , 294.854     , 294.854     , 294.85...453.1220392 , 438.1286836 , 431.1711072 , 418.6616864 ,\n       426.9026167 , 419.1162266 , 407.4362113 , 391.1858619 ]).max
+E        +      where array([294.854     , 294.854     , 294.854     , 294.854     ,\n       294.854     , 294.854     , 294.854     , 294.85...453.1220392 , 438.1286836 , 431.1711072 , 418.6616864 ,\n       426.9026167 , 419.1162266 , 407.4362113 , 391.1858619 ]) = <ufunc 'absolute'>((array([1295.126, 1295.126, 1295.126, 1295.126, 1295.126, 1295.126,\n       1295.126, 1295.126, 1295.126, 1295.126, 1295..., 2151.854, 2117.833, 2093.888, 2024.075, 1948.616,\n       1910.43 , 1841.77 , 1887.005, 1844.269, 1793.58 , 1729.605]) - array([1589.98      , 1589.98      , 1589.98      , 1589.98      ,\n       1589.98      , 1589.98      , 1589.98      ,...0392 , 2386.7446836 , 2341.6011072 , 2260.4316864 ,\n       2313.9076167 , 2263.3852266 , 2201.0162113 , 2120.7908619 ])))
+E        +        where <ufunc 'absolute'> = np.abs
+E        +  and   np.float64(2692.44) = <built-in method max of numpy.ndarray object at 0xffff48007ed0>()
+E        +    where <built-in method max of numpy.ndarray object at 0xffff48007ed0> = array([1589.98      , 1589.98      , 1589.98      , 1589.98      ,\n       1589.98      , 1589.98      , 1589.98      ,...0392 , 2386.7446836 , 2341.6011072 , 2260.4316864 ,\n       2313.9076167 , 2263.3852266 , 2201.0162113 , 2120.7908619 ]).max
+
+test_plans.py:100: AssertionError
+________________________ test_same_plan_every_time[h1] _________________________
+
+name = 'h1'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+>       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h1.error').exists
+
+test_plans.py:28: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_connection_limits[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_least_cost[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h3]
+PASSED test_plans.py::test_cooling_balance[h3]
+PASSED test_plans.py::test_cooling_towers[h3]
+PASSED test_plans.py::test_connection_limits[h3]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h3]
+PASSED test_plans.py::test_least_cost[h3]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_connection_limits[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_least_cost[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h3]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+ERROR test_plans.py::test_plan_covers_the_day[h1] - AssertionError: h1: the t...
+ERROR test_plans.py::test_units_within_ratings_and_availability[h1] - Asserti...
+ERROR test_plans.py::test_electricity_balance[h1] - AssertionError: h1: the t...
+ERROR test_plans.py::test_heat_balance[h1] - AssertionError: h1: the tool exi...
+ERROR test_plans.py::test_cooling_balance[h1] - AssertionError: h1: the tool ...
+ERROR test_plans.py::test_cooling_towers[h1] - AssertionError: h1: the tool e...
+ERROR test_plans.py::test_connection_limits[h1] - AssertionError: h1: the too...
+ERROR test_plans.py::test_reported_gas_and_cost[h1] - AssertionError: h1: the...
+ERROR test_plans.py::test_reported_import_export_and_grid_flags[h1] - Asserti...
+ERROR test_plans.py::test_least_cost[h1] - AssertionError: h1: the tool exite...
+FAILED test_plans.py::test_units_within_ratings_and_availability[visible] - a...
+FAILED test_plans.py::test_electricity_balance[visible] - assert (np.True_ an...
+FAILED test_plans.py::test_heat_balance[visible] - AssertionError: assert np....
+FAILED test_plans.py::test_reported_gas_and_cost[visible] - AssertionError: a...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h2] - assert...
+FAILED test_plans.py::test_heat_balance[h2] - AssertionError: assert np.float...
+FAILED test_plans.py::test_reported_gas_and_cost[h2] - AssertionError: assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h3] - assert...
+FAILED test_plans.py::test_electricity_balance[h3] - assert (np.True_ and np....
+FAILED test_plans.py::test_heat_balance[h3] - AssertionError: assert np.float...
+FAILED test_plans.py::test_reported_gas_and_cost[h3] - AssertionError: assert...
+FAILED test_plans.py::test_units_within_ratings_and_availability[h4] - assert...
+FAILED test_plans.py::test_electricity_balance[h4] - assert (np.True_ and np....
+FAILED test_plans.py::test_heat_balance[h4] - AssertionError: assert np.float...
+FAILED test_plans.py::test_reported_gas_and_cost[h4] - AssertionError: assert...
+FAILED test_plans.py::test_same_plan_every_time[h1] - AssertionError: h1: the...
+================== 16 failed, 29 passed, 10 errors in 30.91s ===================

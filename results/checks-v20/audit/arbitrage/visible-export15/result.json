@@ -1,0 +1,64 @@
+{
+  "name": "visible-export15",
+  "directional_milp_cost": 6303.560319426551,
+  "milp_seconds": 0.3809918160000052,
+  "apps": {
+    "16": {
+      "returncode": 0,
+      "seconds": 3.038758678999784,
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v16-trials/ecd16-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/data",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/v16-plan.json"
+      ],
+      "reported_cost": 6303.56,
+      "true_cost_as_reported": 6303.5604091900495,
+      "physical_netted_cost": 6303.5604091900495,
+      "physical_regret_gbp": 8.976349818112794e-05,
+      "simultaneous_count": 0,
+      "simultaneous_examples": []
+    },
+    "19": {
+      "returncode": 0,
+      "seconds": 2.681871602000001,
+      "command": [
+        "/workspace/scratch/e1216eed3f00/ecd-venv/bin/python",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v19-trials/ecd19-run2-claude/app/dispatch.py",
+        "--data",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/data",
+        "--output",
+        "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/audit/arbitrage/visible-export15/v19-plan.json"
+      ],
+      "reported_cost": 6282.56,
+      "true_cost_as_reported": 6282.5604091900495,
+      "physical_netted_cost": 6303.5604091900495,
+      "physical_regret_gbp": 8.976349818112794e-05,
+      "simultaneous_count": 14,
+      "simultaneous_examples": [
+        {
+          "t": "00:00",
+          "import_kw": 749.365,
+          "export_kw": 250.0
+        },
+        {
+          "t": "00:30",
+          "import_kw": 744.561,
+          "export_kw": 250.0
+        },
+        {
+          "t": "01:00",
+          "import_kw": 745.31,
+          "export_kw": 250.0
+        },
+        {
+          "t": "01:30",
+          "import_kw": 723.973,
+          "export_kw": 250.0
+        }
+      ]
+    }
+  }
+}

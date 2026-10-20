@@ -1,0 +1,125 @@
+{
+  "blind": {
+    "app": "results/checks-v20/blind/c4/app",
+    "days": {
+      "h1": {
+        "cost_gbp": 6403.301088498752,
+        "delta_gbp": -23.346378604290294,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 6426.647467103042,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.793958983000266,
+            "sha256": "bec74611532a21d70b15b7a054dddc2cac91006b63880935195324f8b37f2c95"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.9023633819997485,
+            "sha256": "bec74611532a21d70b15b7a054dddc2cac91006b63880935195324f8b37f2c95"
+          }
+        ]
+      },
+      "h2": {
+        "cost_gbp": 8519.315310149517,
+        "delta_gbp": -588.3605860509488,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 9107.675896200466,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.8012254900004336,
+            "sha256": "f179f99f5a67d05f82719bd8d678c14608688557b3f8035acf289874f7391eec"
+          },
+          {
+            "returncode": 0,
+            "seconds": 2.063958744000047,
+            "sha256": "f179f99f5a67d05f82719bd8d678c14608688557b3f8035acf289874f7391eec"
+          }
+        ]
+      },
+      "h3": {
+        "cost_gbp": 5182.628511561118,
+        "delta_gbp": -192.90952890816607,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 5375.538040469284,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 2.3101970919997257,
+            "sha256": "609652ee62a8fda7d21520a869dfede762b9cbc4d31171f6618633b50acc0a71"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.9998637329999838,
+            "sha256": "609652ee62a8fda7d21520a869dfede762b9cbc4d31171f6618633b50acc0a71"
+          }
+        ]
+      },
+      "h4": {
+        "cost_gbp": 7270.932347828802,
+        "delta_gbp": -40.039492704230724,
+        "failures": {
+          "test_units_within_ratings_and_availability": "Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/tools/check_v18.py\", line 97, in check_app\n    func(case)\n    ~~~~^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c4/task/tests/test_plans.py\", line 54, in test_units_within_ratings_and_availability\n    assert flows[\"running_ok\"].all()\n           ~~~~~~~~~~~~~~~~~~~~~~~^^\nAssertionError\n"
+        },
+        "milp_gbp": 7310.971840533033,
+        "passed": false,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.6250596469999437,
+            "sha256": "2e2af98bf6fcb468846a885d1aafdbc5702cd96cb265f61c5ca2f2d5b8387dad"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.7501308250002694,
+            "sha256": "2e2af98bf6fcb468846a885d1aafdbc5702cd96cb265f61c5ca2f2d5b8387dad"
+          }
+        ]
+      },
+      "visible": {
+        "cost_gbp": 6303.560319426553,
+        "delta_gbp": 0.0,
+        "failures": {},
+        "milp_gbp": 6303.560319426553,
+        "passed": true,
+        "runs": [
+          {
+            "returncode": 0,
+            "seconds": 1.428042216999529,
+            "sha256": "18b4549413669908993d72ad5b166f828b1aa873fb5cc3e838718b09a3118eaa"
+          },
+          {
+            "returncode": 0,
+            "seconds": 1.517121851000411,
+            "sha256": "18b4549413669908993d72ad5b166f828b1aa873fb5cc3e838718b09a3118eaa"
+          }
+        ]
+      }
+    },
+    "passed": false,
+    "source_sha256": {
+      "Dockerfile": "6285f581ae6b36910b84cd435c7c6055201d2cc1f6eff2314723a47247bb7339",
+      "data/demand.csv": "2d35fea07d3b67ca520afcf956cccfce2a412a8ae734b1a2780d639a2fde5377",
+      "data/plant.json": "075fbfa4f2aa44468476bcf94403a9231787c2868887355817d4f893d5aa2003",
+      "data/status.json": "002fedef2915aafe761ccfdcd849ebd50283f2f17a538dcf884461bc39aa63cd",
+      "data/supply.json": "21467e712095a8c3316536ba632564986530e46e695cb0a29041e4b0f57b15ee",
+      "data/weather.csv": "216be35574e5ac24219b081b35639c69ac12f477122831ed1f85440b9e7c1407",
+      "dispatch.py": "bd226ce669b93b6ff52af3c5652f7e342db38b80156c99bdce5c10b707158c69",
+      "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "planner/data.py": "c7362242bf87647ab81eaf78dfb564ce6ed99d21635a6feb9e853acdffd8d909",
+      "planner/optimize.py": "42f9dc4baea5616c9234bc3330edf26182f00fd0b9addf9c52698796a1b92718",
+      "planner/plant.py": "957f201f7196c4430cc519264fee0f66df18c58358c6cb1ee7626211ec137cc5",
+      "planner/tariff.py": "9e656b84a30e8fb4fc8e3b7fd5b20a6202a9114cd64f9678acfe9570a87e9af9"
+    }
+  }
+}

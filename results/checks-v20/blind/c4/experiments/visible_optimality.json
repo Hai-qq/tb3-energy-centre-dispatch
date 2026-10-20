@@ -1,0 +1,23 @@
+{
+  "certified": true,
+  "candidate_cost_gbp": 6303.560319426553,
+  "lower_bound_gbp": 6303.560319426553,
+  "absolute_gap_gbp": 0.0,
+  "tolerance_gbp": 0.0002,
+  "seconds": 0.10626864499954536,
+  "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+  "variables": 960,
+  "binary_variables": 192,
+  "constraints": 1824,
+  "rounds": [
+    {
+      "round": 1,
+      "lower_bound_gbp": 6303.560319426553,
+      "incumbent_gbp": 6303.560319426553,
+      "candidate_gap_gbp": 0.0,
+      "maximum_circle_violation_kva": 0.0,
+      "mip_nodes": 1,
+      "solver_status": 0
+    }
+  ]
+}

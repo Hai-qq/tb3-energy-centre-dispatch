@@ -1,0 +1,55 @@
+{
+  "id": "d0368",
+  "index": 367,
+  "season": "autumn",
+  "scenario": 3,
+  "base": "h3",
+  "input_problems": [],
+  "apps": {
+    "v16_claude": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0004907063195815908,
+      "max_heat_balance_kw": 0.0008112676055134216,
+      "max_tower_excess_kw": -8.275902491874376,
+      "max_grid_excess_kva": 146.619835244971,
+      "recomputed_cost_gbp": 6110.47204449242,
+      "elapsed_seconds": 2.652732,
+      "stderr": "warning: 08:30: the demand cannot be met within the connection's capacity\nwarning: 09:00: the demand cannot be met within the connection's capacity\nwarning: 09:30: the demand cannot be met within the connection's capacity\nwarning: 10:00: the demand cannot be met within the connection's capacity\nwarning: 10:30: the demand cannot be met within the connection's capacity\nwarning: 11:00: the demand cannot be met within the connection's capacity\n"
+    },
+    "v17_codex_parts": {
+      "failed": [],
+      "exception": "RuntimeError('no feasible loading at 08:30')",
+      "elapsed_seconds": 0.751892
+    },
+    "v17_claude_parts": {
+      "failed": [
+        "test_connection_limits"
+      ],
+      "assertions": {
+        "test_connection_limits": "AssertionError()"
+      },
+      "bad_availability_periods": [],
+      "max_electric_balance_kw": 0.0005019999999547053,
+      "max_heat_balance_kw": 0.0008112676055134216,
+      "max_tower_excess_kw": -0.0048797399786053575,
+      "max_grid_excess_kva": 146.619835244971,
+      "recomputed_cost_gbp": 6108.074648297519,
+      "elapsed_seconds": 2.004389
+    }
+  },
+  "reference_extension": {
+    "kind": "missing_named_engine_component",
+    "raw_exception": "KeyError('GE1 jacket water and exhaust')"
+  },
+  "feasible_witnesses": [],
+  "milp": {
+    "exception": "RuntimeError('no feasible plan: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)')",
+    "elapsed_seconds": 0.2038588460000028
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "reactive_demand_above_connection_rating",
+  "description": "Generator reactive support permits service when site kvar exceeds the import kVA rating.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 11618.614719999992,
+      "gas_kwh": 129237.1200000001,
+      "import_kwh": 24000.0,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 2.842170943040401e-14,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2358.07150595883,
+      "phe_kw": 1485.774647887324,
+      "apparent_import_kva": 1166.19037896906,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.4265642110003682,
+    1.3597475110000232
+  ],
+  "plan_sha256": "88e046b482e830dc5614fe67d2c50aa56a0062a2997ccca53364f3868ff3349b",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 11618.614720000001,
+    "lower_bound_gbp": 11618.61472,
+    "absolute_gap_gbp": 1.8189894035458565e-12,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.04214940200017736,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 11618.61472,
+        "incumbent_gbp": 11618.61472,
+        "candidate_gap_gbp": 1.8189894035458565e-12,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 11618.614720000001,
+  "improvement_over_witness_gbp": 0.0,
+  "total_seconds": 2.8381457870000304
+}

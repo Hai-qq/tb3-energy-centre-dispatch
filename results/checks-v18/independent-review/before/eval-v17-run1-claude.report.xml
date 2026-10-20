@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="40" failures="4" skipped="0" tests="55" time="0.473" timestamp="2026-10-17T22:46:50.313395+08:00" hostname="MacBook-Pro-4.local"><testcase classname="test_plans" name="test_plan_covers_the_day[visible]" time="0.001" /><testcase classname="test_plans" name="test_units_within_ratings_and_availability[visible]" time="0.000" /><testcase classname="test_plans" name="test_electricity_balance[visible]" time="0.000" /><testcase classname="test_plans" name="test_heat_balance[visible]" time="0.000" /><testcase classname="test_plans" name="test_cooling_balance[visible]" time="0.000" /><testcase classname="test_plans" name="test_cooling_towers[visible]" time="0.000" /><testcase classname="test_plans" name="test_connection_limits[visible]" time="0.000" /><testcase classname="test_plans" name="test_reported_gas_and_cost[visible]" time="0.000" /><testcase classname="test_plans" name="test_reported_import_export_and_grid_flags[visible]" time="0.000" /><testcase classname="test_plans" name="test_least_cost[visible]" time="0.109" /><testcase classname="test_plans" name="test_plan_covers_the_day[h1]" time="0.001"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_units_within_ratings_and_availability[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_electricity_balance[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_heat_balance[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_balance[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_towers[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_connection_limits[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_gas_and_cost[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_import_export_and_grid_flags[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_least_cost[h1]" time="0.000"><error message="failed on setup with &quot;AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h1]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_plan_covers_the_day[h2]" time="0.001"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_units_within_ratings_and_availability[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_electricity_balance[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_heat_balance[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_balance[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_towers[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_connection_limits[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_gas_and_cost[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_import_export_and_grid_flags[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_least_cost[h2]" time="0.000"><error message="failed on setup with &quot;AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h2]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_plan_covers_the_day[h3]" time="0.001"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_units_within_ratings_and_availability[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_electricity_balance[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_heat_balance[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_balance[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_towers[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_connection_limits[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_gas_and_cost[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_import_export_and_grid_flags[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_least_cost[h3]" time="0.000"><error message="failed on setup with &quot;AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h3]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_plan_covers_the_day[h4]" time="0.001"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_units_within_ratings_and_availability[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_electricity_balance[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_heat_balance[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_balance[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_cooling_towers[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_connection_limits[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_gas_and_cost[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_reported_import_export_and_grid_flags[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_least_cost[h4]" time="0.000"><error message="failed on setup with &quot;AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists&quot;">request = &lt;SubRequest 'case' for &lt;Function test_plan_covers_the_day[h4]&gt;&gt;
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+&gt;       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</error></testcase><testcase classname="test_plans" name="test_same_plan_every_time[visible]" time="0.000" /><testcase classname="test_plans" name="test_same_plan_every_time[h1]" time="0.000"><failure message="AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists">name = 'h1'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+&gt;       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h1'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h1: exit 1: ValueError: outage of unknown plant: EC1 condenser
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h1.error').exists
+
+test_plans.py:29: AssertionError</failure></testcase><testcase classname="test_plans" name="test_same_plan_every_time[h2]" time="0.000"><failure message="AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists">name = 'h2'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+&gt;       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h2'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h2: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler, GE2 jacket water and exhaust
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h2.error').exists
+
+test_plans.py:29: AssertionError</failure></testcase><testcase classname="test_plans" name="test_same_plan_every_time[h3]" time="0.000"><failure message="AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists">name = 'h3'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+&gt;       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: exit 1: ValueError: outage of unknown plant: AC1 absorber and condenser, AC1 generator, GE2 LT radiator
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h3.error').exists
+
+test_plans.py:29: AssertionError</failure></testcase><testcase classname="test_plans" name="test_same_plan_every_time[h4]" time="0.000"><failure message="AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler&#10;assert not True&#10; +  where True = exists()&#10; +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists">name = 'h4'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+&gt;       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h4'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+&gt;       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h4: exit 1: ValueError: outage of unknown plant: GE1 LT radiator, GE1 intercooler
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/tmpw548_isi/plans/h4.error').exists
+
+test_plans.py:29: AssertionError</failure></testcase></testsuite></testsuites>

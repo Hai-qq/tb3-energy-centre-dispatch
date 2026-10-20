@@ -50,8 +50,9 @@ MUTANTS = {
         "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving, at_least_c)",
         "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving)"),
         ("planner/optimize.py",
-        "bounds[iA + j] = (0.0, cap(a, a.max_kw) if absorbing else 0.0)",
-        "bounds[iA + j] = (0.0, cap(a, a.max_kw) if cewt >= a.cooling_water_in_min_c else 0.0)")],
+        'bounds[iA + j] = (0.0, cap(a, a.max_kw, _CHILLER_PARTS["absorption"]) if absorbing else 0.0)',
+        'bounds[iA + j] = (0.0, cap(a, a.max_kw, _CHILLER_PARTS["absorption"])'
+        ' if cewt >= a.cooling_water_in_min_c else 0.0)')],
     "weekend_from_utc_start": [("planner/tariff.py", "from datetime import date\n",
         "from datetime import date, timedelta\n"),
         ("planner/tariff.py", "self.weekend = day.weekday() >= 5", "self.weekend = (day - timedelta(days=1)).weekday() >= 5")],
@@ -84,9 +85,28 @@ MUTANTS = {
     "phe1_outage_ignored": [("planner/optimize.py",
         "    if _available(day, \"PHE1\", day.starts[t]):", "    if True:")],
     "lt_radiator_outage_ignored": [("planner/optimize.py",
-        " and _available(day, f\"{engine.id} LT radiator\", hhmm)", "")],
+        '               + plant.engine_lt_sinks[engine.id])',
+        '               + ())')],
+    "intercooler_outage_ignored": [("planner/optimize.py",
+        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} jacket water and exhaust")',
+        'for item in (engine.id, f"{engine.id} jacket water and exhaust")')],
+    "ht_source_outage_ignored": [("planner/optimize.py",
+        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} jacket water and exhaust")',
+        'for item in (engine.id, f"{engine.id} intercooler")')],
+    "parts_by_name_prefix": [("planner/optimize.py",
+        'for item in (engine.id, f"{engine.id} intercooler", f"{engine.id} jacket water and exhaust")\n'
+        '               + plant.engine_lt_sinks[engine.id])',
+        'for item in (engine.id,) + tuple(o["unit"] for o in day.status.get("outages", [])\n'
+        '                                               if o["unit"].startswith(engine.id + " ")))')],
+    "ac_generator_outage_ignored": [("planner/optimize.py",
+        '"absorption": ("generator", "absorber and condenser")}',
+        '"absorption": ("absorber and condenser",)}')],
+    "condenser_outage_ignored": [("planner/optimize.py",
+        '_CHILLER_PARTS = {"electric": ("condenser",),', '_CHILLER_PARTS = {"electric": (),')],
+    "absorption_chiller_parts_ignored": [("planner/optimize.py",
+        '"absorption": ("generator", "absorber and condenser")}', '"absorption": ()}')],
     "outages_engines_only": [("planner/optimize.py",
-        "        return kw if _available(day, unit.id, day.starts[t]) else 0.0",
+        "        return kw if all(_available(day, item, day.starts[t]) for item in items) else 0.0",
         "        return kw")],
     "tower_cell_outage_ignored": [("planner/optimize.py",
         "cells = sum(_available(day, cell, day.starts[t]) for cell in plant.tower_cells)",
@@ -94,6 +114,23 @@ MUTANTS = {
     "pv_outage_ignored": [("planner/optimize.py",
         "pv = day.pv[t] if _available(day, plant.pv_id, day.starts[t]) else 0.0",
         "pv = day.pv[t]")],
+    "kva_positive_reactive_only": [("planner/optimize.py",
+        "_ANGLES = np.radians(np.arange(-90.0, 90.5, 1.0))", "_ANGLES = np.radians(np.arange(0.0, 90.5, 1.0))")],
+    "outages_one_per_unit": [("planner/optimize.py",
+        '    for o in day.status.get("outages", []):\n        if o["unit"] == unit_id and',
+        '    for o in {x["unit"]: x for x in day.status.get("outages", [])}.values():\n        if o["unit"] == unit_id and')],
+    "outage_capacity_prorated": [("planner/optimize.py",
+        """    def cap(unit, kw, parts=()):
+        items = [unit.id] + [f"{unit.id} {part}" for part in parts]
+        return kw if all(_available(day, item, day.starts[t]) for item in items) else 0.0
+""", """    def cap(unit, kw, parts=()):
+        items = [unit.id] + [f"{unit.id} {part}" for part in parts]
+        m, share = _minutes(day.starts[t]), 1.0
+        for o in day.status.get("outages", []):
+            if o["unit"] in items:
+                share -= max(0, min(_minutes(o["to"]), m + 30) - max(_minutes(o["from"]), m)) / 30.0
+        return kw * max(share, 0.0)
+""")],
     "absorber_cooling_water_ignored": [("planner/plant.py",
         "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving, at_least_c)",
         "return max(wet_bulb_c + self.tower_approach, self.tower_min_leaving)")],

@@ -1,0 +1,94 @@
+{
+  "errors": {
+    "visible": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "visible.rerun": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h1": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h1.rerun": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h2": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h2.rerun": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h3": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h3.rerun": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h4": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit",
+    "h4.rerun": "exit 1: ValueError: the engines' recovered heat must feed one heat circuit"
+  },
+  "failed": {
+    "test_connection_limits": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_cooling_balance": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_cooling_towers": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_electricity_balance": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_heat_balance": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_least_cost": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_plan_covers_the_day": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_reported_gas_and_cost": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_reported_import_export_and_grid_flags": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_same_plan_every_time": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "test_units_within_ratings_and_availability": [
+      "visible",
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ]
+  },
+  "source": "Parsed from the single retained eval invocation; no app rerun."
+}

@@ -3,8 +3,9 @@
 
 `Day` reads one day's data folder. `true_flows` recomputes what a plan really does
 (fuel, heat, electricity, heat rejection, apparent power, cost) from its unit
-outputs, and `least_cost` solves the whole day as one mixed-integer program to find
-the cheapest possible plan.
+outputs. `least_cost` solves the whole day as one mixed-integer program under the
+coldest useful header / strict auxiliary-heat convention. Its optimum is the
+conservative cost bound shared by the accepted physical interpretations below.
 """
 
 from __future__ import annotations
@@ -95,17 +96,51 @@ class Day:
         # the plan holds its output for the whole half-hour.
         units = [u["id"] for key in ("engines", "boilers", "electric_chillers", "absorption_chillers")
                  for u in self.plant[key]]
-        units += ["PHE1"] + [f"{e['id']} LT radiator" for e in self.engines]
-        units += list(towers["cells"]) + [self.plant["pv"]["id"]]
+        units += ["PHE1"] + list(towers["cells"]) + [self.plant["pv"]["id"]]
+        # the parts of the heat circuits named in plant.json that maintenance can take out
+        units += [f"{e['id']} {part}" for e in self.engines
+                  for part in ("intercooler", "jacket water and exhaust")]
+        units += [f"{c['id']} condenser" for c in self.plant["electric_chillers"]]
+        units += [f"{a['id']} {part}" for a in self.plant["absorption_chillers"]
+                  for part in ("generator", "absorber and condenser")]
+        circuits = self.plant["heat_circuits"].values()
+        units += [item for c in circuits for item in c["from"] + c["to"]]
         self.available = {u: np.ones(N, dtype=bool) for u in units}
         for o in self.status.get("outages", []):
             a, b = _hm(o["from"]), _hm(o["to"])
             self.available[o["unit"]] &= ~np.array([c < b and c + 30 > a for c in self.clock])
-        # an engine cannot run while its LT radiator, the only way out for its intercooler heat, is out
+        # A part out takes out what cannot work without it: an engine cannot run without its intercooler
+        # or its LT radiator, the only way out for its intercooler heat; a chiller cannot run without its
+        # condenser, nor the absorption chiller without its generator or its absorber and condenser.
         for e in self.engines:
-            self.available[e["id"]] &= self.available[f"{e['id']} LT radiator"]
+            self.available[e["id"]] &= self.available[f"{e['id']} intercooler"]
+            for circuit in circuits:
+                if f"{e['id']} intercooler" in circuit["from"]:
+                    for item in circuit["to"]:
+                        self.available[e["id"]] &= self.available[item]
+            self.available[e["id"]] &= self.available[f"{e['id']} jacket water and exhaust"]
+        for c in self.plant["electric_chillers"]:
+            self.available[c["id"]] &= self.available[f"{c['id']} condenser"]
+        for a in self.plant["absorption_chillers"]:
+            self.available[a["id"]] &= self.available[f"{a['id']} generator"]
+            self.available[a["id"]] &= self.available[f"{a['id']} absorber and condenser"]
         self.tower_max = per_cell * sum(self.available[c].astype(float) for c in towers["cells"])
-        self.pv = np.where(self.available[self.plant["pv"]["id"]], self.pv, 0.0)
+        # The PV array out for part of a half-hour: the plan holds every output for the whole half-hour,
+        # so the least cost counts on no PV in it, but a tool may also count the PV of the minutes the
+        # array is in service; self.pv_max is the most a plan may say the array gives.
+        pv_id = self.plant["pv"]["id"]
+        spans = sorted((_hm(o["from"]), _hm(o["to"]))
+                       for o in self.status.get("outages", []) if o["unit"] == pv_id)
+        merged = []
+        for a, b in spans:
+            if merged and a <= merged[-1][1]:
+                merged[-1] = (merged[-1][0], max(merged[-1][1], b))
+            else:
+                merged.append((a, b))
+        out_min = np.array([sum(max(0, min(b, c + 30) - max(a, c)) for a, b in merged)
+                            for c in self.clock], dtype=float)
+        self.pv_max = self.pv * np.clip(1.0 - out_min / 30.0, 0.0, 1.0)
+        self.pv = np.where(self.available[pv_id], self.pv, 0.0)
         self.running0 = set(self.status["running_at_midnight"])
 
     def true_flows(self, plan: dict) -> dict:
@@ -139,19 +174,38 @@ class Day:
                 q = float(p["boilers_kw"][b["id"]])
                 ok &= -0.5 <= q <= (b["max_kw"] if self.available[b["id"]][t] else 0.0) + 0.5
                 boiler_gas += q / b["efficiency"]
-            absorbing = any(float(p["chillers_kw"][a["id"]]) > 0.5 for a in self.plant["absorption_chillers"])
+            # 0.01 kW is above solver numerical noise but far below any
+            # meaningful AC duty; the rating tolerance must not change the COP regime.
+            absorbing = any(float(p["chillers_kw"][a["id"]]) > 0.01 for a in self.plant["absorption_chillers"])
+            ec_max = 0.0
             for c in self.plant["electric_chillers"]:
                 q = float(p["chillers_kw"][c["id"]])
                 ok &= -0.5 <= q <= (c["max_kw"] if self.available[c["id"]][t] else 0.0) + 0.5
                 cop = self.cop[c["id"]][absorbing][t]
                 out["ec_elec"][t] += q / cop
                 out["rejected"][t] += q * (1 + 1 / cop)
+                ec_max += max(q, 0.0) / c["cop_by_condenser_entering_c"][-1][1]
             for a in self.plant["absorption_chillers"]:
                 q = float(p["chillers_kw"][a["id"]])
                 ok &= -0.5 <= q <= (a["max_kw"] if self.available[a["id"]][t] else 0.0) + 0.5
                 out["ac_heat"][t] += q / a["cop"]
                 out["aux"][t] += q * a["auxiliary_kwe_per_kw"]
                 out["rejected"][t] += q * (1 + 1 / a["cop"])
+            # The unchanged output format has no condenser-water setpoint. Do
+            # not reject a physically consistent warmer common header. For the
+            # fixed monotonically decreasing COP curves, total EC electricity
+            # continuously covers this interval as the common water warms to
+            # the final table endpoint (beyond it the tables are flat).
+            # Project the inferred duty to the interval: an impossible electrical
+            # residual remains visible to test_electricity_balance. In particular
+            # this cannot invent a dump load when every EC output is zero.
+            ec_min = out["ec_elec"][t]
+            inferred = (sum(float(p["engines_kwe"][e["id"]]) for e in self.engines)
+                        + float(p["pv_kw"]) + float(p["import_kw"]) - float(p["export_kw"])
+                        - self.elec[t] - out["aux"][t])
+            ec_used = float(np.clip(inferred, ec_min, max(ec_min, ec_max)))
+            out["ec_elec"][t] = ec_used
+            out["rejected"][t] += ec_used - ec_min
             gas = DT_H * (fuel_net * self.gross_net + boiler_gas)
             cost += gas * self.gas_rate
             cost += DT_H * (float(p["import_kw"]) * self.import_rate[t] - float(p["export_kw"]) * self.export_rate)
@@ -162,11 +216,16 @@ class Day:
         return out
 
     def least_cost(self) -> dict:
-        """Cheapest plan for the day: one mixed-integer program over all periods.
+        """Conservative cost bound: one mixed-integer program over all periods.
 
         Each engine runs on its part-load curve: segment k of the curve can only be
         used once the segments below it are fully loaded (binary w). The connection's
-        apparent power limit is the polygon of CUTS tangents to its circle."""
+        apparent power limit is the polygon of CUTS tangents to its circle. The towers'
+        load counts the absorption chiller's auxiliary power too, the stricter of the two
+        readings of what its cooling water takes away, so that either reading meets it.
+        The header uses its coldest useful setpoints and partial PV outages use
+        all-off periods. Warmer-header and prorated-PV plans may be cheaper and
+        are accepted; this is not a claim of global optimality over that union."""
         eng, boil = self.engines, self.plant["boilers"]
         ecs, acs = self.plant["electric_chillers"], self.plant["absorption_chillers"]
         names = []
@@ -254,7 +313,11 @@ class Day:
                 cap = ac["max_kw"] if self.available[ac["id"]][t] else 0.0
                 hi[v(t, f"A{a}")] = cap
                 el[v(t, f"A{a}")] = -ac["auxiliary_kwe_per_kw"]
-                rejection[v(t, f"A{a}")] = 1.0 + 1.0 / ac["cop"]
+                # The towers take the cooling and the driving heat; the chiller's own auxiliary power
+                # also ends as heat in its cooling water on a strict reading, so the least cost is that of
+                # the plans that leave the towers room for it too, and a tool may count it either way
+                # (test_cooling_towers checks the limit without it).
+                rejection[v(t, f"A{a}")] = 1.0 + 1.0 / ac["cop"] + ac["auxiliary_kwe_per_kw"]
                 add({v(t, f"A{a}"): 1.0, z: -cap}, -np.inf, 0.0)
             hi[v(t, "I")], hi[v(t, "X")] = self.import_kva, self.export_max
             c[v(t, "I")] = DT_H * self.import_rate[t]

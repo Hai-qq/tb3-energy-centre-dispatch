@@ -1,0 +1,26 @@
+{
+  "valid": true,
+  "periods": 48,
+  "summary": {
+    "cost_gbp": 6303.560319427,
+    "gas_kwh": 64944.185839485,
+    "import_kwh": 13775.407766202,
+    "export_kwh": 0.0,
+    "engine_starts": 2,
+    "grid_ok": true
+  },
+  "metrics": {
+    "max_electricity_residual_kw": 4.865796654485166e-10,
+    "max_heat_residual_kw": 2.899014361901209e-10,
+    "max_cooling_residual_kw": 2.2737367544323206e-13,
+    "max_gas_residual_kwh": 4.019966581836343e-10,
+    "max_cost_residual_gbp": 5.015010628994787e-10,
+    "max_grid_kva": 985.4000415074764,
+    "max_gas_standard_m3_per_hour": 289.08727272727276,
+    "min_tower_headroom_kw": 231.03498263157917,
+    "pv_curtailment_kwh": 0.0,
+    "warm_water_periods": 0,
+    "water_above_absorber_minimum_periods": 0,
+    "maximum_condenser_entering_c": 24.6
+  }
+}

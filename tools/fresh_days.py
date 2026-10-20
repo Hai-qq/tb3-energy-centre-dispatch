@@ -10,30 +10,42 @@ task's own five days are put through the same checks first. Each tool given is t
 on every kept day and judged by the task's own tests.
 
 Usage: python tools/fresh_days.py [--days 8] [--seed 2026] <app_root> [<app_root> ...]
-The days are written to tools/out/fresh/tests/days/.
+The days are written to tools/out/fresh/tests/days/. Use a new --output folder
+for each independent run. Accepted day names include the unique draw number.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
+import os
 import random
 import shutil
 import sys
+import time
 from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TASK = ROOT / "tasks" / "energy-centre-dispatch"
+TASK = Path(os.environ.get("ECD_TASK", ROOT / "tasks" / "energy-centre-dispatch")).resolve()
 sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(TASK / "tests"))
 import build_energy_days as B  # noqa: E402
 import eval_energy as E  # noqa: E402
 from reference import Day  # noqa: E402
 
-UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "GE1 LT radiator", "GE2 LT radiator",
-         "CT1", "CT2", "PV1"]
+# A candidate's fixed plant and tariff must be used when drawing its test days.
+# This is identical to the generator constants for the normal checked-in task,
+# and permits isolated experiments without rewriting the shared generator.
+B.PLANT = json.loads((TASK / "environment/data/plant.json").read_text())
+B.SUPPLY = json.loads((TASK / "environment/data/supply.json").read_text())
+
+UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "LT radiator 1", "LT radiator 2",
+         "CT1", "CT2", "PV1", "GE1 intercooler", "GE2 intercooler", "EC1 condenser", "EC2 condenser",
+         "AC1 generator", "AC1 absorber and condenser", "GE1 jacket water and exhaust",
+         "GE2 jacket water and exhaust"]
 
 
 def last_sunday(year: int, month: int) -> date:
@@ -112,32 +124,60 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=8)
     ap.add_argument("--seed", type=int, default=2026)
+    ap.add_argument("--output", type=Path, help="Isolated output folder for reproducible parallel checks")
     ap.add_argument("apps", nargs="+")
     args = ap.parse_args()
     rng = random.Random(args.seed)
-    out = ROOT / "tools" / "out" / "fresh"
-    shutil.rmtree(out, ignore_errors=True)
+    out = args.output.resolve() if args.output else ROOT / "tools" / "out" / "fresh"
+    if args.output:
+        out.mkdir(parents=True, exist_ok=False)
+    else:
+        shutil.rmtree(out, ignore_errors=True)
+        out.mkdir(parents=True)
+
+    def hashes(folder):
+        return {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in sorted(folder.iterdir()) if p.is_file()}
+
+    manifest = {"seed": args.seed, "command": sys.argv, "draws": [], "days": {}, "results": {}}
+    for name in ("reference.py", "test_plans.py"):
+        manifest[name + "_sha256"] = hashlib.sha256((TASK / "tests" / name).read_bytes()).hexdigest()
     for d in ["visible", "h1", "h2", "h3", "h4"]:
         problems = check_inputs(TASK / "tests" / "days" / d)
         assert not problems, (d, problems)
     print("the task's five days pass the input checks")
     names: list[str] = []
+    attempt = 0
     while len(names) < args.days:
+        attempt += 1
         spec, base = draw(rng, SEASONS[len(names) % len(SEASONS)])
-        name = f"f{len(names) + 1}"
+        # Never delete and reuse a rejected draw's pathname. Besides making
+        # provenance explicit, this avoids stale files on unusual filesystems.
+        name = f"f{len(names) + 1}-draw-{attempt:04d}"
         folder = out / "tests" / "days" / name
         B.write_day(folder, spec)
+        expected_status = {"date": spec["date"], **spec["status"]}
+        assert json.loads((folder / "status.json").read_text()) == expected_status, name
         problems = check_inputs(folder)
+        event = {"name": name, "profile": base, "spec": spec, "accepted": False}
+        manifest["draws"].append(event)
         if problems:
+            event["reason"] = problems
             print(f"discarded a drawn day: {'; '.join(problems)}")
             shutil.rmtree(folder)
             continue
         try:
-            Day(folder).least_cost()
-        except RuntimeError:
+            start = time.monotonic()
+            optimum = Day(folder).least_cost()
+        except RuntimeError as exc:
+            event["reason"] = str(exc)
             shutil.rmtree(folder)
             continue
+        event["accepted"] = True
+        manifest["days"][name] = {"sha256": hashes(folder), "milp_cost_gbp": optimum["cost"],
+                                  "milp_seconds": time.monotonic() - start, "spec": spec}
         names.append(name)
+        (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
         st = spec["status"]
         print(f"{name}: {spec['date']} {date.fromisoformat(spec['date']):%a} ({base} profile), running at midnight "
               f"{st['running_at_midnight']}, outages " + ", ".join(f"{o['unit']} {o['from']}-{o['to']}" for o in st["outages"]))
@@ -147,11 +187,21 @@ def main() -> None:
     (out / "tests" / "test_plans.py").write_text(tests.replace(days_line, f"DAYS = {names!r}"))
     shutil.copy(TASK / "tests" / "reference.py", out / "tests" / "reference.py")
     E.TASK, E.DAYS = out, names
+    for name in names:
+        assert hashes(out / "tests/days" / name) == manifest["days"][name]["sha256"], name
+    failures = 0
     for app in args.apps:
         r = E.evaluate(Path(app).resolve(), quiet=True)
-        bad = sorted({d for days in r["failed"].values() for d in days}, key=lambda n: int(n[1:]))
+        bad = sorted({d for days in r["failed"].values() for d in days}, key=names.index)
         fails = "; ".join(f"{k.replace('test_', '')}:{','.join(v)}" for k, v in sorted(r["failed"].items()))
         print(f"{len(bad)}/{len(names)} days failed  {app}  {fails}", flush=True)
+        manifest["results"][app] = r
+        failures += bool(r["failed"] or r["errors"])
+    for name in names:
+        assert hashes(out / "tests/days" / name) == manifest["days"][name]["sha256"], name
+    manifest["input_hashes_unchanged_after_evaluation"] = True
+    (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    raise SystemExit(1 if failures else 0)
 
 
 if __name__ == "__main__":

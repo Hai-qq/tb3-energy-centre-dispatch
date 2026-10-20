@@ -1,0 +1,104 @@
+{
+  "app": "results/v18-trials/ecd18-run2-claude/app",
+  "days": {
+    "h1": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.49318796199986537
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.6556973510000716
+        }
+      ]
+    },
+    "h2": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.5870602820000386
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.4103907190001337
+        }
+      ]
+    },
+    "h3": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.6752065670002594
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.5005670939999618
+        }
+      ]
+    },
+    "h4": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.45415501799971025
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.6577434379996703
+        }
+      ]
+    },
+    "visible": {
+      "failures": {
+        "execution_0": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "execution_1": "RuntimeError: exit 1: Traceback (most recent call last):\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 60, in <module>\n    main()\n    ~~~~^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/dispatch.py\", line 41, in main\n    plant = Plant(day.plant)\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 145, in __init__\n    self.heat_exchangers = self._check_circuits(circuits)\n                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/v18-trials/ecd18-run2-claude/app/planner/plant.py\", line 177, in _check_circuits\n    raise ValueError(f\"heat circuits: {what} is {sorted(have)}, the model needs {sorted(want)}\")\nValueError: heat circuits: GE1 LT circuit is ['LT radiator 1'], the model needs ['GE1 LT radiator']\n",
+        "test_same_plan_every_time": "missing plan or unequal JSON output"
+      },
+      "passed": false,
+      "runs": [
+        {
+          "returncode": 1,
+          "seconds": 0.5224491829999351
+        },
+        {
+          "returncode": 1,
+          "seconds": 0.5134529299998576
+        }
+      ]
+    }
+  },
+  "passed": false,
+  "source_sha256": {
+    "dispatch.py": "8cba87d097f79f54e9cc299b2f7fc128737057b7330a439f36897f19b1f5e64f",
+    "planner/__init__.py": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+    "planner/data.py": "59fdebe624f25699275d7a3baa1c6000d3f7788b3673a7bccf0c4c2004629b58",
+    "planner/optimize.py": "b62e3ccc5751ea07ddce47b69107557809bf0ea58b4bb47650754a48a9adba5a",
+    "planner/plant.py": "1df9cda4cc6570059b8aefb4b373bc0d669fc6621d80d402edccd5c550580b93",
+    "planner/tariff.py": "d35d73a5cf8f8a48f5f07a8dc9c48645c40a08ddd7ef931e6e0538db35dac9d0"
+  }
+}

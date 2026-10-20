@@ -3,9 +3,10 @@
 
 Everything is recomputed from each plan's unit outputs with the reference model in
 reference.py: the energy balances, the unit, cooling-tower and connection limits, the
-gas, costs, imports, exports and grid flags the plan reports, and that no cheaper plan
-meets the day. The second run must give the same plan, and a run that failed or timed out
-counts as no plan.
+gas, costs, imports, exports and grid flags the plan reports. Cost must be no higher
+than the independent MILP's conservative bound across the accepted auxiliary-heat,
+PV-outage and common-header interpretations (see reference.py). The second run must
+give the same plan, and a run that failed or timed out counts as no plan.
 """
 
 import json
@@ -56,7 +57,7 @@ def test_units_within_ratings_and_availability(case):
 def test_electricity_balance(case):
     day, plan, flows = case
     pv = series(plan, "pv_kw")
-    assert (pv >= -0.5).all() and (pv <= day.pv + 0.5).all()
+    assert (pv >= -0.5).all() and (pv <= day.pv_max + 0.5).all()
     supply = sum(series(plan, "engines_kwe", e["id"]) for e in day.engines) + pv
     supply += series(plan, "import_kw") - series(plan, "export_kw")
     use = day.elec + flows["aux"] + flows["ec_elec"]

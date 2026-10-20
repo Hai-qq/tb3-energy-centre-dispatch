@@ -1,0 +1,47 @@
+--- tools/fresh_days.py
++++ build/fresh_days.py
+@@ -28,13 +28,14 @@
+ from datetime import date, timedelta
+ from pathlib import Path
+ 
+-ROOT = Path(__file__).resolve().parents[1]
++ROOT = Path(__file__).resolve().parents[5]
+ TASK = Path(os.environ.get("ECD_TASK", ROOT / "tasks" / "energy-centre-dispatch")).resolve()
+ sys.path.insert(0, str(ROOT / "tools"))
+ sys.path.insert(0, str(TASK / "tests"))
+ import build_energy_days as B  # noqa: E402
+ import eval_energy as E  # noqa: E402
+ from reference import Day  # noqa: E402
++from ahu_days import add_ahu
+ 
+ # A candidate's fixed plant and tariff must be used when drawing its test days.
+ # This is identical to the generator constants for the normal checked-in task,
+@@ -45,7 +46,7 @@
+ UNITS = ["GE1", "GE2", "B1", "B2", "EC1", "EC2", "AC1", "PHE1", "LT radiator 1", "LT radiator 2",
+          "CT1", "CT2", "PV1", "GE1 intercooler", "GE2 intercooler", "EC1 condenser", "EC2 condenser",
+          "AC1 generator", "AC1 absorber and condenser", "GE1 jacket water and exhaust",
+-         "GE2 jacket water and exhaust"]
++         "GE2 jacket water and exhaust", "LT PHE 1", "LT PHE 2"]
+ 
+ 
+ def last_sunday(year: int, month: int) -> date:
+@@ -117,6 +118,11 @@
+         problems.append(f"PV forecast outside 0 to {inverter} kW (the inverter's rating)")
+     if any(float(r["wet_bulb_c"]) > float(r["dry_bulb_c"]) for r in weather):
+         problems.append("wet bulb above dry bulb")
++    if not problems:
++        try:
++            Day(folder)  # certifies every radiator-outage period before feasibility
++        except AssertionError as exc:
++            problems.append(str(exc))
+     return problems
+ 
+ 
+@@ -156,6 +162,7 @@
+         name = f"f{len(names) + 1}-draw-{attempt:04d}"
+         folder = out / "tests" / "days" / name
+         B.write_day(folder, spec)
++        add_ahu(folder)
+         expected_status = {"date": spec["date"], **spec["status"]}
+         assert json.loads((folder / "status.json").read_text()) == expected_status, name
+         problems = check_inputs(folder)

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/venv/bin/python",
+    "tools/energy_mutants.py",
+    "starts_not_in_decision",
+    "kva_ignores_engines",
+    "kva_engines_absorb_kvar",
+    "no_engine_aux",
+    "phe1_outage_ignored",
+    "ac_generator_outage_ignored",
+    "tower_cell_outage_ignored",
+    "outage_capacity_prorated",
+    "saturday_is_weekday",
+    "exits_with_error_after_writing"
+  ],
+  "ECD_TASK": "/private/tmp/claude-501/-Users-haiy-qq-Desktop----klavis/a70e7eab-ed43-4fbc-8c31-1d0858956a32/scratchpad/codex-v18-verify/no-inference",
+  "exit_code": 0,
+  "seconds": 75.32510687503964
+}

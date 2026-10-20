@@ -1,0 +1,72 @@
+{
+  "name": "tower_capacity_boundary",
+  "description": "Cooling load chosen to bind total condenser heat rejection exactly.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 8512.178240000001,
+      "gas_kwh": 76319.04000000004,
+      "import_kwh": 21600.000000000004,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 1.7053025658242404e-13,
+      "heat_kw": 0.0,
+      "cooling_kw": 4.547473508864641e-13,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 2850.0000000000005,
+      "phe_kw": 1290.0,
+      "apparent_import_kva": 905.538513813742,
+      "condenser_entering_c": 26.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 48,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.427787872999943,
+    1.4907442070007164
+  ],
+  "plan_sha256": "d7ce8a23649cd73adc2eef8702b3d20e1ae33603aa6a518b1ef7ef11e057729d",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 8512.178240000001,
+    "lower_bound_gbp": 8512.17824,
+    "absolute_gap_gbp": 1.8189894035458565e-12,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.03574212399962562,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 8512.17824,
+        "incumbent_gbp": 8512.17824,
+        "candidate_gap_gbp": 1.8189894035458565e-12,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 8512.178240000001,
+  "improvement_over_witness_gbp": 0.0,
+  "total_seconds": 2.962955447999775
+}

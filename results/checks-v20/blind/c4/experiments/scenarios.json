@@ -1,0 +1,204 @@
+[
+  {
+    "name": "visible",
+    "description": "Unmodified supplied day.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/visible/data",
+    "feasible": true
+  },
+  {
+    "name": "monday_local_previous_utc_sunday",
+    "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/monday_local_previous_utc_sunday/data",
+    "feasible": true
+  },
+  {
+    "name": "saturday_local_previous_utc_friday",
+    "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/saturday_local_previous_utc_friday/data",
+    "feasible": true
+  },
+  {
+    "name": "offset_plus_14_shuffled",
+    "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/offset_plus_14_shuffled/data",
+    "feasible": true
+  },
+  {
+    "name": "offset_minus_7_shuffled",
+    "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/offset_minus_7_shuffled/data",
+    "feasible": true
+  },
+  {
+    "name": "offset_plus_5_30",
+    "description": "Visible physical forecasts retimed to test local tariffs and UTC alignment.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/offset_plus_5_30/data",
+    "feasible": true
+  },
+  {
+    "name": "cold_absorption",
+    "description": "The tower fans maintain 22 C for AC while EC COP uses the common inlet.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/cold_absorption/data",
+    "feasible": true
+  },
+  {
+    "name": "cold_absorber_outage",
+    "description": "Cold tower leaving temperature remains 21 C with AC unavailable.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/cold_absorber_outage/data",
+    "feasible": true
+  },
+  {
+    "name": "every_plant_outage_category",
+    "description": "Boiler, electric/absorption chiller, tower, PHE, PV and LT radiator outages.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/every_plant_outage_category/data",
+    "feasible": true
+  },
+  {
+    "name": "partial_and_midnight_outages",
+    "description": "Whole-half-hour availability for partial and midnight-wrapping outages.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/partial_and_midnight_outages/data",
+    "feasible": true
+  },
+  {
+    "name": "very_hot_flat_table_ends",
+    "description": "Wet bulb and condenser temperature above the last performance-table points.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/very_hot_flat_table_ends/data",
+    "feasible": true
+  },
+  {
+    "name": "tower_capacity_boundary",
+    "description": "Cooling load chosen to bind total condenser heat rejection exactly.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/tower_capacity_boundary/data",
+    "feasible": true
+  },
+  {
+    "name": "phe_flow_boundary",
+    "description": "With both boilers unavailable, PHE transfers exactly its 1672 kW hydraulic capacity.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/phe_flow_boundary/data",
+    "feasible": true
+  },
+  {
+    "name": "high_heat_and_boiler_merit",
+    "description": "High heat uses both boiler efficiencies and the PHE capacity.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/high_heat_and_boiler_merit/data",
+    "feasible": true
+  },
+  {
+    "name": "reactive_demand_above_connection_rating",
+    "description": "Generator reactive support permits service when site kvar exceeds the import kVA rating.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/reactive_demand_above_connection_rating/data",
+    "feasible": true
+  },
+  {
+    "name": "leading_reactive_circle_boundary",
+    "description": "Overexcited generators can increase an already leading grid reactive flow; true circle is binding.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/leading_reactive_circle_boundary/data",
+    "feasible": true
+  },
+  {
+    "name": "no_ht_dump_low_heat",
+    "description": "Very low buildings heat requires all unused HT to flow to the absorption generator.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/no_ht_dump_low_heat/data",
+    "feasible": true
+  },
+  {
+    "name": "no_towers_no_cooling",
+    "description": "LT radiators and building heat operate while both cooling-tower cells are unavailable.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/no_towers_no_cooling/data",
+    "feasible": true
+  },
+  {
+    "name": "pv_export_curtailment",
+    "description": "Available PV is curtailed just enough to respect the real-power export limit.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/pv_export_curtailment/data",
+    "feasible": true
+  },
+  {
+    "name": "pv_ac_rating",
+    "description": "PV forecast above inverter rating is clipped to the AC nameplate.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/pv_ac_rating/data",
+    "feasible": true
+  },
+  {
+    "name": "heat_led_cooling_water_modulation",
+    "description": "Heat and outages force GE2 to rated output; warmer common condenser water makes the export limit feasible.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/heat_led_cooling_water_modulation/data",
+    "feasible": true
+  },
+  {
+    "name": "short_dip_keep_running",
+    "description": "Economic shutdown decision across a low-demand interval with initial engine running.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/short_dip_keep_running/data",
+    "feasible": true
+  },
+  {
+    "name": "long_dip_restart",
+    "description": "Economic shutdown decision across a low-demand interval with initial engine running.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/long_dip_restart/data",
+    "feasible": true
+  },
+  {
+    "name": "random_feasible_0",
+    "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/random_feasible_0/data",
+    "feasible": true
+  },
+  {
+    "name": "random_feasible_1",
+    "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/random_feasible_1/data",
+    "feasible": true
+  },
+  {
+    "name": "random_feasible_2",
+    "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/random_feasible_2/data",
+    "feasible": true
+  },
+  {
+    "name": "random_feasible_3",
+    "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/random_feasible_3/data",
+    "feasible": true
+  },
+  {
+    "name": "random_feasible_4",
+    "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/random_feasible_4/data",
+    "feasible": true
+  },
+  {
+    "name": "random_feasible_5",
+    "description": "Seeded feasible-witness profiles spanning curve interiors, weather and signed reactive power.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/random_feasible_5/data",
+    "feasible": true
+  },
+  {
+    "name": "infeasible_reactive",
+    "description": "Deliberately impossible day must fail without a fictitious plan.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/infeasible_reactive/data",
+    "feasible": false,
+    "expected_error": "no feasible loading"
+  },
+  {
+    "name": "infeasible_towers",
+    "description": "Deliberately impossible day must fail without a fictitious plan.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/infeasible_towers/data",
+    "feasible": false,
+    "expected_error": "no feasible loading"
+  },
+  {
+    "name": "infeasible_missing_ht_sink",
+    "description": "Deliberately impossible day must fail without a fictitious plan.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/infeasible_missing_ht_sink/data",
+    "feasible": false,
+    "expected_error": "no feasible loading"
+  },
+  {
+    "name": "infeasible_electricity",
+    "description": "Deliberately impossible day must fail without a fictitious plan.",
+    "data": "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c4/experiments/cases/infeasible_electricity/data",
+    "feasible": false,
+    "expected_error": "no feasible loading"
+  }
+]

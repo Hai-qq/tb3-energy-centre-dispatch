@@ -1,0 +1,110 @@
+{
+  "accepted_days": 16,
+  "draws": 39,
+  "seed": 2026,
+  "weekends": [
+    {
+      "day": "f2-draw-0003",
+      "date": "2026-03-01"
+    },
+    {
+      "day": "f3-draw-0005",
+      "date": "2026-08-23"
+    },
+    {
+      "day": "f6-draw-0015",
+      "date": "2026-11-07"
+    }
+  ],
+  "pump": [
+    {
+      "day": "f3-draw-0005",
+      "unit": "LT pump 2",
+      "from": "12:20",
+      "to": "15:00"
+    },
+    {
+      "day": "f10-draw-0025",
+      "unit": "LT pump 2",
+      "from": "13:50",
+      "to": "17:00"
+    },
+    {
+      "day": "f12-draw-0033",
+      "unit": "LT pump 2",
+      "from": "05:40",
+      "to": "09:30"
+    },
+    {
+      "day": "f16-draw-0039",
+      "unit": "LT pump 2",
+      "from": "03:20",
+      "to": "06:40"
+    }
+  ],
+  "phe": [
+    {
+      "day": "f1-draw-0002",
+      "unit": "LT PHE 2",
+      "from": "15:40",
+      "to": "18:30"
+    },
+    {
+      "day": "f10-draw-0025",
+      "unit": "LT PHE 1",
+      "from": "21:30",
+      "to": "24:00"
+    },
+    {
+      "day": "f12-draw-0033",
+      "unit": "LT PHE 2",
+      "from": "13:50",
+      "to": "16:40"
+    },
+    {
+      "day": "f16-draw-0039",
+      "unit": "LT PHE 1",
+      "from": "22:20",
+      "to": "24:00"
+    }
+  ],
+  "radiator": [
+    {
+      "day": "f2-draw-0003",
+      "unit": "LT radiator 1",
+      "from": "22:00",
+      "to": "24:00"
+    },
+    {
+      "day": "f10-draw-0025",
+      "unit": "LT radiator 1",
+      "from": "09:30",
+      "to": "11:20"
+    },
+    {
+      "day": "f11-draw-0031",
+      "unit": "LT radiator 1",
+      "from": "17:00",
+      "to": "19:30"
+    },
+    {
+      "day": "f13-draw-0034",
+      "unit": "LT radiator 1",
+      "from": "07:50",
+      "to": "12:30"
+    },
+    {
+      "day": "f15-draw-0038",
+      "unit": "LT radiator 1",
+      "from": "15:30",
+      "to": "18:30"
+    },
+    {
+      "day": "f16-draw-0039",
+      "unit": "LT radiator 1",
+      "from": "19:50",
+      "to": "22:40"
+    }
+  ],
+  "candidate_json_byte_identical": true
+}

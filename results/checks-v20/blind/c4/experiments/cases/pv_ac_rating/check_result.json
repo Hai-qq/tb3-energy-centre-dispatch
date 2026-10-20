@@ -1,0 +1,72 @@
+{
+  "name": "pv_ac_rating",
+  "description": "PV forecast above inverter rating is clipped to the AC nameplate.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 1,
+    "recomputed_summary": {
+      "cost_gbp": 5133.946665,
+      "gas_kwh": 76319.04000000004,
+      "import_kwh": 6515.803199999996,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 1.4210854715202004e-14,
+      "heat_kw": 0.0,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 0.0
+    },
+    "maxima": {
+      "tower_rejection_kw": 1762.242903575298,
+      "phe_kw": 477.46478873239437,
+      "apparent_import_kva": 273.3100576497099,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 0,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 0,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    1.5487116930007687,
+    1.4297247029999198
+  ],
+  "plan_sha256": "14af3a411a520c443a2c7af734a37fa2a5962d8b1d2448058c7a8da265be0256",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 5133.946665,
+    "lower_bound_gbp": 5133.9466649999995,
+    "absolute_gap_gbp": 9.094947017729282e-13,
+    "tolerance_gbp": 0.0002,
+    "seconds": 0.05431536400010373,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1824,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 5133.9466649999995,
+        "incumbent_gbp": 5133.9466649999995,
+        "candidate_gap_gbp": 9.094947017729282e-13,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 1,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 6331.43648,
+  "improvement_over_witness_gbp": 1197.489815,
+  "total_seconds": 3.0415406469992377
+}

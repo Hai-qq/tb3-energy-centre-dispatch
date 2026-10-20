@@ -1,0 +1,446 @@
+visible: tool exited 0 
+visible.rerun: tool exited 0 
+h1: tool exited 0 
+h1.rerun: tool exited 0 
+h2: tool exited 0 
+h2.rerun: tool exited 0 
+h3: tool exited 1 Traceback (most recent call last):
+  File "/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/app/planner/optimize.py", line 323, in plan_day
+    raise RuntimeError(f"no loading of the plant available at {c.start} meets the demand "
+                       f"(heat {c.heat:.0f} kW, cooling {c.cool:.0f} kW)")
+RuntimeError: no loading of the plant available at 13:30 meets the demand (heat 846 kW, cooling 1050 kW)
+
+h3.rerun: tool exited 1 Traceback (most recent call last):
+  File "/app/dispatch.py", line 60, in <module>
+    main()
+    ~~~~^^
+  File "/app/dispatch.py", line 43, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/app/planner/optimize.py", line 323, in plan_day
+    raise RuntimeError(f"no loading of the plant available at {c.start} meets the demand "
+                       f"(heat {c.heat:.0f} kW, cooling {c.cool:.0f} kW)")
+RuntimeError: no loading of the plant available at 13:30 meets the demand (heat 846 kW, cooling 1050 kW)
+
+h4: tool exited 0 
+h4.rerun: tool exited 0 
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 55 items
+
+test_plans.py ................F..F.........FEEEEEEEEEE......F..F...F.    [100%]
+
+==================================== ERRORS ====================================
+________________ ERROR at setup of test_plan_covers_the_day[h3] ________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+_______ ERROR at setup of test_units_within_ratings_and_availability[h3] _______
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+________________ ERROR at setup of test_electricity_balance[h3] ________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+___________________ ERROR at setup of test_heat_balance[h3] ____________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+__________________ ERROR at setup of test_cooling_balance[h3] __________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+__________________ ERROR at setup of test_cooling_towers[h3] ___________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+_________________ ERROR at setup of test_connection_limits[h3] _________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+_______________ ERROR at setup of test_reported_gas_and_cost[h3] _______________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+_______ ERROR at setup of test_reported_import_export_and_grid_flags[h3] _______
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+____________________ ERROR at setup of test_least_cost[h3] _____________________
+
+request = <SubRequest 'case' for <Function test_plan_covers_the_day[h3]>>
+
+    @pytest.fixture(scope="module", params=DAYS)
+    def case(request):
+        day = Day(HERE / "days" / request.param)
+>       plan = load_plan(request.param)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_plans.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+=================================== FAILURES ===================================
+__________________________ test_connection_limits[h1] __________________________
+
+case = (<reference.Day object at 0xffff5089f9d0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...02697, 529.88150648, 132.95272054,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ]), ...})
+
+    def test_connection_limits(case):
+        day, plan, flows = case
+        imp, exp = series(plan, "import_kw"), series(plan, "export_kw")
+        assert (imp >= -0.5).all() and (exp >= -0.5).all()
+>       assert (np.hypot(imp, day.kvar - flows["engine_kvar"]) <= day.import_kva + 0.5).all()
+E       AssertionError: assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff50398690>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff50398690> = array([1341.25788659, 1320.16640698, 1343.30674302, 1318.03883247,\n       1310.29404167, 1318.97762148, 1303.82525688,...02697,  283.78150648, 1205.36166411, 1543.00868854,\n       1506.64217977, 1438.43537692, 1387.43112103, 1354.67057156]) <= (1220.0 + 0.5).all
+E        +      where array([1341.25788659, 1320.16640698, 1343.30674302, 1318.03883247,\n       1310.29404167, 1318.97762148, 1303.82525688,...02697,  283.78150648, 1205.36166411, 1543.00868854,\n       1506.64217977, 1438.43537692, 1387.43112103, 1354.67057156]) = <ufunc 'hypot'>(array([1325.344, 1302.739, 1325.957, 1300.352, 1293.275, 1303.634,\n       1288.441, 1317.296, 1284.736, 1299.882, 1308...,    0.   ,    0.   ,    0.   ,    0.   ,    0.   ,\n       1201.31 , 1524.73 , 1488.626, 1421.419, 1371.66 , 1337.884]), (array([206. , 213.8, 215.2, 215.2, 210.5, 200.6, 199.7, 210.4, 200.3,\n       214.2, 209.6, 224.5, 224.4, 226.6, 235.8,...315.8, 315.6, 302.3,\n       303.8, 297.7, 264.4, 263.7, 253.2, 246.1, 231.7, 236.8, 232.3,\n       220.6, 208.6, 212.6]) - array([  0.        ,   0.        ,   0.        ,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.  ...545.61002697, 529.88150648, 132.95272054,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.        ])))
+E        +        where <ufunc 'hypot'> = np.hypot
+E        +        and   array([206. , 213.8, 215.2, 215.2, 210.5, 200.6, 199.7, 210.4, 200.3,\n       214.2, 209.6, 224.5, 224.4, 226.6, 235.8,...315.8, 315.6, 302.3,\n       303.8, 297.7, 264.4, 263.7, 253.2, 246.1, 231.7, 236.8, 232.3,\n       220.6, 208.6, 212.6]) = <reference.Day object at 0xffff5089f9d0>.kvar
+E        +      and   1220.0 = <reference.Day object at 0xffff5089f9d0>.import_kva
+
+test_plans.py:95: AssertionError
+_____________________________ test_least_cost[h1] ______________________________
+
+case = (<reference.Day object at 0xffff5089f9d0>, {'date': '2026-08-08', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...02697, 529.88150648, 132.95272054,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(6969.419901822965) <= (6028.867211174989 + 1.205773442234998)
+E        +  where np.float64(6969.419901822965) = <built-in method sum of numpy.ndarray object at 0xffff50398150>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff50398150> = array([105.48498016, 103.69525517, 105.45004824, 103.48968782,\n       103.08971154, 103.65814382, 102.71688438, 104.80...109.88716496, 107.33677473, 171.73569027, 189.05307398,\n       184.14571994, 175.68168921, 169.52667222, 165.27305057]).sum
+E        +  and   1.205773442234998 = max(0.5, (0.0002 * 6028.867211174989))
+
+test_plans.py:133: AssertionError
+_____________________________ test_least_cost[h2] ______________________________
+
+case = (<reference.Day object at 0xffff5089fc50>, {'date': '2026-12-09', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...88017, 578.35452358, 261.30386362, 261.30386362,
+       261.30386362, 261.30386362, 261.30386362, 261.30386362]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(8332.679383436354) <= (8323.650147097433 + 1.6647300294194867)
+E        +  where np.float64(8332.679383436354) = <built-in method sum of numpy.ndarray object at 0xffff503f0270>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff503f0270> = array([110.92444418, 109.36601535, 109.92338701, 110.91536087,\n       110.25335894, 113.60017576, 113.99083446, 113.64...139.53583917, 138.36872264, 204.1292016 , 197.77636622,\n       188.44116918, 181.29255578, 172.69653693, 161.09792662]).sum
+E        +  and   1.6647300294194867 = max(0.5, (0.0002 * 8323.650147097433))
+
+test_plans.py:133: AssertionError
+__________________________ test_connection_limits[h4] __________________________
+
+case = (<reference.Day object at 0xffff5040cf50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...92621, 394.42092621, 394.42092621, 394.42092621,
+       394.42092621,   0.        ,   0.        ,   0.        ]), ...})
+
+    def test_connection_limits(case):
+        day, plan, flows = case
+        imp, exp = series(plan, "import_kw"), series(plan, "export_kw")
+        assert (imp >= -0.5).all() and (exp >= -0.5).all()
+>       assert (np.hypot(imp, day.kvar - flows["engine_kvar"]) <= day.import_kva + 0.5).all()
+E       AssertionError: assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0xffff503f05d0>()
+E        +    where <built-in method all of numpy.ndarray object at 0xffff503f05d0> = array([1438.2860742 , 1437.47465863, 1423.64444375, 1413.70683854,\n       1418.72911484, 1414.73288471, 1392.72538568,...72076,  546.63898871,  508.69102222,  435.00154304,\n        389.04459248, 1581.0739177 , 1521.24274281, 1448.25827333]) <= (1220.0 + 0.5).all
+E        +      where array([1438.2860742 , 1437.47465863, 1423.64444375, 1413.70683854,\n       1418.72911484, 1414.73288471, 1392.72538568,...72076,  546.63898871,  508.69102222,  435.00154304,\n        389.04459248, 1581.0739177 , 1521.24274281, 1448.25827333]) = <ufunc 'hypot'>(array([1421.715, 1419.486, 1406.668, 1397.139, 1402.159, 1397.491,\n       1376.077, 1378.445, 1384.846, 1346.84 ,  935...,  782.071,  675.914,  657.782,  600.125,  533.68 ,\n        492.214,  412.357,  356.912, 1562.829, 1503.169, 1430.516]), (array([217.7, 226.7, 219.2, 215.8, 216.2, 220.2, 214.7, 216. , 226.8,\n       220.5, 222.4, 226. , 240.3, 250.1, 260.1,...342.7, 330.4, 316.8,\n       305.8, 288.8, 297.5, 298. , 269.8, 276.1, 266. , 255.9, 239.6,\n       239.5, 233.8, 226. ]) - array([  0.        ,   0.        ,   0.        ,   0.        ,\n         0.        ,   0.        ,   0.        ,   0.  ...394.42092621, 394.42092621, 394.42092621, 394.42092621,\n       394.42092621,   0.        ,   0.        ,   0.        ])))
+E        +        where <ufunc 'hypot'> = np.hypot
+E        +        and   array([217.7, 226.7, 219.2, 215.8, 216.2, 220.2, 214.7, 216. , 226.8,\n       220.5, 222.4, 226. , 240.3, 250.1, 260.1,...342.7, 330.4, 316.8,\n       305.8, 288.8, 297.5, 298. , 269.8, 276.1, 266. , 255.9, 239.6,\n       239.5, 233.8, 226. ]) = <reference.Day object at 0xffff5040cf50>.kvar
+E        +      and   1220.0 = <reference.Day object at 0xffff5040cf50>.import_kva
+
+test_plans.py:95: AssertionError
+_____________________________ test_least_cost[h4] ______________________________
+
+case = (<reference.Day object at 0xffff5040cf50>, {'date': '2026-07-29', 'periods': [{'start': '00:00', 'engines_kwe': {'GE1'...92621, 394.42092621, 394.42092621, 394.42092621,
+       394.42092621,   0.        ,   0.        ,   0.        ]), ...})
+
+    def test_least_cost(case):
+        day, _, flows = case
+        best = day.least_cost()["cost"]
+>       assert flows["cost"].sum() <= best + max(0.5, 2e-4 * best)
+E       assert np.float64(7144.451644194036) <= (6508.0536153753355 + 1.301610723075067)
+E        +  where np.float64(7144.451644194036) = <built-in method sum of numpy.ndarray object at 0xffff503f2910>()
+E        +    where <built-in method sum of numpy.ndarray object at 0xffff503f2910> = array([112.54046601, 112.34358758, 111.77207911, 110.74914098,\n       111.31768188, 110.79760559, 109.02652901, 109.50...145.98175563, 138.2073584 , 133.35562907, 124.01196078,\n       117.52461856, 192.92175521, 185.42613691, 176.54402789]).sum
+E        +  and   1.301610723075067 = max(0.5, (0.0002 * 6508.0536153753355))
+
+test_plans.py:133: AssertionError
+________________________ test_same_plan_every_time[h3] _________________________
+
+name = 'h3'
+
+    @pytest.mark.parametrize("name", DAYS)
+    def test_same_plan_every_time(name):
+>       first, again = load_plan(name), load_plan(f"{name}.rerun")
+                       ^^^^^^^^^^^^^^^
+
+test_plans.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'h3'
+
+    def load_plan(name):
+        error = PLANS / f"{name}.error"
+>       assert not error.exists(), f"{name}: {error.read_text().strip()}"
+E       AssertionError: h3: the tool exited with status 1
+E       assert not True
+E        +  where True = exists()
+E        +    where exists = PosixPath('/tmp/plans/h3.error').exists
+
+test_plans.py:28: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_plans.py::test_plan_covers_the_day[visible]
+PASSED test_plans.py::test_units_within_ratings_and_availability[visible]
+PASSED test_plans.py::test_electricity_balance[visible]
+PASSED test_plans.py::test_heat_balance[visible]
+PASSED test_plans.py::test_cooling_balance[visible]
+PASSED test_plans.py::test_cooling_towers[visible]
+PASSED test_plans.py::test_connection_limits[visible]
+PASSED test_plans.py::test_reported_gas_and_cost[visible]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[visible]
+PASSED test_plans.py::test_least_cost[visible]
+PASSED test_plans.py::test_plan_covers_the_day[h1]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h1]
+PASSED test_plans.py::test_electricity_balance[h1]
+PASSED test_plans.py::test_heat_balance[h1]
+PASSED test_plans.py::test_cooling_balance[h1]
+PASSED test_plans.py::test_cooling_towers[h1]
+PASSED test_plans.py::test_reported_gas_and_cost[h1]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h1]
+PASSED test_plans.py::test_plan_covers_the_day[h2]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h2]
+PASSED test_plans.py::test_electricity_balance[h2]
+PASSED test_plans.py::test_heat_balance[h2]
+PASSED test_plans.py::test_cooling_balance[h2]
+PASSED test_plans.py::test_cooling_towers[h2]
+PASSED test_plans.py::test_connection_limits[h2]
+PASSED test_plans.py::test_reported_gas_and_cost[h2]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h2]
+PASSED test_plans.py::test_plan_covers_the_day[h4]
+PASSED test_plans.py::test_units_within_ratings_and_availability[h4]
+PASSED test_plans.py::test_electricity_balance[h4]
+PASSED test_plans.py::test_heat_balance[h4]
+PASSED test_plans.py::test_cooling_balance[h4]
+PASSED test_plans.py::test_cooling_towers[h4]
+PASSED test_plans.py::test_reported_gas_and_cost[h4]
+PASSED test_plans.py::test_reported_import_export_and_grid_flags[h4]
+PASSED test_plans.py::test_same_plan_every_time[visible]
+PASSED test_plans.py::test_same_plan_every_time[h1]
+PASSED test_plans.py::test_same_plan_every_time[h2]
+PASSED test_plans.py::test_same_plan_every_time[h4]
+ERROR test_plans.py::test_plan_covers_the_day[h3] - AssertionError: h3: the t...
+ERROR test_plans.py::test_units_within_ratings_and_availability[h3] - Asserti...
+ERROR test_plans.py::test_electricity_balance[h3] - AssertionError: h3: the t...
+ERROR test_plans.py::test_heat_balance[h3] - AssertionError: h3: the tool exi...
+ERROR test_plans.py::test_cooling_balance[h3] - AssertionError: h3: the tool ...
+ERROR test_plans.py::test_cooling_towers[h3] - AssertionError: h3: the tool e...
+ERROR test_plans.py::test_connection_limits[h3] - AssertionError: h3: the too...
+ERROR test_plans.py::test_reported_gas_and_cost[h3] - AssertionError: h3: the...
+ERROR test_plans.py::test_reported_import_export_and_grid_flags[h3] - Asserti...
+ERROR test_plans.py::test_least_cost[h3] - AssertionError: h3: the tool exite...
+FAILED test_plans.py::test_connection_limits[h1] - AssertionError: assert np....
+FAILED test_plans.py::test_least_cost[h1] - assert np.float64(6969.4199018229...
+FAILED test_plans.py::test_least_cost[h2] - assert np.float64(8332.6793834363...
+FAILED test_plans.py::test_connection_limits[h4] - AssertionError: assert np....
+FAILED test_plans.py::test_least_cost[h4] - assert np.float64(7144.4516441940...
+FAILED test_plans.py::test_same_plan_every_time[h3] - AssertionError: h3: the...
+=================== 6 failed, 39 passed, 10 errors in 1.02s ====================

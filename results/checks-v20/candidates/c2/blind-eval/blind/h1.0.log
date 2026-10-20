@@ -1,0 +1,11 @@
+$ /workspace/scratch/e1216eed3f00/ecd-venv/bin/python /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c2/app/dispatch.py --data /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/task/tests/days/h1 --output /workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/candidates/c2/blind-eval/blind/h1.json
+Traceback (most recent call last):
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c2/app/dispatch.py", line 75, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c2/app/dispatch.py", line 46, in main
+    periods, starts = plan_day(day, plant, tariff)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e1216eed3f00/tb3-energy-centre-dispatch/results/checks-v20/blind/c2/app/planner/optimize.py", line 352, in plan_day
+    raise ValueError(f"outage names an unknown unit: {outage['unit']}")
+ValueError: outage names an unknown unit: EC1 condenser

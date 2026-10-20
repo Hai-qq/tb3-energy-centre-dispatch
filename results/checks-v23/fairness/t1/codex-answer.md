@@ -1,0 +1,11 @@
+1. January, 2 °C: the AHU temperature schedule gives 50 °C flow and approximately 41.2 °C return. Neither engine’s 40/35 °C low-temperature (LT) intercooler circuit can heat water already returning above 40 °C. Therefore, none of the 340 kW of combined LT heat is usable by the AHUs.
+
+Engine heat can instead reach them through jacket-water/exhaust recovery: engine HT circuit → PHE1 → 80/60 °C LTHW → PHE2 → AHUs. Full-load HT output totals 2,190 kW (1,290 + 900), shared with building heating, the 75 kW LTHW loss and any absorption-chiller heat input. January demand is absent, so an AHU coverage percentage cannot be calculated.
+
+2. July, 24 °C: the schedules stay flat beyond 18 °C, giving 34/29 °C AHU water. The engines’ 40/35 °C LT circuits can now supply this temperature level through LT PHE 1 and 2. Their combined full-load contribution is up to 340 kW, capped by AHU demand and actual exchanger capability. This exceeds every supplied July afternoon AHU load, so potentially all that demand can use LT heat. HT heat can also supply any remainder through PHE1 and PHE2.
+
+3. January outage, 3 °C: AHU temperatures are 49/40.4 °C, still too hot to accept GE1’s LT heat. With LT radiator 1 unavailable, GE1 has no listed LT heat sink. It must stop under the stated steady-state circuit arrangement. Reducing output cannot solve this: even its minimum 600 kWe produces 118 kW of LT heat. GE2’s radiator and the cooling towers have no connection to GE1’s LT circuit.
+
+4. The files omit exchanger capacities, approach limits, radiator ratings and hydraulic/control details, so temperature compatibility does not prove achievable transfer rates. Colder AHU return operation or an additional connected heat sink could change the conclusions, but neither is specified. Temporary heat storage is also unspecified.
+
+HT surplus disposal is unresolved: no HT dump circuit is listed, although the optimizer permits surplus heat. The code also credits LT recovery without checking temperatures and ignores radiator outages; its resulting engine-running permissions are therefore not physically reliable.

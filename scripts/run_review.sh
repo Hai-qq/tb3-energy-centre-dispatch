@@ -25,13 +25,19 @@ import glob, json, sys, tomllib
 paths = glob.glob(f"{sys.argv[1]}/*/artifacts/app/verdicts.json")
 if not paths:
     sys.exit("no verdicts.json: the review did not finish")
-criteria = [c["name"] for c in tomllib.load(open(sys.argv[2], "rb"))["criteria"]]
+rubric = tomllib.load(open(sys.argv[2], "rb"))["criteria"]
+criteria = [c["name"] for c in rubric]
+advisory = {c["name"] for c in rubric if c.get("severity") == "warning"}
 checks = json.load(open(paths[0]))["checks"]
 counts = {}
 for name, v in checks.items():
     counts[v["outcome"]] = counts.get(v["outcome"], 0) + 1
 print("verdicts:", counts, "of", len(checks), "for", len(criteria), "criteria")
-bad = [n for n in criteria if checks.get(n, {}).get("outcome") not in ("pass", "not_applicable")]
+for name in criteria:
+    if name in advisory and checks.get(name, {}).get("outcome") == "warn":
+        print(f"WARN (nonblocking) {name}: {checks[name]['explanation']}")
+bad = [n for n in criteria if checks.get(n, {}).get("outcome")
+       not in ("pass", "not_applicable", *(("warn",) if n in advisory else ()))]
 for name in bad:
     v = checks.get(name)
     print(f"FAIL {name}: {v['explanation']}" if v else f"MISSING {name}")

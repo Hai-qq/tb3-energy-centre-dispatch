@@ -1,0 +1,99 @@
+{
+  "name": "leading_reactive_circle_boundary",
+  "description": "Overexcited generators can increase an already leading grid reactive flow; true circle is binding.",
+  "expected_feasible": true,
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "periods": 48,
+    "engine_starts": 2,
+    "recomputed_summary": {
+      "cost_gbp": 5799.4244292850435,
+      "gas_kwh": 97715.47630297416,
+      "import_kwh": 5984.260559410573,
+      "export_kwh": 0.0
+    },
+    "maximum_residuals": {
+      "electricity_kw": 7.958078640513122e-13,
+      "heat_kw": 2.9558577807620168e-12,
+      "cooling_kw": 0.0,
+      "cost_gbp": 0.0,
+      "gas_kwh": 0.0,
+      "grid_kva_excess": 5.68775249121245e-09
+    },
+    "maxima": {
+      "tower_rejection_kw": 2388.2990249187433,
+      "phe_kw": 1044.9295774647887,
+      "apparent_import_kva": 1220.0000000056878,
+      "condenser_entering_c": 22.0
+    },
+    "coverage": {
+      "interior_engine_loads": 34,
+      "cold_absorber_periods": 0,
+      "curtailment_periods": 0,
+      "grid_binding_periods": 34,
+      "phe_binding_periods": 0,
+      "tower_binding_periods": 0,
+      "modulated_cooling_water_periods": 0
+    }
+  },
+  "application_seconds": [
+    2.375131087000227,
+    2.486359178999919
+  ],
+  "plan_sha256": "3d7d9d0f243f642e9867cbcf7f1faa32d723f654d5ddc1dbee7f2905a74ea764",
+  "byte_identical_repetitions": 2,
+  "optimality": {
+    "certified": true,
+    "candidate_cost_gbp": 5799.424429285039,
+    "lower_bound_gbp": 5799.424429226116,
+    "absolute_gap_gbp": 5.892252374906093e-08,
+    "tolerance_gbp": 0.0002,
+    "seconds": 6.634453186999963,
+    "method": "full-day disaggregated-segment MILP with supporting kVA-circle cuts",
+    "variables": 960,
+    "binary_variables": 192,
+    "constraints": 1926,
+    "rounds": [
+      {
+        "round": 1,
+        "lower_bound_gbp": 5734.390610404779,
+        "incumbent_gbp": 5734.390610404779,
+        "candidate_gap_gbp": 65.03381888025979,
+        "maximum_circle_violation_kva": 5.251988998781144,
+        "mip_nodes": 1,
+        "solver_status": 0
+      },
+      {
+        "round": 2,
+        "lower_bound_gbp": 5797.084365124747,
+        "incumbent_gbp": 5797.084365124747,
+        "candidate_gap_gbp": 2.3400641602920587,
+        "maximum_circle_violation_kva": 0.2510700730381359,
+        "mip_nodes": 1,
+        "solver_status": 0
+      },
+      {
+        "round": 3,
+        "lower_bound_gbp": 5799.418072745403,
+        "incumbent_gbp": 5799.418072745403,
+        "candidate_gap_gbp": 0.006356539635817171,
+        "maximum_circle_violation_kva": 0.000707636908373388,
+        "mip_nodes": 6,
+        "solver_status": 0
+      },
+      {
+        "round": 4,
+        "lower_bound_gbp": 5799.424429226116,
+        "incumbent_gbp": 5799.424429285042,
+        "candidate_gap_gbp": 5.892252374906093e-08,
+        "maximum_circle_violation_kva": 0.0,
+        "mip_nodes": 55,
+        "solver_status": 0
+      }
+    ]
+  },
+  "witness_cost_gbp": 6005.31144,
+  "improvement_over_witness_gbp": 205.88701071496143,
+  "total_seconds": 11.505153828999937
+}

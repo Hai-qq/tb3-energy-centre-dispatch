@@ -1,0 +1,18 @@
+the task's five days pass the input checks
+f1: 2026-02-12 Thu (h2 profile), running at midnight ['GE2'], outages EC2 11:10-13:10, B1 20:30-24:00
+f2: 2026-03-05 Thu (h3 profile), running at midnight ['GE1', 'GE2'], outages B2 17:20-19:30, AC1 absorber and condenser 17:40-23:00, GE1 jacket water and exhaust 17:00-21:00, EC1 condenser 19:10-24:00
+f3: 2026-06-28 Sun (visible profile), running at midnight [], outages GE1 06:20-12:10, PV1 01:10-04:00, EC1 22:00-24:00
+f4: 2026-06-08 Mon (visible profile), running at midnight ['GE1'], outages B2 14:10-19:10, GE2 intercooler 02:00-04:50
+f5: 2026-12-05 Sat (h2 profile), running at midnight [], outages EC2 condenser 12:20-16:30, EC2 09:30-13:20
+f6: 2026-10-30 Fri (h3 profile), running at midnight ['GE1'], outages CT1 16:10-18:20
+f7: 2026-08-13 Thu (visible profile), running at midnight [], outages GE1 01:20-03:00, PV1 10:20-14:00, EC1 condenser 08:20-10:30
+f8: 2026-09-20 Sun (h1 profile), running at midnight ['GE1'], outages GE2 LT radiator 17:20-23:00
+f9: 2026-02-28 Sat (h2 profile), running at midnight [], outages AC1 16:50-17:50, GE2 01:20-04:20
+f10: 2026-11-29 Sun (h3 profile), running at midnight ['GE1'], outages B1 09:30-11:50, EC2 22:20-24:00, GE2 15:10-18:50, EC1 condenser 01:00-04:50
+f11: 2026-09-27 Sun (visible profile), running at midnight ['GE1', 'GE2'], outages B2 02:10-06:10, GE1 LT radiator 11:00-14:00, EC2 05:40-10:50, B1 18:30-23:00
+f12: 2026-08-30 Sun (visible profile), running at midnight [], outages GE2 jacket water and exhaust 12:30-14:20, EC2 15:10-17:40
+f13: 2026-01-09 Fri (h2 profile), running at midnight ['GE1'], outages EC2 04:00-06:20
+f14: 2026-05-06 Wed (h3 profile), running at midnight ['GE2'], outages GE2 LT radiator 09:50-13:00, CT2 10:00-11:00
+f15: 2026-08-22 Sat (h1 profile), running at midnight ['GE1', 'GE2'], outages EC1 condenser 00:30-02:50, B1 16:50-20:30, GE1 jacket water and exhaust 14:00-15:20, GE1 LT radiator 16:30-21:20
+f16: 2026-09-04 Fri (h1 profile), running at midnight [], outages GE1 jacket water and exhaust 05:40-07:10, GE2 jacket water and exhaust 22:20-24:00, GE1 intercooler 10:50-15:40
+1/16 days failed  tasks/energy-centre-dispatch/solution/app  connection_limits:f7; cooling_balance:f7; cooling_towers:f7; electricity_balance:f7; heat_balance:f7; least_cost:f7; plan_covers_the_day:f7; reported_gas_and_cost:f7; reported_import_export_and_grid_flags:f7; same_plan_every_time:f7; units_within_ratings_and_availability:f7
