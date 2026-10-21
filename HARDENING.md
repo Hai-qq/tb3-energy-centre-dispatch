@@ -330,9 +330,10 @@ their names. Over v16 to v19 Opus has passed 2 of 10 trials and GPT none of 6.
 
 1. `README.md`: the delivered task, its evidence and the full history ("How the task came
    about"; items 25 and 26 for v9 and v10, 27 and 28 for v11 and v12).
-2. `tasks/energy-centre-dispatch/`: v18 as it stands (instruction, data, shipped tool,
-   solution, tests); `git diff 1f92378 -- tasks/` shows what it changes from v8.1, all of it in
-   `tests/`, `solution/` and the task's `README.md`.
+2. `tasks/energy-centre-dispatch/`: v19 as it stands (instruction, data, shipped tool,
+   solution, tests). `git diff 1f92378 -- tasks/` shows what it changes from v8.1: `tests/`,
+   `solution/`, the task's `README.md`, the two LT radiators' names in `plant.json`, and the
+   `difficulty_explanation` in `task.toml`.
 3. `results/official-v10.md`, `official-v11.md`, `official-v12.md`: what each trial's tool does
    on each day, and each agent's closing message (the clearest view of how Opus reasons).
 4. `results/checks-v11/README.md` and `results/checks-v12/README.md`: the checks, and what the
