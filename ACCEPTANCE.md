@@ -2,7 +2,7 @@
 
 Each requirement of the assignment, the evidence for it and its status, for the task proposed for delivery: v19, in [`tasks/energy-centre-dispatch`](tasks/energy-centre-dispatch). Its files hash is `9a92bbace1766bde`, computed as under "Reproducing" in the [README](README.md).
 - **The trials** ran on v19 as trialled, `archive/energy-centre-dispatch-v19/` (`05f58dca0b55b63f`). The task differs from it only in a `difficulty_explanation` field in `task.toml`'s metadata, which no agent sees and the verifier does not use.
-- **The assignment's reviewer** ran v8.1 (`acdfe59ea74ff707`, on `main`), the version delivered first, and Opus passed two of their three runs. v9 to v19 are the hardening that followed (README, "Status"; [`HARDENING.md`](HARDENING.md)).
+- **The assignment's reviewer** ran v8.1 (`acdfe59ea74ff707`, `archive/energy-centre-dispatch-v8.1/`), the version delivered first and on `main` until v19 was merged on 2026-10-20, and Opus passed two of their three runs. v9 to v19 are the hardening that followed (README, "Status"; [`HARDENING.md`](HARDENING.md)).
 
 The assignment's source of truth is the current Terminal-Bench CI. Everything below was checked against `harbor-framework/terminal-bench` at `cac7593` (main, 2026-10-20).
 

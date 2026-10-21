@@ -6,18 +6,18 @@ with the scripts and tools used to build, check and run it.
 **Status, 2026-10-20.** The task proposed for delivery is v19.
 `archive/energy-centre-dispatch-v19/` is v19 as trialled (task hash `05f58dca0b55b63f`).
 `tasks/energy-centre-dispatch/` adds one field, a `difficulty_explanation` in `task.toml`'s
-metadata, which no agent sees and the verifier does not use (`9a92bbace1766bde`). `main` still
-holds v8.1, the version the assignment's reviewer ran. After the reviewer's runs, eleven
-hardening versions were built (v9 to v19), and every candidate tried after v19 was rejected
-(`results/checks-v20/` to `checks-v23/`). The agent sees v8.1's files byte for byte, except for
-the names of the two LT radiators in `plant.json`. v19 differs from v8.1 in its hidden days, its
-verifier and its solution. v19 was run in batches of three Opus and three GPT trials, and the
-second batch failed all six. Counting every v19 trial, Opus passed 2 of 8 and GPT 0 of 6 ("Trial
-results"). "Fairness of v19" gives the evidence that the hidden days ask nothing the visible
-files leave open. The overview and table below describe v19, with v8.1 alongside. "Trial
-results" and "Failure analysis" cover v19 and the rounds up to v12.
-[`HARDENING.md`](HARDENING.md) covers every round after the reviewer's runs, v13 to v18
-included.
+metadata, which no agent sees and the verifier does not use (`9a92bbace1766bde`). The
+assignment's reviewer ran v8.1 (`archive/energy-centre-dispatch-v8.1/`), which `main` held until
+v19 was merged on 2026-10-20. After the reviewer's runs, eleven hardening versions were built
+(v9 to v19), and every candidate tried after v19 was rejected (`results/checks-v20/` to
+`checks-v23/`). The agent sees v8.1's files byte for byte, except for the names of the two LT
+radiators in `plant.json`. v19 differs from v8.1 in its hidden days, its verifier and its
+solution. v19 was run in batches of three Opus and three GPT trials, and the second batch failed
+all six. Counting every v19 trial, Opus passed 2 of 8 and GPT 0 of 6 ("Trial results").
+"Fairness of v19" gives the evidence that the hidden days ask nothing the visible files leave
+open. The overview and table below describe v19, with v8.1 alongside. "Trial results" and
+"Failure analysis" cover v19 and the rounds up to v12. [`HARDENING.md`](HARDENING.md) covers
+every round after the reviewer's runs, v13 to v18 included.
 
 The agent repairs the day-ahead dispatch tool of a hospital trigeneration energy centre: two
 gas-engine CHP sets, two boilers, two electric chillers, an absorption chiller fired from the

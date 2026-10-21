@@ -1,9 +1,10 @@
 # Hardening `energy-centre-dispatch` after the reviewer's runs (v9 to v12)
 
 Written on 2026-10-15 for an outside review of where the task stands and what to do next.
-This branch holds everything: `tasks/energy-centre-dispatch/` is the latest version (v19; see the last rounds below),
-`archive/` keeps every version, `results/` the checks and trials. `main` is unchanged at
-`1f92378`, the delivered v8.1.
+Since 2026-10-20, `main` holds everything. `tasks/energy-centre-dispatch/` is v19 (see the last
+rounds below), `archive/` keeps every version, and `results/` the checks and trials. v8.1, the
+version delivered first, is in `archive/energy-centre-dispatch-v8.1/`; `main` held it, at
+`1f92378`, until then.
 
 ## Where things stand
 
